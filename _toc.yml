@@ -1,9 +1,64 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+- caption: Data Science Book
+  numbered: false
+  chapters:
+    - file: book/intro.md
+      title: Basic Math and Calculus
+      sections:
+        - file: book/math_background/Number.md
+          title: Number
+        - file: book/math_background/Integration.md
+          title: Integration
+        - file: book/math_background/Calculus.md
+          title: Calculus
+        - file: book/math_background/Approximation.md
+          title: Approximation
+
+    - file: book/probability/intro.md
+      title: Probability
+
+    - file: book/statistics/intro.md
+      title: Statistics
+
+    - file: book/Exploratory.md
+      title: Exploratory Data Analysis
+
+    - file: book/machine_learning/intro.md
+      title: Machine Learning
+      sections:
+        - file: book/machine_learning/Linear Algebra.md
+          title: Linear Algebra
+
+        - file: book/machine_learning/Supervised Learning.md
+          title: Supervised Learning
+
+        - file: book/machine_learning/Deep Learning.md
+          title: Deep Learning
+
+        - file: book/machine_learning/Unsupervised Learning.md
+          title: Unsupervised Learning
+
+        - file: book/machine_learning/Distributed Learning.md
+          title: Distributed Learning
+
+        - file: book/machine_learning/Methodology for usage.md
+          title: Methodology
+
+    - file: book/deep_learning/intro.md
+      title: Deep Learning
+
+- caption: Posts
+  numbered: false
+  chapters:
+  - file: topics/cnn.md
+    title: cnn
+  - file: topics/Speed up your code with concurrency.md
+    title: Concurrency
+  - file: topics/appsmith.md
+    title: appsmith
+  - file: topics/3D Point Cloud.md
+    title: 3D Point Cloud
+  - file: topics/mloop.md
+    title: mloop
