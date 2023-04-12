@@ -1,5 +1,5 @@
 format: jb-book
-root: intro
+root: book/intro
 parts:
 - caption: Data Science Book
   numbered: false
