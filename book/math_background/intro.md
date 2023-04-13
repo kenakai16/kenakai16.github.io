@@ -1,16 +1,16 @@
-# Welcome to your Jupyter Book
+(structure:index)=
+# math_background
 
-This is a small sample book to give you a feel for how book content is
-structured.
+These sections describe how to organize the structure of your book or article.
 
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
+```{tableofcontents}
 ```
-e = mc^2
-```
+## Mathematical Foundations
 
-Check out the content pages bundled with this sample book to see more.
+    Introduction and Motivation
+    Linear Algebra
+    Analytic Geometry
+    Matrix Decompositions
+    Vector Calculus
+    Probability and Distribution
+    Continuous Optimization

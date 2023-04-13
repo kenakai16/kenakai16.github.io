@@ -1,5 +1,7 @@
-# Welcome to your Jupyter Book
+# Machine learning
 
+```{tableofcontents}
+```
 
 ## Preface
 Documentation on all topics that I learn on both Artificial intelligence and machine learning.

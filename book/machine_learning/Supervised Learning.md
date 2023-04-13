@@ -1,5 +1,6 @@
 # Supervised Learning
-
+```{tableofcontents}
+```
 In this chapter we will learn about Supervised learning as well as talk a bit about Cost Functions and Gradient descent. Also we will learn about 2 simple algorithms:
 Linear Regression (for Regression)
 Logistic Regression (for Classification)

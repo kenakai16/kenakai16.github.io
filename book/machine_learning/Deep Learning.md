@@ -1,5 +1,6 @@
 # Deep Learning
-
+```{tableofcontents}
+```
 Deep learning is a branch of machine learning based on a set of algorithms that learn to represent the data. Below we list the most popular ones.
 
 - Convolutional Neural Networks

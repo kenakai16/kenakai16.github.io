@@ -1,4 +1,6 @@
 # Distributed Learning
+```{tableofcontents}
+```
 Learn how the training of deep models can be distributed across multiple machines.
 Map Reduce
 Map Reduce can be described on the following steps:

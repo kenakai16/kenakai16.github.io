@@ -9,5 +9,5 @@ execute:
 bibtex_bibfiles:
   - references.bib
 
-html:
-  use_multitoc_numbering: false
+# html:
+#   use_multitoc_numbering: false

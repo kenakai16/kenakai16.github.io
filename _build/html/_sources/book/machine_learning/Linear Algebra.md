@@ -1,5 +1,6 @@
 # Linear Algebra
-
+```{tableofcontents}
+```
 Linear Algebra is an important topic to understand, a lot of deep learning algorithms use it, so this chapter will teach the topics needed to understand what will come next.
 
 ## Scalars, Vectors and Matrices
