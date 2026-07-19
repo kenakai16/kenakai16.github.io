@@ -1,27 +1,22 @@
-format: jb-book
-root: book/intro
-parts:
-- caption: Books (Math Background)
-  chapters:
-  - file: book/math_background/Number
-  - file: book/math_background/Integration
-  - file: book/math_background/Calculus
-  - file: book/math_background/Approximation
-
-- caption: Topic Guides
-  chapters:
-  - file: book/machine_learning/intro
-    sections:
-    - file: book/machine_learning/Linear Algebra
-    - file: book/machine_learning/Methodology for usage
-    - file: book/machine_learning/Supervised Learning
-    - file: book/machine_learning/Unsupervised Learning
-    - file: book/machine_learning/Distributed Learning
-
-  - file: book/probability/intro
-    sections:
-    - file: book/statistics/intro
-
-  - file: book/Exploratory
-
+root: book/Exploratory
+entries:
+  - file: book/intro
   - file: book/deep_learning/intro
+  - file: book/machine_learning/Deep Learning
+    entries:
+      - file: book/machine_learning/Distributed Learning
+      - file: book/machine_learning/intro
+      - file: book/machine_learning/introduction
+      - file: book/machine_learning/introduction copy
+      - file: book/machine_learning/Linear Algebra
+      - file: book/machine_learning/Methodology for usage
+      - file: book/machine_learning/Supervised Learning
+      - file: book/machine_learning/Unsupervised Learning
+  - file: book/math_background/Approximation
+    entries:
+      - file: book/math_background/Calculus
+      - file: book/math_background/Integration
+      - file: book/math_background/intro
+      - file: book/math_background/Number
+  - file: book/probability/intro
+  - file: book/statistics/intro
