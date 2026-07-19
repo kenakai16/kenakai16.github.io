@@ -1,14 +1,12 @@
 format: jb-book
-root: intro
+root: book/intro
 parts:
 - caption: Books (Math Background)
   chapters:
-  - file: book/intro
-    sections:
-    - file: book/math_background/Number
-    - file: book/math_background/Integration
-    - file: book/math_background/Calculus
-    - file: book/math_background/Approximation
+  - file: book/math_background/Number
+  - file: book/math_background/Integration
+  - file: book/math_background/Calculus
+  - file: book/math_background/Approximation
 
 - caption: Topic Guides
   chapters:
