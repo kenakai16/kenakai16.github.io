@@ -60,27 +60,9 @@ If one calculates the coefficients in the Chebyshev expansion for a function:
 
 
 and then cuts off the series after the 
-�
-�
-T_{N} term, one gets an Nth-degree polynomial approximating f(x).
+$T_{N}$ term, one gets an Nth-degree polynomial approximating f(x).
 
-The reason this polynomial is nearly optimal is that, for functions with rapidly converging power series, if the series is cut off after some term, the total error arising from the cutoff is close to the first term after the cutoff. That is, the first term after the cutoff dominates all later terms. The same is true if the expansion is in terms of bucking polynomials. If a Chebyshev expansion is cut off after 
-�
-�
-T_{N}, the error will take a form close to a multiple of 
-�
-�
-+
-1
-T_{{N+1}}. The Chebyshev polynomials have the property that they are level – they oscillate between +1 and −1 in the interval [−1, 1]. 
-�
-�
-+
-1
-T_{{N+1}} has N+2 level extrema. This means that the error between f(x) and its Chebyshev expansion out to 
-�
-�
-T_{N} is close to a level function with N+2 extrema, so it is close to the optimal Nth-degree polynomial.
+The reason this polynomial is nearly optimal is that, for functions with rapidly converging power series, if the series is cut off after some term, the total error arising from the cutoff is close to the first term after the cutoff. That is, the first term after the cutoff dominates all later terms. The same is true if the expansion is in terms of bucking polynomials. If a Chebyshev expansion is cut off after $T_N$, the error will take a form close to a multiple of $T_{N+1}$. The Chebyshev polynomials have the property that they are level – they oscillate between +1 and −1 in the interval [-1, 1]. $T_{N+1}$ has $N+2$ level extrema. This means that the error between $f(x)$ and its Chebyshev expansion out to $T_N$ is close to a level function with $N+2$ extrema, so it is close to the optimal Nth-degree polynomial.
 
 In the graphs above, note that the blue error function is sometimes better than (inside of) the red function, but sometimes worse, meaning that it is not quite the optimal polynomial. The discrepancy is less serious for the exp function, which has an extremely rapidly converging power series, than for the log function.
 
