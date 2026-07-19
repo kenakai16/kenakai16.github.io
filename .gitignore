@@ -11,7 +11,7 @@
 # =====================
 # Jupyter Book build output
 # =====================
-_build/
+# _build/
 
 # =====================
 # macOS system files
