@@ -62,10 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Number" href="math_background/Number.html" />
+    <link rel="next" title="Essential Mathematics for Data Science" href="math/intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,14 +176,24 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Books (Math Background)</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Essential Mathematics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="math_background/Number.html">Number</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math_background/Integration.html">Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math_background/Calculus.html">Calculus and Derivatives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math_background/Approximation.html">Approximation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="math/intro.html">Essential Mathematics for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="math/Number.html">Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math/Calculus.html">Calculus and Derivatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math/Integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math/Approximation.html">Approximation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="probability/intro.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="statistics/intro.html">Statistics</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
@@ -192,12 +204,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="probability/intro.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="statistics/intro.html">Statistics</a></li>
 </ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="Exploratory.html">Data Science Book</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Exploratory.html">Data Science Book</a></li>
 </ul>
 
     </div>
@@ -323,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -339,6 +355,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-bibliography">📚 Recommended Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-syllabus-lecture-path">🗺️ Course Syllabus &amp; Lecture Path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-linear-algebra-matrix-theory">Part 1: Linear Algebra &amp; Matrix Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-multivariable-calculus-optimization">Part 2: Multivariable Calculus &amp; Optimization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -350,55 +380,171 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="math-for-data-science">
 <h1>Math for Data Science<a class="headerlink" href="#math-for-data-science" title="Permalink to this heading">#</a></h1>
-<p>Stavros Toumpis, Assistant Professor, AUEB, <a class="reference external" href="mailto:toumpis&#37;&#52;&#48;aueb&#46;gr">toumpis<span>&#64;</span>aueb<span>&#46;</span>gr</a>
-Overview
-The course is a brief overview of the basic tools from Linear Algebra and Multivariable Calculus that will be needed in subsequent courses of the program.
-Key Outcomes
-By completing the course the students will have been reminded of the basic tools of Linear Algebra and Multivariable Calculus needed in subsequent courses in the program, notably:
- Fundamental properties of matrices, their norms, and their applications
- Differentiating/integrating multiple variable functions, and the role of the gradient and the
-hessian matrix.
- Basic properties of optimization problems involving matrices and functions of multiple variables.
-Requirements and Prerequisites
-This course is meant to be a refresher. Students are assumed to have developed some mathematical maturity through a few mathematically oriented classes that involve the standard undergraduate treatment of linear algebra and single‐variable calculus.
-Bibliography</p>
-<ol class="arabic simple">
-<li><p>Gilbert Strang, Linear Algebra and Its Applications, Thomson/Brooks Cole (Available in a Greek Translation)</p></li>
-<li><p>Thomas M. Apostol, Calculus, Wiley, 2nd Edition, 1991, ISBN 960-07-0067-2.</p></li>
-<li><p>Michael Spivak, Calculus, Publish or Perish, 2008, ISBN 978-0914098911.</p></li>
-<li><p>Ross L. Finney, Maurice D. Weir, and Frank R. Giordano, Thomas’s Calculus, Pearson,
-12th Edition, 2009.</p></li>
-<li><p>David C. Lay, Linear Algebra and Its Applications, 4th Edition.</p></li>
-<li><p>Yousef Saad, ‘Iterative Methods for Sparse Linear Systems’
-Grading
-There will be a written examination at the end of the course.
-Course Syllabus
-The course comprises twelve one‐hour lectures which will be spread out in the first two weeks of the first semester.
-Lecture 1: Matrices and Basic Operations, Special structures
-Matrices and Basic Operations, interpretation of matrices as linear mappings, and some examples
-Lecture 2: Square Matrices, Determinants
-Properties of determinants, singular and non‐singular matrices, examples, finding an inverse matrix
-Lecture 3: Eigenvalues and Eigenvectors
-Characteristic Polynomial, Definition of Left/right Eigenvalues and Eigenvectors, Caley‐Hamilton theorem, Singular Value Decomposition, interpretation of eigenvalues/vectors
-Lecture 4: Normed Spaces, Vector Spaces, Matrix Norms
-Definition of complete normed and vector spaces and some examples. Matrix norms and properties, applications to series of matrices and their convergence
-Lecture 5: The Range and the Null space of a Matrix
-Definition and basic properties, orthogonality, Gram‐Schmidt algorithm
-Lecture 6: Positive‐Definite Matrices and the Taylor Expansion of a two‐variable function
-Definition of positive‐definiteness and the role of the eigenvalues. Physical meaning and importance in real‐life problems
-Lecture 7: Linear Systems
-Definition, applications, solving linear systems, linear inequalities, linear programming
-Lecture 8: Real‐valued functions of two or more variables.
-Definition, examples, simple demos, applications
-Lecture 9: Analysis elements
-Distance, Limits, continuity, differentiability, the gradient and the Hessian
-Lecture 10: Optimization problems
-Simple examples, motivation, the role of the Hessian, maxima and minima and related extrema conditions
-Lecture 11: Integration
-Double integrals, Fubini’s theorem, properties, applications
-Lecture 12: Elements of Convex Optimization
-Functions of n variables. Convex sets, convex functions, convex problems, and their basic properties. Examples of convex problems, convexity versus non‐convexity</p></li>
-</ol>
+<p>Welcome to the <strong>Math for Data Science</strong> blog. This resource is a curated refresher on the core mathematical foundations of Data Science, structured after the academic syllabus of <strong>“Math for Data Science”</strong> by <em>Stavros Toumpis, Assistant Professor at AUEB</em>.</p>
+<hr class="docutils" />
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🎯 Key Outcomes</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Linear Algebra</strong>:</p>
+<ul>
+<li><p class="sd-card-text">Fundamental properties of matrices, their norms, and their applications.</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>Multivariable Calculus</strong>:</p>
+<ul>
+<li><p class="sd-card-text">Differentiating/integrating multiple variable functions.</p></li>
+<li><p class="sd-card-text">The crucial role of the <strong>Gradient</strong> (<span class="math notranslate nohighlight">\(\nabla\)</span>) and the <strong>Hessian matrix</strong> (<span class="math notranslate nohighlight">\(H\)</span>).</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>Optimization</strong>:</p>
+<ul>
+<li><p class="sd-card-text">Basic properties of optimization problems involving matrices and functions of multiple variables.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+🚀 Practical Focus</div>
+<p class="sd-card-text">Rather than dry mathematical proofs, we focus on <strong>conceptual intuition</strong> coupled with <strong>step-by-step Python implementations</strong> using <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, and <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="recommended-bibliography">
+<h2>📚 Recommended Bibliography<a class="headerlink" href="#recommended-bibliography" title="Permalink to this heading">#</a></h2>
+<p>For deep theoretical insights, we recommend referencing these classic textbooks:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📘 Applied Math</div>
+<p class="sd-card-text"><strong>Essential Math for DS</strong>
+<em>Thomas Nield</em>
+O’Reilly Media (2022)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📗 Linear Algebra</div>
+<p class="sd-card-text"><strong>Linear Algebra &amp; Its Apps</strong>
+<em>Gilbert Strang</em>
+Thomson/Brooks Cole</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📙 Calculus</div>
+<p class="sd-card-text"><strong>Thomas’s Calculus</strong>
+<em>Weir &amp; Giordano</em>
+12th Edition, Pearson</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="course-syllabus-lecture-path">
+<h2>🗺️ Course Syllabus &amp; Lecture Path<a class="headerlink" href="#course-syllabus-lecture-path" title="Permalink to this heading">#</a></h2>
+<p>The module is broken down into <strong>12 structured lectures</strong> designed to take you from core arithmetic to multivariable optimization:</p>
+<section id="part-1-linear-algebra-matrix-theory">
+<h3>Part 1: Linear Algebra &amp; Matrix Theory<a class="headerlink" href="#part-1-linear-algebra-matrix-theory" title="Permalink to this heading">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 1 &amp; 2: Matrix Fundamentals</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 1</strong>: Basic matrix operations, interpreting matrices as linear mappings, and special structures (diagonal, sparse, symmetric).</p></li>
+<li><p class="sd-card-text"><strong>Lecture 2</strong>: Square matrices, determinants (space scaling), singular vs. non-singular matrices, and inverse computations (<span class="math notranslate nohighlight">\(A^{-1}\)</span>).</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 3 &amp; 4: Eigenvalues &amp; Normed Spaces</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 3</strong>: Eigenvalues and eigenvectors, the Characteristic Polynomial, the Cayley-Hamilton theorem, and Singular Value Decomposition (SVD).</p></li>
+<li><p class="sd-card-text"><strong>Lecture 4</strong>: Complete normed spaces and vector spaces, vector norms (<span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span>, <span class="math notranslate nohighlight">\(L_\infty\)</span>), and matrix norms (Frobenius).</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 5 &amp; 6: Spaces &amp; Advanced Matrix Structures</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 5</strong>: Column space (Range) and Null space, vector orthogonality, projection matrices, and the Gram-Schmidt algorithm.</p></li>
+<li><p class="sd-card-text"><strong>Lecture 6</strong>: Positive-definite matrices, eigenvalues, and their physical meaning in optimization stability.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="part-2-multivariable-calculus-optimization">
+<h3>Part 2: Multivariable Calculus &amp; Optimization<a class="headerlink" href="#part-2-multivariable-calculus-optimization" title="Permalink to this heading">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 7 &amp; 8: Systems &amp; Functions</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 7</strong>: Formulating and solving systems of linear equations (<span class="math notranslate nohighlight">\(Ax = b\)</span>), linear inequalities, and introduction to Linear Programming.</p></li>
+<li><p class="sd-card-text"><strong>Lecture 8</strong>: Real-valued functions of two or more variables, domain mapping, and 3D visualization.</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 9 &amp; 10: Differentiation &amp; Local Extrema</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 9</strong>: Limits, continuity, and differentiability in <span class="math notranslate nohighlight">\(n\)</span>-dimensions. The <strong>Gradient vector</strong> (first-order) and the <strong>Hessian matrix</strong> (second-order).</p></li>
+<li><p class="sd-card-text"><strong>Lecture 10</strong>: Optimization problems, identifying local maxima and minima, and analyzing extrema using the Hessian matrix.</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📂 Lectures 11 &amp; 12: Integration &amp; Convexity</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Lecture 11</strong>: Double and triple integrals, Fubini’s theorem (changing integration order), and applications in joint probability.</p></li>
+<li><p class="sd-card-text"><strong>Lecture 12</strong>: Convex sets, convex functions, and convex optimization. The significance of convexity vs. non-convexity in machine learning.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="get-started">
+<h2>🏁 Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h2>
+<p>Choose any section from the sidebar or table of contents to begin your journey!</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -436,11 +582,11 @@ Functions of n variables. Convex sets, convex functions, convex problems, and th
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="math_background/Number.html"
+       href="math/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Number</p>
+        <p class="prev-next-title">Essential Mathematics for Data Science</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -450,6 +596,27 @@ Functions of n variables. Convex sets, convex functions, convex problems, and th
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-bibliography">📚 Recommended Bibliography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-syllabus-lecture-path">🗺️ Course Syllabus &amp; Lecture Path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-linear-algebra-matrix-theory">Part 1: Linear Algebra &amp; Matrix Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-multivariable-calculus-optimization">Part 2: Multivariable Calculus &amp; Optimization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
