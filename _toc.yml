@@ -1,18 +1,31 @@
 format: jb-book
 root: book/intro
 parts:
-  - caption: Math Basic
+  - caption: Basic Math and Calculus Review
     chapters:
       - file: book/math_basic/intro
         sections:
           - file: book/math_basic/Number
-          - file: book/math_basic/statistics_intro
+          - file: book/math_basic/Fractions
+          - file: book/math_basic/Decimals
+          - file: book/math_basic/OrderOfOperations
+          - file: book/math_basic/Variables
+          - file: book/math_basic/Functions
+          - file: book/math_basic/Curvilinear
+          - file: book/math_basic/Summations
+          - file: book/math_basic/Exponents
+          - file: book/math_basic/Logarithms
+          - file: book/math_basic/Calculus
+          - file: book/math_basic/Integration
 
-  - caption: Probability & Statistics 2
+  - caption: Probability & Statistics
     chapters:
-      - file: book/probability2/intro
-        sections:
-          - file: book/statistics2/intro
+      - file: book/probability/intro
+      - file: book/statistics/intro
+
+  - caption: Optimization
+    chapters:
+      - file: book/optimization/intro
 
   - caption: Machine Learning
     chapters:
@@ -23,6 +36,10 @@ parts:
           - file: book/machine_learning/Supervised Learning
           - file: book/machine_learning/Unsupervised Learning
           - file: book/machine_learning/Distributed Learning
+
+  - caption: Approximation Theory
+    chapters:
+      - file: book/approximation/intro
 
   - caption: Deep Learning
     chapters:
