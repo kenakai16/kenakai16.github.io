@@ -1,11 +1,12 @@
 format: jb-book
 root: book/intro
 parts:
-  - caption: Probability & Statistics 1
+  - caption: Math Basic
     chapters:
-      - file: book/probability1/intro
+      - file: book/math_basic/intro
         sections:
-          - file: book/statistics1/intro
+          - file: book/math_basic/Number
+          - file: book/math_basic/statistics_intro
 
   - caption: Probability & Statistics 2
     chapters:
