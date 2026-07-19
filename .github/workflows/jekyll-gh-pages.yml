@@ -50,6 +50,8 @@ jobs:
           ls -la _build/html/book/ || echo "book/ dir NOT FOUND"
           echo "=== All HTML files ==="
           find _build/html -name "*.html" | sort
+      - name: Disable Jekyll processing
+        run: touch _build/html/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
