@@ -45,7 +45,7 @@ jobs:
       - name: Build Jupyter Book PDF
         run: |
           pyppeteer-install
-          jupyter-book build . --builder pdfhtml
+          jupyter-book build . --sphinx-opts "-b pdfhtml"
           # Copy the generated PDF into the HTML folder so it deploys to GitHub Pages
           cp _build/pdf/book.pdf _build/html/book.pdf || echo "PDF generation failed"
       - name: Debug - List built files
