@@ -48,3 +48,7 @@ parts:
   - caption: Data Analysis
     chapters:
       - file: book/Exploratory
+
+  - caption: Download PDF
+    chapters:
+      - file: book/book.pdf

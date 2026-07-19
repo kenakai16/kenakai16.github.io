@@ -42,20 +42,14 @@ jobs:
       - name: Build Jupyter Book HTML
         run: |
           jupyter-book build .
-      - name: Build Jupyter Book PDF
-        run: |
-          pyppeteer-install
-          jupyter-book build . --sphinx-opts "-b pdfhtml"
-          # Copy the generated PDF into the HTML folder so it deploys to GitHub Pages
-          cp _build/pdf/book.pdf _build/html/book.pdf || echo "PDF generation failed"
       - name: Debug - List built files
         run: |
           echo "=== Root of _build/html ==="
           ls -la _build/html/
           echo "=== book/ subdirectory ==="
           ls -la _build/html/book/ || echo "book/ dir NOT FOUND"
-          echo "=== All HTML and PDF files ==="
-          find _build/html -name "*.html" -o -name "*.pdf" | sort
+          echo "=== All HTML files ==="
+          find _build/html -name "*.html" | sort
       - name: Disable Jekyll processing
         run: touch _build/html/.nojekyll
       - name: Upload artifact
