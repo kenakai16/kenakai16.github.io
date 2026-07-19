@@ -4,10 +4,6 @@ parts:
   - caption: Essential Mathematics
     chapters:
       - file: book/math/intro
-      - file: book/math/Number
-      - file: book/math/Calculus
-      - file: book/math/Integration
-      - file: book/math/Approximation
 
   - caption: Probability & Statistics
     chapters:

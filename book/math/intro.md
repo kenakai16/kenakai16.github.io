@@ -1,22 +1,20 @@
-# Essential Mathematics for Data Science
+# Essential Mathematics
 
-This section covers the mathematical foundations required for machine learning, deep learning, and advanced data analysis.
-
-Understanding these concepts helps open the "black box" of machine learning algorithms, giving you a clear intuition of what happens under the hood.
+Mathematics is the language of Data Science and Machine Learning. Understanding the core concepts helps open the "black box" of algorithms and provides a clear intuition of what happens under the hood.
 
 ---
 
 ## 📂 Topics Covered
 
-In this section, you will explore:
+In this section, we will cover:
 
-- **{doc}`Number Theory <Number>`**: Understanding natural numbers, integers, rational/irrational numbers, and real/complex number systems.
-- **{doc}`Calculus & Derivatives <Calculus>`**: Limits, derivatives, chain rule (backpropagation's engine), partial derivatives, and gradients.
-- **{doc}`Integration & Riemann Sums <Integration>`**: Measuring area under curves, calculating approximations, and computing probability from Continuous Distributions.
-- **{doc}`Approximation Theory <Approximation>`**: Taylor series, Chebyshev polynomials, Remez's algorithm, and the Universal Approximation Theorem.
+1. **Number Theory**: Understanding different number systems and their properties.
+2. **Calculus & Derivatives**: Exploring limits, partial derivatives, and gradients.
+3. **Integration**: Calculating areas under curves, which is fundamental for probability distributions.
+4. **Approximation Theory**: Taylor series and the Universal Approximation Theorem.
 
 ---
 
 ## 🚀 Get Started
 
-Click on **Number Theory** in the sidebar to begin your mathematical journey!
+This module will guide you through all the necessary mathematics step-by-step.
