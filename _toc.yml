@@ -1,10 +1,6 @@
 format: jb-book
 root: book/intro
 parts:
-  - caption: Essential Mathematics
-    chapters:
-      - file: book/math/intro
-
   - caption: Probability & Statistics 1
     chapters:
       - file: book/probability1/intro
