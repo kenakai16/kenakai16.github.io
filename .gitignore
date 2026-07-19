@@ -1,0 +1,36 @@
+# =====================
+# Reference PDFs (sách tham khảo — không đưa lên git)
+# =====================
+*.pdf
+
+# =====================
+# Agent context files (local AI agent config — không đưa lên git)
+# =====================
+.agents/
+
+# =====================
+# Jupyter Book build output
+# =====================
+_build/
+
+# =====================
+# macOS system files
+# =====================
+.DS_Store
+**/.DS_Store
+
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# =====================
+# Jupyter Notebook checkpoints
+# =====================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
