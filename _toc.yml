@@ -51,4 +51,4 @@ parts:
 
   - caption: Download PDF
     chapters:
-      - file: book/book.pdf
+      - file: book/download_pdf
