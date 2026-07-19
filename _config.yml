@@ -9,5 +9,12 @@ execute:
 bibtex_bibfiles:
   - references.bib
 
-# html:
-#   use_multitoc_numbering: false
+html:
+  repository_url: https://github.com/kenakai16/kenakai16.github.io
+  use_issues_button: false
+  use_repository_button: true
+  extra_navbar: ""
+  extra_footer: ""
+  home_page_in_toc: true
+  use_multitoc_numbering: false
+  use_download_button: true
