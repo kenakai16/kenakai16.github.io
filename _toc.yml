@@ -5,11 +5,17 @@ parts:
     chapters:
       - file: book/math/intro
 
-  - caption: Probability & Statistics
+  - caption: Probability & Statistics 1
     chapters:
-      - file: book/probability/intro
+      - file: book/probability1/intro
         sections:
-          - file: book/statistics/intro
+          - file: book/statistics1/intro
+
+  - caption: Probability & Statistics 2
+    chapters:
+      - file: book/probability2/intro
+        sections:
+          - file: book/statistics2/intro
 
   - caption: Machine Learning
     chapters:
