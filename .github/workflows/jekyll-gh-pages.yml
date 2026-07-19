@@ -42,6 +42,14 @@ jobs:
       - name: Build Jupyter Book
         run: |
           jupyter-book build .
+      - name: Debug - List built files
+        run: |
+          echo "=== Root of _build/html ==="
+          ls -la _build/html/
+          echo "=== book/ subdirectory ==="
+          ls -la _build/html/book/ || echo "book/ dir NOT FOUND"
+          echo "=== All HTML files ==="
+          find _build/html -name "*.html" | sort
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
