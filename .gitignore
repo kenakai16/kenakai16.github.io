@@ -1,7 +1,7 @@
 # =====================
 # Reference PDFs (sách tham khảo — không đưa lên git)
 # =====================
-*.pdf
+# *.pdf
 
 # =====================
 # Agent context files (local AI agent config — không đưa lên git)
