@@ -1,13 +1,14 @@
 format: jb-book
 root: intro
 parts:
-- caption: Books
+- caption: Books (Math Background)
   chapters:
   - file: book/intro
     sections:
     - file: book/math_background/Number
     - file: book/math_background/Integration
-  - file: book/math_background/Approximation
+    - file: book/math_background/Calculus
+    - file: book/math_background/Approximation
 
 - caption: Topic Guides
   chapters:
@@ -15,13 +16,14 @@ parts:
     sections:
     - file: book/machine_learning/Linear Algebra
     - file: book/machine_learning/Methodology for usage
+    - file: book/machine_learning/Supervised Learning
+    - file: book/machine_learning/Unsupervised Learning
     - file: book/machine_learning/Distributed Learning
-      sections:
-      - file: book/machine_learning/Supervised Learning
-      - file: book/machine_learning/Unsupervised Learning
-    - file: book/math_background/Calculus
 
   - file: book/probability/intro
     sections:
     - file: book/statistics/intro
-    - file: book/Exploratory
+
+  - file: book/Exploratory
+
+  - file: book/deep_learning/intro
