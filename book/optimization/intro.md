@@ -1,74 +1,51 @@
-# Introduction
+# Introduction to Optimization
 
-Optimization is the process of finding the maximum or minimum value of a function. In Machine Learning, training a model is essentially an optimization problem: we want to find the parameters (weights and biases) that **minimize** a loss function.
+Optimization is the process of finding the best solution from a set of feasible alternatives. A mathematical optimization problem has the general form:
 
----
+$$\begin{aligned}
+\text{minimize} \quad & f_0(x) \\
+\text{subject to} \quad & f_i(x) \leq b_i, \quad i = 1, \dots, m
+\end{aligned}$$
 
-## 1. Local Extrema & Second Derivative Test
-
-To find the minimum or maximum of a multivariable function $f(x, y)$, we start by finding the **critical points** where the gradient is zero:
-
-$$\nabla f(x, y) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
-
-Once we find a critical point, we use the **Hessian matrix** $\mathbf{H}$ (which captures the curvature of the function) to determine its nature:
-
-$$\mathbf{H} = \begin{bmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x \partial y} \\ \frac{\partial^2 f}{\partial y \partial x} & \frac{\partial^2 f}{\partial y^2} \end{bmatrix}$$
-
-Using the eigenvalues of the Hessian matrix at the critical point:
-- **Local Minimum**: If $\mathbf{H}$ is positive-definite (all eigenvalues $>0$). The curve bends upwards.
-- **Local Maximum**: If $\mathbf{H}$ is negative-definite (all eigenvalues $<0$). The curve bends downwards.
-- **Saddle Point**: If $\mathbf{H}$ has both positive and negative eigenvalues. The curve bends up in one direction and down in another.
+Where:
+- $x = (x_1, \dots, x_n)$ is the **optimization variable**.
+- $f_0: \mathbb{R}^n \to \mathbb{R}$ is the **objective function**.
+- $f_i(x) \leq b_i$ are the **constraint functions**.
 
 ---
 
-## 2. Gradient Descent
+## 1. Least-Squares & Linear Programming
 
-When a function is too complex to solve analytically, we use **Gradient Descent**, an iterative optimization algorithm.
+Depending on the mathematical properties of $f_0$ and $f_i$, optimization problems are classified into several major families.
 
-Since the gradient $\nabla f$ points in the direction of the steepest increase, updating our variables in the opposite direction ($-\nabla f$) moves us down toward the minimum:
+### Least-Squares (Bình phương tối thiểu)
+A least-squares problem has no constraints and an objective function that is a sum of squares:
 
-$$\mathbf{w} \leftarrow \mathbf{w} - \alpha \nabla J(\mathbf{w})$$
+$$\text{minimize} \quad \|Ax - b\|_2^2 = \sum_{i=1}^k (a_i^T x - b_i)^2$$
 
-Where $\alpha$ is the **learning rate** (step size).
+This problem can be solved analytically ($x = (A^T A)^{-1} A^T b$). It is the foundation of **Linear Regression** in machine learning.
 
-### Python Implementation
-Let's minimize the function $f(x) = x^2 - 4x + 4$ (which has a minimum at $x=2$, where the gradient is $2x-4$).
+### Linear Programming (Quy hoạch tuyến tính - LP)
+In Linear Programming, both the objective and constraint functions are linear:
 
-```python
-x = 10.0          # Starting point
-learning_rate = 0.1
-epochs = 20
+$$\begin{aligned}
+\text{minimize} \quad & c^T x \\
+\text{subject to} \quad & a_i^T x \leq b_i, \quad i = 1, \dots, m
+\end{aligned}$$
 
-for epoch in range(epochs):
-    gradient = 2 * x - 4
-    x = x - learning_rate * gradient
-    loss = x**2 - 4*x + 4
-    print(f"Epoch {epoch+1:02d}: x = {x:.4f}, Loss = {loss:.4f}")
-```
+LPs do not have analytical solutions but can be solved extremely fast using algorithms like the Simplex method or Interior-point methods.
 
 ---
 
-## 3. Quadratic Optimization with SymPy
+## 2. Convex vs. Non-linear Optimization
 
-We can use SymPy to find the analytical Hessian and determine the nature of critical points:
+The boundary in optimization is not between linearity and non-linearity, but between **convexity** and **non-convexity**.
 
-```python
-import sympy as sp
-
-x, y = sp.symbols('x y')
-f = x**2 + y**2 - 4*x - 6*y
-
-# 1. Find critical points by solving Gradient = 0
-grad_x = sp.diff(f, x)
-grad_y = sp.diff(f, y)
-critical_points = sp.solve([grad_x, grad_y], (x, y))
-print("Critical Point:", critical_points)
-
-# 2. Compute the Hessian matrix
-H = sp.hessian(f, (x, y))
-print("\nHessian Matrix:")
-sp.pprint(H)
-```
+| Property | Convex Optimization | Non-convex / Nonlinear Optimization |
+| :--- | :--- | :--- |
+| **Geometry** | objective function is convex, constraint set is convex. | objective or constraints are non-convex (curves bend down). |
+| **Minima** | Any local minimum is a **global minimum**. | Many local minima and saddle points exist. |
+| **Solvability** | Can be solved efficiently, reliably, and globally. | Hard to solve; algorithms often get stuck in local minima. |
 
 ---
 
@@ -76,36 +53,14 @@ sp.pprint(H)
 
 ```{admonition} Exercise 1
 :class: tip
-Perform 3 iterations of Gradient Descent manually for the function $f(x) = x^2$. Start at $x_0 = 4$ with a learning rate $\alpha = 0.1$.
-```
-
-```{admonition} Exercise 2
-:class: tip
-Given the function:
-$$f(x, y) = x^2 + 2y^2 - 4x - 8y$$
-1. Find the critical point.
-2. Determine if it is a local minimum, maximum, or saddle point using the Hessian matrix.
+Classify the following optimization problem (find if it is LP, Least-Squares, or Nonlinear):
+$$\text{minimize} \quad (3x_1 + x_2 - 5)^2 + (x_1 - 2x_2 + 1)^2$$
 ```
 
 ```{admonition} Solution — Exercise 1
 :class: dropdown
-The derivative is $f'(x) = 2x$.
-- **Iteration 1**:
-  $$x_1 = x_0 - \alpha \cdot f'(x_0) = 4 - 0.1(2 \cdot 4) = 4 - 0.8 = 3.2$$
-- **Iteration 2**:
-  $$x_2 = x_1 - \alpha \cdot f'(x_1) = 3.2 - 0.1(2 \cdot 3.2) = 3.2 - 0.64 = 2.56$$
-- **Iteration 3**:
-  $$x_3 = x_2 - \alpha \cdot f'(x_2) = 2.56 - 0.1(2 \cdot 2.56) = 2.56 - 0.512 = 2.048$$
-```
-
-```{admonition} Solution — Exercise 2
-:class: dropdown
-1. Calculate partial derivatives and set to zero:
-   - $\frac{\partial f}{\partial x} = 2x - 4 = 0 \implies x = 2$
-   - $\frac{\partial f}{\partial y} = 4y - 8 = 0 \implies y = 2$
-   The critical point is $(2, 2)$.
-
-2. Hessian matrix:
-   $$\mathbf{H} = \begin{bmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x \partial y} \\ \frac{\partial^2 f}{\partial y \partial x} & \frac{\partial^2 f}{\partial y^2} \end{bmatrix} = \begin{bmatrix} 2 & 0 \\ 0 & 4 \end{bmatrix}$$
-   Since all elements on the diagonal (and eigenvalues) are positive ($2 > 0, 4 > 0$), the Hessian is positive-definite. The point $(2, 2)$ is a **local minimum**.
+This objective is a sum of squared linear terms:
+$$f(x) = \|Ax - b\|_2^2$$
+Where $A = \begin{bmatrix} 3 & 1 \\ 1 & -2 \end{bmatrix}$ and $b = \begin{bmatrix} 5 \\ -1 \end{bmatrix}$. 
+Therefore, this is a **Least-Squares** problem.
 ```

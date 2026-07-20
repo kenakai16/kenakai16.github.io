@@ -15,6 +15,7 @@ parts:
           - file: book/math_basic/Summations
           - file: book/math_basic/Exponents
           - file: book/math_basic/Logarithms
+          - file: book/math_basic/LinearAlgebra
           - file: book/math_basic/Calculus
           - file: book/math_basic/Integration
 
@@ -26,6 +27,12 @@ parts:
   - caption: Optimization
     chapters:
       - file: book/optimization/intro
+        sections:
+          - file: book/optimization/convex_sets_functions
+          - file: book/optimization/convex_problems
+          - file: book/optimization/duality
+          - file: book/optimization/algorithms
+          - file: book/optimization/combinatorial
 
   - caption: Machine Learning
     chapters:
@@ -40,6 +47,8 @@ parts:
   - caption: Approximation Theory
     chapters:
       - file: book/approximation/intro
+        sections:
+          - file: book/approximation/fitting
 
   - caption: Deep Learning
     chapters:

@@ -173,6 +173,13 @@ $$\text{Expected Value} = \frac{1+2+3+4+5+6}{6} = 3.5$$
 
 If you roll the die 10 times, your average roll might be $2.8$ or $4.2$. However, if you roll it 10,000 times, the average will be extremely close to $3.5$.
 
+```{image} ../../images/lln_simulation.gif
+:alt: Law of Large Numbers Simulation
+:class: bg-primary mb-1
+:width: 85%
+:align: center
+```
+
 ### Python Simulation
 Here is a simulation of the Law of Large Numbers using Python:
 

@@ -1,0 +1,700 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Convex Sets &amp; Functions &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/optimization/convex_sets_functions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Convex Optimization Problems" href="convex_problems.html" />
+    <link rel="prev" title="Introduction to Optimization" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Math for Data Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../math_basic/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Introduction to Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/kenakai16/kenakai16.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/optimization/convex_sets_functions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Convex Sets & Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-convex-sets">Part I: Convex Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-convex-functions-chapter-3">Part II: Convex Functions (Chapter 3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples-3-1">1. Basic Properties and Examples (3.1)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-convexity">First-order Condition for Convexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-convexity">Second-order Condition for Convexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important-examples">Important Examples:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity-3-2">2. Operations that Preserve Convexity (3.2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function-3-3">3. The Conjugate Function (3.3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-applications">Probability Applications:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="convex-sets-functions">
+<h1>Convex Sets &amp; Functions<a class="headerlink" href="#convex-sets-functions" title="Permalink to this heading">#</a></h1>
+<p>This page covers the mathematical definition and geometric properties of convex sets and convex functions, based on Chapters 2 and 3 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
+<hr class="docutils" />
+<section id="part-i-convex-sets">
+<h2>Part I: Convex Sets<a class="headerlink" href="#part-i-convex-sets" title="Permalink to this heading">#</a></h2>
+<p>A set <span class="math notranslate nohighlight">\(C \subseteq \mathbb{R}^n\)</span> is <strong>convex</strong> if the line segment between any two points in <span class="math notranslate nohighlight">\(C\)</span> lies entirely in <span class="math notranslate nohighlight">\(C\)</span>. That is, for any <span class="math notranslate nohighlight">\(x_1, x_2 \in C\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\theta x_1 + (1-\theta)x_2 \in C\]</div>
+</section>
+<hr class="docutils" />
+<section id="part-ii-convex-functions-chapter-3">
+<h2>Part II: Convex Functions (Chapter 3)<a class="headerlink" href="#part-ii-convex-functions-chapter-3" title="Permalink to this heading">#</a></h2>
+<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>convex</strong> if its domain <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is a convex set and for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span>, <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y)\]</div>
+<section id="basic-properties-and-examples-3-1">
+<h3>1. Basic Properties and Examples (3.1)<a class="headerlink" href="#basic-properties-and-examples-3-1" title="Permalink to this heading">#</a></h3>
+<section id="first-order-condition-for-convexity">
+<h4>First-order Condition for Convexity<a class="headerlink" href="#first-order-condition-for-convexity" title="Permalink to this heading">#</a></h4>
+<p>A differentiable function <span class="math notranslate nohighlight">\(f\)</span> is convex if and only if <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is convex and:</p>
+<div class="math notranslate nohighlight">
+\[f(y) \geq f(x) + \nabla f(x)^T (y-x) \quad \text{for all } x, y \in \text{dom } f\]</div>
+<p>Geometrically, the tangent plane at any point acts as a global lower bound.</p>
+</section>
+<section id="second-order-condition-for-convexity">
+<h4>Second-order Condition for Convexity<a class="headerlink" href="#second-order-condition-for-convexity" title="Permalink to this heading">#</a></h4>
+<p>A twice-differentiable function <span class="math notranslate nohighlight">\(f\)</span> is convex if and only if its Hessian matrix is positive semi-definite:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 f(x) \succeq 0 \quad \text{for all } x \in \text{dom } f\]</div>
+</section>
+<section id="important-examples">
+<h4>Important Examples:<a class="headerlink" href="#important-examples" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Exponential</strong>: <span class="math notranslate nohighlight">\(e^{ax}\)</span> is convex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p></li>
+<li><p><strong>Powers</strong>: <span class="math notranslate nohighlight">\(x^p\)</span> is convex on <span class="math notranslate nohighlight">\(\mathbb{R}_{++}\)</span> for <span class="math notranslate nohighlight">\(p \geq 1\)</span> or <span class="math notranslate nohighlight">\(p \leq 0\)</span>.</p></li>
+<li><p><strong>Negative Logarithm</strong>: <span class="math notranslate nohighlight">\(-\ln(x)\)</span> is convex on <span class="math notranslate nohighlight">\(\mathbb{R}_{++}\)</span>.</p></li>
+<li><p><strong>Max function</strong>: <span class="math notranslate nohighlight">\(\max(x_1, \dots, x_n)\)</span> is convex on <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="operations-that-preserve-convexity-3-2">
+<h3>2. Operations that Preserve Convexity (3.2)<a class="headerlink" href="#operations-that-preserve-convexity-3-2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Nonnegative weighted sum</strong>: <span class="math notranslate nohighlight">\(f = w_1 f_1 + w_2 f_2\)</span> is convex if <span class="math notranslate nohighlight">\(f_1, f_2\)</span> are convex and <span class="math notranslate nohighlight">\(w_1, w_2 \geq 0\)</span>.</p></li>
+<li><p><strong>Composition with affine mapping</strong>: <span class="math notranslate nohighlight">\(g(x) = f(Ax + b)\)</span> is convex if <span class="math notranslate nohighlight">\(f\)</span> is convex.</p></li>
+<li><p><strong>Pointwise maximum</strong>: If <span class="math notranslate nohighlight">\(f_s(x)\)</span> is convex for each <span class="math notranslate nohighlight">\(s \in \mathcal{S}\)</span>, then <span class="math notranslate nohighlight">\(f(x) = \sup_{s \in \mathcal{S}} f_s(x)\)</span> is convex.</p></li>
+<li><p><strong>Partial Minimization</strong>: If <span class="math notranslate nohighlight">\(g(x, y)\)</span> is convex in <span class="math notranslate nohighlight">\((x, y)\)</span> and <span class="math notranslate nohighlight">\(C\)</span> is a convex set, then <span class="math notranslate nohighlight">\(f(x) = \inf_{y \in C} g(x, y)\)</span> is convex.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-conjugate-function-3-3">
+<h3>3. The Conjugate Function (3.3)<a class="headerlink" href="#the-conjugate-function-3-3" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span>. The <strong>conjugate function</strong> <span class="math notranslate nohighlight">\(f^*: \mathbb{R}^n \to \mathbb{R}\)</span> (also known as the Fenchel conjugate) is defined as:</p>
+<div class="math notranslate nohighlight">
+\[f^*(y) = \sup_{x \in \text{dom } f} (y^T x - f(x))\]</div>
+<p>The conjugate function <span class="math notranslate nohighlight">\(f^*\)</span> is <strong>always convex</strong>, even if the original function <span class="math notranslate nohighlight">\(f\)</span> is not convex, because it is the pointwise supremum of a family of affine functions of <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<section id="example">
+<h4>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<p>For <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2} x^T Q x\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is symmetric positive definite:
+$<span class="math notranslate nohighlight">\(f^*(y) = \frac{1}{2} y^T Q^{-1} y\)</span>$</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quasiconvex-functions-3-4">
+<h3>4. Quasiconvex Functions (3.4)<a class="headerlink" href="#quasiconvex-functions-3-4" title="Permalink to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>quasiconvex</strong> (or unimodal) if its domain and all its <strong>sublevel sets</strong> are convex:</p>
+<div class="math notranslate nohighlight">
+\[S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}\]</div>
+<p>For a quasiconvex function, any point between two points cannot have a value higher than the maximum of the two points:
+$<span class="math notranslate nohighlight">\(f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))\)</span>$</p>
+<ul class="simple">
+<li><p><em>Example</em>: <span class="math notranslate nohighlight">\(f(x) = \sqrt{|x|}\)</span> is quasiconvex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but not convex).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="log-concave-and-log-convex-functions-3-5">
+<h3>5. Log-Concave and Log-Convex Functions (3.5)<a class="headerlink" href="#log-concave-and-log-convex-functions-3-5" title="Permalink to this heading">#</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function.
+Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>log-convex</strong> if <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is convex.</p>
+<section id="probability-applications">
+<h4>Probability Applications:<a class="headerlink" href="#probability-applications" title="Permalink to this heading">#</a></h4>
+<p>Many common probability density functions (PDFs) are log-concave, which makes maximum likelihood estimation (MLE) solvable as a convex optimization problem:</p>
+<ul class="simple">
+<li><p><strong>Normal Distribution</strong>: <span class="math notranslate nohighlight">\(f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</span> is log-concave.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="convexity-with-respect-to-generalized-inequalities-3-6">
+<h3>6. Convexity with Respect to Generalized Inequalities (3.6)<a class="headerlink" href="#convexity-with-respect-to-generalized-inequalities-3-6" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(K \subseteq \mathbb{R}^m\)</span> be a proper cone.</p>
+<ul class="simple">
+<li><p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}^m\)</span> is <strong><span class="math notranslate nohighlight">\(K\)</span>-convex</strong> if for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \preceq_K \theta f(x) + (1-\theta) f(y)\]</div>
+<p>This maps the classical definition of convexity to vector-valued functions using cone-based ordering relations.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Find the conjugate function <span class="math notranslate nohighlight">\(f^*(y)\)</span> of the negative entropy function:
+$<span class="math notranslate nohighlight">\(f(x) = x \ln x \quad (\text{domain } x &gt; 0)\)</span>$</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution — Exercise 1</p>
+<p>The conjugate is defined as <span class="math notranslate nohighlight">\(f^*(y) = \sup_{x &gt; 0} (yx - x \ln x)\)</span>.
+To find the supremum, take the derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> and set to zero:
+$<span class="math notranslate nohighlight">\(\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
+Substitute \)</span>x^<em><span class="math notranslate nohighlight">\( back into the equation:
+\)</span><span class="math notranslate nohighlight">\(f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
+Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/optimization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to Optimization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="convex_problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Convex Optimization Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-convex-sets">Part I: Convex Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-convex-functions-chapter-3">Part II: Convex Functions (Chapter 3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples-3-1">1. Basic Properties and Examples (3.1)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-convexity">First-order Condition for Convexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-convexity">Second-order Condition for Convexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important-examples">Important Examples:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity-3-2">2. Operations that Preserve Convexity (3.2)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function-3-3">3. The Conjugate Function (3.3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-applications">Probability Applications:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

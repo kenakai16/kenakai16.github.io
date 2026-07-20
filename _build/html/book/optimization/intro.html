@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction &#8212; NghiaHoang</title>
+    <title>Introduction to Optimization &#8212; NghiaHoang</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/optimization/intro';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Machine learning" href="../machine_learning/intro.html" />
+    <link rel="next" title="Convex Sets &amp; Functions" href="convex_sets_functions.html" />
     <link rel="prev" title="Statistics" href="../statistics/intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
 </ul>
@@ -200,7 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
@@ -216,7 +224,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +236,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
 </ul>
 
     </div>
@@ -378,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1>Introduction to Optimization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,12 +403,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-extrema-second-derivative-test">1. Local Extrema &amp; Second Derivative Test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent">2. Gradient Descent</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-linear-programming">1. Least-Squares &amp; Linear Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-binh-phuong-toi-thieu">Least-Squares (Bình phương tối thiểu)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-quy-hoach-tuyen-tinh-lp">Linear Programming (Quy hoạch tuyến tính - LP)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">3. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -406,69 +421,68 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
-<p>Optimization is the process of finding the maximum or minimum value of a function. In Machine Learning, training a model is essentially an optimization problem: we want to find the parameters (weights and biases) that <strong>minimize</strong> a loss function.</p>
-<hr class="docutils" />
-<section id="local-extrema-second-derivative-test">
-<h2>1. Local Extrema &amp; Second Derivative Test<a class="headerlink" href="#local-extrema-second-derivative-test" title="Permalink to this heading">#</a></h2>
-<p>To find the minimum or maximum of a multivariable function <span class="math notranslate nohighlight">\(f(x, y)\)</span>, we start by finding the <strong>critical points</strong> where the gradient is zero:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-optimization">
+<h1>Introduction to Optimization<a class="headerlink" href="#introduction-to-optimization" title="Permalink to this heading">#</a></h1>
+<p>Optimization is the process of finding the best solution from a set of feasible alternatives. A mathematical optimization problem has the general form:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\nabla f(x, y) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\end{split}\]</div>
-<p>Once we find a critical point, we use the <strong>Hessian matrix</strong> <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> (which captures the curvature of the function) to determine its nature:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{H} = \begin{bmatrix} \frac{\partial^2 f}{\partial x^2} &amp; \frac{\partial^2 f}{\partial x \partial y} \\ \frac{\partial^2 f}{\partial y \partial x} &amp; \frac{\partial^2 f}{\partial y^2} \end{bmatrix}\end{split}\]</div>
-<p>Using the eigenvalues of the Hessian matrix at the critical point:</p>
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; f_i(x) \leq b_i, \quad i = 1, \dots, m
+\end{aligned}\end{split}\]</div>
+<p>Where:</p>
 <ul class="simple">
-<li><p><strong>Local Minimum</strong>: If <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> is positive-definite (all eigenvalues <span class="math notranslate nohighlight">\(&gt;0\)</span>). The curve bends upwards.</p></li>
-<li><p><strong>Local Maximum</strong>: If <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> is negative-definite (all eigenvalues <span class="math notranslate nohighlight">\(&lt;0\)</span>). The curve bends downwards.</p></li>
-<li><p><strong>Saddle Point</strong>: If <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> has both positive and negative eigenvalues. The curve bends up in one direction and down in another.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x = (x_1, \dots, x_n)\)</span> is the <strong>optimization variable</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_0: \mathbb{R}^n \to \mathbb{R}\)</span> is the <strong>objective function</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_i(x) \leq b_i\)</span> are the <strong>constraint functions</strong>.</p></li>
 </ul>
-</section>
 <hr class="docutils" />
-<section id="gradient-descent">
-<h2>2. Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permalink to this heading">#</a></h2>
-<p>When a function is too complex to solve analytically, we use <strong>Gradient Descent</strong>, an iterative optimization algorithm.</p>
-<p>Since the gradient <span class="math notranslate nohighlight">\(\nabla f\)</span> points in the direction of the steepest increase, updating our variables in the opposite direction (<span class="math notranslate nohighlight">\(-\nabla f\)</span>) moves us down toward the minimum:</p>
+<section id="least-squares-linear-programming">
+<h2>1. Least-Squares &amp; Linear Programming<a class="headerlink" href="#least-squares-linear-programming" title="Permalink to this heading">#</a></h2>
+<p>Depending on the mathematical properties of <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_i\)</span>, optimization problems are classified into several major families.</p>
+<section id="least-squares-binh-phuong-toi-thieu">
+<h3>Least-Squares (Bình phương tối thiểu)<a class="headerlink" href="#least-squares-binh-phuong-toi-thieu" title="Permalink to this heading">#</a></h3>
+<p>A least-squares problem has no constraints and an objective function that is a sum of squares:</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{w} \leftarrow \mathbf{w} - \alpha \nabla J(\mathbf{w})\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> is the <strong>learning rate</strong> (step size).</p>
-<section id="python-implementation">
-<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Permalink to this heading">#</a></h3>
-<p>Let’s minimize the function <span class="math notranslate nohighlight">\(f(x) = x^2 - 4x + 4\)</span> (which has a minimum at <span class="math notranslate nohighlight">\(x=2\)</span>, where the gradient is <span class="math notranslate nohighlight">\(2x-4\)</span>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>          <span class="c1"># Starting point</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">20</span>
-
-<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
-    <span class="n">gradient</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">gradient</span>
-    <span class="n">loss</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">: x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, Loss = </span><span class="si">{</span><span class="n">loss</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
+\[\text{minimize} \quad \|Ax - b\|_2^2 = \sum_{i=1}^k (a_i^T x - b_i)^2\]</div>
+<p>This problem can be solved analytically (<span class="math notranslate nohighlight">\(x = (A^T A)^{-1} A^T b\)</span>). It is the foundation of <strong>Linear Regression</strong> in machine learning.</p>
+</section>
+<section id="linear-programming-quy-hoach-tuyen-tinh-lp">
+<h3>Linear Programming (Quy hoạch tuyến tính - LP)<a class="headerlink" href="#linear-programming-quy-hoach-tuyen-tinh-lp" title="Permalink to this heading">#</a></h3>
+<p>In Linear Programming, both the objective and constraint functions are linear:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; a_i^T x \leq b_i, \quad i = 1, \dots, m
+\end{aligned}\end{split}\]</div>
+<p>LPs do not have analytical solutions but can be solved extremely fast using algorithms like the Simplex method or Interior-point methods.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="quadratic-optimization-with-sympy">
-<h2>3. Quadratic Optimization with SymPy<a class="headerlink" href="#quadratic-optimization-with-sympy" title="Permalink to this heading">#</a></h2>
-<p>We can use SymPy to find the analytical Hessian and determine the nature of critical points:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
-
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">y</span>
-
-<span class="c1"># 1. Find critical points by solving Gradient = 0</span>
-<span class="n">grad_x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="n">grad_y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">critical_points</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">([</span><span class="n">grad_x</span><span class="p">,</span> <span class="n">grad_y</span><span class="p">],</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Critical Point:&quot;</span><span class="p">,</span> <span class="n">critical_points</span><span class="p">)</span>
-
-<span class="c1"># 2. Compute the Hessian matrix</span>
-<span class="n">H</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">hessian</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hessian Matrix:&quot;</span><span class="p">)</span>
-<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
-</pre></div>
+<section id="convex-vs-non-linear-optimization">
+<h2>2. Convex vs. Non-linear Optimization<a class="headerlink" href="#convex-vs-non-linear-optimization" title="Permalink to this heading">#</a></h2>
+<p>The boundary in optimization is not between linearity and non-linearity, but between <strong>convexity</strong> and <strong>non-convexity</strong>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Property</p></th>
+<th class="head text-left"><p>Convex Optimization</p></th>
+<th class="head text-left"><p>Non-convex / Nonlinear Optimization</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Geometry</strong></p></td>
+<td class="text-left"><p>objective function is convex, constraint set is convex.</p></td>
+<td class="text-left"><p>objective or constraints are non-convex (curves bend down).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Minima</strong></p></td>
+<td class="text-left"><p>Any local minimum is a <strong>global minimum</strong>.</p></td>
+<td class="text-left"><p>Many local minima and saddle points exist.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Solvability</strong></p></td>
+<td class="text-left"><p>Can be solved efficiently, reliably, and globally.</p></td>
+<td class="text-left"><p>Hard to solve; algorithms often get stuck in local minima.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 <hr class="docutils" />
@@ -476,45 +490,19 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Perform 3 iterations of Gradient Descent manually for the function <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>. Start at <span class="math notranslate nohighlight">\(x_0 = 4\)</span> with a learning rate <span class="math notranslate nohighlight">\(\alpha = 0.1\)</span>.</p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 2</p>
-<p>Given the function:
-$<span class="math notranslate nohighlight">\(f(x, y) = x^2 + 2y^2 - 4x - 8y\)</span>$</p>
-<ol class="arabic simple">
-<li><p>Find the critical point.</p></li>
-<li><p>Determine if it is a local minimum, maximum, or saddle point using the Hessian matrix.</p></li>
-</ol>
+<p>Classify the following optimization problem (find if it is LP, Least-Squares, or Nonlinear):
+$<span class="math notranslate nohighlight">\(\text{minimize} \quad (3x_1 + x_2 - 5)^2 + (x_1 - 2x_2 + 1)^2\)</span>$</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>The derivative is <span class="math notranslate nohighlight">\(f'(x) = 2x\)</span>.</p>
-<ul class="simple">
-<li><p><strong>Iteration 1</strong>:
-$<span class="math notranslate nohighlight">\(x_1 = x_0 - \alpha \cdot f'(x_0) = 4 - 0.1(2 \cdot 4) = 4 - 0.8 = 3.2\)</span>$</p></li>
-<li><p><strong>Iteration 2</strong>:
-$<span class="math notranslate nohighlight">\(x_2 = x_1 - \alpha \cdot f'(x_1) = 3.2 - 0.1(2 \cdot 3.2) = 3.2 - 0.64 = 2.56\)</span>$</p></li>
-<li><p><strong>Iteration 3</strong>:
-$<span class="math notranslate nohighlight">\(x_3 = x_2 - \alpha \cdot f'(x_2) = 2.56 - 0.1(2 \cdot 2.56) = 2.56 - 0.512 = 2.048\)</span>$</p></li>
-</ul>
-</div>
-<div class="dropdown admonition">
-<p class="admonition-title">Solution — Exercise 2</p>
-<ol class="arabic simple">
-<li><p>Calculate partial derivatives and set to zero:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x} = 2x - 4 = 0 \implies x = 2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{\partial f}{\partial y} = 4y - 8 = 0 \implies y = 2\)</span>
-The critical point is <span class="math notranslate nohighlight">\((2, 2)\)</span>.</p></li>
-</ul>
-</li>
-<li><p>Hessian matrix:
-$<span class="math notranslate nohighlight">\(\mathbf{H} = \begin{bmatrix} \frac{\partial^2 f}{\partial x^2} &amp; \frac{\partial^2 f}{\partial x \partial y} \\ \frac{\partial^2 f}{\partial y \partial x} &amp; \frac{\partial^2 f}{\partial y^2} \end{bmatrix} = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 4 \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(
-Since all elements on the diagonal (and eigenvalues) are positive (\)</span>2 &gt; 0, 4 &gt; 0<span class="math notranslate nohighlight">\(), the Hessian is positive-definite. The point \)</span>(2, 2)$ is a <strong>local minimum</strong>.</p></li>
-</ol>
+<p>This objective is a sum of squared linear terms:
+$<span class="math notranslate nohighlight">\(f(x) = \|Ax - b\|_2^2\)</span><span class="math notranslate nohighlight">\(
+Where \)</span>A = \begin{bmatrix} 3 &amp; 1 \ 1 &amp; -2 \end{bmatrix}<span class="math notranslate nohighlight">\( and \)</span>b = \begin{bmatrix} 5 \ -1 \end{bmatrix}$.
+Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </div>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -557,11 +545,11 @@ Since all elements on the diagonal (and eigenvalues) are positive (\)</span>2 &g
       </div>
     </a>
     <a class="right-next"
-       href="../machine_learning/intro.html"
+       href="convex_sets_functions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Machine learning</p>
+        <p class="prev-next-title">Convex Sets &amp; Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -581,12 +569,12 @@ Since all elements on the diagonal (and eigenvalues) are positive (\)</span>2 &g
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-extrema-second-derivative-test">1. Local Extrema &amp; Second Derivative Test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent">2. Gradient Descent</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-linear-programming">1. Least-Squares &amp; Linear Programming</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-binh-phuong-toi-thieu">Least-Squares (Bình phương tối thiểu)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-quy-hoach-tuyen-tinh-lp">Linear Programming (Quy hoạch tuyến tính - LP)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">3. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
