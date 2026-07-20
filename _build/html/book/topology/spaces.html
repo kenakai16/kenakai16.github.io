@@ -216,7 +216,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Topological Spaces &amp; Metric Spaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="applications.html">Topological Surfaces &amp; Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">Interdisciplinary Applications of Topology</a></li>
 </ul>
 </details></li>
 </ul>
@@ -417,6 +419,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-spaces-a-concrete-example">2. Metric Spaces: A Concrete Example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions-and-homeomorphisms">3. Continuous Functions and Homeomorphisms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness-and-connectedness">4. Compactness and Connectedness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-homology">5. Simplicial Homology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-chains-and-chain-groups-c-k">A. Chains and Chain Groups (<span class="math notranslate nohighlight">\(C_k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-boundary-operator-partial-k">B. The Boundary Operator (<span class="math notranslate nohighlight">\(\partial_k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-the-fundamental-lemma-boundaries-have-no-boundary">C. The Fundamental Lemma: Boundaries Have No Boundary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k">D. Cycles (<span class="math notranslate nohighlight">\(Z_k\)</span>), Boundaries (<span class="math notranslate nohighlight">\(B_k\)</span>), and Homology Groups (<span class="math notranslate nohighlight">\(H_k\)</span>)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -434,16 +443,23 @@ document.write(`
 <hr class="docutils" />
 <section id="what-is-a-topological-space">
 <h2>1. What is a Topological Space?<a class="headerlink" href="#what-is-a-topological-space" title="Permalink to this heading">#</a></h2>
-<p>Formally, a <strong>topological space</strong> is a pair <span class="math notranslate nohighlight">\((X, \tau)\)</span>, where <span class="math notranslate nohighlight">\(X\)</span> is a set and <span class="math notranslate nohighlight">\(\tau\)</span> is a collection of subsets of <span class="math notranslate nohighlight">\(X\)</span> (called the <strong>topology</strong> on <span class="math notranslate nohighlight">\(X\)</span>) that satisfies the following three axioms:</p>
+<p>Formally, a <strong>topological space</strong> is defined as a pair <strong>(X, τ)</strong>, where <strong>X</strong> is a set and <strong>τ</strong> is a collection of subsets of <strong>X</strong> (called the <strong>topology</strong> on <strong>X</strong>) that satisfies the following three axioms:</p>
 <ol class="arabic simple">
-<li><p><strong>Trivial Sets</strong>: The empty set <span class="math notranslate nohighlight">\(\emptyset\)</span> and the set <span class="math notranslate nohighlight">\(X\)</span> itself must belong to <span class="math notranslate nohighlight">\(\tau\)</span>:
-$<span class="math notranslate nohighlight">\(\emptyset \in \tau \quad \text{and} \quad X \in \tau\)</span>$</p></li>
-<li><p><strong>Arbitrary Unions</strong>: The union of any collection of sets in <span class="math notranslate nohighlight">\(\tau\)</span> must also be in <span class="math notranslate nohighlight">\(\tau\)</span>:
-$<span class="math notranslate nohighlight">\(\bigcup_{U \in S} U \in \tau \quad \text{for any } S \subseteq \tau\)</span>$</p></li>
-<li><p><strong>Finite Intersections</strong>: The intersection of any finite collection of sets in <span class="math notranslate nohighlight">\(\tau\)</span> must also be in <span class="math notranslate nohighlight">\(\tau\)</span>:
-$<span class="math notranslate nohighlight">\(\bigcap_{i=1}^n U_i \in \tau \quad \text{where } U_i \in \tau\)</span>$</p></li>
+<li><p><strong>Trivial Sets</strong>: Both the empty set (<span class="math notranslate nohighlight">\(\emptyset\)</span>) and the set <strong>X</strong> itself must belong to <strong>τ</strong>:</p></li>
 </ol>
-<p>The subsets in <span class="math notranslate nohighlight">\(\tau\)</span> are called the <strong>open sets</strong> of the space <span class="math notranslate nohighlight">\(X\)</span>. By defining which sets are “open”, a topology defines the structure of the space (such as neighborhood and convergence) without relying on distance measurements.</p>
+<div class="math notranslate nohighlight">
+\[\emptyset \in \tau \quad \text{and} \quad X \in \tau\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Arbitrary Unions</strong>: The union of any collection of sets in <strong>τ</strong> must also belong to <strong>τ</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\bigcup_{U \in S} U \in \tau \quad \text{for any } S \subseteq \tau\]</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Finite Intersections</strong>: The intersection of any finite collection of sets in <strong>τ</strong> must also belong to <strong>τ</strong>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\bigcap_{i=1}^n U_i \in \tau \quad \text{where } U_i \in \tau \text{ for all } i\]</div>
+<p>The subsets inside <strong>τ</strong> are called the <strong>open sets</strong> of the space <strong>X</strong>. By abstractly defining which sets are “open”, a topology defines the local structure of the space (such as neighborhoods, limits, and convergence) without needing coordinates or distance measurements.</p>
 </section>
 <hr class="docutils" />
 <section id="metric-spaces-a-concrete-example">
@@ -456,8 +472,9 @@ $<span class="math notranslate nohighlight">\(\bigcap_{i=1}^n U_i \in \tau \quad
 <li><p><strong>Symmetry</strong>: <span class="math notranslate nohighlight">\(d(x, y) = d(y, x)\)</span></p></li>
 <li><p><strong>Triangle Inequality</strong>: <span class="math notranslate nohighlight">\(d(x, z) \le d(x, y) + d(y, z)\)</span></p></li>
 </ol>
-<p>In a metric space, we define an <strong>open ball</strong> of radius <span class="math notranslate nohighlight">\(r &gt; 0\)</span> centered at <span class="math notranslate nohighlight">\(x\)</span> as:
-$<span class="math notranslate nohighlight">\(B(x, r) = \{y \in X \mid d(x, y) &lt; r\}\)</span>$</p>
+<p>In a metric space, we define an <strong>open ball</strong> of radius <span class="math notranslate nohighlight">\(r &gt; 0\)</span> centered at <span class="math notranslate nohighlight">\(x\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[B(x, r) = \{y \in X \mid d(x, y) &lt; r\}\]</div>
 <p>A set <span class="math notranslate nohighlight">\(U \subseteq X\)</span> is then defined as <strong>open</strong> if every point <span class="math notranslate nohighlight">\(x \in U\)</span> is the center of some open ball completely contained inside <span class="math notranslate nohighlight">\(U\)</span>. The collection of all such open sets forms a valid topology <span class="math notranslate nohighlight">\(\tau\)</span> on <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>Common metrics in Data Science include:</p>
 <ul class="simple">
@@ -471,8 +488,11 @@ $<span class="math notranslate nohighlight">\(B(x, r) = \{y \in X \mid d(x, y) &
 <h2>3. Continuous Functions and Homeomorphisms<a class="headerlink" href="#continuous-functions-and-homeomorphisms" title="Permalink to this heading">#</a></h2>
 <p>In topology, the equivalent of a structure-preserving map between two spaces is a <strong>continuous function</strong>:</p>
 <ul class="simple">
-<li><p><strong>Continuous Function</strong>: A function <span class="math notranslate nohighlight">\(f: X \to Y\)</span> between two topological spaces is continuous if the preimage of every open set in <span class="math notranslate nohighlight">\(Y\)</span> is an open set in <span class="math notranslate nohighlight">\(X\)</span>:
-$<span class="math notranslate nohighlight">\(f^{-1}(V) \in \tau_X \quad \text{for every open } V \subseteq Y\)</span>$</p></li>
+<li><p><strong>Continuous Function</strong>: A function <span class="math notranslate nohighlight">\(f: X \to Y\)</span> between two topological spaces is continuous if the preimage of every open set in <span class="math notranslate nohighlight">\(Y\)</span> is an open set in <span class="math notranslate nohighlight">\(X\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f^{-1}(V) \in \tau_X \quad \text{for every open } V \subseteq Y\]</div>
+<ul class="simple">
 <li><p><strong>Homeomorphism</strong>: A <strong>homeomorphism</strong> (or topological isomorphism) is a bijective function <span class="math notranslate nohighlight">\(f: X \to Y\)</span> such that both <span class="math notranslate nohighlight">\(f\)</span> and its inverse <span class="math notranslate nohighlight">\(f^{-1}\)</span> are continuous.</p></li>
 </ul>
 <p>If a homeomorphism exists between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>, the two spaces are said to be <strong>homeomorphic</strong> (topologically equivalent). They share all topological properties, meaning one can be continuously morphed into the other without tearing, cutting, or gluing (e.g., a donut morphing into a coffee cup).</p>
@@ -485,6 +505,60 @@ $<span class="math notranslate nohighlight">\(f^{-1}(V) \in \tau_X \quad \text{f
 <li><p><strong>Compactness</strong>: A space is compact if every open cover has a finite subcover (in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, this means the set is closed and bounded). Compactness guarantees that continuous functions reach their minimum and maximum values—a crucial property for optimization algorithms.</p></li>
 <li><p><strong>Connectedness</strong>: A space is connected if it cannot be partitioned into two disjoint open sets. Connectedness forms the mathematical backbone of clustering algorithms (e.g., Single Linkage Hierarchical Clustering).</p></li>
 </ul>
+</section>
+<hr class="docutils" />
+<section id="simplicial-homology">
+<h2>5. Simplicial Homology<a class="headerlink" href="#simplicial-homology" title="Permalink to this heading">#</a></h2>
+<p>To formally count the number of holes (Betti numbers) in a geometric space, we use the algebraic tools of <strong>Simplicial Homology</strong>. Homology groups translate geometric connectivity into the language of vector spaces and linear algebra.</p>
+<section id="a-chains-and-chain-groups-c-k">
+<h3>A. Chains and Chain Groups (<span class="math notranslate nohighlight">\(C_k\)</span>)<a class="headerlink" href="#a-chains-and-chain-groups-c-k" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(K\)</span> be a simplicial complex. A <strong><span class="math notranslate nohighlight">\(k\)</span>-chain</strong> is a formal linear combination of <span class="math notranslate nohighlight">\(k\)</span>-simplices in <span class="math notranslate nohighlight">\(K\)</span>. In computational topology, we typically use coefficients in the field of integers modulo 2 (<span class="math notranslate nohighlight">\(\mathbb{Z}_2 = \{0, 1\}\)</span>), where addition is equivalent to the exclusive-OR (XOR) operation.</p>
+<p>A <span class="math notranslate nohighlight">\(k\)</span>-chain <span class="math notranslate nohighlight">\(c\)</span> is written as:</p>
+<div class="math notranslate nohighlight">
+\[c = \sum_{i} a_i \sigma_i \quad \text{where } a_i \in \mathbb{Z}_2 \text{ and } \sigma_i \text{ is a } k\text{-simplex}\]</div>
+<p>The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains forms a vector space (or abelian group) called the <strong><span class="math notranslate nohighlight">\(k\)</span>-th Chain Group</strong>, denoted as <span class="math notranslate nohighlight">\(C_k(K)\)</span>.</p>
+</section>
+<section id="b-the-boundary-operator-partial-k">
+<h3>B. The Boundary Operator (<span class="math notranslate nohighlight">\(\partial_k\)</span>)<a class="headerlink" href="#b-the-boundary-operator-partial-k" title="Permalink to this heading">#</a></h3>
+<p>The <strong>boundary operator</strong> is a linear transformation <span class="math notranslate nohighlight">\(\partial_k: C_k(K) \to C_{k-1}(K)\)</span> that maps a <span class="math notranslate nohighlight">\(k\)</span>-simplex to its boundary faces.</p>
+<p>For an oriented <span class="math notranslate nohighlight">\(k\)</span>-simplex spanned by vertices <span class="math notranslate nohighlight">\((v_0, v_1, \dots, v_k)\)</span>, the boundary operator is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\partial_k(v_0, v_1, \dots, v_k) = \sum_{j=0}^k (-1)^j (v_0, \dots, \hat{v}_j, \dots, v_k)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{v}_j\)</span> indicates that the vertex <span class="math notranslate nohighlight">\(v_j\)</span> is omitted. With <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> coefficients, signs do not matter, simplifying the equation to:</p>
+<div class="math notranslate nohighlight">
+\[\partial_k(v_0, v_1, \dots, v_k) = \sum_{j=0}^k (v_0, \dots, \hat{v}_j, \dots, v_k)\]</div>
+<ul class="simple">
+<li><p><strong>Example</strong>: The boundary of a 1-simplex (edge) <span class="math notranslate nohighlight">\(e = (v_0, v_1)\)</span> is <span class="math notranslate nohighlight">\(\partial_1(v_0, v_1) = v_0 + v_1\)</span> (its two endpoint vertices). The boundary of a 2-simplex (triangle) <span class="math notranslate nohighlight">\((v_0, v_1, v_2)\)</span> is <span class="math notranslate nohighlight">\((v_1, v_2) + (v_0, v_2) + (v_0, v_1)\)</span> (its three bounding edges).</p></li>
+</ul>
+</section>
+<section id="c-the-fundamental-lemma-boundaries-have-no-boundary">
+<h3>C. The Fundamental Lemma: Boundaries Have No Boundary<a class="headerlink" href="#c-the-fundamental-lemma-boundaries-have-no-boundary" title="Permalink to this heading">#</a></h3>
+<p>A critical property of the boundary operator is that applying it twice in succession always yields zero:</p>
+<div class="math notranslate nohighlight">
+\[\partial_{k-1} \circ \partial_k = 0\]</div>
+<ul class="simple">
+<li><p><strong>Intuition</strong>: The boundary of a triangle consists of three edges forming a closed loop. The boundary of this loop (the endpoints of the edges) cancels out pairwise under <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> addition, resulting in zero.</p></li>
+</ul>
+</section>
+<section id="d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k">
+<h3>D. Cycles (<span class="math notranslate nohighlight">\(Z_k\)</span>), Boundaries (<span class="math notranslate nohighlight">\(B_k\)</span>), and Homology Groups (<span class="math notranslate nohighlight">\(H_k\)</span>)<a class="headerlink" href="#d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k" title="Permalink to this heading">#</a></h3>
+<p>Because the boundary of a boundary is zero, we can define two key subspaces of <span class="math notranslate nohighlight">\(C_k(K)\)</span>:</p>
+<ol class="arabic simple">
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Cycles (<span class="math notranslate nohighlight">\(Z_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:
+$<span class="math notranslate nohighlight">\(Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}\)</span>$</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Boundaries (<span class="math notranslate nohighlight">\(B_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains that are themselves the boundary of some higher <span class="math notranslate nohighlight">\((k+1)\)</span>-chain. This is the image of the boundary operator:
+$<span class="math notranslate nohighlight">\(B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}\)</span>$</p></li>
+</ol>
+<p>Since <span class="math notranslate nohighlight">\(\partial^2 = 0\)</span>, every boundary is automatically a cycle. Therefore, <span class="math notranslate nohighlight">\(B_k(K)\)</span> is a subspace of <span class="math notranslate nohighlight">\(Z_k(K)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[B_k(K) \subseteq Z_k(K)\]</div>
+<p>The <strong><span class="math notranslate nohighlight">\(k\)</span>-th Homology Group</strong> <span class="math notranslate nohighlight">\(H_k(K)\)</span> is defined as the quotient space of cycles modulo boundaries:</p>
+<div class="math notranslate nohighlight">
+\[H_k(K) = Z_k(K) / B_k(K) = \ker(\partial_k) / \text{im}(\partial_{k+1})\]</div>
+<p>The dimension of this quotient vector space is the <span class="math notranslate nohighlight">\(k\)</span>-th Betti number, representing the count of independent <span class="math notranslate nohighlight">\(k\)</span>-dimensional holes in the space:</p>
+<div class="math notranslate nohighlight">
+\[\beta_k = \dim H_k(K)\]</div>
+</section>
 </section>
 </section>
 
@@ -556,6 +630,13 @@ $<span class="math notranslate nohighlight">\(f^{-1}(V) \in \tau_X \quad \text{f
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-spaces-a-concrete-example">2. Metric Spaces: A Concrete Example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions-and-homeomorphisms">3. Continuous Functions and Homeomorphisms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness-and-connectedness">4. Compactness and Connectedness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-homology">5. Simplicial Homology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-chains-and-chain-groups-c-k">A. Chains and Chain Groups (<span class="math notranslate nohighlight">\(C_k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-boundary-operator-partial-k">B. The Boundary Operator (<span class="math notranslate nohighlight">\(\partial_k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-the-fundamental-lemma-boundaries-have-no-boundary">C. The Fundamental Lemma: Boundaries Have No Boundary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k">D. Cycles (<span class="math notranslate nohighlight">\(Z_k\)</span>), Boundaries (<span class="math notranslate nohighlight">\(B_k\)</span>), and Homology Groups (<span class="math notranslate nohighlight">\(H_k\)</span>)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

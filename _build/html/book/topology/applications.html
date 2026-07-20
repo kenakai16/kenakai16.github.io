@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Topological Surfaces &amp; Applications &#8212; NghiaHoang</title>
+    <title>Interdisciplinary Applications of Topology &#8212; NghiaHoang</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Machine learning" href="../machine_learning/intro.html" />
-    <link rel="prev" title="Topological Data Analysis (TDA) &amp; Persistent Homology" href="tda.html" />
+    <link rel="prev" title="Topological Surfaces &amp; Singularities" href="surfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -216,7 +216,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Topological Surfaces &amp; Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Interdisciplinary Applications of Topology</a></li>
 </ul>
 </details></li>
 </ul>
@@ -403,7 +405,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Topological Surfaces & Applications</h1>
+    <h1>Interdisciplinary Applications of Topology</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -413,29 +415,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-topological-surfaces">1. Special Topological Surfaces</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mobius-strip">The Möbius Strip</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-bottle">The Klein Bottle</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singularities-on-a-sphere">2. Singularities on a Sphere</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-poincare-hopf-theorem">Understanding the Poincaré-Hopf Theorem</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-index-of-a-singularity">What is the “Index” of a Singularity?</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-application-wind-systems-on-earth">Meteorological Application: Wind Systems on Earth</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-coordinate-singularities-poles">B. Coordinate Singularities (Poles)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interdisciplinary-applications-of-topology">3. Interdisciplinary Applications of Topology</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-robotics-motion-planning-configuration-spaces">A. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-physics-materials-science">B. Physics &amp; Materials Science</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-molecular-biology-nanotechnology">C. Molecular Biology &amp; Nanotechnology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-computer-science-program-semantics">D. Computer Science &amp; Program Semantics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-fiber-arts-puzzles">E. Fiber Arts &amp; Puzzles</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robotics-motion-planning-configuration-spaces">1. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireless-sensor-networks-relative-homology">2. Wireless Sensor Networks &amp; Relative Homology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-materials-science">3. Physics &amp; Materials Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-biology-nanotechnology">4. Molecular Biology &amp; Nanotechnology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-science-program-semantics">5. Computer Science &amp; Program Semantics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiber-arts-puzzles">6. Fiber Arts &amp; Puzzles</a></li>
 </ul>
             </nav>
         </div>
@@ -447,104 +432,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="topological-surfaces-applications">
-<h1>Topological Surfaces &amp; Applications<a class="headerlink" href="#topological-surfaces-applications" title="Permalink to this heading">#</a></h1>
-<p>This section covers special non-orientable topological surfaces, polar singularities, and multi-disciplinary applications of topology in physics, biology, robotics, and computing.</p>
-<hr class="docutils" />
-<section id="special-topological-surfaces">
-<h2>1. Special Topological Surfaces<a class="headerlink" href="#special-topological-surfaces" title="Permalink to this heading">#</a></h2>
-<section id="the-mobius-strip">
-<h3>The Möbius Strip<a class="headerlink" href="#the-mobius-strip" title="Permalink to this heading">#</a></h3>
-<p>The <strong>Möbius strip</strong> is a two-dimensional surface with only <strong>one side</strong> and <strong>one boundary curve</strong>.</p>
-<p>You can easily construct a physical model of a Möbius strip by taking a rectangular strip of paper, giving one end a half-twist (<span class="math notranslate nohighlight">\(180^\circ\)</span> turn), and then gluing the two ends together.</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/mobius_strip.gif"><img alt="Animated Möbius Strip" class="bg-primary mb-1 align-center" src="../../_images/mobius_strip.gif" style="width: 75%;" /></a>
-<ul class="simple">
-<li><p><strong>One-sided Property</strong>: If you start drawing a line down the middle of a Möbius strip with a pen, you will eventually cover both “sides” of the paper and return to your starting point without ever lifting your pen or crossing the boundary edge.</p></li>
-<li><p><strong>Topological Significance</strong>: It is the simplest non-orientable surface. In data science, the Möbius strip is used to model cyclical datasets that have a twist or reflection in their state space.</p></li>
-</ul>
-</section>
-<section id="the-klein-bottle">
-<h3>The Klein Bottle<a class="headerlink" href="#the-klein-bottle" title="Permalink to this heading">#</a></h3>
-<p>The <strong>Klein bottle</strong> is a closed 2D manifold (surface) that takes the concept of the Möbius strip one step further. It has <strong>no boundaries</strong> (like a sphere) but possesses only <strong>one side</strong> (like a Möbius strip).</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/klein_bottle.png"><img alt="Figure-8 Klein Bottle Wireframe" class="bg-primary mb-1 align-center" src="../../_images/klein_bottle.png" style="width: 45%;" /></a>
-<ul>
-<li><p><strong>Topological Connection to the Möbius Strip</strong>:
-A Klein bottle can be mathematically constructed by <strong>gluing two Möbius strips together along their circular boundaries</strong>. Since a Möbius strip only has a single boundary edge (which is topologically a circle <span class="math notranslate nohighlight">\(S^1\)</span>), joining two Möbius strips along this single edge closes the surface, yielding a Klein bottle.</p></li>
-<li><p><strong>Dimensionality Embedding &amp; Figure-8 Immersion</strong>:
-A Klein bottle cannot be embedded in 3D space without passing through itself. However, it can be embedded perfectly in <strong>4D space</strong> (<span class="math notranslate nohighlight">\(d = 4\)</span>) without self-intersection.</p>
-<p>The illustration above shows the <strong>Figure-8 immersion</strong> (often called the Klein Bagel) in 3D:</p>
-<ul class="simple">
-<li><p>It is represented as a clean blue wireframe mesh on a light background.</p></li>
-<li><p>In 4D space, the self-intersection is resolved because the intersecting parts have different values in the fourth dimension (<span class="math notranslate nohighlight">\(w\)</span>-axis).</p></li>
-</ul>
-</li>
-<li><p><strong>Data Science Application</strong>: Non-orientable manifolds like the Klein bottle are used as challenging benchmark datasets in manifold learning. They test whether non-linear dimensionality reduction algorithms (like UMAP or Isomap) can map high-dimensional topological structures into lower dimensions without losing essential topological characteristics.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="singularities-on-a-sphere">
-<h2>2. Singularities on a Sphere<a class="headerlink" href="#singularities-on-a-sphere" title="Permalink to this heading">#</a></h2>
-<p>A <strong>singularity</strong> is a point where a mathematical object loses its normal properties, collapses in dimension, or becomes mathematically undefined. Singularities on a sphere are studied in two major topological contexts:</p>
-<section id="a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">
-<h3>A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems<a class="headerlink" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems" title="Permalink to this heading">#</a></h3>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p><strong>The Hairy Ball Theorem</strong> from algebraic topology states that there is no continuous, non-vanishing tangent vector field on even-dimensional spheres (such as a 2D sphere <span class="math notranslate nohighlight">\(S^2\)</span>).</p>
-<p><em>Intuition:</em> <strong>“You cannot comb a hairy ball flat without creating at least one cowlick (singularity/whorl).”</strong></p>
-</div>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/hairy_ball_singularity.png"><img alt="Hairy Ball Theorem and Vector Field Singularities" class="bg-primary mb-1 align-center" src="../../_images/hairy_ball_singularity.png" style="width: 70%;" /></a>
-<p>This theorem is a direct consequence of a much deeper topological principle: the <strong>Poincaré-Hopf Theorem</strong>.</p>
-<section id="understanding-the-poincare-hopf-theorem">
-<h4>Understanding the Poincaré-Hopf Theorem<a class="headerlink" href="#understanding-the-poincare-hopf-theorem" title="Permalink to this heading">#</a></h4>
-<p>The Poincaré-Hopf Theorem links the local behavior of a vector field (such as wind) to the global topology of the surface it lies on. It states that for any smooth vector field on a compact manifold <span class="math notranslate nohighlight">\(M\)</span> with isolated zeroes (singularities), the sum of the <strong>indices</strong> of these zeroes equals the <strong>Euler characteristic</strong> (<span class="math notranslate nohighlight">\(\chi(M)\)</span>) of the manifold:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i} \text{index}_{z_i}(v) = \chi(M)\]</div>
-</section>
-<section id="what-is-the-index-of-a-singularity">
-<h4>What is the “Index” of a Singularity?<a class="headerlink" href="#what-is-the-index-of-a-singularity" title="Permalink to this heading">#</a></h4>
-<p>The <strong>index</strong> measures how the vectors rotate as you walk counter-clockwise in a small loop around the singularity:</p>
-<ol class="arabic simple">
-<li><p><strong>Source / Outflow</strong> (Wind blowing outward in all directions): <strong>Index = +1</strong></p></li>
-<li><p><strong>Sink / Inflow</strong> (Wind blowing inward in all directions): <strong>Index = +1</strong></p></li>
-<li><p><strong>Vortex / Whorl</strong> (Wind spiraling or rotating around a center): <strong>Index = +1</strong></p></li>
-<li><p><strong>Saddle Point / Col</strong> (Wind coming in from two directions and leaving in two other directions): <strong>Index = -1</strong></p></li>
-</ol>
-</section>
-<section id="meteorological-application-wind-systems-on-earth">
-<h4>Meteorological Application: Wind Systems on Earth<a class="headerlink" href="#meteorological-application-wind-systems-on-earth" title="Permalink to this heading">#</a></h4>
-<p>The Earth’s surface is topologically a 2-sphere (<span class="math notranslate nohighlight">\(S^2\)</span>), which has an Euler characteristic of <span class="math notranslate nohighlight">\(\chi(S^2) = 2\)</span>. Applying the Poincaré-Hopf Theorem to the Earth’s wind vector field:</p>
-<div class="math notranslate nohighlight">
-\[\sum \text{index} = 2\]</div>
-<p>This leads to several fascinating meteorological rules:</p>
-<ul class="simple">
-<li><p><strong>At least one calm spot</strong>: It is mathematically impossible to have a continuous wind blowing everywhere on Earth without any calm spots (points of zero wind speed). There must always be at least one cyclone, anticyclone, or saddle point.</p></li>
-<li><p><strong>The Balance of Weather Systems</strong>:</p>
-<ul>
-<li><p>If the Earth only has standard swirling systems (cyclones and anticyclones, which have an index of <strong>+1</strong>), there must be exactly <strong>two</strong> of them on the entire globe (e.g., <span class="math notranslate nohighlight">\(1 + 1 = 2\)</span>, representing 1 Cyclone + 1 Anticyclone).</p></li>
-<li><p>If a weather map features multiple storm centers (cyclones) and high-pressure centers (anticyclones), they must be balanced by <strong>saddle points (cols)</strong> (index of <strong>-1</strong>). For instance, if there are 3 cyclones/anticyclones (total index of <strong>+3</strong>), there must be exactly 1 saddle point (index of <strong>-1</strong>) to keep the global sum equal to 2: <span class="math notranslate nohighlight">\((+1) + (+1) + (+1) + (-1) = 2\)</span></p></li>
-<li><p>Meteorologists use this topological constraint to validate global wind simulations and ensure that pressure systems and calm spots mapped by forecast models are topologically consistent.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<section id="b-coordinate-singularities-poles">
-<h3>B. Coordinate Singularities (Poles)<a class="headerlink" href="#b-coordinate-singularities-poles" title="Permalink to this heading">#</a></h3>
-<p>When mapping a 2D sphere using spherical coordinates (latitude <span class="math notranslate nohighlight">\(\phi\)</span> and longitude <span class="math notranslate nohighlight">\(\theta\)</span>), the North Pole and South Pole become <strong>coordinate singularities</strong>:</p>
-<ul class="simple">
-<li><p>Longitude <span class="math notranslate nohighlight">\(\theta\)</span> is completely undefined at the poles (all longitude lines converge to a single point).</p></li>
-<li><p>The Jacobian matrix of coordinate transformations collapses (loses rank) at the poles.</p></li>
-<li><p><strong>Data Science &amp; ML Relevance</strong>: In global climate forecasting, geographical information systems (GIS), and deep learning on spherical grids (e.g., Spherical CNNs), polar singularities cause mathematical distortions and numerical instability during grid-based operations. To resolve this, researchers use grid-free spherical representations (such as Healpix grids) or project spherical coordinates into Cartesian 3D space <span class="math notranslate nohighlight">\((x, y, z)\)</span> to eliminate the singularities.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="interdisciplinary-applications-of-topology">
-<h2>3. Interdisciplinary Applications of Topology<a class="headerlink" href="#interdisciplinary-applications-of-topology" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="interdisciplinary-applications-of-topology">
+<h1>Interdisciplinary Applications of Topology<a class="headerlink" href="#interdisciplinary-applications-of-topology" title="Permalink to this heading">#</a></h1>
 <p>Topology is not just an abstract branch of pure mathematics; it has direct, high-impact applications across a wide variety of scientific and engineering fields.</p>
-<section id="a-robotics-motion-planning-configuration-spaces">
-<h3>A. Robotics &amp; Motion Planning (Configuration Spaces)<a class="headerlink" href="#a-robotics-motion-planning-configuration-spaces" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="robotics-motion-planning-configuration-spaces">
+<h2>1. Robotics &amp; Motion Planning (Configuration Spaces)<a class="headerlink" href="#robotics-motion-planning-configuration-spaces" title="Permalink to this heading">#</a></h2>
 <p>In robotics, the set of all possible positions and orientations a robot can take is represented as a high-dimensional manifold called the <strong>Configuration Space (C-space)</strong>:</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/robot_configuration_space.png"><img alt="2-Joint Robotic Arm Configuration Space Mapping" class="bg-primary mb-1 align-center" src="../../_images/robot_configuration_space.png" style="width: 85%;" /></a>
 <ul class="simple">
@@ -552,8 +445,23 @@ A Klein bottle cannot be embedded in 3D space without passing through itself. Ho
 <li><p><strong>Path Planning</strong>: Finding a collision-free motion for the robot joint movements corresponds to finding a smooth, continuous path on this torus manifold from a start coordinate to an end coordinate while avoiding obstacles (which are represented as “holes” or cutouts on the manifold).</p></li>
 </ul>
 </section>
-<section id="b-physics-materials-science">
-<h3>B. Physics &amp; Materials Science<a class="headerlink" href="#b-physics-materials-science" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="wireless-sensor-networks-relative-homology">
+<h2>2. Wireless Sensor Networks &amp; Relative Homology<a class="headerlink" href="#wireless-sensor-networks-relative-homology" title="Permalink to this heading">#</a></h2>
+<p>In wireless network engineering and spatial monitoring, a critical problem is <strong>Coverage Verification</strong>: determining if a collection of sensors with overlapping coverage discs completely covers a given domain without leaving any “blind spots” (holes).</p>
+<p>Using coordinates or geometric maps to verify coverage is highly susceptible to measurement noise and GPS errors. Topology provides a coordinate-free, coordinate-robust solution using <strong>Relative Homology</strong>.</p>
+<ul>
+<li><p><strong>Relative Homology (<span class="math notranslate nohighlight">\(H_k(X, A)\)</span>)</strong>: Given a topological space <span class="math notranslate nohighlight">\(X\)</span> and a subspace <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, relative homology group <span class="math notranslate nohighlight">\(H_k(X, A)\)</span> counts the number of <span class="math notranslate nohighlight">\(k\)</span>-dimensional holes in <span class="math notranslate nohighlight">\(X\)</span> that are <em>not</em> contained within <span class="math notranslate nohighlight">\(A\)</span>. In essence, it treats the entire subspace <span class="math notranslate nohighlight">\(A\)</span> as a single, connected component, modding out any cycles that lie entirely within <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p><strong>The de Silva–Ghrist Theorem</strong>: Let <span class="math notranslate nohighlight">\(D \subseteq \mathbb{R}^2\)</span> be a bounded target domain monitored by sensors. We represent the sensors as a set of nodes <span class="math notranslate nohighlight">\(X\)</span> and construct a Vietoris-Rips complex <span class="math notranslate nohighlight">\(R(X)\)</span> based on their communication range. Let <span class="math notranslate nohighlight">\(R_{\partial}\)</span> be the subcomplex representing sensors near the boundary of the domain.</p>
+<p>De Silva and Ghrist proved that if the relative homology mapping is non-trivial:
+$<span class="math notranslate nohighlight">\(H_2(R(X), R_{\partial}) \neq 0\)</span>$</p>
+<p>then it mathematically guarantees that the union of the sensors’ coverage regions completely covers the domain <span class="math notranslate nohighlight">\(D\)</span>, leaving <strong>no blind spots</strong>. This verification requires no coordinate coordinates, only the network’s connectivity data!</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="physics-materials-science">
+<h2>3. Physics &amp; Materials Science<a class="headerlink" href="#physics-materials-science" title="Permalink to this heading">#</a></h2>
 <p>Topology has revolutionized modern physics, leading to multiple Nobel prizes:</p>
 <ul class="simple">
 <li><p><strong>Topological Insulators &amp; Condensed Matter</strong>: Topological materials possess electronic states that are protected by topology. For example, in 2D topological insulators, electrical current flows only along the edges of the material and is completely protected from backscattering (impurities in the crystal). David Thouless, Duncan Haldane, and Michael Kosterlitz were awarded the <strong>2016 Nobel Prize in Physics</strong> for discovering these topological phases of matter.</p></li>
@@ -561,28 +469,30 @@ A Klein bottle cannot be embedded in 3D space without passing through itself. Ho
 <li><p><strong>Cosmology</strong>: Physical cosmologists use topology to describe the global, overall shape of the universe (spacetime topology), trying to determine if our universe is flat, spherical, or toroidal.</p></li>
 </ul>
 </section>
-<section id="c-molecular-biology-nanotechnology">
-<h3>C. Molecular Biology &amp; Nanotechnology<a class="headerlink" href="#c-molecular-biology-nanotechnology" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="molecular-biology-nanotechnology">
+<h2>4. Molecular Biology &amp; Nanotechnology<a class="headerlink" href="#molecular-biology-nanotechnology" title="Permalink to this heading">#</a></h2>
 <p>Biological systems utilize topological constraints to manage complex, folded structures:</p>
 <ul class="simple">
 <li><p><strong>DNA Knotting</strong>: Inside a cell, DNA is a long, highly coiled molecule. Enzymes (like topoisomerases) manage DNA replication by cutting, twisting, and reconnecting DNA strands—essentially performing topological transformations to resolve knots and tangles. Biologists use <strong>Knot Theory</strong> to classify these knots and study how they affect DNA electrophoresis speeds.</p></li>
 <li><p><strong>Protein Folding</strong>: The complex 3D structures of folded proteins are classified using <strong>Circuit Topology</strong> and <strong>Knot Theory</strong>, comparing pairwise arrangements of internal contacts and chain crossings to understand protein stability and functions.</p></li>
 </ul>
 </section>
-<section id="d-computer-science-program-semantics">
-<h3>D. Computer Science &amp; Program Semantics<a class="headerlink" href="#d-computer-science-program-semantics" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="computer-science-program-semantics">
+<h2>5. Computer Science &amp; Program Semantics<a class="headerlink" href="#computer-science-program-semantics" title="Permalink to this heading">#</a></h2>
 <p>Beyond data analysis (TDA), topology is used to formalize programming logic:</p>
 <ul class="simple">
 <li><p><strong>Domain Theory</strong>: Programming language semantics are formalized using topological spaces. Computer scientists like Steve Vickers characterize topological open sets as <strong>semidecidable (finitely observable) properties</strong> of computer programs—representing properties that a program can verify in finite time.</p></li>
 </ul>
 </section>
-<section id="e-fiber-arts-puzzles">
-<h3>E. Fiber Arts &amp; Puzzles<a class="headerlink" href="#e-fiber-arts-puzzles" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="fiber-arts-puzzles">
+<h2>6. Fiber Arts &amp; Puzzles<a class="headerlink" href="#fiber-arts-puzzles" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Modular Fiber Arts</strong>: In crochet or modular knitting, creating a continuous, seamless join of multiple pieces without breaking the yarn is an application of finding an <strong>Eulerian Path</strong> (traversing each edge of the modular mesh exactly once).</p></li>
 <li><p><strong>Disentanglement Puzzles</strong>: Classic metal and string puzzles rely on topological features (like genus, loops, and boundary crossings) to be solved, where the solution is found by finding a topological deformation that allows two linked components to slide past each other.</p></li>
 </ul>
-</section>
 </section>
 </section>
 
@@ -617,12 +527,12 @@ A Klein bottle cannot be embedded in 3D space without passing through itself. Ho
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tda.html"
+       href="surfaces.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Topological Data Analysis (TDA) &amp; Persistent Homology</p>
+        <p class="prev-next-title">Topological Surfaces &amp; Singularities</p>
       </div>
     </a>
     <a class="right-next"
@@ -650,29 +560,12 @@ A Klein bottle cannot be embedded in 3D space without passing through itself. Ho
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-topological-surfaces">1. Special Topological Surfaces</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mobius-strip">The Möbius Strip</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-bottle">The Klein Bottle</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singularities-on-a-sphere">2. Singularities on a Sphere</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-poincare-hopf-theorem">Understanding the Poincaré-Hopf Theorem</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-index-of-a-singularity">What is the “Index” of a Singularity?</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-application-wind-systems-on-earth">Meteorological Application: Wind Systems on Earth</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-coordinate-singularities-poles">B. Coordinate Singularities (Poles)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interdisciplinary-applications-of-topology">3. Interdisciplinary Applications of Topology</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-robotics-motion-planning-configuration-spaces">A. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-physics-materials-science">B. Physics &amp; Materials Science</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-molecular-biology-nanotechnology">C. Molecular Biology &amp; Nanotechnology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-computer-science-program-semantics">D. Computer Science &amp; Program Semantics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-fiber-arts-puzzles">E. Fiber Arts &amp; Puzzles</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robotics-motion-planning-configuration-spaces">1. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireless-sensor-networks-relative-homology">2. Wireless Sensor Networks &amp; Relative Homology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-materials-science">3. Physics &amp; Materials Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-biology-nanotechnology">4. Molecular Biology &amp; Nanotechnology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-science-program-semantics">5. Computer Science &amp; Program Semantics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiber-arts-puzzles">6. Fiber Arts &amp; Puzzles</a></li>
 </ul>
   </nav></div>
 

@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/topology/tda';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Topological Surfaces &amp; Applications" href="applications.html" />
+    <link rel="next" title="Advanced Topological Algorithms" href="advanced_tda.html" />
     <link rel="prev" title="Manifolds &amp; Dimensionality Reduction" href="manifolds.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -216,7 +216,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="applications.html">Topological Surfaces &amp; Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">Interdisciplinary Applications of Topology</a></li>
 </ul>
 </details></li>
 </ul>
@@ -413,9 +415,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-complexes">1. Simplicial Complexes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-complexes-nerve-theorem">1. Simplicial Complexes &amp; Nerve Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-the-cech-complex-check-c-epsilon-x">A. The Čech Complex (<span class="math notranslate nohighlight">\(\check{C}_\epsilon(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-vietorisrips-complex-vr-epsilon-x">B. The Vietoris–Rips Complex (<span class="math notranslate nohighlight">\(VR_\epsilon(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-the-alpha-complex-alpha-complex">C. The Alpha Complex (<span class="math notranslate nohighlight">\(\alpha\)</span>-complex)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betti-numbers">2. Betti Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-homology">3. Persistent Homology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-homology">3. Persistent Homology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-algebraic-foundations-persistence-modules">A. Algebraic Foundations: Persistence Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-persistence-algorithm-matrix-reduction">B. The Persistence Algorithm &amp; Matrix Reduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-reduction-algorithm">Column Reduction Algorithm</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-stability-the-isometry-theorem">C. Stability &amp; The Isometry Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-persistent-cohomology">D. Persistent Cohomology</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-calculating-betti-numbers-with-gudhi">4. Python Example: Calculating Betti Numbers with <code class="docutils literal notranslate"><span class="pre">GUDHI</span></code></a></li>
 </ul>
             </nav>
@@ -432,16 +448,45 @@ document.write(`
 <h1>Topological Data Analysis (TDA) &amp; Persistent Homology<a class="headerlink" href="#topological-data-analysis-tda-persistent-homology" title="Permalink to this heading">#</a></h1>
 <p>Topological Data Analysis (TDA) treats data points as a cloud from which we want to extract the underlying shape and connectivity.</p>
 <hr class="docutils" />
-<section id="simplicial-complexes">
-<h2>1. Simplicial Complexes<a class="headerlink" href="#simplicial-complexes" title="Permalink to this heading">#</a></h2>
+<section id="simplicial-complexes-nerve-theorem">
+<h2>1. Simplicial Complexes &amp; Nerve Theorem<a class="headerlink" href="#simplicial-complexes-nerve-theorem" title="Permalink to this heading">#</a></h2>
 <p>To analyze a discrete set of data points topologically, we connect them using <strong>simplices</strong> (points, lines, triangles, tetrahedrons) to build a continuous geometric structure called a <strong>Simplicial Complex</strong>:</p>
 <ul class="simple">
-<li><p><strong>0-simplex</strong>: A point (representing a data point).</p></li>
-<li><p><strong>1-simplex</strong>: A line segment (connecting two close points).</p></li>
-<li><p><strong>2-simplex</strong>: A filled triangle (connecting three mutually close points).</p></li>
-<li><p><strong>3-simplex</strong>: A solid tetrahedron.</p></li>
+<li><p><strong>0-simplex</strong>: A point.</p></li>
+<li><p><strong>1-simplex</strong>: A line segment (connecting two points).</p></li>
+<li><p><strong>2-simplex</strong>: A filled triangle (connecting three points).</p></li>
+<li><p><strong>3-simplex</strong>: A solid tetrahedron (connecting four points).</p></li>
 </ul>
-<p>A common method is the <strong>Vietoris-Rips Complex</strong>: We grow a sphere of radius <span class="math notranslate nohighlight">\(\epsilon/2\)</span> around each point. If the spheres of two points intersect (i.e., their distance is <span class="math notranslate nohighlight">\(\le \epsilon\)</span>), we draw a 1-simplex between them. If three spheres intersect mutually, we fill in a 2-simplex, and so on.</p>
+<p>To construct a simplicial complex from a dataset <strong>X</strong> in a metric space, we grow closed balls of radius <span class="math notranslate nohighlight">\(\epsilon/2\)</span> around each point <span class="math notranslate nohighlight">\(x \in X\)</span>, denoted as <span class="math notranslate nohighlight">\(B(x, \epsilon/2)\)</span>. There are three primary ways to build these complexes:</p>
+<section id="a-the-cech-complex-check-c-epsilon-x">
+<h3>A. The Čech Complex (<span class="math notranslate nohighlight">\(\check{C}_\epsilon(X)\)</span>)<a class="headerlink" href="#a-the-cech-complex-check-c-epsilon-x" title="Permalink to this heading">#</a></h3>
+<p>A simplex <span class="math notranslate nohighlight">\(\sigma\)</span> belongs to the <strong>Čech complex</strong> if the balls of radius <span class="math notranslate nohighlight">\(\epsilon/2\)</span> centered at its vertices have a <strong>non-empty global intersection</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\bigcap_{x_i \in \sigma} B(x_i, \epsilon/2) \neq \emptyset\]</div>
+<ul class="simple">
+<li><p><strong>The Nerve Theorem</strong>: The Nerve Theorem states that if the intersection of any subcollection of balls is contractible (which is true for convex balls in Euclidean space), then the Čech complex is <strong>homotopy equivalent</strong> (shares the same topological shape/holes) to the union of the balls.</p></li>
+<li><p><strong>Limitation</strong>: Finding whether a large set of balls has a common intersection is computationally very expensive for high-dimensional simplices.</p></li>
+</ul>
+</section>
+<section id="b-the-vietorisrips-complex-vr-epsilon-x">
+<h3>B. The Vietoris–Rips Complex (<span class="math notranslate nohighlight">\(VR_\epsilon(X)\)</span>)<a class="headerlink" href="#b-the-vietorisrips-complex-vr-epsilon-x" title="Permalink to this heading">#</a></h3>
+<p>A simplex <span class="math notranslate nohighlight">\(\sigma\)</span> belongs to the <strong>Vietoris–Rips complex</strong> if the balls of radius <span class="math notranslate nohighlight">\(\epsilon/2\)</span> centered at its vertices intersect <strong>pairwise</strong> (which simply means the distance between any two vertices is <span class="math notranslate nohighlight">\(\le \epsilon\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[d(x_i, x_j) \le \epsilon \quad \text{for all } x_i, x_j \in \sigma\]</div>
+<ul class="simple">
+<li><p><strong>Pros &amp; Cons</strong>: It is much easier to compute because we only need to check pairwise distances. However, it does not satisfy the Nerve Theorem and can introduce “ghost” topological features that do not exist in the union of the balls.</p></li>
+<li><p><strong>Interleaving Relationship</strong>: The Čech and Vietoris-Rips complexes approximate each other through the following squeeze/interleaving theorem:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\check{C}_{\epsilon/2}(X) \subseteq VR_\epsilon(X) \subseteq \check{C}_\epsilon(X)\]</div>
+</section>
+<section id="c-the-alpha-complex-alpha-complex">
+<h3>C. The Alpha Complex (<span class="math notranslate nohighlight">\(\alpha\)</span>-complex)<a class="headerlink" href="#c-the-alpha-complex-alpha-complex" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Alpha complex</strong> is a subcomplex of the Delaunay triangulation. It restricts the balls <span class="math notranslate nohighlight">\(B(x, \epsilon/2)\)</span> to their respective <strong>Voronoi cells</strong> (the region of space closer to <span class="math notranslate nohighlight">\(x\)</span> than to any other point).</p>
+<ul class="simple">
+<li><p>By intersecting each ball with its Voronoi cell, we get a much smaller simplicial complex that is still homotopy equivalent to the union of the balls (satisfying the Nerve Theorem) but is computationally much faster to construct in low dimensions.</p></li>
+</ul>
+</section>
 </section>
 <hr class="docutils" />
 <section id="betti-numbers">
@@ -469,6 +514,66 @@ document.write(`
 </ul>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/persistence_diagram_example.png"><img alt="Persistent Homology Barcode and Diagram" class="bg-primary mb-1 align-center" src="../../_images/persistence_diagram_example.png" style="width: 85%;" /></a>
 <p>Long-lived features (bars that persist over a wide range of <span class="math notranslate nohighlight">\(\epsilon\)</span>) represent true topological structures of the data, while short-lived features represent noise.</p>
+<section id="a-algebraic-foundations-persistence-modules">
+<h3>A. Algebraic Foundations: Persistence Modules<a class="headerlink" href="#a-algebraic-foundations-persistence-modules" title="Permalink to this heading">#</a></h3>
+<p>In mathematical TDA, a filtration of simplicial complexes yields a sequence of vector spaces connected by linear maps. This algebraic object is called a <strong>Persistence Module</strong>:</p>
+<p>A persistence module <span class="math notranslate nohighlight">\(V\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (or <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) is a collection of vector spaces <span class="math notranslate nohighlight">\(\{V_t\}_{t \in \mathbb{R}}\)</span> together with linear maps <span class="math notranslate nohighlight">\(v_{s,t}: V_s \to V_t\)</span> for all <span class="math notranslate nohighlight">\(s \le t\)</span>, satisfying:</p>
+<ol class="arabic simple">
+<li><p><strong>Identity</strong>: <span class="math notranslate nohighlight">\(v_{t,t} = \text{id}_{V_t}\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><strong>Composition</strong>: <span class="math notranslate nohighlight">\(v_{t,r} \circ v_{s,t} = v_{s,r}\)</span> for all <span class="math notranslate nohighlight">\(s \le t \le r\)</span>.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>The Structure Theorem</strong>: If a persistence module is <em>pointwise finite-dimensional</em> (each <span class="math notranslate nohighlight">\(V_t\)</span> is finite-dimensional), it decomposes uniquely into a direct sum of <strong>interval modules</strong> <span class="math notranslate nohighlight">\(I[b, d]\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[V \cong \bigoplus_{j \in J} I[b_j, d_j]\]</div>
+<p>where an interval module <span class="math notranslate nohighlight">\(I[b, d]\)</span> represents a topological feature that is born at scale <span class="math notranslate nohighlight">\(b\)</span> and dies at scale <span class="math notranslate nohighlight">\(d\)</span>. This algebraic decomposition is what justifies representing persistent homology as a <strong>barcode</strong> or <strong>persistence diagram</strong>.</p>
+</section>
+<section id="b-the-persistence-algorithm-matrix-reduction">
+<h3>B. The Persistence Algorithm &amp; Matrix Reduction<a class="headerlink" href="#b-the-persistence-algorithm-matrix-reduction" title="Permalink to this heading">#</a></h3>
+<p>To compute persistent homology, we represent the boundary operators across all simplices in a single <strong>boundary matrix</strong> <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(m\)</span> be the total number of simplices in the filtration, sorted such that if simplex <span class="math notranslate nohighlight">\(\sigma_i\)</span> is a face of <span class="math notranslate nohighlight">\(\sigma_j\)</span>, then <span class="math notranslate nohighlight">\(i &lt; j\)</span>. The boundary matrix <span class="math notranslate nohighlight">\(D\)</span> is an <span class="math notranslate nohighlight">\(m \times m\)</span> matrix where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(D[i, j] = 1\)</span> if simplex <span class="math notranslate nohighlight">\(\sigma_i\)</span> is a codimensional-1 face of simplex <span class="math notranslate nohighlight">\(\sigma_j\)</span> (using <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> coefficients).</p></li>
+<li><p><span class="math notranslate nohighlight">\(D[i, j] = 0\)</span> otherwise.</p></li>
+</ul>
+<section id="column-reduction-algorithm">
+<h4>Column Reduction Algorithm<a class="headerlink" href="#column-reduction-algorithm" title="Permalink to this heading">#</a></h4>
+<p>We reduce <span class="math notranslate nohighlight">\(D\)</span> to a column-echelon form <span class="math notranslate nohighlight">\(R\)</span> using column operations. For any column <span class="math notranslate nohighlight">\(j\)</span>, let <span class="math notranslate nohighlight">\(\text{low}(j)\)</span> denote the index of the lowest row containing a <span class="math notranslate nohighlight">\(1\)</span>. The algorithm is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">there</span> <span class="n">exists</span> <span class="n">column</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="n">such</span> <span class="n">that</span> <span class="n">low</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">==</span> <span class="n">low</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+        <span class="n">add</span> <span class="n">column</span> <span class="n">k</span> <span class="n">to</span> <span class="n">column</span> <span class="n">j</span> <span class="p">(</span><span class="n">modulo</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Pivots &amp; Birth-Death Pairs</strong>: Once reduced, if <span class="math notranslate nohighlight">\(\text{low}(j) = i\)</span>, it means the simplex <span class="math notranslate nohighlight">\(\sigma_i\)</span> gave birth to a topological hole, and simplex <span class="math notranslate nohighlight">\(\sigma_j\)</span> killed it. This gives a birth-death interval <span class="math notranslate nohighlight">\([t_i, t_j]\)</span> in the barcode. If column <span class="math notranslate nohighlight">\(j\)</span> is reduced to zero and is never a pivot, it represents a feature that never dies (its interval is <span class="math notranslate nohighlight">\([t_j, \infty)\)</span>).</p></li>
+<li><p><strong>The Clearing Optimization</strong>: To speed up computation, if a column <span class="math notranslate nohighlight">\(i\)</span> is identified as a lowest row index (<span class="math notranslate nohighlight">\(\text{low}(j) = i\)</span>), we immediately clear column <span class="math notranslate nohighlight">\(i\)</span> to zero (<span class="math notranslate nohighlight">\(R[:, i] = 0\)</span>). This is because any simplex that acts as a killer (boundary generator) cannot also give birth to a cycle in the same dimension, saving significant computation time.</p></li>
+</ul>
+</section>
+</section>
+<section id="c-stability-the-isometry-theorem">
+<h3>C. Stability &amp; The Isometry Theorem<a class="headerlink" href="#c-stability-the-isometry-theorem" title="Permalink to this heading">#</a></h3>
+<p>To guarantee that TDA is a reliable tool, we must be able to compare persistence modules and prove that they are robust to noise.</p>
+<ul class="simple">
+<li><p><strong>Interleaving Distance (<span class="math notranslate nohighlight">\(d_I\)</span>)</strong>: Two persistence diagrams are compared by finding an algebraic alignment between their underlying persistence modules. We say two modules <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are <span class="math notranslate nohighlight">\(\delta\)</span>-interleaved if there exist families of linear maps <span class="math notranslate nohighlight">\(f_t: V_t \to W_{t+\delta}\)</span> and <span class="math notranslate nohighlight">\(g_t: W_t \to V_{t+\delta}\)</span> that commute with the transition maps. The <strong>interleaving distance</strong> <span class="math notranslate nohighlight">\(d_I(V, W)\)</span> is the infimum of all such <span class="math notranslate nohighlight">\(\delta\)</span> for which an interleaving exists.</p></li>
+<li><p><strong>The Isometry Theorem</strong>: The Isometry Theorem (proven by Bjerkevik and others) states that the algebraic interleaving distance between two persistence modules is exactly equal to the geometric bottleneck distance between their persistence diagrams:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[d_I(V, W) = d_B(D(V), D(W))\]</div>
+<ul class="simple">
+<li><p><strong>The Stability Inequality</strong>: This isometry underpins the stability of persistent homology. For any two continuous functions <span class="math notranslate nohighlight">\(f, g\)</span> on a space <span class="math notranslate nohighlight">\(X\)</span>, the bottleneck distance between their respective persistence diagrams is bounded by their supremum distance:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[d_B(D(f), D(g)) \le \|f - g\|_\infty\]</div>
+</section>
+<section id="d-persistent-cohomology">
+<h3>D. Persistent Cohomology<a class="headerlink" href="#d-persistent-cohomology" title="Permalink to this heading">#</a></h3>
+<p><strong>Cohomology</strong> is the algebraic dual of homology. Instead of study chains (sums of simplices), cohomology studies <strong>cochains</strong> (functions mapping simplices to coefficients, <span class="math notranslate nohighlight">\(C^k(K) = \text{Hom}(C_k(K), \mathbb{Z}_2)\)</span>), using the coboundary operator <span class="math notranslate nohighlight">\(d_k: C^k(K) \to C^{k+1}(K)\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Computational Advantage</strong>: While persistent homology and persistent cohomology yield the exact same barcodes (due to dualities on field coefficients), the <strong>persistent cohomology algorithm</strong> is mathematically dual and runs significantly faster.</p></li>
+<li><p><strong>Why it is faster</strong>: In cohomology, we build the filtration from the top down. The boundary matrix column reduction can be performed on the fly with much smaller active matrix sizes. This is why state-of-the-art TDA software (such as Ripser and GUDHI) defaults to computing persistent cohomology.</p></li>
+</ul>
+</section>
 </section>
 <hr class="docutils" />
 <section id="python-example-calculating-betti-numbers-with-gudhi">
@@ -551,11 +656,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="applications.html"
+       href="advanced_tda.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Topological Surfaces &amp; Applications</p>
+        <p class="prev-next-title">Advanced Topological Algorithms</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -575,9 +680,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-complexes">1. Simplicial Complexes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplicial-complexes-nerve-theorem">1. Simplicial Complexes &amp; Nerve Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-the-cech-complex-check-c-epsilon-x">A. The Čech Complex (<span class="math notranslate nohighlight">\(\check{C}_\epsilon(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-vietorisrips-complex-vr-epsilon-x">B. The Vietoris–Rips Complex (<span class="math notranslate nohighlight">\(VR_\epsilon(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-the-alpha-complex-alpha-complex">C. The Alpha Complex (<span class="math notranslate nohighlight">\(\alpha\)</span>-complex)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betti-numbers">2. Betti Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-homology">3. Persistent Homology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-homology">3. Persistent Homology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-algebraic-foundations-persistence-modules">A. Algebraic Foundations: Persistence Modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-the-persistence-algorithm-matrix-reduction">B. The Persistence Algorithm &amp; Matrix Reduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-reduction-algorithm">Column Reduction Algorithm</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-stability-the-isometry-theorem">C. Stability &amp; The Isometry Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-persistent-cohomology">D. Persistent Cohomology</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-calculating-betti-numbers-with-gudhi">4. Python Example: Calculating Betti Numbers with <code class="docutils literal notranslate"><span class="pre">GUDHI</span></code></a></li>
 </ul>
   </nav></div>

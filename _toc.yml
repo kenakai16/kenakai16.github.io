@@ -41,6 +41,8 @@ parts:
           - file: book/topology/spaces
           - file: book/topology/manifolds
           - file: book/topology/tda
+          - file: book/topology/advanced_tda
+          - file: book/topology/surfaces
           - file: book/topology/applications
 
   - caption: Machine Learning
