@@ -4,7 +4,7 @@ Linear Algebra is the mathematical language of Machine Learning. It allows us to
 
 ---
 
-## 1. Vectors (Vectơ)
+## 1. Vectors
 
 A **vector** is an ordered list of numbers. In Data Science, we represent a data point (or feature vector) as a vector.
 
@@ -14,13 +14,13 @@ $$x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}$$
 
 ---
 
-## 2. Matrices (Ma trận)
+## 2. Matrices
 
 A **matrix** is a 2D grid of numbers. We write an $m \times n$ matrix $A$ (having $m$ rows and $n$ columns) as:
 
 $$A = \begin{bmatrix} A_{11} & A_{12} & \dots & A_{1n} \\ A_{21} & A_{22} & \dots & A_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ A_{m1} & A_{m2} & \dots & A_{mn} \end{bmatrix}$$
 
-### Matrix Transpose (Chuyển vị)
+### Matrix Transpose
 The transpose of a matrix $A$ (written as $A^T$) is obtained by swapping its rows and columns:
 
 $$(A^T)_{ij} = A_{ji}$$
@@ -29,19 +29,19 @@ $$(A^T)_{ij} = A_{ji}$$
 
 ## 3. Core Matrix Operations
 
-### Matrix Multiplication (Nhân ma trận)
+### Matrix Multiplication
 If $A$ is an $m \times p$ matrix and $B$ is a $p \times n$ matrix, their product $C = AB$ is an $m \times n$ matrix where each element is:
 
 $$C_{ij} = \sum_{k=1}^p A_{ik} B_{kj}$$
 
-### Identity Matrix (Ma trận đơn vị)
+### Identity Matrix
 The identity matrix $I$ is a square matrix with ones on the main diagonal and zeros elsewhere:
 
 $$I = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 
 For any matrix $A$, $AI = IA = A$.
 
-### Determinant (Định thức)
+### Determinant
 For a $2 \times 2$ matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, the determinant is:
 
 $$\det(A) = ad - bc$$

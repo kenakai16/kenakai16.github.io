@@ -34,6 +34,15 @@ parts:
           - file: book/optimization/algorithms
           - file: book/optimization/combinatorial
 
+  - caption: Topology
+    chapters:
+      - file: book/topology/intro
+        sections:
+          - file: book/topology/spaces
+          - file: book/topology/manifolds
+          - file: book/topology/tda
+          - file: book/topology/applications
+
   - caption: Machine Learning
     chapters:
       - file: book/machine_learning/intro

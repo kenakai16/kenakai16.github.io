@@ -1,0 +1,730 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topological Surfaces &amp; Applications &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/topology/applications';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Machine learning" href="../machine_learning/intro.html" />
+    <link rel="prev" title="Topological Data Analysis (TDA) &amp; Persistent Homology" href="tda.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Math for Data Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../math_basic/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Topology for Data Science</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/kenakai16/kenakai16.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/topology/applications.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topological Surfaces & Applications</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-topological-surfaces">1. Special Topological Surfaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mobius-strip">The Möbius Strip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-bottle">The Klein Bottle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singularities-on-a-sphere">2. Singularities on a Sphere</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-poincare-hopf-theorem">Understanding the Poincaré-Hopf Theorem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-index-of-a-singularity">What is the “Index” of a Singularity?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-application-wind-systems-on-earth">Meteorological Application: Wind Systems on Earth</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-coordinate-singularities-poles">B. Coordinate Singularities (Poles)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interdisciplinary-applications-of-topology">3. Interdisciplinary Applications of Topology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-robotics-motion-planning-configuration-spaces">A. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-physics-materials-science">B. Physics &amp; Materials Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-molecular-biology-nanotechnology">C. Molecular Biology &amp; Nanotechnology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-computer-science-program-semantics">D. Computer Science &amp; Program Semantics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-fiber-arts-puzzles">E. Fiber Arts &amp; Puzzles</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topological-surfaces-applications">
+<h1>Topological Surfaces &amp; Applications<a class="headerlink" href="#topological-surfaces-applications" title="Permalink to this heading">#</a></h1>
+<p>This section covers special non-orientable topological surfaces, polar singularities, and multi-disciplinary applications of topology in physics, biology, robotics, and computing.</p>
+<hr class="docutils" />
+<section id="special-topological-surfaces">
+<h2>1. Special Topological Surfaces<a class="headerlink" href="#special-topological-surfaces" title="Permalink to this heading">#</a></h2>
+<section id="the-mobius-strip">
+<h3>The Möbius Strip<a class="headerlink" href="#the-mobius-strip" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Möbius strip</strong> is a two-dimensional surface with only <strong>one side</strong> and <strong>one boundary curve</strong>.</p>
+<p>You can easily construct a physical model of a Möbius strip by taking a rectangular strip of paper, giving one end a half-twist (<span class="math notranslate nohighlight">\(180^\circ\)</span> turn), and then gluing the two ends together.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/mobius_strip.gif"><img alt="Animated Möbius Strip" class="bg-primary mb-1 align-center" src="../../_images/mobius_strip.gif" style="width: 75%;" /></a>
+<ul class="simple">
+<li><p><strong>One-sided Property</strong>: If you start drawing a line down the middle of a Möbius strip with a pen, you will eventually cover both “sides” of the paper and return to your starting point without ever lifting your pen or crossing the boundary edge.</p></li>
+<li><p><strong>Topological Significance</strong>: It is the simplest non-orientable surface. In data science, the Möbius strip is used to model cyclical datasets that have a twist or reflection in their state space.</p></li>
+</ul>
+</section>
+<section id="the-klein-bottle">
+<h3>The Klein Bottle<a class="headerlink" href="#the-klein-bottle" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Klein bottle</strong> is a closed 2D manifold (surface) that takes the concept of the Möbius strip one step further. It has <strong>no boundaries</strong> (like a sphere) but possesses only <strong>one side</strong> (like a Möbius strip).</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/klein_bottle.png"><img alt="Figure-8 Klein Bottle Wireframe" class="bg-primary mb-1 align-center" src="../../_images/klein_bottle.png" style="width: 45%;" /></a>
+<ul>
+<li><p><strong>Topological Connection to the Möbius Strip</strong>:
+A Klein bottle can be mathematically constructed by <strong>gluing two Möbius strips together along their circular boundaries</strong>. Since a Möbius strip only has a single boundary edge (which is topologically a circle <span class="math notranslate nohighlight">\(S^1\)</span>), joining two Möbius strips along this single edge closes the surface, yielding a Klein bottle.</p></li>
+<li><p><strong>Dimensionality Embedding &amp; Figure-8 Immersion</strong>:
+A Klein bottle cannot be embedded in 3D space without passing through itself. However, it can be embedded perfectly in <strong>4D space</strong> (<span class="math notranslate nohighlight">\(d = 4\)</span>) without self-intersection.</p>
+<p>The illustration above shows the <strong>Figure-8 immersion</strong> (often called the Klein Bagel) in 3D:</p>
+<ul class="simple">
+<li><p>It is represented as a clean blue wireframe mesh on a light background.</p></li>
+<li><p>In 4D space, the self-intersection is resolved because the intersecting parts have different values in the fourth dimension (<span class="math notranslate nohighlight">\(w\)</span>-axis).</p></li>
+</ul>
+</li>
+<li><p><strong>Data Science Application</strong>: Non-orientable manifolds like the Klein bottle are used as challenging benchmark datasets in manifold learning. They test whether non-linear dimensionality reduction algorithms (like UMAP or Isomap) can map high-dimensional topological structures into lower dimensions without losing essential topological characteristics.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="singularities-on-a-sphere">
+<h2>2. Singularities on a Sphere<a class="headerlink" href="#singularities-on-a-sphere" title="Permalink to this heading">#</a></h2>
+<p>A <strong>singularity</strong> is a point where a mathematical object loses its normal properties, collapses in dimension, or becomes mathematically undefined. Singularities on a sphere are studied in two major topological contexts:</p>
+<section id="a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">
+<h3>A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems<a class="headerlink" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems" title="Permalink to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>The Hairy Ball Theorem</strong> from algebraic topology states that there is no continuous, non-vanishing tangent vector field on even-dimensional spheres (such as a 2D sphere <span class="math notranslate nohighlight">\(S^2\)</span>).</p>
+<p><em>Intuition:</em> <strong>“You cannot comb a hairy ball flat without creating at least one cowlick (singularity/whorl).”</strong></p>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/hairy_ball_singularity.png"><img alt="Hairy Ball Theorem and Vector Field Singularities" class="bg-primary mb-1 align-center" src="../../_images/hairy_ball_singularity.png" style="width: 70%;" /></a>
+<p>This theorem is a direct consequence of a much deeper topological principle: the <strong>Poincaré-Hopf Theorem</strong>.</p>
+<section id="understanding-the-poincare-hopf-theorem">
+<h4>Understanding the Poincaré-Hopf Theorem<a class="headerlink" href="#understanding-the-poincare-hopf-theorem" title="Permalink to this heading">#</a></h4>
+<p>The Poincaré-Hopf Theorem links the local behavior of a vector field (such as wind) to the global topology of the surface it lies on. It states that for any smooth vector field on a compact manifold <span class="math notranslate nohighlight">\(M\)</span> with isolated zeroes (singularities), the sum of the <strong>indices</strong> of these zeroes equals the <strong>Euler characteristic</strong> (<span class="math notranslate nohighlight">\(\chi(M)\)</span>) of the manifold:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i} \text{index}_{z_i}(v) = \chi(M)\]</div>
+</section>
+<section id="what-is-the-index-of-a-singularity">
+<h4>What is the “Index” of a Singularity?<a class="headerlink" href="#what-is-the-index-of-a-singularity" title="Permalink to this heading">#</a></h4>
+<p>The <strong>index</strong> measures how the vectors rotate as you walk counter-clockwise in a small loop around the singularity:</p>
+<ol class="arabic simple">
+<li><p><strong>Source / Outflow</strong> (Wind blowing outward in all directions): <strong>Index = +1</strong></p></li>
+<li><p><strong>Sink / Inflow</strong> (Wind blowing inward in all directions): <strong>Index = +1</strong></p></li>
+<li><p><strong>Vortex / Whorl</strong> (Wind spiraling or rotating around a center): <strong>Index = +1</strong></p></li>
+<li><p><strong>Saddle Point / Col</strong> (Wind coming in from two directions and leaving in two other directions): <strong>Index = -1</strong></p></li>
+</ol>
+</section>
+<section id="meteorological-application-wind-systems-on-earth">
+<h4>Meteorological Application: Wind Systems on Earth<a class="headerlink" href="#meteorological-application-wind-systems-on-earth" title="Permalink to this heading">#</a></h4>
+<p>The Earth’s surface is topologically a 2-sphere (<span class="math notranslate nohighlight">\(S^2\)</span>), which has an Euler characteristic of <span class="math notranslate nohighlight">\(\chi(S^2) = 2\)</span>. Applying the Poincaré-Hopf Theorem to the Earth’s wind vector field:</p>
+<div class="math notranslate nohighlight">
+\[\sum \text{index} = 2\]</div>
+<p>This leads to several fascinating meteorological rules:</p>
+<ul class="simple">
+<li><p><strong>At least one calm spot</strong>: It is mathematically impossible to have a continuous wind blowing everywhere on Earth without any calm spots (points of zero wind speed). There must always be at least one cyclone, anticyclone, or saddle point.</p></li>
+<li><p><strong>The Balance of Weather Systems</strong>:</p>
+<ul>
+<li><p>If the Earth only has standard swirling systems (cyclones and anticyclones, which have an index of <strong>+1</strong>), there must be exactly <strong>two</strong> of them on the entire globe (e.g., <span class="math notranslate nohighlight">\(1 + 1 = 2\)</span>, representing 1 Cyclone + 1 Anticyclone).</p></li>
+<li><p>If a weather map features multiple storm centers (cyclones) and high-pressure centers (anticyclones), they must be balanced by <strong>saddle points (cols)</strong> (index of <strong>-1</strong>). For instance, if there are 3 cyclones/anticyclones (total index of <strong>+3</strong>), there must be exactly 1 saddle point (index of <strong>-1</strong>) to keep the global sum equal to 2: <span class="math notranslate nohighlight">\((+1) + (+1) + (+1) + (-1) = 2\)</span></p></li>
+<li><p>Meteorologists use this topological constraint to validate global wind simulations and ensure that pressure systems and calm spots mapped by forecast models are topologically consistent.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="b-coordinate-singularities-poles">
+<h3>B. Coordinate Singularities (Poles)<a class="headerlink" href="#b-coordinate-singularities-poles" title="Permalink to this heading">#</a></h3>
+<p>When mapping a 2D sphere using spherical coordinates (latitude <span class="math notranslate nohighlight">\(\phi\)</span> and longitude <span class="math notranslate nohighlight">\(\theta\)</span>), the North Pole and South Pole become <strong>coordinate singularities</strong>:</p>
+<ul class="simple">
+<li><p>Longitude <span class="math notranslate nohighlight">\(\theta\)</span> is completely undefined at the poles (all longitude lines converge to a single point).</p></li>
+<li><p>The Jacobian matrix of coordinate transformations collapses (loses rank) at the poles.</p></li>
+<li><p><strong>Data Science &amp; ML Relevance</strong>: In global climate forecasting, geographical information systems (GIS), and deep learning on spherical grids (e.g., Spherical CNNs), polar singularities cause mathematical distortions and numerical instability during grid-based operations. To resolve this, researchers use grid-free spherical representations (such as Healpix grids) or project spherical coordinates into Cartesian 3D space <span class="math notranslate nohighlight">\((x, y, z)\)</span> to eliminate the singularities.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="interdisciplinary-applications-of-topology">
+<h2>3. Interdisciplinary Applications of Topology<a class="headerlink" href="#interdisciplinary-applications-of-topology" title="Permalink to this heading">#</a></h2>
+<p>Topology is not just an abstract branch of pure mathematics; it has direct, high-impact applications across a wide variety of scientific and engineering fields.</p>
+<section id="a-robotics-motion-planning-configuration-spaces">
+<h3>A. Robotics &amp; Motion Planning (Configuration Spaces)<a class="headerlink" href="#a-robotics-motion-planning-configuration-spaces" title="Permalink to this heading">#</a></h3>
+<p>In robotics, the set of all possible positions and orientations a robot can take is represented as a high-dimensional manifold called the <strong>Configuration Space (C-space)</strong>:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/robot_configuration_space.png"><img alt="2-Joint Robotic Arm Configuration Space Mapping" class="bg-primary mb-1 align-center" src="../../_images/robot_configuration_space.png" style="width: 85%;" /></a>
+<ul class="simple">
+<li><p><strong>The Torus Mapping</strong>: As shown above, for a simple 2-joint robotic arm, each joint angle (<span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span>) ranges from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(2\pi\)</span> (which topologically represents a circle <span class="math notranslate nohighlight">\(S^1\)</span>). The total configuration space is the product of these two circles (<span class="math notranslate nohighlight">\(S^1 \times S^1\)</span>), which is topologically a <strong>Torus</strong> (donut manifold).</p></li>
+<li><p><strong>Path Planning</strong>: Finding a collision-free motion for the robot joint movements corresponds to finding a smooth, continuous path on this torus manifold from a start coordinate to an end coordinate while avoiding obstacles (which are represented as “holes” or cutouts on the manifold).</p></li>
+</ul>
+</section>
+<section id="b-physics-materials-science">
+<h3>B. Physics &amp; Materials Science<a class="headerlink" href="#b-physics-materials-science" title="Permalink to this heading">#</a></h3>
+<p>Topology has revolutionized modern physics, leading to multiple Nobel prizes:</p>
+<ul class="simple">
+<li><p><strong>Topological Insulators &amp; Condensed Matter</strong>: Topological materials possess electronic states that are protected by topology. For example, in 2D topological insulators, electrical current flows only along the edges of the material and is completely protected from backscattering (impurities in the crystal). David Thouless, Duncan Haldane, and Michael Kosterlitz were awarded the <strong>2016 Nobel Prize in Physics</strong> for discovering these topological phases of matter.</p></li>
+<li><p><strong>String Theory &amp; Calabi-Yau Manifolds</strong>: In string theory, the universe is modeled with 10 dimensions, where the 6 extra dimensions are curled up into tiny, complex 6D manifolds called <strong>Calabi-Yau manifolds</strong>. The topological classification of these manifolds dictates the physical properties and families of particles that can exist in the universe.</p></li>
+<li><p><strong>Cosmology</strong>: Physical cosmologists use topology to describe the global, overall shape of the universe (spacetime topology), trying to determine if our universe is flat, spherical, or toroidal.</p></li>
+</ul>
+</section>
+<section id="c-molecular-biology-nanotechnology">
+<h3>C. Molecular Biology &amp; Nanotechnology<a class="headerlink" href="#c-molecular-biology-nanotechnology" title="Permalink to this heading">#</a></h3>
+<p>Biological systems utilize topological constraints to manage complex, folded structures:</p>
+<ul class="simple">
+<li><p><strong>DNA Knotting</strong>: Inside a cell, DNA is a long, highly coiled molecule. Enzymes (like topoisomerases) manage DNA replication by cutting, twisting, and reconnecting DNA strands—essentially performing topological transformations to resolve knots and tangles. Biologists use <strong>Knot Theory</strong> to classify these knots and study how they affect DNA electrophoresis speeds.</p></li>
+<li><p><strong>Protein Folding</strong>: The complex 3D structures of folded proteins are classified using <strong>Circuit Topology</strong> and <strong>Knot Theory</strong>, comparing pairwise arrangements of internal contacts and chain crossings to understand protein stability and functions.</p></li>
+</ul>
+</section>
+<section id="d-computer-science-program-semantics">
+<h3>D. Computer Science &amp; Program Semantics<a class="headerlink" href="#d-computer-science-program-semantics" title="Permalink to this heading">#</a></h3>
+<p>Beyond data analysis (TDA), topology is used to formalize programming logic:</p>
+<ul class="simple">
+<li><p><strong>Domain Theory</strong>: Programming language semantics are formalized using topological spaces. Computer scientists like Steve Vickers characterize topological open sets as <strong>semidecidable (finitely observable) properties</strong> of computer programs—representing properties that a program can verify in finite time.</p></li>
+</ul>
+</section>
+<section id="e-fiber-arts-puzzles">
+<h3>E. Fiber Arts &amp; Puzzles<a class="headerlink" href="#e-fiber-arts-puzzles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Modular Fiber Arts</strong>: In crochet or modular knitting, creating a continuous, seamless join of multiple pieces without breaking the yarn is an application of finding an <strong>Eulerian Path</strong> (traversing each edge of the modular mesh exactly once).</p></li>
+<li><p><strong>Disentanglement Puzzles</strong>: Classic metal and string puzzles rely on topological features (like genus, loops, and boundary crossings) to be solved, where the solution is found by finding a topological deformation that allows two linked components to slide past each other.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/topology"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tda.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topological Data Analysis (TDA) &amp; Persistent Homology</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../machine_learning/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Machine learning</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-topological-surfaces">1. Special Topological Surfaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mobius-strip">The Möbius Strip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-bottle">The Klein Bottle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singularities-on-a-sphere">2. Singularities on a Sphere</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-poincare-hopf-theorem">Understanding the Poincaré-Hopf Theorem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-index-of-a-singularity">What is the “Index” of a Singularity?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#meteorological-application-wind-systems-on-earth">Meteorological Application: Wind Systems on Earth</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-coordinate-singularities-poles">B. Coordinate Singularities (Poles)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interdisciplinary-applications-of-topology">3. Interdisciplinary Applications of Topology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-robotics-motion-planning-configuration-spaces">A. Robotics &amp; Motion Planning (Configuration Spaces)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-physics-materials-science">B. Physics &amp; Materials Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-molecular-biology-nanotechnology">C. Molecular Biology &amp; Nanotechnology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-computer-science-program-semantics">D. Computer Science &amp; Program Semantics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#e-fiber-arts-puzzles">E. Fiber Arts &amp; Puzzles</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

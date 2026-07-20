@@ -186,7 +186,7 @@ P(Success rate > 90%): 0.2252
 
 ---
 
-## 5. Law of Large Numbers (Luật số lớn)
+## 5. Law of Large Numbers
 
 The **Law of Large Numbers (LLN)** is a fundamental theorem in probability. It states that as the number of independent trials increases, the empirical average (observed average) of the results converges to the theoretical expected value.
 

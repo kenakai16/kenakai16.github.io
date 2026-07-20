@@ -210,6 +210,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/applications.html">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -403,9 +413,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norm-approximation-xap-xi-chuan">1. Norm Approximation (Xấp xỉ chuẩn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-norm-problems-bai-toan-chuan-toi-thieu">2. Least-Norm Problems (Bài toán chuẩn tối thiểu)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-approximation-xap-xi-chinh-quy-hoa">3. Regularized Approximation (Xấp xỉ chính quy hóa)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norm-approximation">1. Norm Approximation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-norm-problems">2. Least-Norm Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-approximation">3. Regularized Approximation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-approximation">4. Robust Approximation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-fitting-interpolation">5. Function Fitting &amp; Interpolation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-basis-functions">Common Basis Functions:</a></li>
@@ -428,8 +438,8 @@ document.write(`
 <h1>Approximation and Fitting<a class="headerlink" href="#approximation-and-fitting" title="Permalink to this heading">#</a></h1>
 <p>In data science, we often approximate complex data points or functions using mathematical models. This page covers norm approximation, regularization, robust approximation, and function fitting based on Chapter 6 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="norm-approximation-xap-xi-chuan">
-<h2>1. Norm Approximation (Xấp xỉ chuẩn)<a class="headerlink" href="#norm-approximation-xap-xi-chuan" title="Permalink to this heading">#</a></h2>
+<section id="norm-approximation">
+<h2>1. Norm Approximation<a class="headerlink" href="#norm-approximation" title="Permalink to this heading">#</a></h2>
 <p>The simplest norm approximation problem has the form:</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize} \quad \|Ax - b\|\]</div>
@@ -441,8 +451,8 @@ document.write(`
 </ul>
 </section>
 <hr class="docutils" />
-<section id="least-norm-problems-bai-toan-chuan-toi-thieu">
-<h2>2. Least-Norm Problems (Bài toán chuẩn tối thiểu)<a class="headerlink" href="#least-norm-problems-bai-toan-chuan-toi-thieu" title="Permalink to this heading">#</a></h2>
+<section id="least-norm-problems">
+<h2>2. Least-Norm Problems<a class="headerlink" href="#least-norm-problems" title="Permalink to this heading">#</a></h2>
 <p>When a system of linear equations <span class="math notranslate nohighlight">\(Ax = b\)</span> is underdetermined (<span class="math notranslate nohighlight">\(m &lt; n\)</span>, meaning there are more variables than equations), we want to find the solution that has the smallest norm:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -452,8 +462,8 @@ document.write(`
 <p>For the <span class="math notranslate nohighlight">\(L_2\)</span> norm, the analytical solution is <span class="math notranslate nohighlight">\(x = A^T(A A^T)^{-1} b\)</span>.</p>
 </section>
 <hr class="docutils" />
-<section id="regularized-approximation-xap-xi-chinh-quy-hoa">
-<h2>3. Regularized Approximation (Xấp xỉ chính quy hóa)<a class="headerlink" href="#regularized-approximation-xap-xi-chinh-quy-hoa" title="Permalink to this heading">#</a></h2>
+<section id="regularized-approximation">
+<h2>3. Regularized Approximation<a class="headerlink" href="#regularized-approximation" title="Permalink to this heading">#</a></h2>
 <p>To balance the trade-off between fitting the data well (minimizing <span class="math notranslate nohighlight">\(\|Ax - b\|\)</span>) and keeping the model weights small (minimizing <span class="math notranslate nohighlight">\(\|x\|\)</span>), we use <strong>regularization</strong>:</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize} \quad \|Ax - b\| + \gamma \|x\|\]</div>
@@ -592,9 +602,9 @@ When optimizing, the contours of the loss function are highly likely to hit the 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norm-approximation-xap-xi-chuan">1. Norm Approximation (Xấp xỉ chuẩn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-norm-problems-bai-toan-chuan-toi-thieu">2. Least-Norm Problems (Bài toán chuẩn tối thiểu)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-approximation-xap-xi-chinh-quy-hoa">3. Regularized Approximation (Xấp xỉ chính quy hóa)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norm-approximation">1. Norm Approximation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-norm-problems">2. Least-Norm Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-approximation">3. Regularized Approximation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-approximation">4. Robust Approximation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-fitting-interpolation">5. Function Fitting &amp; Interpolation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-basis-functions">Common Basis Functions:</a></li>

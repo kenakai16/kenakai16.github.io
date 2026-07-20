@@ -28,7 +28,7 @@ $$\sum_{i=1}^{4} i = 1 + 2 + 3 + 4 = 10$$
 
 We use summations to define key algorithms and performance metrics.
 
-### Mean (Trung bình cộng):
+### Mean:
 $$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
 
 ### Mean Squared Error (MSE Loss):

@@ -210,6 +210,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/applications.html">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -403,15 +413,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-vecto">1. Vectors (Vectơ)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-ma-tran">2. Matrices (Ma trận)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose-chuyen-vi">Matrix Transpose (Chuyển vị)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">1. Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">2. Matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">Matrix Transpose</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-matrix-operations">3. Core Matrix Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-nhan-ma-tran">Matrix Multiplication (Nhân ma trận)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrix-ma-tran-don-vi">Identity Matrix (Ma trận đơn vị)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-dinh-thuc">Determinant (Định thức)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrix">Identity Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy">4. Python Implementation (NumPy)</a></li>
@@ -431,21 +441,21 @@ document.write(`
 <h1>Linear Algebra Basics<a class="headerlink" href="#linear-algebra-basics" title="Permalink to this heading">#</a></h1>
 <p>Linear Algebra is the mathematical language of Machine Learning. It allows us to represent and perform calculations on large datasets efficiently using vectors and matrices.</p>
 <hr class="docutils" />
-<section id="vectors-vecto">
-<h2>1. Vectors (Vectơ)<a class="headerlink" href="#vectors-vecto" title="Permalink to this heading">#</a></h2>
+<section id="vectors">
+<h2>1. Vectors<a class="headerlink" href="#vectors" title="Permalink to this heading">#</a></h2>
 <p>A <strong>vector</strong> is an ordered list of numbers. In Data Science, we represent a data point (or feature vector) as a vector.</p>
 <p>For example, a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^3\)</span> is written as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}\end{split}\]</div>
 </section>
 <hr class="docutils" />
-<section id="matrices-ma-tran">
-<h2>2. Matrices (Ma trận)<a class="headerlink" href="#matrices-ma-tran" title="Permalink to this heading">#</a></h2>
+<section id="matrices">
+<h2>2. Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h2>
 <p>A <strong>matrix</strong> is a 2D grid of numbers. We write an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> (having <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns) as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{bmatrix} A_{11} &amp; A_{12} &amp; \dots &amp; A_{1n} \\ A_{21} &amp; A_{22} &amp; \dots &amp; A_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ A_{m1} &amp; A_{m2} &amp; \dots &amp; A_{mn} \end{bmatrix}\end{split}\]</div>
-<section id="matrix-transpose-chuyen-vi">
-<h3>Matrix Transpose (Chuyển vị)<a class="headerlink" href="#matrix-transpose-chuyen-vi" title="Permalink to this heading">#</a></h3>
+<section id="matrix-transpose">
+<h3>Matrix Transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h3>
 <p>The transpose of a matrix <span class="math notranslate nohighlight">\(A\)</span> (written as <span class="math notranslate nohighlight">\(A^T\)</span>) is obtained by swapping its rows and columns:</p>
 <div class="math notranslate nohighlight">
 \[(A^T)_{ij} = A_{ji}\]</div>
@@ -454,21 +464,21 @@ document.write(`
 <hr class="docutils" />
 <section id="core-matrix-operations">
 <h2>3. Core Matrix Operations<a class="headerlink" href="#core-matrix-operations" title="Permalink to this heading">#</a></h2>
-<section id="matrix-multiplication-nhan-ma-tran">
-<h3>Matrix Multiplication (Nhân ma trận)<a class="headerlink" href="#matrix-multiplication-nhan-ma-tran" title="Permalink to this heading">#</a></h3>
+<section id="matrix-multiplication">
+<h3>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> is a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix, their product <span class="math notranslate nohighlight">\(C = AB\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix where each element is:</p>
 <div class="math notranslate nohighlight">
 \[C_{ij} = \sum_{k=1}^p A_{ik} B_{kj}\]</div>
 </section>
-<section id="identity-matrix-ma-tran-don-vi">
-<h3>Identity Matrix (Ma trận đơn vị)<a class="headerlink" href="#identity-matrix-ma-tran-don-vi" title="Permalink to this heading">#</a></h3>
+<section id="identity-matrix">
+<h3>Identity Matrix<a class="headerlink" href="#identity-matrix" title="Permalink to this heading">#</a></h3>
 <p>The identity matrix <span class="math notranslate nohighlight">\(I\)</span> is a square matrix with ones on the main diagonal and zeros elsewhere:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}I = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\end{split}\]</div>
 <p>For any matrix <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(AI = IA = A\)</span>.</p>
 </section>
-<section id="determinant-dinh-thuc">
-<h3>Determinant (Định thức)<a class="headerlink" href="#determinant-dinh-thuc" title="Permalink to this heading">#</a></h3>
+<section id="determinant">
+<h3>Determinant<a class="headerlink" href="#determinant" title="Permalink to this heading">#</a></h3>
 <p>For a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix <span class="math notranslate nohighlight">\(A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span>, the determinant is:</p>
 <div class="math notranslate nohighlight">
 \[\det(A) = ad - bc\]</div>
@@ -577,15 +587,15 @@ $<span class="math notranslate nohighlight">\(AB = \begin{bmatrix} (1 \cdot 2 + 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-vecto">1. Vectors (Vectơ)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-ma-tran">2. Matrices (Ma trận)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose-chuyen-vi">Matrix Transpose (Chuyển vị)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">1. Vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">2. Matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">Matrix Transpose</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-matrix-operations">3. Core Matrix Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-nhan-ma-tran">Matrix Multiplication (Nhân ma trận)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrix-ma-tran-don-vi">Identity Matrix (Ma trận đơn vị)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-dinh-thuc">Determinant (Định thức)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">Matrix Multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-matrix">Identity Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant">Determinant</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy">4. Python Implementation (NumPy)</a></li>

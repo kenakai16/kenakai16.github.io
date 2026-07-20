@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topology for Data Science &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/topology/intro';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Topological Spaces &amp; Metric Spaces" href="spaces.html" />
+    <link rel="prev" title="Combinatorial Optimization &amp; Scheduling" href="../optimization/combinatorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Math for Data Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../math_basic/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Topology for Data Science</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/kenakai16/kenakai16.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/topology/intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topology for Data Science</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-intuitive-concepts-in-topology">Core Intuitive Concepts in Topology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-origin-the-seven-bridges-of-konigsberg">1. Historical Origin: The Seven Bridges of Königsberg</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#major-subfields-of-topology">2. Major Subfields of Topology</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topology-for-data-science">
+<h1>Topology for Data Science<a class="headerlink" href="#topology-for-data-science" title="Permalink to this heading">#</a></h1>
+<p>Topology is the branch of mathematics that studies geometric properties and spatial relations that remain unaffected by the continuous change of shape or size of figures. Often described as <strong>“rubber-sheet geometry,”</strong> topology focuses on qualitative properties like connectivity, holes, and boundaries rather than quantitative measurements like distance, coordinates, or angles.</p>
+<p>In data science, machine learning, and deep learning, topology provides robust tools to understand the fundamental “shape” of high-dimensional data, optimize neural network structures, and perform noise-resistant feature engineering.</p>
+<hr class="docutils" />
+<section id="core-intuitive-concepts-in-topology">
+<h2>Core Intuitive Concepts in Topology<a class="headerlink" href="#core-intuitive-concepts-in-topology" title="Permalink to this heading">#</a></h2>
+<p>Before diving into formal definitions, it is helpful to understand the core intuitive concepts that topologists use to analyze spaces:</p>
+<ul>
+<li><p><strong>Topological Equivalence (Homeomorphism)</strong>:
+In topology, two shapes are considered “equivalent” (or homeomorphic) if one can be continuously deformed, stretched, bent, or twisted into the other without tearing, punching holes, or gluing parts together.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A classic joke is that a topologist cannot tell a <strong>coffee mug</strong> apart from a <strong>donut</strong> (torus). Because both shapes contain exactly one hole, a clay coffee mug can be continuously morphed into a donut shape without tearing or pasting.</p>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/topological_equivalence.png"><img alt="Topological Equivalence (Homeomorphism) Donut to Coffee Cup" class="bg-primary mb-1 align-center" src="../../_images/topological_equivalence.png" style="width: 75%;" /></a>
+</li>
+<li><p><strong>Topological Invariants</strong>:
+These are properties of a geometric object that remain unchanged under any continuous deformation. Examples include:</p>
+<ul class="simple">
+<li><p><strong>The number of holes</strong> (Betti numbers)</p></li>
+<li><p><strong>The number of connected components</strong></p></li>
+<li><p><strong>Euler Characteristic</strong> (<span class="math notranslate nohighlight">\(\chi\)</span>)</p></li>
+</ul>
+<p>If two spaces have different topological invariants, they cannot be continuously deformed into one another.</p>
+</li>
+<li><p><strong>Orientability</strong>:
+A surface is <strong>orientable</strong> if it has two distinct sides (e.g., an “inside” and an “outside” of a hollow sphere or balloon). A surface is <strong>non-orientable</strong> if it has only one side. As we will see later, structures like the <strong>Möbius strip</strong> and the <strong>Klein bottle</strong> are famous examples of non-orientable manifolds where the concepts of “inside” and “outside” collapse completely.</p></li>
+<li><p><strong>Coordinate-Free representation</strong>:
+Traditional geometry describes objects using coordinate equations (like <span class="math notranslate nohighlight">\(x^2 + y^2 = r^2\)</span> for a circle). Topology abstractly defines spaces based on how points are grouped together. This is highly useful in Data Science because real-world data is often noisy and shifting, but the global “shape” and connectivity of the data points contain the true underlying signal.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="historical-origin-the-seven-bridges-of-konigsberg">
+<h2>1. Historical Origin: The Seven Bridges of Königsberg<a class="headerlink" href="#historical-origin-the-seven-bridges-of-konigsberg" title="Permalink to this heading">#</a></h2>
+<p>The mathematical foundation of both <strong>Graph Theory</strong> and <strong>Topology</strong> began in 1736 when Leonhard Euler solved the famous puzzle known as <strong>The Seven Bridges of Königsberg</strong>.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/konigsberg_bridges_wiki.png"><img alt="Wikipedia Historical Map of Königsberg Bridges" class="bg-primary mb-1 align-center" src="../../_images/konigsberg_bridges_wiki.png" style="width: 60%;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/konigsberg_graph.png"><img alt="Abstract Topological Graph of Königsberg Bridges" class="bg-primary mb-1 align-center" src="../../_images/konigsberg_graph.png" style="width: 45%;" /></a>
+<ul class="simple">
+<li><p><strong>The Problem</strong>: The city of Königsberg (now Kaliningrad, Russia) was divided by the Pregel River into four landmasses (islands <span class="math notranslate nohighlight">\(A\)</span> and banks <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(D\)</span>), connected by seven bridges. The challenge was to find a walk through the city that crossed each of the seven bridges <strong>exactly once</strong> and returned to the starting point.</p></li>
+<li><p><strong>Euler’s Insight</strong>: Euler realized that the shape of the landmasses and the length of the bridges were completely irrelevant to the solution. By representing landmasses as vertices (nodes) and bridges as edges, he simplified the map into a network (graph).</p></li>
+<li><p><strong>The Solution</strong>: Euler proved that a path crossing every edge exactly once (now called an <strong>Eulerian Path</strong>) is only possible if the number of vertices with an odd number of edges (odd degree) is either <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(2\)</span>:</p>
+<ul>
+<li><p>In Königsberg, all four landmasses had an odd number of bridges connecting them (degrees 5, 3, 3, and 3).</p></li>
+<li><p>Therefore, it was mathematically impossible to complete the walk.</p></li>
+</ul>
+</li>
+<li><p><strong>The Birth of Topology</strong>: By discarding coordinates, distances, and angles, and focusing purely on the connectivity and relationships between points, Euler’s analysis was the very first paper in the history of topology—originally referred to as <em>geometry of position</em> (geometria situs).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="major-subfields-of-topology">
+<h2>2. Major Subfields of Topology<a class="headerlink" href="#major-subfields-of-topology" title="Permalink to this heading">#</a></h2>
+<p>Modern topology is broadly divided into four major subfields, each focusing on different mathematical tools and structures:</p>
+<ol class="arabic simple">
+<li><p><strong>General Topology (Point-Set Topology)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Studies the foundational definitions of topological spaces, open/closed sets, neighborhoods, continuity, convergence, compactness, and connectedness. It generalizes the concepts of calculus without needing a distance coordinate system.</p></li>
+<li><p><strong>Data Science Link</strong>: Forms the mathematical basis for metric spaces and continuous transformations used in data representation.</p></li>
+</ul>
+</li>
+<li><p><strong>Algebraic Topology</strong>:</p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Uses tools from abstract algebra (such as groups, rings, and homology) to analyze and classify topological spaces. It measures the “shapes” and counts the number of holes of different dimensions in a space.</p></li>
+<li><p><strong>Data Science Link</strong>: Directly powers <strong>Topological Data Analysis (TDA)</strong> and <strong>Persistent Homology</strong> (using Betti numbers to identify true data patterns vs. noise).</p></li>
+</ul>
+</li>
+<li><p><strong>Differential Topology</strong>:</p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Studies differentiable (smooth) manifolds and differentiable functions. It deals with smooth structures, tangent vectors, and vector fields on manifolds without relying on metric distances.</p></li>
+<li><p><strong>Data Science Link</strong>: Essential for manifold optimization, gradient descent on Riemannian manifolds, and deep learning architectures like Spherical CNNs.</p></li>
+</ul>
+</li>
+<li><p><strong>Geometric Topology</strong>:</p>
+<ul class="simple">
+<li><p><strong>Focus</strong>: Studies manifolds and their embeddings in other manifolds, with a strong focus on low-dimensional spaces (dimensions 2, 3, and 4), orientability, and knot theory.</p></li>
+<li><p><strong>Data Science Link</strong>: Explains complex, non-orientable surfaces (like the <strong>Möbius strip</strong> and <strong>Klein bottle</strong>) which serve as testing grounds for non-linear dimensionality reduction methods (like UMAP and Isomap).</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/topology"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../optimization/combinatorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Combinatorial Optimization &amp; Scheduling</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="spaces.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Topological Spaces &amp; Metric Spaces</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-intuitive-concepts-in-topology">Core Intuitive Concepts in Topology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-origin-the-seven-bridges-of-konigsberg">1. Historical Origin: The Seven Bridges of Königsberg</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#major-subfields-of-topology">2. Major Subfields of Topology</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

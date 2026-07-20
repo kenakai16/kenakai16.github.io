@@ -4,7 +4,7 @@ In data science, we often approximate complex data points or functions using mat
 
 ---
 
-## 1. Norm Approximation (Xấp xỉ chuẩn)
+## 1. Norm Approximation
 
 The simplest norm approximation problem has the form:
 
@@ -17,7 +17,7 @@ Where $A \in \mathbb{R}^{m \times n}$ ($m > n$) and $\|\cdot\|$ is any norm (suc
 
 ---
 
-## 2. Least-Norm Problems (Bài toán chuẩn tối thiểu)
+## 2. Least-Norm Problems
 
 When a system of linear equations $Ax = b$ is underdetermined ($m < n$, meaning there are more variables than equations), we want to find the solution that has the smallest norm:
 
@@ -30,7 +30,7 @@ For the $L_2$ norm, the analytical solution is $x = A^T(A A^T)^{-1} b$.
 
 ---
 
-## 3. Regularized Approximation (Xấp xỉ chính quy hóa)
+## 3. Regularized Approximation
 
 To balance the trade-off between fitting the data well (minimizing $\|Ax - b\|$) and keeping the model weights small (minimizing $\|x\|$), we use **regularization**:
 

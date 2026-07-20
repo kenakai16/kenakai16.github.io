@@ -210,6 +210,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/applications.html">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -404,8 +414,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-linear-programming">1. Least-Squares &amp; Linear Programming</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-binh-phuong-toi-thieu">Least-Squares (Bình phương tối thiểu)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-quy-hoach-tuyen-tinh-lp">Linear Programming (Quy hoạch tuyến tính - LP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares">Least-Squares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-lp">Linear Programming (LP)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>
@@ -439,15 +449,15 @@ document.write(`
 <section id="least-squares-linear-programming">
 <h2>1. Least-Squares &amp; Linear Programming<a class="headerlink" href="#least-squares-linear-programming" title="Permalink to this heading">#</a></h2>
 <p>Depending on the mathematical properties of <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_i\)</span>, optimization problems are classified into several major families.</p>
-<section id="least-squares-binh-phuong-toi-thieu">
-<h3>Least-Squares (Bình phương tối thiểu)<a class="headerlink" href="#least-squares-binh-phuong-toi-thieu" title="Permalink to this heading">#</a></h3>
+<section id="least-squares">
+<h3>Least-Squares<a class="headerlink" href="#least-squares" title="Permalink to this heading">#</a></h3>
 <p>A least-squares problem has no constraints and an objective function that is a sum of squares:</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize} \quad \|Ax - b\|_2^2 = \sum_{i=1}^k (a_i^T x - b_i)^2\]</div>
 <p>This problem can be solved analytically (<span class="math notranslate nohighlight">\(x = (A^T A)^{-1} A^T b\)</span>). It is the foundation of <strong>Linear Regression</strong> in machine learning.</p>
 </section>
-<section id="linear-programming-quy-hoach-tuyen-tinh-lp">
-<h3>Linear Programming (Quy hoạch tuyến tính - LP)<a class="headerlink" href="#linear-programming-quy-hoach-tuyen-tinh-lp" title="Permalink to this heading">#</a></h3>
+<section id="linear-programming-lp">
+<h3>Linear Programming (LP)<a class="headerlink" href="#linear-programming-lp" title="Permalink to this heading">#</a></h3>
 <p>In Linear Programming, both the objective and constraint functions are linear:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -570,8 +580,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-linear-programming">1. Least-Squares &amp; Linear Programming</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares-binh-phuong-toi-thieu">Least-Squares (Bình phương tối thiểu)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-quy-hoach-tuyen-tinh-lp">Linear Programming (Quy hoạch tuyến tính - LP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#least-squares">Least-Squares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-lp">Linear Programming (LP)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>

@@ -209,6 +209,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topology/applications.html">Topological Surfaces &amp; Applications</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -405,12 +415,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-machine-learning">🤖 Part 4: Machine Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-approximation-theory">📈 Part 5: Approximation Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-deep-learning">🧠 Part 6: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-data-analysis">📊 Part 7: Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-topology">🌐 Part 2: Topology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-probability-statistics">🎲 Part 3: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-optimization">⚡ Part 4: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-data-analysis">📊 Part 8: Data Analysis</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
@@ -496,40 +507,48 @@ document.write(`
 <li><p><strong>Advanced Core</strong>: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.</p></li>
 </ul>
 </section>
-<section id="part-2-probability-statistics">
-<h3>🎲 Part 2: Probability &amp; Statistics<a class="headerlink" href="#part-2-probability-statistics" title="Permalink to this heading">#</a></h3>
+<section id="part-2-topology">
+<h3>🌐 Part 2: Topology<a class="headerlink" href="#part-2-topology" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>General Topology</strong>: Metric spaces, open sets, neighborhoods, compactness, and connectedness.</p></li>
+<li><p><strong>Manifolds</strong>: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).</p></li>
+<li><p><strong>Topological Data Analysis (TDA)</strong>: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).</p></li>
+</ul>
+</section>
+<section id="part-3-probability-statistics">
+<h3>🎲 Part 3: Probability &amp; Statistics<a class="headerlink" href="#part-3-probability-statistics" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Probability</strong>: Core rules, joint and union probability, conditional probability, Bayes’ Theorem, and probability distributions (Binomial, Beta).</p></li>
 <li><p><strong>Statistics</strong>: Mean, median, mode, variance, standard deviation, and key statistical concepts.</p></li>
 </ul>
 </section>
-<section id="part-3-optimization">
-<h3>⚡ Part 3: Optimization<a class="headerlink" href="#part-3-optimization" title="Permalink to this heading">#</a></h3>
+<section id="part-4-optimization">
+<h3>⚡ Part 4: Optimization<a class="headerlink" href="#part-4-optimization" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Convexity</strong>: Convex sets, convex functions, and convex optimization problems.</p></li>
 <li><p><strong>Theory &amp; Algorithms</strong>: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.</p></li>
 </ul>
 </section>
-<section id="part-4-machine-learning">
-<h3>🤖 Part 4: Machine Learning<a class="headerlink" href="#part-4-machine-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-5-machine-learning">
+<h3>🤖 Part 5: Machine Learning<a class="headerlink" href="#part-5-machine-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Math Foundations</strong>: Linear algebra for ML, practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.</p></li>
 </ul>
 </section>
-<section id="part-5-approximation-theory">
-<h3>📈 Part 5: Approximation Theory<a class="headerlink" href="#part-5-approximation-theory" title="Permalink to this heading">#</a></h3>
+<section id="part-6-approximation-theory">
+<h3>📈 Part 6: Approximation Theory<a class="headerlink" href="#part-6-approximation-theory" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fitting</strong>: Curve fitting, regression analysis, interpolation, and approximating continuous functions.</p></li>
 </ul>
 </section>
-<section id="part-6-deep-learning">
-<h3>🧠 Part 6: Deep Learning<a class="headerlink" href="#part-6-deep-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-7-deep-learning">
+<h3>🧠 Part 7: Deep Learning<a class="headerlink" href="#part-7-deep-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Neural Networks</strong>: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.</p></li>
 </ul>
 </section>
-<section id="part-7-data-analysis">
-<h3>📊 Part 7: Data Analysis<a class="headerlink" href="#part-7-data-analysis" title="Permalink to this heading">#</a></h3>
+<section id="part-8-data-analysis">
+<h3>📊 Part 8: Data Analysis<a class="headerlink" href="#part-8-data-analysis" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Exploratory Data Analysis (EDA)</strong>: Data profiling, summarization, visualization, and outlier detection in python.</p></li>
 </ul>
@@ -540,6 +559,8 @@ document.write(`
 <h2>🏁 Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h2>
 <p>Choose any section from the sidebar or Table of Contents to begin exploring the mathematical foundations of Data Science!</p>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -616,12 +637,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-machine-learning">🤖 Part 4: Machine Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-approximation-theory">📈 Part 5: Approximation Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-deep-learning">🧠 Part 6: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-data-analysis">📊 Part 7: Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-topology">🌐 Part 2: Topology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-probability-statistics">🎲 Part 3: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-optimization">⚡ Part 4: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-data-analysis">📊 Part 8: Data Analysis</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>

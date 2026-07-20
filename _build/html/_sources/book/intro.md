@@ -51,24 +51,29 @@ The content is organized into 7 key modules, guiding you from basic arithmetic t
 - **Functions & Graphs**: Linear and curvilinear functions, summations, exponents, and logarithms (featuring Euler's number and the Rule of 72).
 - **Advanced Core**: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.
 
-### 🎲 Part 2: Probability & Statistics
+### 🌐 Part 2: Topology
+- **General Topology**: Metric spaces, open sets, neighborhoods, compactness, and connectedness.
+- **Manifolds**: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).
+- **Topological Data Analysis (TDA)**: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).
+
+### 🎲 Part 3: Probability & Statistics
 - **Probability**: Core rules, joint and union probability, conditional probability, Bayes' Theorem, and probability distributions (Binomial, Beta).
 - **Statistics**: Mean, median, mode, variance, standard deviation, and key statistical concepts.
 
-### ⚡ Part 3: Optimization
+### ⚡ Part 4: Optimization
 - **Convexity**: Convex sets, convex functions, and convex optimization problems.
 - **Theory & Algorithms**: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.
 
-### 🤖 Part 4: Machine Learning
+### 🤖 Part 5: Machine Learning
 - **Math Foundations**: Linear algebra for ML, practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.
 
-### 📈 Part 5: Approximation Theory
+### 📈 Part 6: Approximation Theory
 - **Fitting**: Curve fitting, regression analysis, interpolation, and approximating continuous functions.
 
-### 🧠 Part 6: Deep Learning
+### 🧠 Part 7: Deep Learning
 - **Neural Networks**: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.
 
-### 📊 Part 7: Data Analysis
+### 📊 Part 8: Data Analysis
 - **Exploratory Data Analysis (EDA)**: Data profiling, summarization, visualization, and outlier detection in python.
 
 ---

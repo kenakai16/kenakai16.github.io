@@ -18,14 +18,14 @@ Where:
 
 Depending on the mathematical properties of $f_0$ and $f_i$, optimization problems are classified into several major families.
 
-### Least-Squares (Bình phương tối thiểu)
+### Least-Squares
 A least-squares problem has no constraints and an objective function that is a sum of squares:
 
 $$\text{minimize} \quad \|Ax - b\|_2^2 = \sum_{i=1}^k (a_i^T x - b_i)^2$$
 
 This problem can be solved analytically ($x = (A^T A)^{-1} A^T b$). It is the foundation of **Linear Regression** in machine learning.
 
-### Linear Programming (Quy hoạch tuyến tính - LP)
+### Linear Programming (LP)
 In Linear Programming, both the objective and constraint functions are linear:
 
 $$\begin{aligned}
