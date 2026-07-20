@@ -83,9 +83,12 @@ Perform 3 iterations of Gradient Descent manually for the function $f(x) = x^2$.
 :class: dropdown
 The derivative is $f'(x) = 2x$.
 - **Iteration 1**:
+
   $$x_1 = x_0 - \alpha \cdot f'(x_0) = 4 - 0.1(2 \cdot 4) = 4 - 0.8 = 3.2$$
 - **Iteration 2**:
+
   $$x_2 = x_1 - \alpha \cdot f'(x_1) = 3.2 - 0.1(2 \cdot 3.2) = 3.2 - 0.64 = 2.56$$
 - **Iteration 3**:
+
   $$x_3 = x_2 - \alpha \cdot f'(x_2) = 2.56 - 0.1(2 \cdot 2.56) = 2.56 - 0.512 = 2.048$$
 ```

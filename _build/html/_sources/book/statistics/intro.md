@@ -24,8 +24,10 @@ Statistics is the discipline that concerns the collection, organization, analysi
 Variance ($\sigma^2$) and Standard Deviation ($\sigma$) measure the spread of data points around the mean.
 
 - **Population Variance**:
+
   $$\sigma^2 = \frac{\sum (x_i - \mu)^2}{N}$$
 - **Sample Variance** (Bessel's correction uses $n-1$ to account for sample bias):
+
   $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}$$
 
 ```python

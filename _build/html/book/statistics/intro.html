@@ -460,11 +460,15 @@ document.write(`
 <section id="variance-and-standard-deviation">
 <h3>Variance and Standard Deviation<a class="headerlink" href="#variance-and-standard-deviation" title="Permalink to this heading">#</a></h3>
 <p>Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span>) and Standard Deviation (<span class="math notranslate nohighlight">\(\sigma\)</span>) measure the spread of data points around the mean.</p>
-<ul class="simple">
-<li><p><strong>Population Variance</strong>:
-$<span class="math notranslate nohighlight">\(\sigma^2 = \frac{\sum (x_i - \mu)^2}{N}\)</span>$</p></li>
-<li><p><strong>Sample Variance</strong> (Bessel’s correction uses <span class="math notranslate nohighlight">\(n-1\)</span> to account for sample bias):
-$<span class="math notranslate nohighlight">\(s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}\)</span>$</p></li>
+<ul>
+<li><p><strong>Population Variance</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\sigma^2 = \frac{\sum (x_i - \mu)^2}{N}\]</div>
+</li>
+<li><p><strong>Sample Variance</strong> (Bessel’s correction uses <span class="math notranslate nohighlight">\(n-1\)</span> to account for sample bias):</p>
+<div class="math notranslate nohighlight">
+\[s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}\]</div>
+</li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>

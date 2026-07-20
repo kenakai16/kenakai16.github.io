@@ -466,16 +466,25 @@ document.write(`
 <section id="karush-kuhn-tucker-kkt-conditions">
 <h2>3. Karush-Kuhn-Tucker (KKT) Conditions<a class="headerlink" href="#karush-kuhn-tucker-kkt-conditions" title="Permalink to this heading">#</a></h2>
 <p>For any optimization problem with differentiable objective and constraint functions for which strong duality holds, any primal-optimal <span class="math notranslate nohighlight">\(x^*\)</span> and dual-optimal <span class="math notranslate nohighlight">\((\lambda^*, \nu^*)\)</span> must satisfy the <strong>KKT conditions</strong>:</p>
-<ol class="arabic simple">
-<li><p><strong>Primal Feasibility</strong>:
-$<span class="math notranslate nohighlight">\(f_i(x^*) \leq 0, \quad i=1,\dots,m\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(h_i(x^*) = 0, \quad i=1,\dots,p\)</span>$</p></li>
-<li><p><strong>Dual Feasibility</strong>:
-$<span class="math notranslate nohighlight">\(\lambda^* \succeq 0\)</span>$</p></li>
-<li><p><strong>Complementary Slackness</strong>:
-$<span class="math notranslate nohighlight">\(\lambda_i^* f_i(x^*) = 0, \quad i=1,\dots,m\)</span>$</p></li>
-<li><p><strong>Lagrangian Stationarity</strong> (Gradient is zero):
-$<span class="math notranslate nohighlight">\(\nabla f_0(x^*) + \sum_{i=1}^m \lambda_i^* \nabla f_i(x^*) + \sum_{i=1}^p \nu_i^* \nabla h_i(x^*) = 0\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>Primal Feasibility</strong>:</p>
+<div class="math notranslate nohighlight">
+\[f_i(x^*) \leq 0, \quad i=1,\dots,m\]</div>
+<div class="math notranslate nohighlight">
+\[h_i(x^*) = 0, \quad i=1,\dots,p\]</div>
+</li>
+<li><p><strong>Dual Feasibility</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\lambda^* \succeq 0\]</div>
+</li>
+<li><p><strong>Complementary Slackness</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_i^* f_i(x^*) = 0, \quad i=1,\dots,m\]</div>
+</li>
+<li><p><strong>Lagrangian Stationarity</strong> (Gradient is zero):</p>
+<div class="math notranslate nohighlight">
+\[\nabla f_0(x^*) + \sum_{i=1}^m \lambda_i^* \nabla f_i(x^*) + \sum_{i=1}^p \nu_i^* \nabla h_i(x^*) = 0\]</div>
+</li>
 </ol>
 <p>If the primal problem is convex, the KKT conditions are not only necessary but also <strong>sufficient</strong> for optimality.</p>
 </section>

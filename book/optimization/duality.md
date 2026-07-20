@@ -49,13 +49,18 @@ Let $d^*$ be the optimal value of the dual problem.
 For any optimization problem with differentiable objective and constraint functions for which strong duality holds, any primal-optimal $x^*$ and dual-optimal $(\lambda^*, \nu^*)$ must satisfy the **KKT conditions**:
 
 1. **Primal Feasibility**:
+
    $$f_i(x^*) \leq 0, \quad i=1,\dots,m$$
+
    $$h_i(x^*) = 0, \quad i=1,\dots,p$$
 2. **Dual Feasibility**:
+
    $$\lambda^* \succeq 0$$
 3. **Complementary Slackness**:
+
    $$\lambda_i^* f_i(x^*) = 0, \quad i=1,\dots,m$$
 4. **Lagrangian Stationarity** (Gradient is zero):
+
    $$\nabla f_0(x^*) + \sum_{i=1}^m \lambda_i^* \nabla f_i(x^*) + \sum_{i=1}^p \nu_i^* \nabla h_i(x^*) = 0$$
 
 If the primal problem is convex, the KKT conditions are not only necessary but also **sufficient** for optimality.

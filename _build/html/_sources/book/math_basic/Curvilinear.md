@@ -80,6 +80,7 @@ plt.show()
 ```{admonition} Exercise 1
 :class: tip
 Find the vertex (minimum point) of the quadratic function:
+
 $$f(x) = x^2 - 6x + 9$$
 *Hint: The x-coordinate of the vertex of $ax^2 + bx + c$ is given by $x = -b / 2a$.*
 ```
@@ -87,8 +88,10 @@ $$f(x) = x^2 - 6x + 9$$
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 Using the formula $x = -b / 2a$:
+
 $$x = \frac{-(-6)}{2(1)} = 3$$
 Compute $f(3)$:
+
 $$f(3) = 3^2 - 6(3) + 9 = 9 - 18 + 9 = 0$$
 The vertex (minimum) is at $(3, 0)$.
 ```

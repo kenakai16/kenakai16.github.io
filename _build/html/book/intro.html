@@ -62,8 +62,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -404,10 +402,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-bibliography">📚 Recommended Bibliography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-syllabus-lecture-path">🗺️ Course Syllabus &amp; Lecture Path</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-linear-algebra-matrix-theory">Part 1: Linear Algebra &amp; Matrix Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-multivariable-calculus-optimization">Part 2: Multivariable Calculus &amp; Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-machine-learning">🤖 Part 4: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-approximation-theory">📈 Part 5: Approximation Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-deep-learning">🧠 Part 6: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-data-analysis">📊 Part 7: Data Analysis</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
@@ -424,7 +427,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="math-for-data-science">
 <h1>Math for Data Science<a class="headerlink" href="#math-for-data-science" title="Permalink to this heading">#</a></h1>
-<p>Welcome to the <strong>Math for Data Science</strong> blog. This resource is a curated refresher on the core mathematical foundations of Data Science, structured after the academic syllabus of <strong>“Math for Data Science”</strong> by <em>Stavros Toumpis, Assistant Professor at AUEB</em>.</p>
+<p>Welcome to the <strong>Math for Data Science</strong> blog. This resource is a curated reference and learning guide on the core mathematical foundations of Data Science, Machine Learning, and Deep Learning, authored by <strong>Huỳnh Trung Nghĩa</strong>.</p>
 <hr class="docutils" />
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
@@ -432,24 +435,11 @@ document.write(`
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
-🎯 Key Outcomes</div>
+🎯 Core Pillars</div>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Linear Algebra</strong>:</p>
-<ul>
-<li><p class="sd-card-text">Fundamental properties of matrices, their norms, and their applications.</p></li>
-</ul>
-</li>
-<li><p class="sd-card-text"><strong>Multivariable Calculus</strong>:</p>
-<ul>
-<li><p class="sd-card-text">Differentiating/integrating multiple variable functions.</p></li>
-<li><p class="sd-card-text">The crucial role of the <strong>Gradient</strong> (<span class="math notranslate nohighlight">\(\nabla\)</span>) and the <strong>Hessian matrix</strong> (<span class="math notranslate nohighlight">\(H\)</span>).</p></li>
-</ul>
-</li>
-<li><p class="sd-card-text"><strong>Optimization</strong>:</p>
-<ul>
-<li><p class="sd-card-text">Basic properties of optimization problems involving matrices and functions of multiple variables.</p></li>
-</ul>
-</li>
+<li><p class="sd-card-text"><strong>Calculus &amp; Linear Algebra</strong>: Functions, matrices, eigenvalues, gradients, and integration.</p></li>
+<li><p class="sd-card-text"><strong>Probability &amp; Statistics</strong>: Distributions, conditional probability, Bayes’ theorem, and descriptive/inferential statistics.</p></li>
+<li><p class="sd-card-text"><strong>Optimization</strong>: Convexity, duality, optimization algorithms (like gradient descent), and combinatorial optimization.</p></li>
 </ul>
 </div>
 </div>
@@ -459,26 +449,25 @@ document.write(`
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 🚀 Practical Focus</div>
-<p class="sd-card-text">Rather than dry mathematical proofs, we focus on <strong>conceptual intuition</strong> coupled with <strong>step-by-step Python implementations</strong> using <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, and <code class="docutils literal notranslate"><span class="pre">sympy</span></code>.</p>
+<p class="sd-card-text">Rather than dry mathematical proofs, we focus on <strong>conceptual intuition</strong> coupled with <strong>step-by-step Python implementations</strong> using libraries like <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, and <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <hr class="docutils" />
-<section id="recommended-bibliography">
-<h2>📚 Recommended Bibliography<a class="headerlink" href="#recommended-bibliography" title="Permalink to this heading">#</a></h2>
-<p>For deep theoretical insights, we recommend referencing these classic textbooks:</p>
+<section id="reference-textbooks">
+<h2>📚 Reference Textbooks<a class="headerlink" href="#reference-textbooks" title="Permalink to this heading">#</a></h2>
+<p>Our content and structure draw inspiration from these highly recommended books:</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 📘 Applied Math</div>
-<p class="sd-card-text"><strong>Essential Math for DS</strong>
-<em>Thomas Nield</em>
-O’Reilly Media (2022)</p>
+<p class="sd-card-text"><strong>Essential Math for Data Science</strong>
+<em>Thomas Nield</em> (O’Reilly, 2022)</p>
 </div>
 </div>
 </div>
@@ -486,21 +475,9 @@ O’Reilly Media (2022)</p>
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
-📗 Linear Algebra</div>
-<p class="sd-card-text"><strong>Linear Algebra &amp; Its Apps</strong>
-<em>Gilbert Strang</em>
-Thomson/Brooks Cole</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📙 Calculus</div>
-<p class="sd-card-text"><strong>Thomas’s Calculus</strong>
-<em>Weir &amp; Giordano</em>
-12th Edition, Pearson</p>
+📗 Mathematical Exercises</div>
+<p class="sd-card-text"><strong>1001 Math Problems</strong>
+<em>LearningExpress</em> (2nd Edition)</p>
 </div>
 </div>
 </div>
@@ -508,80 +485,60 @@ Thomson/Brooks Cole</p>
 </div>
 </section>
 <hr class="docutils" />
-<section id="course-syllabus-lecture-path">
-<h2>🗺️ Course Syllabus &amp; Lecture Path<a class="headerlink" href="#course-syllabus-lecture-path" title="Permalink to this heading">#</a></h2>
-<p>The module is broken down into <strong>12 structured lectures</strong> designed to take you from core arithmetic to multivariable optimization:</p>
-<section id="part-1-linear-algebra-matrix-theory">
-<h3>Part 1: Linear Algebra &amp; Matrix Theory<a class="headerlink" href="#part-1-linear-algebra-matrix-theory" title="Permalink to this heading">#</a></h3>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 1 &amp; 2: Matrix Fundamentals</div>
+<section id="blog-map-chapters">
+<h2>🗺️ Blog Map &amp; Chapters<a class="headerlink" href="#blog-map-chapters" title="Permalink to this heading">#</a></h2>
+<p>The content is organized into 7 key modules, guiding you from basic arithmetic to advanced machine learning foundations:</p>
+<section id="part-1-basic-math-calculus-review">
+<h3>📖 Part 1: Basic Math &amp; Calculus Review<a class="headerlink" href="#part-1-basic-math-calculus-review" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 1</strong>: Basic matrix operations, interpreting matrices as linear mappings, and special structures (diagonal, sparse, symmetric).</p></li>
-<li><p class="sd-card-text"><strong>Lecture 2</strong>: Square matrices, determinants (space scaling), singular vs. non-singular matrices, and inverse computations (<span class="math notranslate nohighlight">\(A^{-1}\)</span>).</p></li>
+<li><p><strong>Fundamentals</strong>: Number systems, fractions, decimals, order of operations, and algebraic variables.</p></li>
+<li><p><strong>Functions &amp; Graphs</strong>: Linear and curvilinear functions, summations, exponents, and logarithms (featuring Euler’s number and the Rule of 72).</p></li>
+<li><p><strong>Advanced Core</strong>: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.</p></li>
 </ul>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 3 &amp; 4: Eigenvalues &amp; Normed Spaces</div>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 3</strong>: Eigenvalues and eigenvectors, the Characteristic Polynomial, the Cayley-Hamilton theorem, and Singular Value Decomposition (SVD).</p></li>
-<li><p class="sd-card-text"><strong>Lecture 4</strong>: Complete normed spaces and vector spaces, vector norms (<span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(L_2\)</span>, <span class="math notranslate nohighlight">\(L_\infty\)</span>), and matrix norms (Frobenius).</p></li>
-</ul>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 5 &amp; 6: Spaces &amp; Advanced Matrix Structures</div>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 5</strong>: Column space (Range) and Null space, vector orthogonality, projection matrices, and the Gram-Schmidt algorithm.</p></li>
-<li><p class="sd-card-text"><strong>Lecture 6</strong>: Positive-definite matrices, eigenvalues, and their physical meaning in optimization stability.</p></li>
-</ul>
-</div>
-</div>
 </section>
-<section id="part-2-multivariable-calculus-optimization">
-<h3>Part 2: Multivariable Calculus &amp; Optimization<a class="headerlink" href="#part-2-multivariable-calculus-optimization" title="Permalink to this heading">#</a></h3>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 7 &amp; 8: Systems &amp; Functions</div>
+<section id="part-2-probability-statistics">
+<h3>🎲 Part 2: Probability &amp; Statistics<a class="headerlink" href="#part-2-probability-statistics" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 7</strong>: Formulating and solving systems of linear equations (<span class="math notranslate nohighlight">\(Ax = b\)</span>), linear inequalities, and introduction to Linear Programming.</p></li>
-<li><p class="sd-card-text"><strong>Lecture 8</strong>: Real-valued functions of two or more variables, domain mapping, and 3D visualization.</p></li>
+<li><p><strong>Probability</strong>: Core rules, joint and union probability, conditional probability, Bayes’ Theorem, and probability distributions (Binomial, Beta).</p></li>
+<li><p><strong>Statistics</strong>: Mean, median, mode, variance, standard deviation, and key statistical concepts.</p></li>
 </ul>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 9 &amp; 10: Differentiation &amp; Local Extrema</div>
+</section>
+<section id="part-3-optimization">
+<h3>⚡ Part 3: Optimization<a class="headerlink" href="#part-3-optimization" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 9</strong>: Limits, continuity, and differentiability in <span class="math notranslate nohighlight">\(n\)</span>-dimensions. The <strong>Gradient vector</strong> (first-order) and the <strong>Hessian matrix</strong> (second-order).</p></li>
-<li><p class="sd-card-text"><strong>Lecture 10</strong>: Optimization problems, identifying local maxima and minima, and analyzing extrema using the Hessian matrix.</p></li>
+<li><p><strong>Convexity</strong>: Convex sets, convex functions, and convex optimization problems.</p></li>
+<li><p><strong>Theory &amp; Algorithms</strong>: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.</p></li>
 </ul>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📂 Lectures 11 &amp; 12: Integration &amp; Convexity</div>
+</section>
+<section id="part-4-machine-learning">
+<h3>🤖 Part 4: Machine Learning<a class="headerlink" href="#part-4-machine-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p class="sd-card-text"><strong>Lecture 11</strong>: Double and triple integrals, Fubini’s theorem (changing integration order), and applications in joint probability.</p></li>
-<li><p class="sd-card-text"><strong>Lecture 12</strong>: Convex sets, convex functions, and convex optimization. The significance of convexity vs. non-convexity in machine learning.</p></li>
+<li><p><strong>Math Foundations</strong>: Linear algebra for ML, practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.</p></li>
 </ul>
-</div>
-</div>
+</section>
+<section id="part-5-approximation-theory">
+<h3>📈 Part 5: Approximation Theory<a class="headerlink" href="#part-5-approximation-theory" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Fitting</strong>: Curve fitting, regression analysis, interpolation, and approximating continuous functions.</p></li>
+</ul>
+</section>
+<section id="part-6-deep-learning">
+<h3>🧠 Part 6: Deep Learning<a class="headerlink" href="#part-6-deep-learning" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Neural Networks</strong>: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.</p></li>
+</ul>
+</section>
+<section id="part-7-data-analysis">
+<h3>📊 Part 7: Data Analysis<a class="headerlink" href="#part-7-data-analysis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Exploratory Data Analysis (EDA)</strong>: Data profiling, summarization, visualization, and outlier detection in python.</p></li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
 <section id="get-started">
 <h2>🏁 Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h2>
-<p>Choose any section from the sidebar or table of contents to begin your journey!</p>
+<p>Choose any section from the sidebar or Table of Contents to begin exploring the mathematical foundations of Data Science!</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -656,10 +613,15 @@ Thomson/Brooks Cole</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-bibliography">📚 Recommended Bibliography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-syllabus-lecture-path">🗺️ Course Syllabus &amp; Lecture Path</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-linear-algebra-matrix-theory">Part 1: Linear Algebra &amp; Matrix Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-multivariable-calculus-optimization">Part 2: Multivariable Calculus &amp; Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-machine-learning">🤖 Part 4: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-approximation-theory">📈 Part 5: Approximation Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-deep-learning">🧠 Part 6: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-data-analysis">📊 Part 7: Data Analysis</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>

@@ -66,7 +66,9 @@ $$\frac{3}{4} \div \frac{2}{3} - \frac{1}{2}$$
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 1. Perform division first:
+
    $$\frac{3}{4} \times \frac{3}{2} = \frac{9}{8}$$
 2. Perform subtraction:
+
    $$\frac{9}{8} - \frac{1}{2} = \frac{9}{8} - \frac{4}{8} = \frac{5}{8}$$
 ```

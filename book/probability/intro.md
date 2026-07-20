@@ -10,12 +10,30 @@ Probability quantifies how likely an event is to occur. It is always a value bet
 
 ### Probability vs. Odds
 
-- **Probability**: The ratio of the target event's occurrence to all possible outcomes.
-  $$\text{Probability} = \frac{\text{Successes}}{\text{Total Outcomes}}$$
-- **Odds**: The ratio of the probability of the event occurring to the probability of the event *not* occurring.
-  $$\text{Odds} = \frac{P(\text{Event})}{1 - P(\text{Event})}$$
+While often used interchangeably in casual language, **Probability** and **Odds** are distinct mathematical concepts.
 
-For example, if you roll a 6-sided die, the probability of rolling a $4$ is $1/6 \approx 0.1667$. The odds of rolling a $4$ are $\frac{1/6}{5/6} = 1:5$ (one to five).
+#### Mathematical Definitions
+
+- **Probability ($P$)**: The ratio of the target event's occurrence to all possible outcomes. It is always bounded between $0$ and $1$.
+
+  $$P = \frac{\text{Successes}}{\text{Total Outcomes}}$$
+
+- **Odds ($O$)**: The ratio of the probability of the event occurring ($P$) to the probability of the event *not* occurring ($1 - P$). Its value can range from $0$ to $\infty$.
+
+  $$O = \frac{P}{1 - P}$$
+
+#### Quick Comparison Table
+
+| Feature | Probability ($P$) | Odds ($O$) |
+| :--- | :--- | :--- |
+| **Definition** | Likelihood of event over total outcomes | Likelihood of event over non-event |
+| **Range** | $[0, 1]$ or $[0\%, 100\%]$ | $[0, \infty)$ |
+| **Formula** | $P = \frac{\text{Successes}}{\text{Total}}$ | $O = \frac{P}{1-P}$ |
+| **Example (Rolling a 4 on a 6-sided die)** | $\frac{1}{6} \approx 0.1667 \ (16.67\%)$ | $\frac{1/6}{5/6} = \frac{1}{5} \ (1:5 \text{ or } 0.2)$ |
+
+```{note}
+In machine learning, **Odds** are highly important in **Logistic Regression**. The model outputs log-odds (logit): $\ln(\frac{P}{1-P}) = wx + b$.
+```
 
 ---
 
@@ -24,11 +42,15 @@ For example, if you roll a 6-sided die, the probability of rolling a $4$ is $1/6
 The probability of two events $A$ and $B$ both happening is denoted as $P(A \cap B)$.
 
 - **For Independent Events**: The occurrence of one event does not affect the other.
+
   $$P(A \cap B) = P(A) \cdot P(B)$$
+
   *Example*: Flipping a coin and rolling a die.
 
 - **For Dependent Events**: The occurrence of one event affects the probability of the other.
+
   $$P(A \cap B) = P(A) \cdot P(B|A)$$
+
   *Example*: Drawing two aces consecutively from a deck of cards without replacement.
 
 ### Union Probabilities (OR)

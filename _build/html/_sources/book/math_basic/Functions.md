@@ -22,6 +22,7 @@ $$y = mx + c$$
 
 Where:
 - $m$ is the **slope** (rate of change, or gradient). It determines the steepness of the line:
+
   $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
 - $c$ is the **y-intercept** (where the line crosses the y-axis, i.e., $f(0)$).
 
@@ -72,7 +73,9 @@ A line passes through the points $(1, 3)$ and $(3, 7)$.
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 1. Slope ($m$):
+
    $$m = \frac{7 - 3}{3 - 1} = \frac{4}{2} = 2$$
 2. Using the point-slope form $y - y_1 = m(x - x_1)$ with point $(1, 3)$:
+
    $$y - 3 = 2(x - 1) \implies y = 2x + 1$$
 ```
