@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Measure Theory &amp; Lebesgue Integration &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/measure_theory/intro';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Probability" href="../probability/intro.html" />
+    <link rel="prev" title="Functional Analysis &amp; Operator Theory" href="../functional_analysis/intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Math for Data Science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../math_basic/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/kenakai16/kenakai16.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/measure_theory/intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Measure Theory & Lebesgue Integration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-part-2-outer-measure">Lecture 6 (Part 2): Outer Measure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-outer-measure">Definition of Outer Measure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-outer-measure">Properties of Outer Measure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-7-sigma-algebras-sigma-algebras">Lecture 7: Sigma Algebras (<span class="math notranslate nohighlight">\(\sigma\)</span>-algebras)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-a-sigma-algebra">Definition of a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-sigma-algebra-mathcal-b-mathbb-r">The Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra (<span class="math notranslate nohighlight">\(\mathcal{B}(\mathbb{R})\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-lebesgue-measurable-sets-measure">Lecture 8: Lebesgue Measurable Sets &amp; Measure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caratheodory-s-condition">Carathéodory’s Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lebesgue-measure-mu">The Lebesgue Measure (<span class="math notranslate nohighlight">\(\mu\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-lebesgue-measurable-functions">Lecture 9: Lebesgue Measurable Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-measurable-functions">Definition of Measurable Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-simple-functions-the-lebesgue-integral">Lecture 10: Simple Functions &amp; The Lebesgue Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-functions">Simple Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lebesgue-integral-of-simple-functions">The Lebesgue Integral of Simple Functions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="measure-theory-lebesgue-integration">
+<h1>Measure Theory &amp; Lebesgue Integration<a class="headerlink" href="#measure-theory-lebesgue-integration" title="Permalink to this heading">#</a></h1>
+<p>Classical Riemann integration is sufficient for basic functions, but fails for highly discontinuous functions (such as the Dirichlet function). <strong>Measure Theory</strong> provides the rigorous generalization of length, area, and volume, underpinning modern Probability Theory and integration.</p>
+<hr class="docutils" />
+<section id="lecture-6-part-2-outer-measure">
+<h2>Lecture 6 (Part 2): Outer Measure<a class="headerlink" href="#lecture-6-part-2-outer-measure" title="Permalink to this heading">#</a></h2>
+<p>To measure the “size” of arbitrary subsets of real numbers, we introduce the concept of <strong>Outer Measure</strong>.</p>
+<section id="definition-of-outer-measure">
+<h3>Definition of Outer Measure<a class="headerlink" href="#definition-of-outer-measure" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(\mu^*: \mathcal{P}(\mathbb{R}) \to [0, \infty]\)</span> of a subset <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is the infimum of the sum of lengths of open intervals that cover <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mu^*(A) = \inf \left\{ \sum_{n=1}^\infty (b_n - a_n) \mid A \subseteq \bigcup_{n=1}^\infty (a_n, b_n) \right\}\]</div>
+</section>
+<section id="properties-of-outer-measure">
+<h3>Properties of Outer Measure<a class="headerlink" href="#properties-of-outer-measure" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Empty Set</strong>: <span class="math notranslate nohighlight">\(\mu^*(\emptyset) = 0\)</span>.</p></li>
+<li><p><strong>Monotonicity</strong>: If <span class="math notranslate nohighlight">\(A \subseteq B\)</span>, then <span class="math notranslate nohighlight">\(\mu^*(A) \le \mu^*(B)\)</span>.</p></li>
+<li><p><strong>Countable Subadditivity</strong>: For any countable collection of sets <span class="math notranslate nohighlight">\(\{A_n\}\)</span>, the outer measure of their union is bounded by the sum of their individual outer measures:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mu^*\left(\bigcup_{n=1}^\infty A_n\right) \le \sum_{n=1}^\infty \mu^*(A_n)\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="lecture-7-sigma-algebras-sigma-algebras">
+<h2>Lecture 7: Sigma Algebras (<span class="math notranslate nohighlight">\(\sigma\)</span>-algebras)<a class="headerlink" href="#lecture-7-sigma-algebras-sigma-algebras" title="Permalink to this heading">#</a></h2>
+<p>We cannot define a consistent measure on <em>all</em> subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> while preserving translation-invariance and countable additivity (due to Vitali sets). Therefore, we must restrict our measure to a collection of “well-behaved” sets called a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
+<section id="definition-of-a-sigma-algebra">
+<h3>Definition of a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra<a class="headerlink" href="#definition-of-a-sigma-algebra" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a set. A collection <span class="math notranslate nohighlight">\(\Sigma\)</span> of subsets of <span class="math notranslate nohighlight">\(X\)</span> is a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> if it satisfies three axioms:</p>
+<ol class="arabic simple">
+<li><p><strong>Contains the Whole Set</strong>: <span class="math notranslate nohighlight">\(X \in \Sigma\)</span>.</p></li>
+<li><p><strong>Closed under Complement</strong>: If <span class="math notranslate nohighlight">\(A \in \Sigma\)</span>, then <span class="math notranslate nohighlight">\(A^c = X \setminus A \in \Sigma\)</span>.</p></li>
+<li><p><strong>Closed under Countable Unions</strong>: If <span class="math notranslate nohighlight">\(\{A_n\}_{n=1}^\infty \subseteq \Sigma\)</span>, then:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\bigcup_{n=1}^\infty A_n \in \Sigma\]</div>
+</section>
+<section id="the-borel-sigma-algebra-mathcal-b-mathbb-r">
+<h3>The Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra (<span class="math notranslate nohighlight">\(\mathcal{B}(\mathbb{R})\)</span>)<a class="headerlink" href="#the-borel-sigma-algebra-mathcal-b-mathbb-r" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra that contains all open intervals <span class="math notranslate nohighlight">\((a, b)\)</span>. It includes all open sets, closed sets (as complements of open sets), countable intersections of open sets (<span class="math notranslate nohighlight">\(G_\delta\)</span> sets), and countable unions of closed sets (<span class="math notranslate nohighlight">\(F_\sigma\)</span> sets).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="lecture-8-lebesgue-measurable-sets-measure">
+<h2>Lecture 8: Lebesgue Measurable Sets &amp; Measure<a class="headerlink" href="#lecture-8-lebesgue-measurable-sets-measure" title="Permalink to this heading">#</a></h2>
+<section id="caratheodory-s-condition">
+<h3>Carathéodory’s Condition<a class="headerlink" href="#caratheodory-s-condition" title="Permalink to this heading">#</a></h3>
+<p>To select the well-behaved subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we use Constantin Carathéodory’s slicing condition.</p>
+<p>A set <span class="math notranslate nohighlight">\(E \subseteq \mathbb{R}\)</span> is <strong>Lebesgue measurable</strong> if it splits any arbitrary “test set” <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> additively:</p>
+<div class="math notranslate nohighlight">
+\[\mu^*(A) = \mu^*(A \cap E) + \mu^*(A \cap E^c)\]</div>
+<p>The collection of all Lebesgue measurable sets forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra, denoted by <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>.</p>
+</section>
+<section id="the-lebesgue-measure-mu">
+<h3>The Lebesgue Measure (<span class="math notranslate nohighlight">\(\mu\)</span>)<a class="headerlink" href="#the-lebesgue-measure-mu" title="Permalink to this heading">#</a></h3>
+<p>When we restrict the outer measure <span class="math notranslate nohighlight">\(\mu^*\)</span> to the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, it is called the <strong>Lebesgue measure</strong> <span class="math notranslate nohighlight">\(\mu\)</span>. Unlike outer measure, the Lebesgue measure is <strong>countably additive</strong>:</p>
+<p>If <span class="math notranslate nohighlight">\(\{E_n\}_{n=1}^\infty\)</span> is a countable collection of pairwise disjoint measurable sets, then:</p>
+<div class="math notranslate nohighlight">
+\[\mu\left(\bigcup_{n=1}^\infty E_n\right) = \sum_{n=1}^\infty \mu(E_n)\]</div>
+<ul class="simple">
+<li><p><strong>Null Sets</strong>: A set <span class="math notranslate nohighlight">\(N\)</span> is a null set if <span class="math notranslate nohighlight">\(\mu^*(N) = 0\)</span>. Every subset of a null set is Lebesgue measurable (with measure 0), making the Lebesgue measure space complete.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="lecture-9-lebesgue-measurable-functions">
+<h2>Lecture 9: Lebesgue Measurable Functions<a class="headerlink" href="#lecture-9-lebesgue-measurable-functions" title="Permalink to this heading">#</a></h2>
+<p>In integration, we integrate functions. For a function to be integrable, it must map measurable sets to measurable sets.</p>
+<section id="definition-of-measurable-functions">
+<h3>Definition of Measurable Functions<a class="headerlink" href="#definition-of-measurable-functions" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\((X, \Sigma)\)</span> be a measurable space. A function <span class="math notranslate nohighlight">\(f: X \to \overline{\mathbb{R}}\)</span> (where <span class="math notranslate nohighlight">\(\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty, \infty\}\)</span>) is <strong>measurable</strong> if the preimage of every open interval is a measurable set:</p>
+<div class="math notranslate nohighlight">
+\[f^{-1}((a, \infty)) = \{x \in X \mid f(x) &gt; a\} \in \Sigma \quad \text{for all } a \in \mathbb{R}\]</div>
+<ul class="simple">
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is a sequence of measurable functions, then the functions <span class="math notranslate nohighlight">\(\inf f_n\)</span>, <span class="math notranslate nohighlight">\(\sup f_n\)</span>, <span class="math notranslate nohighlight">\(\liminf f_n\)</span>, and <span class="math notranslate nohighlight">\(\limsup f_n\)</span> are also measurable. If the pointwise limit <span class="math notranslate nohighlight">\(f(x) = \lim_{n \to \infty} f_n(x)\)</span> exists, then <span class="math notranslate nohighlight">\(f\)</span> is measurable.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="lecture-10-simple-functions-the-lebesgue-integral">
+<h2>Lecture 10: Simple Functions &amp; The Lebesgue Integral<a class="headerlink" href="#lecture-10-simple-functions-the-lebesgue-integral" title="Permalink to this heading">#</a></h2>
+<p>To construct the Lebesgue integral, we build it from the bottom up, starting with simple step-like functions.</p>
+<section id="simple-functions">
+<h3>Simple Functions<a class="headerlink" href="#simple-functions" title="Permalink to this heading">#</a></h3>
+<p>A <strong>simple function</strong> <span class="math notranslate nohighlight">\(\phi: X \to \mathbb{R}\)</span> is a real-valued function that takes only a finite number of distinct values. It can be written in its <strong>canonical representation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\phi(x) = \sum_{i=1}^n c_i \chi_{E_i}(x)\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_i\)</span> are distinct real numbers.</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_i = \{x \in X \mid \phi(x) = c_i\}\)</span> are pairwise disjoint measurable sets.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\chi_{E_i}\)</span> is the <strong>indicator function</strong> of <span class="math notranslate nohighlight">\(E_i\)</span> (<span class="math notranslate nohighlight">\(\chi_{E_i}(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x \in E_i\)</span>, and <span class="math notranslate nohighlight">\(0\)</span> otherwise).</p></li>
+</ul>
+</section>
+<section id="the-lebesgue-integral-of-simple-functions">
+<h3>The Lebesgue Integral of Simple Functions<a class="headerlink" href="#the-lebesgue-integral-of-simple-functions" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Lebesgue integral</strong> of a non-negative simple function <span class="math notranslate nohighlight">\(\phi\)</span> over a measurable set <span class="math notranslate nohighlight">\(E\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\int_{E} \phi \, d\mu = \sum_{i=1}^n c_i \mu(E_i \cap E)\]</div>
+<ul class="simple">
+<li><p><strong>Constructing the General Lebesgue Integral</strong>: For any non-negative measurable function <span class="math notranslate nohighlight">\(f\)</span>, its Lebesgue integral is defined as the supremum of the integrals of all simple functions bounded by <span class="math notranslate nohighlight">\(f\)</span>:
+$<span class="math notranslate nohighlight">\(\int_{E} f \, d\mu = \sup \left\{ \int_{E} \phi \, d\mu \mid 0 \le \phi \le f, \, \phi \text{ is simple} \right\}\)</span>$</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/measure_theory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../functional_analysis/intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Functional Analysis &amp; Operator Theory</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../probability/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Probability</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-part-2-outer-measure">Lecture 6 (Part 2): Outer Measure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-outer-measure">Definition of Outer Measure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-outer-measure">Properties of Outer Measure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-7-sigma-algebras-sigma-algebras">Lecture 7: Sigma Algebras (<span class="math notranslate nohighlight">\(\sigma\)</span>-algebras)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-a-sigma-algebra">Definition of a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-borel-sigma-algebra-mathcal-b-mathbb-r">The Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra (<span class="math notranslate nohighlight">\(\mathcal{B}(\mathbb{R})\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-8-lebesgue-measurable-sets-measure">Lecture 8: Lebesgue Measurable Sets &amp; Measure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caratheodory-s-condition">Carathéodory’s Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lebesgue-measure-mu">The Lebesgue Measure (<span class="math notranslate nohighlight">\(\mu\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-9-lebesgue-measurable-functions">Lecture 9: Lebesgue Measurable Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-measurable-functions">Definition of Measurable Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-10-simple-functions-the-lebesgue-integral">Lecture 10: Simple Functions &amp; The Lebesgue Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-functions">Simple Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lebesgue-integral-of-simple-functions">The Lebesgue Integral of Simple Functions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

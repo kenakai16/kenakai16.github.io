@@ -19,6 +19,11 @@ parts:
           - file: book/math_basic/Calculus
           - file: book/math_basic/Integration
 
+  - caption: Functional Analysis & Measure Theory
+    chapters:
+      - file: book/functional_analysis/intro
+      - file: book/measure_theory/intro
+
   - caption: Probability & Statistics
     chapters:
       - file: book/probability/intro
