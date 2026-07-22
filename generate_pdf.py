@@ -8,7 +8,7 @@ async def generate_pdf():
     os.system("jupyter-book build . --builder singlehtml")
 
     # Path to the build single HTML index
-    html_path = os.path.abspath("_build/html/index.html")
+    html_path = os.path.abspath("_build/singlehtml/index.html")
     pdf_path = os.path.abspath("book/book.pdf")
 
     if not os.path.exists(html_path):

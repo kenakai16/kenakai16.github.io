@@ -247,7 +247,7 @@ Perform a two-sample z-test for proportions to see if the green button performs 
 ```{admonition} Solution — Exercise 3
 :class: dropdown
 
-\`\`\`python
+```python
 from statsmodels.stats.proportion import proportions_ztest
 import numpy as np
 
@@ -258,5 +258,5 @@ nobs = np.array([1000, 1000]) # observations
 stat, pval = proportions_ztest(count, nobs, alternative='larger')
 print(f"Z-statistic: {stat:.4f}")
 print(f"P-value    : {pval:.5f}")
-\`\`\`
+```
 ```

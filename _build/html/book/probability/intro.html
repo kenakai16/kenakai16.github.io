@@ -205,6 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
@@ -245,9 +246,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
 <ul class="nav bd-sidenav">
@@ -709,17 +711,23 @@ Use <code class="docutils literal notranslate"><span class="pre">scipy.stats.bet
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>```python
-from scipy.stats import binom</p>
-<p>n = 15
-p = 0.7</p>
-<p class="rubric">1. Exactly 10 heads</p>
-<p>p_10 = binom.pmf(10, n, p)
-print(f”Exactly 10: {p_10:.6f}”)</p>
-<p class="rubric">2. 12 or more heads = 1 - P(&lt;= 11)</p>
-<p>p_12_plus = 1 - binom.cdf(11, n, p)
-print(f”12 or more: {p_12_plus:.6f}”)
-```</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">binom</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mf">0.7</span>
+
+<span class="c1"># 1. Exactly 10 heads</span>
+<span class="n">p_10</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exactly 10: </span><span class="si">{</span><span class="n">p_10</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. 12 or more heads = 1 - P(&lt;= 11)</span>
+<span class="n">p_12_plus</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">binom</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;12 or more: </span><span class="si">{</span><span class="n">p_12_plus</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </section>
 </section>

@@ -73,11 +73,12 @@ The content is organized into 7 key modules, guiding you from basic arithmetic t
 ### 🧠 Part 7: Deep Learning
 - **Neural Networks**: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.
 
-### 📊 Part 8: Data Analysis
-- **Exploratory Data Analysis (EDA)**: Data profiling, summarization, visualization, and outlier detection in python.
+### 📚 Part 8: Reference & Recommended Reading
+- **Citations & Reading**: Direct bibliography citations and our recommended textbook resources.
 
 ---
 
-## 🏁 Get Started
+## 📖 Table of Contents
 
-Choose any section from the sidebar or Table of Contents to begin exploring the mathematical foundations of Data Science!
+```{tableofcontents}
+```

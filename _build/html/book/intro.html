@@ -204,6 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization/convex_problems.html">Convex Optimization Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization/algorithms.html">Optimization Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
@@ -244,9 +245,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="deep_learning/intro.html">Deep Learning Foundations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Exploratory.html">Data Science Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommended_reading.html">Recommended Reading &amp; Resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
 <ul class="nav bd-sidenav">
@@ -423,10 +425,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-data-analysis">📊 Part 8: Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-reference-recommended-reading">📚 Part 8: Reference &amp; Recommended Reading</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">📖 Table of Contents</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -549,36 +553,81 @@ document.write(`
 <li><p><strong>Neural Networks</strong>: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.</p></li>
 </ul>
 </section>
-<section id="part-8-data-analysis">
-<h3>📊 Part 8: Data Analysis<a class="headerlink" href="#part-8-data-analysis" title="Permalink to this heading">#</a></h3>
+<section id="part-8-reference-recommended-reading">
+<h3>📚 Part 8: Reference &amp; Recommended Reading<a class="headerlink" href="#part-8-reference-recommended-reading" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Exploratory Data Analysis (EDA)</strong>: Data profiling, summarization, visualization, and outlier detection in python.</p></li>
+<li><p><strong>Citations &amp; Reading</strong>: Direct bibliography citations and our recommended textbook resources.</p></li>
 </ul>
 </section>
 </section>
 <hr class="docutils" />
-<section id="get-started">
-<h2>🏁 Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h2>
-<p>Choose any section from the sidebar or Table of Contents to begin exploring the mathematical foundations of Data Science!</p>
+<section id="table-of-contents">
+<h2>📖 Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/intro.html">Introduction</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/intro.html">Statistics</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="optimization/intro.html">Introduction to Optimization</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="topology/intro.html">Topology for Data Science</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html#unlabeled-data-example">Unlabeled data example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="approximation/intro.html">Approximation Theory</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="download_pdf.html">Download PDF Version</a></li>
+</ul>
+</div>
 </section>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -645,10 +694,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-data-analysis">📊 Part 8: Data Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-reference-recommended-reading">📚 Part 8: Reference &amp; Recommended Reading</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-started">🏁 Get Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">📖 Table of Contents</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
 </ul>
   </nav></div>
 

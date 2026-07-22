@@ -364,7 +364,7 @@ Use `scipy.integrate.quad` with a normal PDF to answer this.
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 
-\`\`\`python
+```python
 import numpy as np
 from scipy.integrate import quad
 
@@ -382,5 +382,5 @@ print(f"Riemann Sum (n=100): {riemann:.6f}")
 exact, _ = quad(f, 0, 2)
 print(f"scipy.quad result : {exact:.6f}")
 print(f"True answer       : 14")
-\`\`\`
+```
 ```

@@ -31,6 +31,7 @@ parts:
           - file: book/optimization/convex_sets_functions
           - file: book/optimization/convex_problems
           - file: book/optimization/duality
+          - file: book/optimization/gradient_descent
           - file: book/optimization/algorithms
           - file: book/optimization/combinatorial
 
@@ -65,9 +66,10 @@ parts:
     chapters:
       - file: book/deep_learning/intro
 
-  - caption: Data Analysis
+  - caption: Reference
     chapters:
-      - file: book/Exploratory
+      - file: book/references
+      - file: book/recommended_reading
 
   - caption: Download PDF
     chapters:

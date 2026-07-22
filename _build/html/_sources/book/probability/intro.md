@@ -248,7 +248,7 @@ Use `scipy.stats.beta` to find the probability that Variant B's true CTR is grea
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 
-\`\`\`python
+```python
 from scipy.stats import binom
 
 n = 15
@@ -261,5 +261,5 @@ print(f"Exactly 10: {p_10:.6f}")
 # 2. 12 or more heads = 1 - P(<= 11)
 p_12_plus = 1 - binom.cdf(11, n, p)
 print(f"12 or more: {p_12_plus:.6f}")
-\`\`\`
+```
 ```

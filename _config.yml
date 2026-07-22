@@ -5,6 +5,13 @@ logo: images/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg
 execute:
   execute_notebooks: 'off'
 
+exclude_patterns:
+  - '.agents/*'
+  - '**/AGENTS.md'
+  - '**/math_topics.md'
+  - '_build/*'
+  - 'book/book.pdf'
+
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib

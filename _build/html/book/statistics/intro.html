@@ -205,6 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
@@ -245,9 +246,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Analysis</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Exploratory.html">Data Science Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
 <ul class="nav bd-sidenav">
@@ -701,16 +703,21 @@ Perform a two-sample z-test for proportions to see if the green button performs 
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 3</p>
-<p>```python
-from statsmodels.stats.proportion import proportions_ztest
-import numpy as np</p>
-<p>count = np.array([130, 100]) # successes
-nobs = np.array([1000, 1000]) # observations</p>
-<p class="rubric">Perform z-test</p>
-<p>stat, pval = proportions_ztest(count, nobs, alternative=’larger’)
-print(f”Z-statistic: {stat:.4f}”)
-print(f”P-value    : {pval:.5f}”)
-```</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.stats.proportion</span><span class="w"> </span><span class="kn">import</span> <span class="n">proportions_ztest</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">130</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span> <span class="c1"># successes</span>
+<span class="n">nobs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span> <span class="c1"># observations</span>
+
+<span class="c1"># Perform z-test</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">pval</span> <span class="o">=</span> <span class="n">proportions_ztest</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">nobs</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;larger&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Z-statistic: </span><span class="si">{</span><span class="n">stat</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P-value    : </span><span class="si">{</span><span class="n">pval</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </section>
 </section>

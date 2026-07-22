@@ -1,6 +1,5 @@
 # Methodology for usage
-```{tableofcontents}
-```
+
 This chapter will give a recipe on how to tackle Machine learning problems
 ## 3 Step process
 
