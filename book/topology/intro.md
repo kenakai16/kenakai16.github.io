@@ -1,4 +1,4 @@
-# Topology for Data Science
+# Introduction
 
 Topology is the branch of mathematics that studies geometric properties and spatial relations that remain unaffected by the continuous change of shape or size of figures. Often described as **"rubber-sheet geometry,"** topology focuses on qualitative properties like connectivity, holes, and boundaries rather than quantitative measurements like distance, coordinates, or angles.
 

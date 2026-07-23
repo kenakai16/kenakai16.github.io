@@ -187,10 +187,4 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 *   **Overview**: The definitive reference for computer vision algorithms. It covers image formation, processing, feature detection, camera geometry, 3D reconstruction, and modern deep learning-based vision systems.
 *   **Why Read It?**: An essential read for understanding spatial geometry, coordinate transforms, and modern visual perception algorithms in robotics and image processing.
 
----
-
-## Academic References & Papers
-
-For readers interested in the formal mathematical proofs and research papers cited throughout this book (such as Chris Holdgraf's cognitive electrophysiology models or Leonhard Euler's original papers), please visit our dedicated [References Page](references.md).
-
 </div>

@@ -73,6 +73,126 @@ print(f"\nDeterminant of A: {det_A:.4f}")
 
 ---
 
+## 5. Matrix Diagonalization
+
+Matrix Diagonalization is one of the most important concepts in Linear Algebra. It allows us to decompose a square matrix into a simpler diagonal form, making complex matrix operations (such as computing matrix powers) extremely fast and computationally efficient.
+
+### Definition of Diagonalization
+Let $A$ be an $n \times n$ square matrix. We say $A$ is **diagonalizable** if there exists an invertible matrix $P$ and a diagonal matrix $D$ such that:
+
+$$A = PDP^{-1}$$
+
+equivalently, $P^{-1}AP = D$.
+
+*   **$D$ (Diagonal Matrix)**: A matrix whose off-diagonal entries are all zero. The diagonal entries of $D$ are the **eigenvalues** of $A$.
+*   **$P$ (Change of Basis Matrix)**: A matrix whose columns are the **eigenvectors** of $A$ corresponding to the eigenvalues in $D$.
+
+### Eigenvalues and Eigenvectors
+Before diagonalizing a matrix, we must find its eigenvalues and eigenvectors:
+*   **Eigenvalues ($\lambda$)**: The scalars $\lambda$ that satisfy the characteristic equation:
+    $$\det(A - \lambda I) = 0$$
+    where $I$ is the identity matrix of the same size.
+*   **Eigenvectors ($v$)**: The non-zero vectors $v$ that satisfy:
+    $$(A - \lambda I)v = 0$$
+
+### Conditions for Diagonalizability
+An $n \times n$ matrix $A$ is diagonalizable if and only if it has **$n$ linearly independent eigenvectors**.
+*   **Distinct Eigenvalues**: If $A$ has $n$ distinct eigenvalues, it is guaranteed to be diagonalizable.
+*   **Repeated Eigenvalues**: If eigenvalues are repeated (multiplicity $> 1$), we must compare:
+    *   **Algebraic Multiplicity**: The number of times $\lambda$ appears as a root of the characteristic polynomial.
+    *   **Geometric Multiplicity**: The number of linearly independent eigenvectors associated with $\lambda$ (the dimension of the eigenspace).
+    *   **Theorem**: $A$ is diagonalizable if and only if the algebraic multiplicity equals the geometric multiplicity for every eigenvalue.
+
+---
+
+### Step-by-Step Diagonalization Process
+
+1.  **Find the Eigenvalues**: Solve the polynomial equation $\det(A - \lambda I) = 0$ for $\lambda$.
+2.  **Find the Eigenvectors**: For each eigenvalue $\lambda_i$, solve the linear system $(A - \lambda_i I)v = 0$.
+3.  **Check Independence**: Verify that the total number of linearly independent eigenvectors is $n$.
+4.  **Form $P$ and $D$**:
+    *   Place the eigenvectors as columns in $P$.
+    *   Place the corresponding eigenvalues along the diagonal of $D$.
+    *   *Important*: The order of eigenvalues in $D$ must match the order of eigenvectors in $P$.
+
+---
+
+### Numerical Example
+Let us diagonalize the matrix:
+
+$$A = \begin{pmatrix} 4 & 1 \\ 2 & 3 \end{pmatrix}$$
+
+#### Step 1: Find Eigenvalues
+We compute the characteristic determinant:
+
+$$\det(A - \lambda I) = \det \begin{pmatrix} 4-\lambda & 1 \\ 2 & 3-\lambda \end{pmatrix} = (4-\lambda)(3-\lambda) - 2 = \lambda^2 - 7\lambda + 10 = 0$$
+
+Solving the quadratic equation gives two distinct eigenvalues:
+
+$$\lambda_1 = 5, \quad \lambda_2 = 2$$
+
+Since the eigenvalues are distinct, $A$ is diagonalizable.
+
+#### Step 2: Find Eigenvectors
+*   **For $\lambda_1 = 5$**: Solve $(A - 5I)v = 0$:
+    $$\begin{pmatrix} -1 & 1 \\ 2 & -2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies -x + y = 0 \implies x = y$$
+    Choosing $x = 1$, we obtain the eigenvector:
+    $$v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$$
+
+*   **For $\lambda_2 = 2$**: Solve $(A - 2I)v = 0$:
+    $$\begin{pmatrix} 2 & 1 \\ 2 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies 2x + y = 0 \implies y = -2x$$
+    Choosing $x = 1$, we obtain the eigenvector:
+    $$v_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}$$
+
+#### Step 3: Form $P$ and $D$
+We stack $v_1$ and $v_2$ as columns to form $P$, and place $\lambda_1$ and $\lambda_2$ on the diagonal of $D$:
+
+$$P = \begin{pmatrix} 1 & 1 \\ 1 & -2 \end{pmatrix}, \quad D = \begin{pmatrix} 5 & 0 \\ 0 & 2 \end{pmatrix}$$
+
+Thus, $A$ is diagonalized as $A = PDP^{-1}$.
+
+---
+
+### Key Applications
+1.  **Computing Matrix Powers ($A^k$)**:
+    Multiplying a matrix by itself $k$ times is computationally expensive. However, using diagonalization:
+    $$A^k = (PDP^{-1})^k = P D^k P^{-1}$$
+    Since $D$ is diagonal, $D^k$ is computed instantly by raising its diagonal entries to the power of $k$:
+    $$D^k = \begin{pmatrix} 5^k & 0 \\ 0 & 2^k \end{pmatrix}$$
+2.  **Machine Learning Foundations**:
+    Diagonalization and eigendecomposition form the mathematical backbone of **Principal Component Analysis (PCA)**, which is used for dimensionality reduction and feature extraction in high-dimensional datasets.
+
+---
+
+### Python Implementation with NumPy
+
+```python
+import numpy as np
+
+# Define the matrix
+A = np.array([[4, 1], [2, 3]])
+
+# Compute eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("Eigenvalues:")
+print(eigenvalues)
+
+print("\nEigenvectors (as columns):")
+print(eigenvectors)
+
+# Reconstruct A from P, D, P^-1 to verify
+P = eigenvectors
+D = np.diag(eigenvalues)
+P_inv = np.linalg.inv(P)
+
+A_reconstructed = P @ D @ P_inv
+print("\nReconstructed Matrix A:")
+print(A_reconstructed)
+```
+
+---
+
 ## Exercises
 
 ```{admonition} Exercise 1

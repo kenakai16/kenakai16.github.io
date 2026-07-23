@@ -4,25 +4,19 @@ parts:
   - caption: Basic Math and Calculus Review
     chapters:
       - file: book/math_basic/intro
-        sections:
-          - file: book/math_basic/Number
-          - file: book/math_basic/Fractions
-          - file: book/math_basic/Decimals
-          - file: book/math_basic/OrderOfOperations
-          - file: book/math_basic/Variables
-          - file: book/math_basic/Functions
-          - file: book/math_basic/Curvilinear
-          - file: book/math_basic/Summations
-          - file: book/math_basic/Exponents
-          - file: book/math_basic/Logarithms
-          - file: book/math_basic/LinearAlgebra
-          - file: book/math_basic/Calculus
-          - file: book/math_basic/Integration
-
-  - caption: Functional Analysis & Measure Theory
-    chapters:
-      - file: book/functional_analysis/intro
-      - file: book/measure_theory/intro
+      - file: book/math_basic/Number
+      - file: book/math_basic/Fractions
+      - file: book/math_basic/Decimals
+      - file: book/math_basic/OrderOfOperations
+      - file: book/math_basic/Variables
+      - file: book/math_basic/Functions
+      - file: book/math_basic/Curvilinear
+      - file: book/math_basic/Summations
+      - file: book/math_basic/Exponents
+      - file: book/math_basic/Logarithms
+      - file: book/math_basic/LinearAlgebra
+      - file: book/math_basic/Calculus
+      - file: book/math_basic/Integration
 
   - caption: Probability & Statistics
     chapters:
@@ -32,40 +26,40 @@ parts:
   - caption: Optimization
     chapters:
       - file: book/optimization/intro
-        sections:
-          - file: book/optimization/convex_sets_functions
-          - file: book/optimization/convex_problems
-          - file: book/optimization/duality
-          - file: book/optimization/gradient_descent
-          - file: book/optimization/algorithms
-          - file: book/optimization/combinatorial
+      - file: book/optimization/convex_sets_functions
+      - file: book/optimization/convex_problems
+      - file: book/optimization/duality
+      - file: book/optimization/gradient_descent
+      - file: book/optimization/algorithms
+      - file: book/optimization/combinatorial
+
+  - caption: Functional Analysis & Measure Theory
+    chapters:
+      - file: book/functional_analysis/intro
+      - file: book/measure_theory/intro
 
   - caption: Topology
     chapters:
       - file: book/topology/intro
-        sections:
-          - file: book/topology/spaces
-          - file: book/topology/manifolds
-          - file: book/topology/tda
-          - file: book/topology/advanced_tda
-          - file: book/topology/surfaces
-          - file: book/topology/applications
-
-  - caption: Machine Learning
-    chapters:
-      - file: book/machine_learning/intro
-        sections:
-          - file: book/machine_learning/Linear Algebra
-          - file: book/machine_learning/Methodology for usage
-          - file: book/machine_learning/Supervised Learning
-          - file: book/machine_learning/Unsupervised Learning
-          - file: book/machine_learning/Distributed Learning
+      - file: book/topology/spaces
+      - file: book/topology/manifolds
+      - file: book/topology/tda
+      - file: book/topology/advanced_tda
+      - file: book/topology/surfaces
+      - file: book/topology/applications
 
   - caption: Approximation Theory
     chapters:
       - file: book/approximation/intro
-        sections:
-          - file: book/approximation/fitting
+      - file: book/approximation/fitting
+
+  - caption: Machine Learning
+    chapters:
+      - file: book/machine_learning/intro
+      - file: book/machine_learning/Methodology for usage
+      - file: book/machine_learning/Supervised Learning
+      - file: book/machine_learning/Unsupervised Learning
+      - file: book/machine_learning/Distributed Learning
 
   - caption: Deep Learning
     chapters:
@@ -73,7 +67,6 @@ parts:
 
   - caption: Reference
     chapters:
-      - file: book/references
       - file: book/recommended_reading
 
   - caption: Download PDF

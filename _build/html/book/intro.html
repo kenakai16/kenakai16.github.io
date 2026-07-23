@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -104,8 +106,8 @@ const thebe_selector_output = ".output, .cell_output"
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -166,37 +168,22 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
-                    Math for Data Science
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="math_basic/intro.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Number.html">Number</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Fractions.html">Fractions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/OrderOfOperations.html">Order of Operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Variables.html">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Functions.html">Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Curvilinear.html">Curvilinear Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Summations.html">Summations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Exponents.html">Exponents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math_basic/Integration.html">Integration</a></li>
-</ul>
-</details></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Integration.html">Integration</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -205,46 +192,42 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="optimization/intro.html">Introduction to Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization/convex_problems.html">Convex Optimization Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization/duality.html">Duality &amp; KKT Conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization/algorithms.html">Optimization Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
-</details></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="topology/intro.html">Topology for Data Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="topology/applications.html">Interdisciplinary Applications of Topology</a></li>
-</ul>
-</details></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/applications.html">Interdisciplinary Applications of Topology</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="approximation/intro.html">Approximation Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="approximation/fitting.html">Approximation and Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="approximation/fitting.html">Approximation and Fitting</a></li>
 </ul>
-</details></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
 <ul class="nav bd-sidenav">
@@ -252,7 +235,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_reading.html">Recommended Reading &amp; Resources</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
@@ -299,21 +281,6 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-<a href="https://github.com/kenakai16/kenakai16.github.io" target="_blank"
-   class="btn btn-sm btn-source-repository-button"
-   title="Source repository"
-   data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-
-</a>
-
 
 
 
@@ -423,14 +390,15 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-topology">🌐 Part 2: Topology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-probability-statistics">🎲 Part 3: Probability &amp; Statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-optimization">⚡ Part 4: Optimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus">📖 Part 1: Basic Math &amp; Calculus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-functional-analysis-measure-theory">🌀 Part 4: Functional Analysis &amp; Measure Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-topology">🌐 Part 5: Topology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-reference-recommended-reading">📚 Part 8: Reference &amp; Recommended Reading</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-machine-learning">🤖 Part 7: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-deep-learning">🧠 Part 8: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-9-recommended-reading">📚 Part 9: Recommended Reading</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">📖 Table of Contents</a><ul class="nav section-nav flex-column">
@@ -449,6 +417,114 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="math-for-data-science">
 <h1>Math for Data Science<a class="headerlink" href="#math-for-data-science" title="Permalink to this heading">#</a></h1>
+<div class="book-cover-container">
+  <div class="book-cover-title">Math for Data Science</div>
+  <div class="book-cover-subtitle">A Comprehensive Reference & Learning Guide to Advanced Mathematics, Machine Learning, and Deep Learning</div>
+  <div class="book-cover-author">Huỳnh Trung Nghĩa (NghiaHoang)</div>
+</div>
+<style>
+  /* Hide default H1 heading to show the styled cover banner instead */
+  #math-for-data-science > h1 {
+    display: none !important;
+  }
+
+  .book-cover-container {
+    background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
+    color: #ffffff;
+    padding: 70px 40px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  .book-cover-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .book-cover-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    background: linear-gradient(to right, #38bdf8, #818cf8, #fb923c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .book-cover-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .book-cover-author {
+    font-size: 1.1rem;
+    color: #38bdf8;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  @media print {
+    /* Hide navigation sidebars, headers, footers, and buttons */
+    .bd-sidebar,
+    .bd-sidebar-primary,
+    .bd-sidebar-secondary,
+    .bd-toc,
+    .bd-header,
+    .bd-footer,
+    .topbar,
+    .prev-next-area,
+    .bd-header-article,
+    #site-navigation,
+    footer {
+      display: none !important;
+    }
+
+    /* Expand main content container to full page width */
+    main,
+    .bd-content,
+    .bd-main,
+    #main-content,
+    .bd-article-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .book-cover-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .book-cover-title {
+      font-size: 4.5rem;
+    }
+    .book-cover-subtitle {
+      font-size: 1.5rem;
+    }
+  }
+</style>
 <p>Welcome to the <strong>Math for Data Science</strong> blog. This resource is a curated reference and learning guide on the core mathematical foundations of Data Science, Machine Learning, and Deep Learning, authored by <strong>Huỳnh Trung Nghĩa</strong>.</p>
 <hr class="docutils" />
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -509,41 +585,42 @@ document.write(`
 <hr class="docutils" />
 <section id="blog-map-chapters">
 <h2>🗺️ Blog Map &amp; Chapters<a class="headerlink" href="#blog-map-chapters" title="Permalink to this heading">#</a></h2>
-<p>The content is organized into 7 key modules, guiding you from basic arithmetic to advanced machine learning foundations:</p>
-<section id="part-1-basic-math-calculus-review">
-<h3>📖 Part 1: Basic Math &amp; Calculus Review<a class="headerlink" href="#part-1-basic-math-calculus-review" title="Permalink to this heading">#</a></h3>
+<p>The content is organized into 9 key modules, guiding you from basic arithmetic to advanced machine learning foundations:</p>
+<section id="part-1-basic-math-calculus">
+<h3>📖 Part 1: Basic Math &amp; Calculus<a class="headerlink" href="#part-1-basic-math-calculus" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fundamentals</strong>: Number systems, fractions, decimals, order of operations, and algebraic variables.</p></li>
 <li><p><strong>Functions &amp; Graphs</strong>: Linear and curvilinear functions, summations, exponents, and logarithms (featuring Euler’s number and the Rule of 72).</p></li>
 <li><p><strong>Advanced Core</strong>: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.</p></li>
 </ul>
 </section>
-<section id="part-2-topology">
-<h3>🌐 Part 2: Topology<a class="headerlink" href="#part-2-topology" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>General Topology</strong>: Metric spaces, open sets, neighborhoods, compactness, and connectedness.</p></li>
-<li><p><strong>Manifolds</strong>: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).</p></li>
-<li><p><strong>Topological Data Analysis (TDA)</strong>: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).</p></li>
-</ul>
-</section>
-<section id="part-3-probability-statistics">
-<h3>🎲 Part 3: Probability &amp; Statistics<a class="headerlink" href="#part-3-probability-statistics" title="Permalink to this heading">#</a></h3>
+<section id="part-2-probability-statistics">
+<h3>🎲 Part 2: Probability &amp; Statistics<a class="headerlink" href="#part-2-probability-statistics" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Probability</strong>: Core rules, joint and union probability, conditional probability, Bayes’ Theorem, and probability distributions (Binomial, Beta).</p></li>
 <li><p><strong>Statistics</strong>: Mean, median, mode, variance, standard deviation, and key statistical concepts.</p></li>
 </ul>
 </section>
-<section id="part-4-optimization">
-<h3>⚡ Part 4: Optimization<a class="headerlink" href="#part-4-optimization" title="Permalink to this heading">#</a></h3>
+<section id="part-3-optimization">
+<h3>⚡ Part 3: Optimization<a class="headerlink" href="#part-3-optimization" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Convexity</strong>: Convex sets, convex functions, and convex optimization problems.</p></li>
 <li><p><strong>Theory &amp; Algorithms</strong>: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.</p></li>
 </ul>
 </section>
-<section id="part-5-machine-learning">
-<h3>🤖 Part 5: Machine Learning<a class="headerlink" href="#part-5-machine-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-4-functional-analysis-measure-theory">
+<h3>🌀 Part 4: Functional Analysis &amp; Measure Theory<a class="headerlink" href="#part-4-functional-analysis-measure-theory" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Math Foundations</strong>: Linear algebra for ML, practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.</p></li>
+<li><p><strong>Functional Analysis</strong>: Banach spaces, bounded linear operators, quotient spaces, Baire Category Theorem, and Hahn-Banach Theorem.</p></li>
+<li><p><strong>Measure Theory</strong>: Outer measure, <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras, Lebesgue measure, measurable functions, and simple functions.</p></li>
+</ul>
+</section>
+<section id="part-5-topology">
+<h3>🌐 Part 5: Topology<a class="headerlink" href="#part-5-topology" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>General Topology</strong>: Metric spaces, open sets, neighborhoods, compactness, and connectedness.</p></li>
+<li><p><strong>Manifolds</strong>: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).</p></li>
+<li><p><strong>Topological Data Analysis (TDA)</strong>: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).</p></li>
 </ul>
 </section>
 <section id="part-6-approximation-theory">
@@ -552,16 +629,22 @@ document.write(`
 <li><p><strong>Fitting</strong>: Curve fitting, regression analysis, interpolation, and approximating continuous functions.</p></li>
 </ul>
 </section>
-<section id="part-7-deep-learning">
-<h3>🧠 Part 7: Deep Learning<a class="headerlink" href="#part-7-deep-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-7-machine-learning">
+<h3>🤖 Part 7: Machine Learning<a class="headerlink" href="#part-7-machine-learning" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Math Foundations</strong>: Practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.</p></li>
+</ul>
+</section>
+<section id="part-8-deep-learning">
+<h3>🧠 Part 8: Deep Learning<a class="headerlink" href="#part-8-deep-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Neural Networks</strong>: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.</p></li>
 </ul>
 </section>
-<section id="part-8-reference-recommended-reading">
-<h3>📚 Part 8: Reference &amp; Recommended Reading<a class="headerlink" href="#part-8-reference-recommended-reading" title="Permalink to this heading">#</a></h3>
+<section id="part-9-recommended-reading">
+<h3>📚 Part 9: Recommended Reading<a class="headerlink" href="#part-9-recommended-reading" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Citations &amp; Reading</strong>: Direct bibliography citations and our recommended textbook resources.</p></li>
+<li><p><strong>Reading</strong>: Our curated list of recommended textbook resources for mathematics and AI.</p></li>
 </ul>
 </section>
 </section>
@@ -572,13 +655,19 @@ document.write(`
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="math_basic/intro.html">Introduction</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math_basic/Integration.html">Integration</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -592,32 +681,49 @@ document.write(`
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="topology/intro.html">Topology for Data Science</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Linear%20Algebra.html">Linear Algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html#unlabeled-data-example">Unlabeled data example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topology/applications.html">Interdisciplinary Applications of Topology</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Unsupervised%20Learning.html#unlabeled-data-example">Unlabeled data example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -629,7 +735,6 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_reading.html">Recommended Reading &amp; Resources</a></li>
 </ul>
 </div>
@@ -699,14 +804,15 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-textbooks">📚 Reference Textbooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-map-chapters">🗺️ Blog Map &amp; Chapters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus-review">📖 Part 1: Basic Math &amp; Calculus Review</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-topology">🌐 Part 2: Topology</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-probability-statistics">🎲 Part 3: Probability &amp; Statistics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-optimization">⚡ Part 4: Optimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-machine-learning">🤖 Part 5: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-basic-math-calculus">📖 Part 1: Basic Math &amp; Calculus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-probability-statistics">🎲 Part 2: Probability &amp; Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-optimization">⚡ Part 3: Optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-functional-analysis-measure-theory">🌀 Part 4: Functional Analysis &amp; Measure Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-topology">🌐 Part 5: Topology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-approximation-theory">📈 Part 6: Approximation Theory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-deep-learning">🧠 Part 7: Deep Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-reference-recommended-reading">📚 Part 8: Reference &amp; Recommended Reading</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-machine-learning">🤖 Part 7: Machine Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-deep-learning">🧠 Part 8: Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-9-recommended-reading">📚 Part 9: Recommended Reading</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">📖 Table of Contents</a><ul class="nav section-nav flex-column">
