@@ -9,11 +9,13 @@ Decimals and percentages are alternative ways of expressing fractions and propor
 A decimal is a fraction whose denominator is a power of ten (10, 100, 1000, etc.), written using a decimal point.
 
 For example:
+
 $$\frac{7}{10} = 0.7$$
 $$\frac{125}{1000} = 0.125$$
 
 ### Repeating Decimals
 Some fractions produce infinitely repeating decimals:
+
 $$\frac{1}{3} = 0.3333\dots$$
 
 ---
@@ -54,7 +56,9 @@ A model correctly classified 45 out of 60 test images. What is the classificatio
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 Compute the proportion:
+
 $$\text{Accuracy} = \frac{45}{60} = 0.75$$
 Convert to percentage:
+
 $$0.75 \times 100\% = 75\%$$
 ```

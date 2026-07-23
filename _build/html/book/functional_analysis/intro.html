@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -513,11 +518,13 @@ document.write(`
 <section id="uniform-boundedness-principle-banach-steinhaus-theorem">
 <h3>Uniform Boundedness Principle (Banach-Steinhaus Theorem)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus-theorem" title="Permalink to this heading">#</a></h3>
 <p>Using Baire’s theorem, we can prove that pointwise boundedness of a family of operators implies uniform boundedness.</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a Banach space and <span class="math notranslate nohighlight">\(Y\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq B(X, Y)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(x \in X\)</span>, there exists <span class="math notranslate nohighlight">\(C_x \ge 0\)</span> such that:
-$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span><span class="math notranslate nohighlight">\(
-then the operators are uniformly bounded:
-\)</span><span class="math notranslate nohighlight">\(\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\)</span>$</p></li>
+$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span>$
+then the operators are uniformly bounded:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\]</div>
+</li>
 </ul>
 </section>
 </section>
@@ -558,11 +565,13 @@ then the operators are uniformly bounded:
 <section id="the-hahn-banach-extension-theorem">
 <h3>The Hahn-Banach Extension Theorem<a class="headerlink" href="#the-hahn-banach-extension-theorem" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space and <span class="math notranslate nohighlight">\(p: X \to \mathbb{R}\)</span> be a sublinear functional (satisfying <span class="math notranslate nohighlight">\(p(x+y) \le p(x) + p(y)\)</span> and <span class="math notranslate nohighlight">\(p(\alpha x) = \alpha p(x)\)</span> for <span class="math notranslate nohighlight">\(\alpha \ge 0\)</span>).</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Theorem (Real Vector Spaces)</strong>: Let <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a subspace, and <span class="math notranslate nohighlight">\(f: M \to \mathbb{R}\)</span> be a linear functional bounded by <span class="math notranslate nohighlight">\(p\)</span>:
 $<span class="math notranslate nohighlight">\(f(x) \le p(x) \quad \text{for all } x \in M\)</span><span class="math notranslate nohighlight">\(
-Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M<span class="math notranslate nohighlight">\() such that:
-\)</span><span class="math notranslate nohighlight">\(F(x) \le p(x) \quad \text{for all } x \in X\)</span>$</p></li>
+Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M$) such that:</p>
+<div class="math notranslate nohighlight">
+\[F(x) \le p(x) \quad \text{for all } x \in X\]</div>
+</li>
 <li><p><strong>Normed Spaces Corollary</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a subspace of a normed space <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(f \in M^*\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a functional <span class="math notranslate nohighlight">\(F \in X^*\)</span> such that the norms are preserved:
 $<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>$</p></li>
 </ul>

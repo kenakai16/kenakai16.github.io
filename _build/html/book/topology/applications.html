@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -425,8 +430,9 @@ document.write(`
 <ul>
 <li><p><strong>Relative Homology (<span class="math notranslate nohighlight">\(H_k(X, A)\)</span>)</strong>: Given a topological space <span class="math notranslate nohighlight">\(X\)</span> and a subspace <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, relative homology group <span class="math notranslate nohighlight">\(H_k(X, A)\)</span> counts the number of <span class="math notranslate nohighlight">\(k\)</span>-dimensional holes in <span class="math notranslate nohighlight">\(X\)</span> that are <em>not</em> contained within <span class="math notranslate nohighlight">\(A\)</span>. In essence, it treats the entire subspace <span class="math notranslate nohighlight">\(A\)</span> as a single, connected component, modding out any cycles that lie entirely within <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 <li><p><strong>The de Silva–Ghrist Theorem</strong>: Let <span class="math notranslate nohighlight">\(D \subseteq \mathbb{R}^2\)</span> be a bounded target domain monitored by sensors. We represent the sensors as a set of nodes <span class="math notranslate nohighlight">\(X\)</span> and construct a Vietoris-Rips complex <span class="math notranslate nohighlight">\(R(X)\)</span> based on their communication range. Let <span class="math notranslate nohighlight">\(R_{\partial}\)</span> be the subcomplex representing sensors near the boundary of the domain.</p>
-<p>De Silva and Ghrist proved that if the relative homology mapping is non-trivial:
-$<span class="math notranslate nohighlight">\(H_2(R(X), R_{\partial}) \neq 0\)</span>$</p>
+<p>De Silva and Ghrist proved that if the relative homology mapping is non-trivial:</p>
+<div class="math notranslate nohighlight">
+\[H_2(R(X), R_{\partial}) \neq 0\]</div>
 <p>then it mathematically guarantees that the union of the sensors’ coverage regions completely covers the domain <span class="math notranslate nohighlight">\(D\)</span>, leaving <strong>no blind spots</strong>. This verification requires no coordinate coordinates, only the network’s connectivity data!</p>
 </li>
 </ul>

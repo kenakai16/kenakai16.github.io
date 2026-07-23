@@ -29,6 +29,7 @@ Using coordinates or geometric maps to verify coverage is highly susceptible to 
 - **The de Silva–Ghrist Theorem**: Let $D \subseteq \mathbb{R}^2$ be a bounded target domain monitored by sensors. We represent the sensors as a set of nodes $X$ and construct a Vietoris-Rips complex $R(X)$ based on their communication range. Let $R_{\partial}$ be the subcomplex representing sensors near the boundary of the domain. 
   
   De Silva and Ghrist proved that if the relative homology mapping is non-trivial:
+
   $$H_2(R(X), R_{\partial}) \neq 0$$
   
   then it mathematically guarantees that the union of the sensors' coverage regions completely covers the domain $D$, leaving **no blind spots**. This verification requires no coordinate coordinates, only the network's connectivity data!

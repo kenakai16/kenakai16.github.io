@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -471,8 +476,9 @@ document.write(`
 <p>For instance, when <span class="math notranslate nohighlight">\(x\)</span> is very small, we can approximate <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> using the first term of its Taylor series:</p>
 <div class="math notranslate nohighlight">
 \[\ln(1 + x) \approx x\]</div>
-<p>Similarly:
-$<span class="math notranslate nohighlight">\(e^x \approx 1 + x \quad (\text{for } x \approx 0)\)</span>$</p>
+<p>Similarly:</p>
+<div class="math notranslate nohighlight">
+\[e^x \approx 1 + x \quad (\text{for } x \approx 0)\]</div>
 <section id="python-example-log-approximation">
 <h3>Python Example (Log Approximation)<a class="headerlink" href="#python-example-log-approximation" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -531,16 +537,21 @@ $<span class="math notranslate nohighlight">\(e^x \approx 1 + x \quad (\text{for
 <li><p><span class="math notranslate nohighlight">\(f''(x) = -\frac{1}{(1+x)^2} \implies f''(0) = -1\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f'''(x) = \frac{2}{(1+x)^3} \implies f'''(0) = 2\)</span></p></li>
 </ul>
-<p>Substitute into the Taylor formula:
-$<span class="math notranslate nohighlight">\(f(x) \approx 0 + 1(x) + \frac{-1}{2!}x^2 + \frac{2}{3!}x^3 = x - \frac{x^2}{2} + \frac{x^3}{3}\)</span>$</p>
+<p>Substitute into the Taylor formula:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx 0 + 1(x) + \frac{-1}{2!}x^2 + \frac{2}{3!}x^3 = x - \frac{x^2}{2} + \frac{x^3}{3}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 2</p>
-<p>Using the recurrence relation for <span class="math notranslate nohighlight">\(n=3\)</span>:
-$<span class="math notranslate nohighlight">\(T_4(x) = 2x T_3(x) - T_2(x)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 2x(4x^3 - 3x) - (2x^2 - 1)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 8x^4 - 6x^2 - 2x^2 + 1\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 8x^4 - 8x^2 + 1\)</span>$</p>
+<p>Using the recurrence relation for <span class="math notranslate nohighlight">\(n=3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 2x T_3(x) - T_2(x)\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 2x(4x^3 - 3x) - (2x^2 - 1)\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 8x^4 - 6x^2 - 2x^2 + 1\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 8x^4 - 8x^2 + 1\]</div>
 </div>
 </section>
 </section>

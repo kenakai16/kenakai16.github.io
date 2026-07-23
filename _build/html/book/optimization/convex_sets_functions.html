@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -400,12 +405,22 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-applications">Probability Applications:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-jensen-s-inequality">Modified Jensen’s Inequality</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-quasiconvexity">First-order Condition for Quasiconvexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-sums">Key Property: Sums</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-log-concavity">Second-order Condition for Log-Concavity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-integration">Properties and Integration</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-matrix-square">Example: Matrix Square</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
@@ -480,8 +495,9 @@ document.write(`
 <p>The conjugate function <span class="math notranslate nohighlight">\(f^*\)</span> is <strong>always convex</strong>, even if the original function <span class="math notranslate nohighlight">\(f\)</span> is not convex, because it is the pointwise supremum of a family of affine functions of <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <section id="example">
 <h4>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
-<p>For <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2} x^T Q x\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is symmetric positive definite:
-$<span class="math notranslate nohighlight">\(f^*(y) = \frac{1}{2} y^T Q^{-1} y\)</span>$</p>
+<p>For <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2} x^T Q x\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is symmetric positive definite:</p>
+<div class="math notranslate nohighlight">
+\[f^*(y) = \frac{1}{2} y^T Q^{-1} y\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -490,22 +506,85 @@ $<span class="math notranslate nohighlight">\(f^*(y) = \frac{1}{2} y^T Q^{-1} y\
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>quasiconvex</strong> (or unimodal) if its domain and all its <strong>sublevel sets</strong> are convex:</p>
 <div class="math notranslate nohighlight">
 \[S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}\]</div>
-<p>For a quasiconvex function, any point between two points cannot have a value higher than the maximum of the two points:
-$<span class="math notranslate nohighlight">\(f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))\)</span>$</p>
-<ul class="simple">
-<li><p><em>Example</em>: <span class="math notranslate nohighlight">\(f(x) = \sqrt{|x|}\)</span> is quasiconvex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but not convex).</p></li>
-</ul>
+<section id="modified-jensen-s-inequality">
+<h4>Modified Jensen’s Inequality<a class="headerlink" href="#modified-jensen-s-inequality" title="Permalink to this heading">#</a></h4>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is quasiconvex if and only if its domain is convex and for any <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))\]</div>
+</section>
+<section id="first-order-condition-for-quasiconvexity">
+<h4>First-order Condition for Quasiconvexity<a class="headerlink" href="#first-order-condition-for-quasiconvexity" title="Permalink to this heading">#</a></h4>
+<p>A differentiable function <span class="math notranslate nohighlight">\(f\)</span> with convex domain is quasiconvex if and only if:</p>
+<div class="math notranslate nohighlight">
+\[f(y) \leq f(x) \implies \nabla f(x)^T (y-x) \leq 0 \quad \text{for all } x, y \in \text{dom } f\]</div>
+<p>This means that if we move in a direction that decreases the function value, the directional derivative must be negative or zero.</p>
+</section>
+<section id="key-property-sums">
+<h4>Key Property: Sums<a class="headerlink" href="#key-property-sums" title="Permalink to this heading">#</a></h4>
+<p>Unlike convex functions, the sum of two quasiconvex functions is <strong>not necessarily quasiconvex</strong>. For example, the functions:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^3 \quad \text{and} \quad g(x) = -x\]</div>
+<p>are both quasiconvex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, but their sum:</p>
+<div class="math notranslate nohighlight">
+\[(f+g)(x) = x^3 - x\]</div>
+<p>is not (it is not unimodal and has multiple local extrema on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>).</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="log-concave-and-log-convex-functions-3-5">
 <h3>5. Log-Concave and Log-Convex Functions (3.5)<a class="headerlink" href="#log-concave-and-log-convex-functions-3-5" title="Permalink to this heading">#</a></h3>
-<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function.
-Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>log-convex</strong> if <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is convex.</p>
-<section id="probability-applications">
-<h4>Probability Applications:<a class="headerlink" href="#probability-applications" title="Permalink to this heading">#</a></h4>
-<p>Many common probability density functions (PDFs) are log-concave, which makes maximum likelihood estimation (MLE) solvable as a convex optimization problem:</p>
+<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and the logarithm <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function:</p>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \geq f(x)^\theta f(y)^{1-\theta} \quad \text{for } 0 \leq \theta \leq 1\]</div>
+<p>Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>log-convex</strong> if <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is convex.</p>
+<section id="second-order-condition-for-log-concavity">
+<h4>Second-order Condition for Log-Concavity<a class="headerlink" href="#second-order-condition-for-log-concavity" title="Permalink to this heading">#</a></h4>
+<p>A twice-differentiable function <span class="math notranslate nohighlight">\(f\)</span> with convex domain is log-concave if and only if:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \nabla^2 f(x) \preceq \nabla f(x) \nabla f(x)^T \quad \text{for all } x \in \text{dom } f\]</div>
+</section>
+<section id="id1">
+<h4>Important Examples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Powers</strong>: <span class="math notranslate nohighlight">\(f(x) = x^a\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}_{++}\)</span> is log-convex for <span class="math notranslate nohighlight">\(a \leq 0\)</span>, and log-concave for <span class="math notranslate nohighlight">\(a \geq 0\)</span>.</p></li>
+<li><p><strong>Normal Distribution</strong>: The Gaussian PDF is log-concave.</p></li>
+<li><p><strong>Cumulative Gaussian Distribution</strong>: The cumulative distribution function is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-u^2/2} \, du\]</div>
+</li>
+</ul>
+</section>
+<section id="properties-and-integration">
+<h4>Properties and Integration<a class="headerlink" href="#properties-and-integration" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Product &amp; Sum Rules</strong>:</p>
 <ul class="simple">
-<li><p><strong>Normal Distribution</strong>: <span class="math notranslate nohighlight">\(f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</span> is log-concave.</p></li>
+<li><p>The product of log-concave functions is log-concave.</p></li>
+<li><p>The sum of log-concave functions is <strong>not always</strong> log-concave.</p></li>
+</ul>
+</li>
+<li><p><strong>Integration Theorem</strong>: If <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}\)</span> is log-concave, then the marginal integral function:</p>
+<div class="math notranslate nohighlight">
+\[g(x) = \int f(x, y) \, dy\]</div>
+<p>is log-concave.</p>
+</li>
+<li><p><strong>Consequences</strong>:</p>
+<ul>
+<li><p><strong>Convolution</strong>: The convolution of two log-concave functions is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[(f * g)(x) = \int f(x-y)g(y) \, dy\]</div>
+</li>
+<li><p><strong>Probability over Convex Sets</strong>: If <span class="math notranslate nohighlight">\(y\)</span> is a random variable with a log-concave PDF, the probability that <span class="math notranslate nohighlight">\(x+y\)</span> lies in a convex set <span class="math notranslate nohighlight">\(C\)</span> is log-concave in <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \text{prob}(x+y \in C)\]</div>
+</li>
+<li><p><strong>Yield Function Example</strong>: In manufacturing, the yield function (where <span class="math notranslate nohighlight">\(x\)</span> represents nominal parameters, <span class="math notranslate nohighlight">\(w\)</span> is random variation, and <span class="math notranslate nohighlight">\(S\)</span> is the set of acceptable values) is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[Y(x) = \text{prob}(x+w \in S)\]</div>
+<p>Therefore, the yield regions <span class="math notranslate nohighlight">\(\{x \mid Y(x) \geq \alpha\}\)</span> are convex sets.</p>
+</li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
@@ -519,6 +598,21 @@ Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>lo
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \preceq_K \theta f(x) + (1-\theta) f(y)\]</div>
 <p>This maps the classical definition of convexity to vector-valued functions using cone-based ordering relations.</p>
+<section id="example-matrix-square">
+<h4>Example: Matrix Square<a class="headerlink" href="#example-matrix-square" title="Permalink to this heading">#</a></h4>
+<p>The matrix square function <span class="math notranslate nohighlight">\(f: \mathbb{S}^m \to \mathbb{S}^m\)</span>, defined as <span class="math notranslate nohighlight">\(f(X) = X^2\)</span>, is <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>-convex.</p>
+<p><strong>Proof</strong>:
+For any fixed vector <span class="math notranslate nohighlight">\(z \in \mathbb{R}^m\)</span>, we can evaluate the scalar function:</p>
+<div class="math notranslate nohighlight">
+\[g(X) = z^T X^2 z = z^T X X z = \| X z \|_2^2\]</div>
+<p>Since the Euclidean norm is convex, <span class="math notranslate nohighlight">\(g(X) = \| X z \|_2^2\)</span> is a convex function of <span class="math notranslate nohighlight">\(X\)</span>. Therefore, for all <span class="math notranslate nohighlight">\(X, Y \in \mathbb{S}^m\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z^T (\theta X + (1-\theta) Y)^2 z \leq \theta z^T X^2 z + (1-\theta) z^T Y^2 z\]</div>
+<p>Since this inequality holds for all vectors <span class="math notranslate nohighlight">\(z \in \mathbb{R}^m\)</span>, by definition of the positive semidefinite cone <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>, it implies:</p>
+<div class="math notranslate nohighlight">
+\[(\theta X + (1-\theta) Y)^2 \preceq_{\mathbb{S}^m_+} \theta X^2 + (1-\theta) Y^2\]</div>
+<p>This proves that <span class="math notranslate nohighlight">\(f(X) = X^2\)</span> is indeed <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>-convex.</p>
+</section>
 </section>
 </section>
 <hr class="docutils" />
@@ -526,17 +620,20 @@ Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>lo
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Find the conjugate function <span class="math notranslate nohighlight">\(f^*(y)\)</span> of the negative entropy function:
-$<span class="math notranslate nohighlight">\(f(x) = x \ln x \quad (\text{domain } x &gt; 0)\)</span>$</p>
+<p>Find the conjugate function <span class="math notranslate nohighlight">\(f^*(y)\)</span> of the negative entropy function:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x \ln x \quad (\text{domain } x &gt; 0)\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
 <p>The conjugate is defined as <span class="math notranslate nohighlight">\(f^*(y) = \sup_{x &gt; 0} (yx - x \ln x)\)</span>.
-To find the supremum, take the derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> and set to zero:
-$<span class="math notranslate nohighlight">\(\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
-Substitute \)</span>x^<em><span class="math notranslate nohighlight">\( back into the equation:
-\)</span><span class="math notranslate nohighlight">\(f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
-Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
+To find the supremum, take the derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> and set to zero:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}\]</div>
+<p>Substitute <span class="math notranslate nohighlight">\(x^*\)</span> back into the equation:</p>
+<div class="math notranslate nohighlight">
+\[f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}\]</div>
+<p>Thus, the conjugate function is <span class="math notranslate nohighlight">\(f^*(y) = e^{y-1}\)</span>.</p>
 </div>
 </section>
 </section>
@@ -618,12 +715,22 @@ Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-applications">Probability Applications:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-jensen-s-inequality">Modified Jensen’s Inequality</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-quasiconvexity">First-order Condition for Quasiconvexity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-sums">Key Property: Sums</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-log-concavity">Second-order Condition for Log-Concavity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-integration">Properties and Integration</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-matrix-square">Example: Matrix Square</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>

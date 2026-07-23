@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Geometric and Statistical Optimization &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/optimization/geometric_statistical';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Combinatorial Optimization &amp; Scheduling" href="combinatorial.html" />
+    <link rel="prev" title="Numerical Algorithms &amp; Interior-Point Methods" href="interior_point.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/optimization/geometric_statistical.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Geometric and Statistical Optimization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-estimation-chapter-7">1. Statistical Estimation (Chapter 7)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">Maximum Likelihood Estimation (MLE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-regression-with-gaussian-noise">Example: Linear Regression with Gaussian Noise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-problems-chapter-8">2. Geometrical Problems (Chapter 8)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-on-a-convex-set">2.1 Projection on a Convex Set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-between-convex-sets">2.2 Distance Between Convex Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-and-angle-problems">2.3 Euclidean Distance and Angle Problems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extremal-volume-ellipsoids">2.4 Extremal Volume Ellipsoids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-problems">2.5 Centering Problems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-and-discrimination">2.6 Classification and Discrimination</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-class-separation">Non-linear Class Separation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#placement-and-location-problems">2.7 Placement and Location Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-projecting-a-point-onto-a-polyhedron">Python Example: Projecting a Point onto a Polyhedron</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="geometric-and-statistical-optimization">
+<h1>Geometric and Statistical Optimization<a class="headerlink" href="#geometric-and-statistical-optimization" title="Permalink to this heading">#</a></h1>
+<p>This page covers applications of convex optimization in geometric problems and statistical estimation based on Chapters 7 and 8 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
+<hr class="docutils" />
+<section id="statistical-estimation-chapter-7">
+<h2>1. Statistical Estimation (Chapter 7)<a class="headerlink" href="#statistical-estimation-chapter-7" title="Permalink to this heading">#</a></h2>
+<p>Many foundational statistical estimation problems can be formulated directly as convex optimization problems, allowing them to be solved efficiently and with guaranteed global optimality.</p>
+<section id="maximum-likelihood-estimation-mle">
+<h3>Maximum Likelihood Estimation (MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h3>
+<p>In MLE, we estimate the parameter vector <span class="math notranslate nohighlight">\(\theta\)</span> of a probability distribution <span class="math notranslate nohighlight">\(p(y; \theta)\)</span> from observed data <span class="math notranslate nohighlight">\(y\)</span>. The goal is to maximize the likelihood function, or equivalently, minimize the <strong>negative log-likelihood function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; -\sum_{i=1}^N \ln p(y_i; \theta) \\
+\text{subject to} \quad &amp; \theta \in \Theta
+\end{aligned}\end{split}\]</div>
+<p>If <span class="math notranslate nohighlight">\(p(y; \theta)\)</span> is log-concave in <span class="math notranslate nohighlight">\(\theta\)</span>, then the negative log-likelihood is convex, and finding the MLE is a convex optimization problem.</p>
+<section id="example-linear-regression-with-gaussian-noise">
+<h4>Example: Linear Regression with Gaussian Noise<a class="headerlink" href="#example-linear-regression-with-gaussian-noise" title="Permalink to this heading">#</a></h4>
+<p>Consider <span class="math notranslate nohighlight">\(y_i = x_i^T \theta + v_i\)</span> where <span class="math notranslate nohighlight">\(v_i \sim \mathcal{N}(0, \sigma^2)\)</span> are independent Gaussian noise terms. The MLE objective is:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad \frac{N}{2}\ln(2\pi\sigma^2) + \frac{1}{2\sigma^2} \sum_{i=1}^N (y_i - x_i^T \theta)^2\]</div>
+<p>This is a classic Least-Squares optimization problem, which is a convex QP and can be solved analytically or numerically.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="geometrical-problems-chapter-8">
+<h2>2. Geometrical Problems (Chapter 8)<a class="headerlink" href="#geometrical-problems-chapter-8" title="Permalink to this heading">#</a></h2>
+<p>Convex optimization provides elegant tools to solve geometric problems involving distances, projections, and bounding volumes.</p>
+<section id="projection-on-a-convex-set">
+<h3>2.1 Projection on a Convex Set<a class="headerlink" href="#projection-on-a-convex-set" title="Permalink to this heading">#</a></h3>
+<p>The projection of a point <span class="math notranslate nohighlight">\(x_0\)</span> onto a closed convex set <span class="math notranslate nohighlight">\(C\)</span> is the point <span class="math notranslate nohighlight">\(P_C(x_0) \in C\)</span> that is closest to <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \| x - x_0 \|_2^2 \\
+\text{subject to} \quad &amp; x \in C
+\end{aligned}\end{split}\]</div>
+<p>Since the objective is strictly convex, the projection is unique.</p>
+<ul>
+<li><p><strong>Hyperplane Projection</strong>: Projecting <span class="math notranslate nohighlight">\(x_0\)</span> onto <span class="math notranslate nohighlight">\(a^T x = b\)</span> has the analytical solution:</p>
+<div class="math notranslate nohighlight">
+\[P_C(x_0) = x_0 - \frac{a^T x_0 - b}{\|a\|_2^2} a\]</div>
+</li>
+<li><p><strong>Halfspace Projection</strong>: Projecting <span class="math notranslate nohighlight">\(x_0\)</span> onto <span class="math notranslate nohighlight">\(a^T x \leq b\)</span> has the solution:</p>
+<div class="math notranslate nohighlight">
+\[P_C(x_0) = x_0 - \frac{\max(0, a^T x_0 - b)}{\|a\|_2^2} a\]</div>
+</li>
+</ul>
+</section>
+<section id="distance-between-convex-sets">
+<h3>2.2 Distance Between Convex Sets<a class="headerlink" href="#distance-between-convex-sets" title="Permalink to this heading">#</a></h3>
+<p>The distance between two closed convex sets <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is the length of the shortest vector connecting them. We can find the closest points by solving:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \| x - y \|_2^2 \\
+\text{subject to} \quad &amp; x \in C, \quad y \in D
+\end{aligned}\end{split}\]</div>
+<p>This is a convex optimization problem in variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. If <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(D\)</span> do not intersect, their separating hyperplane can be derived directly from the optimal Lagrange multipliers.</p>
+</section>
+<section id="euclidean-distance-and-angle-problems">
+<h3>2.3 Euclidean Distance and Angle Problems<a class="headerlink" href="#euclidean-distance-and-angle-problems" title="Permalink to this heading">#</a></h3>
+<p>Many geometric problems involve constraints on the relative distances or angles between points. For instance, we may wish to find the positions of <span class="math notranslate nohighlight">\(k\)</span> points <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in \mathbb{R}^n\)</span> given partial bounds on their Euclidean distances:</p>
+<div class="math notranslate nohighlight">
+\[d_{ij}^{\text{min}} \leq \|x_i - x_j\|_2 \leq d_{ij}^{\text{max}}\]</div>
+<p>or bounds on the angles between vectors:</p>
+<div class="math notranslate nohighlight">
+\[\theta_{ijk}^{\text{min}} \leq \angle(x_i - x_j, x_k - x_j) \leq \theta_{ijk}^{\text{max}}\]</div>
+<p>These bounds can be represented using the <strong>Gram Matrix</strong> <span class="math notranslate nohighlight">\(G = X^T X\)</span>, where <span class="math notranslate nohighlight">\(X = [x_1, \dots, x_k]\)</span>. Since <span class="math notranslate nohighlight">\(G \succeq 0\)</span>, we can express distance and angle bounds as linear constraints on the entries of <span class="math notranslate nohighlight">\(G\)</span>, transforming the coordinate estimation into a Semidefinite Program (SDP) with a rank constraint.</p>
+</section>
+<section id="extremal-volume-ellipsoids">
+<h3>2.4 Extremal Volume Ellipsoids<a class="headerlink" href="#extremal-volume-ellipsoids" title="Permalink to this heading">#</a></h3>
+<p>An ellipsoid <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented as:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E} = \{ x \mid \| M x + d \|_2 \leq 1 \}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M \in \mathbb{S}^n_{++}\)</span> (symmetric positive definite matrix). The volume of <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is proportional to <span class="math notranslate nohighlight">\(\det(M^{-1})\)</span>.</p>
+<ul>
+<li><p><strong>Löwner-John Ellipsoid (Minimum Volume enclosing ellipsoid)</strong>: To find the minimum volume ellipsoid containing a set of points <span class="math notranslate nohighlight">\(x_1, \dots, x_N\)</span>, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -\ln \det M \\
+    \text{subject to} \quad &amp; \| M x_i + d \|_2 \leq 1, \quad i=1, \dots, N \\
+    &amp; M \succ 0
+    \end{aligned}\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(-\ln \det M\)</span> is a convex function on <span class="math notranslate nohighlight">\(\mathbb{S}^n_{++}\)</span>, this is a convex optimization problem (specifically an SDP).</p>
+</li>
+<li><p><strong>Maximum Volume Inscribed Ellipsoid</strong>: To find the largest ellipsoid that fits inside a polyhedron defined by linear inequalities <span class="math notranslate nohighlight">\(a_i^T x \leq b_i, \, i=1, \dots, m\)</span>, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -\ln \det M \\
+    \text{subject to} \quad &amp; \| M a_i \|_2 + a_i^T d \leq b_i, \quad i=1, \dots, m \\
+    &amp; M \succ 0
+    \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/lowner_john_approximation.png"><img alt="Löwner-John Ellipsoid Approximation" class="align-center" src="../../_images/lowner_john_approximation.png" style="width: 480px;" /></a>
+</section>
+<section id="centering-problems">
+<h3>2.5 Centering Problems<a class="headerlink" href="#centering-problems" title="Permalink to this heading">#</a></h3>
+<p>Centering problems seek to find a representative “middle” point <span class="math notranslate nohighlight">\(x\)</span> inside a convex set <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<ul>
+<li><p><strong>Chebyshev Center</strong>: The center of the largest Euclidean ball <span class="math notranslate nohighlight">\(\mathcal{B}(x_c, r) = \{ x \mid \|x - x_c\|_2 \leq r \}\)</span> that can be inscribed in the set <span class="math notranslate nohighlight">\(C\)</span>.
+For a polyhedron <span class="math notranslate nohighlight">\(C = \{ x \mid a_i^T x \leq b_i, \, i=1, \dots, m \}\)</span>, the Chebyshev center is found by solving the Linear Program (LP):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -r \\
+    \text{subject to} \quad &amp; a_i^T x_c + r \|a_i\|_2 \leq b_i, \quad i=1, \dots, m \\
+    &amp; r \geq 0
+    \end{aligned}\end{split}\]</div>
+</li>
+<li><p><strong>Analytic Center</strong>: The point that minimizes the logarithmic barrier function for the set of inequalities:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad -\sum_{i=1}^m \ln(b_i - a_i^T x)\]</div>
+<p>This point is unique and lies strictly in the interior of the polyhedron.</p>
+</li>
+</ul>
+</section>
+<section id="classification-and-discrimination">
+<h3>2.6 Classification and Discrimination<a class="headerlink" href="#classification-and-discrimination" title="Permalink to this heading">#</a></h3>
+<p>We want to separate two sets of points <span class="math notranslate nohighlight">\(\{x_1, \dots, x_N\}\)</span> and <span class="math notranslate nohighlight">\(\{y_1, \dots, y_M\}\)</span> using a hyperplane <span class="math notranslate nohighlight">\(a^T z + b = 0\)</span>.</p>
+<ul>
+<li><p><strong>Linear Discrimination</strong>: The sets are linearly separable if there exists a vector <span class="math notranslate nohighlight">\(a \in \mathbb{R}^n\)</span> and a scalar <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[a^T x_i + b &gt; 0, \quad i=1, \dots, N \quad \text{and} \quad a^T y_j + b &lt; 0, \quad j=1, \dots, M\]</div>
+<p>This is solved using linear feasibility methods.</p>
+</li>
+<li><p><strong>Support Vector Classifier (Max-Margin Separation)</strong>: To find the separating hyperplane that maximizes the margin (distance) between the two classes, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; \frac{1}{2} \|a\|_2^2 \\
+    \text{subject to} \quad &amp; a^T x_i + b \geq 1, \quad i=1, \dots, N \\
+    &amp; a^T y_j + b \leq -1, \quad j=1, \dots, M
+    \end{aligned}\end{split}\]</div>
+<p>This QP formulation is the foundation of Support Vector Machines (SVM).</p>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/linear_discrimination_margin.png"><img alt="Linear and Robust Linear Discrimination" class="align-center" src="../../_images/linear_discrimination_margin.png" style="width: 480px;" /></a>
+</section>
+<section id="non-linear-class-separation">
+<h3>Non-linear Class Separation<a class="headerlink" href="#non-linear-class-separation" title="Permalink to this heading">#</a></h3>
+<p>When two classes are not linearly separable, we can project the data into a higher-dimensional space or use non-linear boundary functions (such as ellipsoidal or high-degree polynomial kernels):</p>
+<a class="reference internal image-reference" href="../../_images/nonlinear_separation_boundaries.png"><img alt="Non-linear Class Separation Boundaries" class="align-center" src="../../_images/nonlinear_separation_boundaries.png" style="width: 480px;" /></a>
+</section>
+<section id="placement-and-location-problems">
+<h3>2.7 Placement and Location Problems<a class="headerlink" href="#placement-and-location-problems" title="Permalink to this heading">#</a></h3>
+<p>Placement problems involve positioning a set of nodes <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in \mathbb{R}^n\)</span> in space to minimize a cost function based on the distances between connected nodes.
+For a graph with edge weights <span class="math notranslate nohighlight">\(w_{ij}\)</span>, we minimize the total connection cost:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad \sum_{(i, j) \in \mathcal{E}} w_{ij} f(\| x_i - x_j \|_2)\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is a monotonic, convex cost function.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(d) = d^2\)</span> (squared Euclidean distance), the problem reduces to a set of linear equations (quadratic optimization).</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(d) = d\)</span> (Euclidean distance), the problem is called the multi-dimensional Weber problem, which is formulated as an SOCP.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-example-projecting-a-point-onto-a-polyhedron">
+<h2>Python Example: Projecting a Point onto a Polyhedron<a class="headerlink" href="#python-example-projecting-a-point-onto-a-polyhedron" title="Permalink to this heading">#</a></h2>
+<p>Here is a Python script using <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> to project a 2D point onto a polyhedral convex set defined by linear inequalities (<span class="math notranslate nohighlight">\(Gx \leq h\)</span>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="c1"># Point to project</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">])</span>
+
+<span class="c1"># Define the convex set (polyhedron): Gx &lt;= h</span>
+<span class="c1"># Inequalities:</span>
+<span class="c1"># x1 &gt;= 0      =&gt;  -x1 &lt;= 0</span>
+<span class="c1"># x2 &gt;= 0      =&gt;  -x2 &lt;= 0</span>
+<span class="c1"># x1 + x2 &lt;= 2 =&gt;   x1 + x2 &lt;= 2</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+
+<span class="c1"># Objective function: squared Euclidean distance</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">objective</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Constraint definition for Scipy (must be &gt;= 0)</span>
+<span class="c1"># h - Gx &gt;= 0</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">constraint_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">h</span> <span class="o">-</span> <span class="n">G</span> <span class="o">@</span> <span class="n">x</span>
+
+<span class="n">constraints</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ineq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="n">constraint_func</span><span class="p">}</span>
+
+<span class="c1"># Run minimization</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)</span>
+
+<span class="n">projected_point</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Point to project: </span><span class="si">{</span><span class="n">x0</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Projected point:  </span><span class="si">{</span><span class="n">projected_point</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance:         </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">fun</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/optimization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="interior_point.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Numerical Algorithms &amp; Interior-Point Methods</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="combinatorial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Combinatorial Optimization &amp; Scheduling</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-estimation-chapter-7">1. Statistical Estimation (Chapter 7)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">Maximum Likelihood Estimation (MLE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-regression-with-gaussian-noise">Example: Linear Regression with Gaussian Noise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-problems-chapter-8">2. Geometrical Problems (Chapter 8)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-on-a-convex-set">2.1 Projection on a Convex Set</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-between-convex-sets">2.2 Distance Between Convex Sets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-distance-and-angle-problems">2.3 Euclidean Distance and Angle Problems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extremal-volume-ellipsoids">2.4 Extremal Volume Ellipsoids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-problems">2.5 Centering Problems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-and-discrimination">2.6 Classification and Discrimination</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-class-separation">Non-linear Class Separation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#placement-and-location-problems">2.7 Placement and Location Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-projecting-a-point-onto-a-polyhedron">Python Example: Projecting a Point onto a Polyhedron</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

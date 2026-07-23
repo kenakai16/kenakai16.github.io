@@ -67,6 +67,7 @@ For instance, when $x$ is very small, we can approximate $\ln(1+x)$ using the fi
 $$\ln(1 + x) \approx x$$
 
 Similarly:
+
 $$e^x \approx 1 + x \quad (\text{for } x \approx 0)$$
 
 ### Python Example (Log Approximation)
@@ -130,12 +131,14 @@ Compute the derivatives of $f(x) = \ln(1+x)$ at $x=0$:
 - $f'''(x) = \frac{2}{(1+x)^3} \implies f'''(0) = 2$
 
 Substitute into the Taylor formula:
+
 $$f(x) \approx 0 + 1(x) + \frac{-1}{2!}x^2 + \frac{2}{3!}x^3 = x - \frac{x^2}{2} + \frac{x^3}{3}$$
 ```
 
 ```{admonition} Solution — Exercise 2
 :class: dropdown
 Using the recurrence relation for $n=3$:
+
 $$T_4(x) = 2x T_3(x) - T_2(x)$$
 $$T_4(x) = 2x(4x^3 - 3x) - (2x^2 - 1)$$
 $$T_4(x) = 8x^4 - 6x^2 - 2x^2 + 1$$

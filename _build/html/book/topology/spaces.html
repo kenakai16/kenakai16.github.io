@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -515,11 +520,15 @@ document.write(`
 <section id="d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k">
 <h3>D. Cycles (<span class="math notranslate nohighlight">\(Z_k\)</span>), Boundaries (<span class="math notranslate nohighlight">\(B_k\)</span>), and Homology Groups (<span class="math notranslate nohighlight">\(H_k\)</span>)<a class="headerlink" href="#d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k" title="Permalink to this heading">#</a></h3>
 <p>Because the boundary of a boundary is zero, we can define two key subspaces of <span class="math notranslate nohighlight">\(C_k(K)\)</span>:</p>
-<ol class="arabic simple">
-<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Cycles (<span class="math notranslate nohighlight">\(Z_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:
-$<span class="math notranslate nohighlight">\(Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}\)</span>$</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Boundaries (<span class="math notranslate nohighlight">\(B_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains that are themselves the boundary of some higher <span class="math notranslate nohighlight">\((k+1)\)</span>-chain. This is the image of the boundary operator:
-$<span class="math notranslate nohighlight">\(B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Cycles (<span class="math notranslate nohighlight">\(Z_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:</p>
+<div class="math notranslate nohighlight">
+\[Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}\]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Boundaries (<span class="math notranslate nohighlight">\(B_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains that are themselves the boundary of some higher <span class="math notranslate nohighlight">\((k+1)\)</span>-chain. This is the image of the boundary operator:</p>
+<div class="math notranslate nohighlight">
+\[B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}\]</div>
+</li>
 </ol>
 <p>Since <span class="math notranslate nohighlight">\(\partial^2 = 0\)</span>, every boundary is automatically a cycle. Therefore, <span class="math notranslate nohighlight">\(B_k(K)\)</span> is a subspace of <span class="math notranslate nohighlight">\(Z_k(K)\)</span>:</p>
 <div class="math notranslate nohighlight">

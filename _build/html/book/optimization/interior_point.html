@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Numerical Algorithms &amp; Interior-Point Methods &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/optimization/interior_point';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Geometric and Statistical Optimization" href="geometric_statistical.html" />
+    <link rel="prev" title="Optimization Algorithms" href="algorithms.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/optimization/interior_point.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Numerical Algorithms & Interior-Point Methods</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-method-with-equality-constraints-chapter-10">1. Newton’s Method with Equality Constraints (Chapter 10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-step-under-equality-constraints">Newton Step under Equality Constraints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barrier-method-chapter-11">2. The Barrier Method (Chapter 11)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-barrier-function">Logarithmic Barrier Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-path">The Central Path</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barrier-algorithm">The Barrier Algorithm</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primal-dual-interior-point-methods">3. Primal-Dual Interior-Point Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbed-kkt-conditions">Perturbed KKT Conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-concordance-analysis">4. Self-Concordance Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-self-concordant-functions">Definition of Self-Concordant Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-implementing-the-barrier-method">Python Example: Implementing the Barrier Method</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="numerical-algorithms-interior-point-methods">
+<h1>Numerical Algorithms &amp; Interior-Point Methods<a class="headerlink" href="#numerical-algorithms-interior-point-methods" title="Permalink to this heading">#</a></h1>
+<p>This page covers numerical algorithms for solving constrained optimization problems based on Chapters 9, 10, and 11 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
+<hr class="docutils" />
+<section id="newton-s-method-with-equality-constraints-chapter-10">
+<h2>1. Newton’s Method with Equality Constraints (Chapter 10)<a class="headerlink" href="#newton-s-method-with-equality-constraints-chapter-10" title="Permalink to this heading">#</a></h2>
+<p>For unconstrained optimization, Newton’s method uses the second-order Taylor expansion to find the search direction. For problems with equality constraints:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f(x) \\
+\text{subject to} \quad &amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is convex and twice continuously differentiable. We must ensure that the search step keeps the variable feasible (<span class="math notranslate nohighlight">\(A(x + \Delta x) = b\)</span>).</p>
+<section id="newton-step-under-equality-constraints">
+<h3>Newton Step under Equality Constraints<a class="headerlink" href="#newton-step-under-equality-constraints" title="Permalink to this heading">#</a></h3>
+<p>The Newton step <span class="math notranslate nohighlight">\(\Delta x_{nt}\)</span> is obtained by solving the following KKT system of linear equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \nabla^2 f(x) &amp; A^T \\ A &amp; 0 \end{bmatrix} \begin{bmatrix} \Delta x_{nt} \\ w \end{bmatrix} = \begin{bmatrix} -\nabla f(x) \\ 0 \end{bmatrix}\end{split}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\nabla^2 f(x)\)</span> is the Hessian of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nabla f(x)\)</span> is the gradient of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(w\)</span> is the vector of optimal Lagrange multipliers for the equality constraints.</p></li>
+</ul>
+<p>This KKT matrix is invertible if <span class="math notranslate nohighlight">\(\nabla^2 f(x)\)</span> is positive definite on the nullspace of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-barrier-method-chapter-11">
+<h2>2. The Barrier Method (Chapter 11)<a class="headerlink" href="#the-barrier-method-chapter-11" title="Permalink to this heading">#</a></h2>
+<p>The <strong>Barrier Method</strong> (or path-following method) is an interior-point method used to solve convex optimization problems with inequality constraints:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; f_i(x) \leq 0, \quad i=1, \dots, m \\
+&amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<section id="logarithmic-barrier-function">
+<h3>Logarithmic Barrier Function<a class="headerlink" href="#logarithmic-barrier-function" title="Permalink to this heading">#</a></h3>
+<p>We can approximate the inequality constraints using an indicator function, which we smooth using the <strong>logarithmic barrier function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\Phi(x) = -\sum_{i=1}^m \ln(-f_i(x))\]</div>
+<p>defined on the feasible interior domain <span class="math notranslate nohighlight">\(\text{dom } \Phi = \{x \mid f_i(x) &lt; 0, \, i=1, \dots, m\}\)</span>.
+As <span class="math notranslate nohighlight">\(f_i(x) \to 0\)</span>, the function <span class="math notranslate nohighlight">\(\Phi(x) \to \infty\)</span>, preventing the variable from leaving the feasible interior region.</p>
+</section>
+<section id="the-central-path">
+<h3>The Central Path<a class="headerlink" href="#the-central-path" title="Permalink to this heading">#</a></h3>
+<p>For a parameter <span class="math notranslate nohighlight">\(t &gt; 0\)</span>, we define the central path <span class="math notranslate nohighlight">\(x^*(t)\)</span> as the solution to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; t f_0(x) + \Phi(x) \\
+\text{subject to} \quad &amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, the central path <span class="math notranslate nohighlight">\(x^*(t)\)</span> converges to the optimal solution <span class="math notranslate nohighlight">\(x^*\)</span> of the original constrained problem.</p>
+</section>
+<section id="the-barrier-algorithm">
+<h3>The Barrier Algorithm<a class="headerlink" href="#the-barrier-algorithm" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Start</strong> with a strictly feasible starting point <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(t = t^{(0)} &gt; 0\)</span>, tolerance <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, and parameter <span class="math notranslate nohighlight">\(\mu &gt; 1\)</span>.</p></li>
+<li><p><strong>Centering Step</strong>: Compute <span class="math notranslate nohighlight">\(x^*(t)\)</span> by minimizing <span class="math notranslate nohighlight">\(t f_0(x) + \Phi(x)\)</span> subject to <span class="math notranslate nohighlight">\(Ax = b\)</span> (typically solved using Newton’s method).</p></li>
+<li><p><strong>Update</strong>: <span class="math notranslate nohighlight">\(x := x^*(t)\)</span>.</p></li>
+<li><p><strong>Stopping Criterion</strong>: If <span class="math notranslate nohighlight">\(m/t &lt; \epsilon\)</span>, stop and return <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><strong>Increase <span class="math notranslate nohighlight">\(t\)</span></strong>: <span class="math notranslate nohighlight">\(t := \mu t\)</span>, and repeat from step 2.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="primal-dual-interior-point-methods">
+<h2>3. Primal-Dual Interior-Point Methods<a class="headerlink" href="#primal-dual-interior-point-methods" title="Permalink to this heading">#</a></h2>
+<p>Unlike the Barrier Method which executes a full centering step (Newton minimization) for each parameter update, <strong>Primal-Dual Interior-Point Methods</strong> update the primal variables <span class="math notranslate nohighlight">\(x\)</span>, dual variables <span class="math notranslate nohighlight">\(\lambda\)</span> (for inequalities), and <span class="math notranslate nohighlight">\(nu\)</span> (for equalities) simultaneously at each iteration.</p>
+<section id="perturbed-kkt-conditions">
+<h3>Perturbed KKT Conditions<a class="headerlink" href="#perturbed-kkt-conditions" title="Permalink to this heading">#</a></h3>
+<p>We solve the KKT conditions perturbed by a parameter <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &amp;= 0 \\
+-\lambda_i f_i(x) &amp;= 1/t, \quad i=1, \dots, m \\
+Ax - b &amp;= 0
+\end{aligned}\end{split}\]</div>
+<p>Applying Newton’s method to this non-linear system of equations gives the primal-dual search direction <span class="math notranslate nohighlight">\((\Delta x_{pd}, \Delta \lambda_{pd}, \Delta \nu_{pd})\)</span>. These methods often converge much faster than barrier methods because they do not require high accuracy centering steps.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="self-concordance-analysis">
+<h2>4. Self-Concordance Analysis<a class="headerlink" href="#self-concordance-analysis" title="Permalink to this heading">#</a></h2>
+<p>The rate of convergence of Newton’s method typically depends on unknown constants (like the Lipschitz constant of the Hessian). However, Stephen Boyd introduces <strong>Self-concordance</strong>, a properties-based analysis that allows bounding the number of Newton iterations without relying on coordinate-dependent constants.</p>
+<section id="definition-of-self-concordant-functions">
+<h3>Definition of Self-Concordant Functions<a class="headerlink" href="#definition-of-self-concordant-functions" title="Permalink to this heading">#</a></h3>
+<p>A convex function <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span> is self-concordant if:</p>
+<div class="math notranslate nohighlight">
+\[|f'''(x)| \leq 2 f''(x)^{3/2}\]</div>
+<p>For multi-dimensional functions <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span>, it must be self-concordant along every line.</p>
+<ul class="simple">
+<li><p><strong>Example</strong>: The logarithmic barrier <span class="math notranslate nohighlight">\(-\sum \ln(x_i)\)</span> is self-concordant.</p></li>
+<li><p><strong>Significance</strong>: For self-concordant functions, the number of Newton iterations required to reach a specific accuracy is bounded by a constant that depends only on the initial suboptimality, providing rigorous convergence guarantees.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-example-implementing-the-barrier-method">
+<h2>Python Example: Implementing the Barrier Method<a class="headerlink" href="#python-example-implementing-the-barrier-method" title="Permalink to this heading">#</a></h2>
+<p>Here is a simple Python script implementing the Barrier Method to solve a quadratically constrained problem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; x^2 \\
+\text{subject to} \quad &amp; x \geq 1 \quad (\text{written as } 1 - x \leq 0)
+\end{aligned}\end{split}\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">barrier_method</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Number of inequality constraints: f1(x) = 1 - x &lt;= 0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting Barrier Method from feasible x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># Centering step: minimize t * f0(x) - ln(-f1(x))</span>
+        <span class="c1"># objective: t * x^2 - ln(x - 1)</span>
+        <span class="c1"># We solve this mini-optimization using Newton&#39;s method:</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+            <span class="c1"># Gradient of centering objective</span>
+            <span class="n">grad</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># Hessian of centering objective</span>
+            <span class="n">hess</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            
+            <span class="n">step</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad</span> <span class="o">/</span> <span class="n">hess</span>
+            <span class="n">x</span> <span class="o">+=</span> <span class="n">step</span>
+            
+            <span class="c1"># Convergence check for Newton step</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">step</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-8</span><span class="p">:</span>
+                <span class="k">break</span>
+                
+        <span class="n">duality_gap</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="n">t</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iter </span><span class="si">{</span><span class="n">iteration</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> | t = </span><span class="si">{</span><span class="n">t</span><span class="si">:</span><span class="s2">8.1f</span><span class="si">}</span><span class="s2"> | x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> | Duality Gap = </span><span class="si">{</span><span class="n">duality_gap</span><span class="si">:</span><span class="s2">.8f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">duality_gap</span> <span class="o">&lt;</span> <span class="n">epsilon</span><span class="p">:</span>
+            <span class="k">break</span>
+            
+        <span class="n">t</span> <span class="o">*=</span> <span class="n">mu</span>
+        <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="c1"># Strictly feasible starting point (x &gt; 1)</span>
+<span class="n">optimal_x</span> <span class="o">=</span> <span class="n">barrier_method</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Optimal Solution found: x = </span><span class="si">{</span><span class="n">optimal_x</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> (Analytical limit = 1.000000)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/optimization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="algorithms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Optimization Algorithms</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="geometric_statistical.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Geometric and Statistical Optimization</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-method-with-equality-constraints-chapter-10">1. Newton’s Method with Equality Constraints (Chapter 10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-step-under-equality-constraints">Newton Step under Equality Constraints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barrier-method-chapter-11">2. The Barrier Method (Chapter 11)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithmic-barrier-function">Logarithmic Barrier Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-path">The Central Path</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barrier-algorithm">The Barrier Algorithm</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primal-dual-interior-point-methods">3. Primal-Dual Interior-Point Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbed-kkt-conditions">Perturbed KKT Conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-concordance-analysis">4. Self-Concordance Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-self-concordant-functions">Definition of Self-Concordant Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-implementing-the-barrier-method">Python Example: Implementing the Barrier Method</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -15,6 +15,7 @@ Where:
 - $n$ is the **exponent** (or power).
 
 This represents $x$ multiplied by itself $n$ times:
+
 $$3^4 = 3 \times 3 \times 3 \times 3 = 81$$
 
 ### Rules of Exponents
@@ -54,6 +55,7 @@ print("e^2 =", math.exp(2))
 ```{admonition} Exercise 1
 :class: tip
 Simplify the expression:
+
 $$\frac{x^5 \cdot x^2}{x^3}$$
 ```
 

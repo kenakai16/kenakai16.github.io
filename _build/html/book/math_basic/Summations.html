@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -425,8 +430,9 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(n\)</span> is the <strong>upper limit</strong> (ending point).</p></li>
 <li><p><span class="math notranslate nohighlight">\(x_i\)</span> represents the term to be added at index <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
 </ul>
-<p>This expands to:
-$<span class="math notranslate nohighlight">\(\sum_{i=1}^{n} x_i = x_1 + x_2 + x_3 + \dots + x_n\)</span>$</p>
+<p>This expands to:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^{n} x_i = x_1 + x_2 + x_3 + \dots + x_n\]</div>
 <section id="example">
 <h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
@@ -472,8 +478,9 @@ $<span class="math notranslate nohighlight">\(\sum_{i=1}^{n} x_i = x_1 + x_2 + x
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Evaluate the summation:
-$<span class="math notranslate nohighlight">\(\sum_{i=2}^{5} (2i - 1)\)</span>$</p>
+<p>Evaluate the summation:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=2}^{5} (2i - 1)\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -484,8 +491,9 @@ $<span class="math notranslate nohighlight">\(\sum_{i=2}^{5} (2i - 1)\)</span>$<
 <li><p>For <span class="math notranslate nohighlight">\(i=4\)</span>: <span class="math notranslate nohighlight">\(2(4) - 1 = 7\)</span></p></li>
 <li><p>For <span class="math notranslate nohighlight">\(i=5\)</span>: <span class="math notranslate nohighlight">\(2(5) - 1 = 9\)</span></p></li>
 </ul>
-<p>Sum the values:
-$<span class="math notranslate nohighlight">\(3 + 5 + 7 + 9 = 24\)</span>$</p>
+<p>Sum the values:</p>
+<div class="math notranslate nohighlight">
+\[3 + 5 + 7 + 9 = 24\]</div>
 </div>
 </section>
 </section>

@@ -38,6 +38,7 @@ print("Computed result:", result)
 ```{admonition} Exercise 1
 :class: tip
 Evaluate the expression manually:
+
 $$10 - 2 \times (3 + 1)^2 \div 8 + 5$$
 Verify your answer with Python.
 ```

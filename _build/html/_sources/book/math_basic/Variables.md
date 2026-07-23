@@ -62,12 +62,14 @@ print("Solutions for x^2 - 5x + 6 = 0:", sol2)
 ```{admonition} Exercise 1
 :class: tip
 Solve the quadratic equation:
+
 $$x^2 - 4x - 5 = 0$$
 ```
 
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 Using coefficients $a=1, b=-4, c=-5$:
+
 $$x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4(1)(-5)}}{2(1)}$$
 $$x = \frac{4 \pm \sqrt{16 + 20}}{2} = \frac{4 \pm \sqrt{36}}{2}$$
 $$x_1 = \frac{4 + 6}{2} = 5, \quad x_2 = \frac{4 - 6}{2} = -1$$

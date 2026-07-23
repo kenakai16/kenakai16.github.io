@@ -54,12 +54,14 @@ The boundary in optimization is not between linearity and non-linearity, but bet
 ```{admonition} Exercise 1
 :class: tip
 Classify the following optimization problem (find if it is LP, Least-Squares, or Nonlinear):
+
 $$\text{minimize} \quad (3x_1 + x_2 - 5)^2 + (x_1 - 2x_2 + 1)^2$$
 ```
 
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 This objective is a sum of squared linear terms:
+
 $$f(x) = \|Ax - b\|_2^2$$
 Where $A = \begin{bmatrix} 3 & 1 \\ 1 & -2 \end{bmatrix}$ and $b = \begin{bmatrix} 5 \\ -1 \end{bmatrix}$. 
 Therefore, this is a **Least-Squares** problem.

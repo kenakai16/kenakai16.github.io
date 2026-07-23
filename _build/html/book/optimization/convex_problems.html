@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -393,10 +398,25 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp-4-3">3. Linear Optimization Problems - LP (4.3)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-4-4">4. Quadratic Optimization Problems - QP (4.4)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">5. Geometric Programming - GP (4.5)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-inequality-constraints-4-6">6. Generalized Inequality Constraints (4.6)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">7. Vector Optimization (4.7)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp-4-4">4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratically-constrained-quadratic-program-qcqp">Quadratically Constrained Quadratic Program (QCQP)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-cone-programming-socp">5. Second-Order Cone Programming - SOCP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-cone-constraint">Second-Order Cone Constraint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semidefinite-programming-sdp">6. Semidefinite Programming - SDP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-inequality-lmi">Linear Matrix Inequality (LMI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">7. Geometric Programming - GP (4.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomials-and-posynomials">Monomials and Posynomials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-geometric-program">Standard Geometric Program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-transformation">Convex Transformation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">8. Vector Optimization (4.7)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -467,8 +487,8 @@ document.write(`
 <p>LPs are widely used in operations research, logistics, and resource allocation.</p>
 </section>
 <hr class="docutils" />
-<section id="quadratic-optimization-problems-qp-4-4">
-<h2>4. Quadratic Optimization Problems - QP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-4-4" title="Permalink to this heading">#</a></h2>
+<section id="quadratic-optimization-problems-qp-qcqp-4-4">
+<h2>4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp-4-4" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Quadratic Program (QP)</strong> has a convex quadratic objective and affine constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -476,30 +496,101 @@ document.write(`
 \text{subject to} \quad &amp; Gx \leq h \\
 &amp; Ax = b
 \end{aligned}\end{split}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive semi-definite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>). If the inequality constraints are also quadratic, it is called a <strong>Quadratically Constrained Quadratic Program (QCQP)</strong>.</p>
+<p>Where <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive semi-definite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>).</p>
+<section id="quadratically-constrained-quadratic-program-qcqp">
+<h3>Quadratically Constrained Quadratic Program (QCQP)<a class="headerlink" href="#quadratically-constrained-quadratic-program-qcqp" title="Permalink to this heading">#</a></h3>
+<p>If the inequality constraints are also quadratic, the problem is a <strong>QCQP</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \frac{1}{2} x^T P_0 x + q_0^T x + r_0 \\
+\text{subject to} \quad &amp; \frac{1}{2} x^T P_i x + q_i^T x + r_i \leq 0, \quad i=1, \dots, m \\
+&amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_0, P_1, \dots, P_m \succeq 0\)</span>. QCQPs are used in robust design and signal processing.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="second-order-cone-programming-socp">
+<h2>5. Second-Order Cone Programming - SOCP<a class="headerlink" href="#second-order-cone-programming-socp" title="Permalink to this heading">#</a></h2>
+<p>A <strong>Second-Order Cone Program (SOCP)</strong> is a generalization of QPs and QCQPs. It allows constraints that require a vector to lie within a second-order cone (also known as the Lorentz or ice-cream cone):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f^T x \\
+\text{subject to} \quad &amp; \| A_i x + b_i \|_2 \leq c_i^T x + d_i, \quad i=1, \dots, m \\
+&amp; F x = g
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(A_i \in \mathbb{R}^{n_i \times n}\)</span>, <span class="math notranslate nohighlight">\(b_i \in \mathbb{R}^{n_i}\)</span>, <span class="math notranslate nohighlight">\(c_i \in \mathbb{R}^n\)</span>, and <span class="math notranslate nohighlight">\(d_i \in \mathbb{R}\)</span>.</p>
+<section id="second-order-cone-constraint">
+<h3>Second-Order Cone Constraint<a class="headerlink" href="#second-order-cone-constraint" title="Permalink to this heading">#</a></h3>
+<p>The constraint <span class="math notranslate nohighlight">\(\| A_i x + b_i \|_2 \leq c_i^T x + d_i\)</span> requires the affine combination <span class="math notranslate nohighlight">\((A_i x + b_i, c_i^T x + d_i)\)</span> to lie in the second-order cone:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{K}_i = \{ (y, t) \in \mathbb{R}^{n_i} \times \mathbb{R} \mid \|y\|_2 \leq t \}\]</div>
+<p>SOCPs are widely applied in portfolio optimization with tracking error constraints, filter design, and robust linear programming under ellipsoidal uncertainty.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="semidefinite-programming-sdp">
+<h2>6. Semidefinite Programming - SDP<a class="headerlink" href="#semidefinite-programming-sdp" title="Permalink to this heading">#</a></h2>
+<p>A <strong>Semidefinite Program (SDP)</strong> is an optimization problem where the variables are symmetric matrices constrained to be positive semidefinite:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; x_1 F_1 + x_2 F_2 + \dots + x_n F_n \preceq F_0 \\
+&amp; A x = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>, and <span class="math notranslate nohighlight">\(F_0, F_1, \dots, F_n\)</span> are symmetric matrices in <span class="math notranslate nohighlight">\(\mathbb{S}^k\)</span> (the space of symmetric <span class="math notranslate nohighlight">\(k \times k\)</span> matrices).</p>
+<section id="linear-matrix-inequality-lmi">
+<h3>Linear Matrix Inequality (LMI)<a class="headerlink" href="#linear-matrix-inequality-lmi" title="Permalink to this heading">#</a></h3>
+<p>The constraint <span class="math notranslate nohighlight">\(x_1 F_1 + x_2 F_2 + \dots + x_n F_n \preceq F_0\)</span> is called a <strong>Linear Matrix Inequality (LMI)</strong>. The symbol <span class="math notranslate nohighlight">\(\preceq\)</span> denotes matrix inequality, meaning:</p>
+<div class="math notranslate nohighlight">
+\[F_0 - \sum_{i=1}^n x_i F_i \succeq 0 \quad (\text{is Positive Semidefinite})\]</div>
+<p>SDPs generalize LPs and SOCPs. They are foundational in control theory (Lyapunov stability), structural design, and machine learning (kernel matrix learning and maximum variance unfolding).</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="geometric-programming-gp-4-5">
-<h2>5. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h2>
-<p>A <strong>Geometric Program (GP)</strong> involves objective and constraint functions that are posynomials (sums of monomials).
-A monomial has the form <span class="math notranslate nohighlight">\(cx_1^{a_1}x_2^{a_2}\dots x_n^{a_n}\)</span> where <span class="math notranslate nohighlight">\(c &gt; 0\)</span>.</p>
-<p>Although GPs are not convex in their original form, they can be transformed into convex problems using a change of variables <span class="math notranslate nohighlight">\(y_i = \ln(x_i)\)</span> and taking the logarithm of the objective and constraints.</p>
+<h2>7. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h2>
+<p>A <strong>Geometric Program (GP)</strong> is an optimization problem involving objective and constraint functions that are posynomials.</p>
+<section id="monomials-and-posynomials">
+<h3>Monomials and Posynomials<a class="headerlink" href="#monomials-and-posynomials" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>A <strong>monomial</strong> <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is a function of the form:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = c x_1^{a_1} x_2^{a_2} \dots x_n^{a_n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c &gt; 0\)</span> and <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span>.</p>
+</li>
+<li><p>A <strong>posynomial</strong> is a sum of monomials:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \dots x_n^{a_{nk}}\]</div>
+</li>
+</ul>
 </section>
-<hr class="docutils" />
-<section id="generalized-inequality-constraints-4-6">
-<h2>6. Generalized Inequality Constraints (4.6)<a class="headerlink" href="#generalized-inequality-constraints-4-6" title="Permalink to this heading">#</a></h2>
-<p>We can extend convex optimization to problems with constraints defined by a proper cone <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<section id="standard-geometric-program">
+<h3>Standard Geometric Program<a class="headerlink" href="#standard-geometric-program" title="Permalink to this heading">#</a></h3>
+<p>A standard GP has the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \text{minimize} \quad &amp; f_0(x) \\
-\text{subject to} \quad &amp; f_i(x) \preceq_K 0, \quad i = 1, \dots, m \\
-&amp; A x = b
+\text{subject to} \quad &amp; f_i(x) \leq 1, \dots, m \\
+&amp; h_i(x) = 1, \dots, p
 \end{aligned}\end{split}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(f_i(x) \preceq_K 0\)</span> means <span class="math notranslate nohighlight">\(-f_i(x) \in K\)</span>. This formulation includes <strong>Semidefinite Programming (SDP)</strong> and <strong>Cone Programming</strong>.</p>
+<p>where <span class="math notranslate nohighlight">\(f_0, \dots, f_m\)</span> are posynomials, and <span class="math notranslate nohighlight">\(h_1, \dots, h_p\)</span> are monomials.</p>
+</section>
+<section id="convex-transformation">
+<h3>Convex Transformation<a class="headerlink" href="#convex-transformation" title="Permalink to this heading">#</a></h3>
+<p>GPs are non-convex in their original form. However, we can transform them into convex problems by introducing a change of variables <span class="math notranslate nohighlight">\(y_i = \ln(x_i)\)</span> and taking the natural logarithm of the objective and constraints. This results in the transformed problem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \tilde{f}_0(y) = \ln f_0(e^y) \\
+\text{subject to} \quad &amp; \tilde{f}_i(y) = \ln f_i(e^y) \leq 0, \quad i=1, \dots, m \\
+&amp; \tilde{h}_i(y) = \ln h_i(e^y) = 0, \quad i=1, \dots, p
+\end{aligned}\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\tilde{f}_i\)</span> are log-sum-exp functions (which are convex), the transformed problem is a convex optimization problem.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="vector-optimization-4-7">
-<h2>7. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h2>
+<h2>8. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h2>
 <p>In many practical situations, we want to optimize multiple objectives simultaneously (multicriterion optimization):</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize (with respect to proper cone } K) \quad f_0(x) = (f_1(x), \dots, f_q(x))\]</div>
@@ -510,18 +601,61 @@ A monomial has the form <span class="math notranslate nohighlight">\(cx_1^{a_1}x
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Formulate the following problem as a Quadratic Program (QP):
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad (x_1 - x_2)^2 + 3(x_2 - 2)^2 \quad \text{subject to} \quad x_1 + x_2 \geq 1\)</span>$</p>
+<p>Formulate the following minimization problem as a standard Quadratic Program (QP):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; (x_1 - x_2)^2 + 3(x_2 - 2)^2 \\
+\text{subject to} \quad &amp; x_1 + x_2 \geq 1
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>Expand the objective function:
-$<span class="math notranslate nohighlight">\(f(x) = x_1^2 - 2x_1x_2 + x_2^2 + 3(x_2^2 - 4x_2 + 4) = x_1^2 - 2x_1x_2 + 4x_2^2 - 12x_2 + 12\)</span><span class="math notranslate nohighlight">\(
-This can be written in matrix form \)</span>\frac{1}{2} x^T P x + q^T x + r<span class="math notranslate nohighlight">\( with:
-\)</span><span class="math notranslate nohighlight">\(P = \begin{bmatrix} 2 &amp; -2 \\ -2 &amp; 8 \end{bmatrix}, \quad q = \begin{bmatrix} 0 \\ -12 \end{bmatrix}, \quad r = 12\)</span><span class="math notranslate nohighlight">\(
-Since eigenvalues of \)</span>P<span class="math notranslate nohighlight">\( are positive (\)</span>P \succeq 0<span class="math notranslate nohighlight">\(), the objective is convex.
-The constraint \)</span>x_1 + x_2 \geq 1<span class="math notranslate nohighlight">\( can be written as \)</span>-x_1 - x_2 \leq -1<span class="math notranslate nohighlight">\( (which is \)</span>Gx \leq h<span class="math notranslate nohighlight">\( where \)</span>G = [-1, -1]<span class="math notranslate nohighlight">\(, \)</span>h = -1$).
-Thus, it is a QP.</p>
+<p>To express the problem in the standard QP form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \frac{1}{2} x^T P x + q^T x + r \\
+\text{subject to} \quad &amp; Gx \leq h
+\end{aligned}\end{split}\]</div>
+<p>we follow these mathematical steps:</p>
+<p><strong>Step 1: Expand the Objective Function</strong>
+Expand the algebraic terms in the objective function <span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x) &amp;= (x_1^2 - 2x_1x_2 + x_2^2) + 3(x_2^2 - 4x_2 + 4) \\
+&amp;= x_1^2 - 2x_1x_2 + 4x_2^2 - 12x_2 + 12
+\end{aligned}\end{split}\]</div>
+<p><strong>Step 2: Extract Matrix Parameters</strong>
+We match the expanded objective to the quadratic matrix form <span class="math notranslate nohighlight">\(\frac{1}{2} x^T P x + q^T x + r\)</span>, where <span class="math notranslate nohighlight">\(x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\)</span>:</p>
+<ul>
+<li><p><strong>Hessian Matrix (<span class="math notranslate nohighlight">\(P\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P = \begin{bmatrix} 2 &amp; -2 \\ -2 &amp; 8 \end{bmatrix}\end{split}\]</div>
+<p><em>(Note that <span class="math notranslate nohighlight">\(\frac{1}{2} x^T P x = x_1^2 - 2x_1x_2 + 4x_2^2\)</span>)</em>.</p>
+</li>
+<li><p><strong>Linear Term Vector (<span class="math notranslate nohighlight">\(q\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}q = \begin{bmatrix} 0 \\ -12 \end{bmatrix}\end{split}\]</div>
+</li>
+<li><p><strong>Constant Scalar (<span class="math notranslate nohighlight">\(r\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[r = 12\]</div>
+</li>
+</ul>
+<p><strong>Step 3: Verify Convexity</strong>
+For a valid QP, <span class="math notranslate nohighlight">\(P\)</span> must be positive semidefinite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>). The eigenvalues of <span class="math notranslate nohighlight">\(P\)</span> are found by solving <span class="math notranslate nohighlight">\(\det(P - \lambda I) = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det \begin{bmatrix} 2-\lambda &amp; -2 \\ -2 &amp; 8-\lambda \end{bmatrix} = \lambda^2 - 10\lambda + 12 = 0 \implies \lambda \approx 8.61, \; 1.39\end{split}\]</div>
+<p>Since both eigenvalues are strictly positive (<span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span>), <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive definite (<span class="math notranslate nohighlight">\(P \succ 0\)</span>), guaranteeing that the objective function is strictly convex.</p>
+<p><strong>Step 4: Convert Constraints to Standard Form</strong>
+The inequality constraint <span class="math notranslate nohighlight">\(x_1 + x_2 \geq 1\)</span> must be converted to the standard form <span class="math notranslate nohighlight">\(Gx \leq h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-x_1 - x_2 \leq -1 \implies \begin{bmatrix} -1 &amp; -1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \leq -1\end{split}\]</div>
+<p>Thus, we identify:</p>
+<div class="math notranslate nohighlight">
+\[G = \begin{bmatrix} -1 &amp; -1 \end{bmatrix}, \quad h = -1\]</div>
+<p><strong>Conclusion</strong>
+The problem is successfully formulated as a standard convex Quadratic Program (QP).</p>
 </div>
 </section>
 </section>
@@ -596,10 +730,25 @@ Thus, it is a QP.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp-4-3">3. Linear Optimization Problems - LP (4.3)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-4-4">4. Quadratic Optimization Problems - QP (4.4)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">5. Geometric Programming - GP (4.5)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-inequality-constraints-4-6">6. Generalized Inequality Constraints (4.6)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">7. Vector Optimization (4.7)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp-4-4">4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratically-constrained-quadratic-program-qcqp">Quadratically Constrained Quadratic Program (QCQP)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-cone-programming-socp">5. Second-Order Cone Programming - SOCP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-cone-constraint">Second-Order Cone Constraint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semidefinite-programming-sdp">6. Semidefinite Programming - SDP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-inequality-lmi">Linear Matrix Inequality (LMI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">7. Geometric Programming - GP (4.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomials-and-posynomials">Monomials and Posynomials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-geometric-program">Standard Geometric Program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-transformation">Convex Transformation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">8. Vector Optimization (4.7)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>

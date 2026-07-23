@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -388,11 +393,21 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-extrema-second-derivative-test">1. Local Extrema &amp; Second Derivative Test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent">2. Gradient Descent</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-descent-gradient-descent">2. General Descent &amp; Gradient Descent</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-descent-method">General Descent Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-step">Gradient Descent Step</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-behavior-on-ill-conditioned-functions">Convergence Behavior on Ill-Conditioned Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-search-strategies-backtracking-vs-exact">Line Search Strategies (Backtracking vs Exact)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence-on-semilog-plots">Linear Convergence on Semilog Plots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">3. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steepest-descent-method-general-norms">3. Steepest Descent Method (General Norms)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-steepest-descent-direction">Normalized Steepest Descent Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steepest-descent-directions-for-different-norms">Steepest Descent Directions for Different Norms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">4. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3. Quadratic Optimization with SymPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -425,15 +440,87 @@ document.write(`
 </ul>
 </section>
 <hr class="docutils" />
-<section id="gradient-descent">
-<h2>2. Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permalink to this heading">#</a></h2>
-<p>When a function is too complex to solve analytically, we use <strong>Gradient Descent</strong>, an iterative optimization algorithm.</p>
+<section id="general-descent-gradient-descent">
+<h2>2. General Descent &amp; Gradient Descent<a class="headerlink" href="#general-descent-gradient-descent" title="Permalink to this heading">#</a></h2>
+<section id="general-descent-method">
+<h3>General Descent Method<a class="headerlink" href="#general-descent-method" title="Permalink to this heading">#</a></h3>
+<p>To minimize a convex function <span class="math notranslate nohighlight">\(f\)</span>, we use a general iterative descent method. Given a starting point <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span>, the algorithm repeats the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Determine descent direction</strong>: Find a search direction <span class="math notranslate nohighlight">\(\Delta x\)</span> (for gradient descent, <span class="math notranslate nohighlight">\(\Delta x = -\nabla f(x)\)</span>).</p></li>
+<li><p><strong>Line Search</strong>: Choose a step size <span class="math notranslate nohighlight">\(t &gt; 0\)</span> using exact or backtracking line search.</p></li>
+<li><p><strong>Update</strong>: Set <span class="math notranslate nohighlight">\(x := x + t \Delta x\)</span>.</p></li>
+</ol>
+<p>This process repeats until a <strong>stopping criterion</strong> is satisfied, usually of the form:</p>
+<div class="math notranslate nohighlight">
+\[\|\nabla f(x)\|_2 \leq \epsilon\]</div>
+<p>For strongly convex functions, the convergence satisfies <span class="math notranslate nohighlight">\(f(x^{(k)}) - p^* \leq c^k (f(x^{(0)}) - p^*)\)</span>, where <span class="math notranslate nohighlight">\(c \in (0, 1)\)</span> depends on the minimum/maximum eigenvalues of the Hessian, the starting point, and the line search method.</p>
+</section>
+<section id="gradient-descent-step">
+<h3>Gradient Descent Step<a class="headerlink" href="#gradient-descent-step" title="Permalink to this heading">#</a></h3>
 <p>Since the gradient <span class="math notranslate nohighlight">\(\nabla f\)</span> points in the direction of the steepest increase, updating our variables in the opposite direction (<span class="math notranslate nohighlight">\(-\nabla f\)</span>) moves us down toward the minimum:</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{w} \leftarrow \mathbf{w} - \alpha \nabla J(\mathbf{w})\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> is the <strong>learning rate</strong> (step size).</p>
-<section id="python-implementation">
-<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="convergence-behavior-on-ill-conditioned-functions">
+<h3>Convergence Behavior on Ill-Conditioned Functions<a class="headerlink" href="#convergence-behavior-on-ill-conditioned-functions" title="Permalink to this heading">#</a></h3>
+<p>When the contour lines of a function are highly elongated (i.e., the Hessian has a very large condition number <span class="math notranslate nohighlight">\(\gamma \gg 1\)</span>), the gradient does not point directly towards the optimum. As a result, Gradient Descent exhibits a <strong>zig-zagging behavior</strong> and converges very slowly.</p>
+<p>For example, minimizing the quadratic function <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}(x_1^2 + \gamma x_2^2)\)</span> starting from <span class="math notranslate nohighlight">\(x^{(0)} = (\gamma, 1)\)</span> using exact line search yields the coordinates at step <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_1^{(k)} = \gamma \left( \frac{\gamma - 1}{\gamma + 1} \right)^k, \quad x_2^{(k)} = \left( -\frac{\gamma - 1}{\gamma + 1} \right)^k\]</div>
+<p>If <span class="math notranslate nohighlight">\(\gamma = 10\)</span>, convergence requires many small, zig-zagging steps to reach the optimum:</p>
+<a class="reference internal image-reference" href="../../_images/gradient_descent_zigzag.png"><img alt="Gradient Descent Zig-Zagging in Poorly Conditioned Quadratic Function" class="align-center" src="../../_images/gradient_descent_zigzag.png" style="width: 480px;" /></a>
+</section>
+<section id="line-search-strategies-backtracking-vs-exact">
+<h3>Line Search Strategies (Backtracking vs Exact)<a class="headerlink" href="#line-search-strategies-backtracking-vs-exact" title="Permalink to this heading">#</a></h3>
+<p>Choosing the correct step size <span class="math notranslate nohighlight">\(\alpha\)</span> at each iteration is crucial:</p>
+<ul class="simple">
+<li><p><strong>Exact Line Search</strong>: Minimizes the function along the search direction <span class="math notranslate nohighlight">\(p_k\)</span>. At each step, the next search direction is orthogonal to the previous one (<span class="math notranslate nohighlight">\(\nabla f(x_{k+1})^T \nabla f(x_k) = 0\)</span>).</p></li>
+<li><p><strong>Backtracking Line Search</strong>: An inexact line search method that starts with a large step size and decreases it exponentially (scaled by <span class="math notranslate nohighlight">\(\beta\)</span>) until it satisfies the Armijo condition. It is computationally cheaper and highly effective in practice:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/line_search_comparison.png"><img alt="Comparison of Line Search Strategies on a Non-Quadratic Function" class="align-center" src="../../_images/line_search_comparison.png" style="width: 480px;" /></a>
+</section>
+<section id="linear-convergence-on-semilog-plots">
+<h3>Linear Convergence on Semilog Plots<a class="headerlink" href="#linear-convergence-on-semilog-plots" title="Permalink to this heading">#</a></h3>
+<p>For strongly convex functions, the error <span class="math notranslate nohighlight">\(f(x^{(k)}) - p^*\)</span> decreases exponentially with <span class="math notranslate nohighlight">\(k\)</span>. This behavior is called <strong>linear convergence</strong>. When plotted on a semilogarithmic scale (where the y-axis is logarithmic and the x-axis is linear), this exponential decay appears as a straight line:</p>
+<a class="reference internal image-reference" href="../../_images/semilog_convergence_plot.png"><img alt="Linear Convergence on Semilog Plot" class="align-center" src="../../_images/semilog_convergence_plot.png" style="width: 480px;" /></a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="steepest-descent-method-general-norms">
+<h2>3. Steepest Descent Method (General Norms)<a class="headerlink" href="#steepest-descent-method-general-norms" title="Permalink to this heading">#</a></h2>
+<p>The <strong>Steepest Descent Method</strong> generalizes gradient descent by defining the descent step with respect to a general norm <span class="math notranslate nohighlight">\(\|\cdot\|\)</span>.</p>
+<section id="normalized-steepest-descent-direction">
+<h3>Normalized Steepest Descent Direction<a class="headerlink" href="#normalized-steepest-descent-direction" title="Permalink to this heading">#</a></h3>
+<p>The normalized steepest descent direction <span class="math notranslate nohighlight">\(\Delta x_{\text{nsd}}\)</span> is defined as the step of unit norm that minimizes the directional derivative of <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{nsd}} = \text{argmin} \{ \nabla f(x)^T v \mid \|v\| = 1 \}\]</div>
+<p>The unnormalized steepest descent step is scaled by the dual norm: <span class="math notranslate nohighlight">\(\Delta x_{\text{sd}} = \|\nabla f(x)\|_* \Delta x_{\text{nsd}}\)</span>, which satisfies <span class="math notranslate nohighlight">\(\nabla f(x)^T \Delta x_{\text{sd}} = -\|\nabla f(x)\|_*^2\)</span>.</p>
+</section>
+<section id="steepest-descent-directions-for-different-norms">
+<h3>Steepest Descent Directions for Different Norms<a class="headerlink" href="#steepest-descent-directions-for-different-norms" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Euclidean Norm (<span class="math notranslate nohighlight">\(\|\cdot\|_2\)</span>)</strong>: The steepest descent direction is the negative gradient:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -\nabla f(x)\]</div>
+</li>
+<li><p><strong>Quadratic Norm (<span class="math notranslate nohighlight">\(\|x\|_P = (x^T P x)^{1/2}\)</span>)</strong>: The steepest descent direction is:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -P^{-1} \nabla f(x)\]</div>
+<p>This is equivalent to performing standard gradient descent after a coordinate transformation (change of variables) <span class="math notranslate nohighlight">\(\bar{x} = P^{1/2} x\)</span>. By choosing <span class="math notranslate nohighlight">\(P \approx \nabla^2 f(x^*)\)</span>, we can align the coordinate system to eliminate ill-conditioning and dramatically speed up convergence.</p>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(\ell_1\)</span>-Norm (<span class="math notranslate nohighlight">\(\|\cdot\|_1\)</span>)</strong>: The steepest descent step updates only a single coordinate direction:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -\frac{\partial f(x)}{\partial x_i} e_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(i\)</span> is the index corresponding to the largest component of the gradient: <span class="math notranslate nohighlight">\(|\partial f(x)/\partial x_i| = \|\nabla f(x)\|_\infty\)</span>. This is the basis of coordinate descent methods.</p>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/steepest_descent_norms.png"><img alt="Unit Balls and Normalized Steepest Descent Directions" class="align-center" src="../../_images/steepest_descent_norms.png" style="width: 500px;" /></a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quadratic-optimization-with-sympy">
+<h2>4. Quadratic Optimization with SymPy<a class="headerlink" href="#quadratic-optimization-with-sympy" title="Permalink to this heading">#</a></h2>
 <p>Let’s minimize the function <span class="math notranslate nohighlight">\(f(x) = x^2 - 4x + 4\)</span> (which has a minimum at <span class="math notranslate nohighlight">\(x=2\)</span>, where the gradient is <span class="math notranslate nohighlight">\(2x-4\)</span>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>          <span class="c1"># Starting point</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
@@ -447,10 +534,9 @@ document.write(`
 </pre></div>
 </div>
 </section>
-</section>
 <hr class="docutils" />
-<section id="quadratic-optimization-with-sympy">
-<h2>3. Quadratic Optimization with SymPy<a class="headerlink" href="#quadratic-optimization-with-sympy" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h2>3. Quadratic Optimization with SymPy<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>We can use SymPy to find the analytical Hessian and determine the nature of critical points:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
 
@@ -563,11 +649,21 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-extrema-second-derivative-test">1. Local Extrema &amp; Second Derivative Test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent">2. Gradient Descent</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-descent-gradient-descent">2. General Descent &amp; Gradient Descent</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-descent-method">General Descent Method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-step">Gradient Descent Step</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-behavior-on-ill-conditioned-functions">Convergence Behavior on Ill-Conditioned Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-search-strategies-backtracking-vs-exact">Line Search Strategies (Backtracking vs Exact)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-convergence-on-semilog-plots">Linear Convergence on Semilog Plots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">3. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steepest-descent-method-general-norms">3. Steepest Descent Method (General Norms)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-steepest-descent-direction">Normalized Steepest Descent Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steepest-descent-directions-for-different-norms">Steepest Descent Directions for Different Norms</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-with-sympy">4. Quadratic Optimization with SymPy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3. Quadratic Optimization with SymPy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>

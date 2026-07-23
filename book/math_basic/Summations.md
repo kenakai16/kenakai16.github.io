@@ -17,6 +17,7 @@ Where:
 - $x_i$ represents the term to be added at index $i$.
 
 This expands to:
+
 $$\sum_{i=1}^{n} x_i = x_1 + x_2 + x_3 + \dots + x_n$$
 
 ### Example:
@@ -62,6 +63,7 @@ print("NumPy sum:", np_total)
 ```{admonition} Exercise 1
 :class: tip
 Evaluate the summation:
+
 $$\sum_{i=2}^{5} (2i - 1)$$
 ```
 
@@ -74,5 +76,6 @@ Expand the expression for $i = 2, 3, 4, 5$:
 - For $i=5$: $2(5) - 1 = 9$
 
 Sum the values:
+
 $$3 + 5 + 7 + 9 = 24$$
 ```

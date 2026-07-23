@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="None - Home"/>
-    <script>document.write(`<img src="../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="None - Home"/>`);</script>
+    <img src="../_static/book_logo.png" class="logo__image only-light" alt="None - Home"/>
+    <script>document.write(`<img src="../_static/book_logo.png" class="logo__image only-dark" alt="None - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 
 
@@ -182,6 +182,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
@@ -191,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
+
+
 
 
 
@@ -338,7 +343,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+                <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="visible nav section-nav flex-column">
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/intro">Introduction</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Number">Number</a></li>
@@ -351,9 +356,12 @@ document.write(`
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Summations">Summations</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Exponents">Exponents</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Logarithms">Logarithms</a></li>
-<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/LinearAlgebra">Linear Algebra Basics</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Calculus">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Integration">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/linear_algebra/intro">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav section-nav flex-column">
@@ -368,6 +376,8 @@ document.write(`
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/duality">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/gradient_descent">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/algorithms">Optimization Algorithms</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/interior_point">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/geometric_statistical">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/combinatorial">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -561,95 +571,73 @@ document.write(`
 </div>
 </div>
 <hr class="docutils" />
-<section id="reference-textbooks">
-<h2>📚 Reference Textbooks<a class="headerlink" href="#reference-textbooks" title="Permalink to this heading">#</a></h2>
-<p>Our content and structure draw inspiration from these highly recommended books:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📘 Applied Math</div>
-<p class="sd-card-text"><strong>Essential Math for Data Science</strong>
-<em>Thomas Nield</em> (O’Reilly, 2022)</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-📗 Mathematical Exercises</div>
-<p class="sd-card-text"><strong>1001 Math Problems</strong>
-<em>LearningExpress</em> (2nd Edition)</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<hr class="docutils" />
 <section id="blog-map-chapters">
 <h2>🗺️ Blog Map &amp; Chapters<a class="headerlink" href="#blog-map-chapters" title="Permalink to this heading">#</a></h2>
-<p>The content is organized into 9 key modules, guiding you from basic arithmetic to advanced machine learning foundations:</p>
+<p>The content is organized into 10 key modules, guiding you from basic arithmetic to advanced machine learning foundations:</p>
 <section id="part-1-basic-math-calculus">
 <h3>📖 Part 1: Basic Math &amp; Calculus<a class="headerlink" href="#part-1-basic-math-calculus" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fundamentals</strong>: Number systems, fractions, decimals, order of operations, and algebraic variables.</p></li>
 <li><p><strong>Functions &amp; Graphs</strong>: Linear and curvilinear functions, summations, exponents, and logarithms (featuring Euler’s number and the Rule of 72).</p></li>
-<li><p><strong>Advanced Core</strong>: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.</p></li>
+<li><p><strong>Calculus Core</strong>: Introductions to Calculus (derivatives, gradients) and Integration (Riemann sums, symbolic/numerical integration).</p></li>
 </ul>
 </section>
-<section id="part-2-probability-statistics">
-<h3>🎲 Part 2: Probability &amp; Statistics<a class="headerlink" href="#part-2-probability-statistics" title="Permalink to this heading">#</a></h3>
+<section id="part-2-linear-algebra">
+<h3>🧮 Part 2: Linear Algebra<a class="headerlink" href="#part-2-linear-algebra" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Linear Algebra</strong>: Vectors, matrices, matrix transpose, matrix multiplication, systems of linear equations, eigenvalues/eigenvectors, and diagonalization.</p></li>
+</ul>
+</section>
+<section id="part-3-probability-statistics">
+<h3>🎲 Part 3: Probability &amp; Statistics<a class="headerlink" href="#part-3-probability-statistics" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Probability</strong>: Core rules, joint and union probability, conditional probability, Bayes’ Theorem, and probability distributions (Binomial, Beta).</p></li>
 <li><p><strong>Statistics</strong>: Mean, median, mode, variance, standard deviation, and key statistical concepts.</p></li>
 </ul>
 </section>
-<section id="part-3-optimization">
-<h3>⚡ Part 3: Optimization<a class="headerlink" href="#part-3-optimization" title="Permalink to this heading">#</a></h3>
+<section id="part-4-optimization">
+<h3>⚡ Part 4: Optimization<a class="headerlink" href="#part-4-optimization" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Convexity</strong>: Convex sets, convex functions, and convex optimization problems.</p></li>
-<li><p><strong>Theory &amp; Algorithms</strong>: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.</p></li>
+<li><p><strong>Convexity</strong>: Convex sets, convex functions (including quasiconvexity, log-concavity, log-convexity, and <span class="math notranslate nohighlight">\(K\)</span>-convexity), and standard optimization problems (LP, QP, SOCP, SDP, GP).</p></li>
+<li><p><strong>Theory &amp; Algorithms</strong>: Duality (Lagrangian, KKT conditions), unconstrained/equality-constrained Newton’s methods, and Interior-Point algorithms.</p></li>
+<li><p><strong>Applications</strong>: Geometric &amp; statistical optimization (MLE, MAP, minimum ellipsoids) and combinatorial optimization.</p></li>
 </ul>
 </section>
-<section id="part-4-functional-analysis-measure-theory">
-<h3>🌀 Part 4: Functional Analysis &amp; Measure Theory<a class="headerlink" href="#part-4-functional-analysis-measure-theory" title="Permalink to this heading">#</a></h3>
+<section id="part-5-functional-analysis-measure-theory">
+<h3>🌀 Part 5: Functional Analysis &amp; Measure Theory<a class="headerlink" href="#part-5-functional-analysis-measure-theory" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Functional Analysis</strong>: Banach spaces, bounded linear operators, quotient spaces, Baire Category Theorem, and Hahn-Banach Theorem.</p></li>
 <li><p><strong>Measure Theory</strong>: Outer measure, <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras, Lebesgue measure, measurable functions, and simple functions.</p></li>
 </ul>
 </section>
-<section id="part-5-topology">
-<h3>🌐 Part 5: Topology<a class="headerlink" href="#part-5-topology" title="Permalink to this heading">#</a></h3>
+<section id="part-6-topology">
+<h3>🌐 Part 6: Topology<a class="headerlink" href="#part-6-topology" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>General Topology</strong>: Metric spaces, open sets, neighborhoods, compactness, and connectedness.</p></li>
 <li><p><strong>Manifolds</strong>: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).</p></li>
 <li><p><strong>Topological Data Analysis (TDA)</strong>: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).</p></li>
 </ul>
 </section>
-<section id="part-6-approximation-theory">
-<h3>📈 Part 6: Approximation Theory<a class="headerlink" href="#part-6-approximation-theory" title="Permalink to this heading">#</a></h3>
+<section id="part-7-approximation-theory">
+<h3>📈 Part 7: Approximation Theory<a class="headerlink" href="#part-7-approximation-theory" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fitting</strong>: Curve fitting, regression analysis, interpolation, and approximating continuous functions.</p></li>
 </ul>
 </section>
-<section id="part-7-machine-learning">
-<h3>🤖 Part 7: Machine Learning<a class="headerlink" href="#part-7-machine-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-8-machine-learning">
+<h3>🤖 Part 8: Machine Learning<a class="headerlink" href="#part-8-machine-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Math Foundations</strong>: Practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.</p></li>
 </ul>
 </section>
-<section id="part-8-deep-learning">
-<h3>🧠 Part 8: Deep Learning<a class="headerlink" href="#part-8-deep-learning" title="Permalink to this heading">#</a></h3>
+<section id="part-9-deep-learning">
+<h3>🧠 Part 9: Deep Learning<a class="headerlink" href="#part-9-deep-learning" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Neural Networks</strong>: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.</p></li>
 </ul>
 </section>
-<section id="part-9-recommended-reading">
-<h3>📚 Part 9: Recommended Reading<a class="headerlink" href="#part-9-recommended-reading" title="Permalink to this heading">#</a></h3>
+<section id="part-10-recommended-reading">
+<h3>📚 Part 10: Recommended Reading<a class="headerlink" href="#part-10-recommended-reading" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Reading</strong>: Our curated list of recommended textbook resources for mathematics and AI.</p></li>
 </ul>
@@ -677,7 +665,7 @@ document.write(`
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/Summations"><span class="doc">Summations</span></a></strong>: Iterative addition and using Sigma (<span class="math notranslate nohighlight">\(\sum\)</span>) notation in statistics and cost functions.</p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/Exponents"><span class="doc">Exponents</span></a></strong>: Understanding powers, square roots, and Euler’s constant.</p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/Logarithms"><span class="doc">Logarithms</span></a></strong>: Properties of logs, natural log, and log-transformations.</p></li>
-<li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/LinearAlgebra"><span class="doc">Linear Algebra Basics</span></a></strong>: Working with vectors, matrices, operations, and determinants.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/linear_algebra/intro"><span class="doc">Linear Algebra</span></a></strong>: Working with vectors, matrices, operations, and determinants.</p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/Calculus"><span class="doc">Calculus &amp; Derivatives</span></a></strong>: Exploring derivatives, partial derivatives, chain rule, and gradients.</p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/math_basic/Integration"><span class="doc">Integration</span></a></strong>: Learning about integrals, Riemann sums approximation, symbolic/numerical integration, and probability density functions.</p></li>
 </ul>
@@ -788,9 +776,10 @@ When the ratio of lengths of two line segments is an irrational number, the line
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Evaluate the expression using PEMDAS rules:
-$<span class="math notranslate nohighlight">\(12 - 3 \times (2 + 1)^2 \div 9 + 4\)</span>$
-Verify your answer with Python.</p>
+<p>Evaluate the expression using PEMDAS rules:</p>
+<div class="math notranslate nohighlight">
+\[12 - 3 \times (2 + 1)^2 \div 9 + 4\]</div>
+<p>Verify your answer with Python.</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -883,8 +872,9 @@ Verify your answer with Python.</p>
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Calculate:
-$<span class="math notranslate nohighlight">\(\frac{3}{4} \div \frac{2}{3} - \frac{1}{2}\)</span>$</p>
+<p>Calculate:</p>
+<div class="math notranslate nohighlight">
+\[\frac{3}{4} \div \frac{2}{3} - \frac{1}{2}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -908,13 +898,16 @@ $<span class="math notranslate nohighlight">\(\frac{3}{4} \div \frac{2}{3} - \fr
 <section id="decimals">
 <h4>1. Decimals<a class="headerlink" href="#decimals" title="Permalink to this heading">#</a></h4>
 <p>A decimal is a fraction whose denominator is a power of ten (10, 100, 1000, etc.), written using a decimal point.</p>
-<p>For example:
-$<span class="math notranslate nohighlight">\(\frac{7}{10} = 0.7\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(\frac{125}{1000} = 0.125\)</span>$</p>
+<p>For example:</p>
+<div class="math notranslate nohighlight">
+\[\frac{7}{10} = 0.7\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{125}{1000} = 0.125\]</div>
 <section id="repeating-decimals">
 <h5>Repeating Decimals<a class="headerlink" href="#repeating-decimals" title="Permalink to this heading">#</a></h5>
-<p>Some fractions produce infinitely repeating decimals:
-$<span class="math notranslate nohighlight">\(\frac{1}{3} = 0.3333\dots\)</span>$</p>
+<p>Some fractions produce infinitely repeating decimals:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{3} = 0.3333\dots\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -951,10 +944,12 @@ $<span class="math notranslate nohighlight">\(\frac{1}{3} = 0.3333\dots\)</span>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>Compute the proportion:
-$<span class="math notranslate nohighlight">\(\text{Accuracy} = \frac{45}{60} = 0.75\)</span><span class="math notranslate nohighlight">\(
-Convert to percentage:
-\)</span><span class="math notranslate nohighlight">\(0.75 \times 100\% = 75\%\)</span>$</p>
+<p>Compute the proportion:</p>
+<div class="math notranslate nohighlight">
+\[\text{Accuracy} = \frac{45}{60} = 0.75\]</div>
+<p>Convert to percentage:</p>
+<div class="math notranslate nohighlight">
+\[0.75 \times 100\% = 75\%\]</div>
 </div>
 </section>
 </section>
@@ -993,9 +988,10 @@ Convert to percentage:
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Evaluate the expression manually:
-$<span class="math notranslate nohighlight">\(10 - 2 \times (3 + 1)^2 \div 8 + 5\)</span>$
-Verify your answer with Python.</p>
+<p>Evaluate the expression manually:</p>
+<div class="math notranslate nohighlight">
+\[10 - 2 \times (3 + 1)^2 \div 8 + 5\]</div>
+<p>Verify your answer with Python.</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -1074,15 +1070,19 @@ Verify your answer with Python.</p>
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Solve the quadratic equation:
-$<span class="math notranslate nohighlight">\(x^2 - 4x - 5 = 0\)</span>$</p>
+<p>Solve the quadratic equation:</p>
+<div class="math notranslate nohighlight">
+\[x^2 - 4x - 5 = 0\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>Using coefficients <span class="math notranslate nohighlight">\(a=1, b=-4, c=-5\)</span>:
-$<span class="math notranslate nohighlight">\(x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4(1)(-5)}}{2(1)}\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(x = \frac{4 \pm \sqrt{16 + 20}}{2} = \frac{4 \pm \sqrt{36}}{2}\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(x_1 = \frac{4 + 6}{2} = 5, \quad x_2 = \frac{4 - 6}{2} = -1\)</span>$</p>
+<p>Using coefficients <span class="math notranslate nohighlight">\(a=1, b=-4, c=-5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4(1)(-5)}}{2(1)}\]</div>
+<div class="math notranslate nohighlight">
+\[x = \frac{4 \pm \sqrt{16 + 20}}{2} = \frac{4 \pm \sqrt{36}}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[x_1 = \frac{4 + 6}{2} = 5, \quad x_2 = \frac{4 - 6}{2} = -1\]</div>
 </div>
 </section>
 </section>
@@ -1111,8 +1111,9 @@ $<span class="math notranslate nohighlight">\(x = \frac{-(-4) \pm \sqrt{(-4)^2 -
 </li>
 <li><p><span class="math notranslate nohighlight">\(c\)</span> is the <strong>y-intercept</strong> (where the line crosses the y-axis, i.e., <span class="math notranslate nohighlight">\(f(0)\)</span>).</p></li>
 </ul>
-<p>In Machine Learning, this equation forms the basis of <strong>Simple Linear Regression</strong>, where <span class="math notranslate nohighlight">\(m\)</span> is the weight (<span class="math notranslate nohighlight">\(w\)</span>) and <span class="math notranslate nohighlight">\(c\)</span> is the bias (<span class="math notranslate nohighlight">\(b\)</span>):
-$<span class="math notranslate nohighlight">\(y = wx + b\)</span>$</p>
+<p>In Machine Learning, this equation forms the basis of <strong>Simple Linear Regression</strong>, where <span class="math notranslate nohighlight">\(m\)</span> is the weight (<span class="math notranslate nohighlight">\(w\)</span>) and <span class="math notranslate nohighlight">\(c\)</span> is the bias (<span class="math notranslate nohighlight">\(b\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[y = wx + b\]</div>
 </section>
 <hr class="docutils" />
 <section id="plotting-linear-functions-in-python">
@@ -1278,8 +1279,9 @@ $<span class="math notranslate nohighlight">\(y = wx + b\)</span>$</p>
 <li><p><span class="math notranslate nohighlight">\(n\)</span> is the <strong>upper limit</strong> (ending point).</p></li>
 <li><p><span class="math notranslate nohighlight">\(x_i\)</span> represents the term to be added at index <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
 </ul>
-<p>This expands to:
-$<span class="math notranslate nohighlight">\(\sum_{i=1}^{n} x_i = x_1 + x_2 + x_3 + \dots + x_n\)</span>$</p>
+<p>This expands to:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^{n} x_i = x_1 + x_2 + x_3 + \dots + x_n\]</div>
 <section id="example">
 <h5>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h5>
 <div class="math notranslate nohighlight">
@@ -1325,8 +1327,9 @@ $<span class="math notranslate nohighlight">\(\sum_{i=1}^{n} x_i = x_1 + x_2 + x
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Evaluate the summation:
-$<span class="math notranslate nohighlight">\(\sum_{i=2}^{5} (2i - 1)\)</span>$</p>
+<p>Evaluate the summation:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=2}^{5} (2i - 1)\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -1337,8 +1340,9 @@ $<span class="math notranslate nohighlight">\(\sum_{i=2}^{5} (2i - 1)\)</span>$<
 <li><p>For <span class="math notranslate nohighlight">\(i=4\)</span>: <span class="math notranslate nohighlight">\(2(4) - 1 = 7\)</span></p></li>
 <li><p>For <span class="math notranslate nohighlight">\(i=5\)</span>: <span class="math notranslate nohighlight">\(2(5) - 1 = 9\)</span></p></li>
 </ul>
-<p>Sum the values:
-$<span class="math notranslate nohighlight">\(3 + 5 + 7 + 9 = 24\)</span>$</p>
+<p>Sum the values:</p>
+<div class="math notranslate nohighlight">
+\[3 + 5 + 7 + 9 = 24\]</div>
 </div>
 </section>
 </section>
@@ -1356,8 +1360,9 @@ $<span class="math notranslate nohighlight">\(3 + 5 + 7 + 9 = 24\)</span>$</p>
 <li><p><span class="math notranslate nohighlight">\(x\)</span> is the <strong>base</strong>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(n\)</span> is the <strong>exponent</strong> (or power).</p></li>
 </ul>
-<p>This represents <span class="math notranslate nohighlight">\(x\)</span> multiplied by itself <span class="math notranslate nohighlight">\(n\)</span> times:
-$<span class="math notranslate nohighlight">\(3^4 = 3 \times 3 \times 3 \times 3 = 81\)</span>$</p>
+<p>This represents <span class="math notranslate nohighlight">\(x\)</span> multiplied by itself <span class="math notranslate nohighlight">\(n\)</span> times:</p>
+<div class="math notranslate nohighlight">
+\[3^4 = 3 \times 3 \times 3 \times 3 = 81\]</div>
 <section id="rules-of-exponents">
 <h5>Rules of Exponents<a class="headerlink" href="#rules-of-exponents" title="Permalink to this heading">#</a></h5>
 <p>Exponents follow specific algebraic properties:</p>
@@ -1395,8 +1400,9 @@ $<span class="math notranslate nohighlight">\(3^4 = 3 \times 3 \times 3 \times 3
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Simplify the expression:
-$<span class="math notranslate nohighlight">\(\frac{x^5 \cdot x^2}{x^3}\)</span>$</p>
+<p>Simplify the expression:</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^5 \cdot x^2}{x^3}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
@@ -1588,226 +1594,6 @@ $<span class="math notranslate nohighlight">\(\frac{x^5 \cdot x^2}{x^3}\)</span>
 </div>
 </section>
 </section>
-<span id="document-book/math_basic/LinearAlgebra"></span><section class="tex2jax_ignore mathjax_ignore" id="linear-algebra-basics">
-<h3>Linear Algebra Basics<a class="headerlink" href="#linear-algebra-basics" title="Permalink to this heading">#</a></h3>
-<p>Linear Algebra is the mathematical language of Machine Learning. It allows us to represent and perform calculations on large datasets efficiently using vectors and matrices.</p>
-<hr class="docutils" />
-<section id="vectors">
-<h4>1. Vectors<a class="headerlink" href="#vectors" title="Permalink to this heading">#</a></h4>
-<p>A <strong>vector</strong> is an ordered list of numbers. In Data Science, we represent a data point (or feature vector) as a vector.</p>
-<p>For example, a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^3\)</span> is written as:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}\end{split}\]</div>
-</section>
-<hr class="docutils" />
-<section id="matrices">
-<h4>2. Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h4>
-<p>A <strong>matrix</strong> is a 2D grid of numbers. We write an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> (having <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns) as:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{bmatrix} A_{11} &amp; A_{12} &amp; \dots &amp; A_{1n} \\ A_{21} &amp; A_{22} &amp; \dots &amp; A_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ A_{m1} &amp; A_{m2} &amp; \dots &amp; A_{mn} \end{bmatrix}\end{split}\]</div>
-<section id="matrix-transpose">
-<h5>Matrix Transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h5>
-<p>The transpose of a matrix <span class="math notranslate nohighlight">\(A\)</span> (written as <span class="math notranslate nohighlight">\(A^T\)</span>) is obtained by swapping its rows and columns:</p>
-<div class="math notranslate nohighlight">
-\[(A^T)_{ij} = A_{ji}\]</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="core-matrix-operations">
-<h4>3. Core Matrix Operations<a class="headerlink" href="#core-matrix-operations" title="Permalink to this heading">#</a></h4>
-<section id="matrix-multiplication">
-<h5>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h5>
-<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> is a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix, their product <span class="math notranslate nohighlight">\(C = AB\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix where each element is:</p>
-<div class="math notranslate nohighlight">
-\[C_{ij} = \sum_{k=1}^p A_{ik} B_{kj}\]</div>
-</section>
-<section id="identity-matrix">
-<h5>Identity Matrix<a class="headerlink" href="#identity-matrix" title="Permalink to this heading">#</a></h5>
-<p>The identity matrix <span class="math notranslate nohighlight">\(I\)</span> is a square matrix with ones on the main diagonal and zeros elsewhere:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}I = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\end{split}\]</div>
-<p>For any matrix <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(AI = IA = A\)</span>.</p>
-</section>
-<section id="determinant">
-<h5>Determinant<a class="headerlink" href="#determinant" title="Permalink to this heading">#</a></h5>
-<p>For a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix <span class="math notranslate nohighlight">\(A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span>, the determinant is:</p>
-<div class="math notranslate nohighlight">
-\[\det(A) = ad - bc\]</div>
-<p>If <span class="math notranslate nohighlight">\(\det(A) \neq 0\)</span>, the matrix has an inverse <span class="math notranslate nohighlight">\(A^{-1}\)</span> such that <span class="math notranslate nohighlight">\(A A^{-1} = I\)</span>.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="python-implementation-numpy">
-<h4>4. Python Implementation (NumPy)<a class="headerlink" href="#python-implementation-numpy" title="Permalink to this heading">#</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="c1"># Define matrices</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="c1"># 1. Matrix Multiplication</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>  <span class="c1"># or A @ B</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A @ B =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
-
-<span class="c1"># 2. Transpose</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transpose of A =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-
-<span class="c1"># 3. Determinant</span>
-<span class="n">det_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Determinant of A: </span><span class="si">{</span><span class="n">det_A</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="matrix-diagonalization">
-<h4>5. Matrix Diagonalization<a class="headerlink" href="#matrix-diagonalization" title="Permalink to this heading">#</a></h4>
-<p>Matrix Diagonalization is one of the most important concepts in Linear Algebra. It allows us to decompose a square matrix into a simpler diagonal form, making complex matrix operations (such as computing matrix powers) extremely fast and computationally efficient.</p>
-<section id="definition-of-diagonalization">
-<h5>Definition of Diagonalization<a class="headerlink" href="#definition-of-diagonalization" title="Permalink to this heading">#</a></h5>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix. We say <span class="math notranslate nohighlight">\(A\)</span> is <strong>diagonalizable</strong> if there exists an invertible matrix <span class="math notranslate nohighlight">\(P\)</span> and a diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[A = PDP^{-1}\]</div>
-<p>equivalently, <span class="math notranslate nohighlight">\(P^{-1}AP = D\)</span>.</p>
-<ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(D\)</span> (Diagonal Matrix)</strong>: A matrix whose off-diagonal entries are all zero. The diagonal entries of <span class="math notranslate nohighlight">\(D\)</span> are the <strong>eigenvalues</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(P\)</span> (Change of Basis Matrix)</strong>: A matrix whose columns are the <strong>eigenvectors</strong> of <span class="math notranslate nohighlight">\(A\)</span> corresponding to the eigenvalues in <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
-</ul>
-</section>
-<section id="eigenvalues-and-eigenvectors">
-<h5>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this heading">#</a></h5>
-<p>Before diagonalizing a matrix, we must find its eigenvalues and eigenvectors:</p>
-<ul class="simple">
-<li><p><strong>Eigenvalues (<span class="math notranslate nohighlight">\(\lambda\)</span>)</strong>: The scalars <span class="math notranslate nohighlight">\(\lambda\)</span> that satisfy the characteristic equation:
-$<span class="math notranslate nohighlight">\(\det(A - \lambda I) = 0\)</span><span class="math notranslate nohighlight">\(
-where \)</span>I$ is the identity matrix of the same size.</p></li>
-<li><p><strong>Eigenvectors (<span class="math notranslate nohighlight">\(v\)</span>)</strong>: The non-zero vectors <span class="math notranslate nohighlight">\(v\)</span> that satisfy:
-$<span class="math notranslate nohighlight">\((A - \lambda I)v = 0\)</span>$</p></li>
-</ul>
-</section>
-<section id="conditions-for-diagonalizability">
-<h5>Conditions for Diagonalizability<a class="headerlink" href="#conditions-for-diagonalizability" title="Permalink to this heading">#</a></h5>
-<p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable if and only if it has <strong><span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors</strong>.</p>
-<ul class="simple">
-<li><p><strong>Distinct Eigenvalues</strong>: If <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(n\)</span> distinct eigenvalues, it is guaranteed to be diagonalizable.</p></li>
-<li><p><strong>Repeated Eigenvalues</strong>: If eigenvalues are repeated (multiplicity <span class="math notranslate nohighlight">\(&gt; 1\)</span>), we must compare:</p>
-<ul>
-<li><p><strong>Algebraic Multiplicity</strong>: The number of times <span class="math notranslate nohighlight">\(\lambda\)</span> appears as a root of the characteristic polynomial.</p></li>
-<li><p><strong>Geometric Multiplicity</strong>: The number of linearly independent eigenvectors associated with <span class="math notranslate nohighlight">\(\lambda\)</span> (the dimension of the eigenspace).</p></li>
-<li><p><strong>Theorem</strong>: <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable if and only if the algebraic multiplicity equals the geometric multiplicity for every eigenvalue.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="step-by-step-diagonalization-process">
-<h5>Step-by-Step Diagonalization Process<a class="headerlink" href="#step-by-step-diagonalization-process" title="Permalink to this heading">#</a></h5>
-<ol class="arabic simple">
-<li><p><strong>Find the Eigenvalues</strong>: Solve the polynomial equation <span class="math notranslate nohighlight">\(\det(A - \lambda I) = 0\)</span> for <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
-<li><p><strong>Find the Eigenvectors</strong>: For each eigenvalue <span class="math notranslate nohighlight">\(\lambda_i\)</span>, solve the linear system <span class="math notranslate nohighlight">\((A - \lambda_i I)v = 0\)</span>.</p></li>
-<li><p><strong>Check Independence</strong>: Verify that the total number of linearly independent eigenvectors is <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
-<li><p><strong>Form <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(D\)</span></strong>:</p>
-<ul class="simple">
-<li><p>Place the eigenvectors as columns in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
-<li><p>Place the corresponding eigenvalues along the diagonal of <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
-<li><p><em>Important</em>: The order of eigenvalues in <span class="math notranslate nohighlight">\(D\)</span> must match the order of eigenvectors in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="numerical-example">
-<h5>Numerical Example<a class="headerlink" href="#numerical-example" title="Permalink to this heading">#</a></h5>
-<p>Let us diagonalize the matrix:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix} 4 &amp; 1 \\ 2 &amp; 3 \end{pmatrix}\end{split}\]</div>
-<section id="step-1-find-eigenvalues">
-<h6>Step 1: Find Eigenvalues<a class="headerlink" href="#step-1-find-eigenvalues" title="Permalink to this heading">#</a></h6>
-<p>We compute the characteristic determinant:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\det(A - \lambda I) = \det \begin{pmatrix} 4-\lambda &amp; 1 \\ 2 &amp; 3-\lambda \end{pmatrix} = (4-\lambda)(3-\lambda) - 2 = \lambda^2 - 7\lambda + 10 = 0\end{split}\]</div>
-<p>Solving the quadratic equation gives two distinct eigenvalues:</p>
-<div class="math notranslate nohighlight">
-\[\lambda_1 = 5, \quad \lambda_2 = 2\]</div>
-<p>Since the eigenvalues are distinct, <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable.</p>
-</section>
-<section id="step-2-find-eigenvectors">
-<h6>Step 2: Find Eigenvectors<a class="headerlink" href="#step-2-find-eigenvectors" title="Permalink to this heading">#</a></h6>
-<ul class="simple">
-<li><p><strong>For <span class="math notranslate nohighlight">\(\lambda_1 = 5\)</span></strong>: Solve <span class="math notranslate nohighlight">\((A - 5I)v = 0\)</span>:
-$<span class="math notranslate nohighlight">\(\begin{pmatrix} -1 &amp; 1 \\ 2 &amp; -2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies -x + y = 0 \implies x = y\)</span><span class="math notranslate nohighlight">\(
-Choosing \)</span>x = 1<span class="math notranslate nohighlight">\(, we obtain the eigenvector:
-\)</span><span class="math notranslate nohighlight">\(v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span>$</p></li>
-<li><p><strong>For <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span></strong>: Solve <span class="math notranslate nohighlight">\((A - 2I)v = 0\)</span>:
-$<span class="math notranslate nohighlight">\(\begin{pmatrix} 2 &amp; 1 \\ 2 &amp; 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies 2x + y = 0 \implies y = -2x\)</span><span class="math notranslate nohighlight">\(
-Choosing \)</span>x = 1<span class="math notranslate nohighlight">\(, we obtain the eigenvector:
-\)</span><span class="math notranslate nohighlight">\(v_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}\)</span>$</p></li>
-</ul>
-</section>
-<section id="step-3-form-p-and-d">
-<h6>Step 3: Form <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(D\)</span><a class="headerlink" href="#step-3-form-p-and-d" title="Permalink to this heading">#</a></h6>
-<p>We stack <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> as columns to form <span class="math notranslate nohighlight">\(P\)</span>, and place <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> on the diagonal of <span class="math notranslate nohighlight">\(D\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}P = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix}, \quad D = \begin{pmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{pmatrix}\end{split}\]</div>
-<p>Thus, <span class="math notranslate nohighlight">\(A\)</span> is diagonalized as <span class="math notranslate nohighlight">\(A = PDP^{-1}\)</span>.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="key-applications">
-<h5>Key Applications<a class="headerlink" href="#key-applications" title="Permalink to this heading">#</a></h5>
-<ol class="arabic simple">
-<li><p><strong>Computing Matrix Powers (<span class="math notranslate nohighlight">\(A^k\)</span>)</strong>:
-Multiplying a matrix by itself <span class="math notranslate nohighlight">\(k\)</span> times is computationally expensive. However, using diagonalization:
-$<span class="math notranslate nohighlight">\(A^k = (PDP^{-1})^k = P D^k P^{-1}\)</span><span class="math notranslate nohighlight">\(
-Since \)</span>D<span class="math notranslate nohighlight">\( is diagonal, \)</span>D^k<span class="math notranslate nohighlight">\( is computed instantly by raising its diagonal entries to the power of \)</span>k<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(D^k = \begin{pmatrix} 5^k &amp; 0 \\ 0 &amp; 2^k \end{pmatrix}\)</span>$</p></li>
-<li><p><strong>Machine Learning Foundations</strong>:
-Diagonalization and eigendecomposition form the mathematical backbone of <strong>Principal Component Analysis (PCA)</strong>, which is used for dimensionality reduction and feature extraction in high-dimensional datasets.</p></li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="python-implementation-with-numpy">
-<h5>Python Implementation with NumPy<a class="headerlink" href="#python-implementation-with-numpy" title="Permalink to this heading">#</a></h5>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="c1"># Define the matrix</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-
-<span class="c1"># Compute eigenvalues and eigenvectors</span>
-<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Eigenvectors (as columns):&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">)</span>
-
-<span class="c1"># Reconstruct A from P, D, P^-1 to verify</span>
-<span class="n">P</span> <span class="o">=</span> <span class="n">eigenvectors</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
-<span class="n">P_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
-
-<span class="n">A_reconstructed</span> <span class="o">=</span> <span class="n">P</span> <span class="o">@</span> <span class="n">D</span> <span class="o">@</span> <span class="n">P_inv</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reconstructed Matrix A:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A_reconstructed</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="exercises">
-<h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
-<div class="tip admonition">
-<p class="admonition-title">Exercise 1</p>
-<p>Multiply the two matrices:
-$<span class="math notranslate nohighlight">\(A = \begin{bmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 5 \end{bmatrix}\)</span>$</p>
-</div>
-<div class="dropdown admonition">
-<p class="admonition-title">Solution — Exercise 1</p>
-<p>Compute the dot product element by element:
-$<span class="math notranslate nohighlight">\(AB = \begin{bmatrix} (1 \cdot 2 + 3 \cdot 1) &amp; (1 \cdot 0 + 3 \cdot 5) \\ (2 \cdot 2 + 4 \cdot 1) &amp; (2 \cdot 0 + 4 \cdot 5) \end{bmatrix} = \begin{bmatrix} 5 &amp; 15 \\ 8 &amp; 20 \end{bmatrix}\)</span>$</p>
-</div>
-</section>
-</section>
 <span id="document-book/math_basic/Calculus"></span><section class="tex2jax_ignore mathjax_ignore" id="calculus-derivatives">
 <h3>Calculus &amp; Derivatives<a class="headerlink" href="#calculus-derivatives" title="Permalink to this heading">#</a></h3>
 <p>Calculus is the mathematical framework that allows us to understand change. In Machine Learning, calculus provides the engine (such as derivatives and the chain rule) that lets models evaluate and update their parameters.</p>
@@ -1888,18 +1674,21 @@ $<span class="math notranslate nohighlight">\(AB = \begin{bmatrix} (1 \cdot 2 + 
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2</p>
-<p>Apply the Chain Rule to find the derivative of:
-$<span class="math notranslate nohighlight">\(f(x) = (3x^2 + 1)^4\)</span>$</p>
+<p>Apply the Chain Rule to find the derivative of:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = (3x^2 + 1)^4\]</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 3</p>
-<p>Find the gradient vector <span class="math notranslate nohighlight">\(\nabla f(x, y)\)</span> of:
-$<span class="math notranslate nohighlight">\(f(x, y) = 3x^2y^3 + 2y\)</span>$</p>
+<p>Find the gradient vector <span class="math notranslate nohighlight">\(\nabla f(x, y)\)</span> of:</p>
+<div class="math notranslate nohighlight">
+\[f(x, y) = 3x^2y^3 + 2y\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>Using the Power and Sum rules:
-$<span class="math notranslate nohighlight">\(f'(x) = 5(3x^2) - 2(2x) + 0 = 15x^2 - 4x\)</span>$</p>
+<p>Using the Power and Sum rules:</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = 5(3x^2) - 2(2x) + 0 = 15x^2 - 4x\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 2</p>
@@ -1908,8 +1697,9 @@ $<span class="math notranslate nohighlight">\(f'(x) = 5(3x^2) - 2(2x) + 0 = 15x^
 <li><p><span class="math notranslate nohighlight">\(\frac{dy}{du} = 4u^3\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{du}{dx} = 6x\)</span></p></li>
 </ul>
-<p>Applying the Chain Rule:
-$<span class="math notranslate nohighlight">\(\frac{dy}{dx} = 4(3x^2 + 1)^3 \cdot 6x = 24x(3x^2 + 1)^3\)</span>$</p>
+<p>Applying the Chain Rule:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dx} = 4(3x^2 + 1)^3 \cdot 6x = 24x(3x^2 + 1)^3\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 3</p>
@@ -1918,8 +1708,9 @@ $<span class="math notranslate nohighlight">\(\frac{dy}{dx} = 4(3x^2 + 1)^3 \cdo
 <li><p><span class="math notranslate nohighlight">\(\frac{\partial f}{\partial x} = 6xy^3\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\frac{\partial f}{\partial y} = 9x^2y^2 + 2\)</span></p></li>
 </ul>
-<p>The gradient vector is:
-$<span class="math notranslate nohighlight">\(\nabla f(x, y) = \begin{bmatrix} 6xy^3 \\ 9x^2y^2 + 2 \end{bmatrix}\)</span>$</p>
+<p>The gradient vector is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla f(x, y) = \begin{bmatrix} 6xy^3 \\ 9x^2y^2 + 2 \end{bmatrix}\end{split}\]</div>
 </div>
 </section>
 </section>
@@ -2305,6 +2096,243 @@ P(-3 ≤ X ≤ 3) = 0.9973
 </section>
 </div>
 <div class="toctree-wrapper compound">
+<span id="document-book/linear_algebra/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="linear-algebra">
+<h3>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this heading">#</a></h3>
+<p>Linear Algebra is the mathematical language of Machine Learning. It allows us to represent and perform calculations on large datasets efficiently using vectors and matrices.</p>
+<hr class="docutils" />
+<section id="vectors">
+<h4>1. Vectors<a class="headerlink" href="#vectors" title="Permalink to this heading">#</a></h4>
+<p>A <strong>vector</strong> is an ordered list of numbers. In Data Science, we represent a data point (or feature vector) as a vector.</p>
+<p>For example, a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^3\)</span> is written as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="matrices">
+<h4>2. Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h4>
+<p>A <strong>matrix</strong> is a 2D grid of numbers. We write an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> (having <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns) as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} A_{11} &amp; A_{12} &amp; \dots &amp; A_{1n} \\ A_{21} &amp; A_{22} &amp; \dots &amp; A_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ A_{m1} &amp; A_{m2} &amp; \dots &amp; A_{mn} \end{bmatrix}\end{split}\]</div>
+<section id="matrix-transpose">
+<h5>Matrix Transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h5>
+<p>The transpose of a matrix <span class="math notranslate nohighlight">\(A\)</span> (written as <span class="math notranslate nohighlight">\(A^T\)</span>) is obtained by swapping its rows and columns:</p>
+<div class="math notranslate nohighlight">
+\[(A^T)_{ij} = A_{ji}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="core-matrix-operations">
+<h4>3. Core Matrix Operations<a class="headerlink" href="#core-matrix-operations" title="Permalink to this heading">#</a></h4>
+<section id="matrix-multiplication">
+<h5>Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h5>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> is a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix, their product <span class="math notranslate nohighlight">\(C = AB\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix where each element is:</p>
+<div class="math notranslate nohighlight">
+\[C_{ij} = \sum_{k=1}^p A_{ik} B_{kj}\]</div>
+</section>
+<section id="identity-matrix">
+<h5>Identity Matrix<a class="headerlink" href="#identity-matrix" title="Permalink to this heading">#</a></h5>
+<p>The identity matrix <span class="math notranslate nohighlight">\(I\)</span> is a square matrix with ones on the main diagonal and zeros elsewhere:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\end{split}\]</div>
+<p>For any matrix <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(AI = IA = A\)</span>.</p>
+</section>
+<section id="determinant">
+<h5>Determinant<a class="headerlink" href="#determinant" title="Permalink to this heading">#</a></h5>
+<p>For a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix <span class="math notranslate nohighlight">\(A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span>, the determinant is:</p>
+<div class="math notranslate nohighlight">
+\[\det(A) = ad - bc\]</div>
+<p>If <span class="math notranslate nohighlight">\(\det(A) \neq 0\)</span>, the matrix has an inverse <span class="math notranslate nohighlight">\(A^{-1}\)</span> such that <span class="math notranslate nohighlight">\(A A^{-1} = I\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-implementation-numpy">
+<h4>4. Python Implementation (NumPy)<a class="headerlink" href="#python-implementation-numpy" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Define matrices</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+
+<span class="c1"># 1. Matrix Multiplication</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>  <span class="c1"># or A @ B</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A @ B =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+
+<span class="c1"># 2. Transpose</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transpose of A =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># 3. Determinant</span>
+<span class="n">det_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Determinant of A: </span><span class="si">{</span><span class="n">det_A</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="matrix-diagonalization">
+<h4>5. Matrix Diagonalization<a class="headerlink" href="#matrix-diagonalization" title="Permalink to this heading">#</a></h4>
+<p>Matrix Diagonalization is one of the most important concepts in Linear Algebra. It allows us to decompose a square matrix into a simpler diagonal form, making complex matrix operations (such as computing matrix powers) extremely fast and computationally efficient.</p>
+<section id="definition-of-diagonalization">
+<h5>Definition of Diagonalization<a class="headerlink" href="#definition-of-diagonalization" title="Permalink to this heading">#</a></h5>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix. We say <span class="math notranslate nohighlight">\(A\)</span> is <strong>diagonalizable</strong> if there exists an invertible matrix <span class="math notranslate nohighlight">\(P\)</span> and a diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[A = PDP^{-1}\]</div>
+<p>equivalently, <span class="math notranslate nohighlight">\(P^{-1}AP = D\)</span>.</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(D\)</span> (Diagonal Matrix)</strong>: A matrix whose off-diagonal entries are all zero. The diagonal entries of <span class="math notranslate nohighlight">\(D\)</span> are the <strong>eigenvalues</strong> of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(P\)</span> (Change of Basis Matrix)</strong>: A matrix whose columns are the <strong>eigenvectors</strong> of <span class="math notranslate nohighlight">\(A\)</span> corresponding to the eigenvalues in <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+</ul>
+</section>
+<section id="eigenvalues-and-eigenvectors">
+<h5>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Permalink to this heading">#</a></h5>
+<p>Before diagonalizing a matrix, we must find its eigenvalues and eigenvectors:</p>
+<ul>
+<li><p><strong>Eigenvalues (<span class="math notranslate nohighlight">\(\lambda\)</span>)</strong>: The scalars <span class="math notranslate nohighlight">\(\lambda\)</span> that satisfy the characteristic equation:</p>
+<div class="math notranslate nohighlight">
+\[\det(A - \lambda I) = 0\]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the identity matrix of the same size.</p>
+</li>
+<li><p><strong>Eigenvectors (<span class="math notranslate nohighlight">\(v\)</span>)</strong>: The non-zero vectors <span class="math notranslate nohighlight">\(v\)</span> that satisfy:</p>
+<div class="math notranslate nohighlight">
+\[(A - \lambda I)v = 0\]</div>
+</li>
+</ul>
+</section>
+<section id="conditions-for-diagonalizability">
+<h5>Conditions for Diagonalizability<a class="headerlink" href="#conditions-for-diagonalizability" title="Permalink to this heading">#</a></h5>
+<p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable if and only if it has <strong><span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors</strong>.</p>
+<ul class="simple">
+<li><p><strong>Distinct Eigenvalues</strong>: If <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(n\)</span> distinct eigenvalues, it is guaranteed to be diagonalizable.</p></li>
+<li><p><strong>Repeated Eigenvalues</strong>: If eigenvalues are repeated (multiplicity <span class="math notranslate nohighlight">\(&gt; 1\)</span>), we must compare:</p>
+<ul>
+<li><p><strong>Algebraic Multiplicity</strong>: The number of times <span class="math notranslate nohighlight">\(\lambda\)</span> appears as a root of the characteristic polynomial.</p></li>
+<li><p><strong>Geometric Multiplicity</strong>: The number of linearly independent eigenvectors associated with <span class="math notranslate nohighlight">\(\lambda\)</span> (the dimension of the eigenspace).</p></li>
+<li><p><strong>Theorem</strong>: <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable if and only if the algebraic multiplicity equals the geometric multiplicity for every eigenvalue.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="step-by-step-diagonalization-process">
+<h5>Step-by-Step Diagonalization Process<a class="headerlink" href="#step-by-step-diagonalization-process" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>Find the Eigenvalues</strong>: Solve the polynomial equation <span class="math notranslate nohighlight">\(\det(A - \lambda I) = 0\)</span> for <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
+<li><p><strong>Find the Eigenvectors</strong>: For each eigenvalue <span class="math notranslate nohighlight">\(\lambda_i\)</span>, solve the linear system <span class="math notranslate nohighlight">\((A - \lambda_i I)v = 0\)</span>.</p></li>
+<li><p><strong>Check Independence</strong>: Verify that the total number of linearly independent eigenvectors is <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><strong>Form <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(D\)</span></strong>:</p>
+<ul class="simple">
+<li><p>Place the eigenvectors as columns in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p>Place the corresponding eigenvalues along the diagonal of <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
+<li><p><em>Important</em>: The order of eigenvalues in <span class="math notranslate nohighlight">\(D\)</span> must match the order of eigenvectors in <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="numerical-example">
+<h5>Numerical Example<a class="headerlink" href="#numerical-example" title="Permalink to this heading">#</a></h5>
+<p>Let us diagonalize the matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix} 4 &amp; 1 \\ 2 &amp; 3 \end{pmatrix}\end{split}\]</div>
+<section id="step-1-find-eigenvalues">
+<h6>Step 1: Find Eigenvalues<a class="headerlink" href="#step-1-find-eigenvalues" title="Permalink to this heading">#</a></h6>
+<p>We compute the characteristic determinant:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det(A - \lambda I) = \det \begin{pmatrix} 4-\lambda &amp; 1 \\ 2 &amp; 3-\lambda \end{pmatrix} = (4-\lambda)(3-\lambda) - 2 = \lambda^2 - 7\lambda + 10 = 0\end{split}\]</div>
+<p>Solving the quadratic equation gives two distinct eigenvalues:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_1 = 5, \quad \lambda_2 = 2\]</div>
+<p>Since the eigenvalues are distinct, <span class="math notranslate nohighlight">\(A\)</span> is diagonalizable.</p>
+</section>
+<section id="step-2-find-eigenvectors">
+<h6>Step 2: Find Eigenvectors<a class="headerlink" href="#step-2-find-eigenvectors" title="Permalink to this heading">#</a></h6>
+<ul>
+<li><p><strong>For <span class="math notranslate nohighlight">\(\lambda_1 = 5\)</span></strong>: Solve <span class="math notranslate nohighlight">\((A - 5I)v = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} -1 &amp; 1 \\ 2 &amp; -2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies -x + y = 0 \implies x = y\end{split}\]</div>
+<p>Choosing <span class="math notranslate nohighlight">\(x = 1\)</span>, we obtain the eigenvector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\end{split}\]</div>
+</li>
+<li><p><strong>For <span class="math notranslate nohighlight">\(\lambda_2 = 2\)</span></strong>: Solve <span class="math notranslate nohighlight">\((A - 2I)v = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 2 &amp; 1 \\ 2 &amp; 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies 2x + y = 0 \implies y = -2x\end{split}\]</div>
+<p>Choosing <span class="math notranslate nohighlight">\(x = 1\)</span>, we obtain the eigenvector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}\end{split}\]</div>
+</li>
+</ul>
+</section>
+<section id="step-3-form-p-and-d">
+<h6>Step 3: Form <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(D\)</span><a class="headerlink" href="#step-3-form-p-and-d" title="Permalink to this heading">#</a></h6>
+<p>We stack <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> as columns to form <span class="math notranslate nohighlight">\(P\)</span>, and place <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> on the diagonal of <span class="math notranslate nohighlight">\(D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix}, \quad D = \begin{pmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{pmatrix}\end{split}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(A\)</span> is diagonalized as <span class="math notranslate nohighlight">\(A = PDP^{-1}\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-applications">
+<h5>Key Applications<a class="headerlink" href="#key-applications" title="Permalink to this heading">#</a></h5>
+<ol class="arabic">
+<li><p><strong>Computing Matrix Powers (<span class="math notranslate nohighlight">\(A^k\)</span>)</strong>:
+Multiplying a matrix by itself <span class="math notranslate nohighlight">\(k\)</span> times is computationally expensive. However, using diagonalization:</p>
+<div class="math notranslate nohighlight">
+\[A^k = (PDP^{-1})^k = P D^k P^{-1}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(D\)</span> is diagonal, <span class="math notranslate nohighlight">\(D^k\)</span> is computed instantly by raising its diagonal entries to the power of <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D^k = \begin{pmatrix} 5^k &amp; 0 \\ 0 &amp; 2^k \end{pmatrix}\end{split}\]</div>
+</li>
+<li><p><strong>Machine Learning Foundations</strong>:
+Diagonalization and eigendecomposition form the mathematical backbone of <strong>Principal Component Analysis (PCA)</strong>, which is used for dimensionality reduction and feature extraction in high-dimensional datasets.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="python-implementation-with-numpy">
+<h5>Python Implementation with NumPy<a class="headerlink" href="#python-implementation-with-numpy" title="Permalink to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Define the matrix</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+
+<span class="c1"># Compute eigenvalues and eigenvectors</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Eigenvectors (as columns):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">)</span>
+
+<span class="c1"># Reconstruct A from P, D, P^-1 to verify</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">eigenvectors</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+<span class="n">P_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="n">A_reconstructed</span> <span class="o">=</span> <span class="n">P</span> <span class="o">@</span> <span class="n">D</span> <span class="o">@</span> <span class="n">P_inv</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reconstructed Matrix A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_reconstructed</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="exercises">
+<h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Multiply the two matrices:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 5 \end{bmatrix}\end{split}\]</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution — Exercise 1</p>
+<p>Compute the dot product element by element:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB = \begin{bmatrix} (1 \cdot 2 + 3 \cdot 1) &amp; (1 \cdot 0 + 3 \cdot 5) \\ (2 \cdot 2 + 4 \cdot 1) &amp; (2 \cdot 0 + 4 \cdot 5) \end{bmatrix} = \begin{bmatrix} 5 &amp; 15 \\ 8 &amp; 20 \end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
 <span id="document-book/probability/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="probability">
 <h3>Probability<a class="headerlink" href="#probability" title="Permalink to this heading">#</a></h3>
 <p>Probability is the study of uncertainty. In data science and machine learning, we use probability to build models under uncertainty, estimate parameters, evaluate classifiers (using metrics like precision and recall), and build complex systems like Naive Bayes classifiers or Bayesian networks.</p>
@@ -2507,8 +2535,9 @@ P(-3 ≤ X ≤ 3) = 0.9973
 <section id="law-of-large-numbers">
 <h4>5. Law of Large Numbers<a class="headerlink" href="#law-of-large-numbers" title="Permalink to this heading">#</a></h4>
 <p>The <strong>Law of Large Numbers (LLN)</strong> is a fundamental theorem in probability. It states that as the number of independent trials increases, the empirical average (observed average) of the results converges to the theoretical expected value.</p>
-<p>For example, when rolling a fair 6-sided die, the theoretical average of a roll is:
-$<span class="math notranslate nohighlight">\(\text{Expected Value} = \frac{1+2+3+4+5+6}{6} = 3.5\)</span>$</p>
+<p>For example, when rolling a fair 6-sided die, the theoretical average of a roll is:</p>
+<div class="math notranslate nohighlight">
+\[\text{Expected Value} = \frac{1+2+3+4+5+6}{6} = 3.5\]</div>
 <p>If you roll the die 10 times, your average roll might be <span class="math notranslate nohighlight">\(2.8\)</span> or <span class="math notranslate nohighlight">\(4.2\)</span>. However, if you roll it 10,000 times, the average will be extremely close to <span class="math notranslate nohighlight">\(3.5\)</span>.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/lln_simulation.gif"><img alt="Law of Large Numbers Simulation" class="bg-primary mb-1 align-center" src="../_images/lln_simulation.gif" style="width: 85%;" /></a>
 <section id="python-simulation">
@@ -2920,14 +2949,16 @@ Perform a two-sample z-test for proportions to see if the green button performs 
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Classify the following optimization problem (find if it is LP, Least-Squares, or Nonlinear):
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad (3x_1 + x_2 - 5)^2 + (x_1 - 2x_2 + 1)^2\)</span>$</p>
+<p>Classify the following optimization problem (find if it is LP, Least-Squares, or Nonlinear):</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad (3x_1 + x_2 - 5)^2 + (x_1 - 2x_2 + 1)^2\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>This objective is a sum of squared linear terms:
-$<span class="math notranslate nohighlight">\(f(x) = \|Ax - b\|_2^2\)</span><span class="math notranslate nohighlight">\(
-Where \)</span>A = \begin{bmatrix} 3 &amp; 1 \ 1 &amp; -2 \end{bmatrix}<span class="math notranslate nohighlight">\( and \)</span>b = \begin{bmatrix} 5 \ -1 \end{bmatrix}$.
+<p>This objective is a sum of squared linear terms:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \|Ax - b\|_2^2\]</div>
+<p>Where <span class="math notranslate nohighlight">\(A = \begin{bmatrix} 3 &amp; 1 \\ 1 &amp; -2 \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(b = \begin{bmatrix} 5 \\ -1 \end{bmatrix}\)</span>.
 Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </div>
 </section>
@@ -2992,8 +3023,9 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 <p>The conjugate function <span class="math notranslate nohighlight">\(f^*\)</span> is <strong>always convex</strong>, even if the original function <span class="math notranslate nohighlight">\(f\)</span> is not convex, because it is the pointwise supremum of a family of affine functions of <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <section id="example">
 <h6>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h6>
-<p>For <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2} x^T Q x\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is symmetric positive definite:
-$<span class="math notranslate nohighlight">\(f^*(y) = \frac{1}{2} y^T Q^{-1} y\)</span>$</p>
+<p>For <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2} x^T Q x\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is symmetric positive definite:</p>
+<div class="math notranslate nohighlight">
+\[f^*(y) = \frac{1}{2} y^T Q^{-1} y\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -3002,22 +3034,85 @@ $<span class="math notranslate nohighlight">\(f^*(y) = \frac{1}{2} y^T Q^{-1} y\
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>quasiconvex</strong> (or unimodal) if its domain and all its <strong>sublevel sets</strong> are convex:</p>
 <div class="math notranslate nohighlight">
 \[S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}\]</div>
-<p>For a quasiconvex function, any point between two points cannot have a value higher than the maximum of the two points:
-$<span class="math notranslate nohighlight">\(f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))\)</span>$</p>
-<ul class="simple">
-<li><p><em>Example</em>: <span class="math notranslate nohighlight">\(f(x) = \sqrt{|x|}\)</span> is quasiconvex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (but not convex).</p></li>
-</ul>
+<section id="modified-jensen-s-inequality">
+<h6>Modified Jensen’s Inequality<a class="headerlink" href="#modified-jensen-s-inequality" title="Permalink to this heading">#</a></h6>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is quasiconvex if and only if its domain is convex and for any <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))\]</div>
+</section>
+<section id="first-order-condition-for-quasiconvexity">
+<h6>First-order Condition for Quasiconvexity<a class="headerlink" href="#first-order-condition-for-quasiconvexity" title="Permalink to this heading">#</a></h6>
+<p>A differentiable function <span class="math notranslate nohighlight">\(f\)</span> with convex domain is quasiconvex if and only if:</p>
+<div class="math notranslate nohighlight">
+\[f(y) \leq f(x) \implies \nabla f(x)^T (y-x) \leq 0 \quad \text{for all } x, y \in \text{dom } f\]</div>
+<p>This means that if we move in a direction that decreases the function value, the directional derivative must be negative or zero.</p>
+</section>
+<section id="key-property-sums">
+<h6>Key Property: Sums<a class="headerlink" href="#key-property-sums" title="Permalink to this heading">#</a></h6>
+<p>Unlike convex functions, the sum of two quasiconvex functions is <strong>not necessarily quasiconvex</strong>. For example, the functions:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x^3 \quad \text{and} \quad g(x) = -x\]</div>
+<p>are both quasiconvex on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, but their sum:</p>
+<div class="math notranslate nohighlight">
+\[(f+g)(x) = x^3 - x\]</div>
+<p>is not (it is not unimodal and has multiple local extrema on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>).</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="log-concave-and-log-convex-functions-3-5">
 <h5>5. Log-Concave and Log-Convex Functions (3.5)<a class="headerlink" href="#log-concave-and-log-convex-functions-3-5" title="Permalink to this heading">#</a></h5>
-<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function.
-Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>log-convex</strong> if <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is convex.</p>
-<section id="probability-applications">
-<h6>Probability Applications:<a class="headerlink" href="#probability-applications" title="Permalink to this heading">#</a></h6>
-<p>Many common probability density functions (PDFs) are log-concave, which makes maximum likelihood estimation (MLE) solvable as a convex optimization problem:</p>
+<p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and the logarithm <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function:</p>
+<div class="math notranslate nohighlight">
+\[f(\theta x + (1-\theta)y) \geq f(x)^\theta f(y)^{1-\theta} \quad \text{for } 0 \leq \theta \leq 1\]</div>
+<p>Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>log-convex</strong> if <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is convex.</p>
+<section id="second-order-condition-for-log-concavity">
+<h6>Second-order Condition for Log-Concavity<a class="headerlink" href="#second-order-condition-for-log-concavity" title="Permalink to this heading">#</a></h6>
+<p>A twice-differentiable function <span class="math notranslate nohighlight">\(f\)</span> with convex domain is log-concave if and only if:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \nabla^2 f(x) \preceq \nabla f(x) \nabla f(x)^T \quad \text{for all } x \in \text{dom } f\]</div>
+</section>
+<section id="id1">
+<h6>Important Examples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h6>
+<ul>
+<li><p><strong>Powers</strong>: <span class="math notranslate nohighlight">\(f(x) = x^a\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}_{++}\)</span> is log-convex for <span class="math notranslate nohighlight">\(a \leq 0\)</span>, and log-concave for <span class="math notranslate nohighlight">\(a \geq 0\)</span>.</p></li>
+<li><p><strong>Normal Distribution</strong>: The Gaussian PDF is log-concave.</p></li>
+<li><p><strong>Cumulative Gaussian Distribution</strong>: The cumulative distribution function is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-u^2/2} \, du\]</div>
+</li>
+</ul>
+</section>
+<section id="properties-and-integration">
+<h6>Properties and Integration<a class="headerlink" href="#properties-and-integration" title="Permalink to this heading">#</a></h6>
+<ul>
+<li><p><strong>Product &amp; Sum Rules</strong>:</p>
 <ul class="simple">
-<li><p><strong>Normal Distribution</strong>: <span class="math notranslate nohighlight">\(f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</span> is log-concave.</p></li>
+<li><p>The product of log-concave functions is log-concave.</p></li>
+<li><p>The sum of log-concave functions is <strong>not always</strong> log-concave.</p></li>
+</ul>
+</li>
+<li><p><strong>Integration Theorem</strong>: If <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}\)</span> is log-concave, then the marginal integral function:</p>
+<div class="math notranslate nohighlight">
+\[g(x) = \int f(x, y) \, dy\]</div>
+<p>is log-concave.</p>
+</li>
+<li><p><strong>Consequences</strong>:</p>
+<ul>
+<li><p><strong>Convolution</strong>: The convolution of two log-concave functions is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[(f * g)(x) = \int f(x-y)g(y) \, dy\]</div>
+</li>
+<li><p><strong>Probability over Convex Sets</strong>: If <span class="math notranslate nohighlight">\(y\)</span> is a random variable with a log-concave PDF, the probability that <span class="math notranslate nohighlight">\(x+y\)</span> lies in a convex set <span class="math notranslate nohighlight">\(C\)</span> is log-concave in <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \text{prob}(x+y \in C)\]</div>
+</li>
+<li><p><strong>Yield Function Example</strong>: In manufacturing, the yield function (where <span class="math notranslate nohighlight">\(x\)</span> represents nominal parameters, <span class="math notranslate nohighlight">\(w\)</span> is random variation, and <span class="math notranslate nohighlight">\(S\)</span> is the set of acceptable values) is log-concave:</p>
+<div class="math notranslate nohighlight">
+\[Y(x) = \text{prob}(x+w \in S)\]</div>
+<p>Therefore, the yield regions <span class="math notranslate nohighlight">\(\{x \mid Y(x) \geq \alpha\}\)</span> are convex sets.</p>
+</li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
@@ -3031,6 +3126,21 @@ Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>lo
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \preceq_K \theta f(x) + (1-\theta) f(y)\]</div>
 <p>This maps the classical definition of convexity to vector-valued functions using cone-based ordering relations.</p>
+<section id="example-matrix-square">
+<h6>Example: Matrix Square<a class="headerlink" href="#example-matrix-square" title="Permalink to this heading">#</a></h6>
+<p>The matrix square function <span class="math notranslate nohighlight">\(f: \mathbb{S}^m \to \mathbb{S}^m\)</span>, defined as <span class="math notranslate nohighlight">\(f(X) = X^2\)</span>, is <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>-convex.</p>
+<p><strong>Proof</strong>:
+For any fixed vector <span class="math notranslate nohighlight">\(z \in \mathbb{R}^m\)</span>, we can evaluate the scalar function:</p>
+<div class="math notranslate nohighlight">
+\[g(X) = z^T X^2 z = z^T X X z = \| X z \|_2^2\]</div>
+<p>Since the Euclidean norm is convex, <span class="math notranslate nohighlight">\(g(X) = \| X z \|_2^2\)</span> is a convex function of <span class="math notranslate nohighlight">\(X\)</span>. Therefore, for all <span class="math notranslate nohighlight">\(X, Y \in \mathbb{S}^m\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z^T (\theta X + (1-\theta) Y)^2 z \leq \theta z^T X^2 z + (1-\theta) z^T Y^2 z\]</div>
+<p>Since this inequality holds for all vectors <span class="math notranslate nohighlight">\(z \in \mathbb{R}^m\)</span>, by definition of the positive semidefinite cone <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>, it implies:</p>
+<div class="math notranslate nohighlight">
+\[(\theta X + (1-\theta) Y)^2 \preceq_{\mathbb{S}^m_+} \theta X^2 + (1-\theta) Y^2\]</div>
+<p>This proves that <span class="math notranslate nohighlight">\(f(X) = X^2\)</span> is indeed <span class="math notranslate nohighlight">\(\mathbb{S}^m_+\)</span>-convex.</p>
+</section>
 </section>
 </section>
 <hr class="docutils" />
@@ -3038,17 +3148,20 @@ Similarly, <span class="math notranslate nohighlight">\(f\)</span> is <strong>lo
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Find the conjugate function <span class="math notranslate nohighlight">\(f^*(y)\)</span> of the negative entropy function:
-$<span class="math notranslate nohighlight">\(f(x) = x \ln x \quad (\text{domain } x &gt; 0)\)</span>$</p>
+<p>Find the conjugate function <span class="math notranslate nohighlight">\(f^*(y)\)</span> of the negative entropy function:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = x \ln x \quad (\text{domain } x &gt; 0)\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
 <p>The conjugate is defined as <span class="math notranslate nohighlight">\(f^*(y) = \sup_{x &gt; 0} (yx - x \ln x)\)</span>.
-To find the supremum, take the derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> and set to zero:
-$<span class="math notranslate nohighlight">\(\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
-Substitute \)</span>x^<em><span class="math notranslate nohighlight">\( back into the equation:
-\)</span><span class="math notranslate nohighlight">\(f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}\)</span><span class="math notranslate nohighlight">\(
-Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
+To find the supremum, take the derivative with respect to <span class="math notranslate nohighlight">\(x\)</span> and set to zero:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}\]</div>
+<p>Substitute <span class="math notranslate nohighlight">\(x^*\)</span> back into the equation:</p>
+<div class="math notranslate nohighlight">
+\[f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}\]</div>
+<p>Thus, the conjugate function is <span class="math notranslate nohighlight">\(f^*(y) = e^{y-1}\)</span>.</p>
 </div>
 </section>
 </section>
@@ -3110,8 +3223,8 @@ Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
 <p>LPs are widely used in operations research, logistics, and resource allocation.</p>
 </section>
 <hr class="docutils" />
-<section id="quadratic-optimization-problems-qp-4-4">
-<h4>4. Quadratic Optimization Problems - QP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-4-4" title="Permalink to this heading">#</a></h4>
+<section id="quadratic-optimization-problems-qp-qcqp-4-4">
+<h4>4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp-4-4" title="Permalink to this heading">#</a></h4>
 <p>A <strong>Quadratic Program (QP)</strong> has a convex quadratic objective and affine constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -3119,30 +3232,101 @@ Thus, the conjugate function is \)</span>f^</em>(y) = e^{y-1}$.</p>
 \text{subject to} \quad &amp; Gx \leq h \\
 &amp; Ax = b
 \end{aligned}\end{split}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive semi-definite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>). If the inequality constraints are also quadratic, it is called a <strong>Quadratically Constrained Quadratic Program (QCQP)</strong>.</p>
+<p>Where <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive semi-definite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>).</p>
+<section id="quadratically-constrained-quadratic-program-qcqp">
+<h5>Quadratically Constrained Quadratic Program (QCQP)<a class="headerlink" href="#quadratically-constrained-quadratic-program-qcqp" title="Permalink to this heading">#</a></h5>
+<p>If the inequality constraints are also quadratic, the problem is a <strong>QCQP</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \frac{1}{2} x^T P_0 x + q_0^T x + r_0 \\
+\text{subject to} \quad &amp; \frac{1}{2} x^T P_i x + q_i^T x + r_i \leq 0, \quad i=1, \dots, m \\
+&amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_0, P_1, \dots, P_m \succeq 0\)</span>. QCQPs are used in robust design and signal processing.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="second-order-cone-programming-socp">
+<h4>5. Second-Order Cone Programming - SOCP<a class="headerlink" href="#second-order-cone-programming-socp" title="Permalink to this heading">#</a></h4>
+<p>A <strong>Second-Order Cone Program (SOCP)</strong> is a generalization of QPs and QCQPs. It allows constraints that require a vector to lie within a second-order cone (also known as the Lorentz or ice-cream cone):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f^T x \\
+\text{subject to} \quad &amp; \| A_i x + b_i \|_2 \leq c_i^T x + d_i, \quad i=1, \dots, m \\
+&amp; F x = g
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(A_i \in \mathbb{R}^{n_i \times n}\)</span>, <span class="math notranslate nohighlight">\(b_i \in \mathbb{R}^{n_i}\)</span>, <span class="math notranslate nohighlight">\(c_i \in \mathbb{R}^n\)</span>, and <span class="math notranslate nohighlight">\(d_i \in \mathbb{R}\)</span>.</p>
+<section id="second-order-cone-constraint">
+<h5>Second-Order Cone Constraint<a class="headerlink" href="#second-order-cone-constraint" title="Permalink to this heading">#</a></h5>
+<p>The constraint <span class="math notranslate nohighlight">\(\| A_i x + b_i \|_2 \leq c_i^T x + d_i\)</span> requires the affine combination <span class="math notranslate nohighlight">\((A_i x + b_i, c_i^T x + d_i)\)</span> to lie in the second-order cone:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{K}_i = \{ (y, t) \in \mathbb{R}^{n_i} \times \mathbb{R} \mid \|y\|_2 \leq t \}\]</div>
+<p>SOCPs are widely applied in portfolio optimization with tracking error constraints, filter design, and robust linear programming under ellipsoidal uncertainty.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="semidefinite-programming-sdp">
+<h4>6. Semidefinite Programming - SDP<a class="headerlink" href="#semidefinite-programming-sdp" title="Permalink to this heading">#</a></h4>
+<p>A <strong>Semidefinite Program (SDP)</strong> is an optimization problem where the variables are symmetric matrices constrained to be positive semidefinite:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; x_1 F_1 + x_2 F_2 + \dots + x_n F_n \preceq F_0 \\
+&amp; A x = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>, and <span class="math notranslate nohighlight">\(F_0, F_1, \dots, F_n\)</span> are symmetric matrices in <span class="math notranslate nohighlight">\(\mathbb{S}^k\)</span> (the space of symmetric <span class="math notranslate nohighlight">\(k \times k\)</span> matrices).</p>
+<section id="linear-matrix-inequality-lmi">
+<h5>Linear Matrix Inequality (LMI)<a class="headerlink" href="#linear-matrix-inequality-lmi" title="Permalink to this heading">#</a></h5>
+<p>The constraint <span class="math notranslate nohighlight">\(x_1 F_1 + x_2 F_2 + \dots + x_n F_n \preceq F_0\)</span> is called a <strong>Linear Matrix Inequality (LMI)</strong>. The symbol <span class="math notranslate nohighlight">\(\preceq\)</span> denotes matrix inequality, meaning:</p>
+<div class="math notranslate nohighlight">
+\[F_0 - \sum_{i=1}^n x_i F_i \succeq 0 \quad (\text{is Positive Semidefinite})\]</div>
+<p>SDPs generalize LPs and SOCPs. They are foundational in control theory (Lyapunov stability), structural design, and machine learning (kernel matrix learning and maximum variance unfolding).</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="geometric-programming-gp-4-5">
-<h4>5. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h4>
-<p>A <strong>Geometric Program (GP)</strong> involves objective and constraint functions that are posynomials (sums of monomials).
-A monomial has the form <span class="math notranslate nohighlight">\(cx_1^{a_1}x_2^{a_2}\dots x_n^{a_n}\)</span> where <span class="math notranslate nohighlight">\(c &gt; 0\)</span>.</p>
-<p>Although GPs are not convex in their original form, they can be transformed into convex problems using a change of variables <span class="math notranslate nohighlight">\(y_i = \ln(x_i)\)</span> and taking the logarithm of the objective and constraints.</p>
+<h4>7. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h4>
+<p>A <strong>Geometric Program (GP)</strong> is an optimization problem involving objective and constraint functions that are posynomials.</p>
+<section id="monomials-and-posynomials">
+<h5>Monomials and Posynomials<a class="headerlink" href="#monomials-and-posynomials" title="Permalink to this heading">#</a></h5>
+<ul>
+<li><p>A <strong>monomial</strong> <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is a function of the form:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = c x_1^{a_1} x_2^{a_2} \dots x_n^{a_n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c &gt; 0\)</span> and <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span>.</p>
+</li>
+<li><p>A <strong>posynomial</strong> is a sum of monomials:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \dots x_n^{a_{nk}}\]</div>
+</li>
+</ul>
 </section>
-<hr class="docutils" />
-<section id="generalized-inequality-constraints-4-6">
-<h4>6. Generalized Inequality Constraints (4.6)<a class="headerlink" href="#generalized-inequality-constraints-4-6" title="Permalink to this heading">#</a></h4>
-<p>We can extend convex optimization to problems with constraints defined by a proper cone <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<section id="standard-geometric-program">
+<h5>Standard Geometric Program<a class="headerlink" href="#standard-geometric-program" title="Permalink to this heading">#</a></h5>
+<p>A standard GP has the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \text{minimize} \quad &amp; f_0(x) \\
-\text{subject to} \quad &amp; f_i(x) \preceq_K 0, \quad i = 1, \dots, m \\
-&amp; A x = b
+\text{subject to} \quad &amp; f_i(x) \leq 1, \dots, m \\
+&amp; h_i(x) = 1, \dots, p
 \end{aligned}\end{split}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(f_i(x) \preceq_K 0\)</span> means <span class="math notranslate nohighlight">\(-f_i(x) \in K\)</span>. This formulation includes <strong>Semidefinite Programming (SDP)</strong> and <strong>Cone Programming</strong>.</p>
+<p>where <span class="math notranslate nohighlight">\(f_0, \dots, f_m\)</span> are posynomials, and <span class="math notranslate nohighlight">\(h_1, \dots, h_p\)</span> are monomials.</p>
+</section>
+<section id="convex-transformation">
+<h5>Convex Transformation<a class="headerlink" href="#convex-transformation" title="Permalink to this heading">#</a></h5>
+<p>GPs are non-convex in their original form. However, we can transform them into convex problems by introducing a change of variables <span class="math notranslate nohighlight">\(y_i = \ln(x_i)\)</span> and taking the natural logarithm of the objective and constraints. This results in the transformed problem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \tilde{f}_0(y) = \ln f_0(e^y) \\
+\text{subject to} \quad &amp; \tilde{f}_i(y) = \ln f_i(e^y) \leq 0, \quad i=1, \dots, m \\
+&amp; \tilde{h}_i(y) = \ln h_i(e^y) = 0, \quad i=1, \dots, p
+\end{aligned}\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\tilde{f}_i\)</span> are log-sum-exp functions (which are convex), the transformed problem is a convex optimization problem.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="vector-optimization-4-7">
-<h4>7. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h4>
+<h4>8. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h4>
 <p>In many practical situations, we want to optimize multiple objectives simultaneously (multicriterion optimization):</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize (with respect to proper cone } K) \quad f_0(x) = (f_1(x), \dots, f_q(x))\]</div>
@@ -3153,18 +3337,61 @@ A monomial has the form <span class="math notranslate nohighlight">\(cx_1^{a_1}x
 <h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
-<p>Formulate the following problem as a Quadratic Program (QP):
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad (x_1 - x_2)^2 + 3(x_2 - 2)^2 \quad \text{subject to} \quad x_1 + x_2 \geq 1\)</span>$</p>
+<p>Formulate the following minimization problem as a standard Quadratic Program (QP):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; (x_1 - x_2)^2 + 3(x_2 - 2)^2 \\
+\text{subject to} \quad &amp; x_1 + x_2 \geq 1
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 1</p>
-<p>Expand the objective function:
-$<span class="math notranslate nohighlight">\(f(x) = x_1^2 - 2x_1x_2 + x_2^2 + 3(x_2^2 - 4x_2 + 4) = x_1^2 - 2x_1x_2 + 4x_2^2 - 12x_2 + 12\)</span><span class="math notranslate nohighlight">\(
-This can be written in matrix form \)</span>\frac{1}{2} x^T P x + q^T x + r<span class="math notranslate nohighlight">\( with:
-\)</span><span class="math notranslate nohighlight">\(P = \begin{bmatrix} 2 &amp; -2 \\ -2 &amp; 8 \end{bmatrix}, \quad q = \begin{bmatrix} 0 \\ -12 \end{bmatrix}, \quad r = 12\)</span><span class="math notranslate nohighlight">\(
-Since eigenvalues of \)</span>P<span class="math notranslate nohighlight">\( are positive (\)</span>P \succeq 0<span class="math notranslate nohighlight">\(), the objective is convex.
-The constraint \)</span>x_1 + x_2 \geq 1<span class="math notranslate nohighlight">\( can be written as \)</span>-x_1 - x_2 \leq -1<span class="math notranslate nohighlight">\( (which is \)</span>Gx \leq h<span class="math notranslate nohighlight">\( where \)</span>G = [-1, -1]<span class="math notranslate nohighlight">\(, \)</span>h = -1$).
-Thus, it is a QP.</p>
+<p>To express the problem in the standard QP form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \frac{1}{2} x^T P x + q^T x + r \\
+\text{subject to} \quad &amp; Gx \leq h
+\end{aligned}\end{split}\]</div>
+<p>we follow these mathematical steps:</p>
+<p><strong>Step 1: Expand the Objective Function</strong>
+Expand the algebraic terms in the objective function <span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+f(x) &amp;= (x_1^2 - 2x_1x_2 + x_2^2) + 3(x_2^2 - 4x_2 + 4) \\
+&amp;= x_1^2 - 2x_1x_2 + 4x_2^2 - 12x_2 + 12
+\end{aligned}\end{split}\]</div>
+<p><strong>Step 2: Extract Matrix Parameters</strong>
+We match the expanded objective to the quadratic matrix form <span class="math notranslate nohighlight">\(\frac{1}{2} x^T P x + q^T x + r\)</span>, where <span class="math notranslate nohighlight">\(x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\)</span>:</p>
+<ul>
+<li><p><strong>Hessian Matrix (<span class="math notranslate nohighlight">\(P\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P = \begin{bmatrix} 2 &amp; -2 \\ -2 &amp; 8 \end{bmatrix}\end{split}\]</div>
+<p><em>(Note that <span class="math notranslate nohighlight">\(\frac{1}{2} x^T P x = x_1^2 - 2x_1x_2 + 4x_2^2\)</span>)</em>.</p>
+</li>
+<li><p><strong>Linear Term Vector (<span class="math notranslate nohighlight">\(q\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}q = \begin{bmatrix} 0 \\ -12 \end{bmatrix}\end{split}\]</div>
+</li>
+<li><p><strong>Constant Scalar (<span class="math notranslate nohighlight">\(r\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[r = 12\]</div>
+</li>
+</ul>
+<p><strong>Step 3: Verify Convexity</strong>
+For a valid QP, <span class="math notranslate nohighlight">\(P\)</span> must be positive semidefinite (<span class="math notranslate nohighlight">\(P \succeq 0\)</span>). The eigenvalues of <span class="math notranslate nohighlight">\(P\)</span> are found by solving <span class="math notranslate nohighlight">\(\det(P - \lambda I) = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det \begin{bmatrix} 2-\lambda &amp; -2 \\ -2 &amp; 8-\lambda \end{bmatrix} = \lambda^2 - 10\lambda + 12 = 0 \implies \lambda \approx 8.61, \; 1.39\end{split}\]</div>
+<p>Since both eigenvalues are strictly positive (<span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span>), <span class="math notranslate nohighlight">\(P\)</span> is symmetric positive definite (<span class="math notranslate nohighlight">\(P \succ 0\)</span>), guaranteeing that the objective function is strictly convex.</p>
+<p><strong>Step 4: Convert Constraints to Standard Form</strong>
+The inequality constraint <span class="math notranslate nohighlight">\(x_1 + x_2 \geq 1\)</span> must be converted to the standard form <span class="math notranslate nohighlight">\(Gx \leq h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-x_1 - x_2 \leq -1 \implies \begin{bmatrix} -1 &amp; -1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \leq -1\end{split}\]</div>
+<p>Thus, we identify:</p>
+<div class="math notranslate nohighlight">
+\[G = \begin{bmatrix} -1 &amp; -1 \end{bmatrix}, \quad h = -1\]</div>
+<p><strong>Conclusion</strong>
+The problem is successfully formulated as a standard convex Quadratic Program (QP).</p>
 </div>
 </section>
 </section>
@@ -3273,15 +3500,87 @@ Thus, it is a QP.</p>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="gradient-descent">
-<h4>2. Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permalink to this heading">#</a></h4>
-<p>When a function is too complex to solve analytically, we use <strong>Gradient Descent</strong>, an iterative optimization algorithm.</p>
+<section id="general-descent-gradient-descent">
+<h4>2. General Descent &amp; Gradient Descent<a class="headerlink" href="#general-descent-gradient-descent" title="Permalink to this heading">#</a></h4>
+<section id="general-descent-method">
+<h5>General Descent Method<a class="headerlink" href="#general-descent-method" title="Permalink to this heading">#</a></h5>
+<p>To minimize a convex function <span class="math notranslate nohighlight">\(f\)</span>, we use a general iterative descent method. Given a starting point <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span>, the algorithm repeats the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Determine descent direction</strong>: Find a search direction <span class="math notranslate nohighlight">\(\Delta x\)</span> (for gradient descent, <span class="math notranslate nohighlight">\(\Delta x = -\nabla f(x)\)</span>).</p></li>
+<li><p><strong>Line Search</strong>: Choose a step size <span class="math notranslate nohighlight">\(t &gt; 0\)</span> using exact or backtracking line search.</p></li>
+<li><p><strong>Update</strong>: Set <span class="math notranslate nohighlight">\(x := x + t \Delta x\)</span>.</p></li>
+</ol>
+<p>This process repeats until a <strong>stopping criterion</strong> is satisfied, usually of the form:</p>
+<div class="math notranslate nohighlight">
+\[\|\nabla f(x)\|_2 \leq \epsilon\]</div>
+<p>For strongly convex functions, the convergence satisfies <span class="math notranslate nohighlight">\(f(x^{(k)}) - p^* \leq c^k (f(x^{(0)}) - p^*)\)</span>, where <span class="math notranslate nohighlight">\(c \in (0, 1)\)</span> depends on the minimum/maximum eigenvalues of the Hessian, the starting point, and the line search method.</p>
+</section>
+<section id="gradient-descent-step">
+<h5>Gradient Descent Step<a class="headerlink" href="#gradient-descent-step" title="Permalink to this heading">#</a></h5>
 <p>Since the gradient <span class="math notranslate nohighlight">\(\nabla f\)</span> points in the direction of the steepest increase, updating our variables in the opposite direction (<span class="math notranslate nohighlight">\(-\nabla f\)</span>) moves us down toward the minimum:</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{w} \leftarrow \mathbf{w} - \alpha \nabla J(\mathbf{w})\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> is the <strong>learning rate</strong> (step size).</p>
-<section id="python-implementation">
-<h5>Python Implementation<a class="headerlink" href="#python-implementation" title="Permalink to this heading">#</a></h5>
+</section>
+<section id="convergence-behavior-on-ill-conditioned-functions">
+<h5>Convergence Behavior on Ill-Conditioned Functions<a class="headerlink" href="#convergence-behavior-on-ill-conditioned-functions" title="Permalink to this heading">#</a></h5>
+<p>When the contour lines of a function are highly elongated (i.e., the Hessian has a very large condition number <span class="math notranslate nohighlight">\(\gamma \gg 1\)</span>), the gradient does not point directly towards the optimum. As a result, Gradient Descent exhibits a <strong>zig-zagging behavior</strong> and converges very slowly.</p>
+<p>For example, minimizing the quadratic function <span class="math notranslate nohighlight">\(f(x) = \frac{1}{2}(x_1^2 + \gamma x_2^2)\)</span> starting from <span class="math notranslate nohighlight">\(x^{(0)} = (\gamma, 1)\)</span> using exact line search yields the coordinates at step <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_1^{(k)} = \gamma \left( \frac{\gamma - 1}{\gamma + 1} \right)^k, \quad x_2^{(k)} = \left( -\frac{\gamma - 1}{\gamma + 1} \right)^k\]</div>
+<p>If <span class="math notranslate nohighlight">\(\gamma = 10\)</span>, convergence requires many small, zig-zagging steps to reach the optimum:</p>
+<a class="reference internal image-reference" href="../_images/gradient_descent_zigzag.png"><img alt="Gradient Descent Zig-Zagging in Poorly Conditioned Quadratic Function" class="align-center" src="../_images/gradient_descent_zigzag.png" style="width: 480px;" /></a>
+</section>
+<section id="line-search-strategies-backtracking-vs-exact">
+<h5>Line Search Strategies (Backtracking vs Exact)<a class="headerlink" href="#line-search-strategies-backtracking-vs-exact" title="Permalink to this heading">#</a></h5>
+<p>Choosing the correct step size <span class="math notranslate nohighlight">\(\alpha\)</span> at each iteration is crucial:</p>
+<ul class="simple">
+<li><p><strong>Exact Line Search</strong>: Minimizes the function along the search direction <span class="math notranslate nohighlight">\(p_k\)</span>. At each step, the next search direction is orthogonal to the previous one (<span class="math notranslate nohighlight">\(\nabla f(x_{k+1})^T \nabla f(x_k) = 0\)</span>).</p></li>
+<li><p><strong>Backtracking Line Search</strong>: An inexact line search method that starts with a large step size and decreases it exponentially (scaled by <span class="math notranslate nohighlight">\(\beta\)</span>) until it satisfies the Armijo condition. It is computationally cheaper and highly effective in practice:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/line_search_comparison.png"><img alt="Comparison of Line Search Strategies on a Non-Quadratic Function" class="align-center" src="../_images/line_search_comparison.png" style="width: 480px;" /></a>
+</section>
+<section id="linear-convergence-on-semilog-plots">
+<h5>Linear Convergence on Semilog Plots<a class="headerlink" href="#linear-convergence-on-semilog-plots" title="Permalink to this heading">#</a></h5>
+<p>For strongly convex functions, the error <span class="math notranslate nohighlight">\(f(x^{(k)}) - p^*\)</span> decreases exponentially with <span class="math notranslate nohighlight">\(k\)</span>. This behavior is called <strong>linear convergence</strong>. When plotted on a semilogarithmic scale (where the y-axis is logarithmic and the x-axis is linear), this exponential decay appears as a straight line:</p>
+<a class="reference internal image-reference" href="../_images/semilog_convergence_plot.png"><img alt="Linear Convergence on Semilog Plot" class="align-center" src="../_images/semilog_convergence_plot.png" style="width: 480px;" /></a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="steepest-descent-method-general-norms">
+<h4>3. Steepest Descent Method (General Norms)<a class="headerlink" href="#steepest-descent-method-general-norms" title="Permalink to this heading">#</a></h4>
+<p>The <strong>Steepest Descent Method</strong> generalizes gradient descent by defining the descent step with respect to a general norm <span class="math notranslate nohighlight">\(\|\cdot\|\)</span>.</p>
+<section id="normalized-steepest-descent-direction">
+<h5>Normalized Steepest Descent Direction<a class="headerlink" href="#normalized-steepest-descent-direction" title="Permalink to this heading">#</a></h5>
+<p>The normalized steepest descent direction <span class="math notranslate nohighlight">\(\Delta x_{\text{nsd}}\)</span> is defined as the step of unit norm that minimizes the directional derivative of <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{nsd}} = \text{argmin} \{ \nabla f(x)^T v \mid \|v\| = 1 \}\]</div>
+<p>The unnormalized steepest descent step is scaled by the dual norm: <span class="math notranslate nohighlight">\(\Delta x_{\text{sd}} = \|\nabla f(x)\|_* \Delta x_{\text{nsd}}\)</span>, which satisfies <span class="math notranslate nohighlight">\(\nabla f(x)^T \Delta x_{\text{sd}} = -\|\nabla f(x)\|_*^2\)</span>.</p>
+</section>
+<section id="steepest-descent-directions-for-different-norms">
+<h5>Steepest Descent Directions for Different Norms<a class="headerlink" href="#steepest-descent-directions-for-different-norms" title="Permalink to this heading">#</a></h5>
+<ul>
+<li><p><strong>Euclidean Norm (<span class="math notranslate nohighlight">\(\|\cdot\|_2\)</span>)</strong>: The steepest descent direction is the negative gradient:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -\nabla f(x)\]</div>
+</li>
+<li><p><strong>Quadratic Norm (<span class="math notranslate nohighlight">\(\|x\|_P = (x^T P x)^{1/2}\)</span>)</strong>: The steepest descent direction is:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -P^{-1} \nabla f(x)\]</div>
+<p>This is equivalent to performing standard gradient descent after a coordinate transformation (change of variables) <span class="math notranslate nohighlight">\(\bar{x} = P^{1/2} x\)</span>. By choosing <span class="math notranslate nohighlight">\(P \approx \nabla^2 f(x^*)\)</span>, we can align the coordinate system to eliminate ill-conditioning and dramatically speed up convergence.</p>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(\ell_1\)</span>-Norm (<span class="math notranslate nohighlight">\(\|\cdot\|_1\)</span>)</strong>: The steepest descent step updates only a single coordinate direction:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{sd}} = -\frac{\partial f(x)}{\partial x_i} e_i\]</div>
+<p>where <span class="math notranslate nohighlight">\(i\)</span> is the index corresponding to the largest component of the gradient: <span class="math notranslate nohighlight">\(|\partial f(x)/\partial x_i| = \|\nabla f(x)\|_\infty\)</span>. This is the basis of coordinate descent methods.</p>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/steepest_descent_norms.png"><img alt="Unit Balls and Normalized Steepest Descent Directions" class="align-center" src="../_images/steepest_descent_norms.png" style="width: 500px;" /></a>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quadratic-optimization-with-sympy">
+<h4>4. Quadratic Optimization with SymPy<a class="headerlink" href="#quadratic-optimization-with-sympy" title="Permalink to this heading">#</a></h4>
 <p>Let’s minimize the function <span class="math notranslate nohighlight">\(f(x) = x^2 - 4x + 4\)</span> (which has a minimum at <span class="math notranslate nohighlight">\(x=2\)</span>, where the gradient is <span class="math notranslate nohighlight">\(2x-4\)</span>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.0</span>          <span class="c1"># Starting point</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
@@ -3295,10 +3594,9 @@ Thus, it is a QP.</p>
 </pre></div>
 </div>
 </section>
-</section>
 <hr class="docutils" />
-<section id="quadratic-optimization-with-sympy">
-<h4>3. Quadratic Optimization with SymPy<a class="headerlink" href="#quadratic-optimization-with-sympy" title="Permalink to this heading">#</a></h4>
+<section id="id1">
+<h4>3. Quadratic Optimization with SymPy<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>We can use SymPy to find the analytical Hessian and determine the nature of critical points:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
 
@@ -3351,8 +3649,9 @@ Thus, it is a QP.</p>
 <hr class="docutils" />
 <section id="unconstrained-minimization">
 <h4>1. Unconstrained Minimization<a class="headerlink" href="#unconstrained-minimization" title="Permalink to this heading">#</a></h4>
-<p>We want to solve:
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad f(x)\)</span>$</p>
+<p>We want to solve:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad f(x)\]</div>
 <p>Where <span class="math notranslate nohighlight">\(f\)</span> is twice differentiable and convex.</p>
 <section id="descent-methods">
 <h5>Descent Methods<a class="headerlink" href="#descent-methods" title="Permalink to this heading">#</a></h5>
@@ -3364,13 +3663,15 @@ $<span class="math notranslate nohighlight">\(\text{minimize} \quad f(x)\)</span
 </section>
 <section id="gradient-descent-method">
 <h5>Gradient Descent Method<a class="headerlink" href="#gradient-descent-method" title="Permalink to this heading">#</a></h5>
-<p>The search direction is the negative gradient:
-$<span class="math notranslate nohighlight">\(\Delta x = -\nabla f(x)\)</span>$</p>
+<p>The search direction is the negative gradient:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x = -\nabla f(x)\]</div>
 </section>
 <section id="newton-s-method">
 <h5>Newton’s Method<a class="headerlink" href="#newton-s-method" title="Permalink to this heading">#</a></h5>
-<p>Newton’s method incorporates second-order curvature:
-$<span class="math notranslate nohighlight">\(\Delta x_{\text{nt}} = -(\nabla^2 f(x))^{-1} \nabla f(x)\)</span>$</p>
+<p>Newton’s method incorporates second-order curvature:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{nt}} = -(\nabla^2 f(x))^{-1} \nabla f(x)\]</div>
 <p>Newton’s method converges much faster than gradient descent (quadratic convergence) because it scales the gradient step using the inverse Hessian.</p>
 </section>
 </section>
@@ -3386,9 +3687,10 @@ $<span class="math notranslate nohighlight">\(\Delta x_{\text{nt}} = -(\nabla^2 
 </section>
 <section id="the-barrier-method">
 <h5>The Barrier Method<a class="headerlink" href="#the-barrier-method" title="Permalink to this heading">#</a></h5>
-<p>The Barrier method solves a sequence of unconstrained problems:
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad t f_0(x) + \Phi(x)\)</span><span class="math notranslate nohighlight">\(
-for increasing values of \)</span>t &gt; 0$, tracing the <strong>central path</strong> directly to the global optimum.</p>
+<p>The Barrier method solves a sequence of unconstrained problems:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad t f_0(x) + \Phi(x)\]</div>
+<p>for increasing values of <span class="math notranslate nohighlight">\(t &gt; 0\)</span>, tracing the <strong>central path</strong> directly to the global optimum.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -3431,8 +3733,357 @@ for increasing values of \)</span>t &gt; 0$, tracing the <strong>central path</s
 <li><p><span class="math notranslate nohighlight">\(f'(x) = 3x^2 - 4x \implies f'(2) = 3(4) - 4(2) = 4\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f''(x) = 6x - 4 \implies f''(2) = 6(2) - 4 = 8\)</span></p></li>
 </ul>
-<p>Newton step:
-$<span class="math notranslate nohighlight">\(x_1 = x_0 - \frac{f'(x_0)}{f''(x_0)} = 2 - \frac{4}{8} = 1.5\)</span>$</p>
+<p>Newton step:</p>
+<div class="math notranslate nohighlight">
+\[x_1 = x_0 - \frac{f'(x_0)}{f''(x_0)} = 2 - \frac{4}{8} = 1.5\]</div>
+</div>
+</section>
+</section>
+<span id="document-book/optimization/interior_point"></span><section class="tex2jax_ignore mathjax_ignore" id="numerical-algorithms-interior-point-methods">
+<h3>Numerical Algorithms &amp; Interior-Point Methods<a class="headerlink" href="#numerical-algorithms-interior-point-methods" title="Permalink to this heading">#</a></h3>
+<p>This page covers numerical algorithms for solving constrained optimization problems based on Chapters 9, 10, and 11 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
+<hr class="docutils" />
+<section id="newton-s-method-with-equality-constraints-chapter-10">
+<h4>1. Newton’s Method with Equality Constraints (Chapter 10)<a class="headerlink" href="#newton-s-method-with-equality-constraints-chapter-10" title="Permalink to this heading">#</a></h4>
+<p>For unconstrained optimization, Newton’s method uses the second-order Taylor expansion to find the search direction. For problems with equality constraints:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f(x) \\
+\text{subject to} \quad &amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is convex and twice continuously differentiable. We must ensure that the search step keeps the variable feasible (<span class="math notranslate nohighlight">\(A(x + \Delta x) = b\)</span>).</p>
+<section id="newton-step-under-equality-constraints">
+<h5>Newton Step under Equality Constraints<a class="headerlink" href="#newton-step-under-equality-constraints" title="Permalink to this heading">#</a></h5>
+<p>The Newton step <span class="math notranslate nohighlight">\(\Delta x_{nt}\)</span> is obtained by solving the following KKT system of linear equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \nabla^2 f(x) &amp; A^T \\ A &amp; 0 \end{bmatrix} \begin{bmatrix} \Delta x_{nt} \\ w \end{bmatrix} = \begin{bmatrix} -\nabla f(x) \\ 0 \end{bmatrix}\end{split}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\nabla^2 f(x)\)</span> is the Hessian of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nabla f(x)\)</span> is the gradient of <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(w\)</span> is the vector of optimal Lagrange multipliers for the equality constraints.</p></li>
+</ul>
+<p>This KKT matrix is invertible if <span class="math notranslate nohighlight">\(\nabla^2 f(x)\)</span> is positive definite on the nullspace of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-barrier-method-chapter-11">
+<h4>2. The Barrier Method (Chapter 11)<a class="headerlink" href="#the-barrier-method-chapter-11" title="Permalink to this heading">#</a></h4>
+<p>The <strong>Barrier Method</strong> (or path-following method) is an interior-point method used to solve convex optimization problems with inequality constraints:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; f_i(x) \leq 0, \quad i=1, \dots, m \\
+&amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<section id="logarithmic-barrier-function">
+<h5>Logarithmic Barrier Function<a class="headerlink" href="#logarithmic-barrier-function" title="Permalink to this heading">#</a></h5>
+<p>We can approximate the inequality constraints using an indicator function, which we smooth using the <strong>logarithmic barrier function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\Phi(x) = -\sum_{i=1}^m \ln(-f_i(x))\]</div>
+<p>defined on the feasible interior domain <span class="math notranslate nohighlight">\(\text{dom } \Phi = \{x \mid f_i(x) &lt; 0, \, i=1, \dots, m\}\)</span>.
+As <span class="math notranslate nohighlight">\(f_i(x) \to 0\)</span>, the function <span class="math notranslate nohighlight">\(\Phi(x) \to \infty\)</span>, preventing the variable from leaving the feasible interior region.</p>
+</section>
+<section id="the-central-path">
+<h5>The Central Path<a class="headerlink" href="#the-central-path" title="Permalink to this heading">#</a></h5>
+<p>For a parameter <span class="math notranslate nohighlight">\(t &gt; 0\)</span>, we define the central path <span class="math notranslate nohighlight">\(x^*(t)\)</span> as the solution to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; t f_0(x) + \Phi(x) \\
+\text{subject to} \quad &amp; Ax = b
+\end{aligned}\end{split}\]</div>
+<p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, the central path <span class="math notranslate nohighlight">\(x^*(t)\)</span> converges to the optimal solution <span class="math notranslate nohighlight">\(x^*\)</span> of the original constrained problem.</p>
+</section>
+<section id="the-barrier-algorithm">
+<h5>The Barrier Algorithm<a class="headerlink" href="#the-barrier-algorithm" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>Start</strong> with a strictly feasible starting point <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(t = t^{(0)} &gt; 0\)</span>, tolerance <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, and parameter <span class="math notranslate nohighlight">\(\mu &gt; 1\)</span>.</p></li>
+<li><p><strong>Centering Step</strong>: Compute <span class="math notranslate nohighlight">\(x^*(t)\)</span> by minimizing <span class="math notranslate nohighlight">\(t f_0(x) + \Phi(x)\)</span> subject to <span class="math notranslate nohighlight">\(Ax = b\)</span> (typically solved using Newton’s method).</p></li>
+<li><p><strong>Update</strong>: <span class="math notranslate nohighlight">\(x := x^*(t)\)</span>.</p></li>
+<li><p><strong>Stopping Criterion</strong>: If <span class="math notranslate nohighlight">\(m/t &lt; \epsilon\)</span>, stop and return <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><strong>Increase <span class="math notranslate nohighlight">\(t\)</span></strong>: <span class="math notranslate nohighlight">\(t := \mu t\)</span>, and repeat from step 2.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="primal-dual-interior-point-methods">
+<h4>3. Primal-Dual Interior-Point Methods<a class="headerlink" href="#primal-dual-interior-point-methods" title="Permalink to this heading">#</a></h4>
+<p>Unlike the Barrier Method which executes a full centering step (Newton minimization) for each parameter update, <strong>Primal-Dual Interior-Point Methods</strong> update the primal variables <span class="math notranslate nohighlight">\(x\)</span>, dual variables <span class="math notranslate nohighlight">\(\lambda\)</span> (for inequalities), and <span class="math notranslate nohighlight">\(nu\)</span> (for equalities) simultaneously at each iteration.</p>
+<section id="perturbed-kkt-conditions">
+<h5>Perturbed KKT Conditions<a class="headerlink" href="#perturbed-kkt-conditions" title="Permalink to this heading">#</a></h5>
+<p>We solve the KKT conditions perturbed by a parameter <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &amp;= 0 \\
+-\lambda_i f_i(x) &amp;= 1/t, \quad i=1, \dots, m \\
+Ax - b &amp;= 0
+\end{aligned}\end{split}\]</div>
+<p>Applying Newton’s method to this non-linear system of equations gives the primal-dual search direction <span class="math notranslate nohighlight">\((\Delta x_{pd}, \Delta \lambda_{pd}, \Delta \nu_{pd})\)</span>. These methods often converge much faster than barrier methods because they do not require high accuracy centering steps.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="self-concordance-analysis">
+<h4>4. Self-Concordance Analysis<a class="headerlink" href="#self-concordance-analysis" title="Permalink to this heading">#</a></h4>
+<p>The rate of convergence of Newton’s method typically depends on unknown constants (like the Lipschitz constant of the Hessian). However, Stephen Boyd introduces <strong>Self-concordance</strong>, a properties-based analysis that allows bounding the number of Newton iterations without relying on coordinate-dependent constants.</p>
+<section id="definition-of-self-concordant-functions">
+<h5>Definition of Self-Concordant Functions<a class="headerlink" href="#definition-of-self-concordant-functions" title="Permalink to this heading">#</a></h5>
+<p>A convex function <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span> is self-concordant if:</p>
+<div class="math notranslate nohighlight">
+\[|f'''(x)| \leq 2 f''(x)^{3/2}\]</div>
+<p>For multi-dimensional functions <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span>, it must be self-concordant along every line.</p>
+<ul class="simple">
+<li><p><strong>Example</strong>: The logarithmic barrier <span class="math notranslate nohighlight">\(-\sum \ln(x_i)\)</span> is self-concordant.</p></li>
+<li><p><strong>Significance</strong>: For self-concordant functions, the number of Newton iterations required to reach a specific accuracy is bounded by a constant that depends only on the initial suboptimality, providing rigorous convergence guarantees.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-example-implementing-the-barrier-method">
+<h4>Python Example: Implementing the Barrier Method<a class="headerlink" href="#python-example-implementing-the-barrier-method" title="Permalink to this heading">#</a></h4>
+<p>Here is a simple Python script implementing the Barrier Method to solve a quadratically constrained problem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; x^2 \\
+\text{subject to} \quad &amp; x \geq 1 \quad (\text{written as } 1 - x \leq 0)
+\end{aligned}\end{split}\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">barrier_method</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Number of inequality constraints: f1(x) = 1 - x &lt;= 0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting Barrier Method from feasible x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># Centering step: minimize t * f0(x) - ln(-f1(x))</span>
+        <span class="c1"># objective: t * x^2 - ln(x - 1)</span>
+        <span class="c1"># We solve this mini-optimization using Newton&#39;s method:</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+            <span class="c1"># Gradient of centering objective</span>
+            <span class="n">grad</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># Hessian of centering objective</span>
+            <span class="n">hess</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+            
+            <span class="n">step</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad</span> <span class="o">/</span> <span class="n">hess</span>
+            <span class="n">x</span> <span class="o">+=</span> <span class="n">step</span>
+            
+            <span class="c1"># Convergence check for Newton step</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">step</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-8</span><span class="p">:</span>
+                <span class="k">break</span>
+                
+        <span class="n">duality_gap</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="n">t</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iter </span><span class="si">{</span><span class="n">iteration</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> | t = </span><span class="si">{</span><span class="n">t</span><span class="si">:</span><span class="s2">8.1f</span><span class="si">}</span><span class="s2"> | x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> | Duality Gap = </span><span class="si">{</span><span class="n">duality_gap</span><span class="si">:</span><span class="s2">.8f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">duality_gap</span> <span class="o">&lt;</span> <span class="n">epsilon</span><span class="p">:</span>
+            <span class="k">break</span>
+            
+        <span class="n">t</span> <span class="o">*=</span> <span class="n">mu</span>
+        <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="c1"># Strictly feasible starting point (x &gt; 1)</span>
+<span class="n">optimal_x</span> <span class="o">=</span> <span class="n">barrier_method</span><span class="p">(</span><span class="n">x0</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Optimal Solution found: x = </span><span class="si">{</span><span class="n">optimal_x</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> (Analytical limit = 1.000000)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<span id="document-book/optimization/geometric_statistical"></span><section class="tex2jax_ignore mathjax_ignore" id="geometric-and-statistical-optimization">
+<h3>Geometric and Statistical Optimization<a class="headerlink" href="#geometric-and-statistical-optimization" title="Permalink to this heading">#</a></h3>
+<p>This page covers applications of convex optimization in geometric problems and statistical estimation based on Chapters 7 and 8 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
+<hr class="docutils" />
+<section id="statistical-estimation-chapter-7">
+<h4>1. Statistical Estimation (Chapter 7)<a class="headerlink" href="#statistical-estimation-chapter-7" title="Permalink to this heading">#</a></h4>
+<p>Many foundational statistical estimation problems can be formulated directly as convex optimization problems, allowing them to be solved efficiently and with guaranteed global optimality.</p>
+<section id="maximum-likelihood-estimation-mle">
+<h5>Maximum Likelihood Estimation (MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h5>
+<p>In MLE, we estimate the parameter vector <span class="math notranslate nohighlight">\(\theta\)</span> of a probability distribution <span class="math notranslate nohighlight">\(p(y; \theta)\)</span> from observed data <span class="math notranslate nohighlight">\(y\)</span>. The goal is to maximize the likelihood function, or equivalently, minimize the <strong>negative log-likelihood function</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; -\sum_{i=1}^N \ln p(y_i; \theta) \\
+\text{subject to} \quad &amp; \theta \in \Theta
+\end{aligned}\end{split}\]</div>
+<p>If <span class="math notranslate nohighlight">\(p(y; \theta)\)</span> is log-concave in <span class="math notranslate nohighlight">\(\theta\)</span>, then the negative log-likelihood is convex, and finding the MLE is a convex optimization problem.</p>
+<section id="example-linear-regression-with-gaussian-noise">
+<h6>Example: Linear Regression with Gaussian Noise<a class="headerlink" href="#example-linear-regression-with-gaussian-noise" title="Permalink to this heading">#</a></h6>
+<p>Consider <span class="math notranslate nohighlight">\(y_i = x_i^T \theta + v_i\)</span> where <span class="math notranslate nohighlight">\(v_i \sim \mathcal{N}(0, \sigma^2)\)</span> are independent Gaussian noise terms. The MLE objective is:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad \frac{N}{2}\ln(2\pi\sigma^2) + \frac{1}{2\sigma^2} \sum_{i=1}^N (y_i - x_i^T \theta)^2\]</div>
+<p>This is a classic Least-Squares optimization problem, which is a convex QP and can be solved analytically or numerically.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="geometrical-problems-chapter-8">
+<h4>2. Geometrical Problems (Chapter 8)<a class="headerlink" href="#geometrical-problems-chapter-8" title="Permalink to this heading">#</a></h4>
+<p>Convex optimization provides elegant tools to solve geometric problems involving distances, projections, and bounding volumes.</p>
+<section id="projection-on-a-convex-set">
+<h5>2.1 Projection on a Convex Set<a class="headerlink" href="#projection-on-a-convex-set" title="Permalink to this heading">#</a></h5>
+<p>The projection of a point <span class="math notranslate nohighlight">\(x_0\)</span> onto a closed convex set <span class="math notranslate nohighlight">\(C\)</span> is the point <span class="math notranslate nohighlight">\(P_C(x_0) \in C\)</span> that is closest to <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \| x - x_0 \|_2^2 \\
+\text{subject to} \quad &amp; x \in C
+\end{aligned}\end{split}\]</div>
+<p>Since the objective is strictly convex, the projection is unique.</p>
+<ul>
+<li><p><strong>Hyperplane Projection</strong>: Projecting <span class="math notranslate nohighlight">\(x_0\)</span> onto <span class="math notranslate nohighlight">\(a^T x = b\)</span> has the analytical solution:</p>
+<div class="math notranslate nohighlight">
+\[P_C(x_0) = x_0 - \frac{a^T x_0 - b}{\|a\|_2^2} a\]</div>
+</li>
+<li><p><strong>Halfspace Projection</strong>: Projecting <span class="math notranslate nohighlight">\(x_0\)</span> onto <span class="math notranslate nohighlight">\(a^T x \leq b\)</span> has the solution:</p>
+<div class="math notranslate nohighlight">
+\[P_C(x_0) = x_0 - \frac{\max(0, a^T x_0 - b)}{\|a\|_2^2} a\]</div>
+</li>
+</ul>
+</section>
+<section id="distance-between-convex-sets">
+<h5>2.2 Distance Between Convex Sets<a class="headerlink" href="#distance-between-convex-sets" title="Permalink to this heading">#</a></h5>
+<p>The distance between two closed convex sets <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is the length of the shortest vector connecting them. We can find the closest points by solving:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{minimize} \quad &amp; \| x - y \|_2^2 \\
+\text{subject to} \quad &amp; x \in C, \quad y \in D
+\end{aligned}\end{split}\]</div>
+<p>This is a convex optimization problem in variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. If <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(D\)</span> do not intersect, their separating hyperplane can be derived directly from the optimal Lagrange multipliers.</p>
+</section>
+<section id="euclidean-distance-and-angle-problems">
+<h5>2.3 Euclidean Distance and Angle Problems<a class="headerlink" href="#euclidean-distance-and-angle-problems" title="Permalink to this heading">#</a></h5>
+<p>Many geometric problems involve constraints on the relative distances or angles between points. For instance, we may wish to find the positions of <span class="math notranslate nohighlight">\(k\)</span> points <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in \mathbb{R}^n\)</span> given partial bounds on their Euclidean distances:</p>
+<div class="math notranslate nohighlight">
+\[d_{ij}^{\text{min}} \leq \|x_i - x_j\|_2 \leq d_{ij}^{\text{max}}\]</div>
+<p>or bounds on the angles between vectors:</p>
+<div class="math notranslate nohighlight">
+\[\theta_{ijk}^{\text{min}} \leq \angle(x_i - x_j, x_k - x_j) \leq \theta_{ijk}^{\text{max}}\]</div>
+<p>These bounds can be represented using the <strong>Gram Matrix</strong> <span class="math notranslate nohighlight">\(G = X^T X\)</span>, where <span class="math notranslate nohighlight">\(X = [x_1, \dots, x_k]\)</span>. Since <span class="math notranslate nohighlight">\(G \succeq 0\)</span>, we can express distance and angle bounds as linear constraints on the entries of <span class="math notranslate nohighlight">\(G\)</span>, transforming the coordinate estimation into a Semidefinite Program (SDP) with a rank constraint.</p>
+</section>
+<section id="extremal-volume-ellipsoids">
+<h5>2.4 Extremal Volume Ellipsoids<a class="headerlink" href="#extremal-volume-ellipsoids" title="Permalink to this heading">#</a></h5>
+<p>An ellipsoid <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented as:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E} = \{ x \mid \| M x + d \|_2 \leq 1 \}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M \in \mathbb{S}^n_{++}\)</span> (symmetric positive definite matrix). The volume of <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is proportional to <span class="math notranslate nohighlight">\(\det(M^{-1})\)</span>.</p>
+<ul>
+<li><p><strong>Löwner-John Ellipsoid (Minimum Volume enclosing ellipsoid)</strong>: To find the minimum volume ellipsoid containing a set of points <span class="math notranslate nohighlight">\(x_1, \dots, x_N\)</span>, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -\ln \det M \\
+    \text{subject to} \quad &amp; \| M x_i + d \|_2 \leq 1, \quad i=1, \dots, N \\
+    &amp; M \succ 0
+    \end{aligned}\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(-\ln \det M\)</span> is a convex function on <span class="math notranslate nohighlight">\(\mathbb{S}^n_{++}\)</span>, this is a convex optimization problem (specifically an SDP).</p>
+</li>
+<li><p><strong>Maximum Volume Inscribed Ellipsoid</strong>: To find the largest ellipsoid that fits inside a polyhedron defined by linear inequalities <span class="math notranslate nohighlight">\(a_i^T x \leq b_i, \, i=1, \dots, m\)</span>, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -\ln \det M \\
+    \text{subject to} \quad &amp; \| M a_i \|_2 + a_i^T d \leq b_i, \quad i=1, \dots, m \\
+    &amp; M \succ 0
+    \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/lowner_john_approximation.png"><img alt="Löwner-John Ellipsoid Approximation" class="align-center" src="../_images/lowner_john_approximation.png" style="width: 480px;" /></a>
+</section>
+<section id="centering-problems">
+<h5>2.5 Centering Problems<a class="headerlink" href="#centering-problems" title="Permalink to this heading">#</a></h5>
+<p>Centering problems seek to find a representative “middle” point <span class="math notranslate nohighlight">\(x\)</span> inside a convex set <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<ul>
+<li><p><strong>Chebyshev Center</strong>: The center of the largest Euclidean ball <span class="math notranslate nohighlight">\(\mathcal{B}(x_c, r) = \{ x \mid \|x - x_c\|_2 \leq r \}\)</span> that can be inscribed in the set <span class="math notranslate nohighlight">\(C\)</span>.
+For a polyhedron <span class="math notranslate nohighlight">\(C = \{ x \mid a_i^T x \leq b_i, \, i=1, \dots, m \}\)</span>, the Chebyshev center is found by solving the Linear Program (LP):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; -r \\
+    \text{subject to} \quad &amp; a_i^T x_c + r \|a_i\|_2 \leq b_i, \quad i=1, \dots, m \\
+    &amp; r \geq 0
+    \end{aligned}\end{split}\]</div>
+</li>
+<li><p><strong>Analytic Center</strong>: The point that minimizes the logarithmic barrier function for the set of inequalities:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad -\sum_{i=1}^m \ln(b_i - a_i^T x)\]</div>
+<p>This point is unique and lies strictly in the interior of the polyhedron.</p>
+</li>
+</ul>
+</section>
+<section id="classification-and-discrimination">
+<h5>2.6 Classification and Discrimination<a class="headerlink" href="#classification-and-discrimination" title="Permalink to this heading">#</a></h5>
+<p>We want to separate two sets of points <span class="math notranslate nohighlight">\(\{x_1, \dots, x_N\}\)</span> and <span class="math notranslate nohighlight">\(\{y_1, \dots, y_M\}\)</span> using a hyperplane <span class="math notranslate nohighlight">\(a^T z + b = 0\)</span>.</p>
+<ul>
+<li><p><strong>Linear Discrimination</strong>: The sets are linearly separable if there exists a vector <span class="math notranslate nohighlight">\(a \in \mathbb{R}^n\)</span> and a scalar <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[a^T x_i + b &gt; 0, \quad i=1, \dots, N \quad \text{and} \quad a^T y_j + b &lt; 0, \quad j=1, \dots, M\]</div>
+<p>This is solved using linear feasibility methods.</p>
+</li>
+<li><p><strong>Support Vector Classifier (Max-Margin Separation)</strong>: To find the separating hyperplane that maximizes the margin (distance) between the two classes, we solve:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \text{minimize} \quad &amp; \frac{1}{2} \|a\|_2^2 \\
+    \text{subject to} \quad &amp; a^T x_i + b \geq 1, \quad i=1, \dots, N \\
+    &amp; a^T y_j + b \leq -1, \quad j=1, \dots, M
+    \end{aligned}\end{split}\]</div>
+<p>This QP formulation is the foundation of Support Vector Machines (SVM).</p>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/linear_discrimination_margin.png"><img alt="Linear and Robust Linear Discrimination" class="align-center" src="../_images/linear_discrimination_margin.png" style="width: 480px;" /></a>
+</section>
+<section id="non-linear-class-separation">
+<h5>Non-linear Class Separation<a class="headerlink" href="#non-linear-class-separation" title="Permalink to this heading">#</a></h5>
+<p>When two classes are not linearly separable, we can project the data into a higher-dimensional space or use non-linear boundary functions (such as ellipsoidal or high-degree polynomial kernels):</p>
+<a class="reference internal image-reference" href="../_images/nonlinear_separation_boundaries.png"><img alt="Non-linear Class Separation Boundaries" class="align-center" src="../_images/nonlinear_separation_boundaries.png" style="width: 480px;" /></a>
+</section>
+<section id="placement-and-location-problems">
+<h5>2.7 Placement and Location Problems<a class="headerlink" href="#placement-and-location-problems" title="Permalink to this heading">#</a></h5>
+<p>Placement problems involve positioning a set of nodes <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in \mathbb{R}^n\)</span> in space to minimize a cost function based on the distances between connected nodes.
+For a graph with edge weights <span class="math notranslate nohighlight">\(w_{ij}\)</span>, we minimize the total connection cost:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad \sum_{(i, j) \in \mathcal{E}} w_{ij} f(\| x_i - x_j \|_2)\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is a monotonic, convex cost function.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(d) = d^2\)</span> (squared Euclidean distance), the problem reduces to a set of linear equations (quadratic optimization).</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(d) = d\)</span> (Euclidean distance), the problem is called the multi-dimensional Weber problem, which is formulated as an SOCP.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="python-example-projecting-a-point-onto-a-polyhedron">
+<h4>Python Example: Projecting a Point onto a Polyhedron<a class="headerlink" href="#python-example-projecting-a-point-onto-a-polyhedron" title="Permalink to this heading">#</a></h4>
+<p>Here is a Python script using <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> to project a 2D point onto a polyhedral convex set defined by linear inequalities (<span class="math notranslate nohighlight">\(Gx \leq h\)</span>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="c1"># Point to project</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">])</span>
+
+<span class="c1"># Define the convex set (polyhedron): Gx &lt;= h</span>
+<span class="c1"># Inequalities:</span>
+<span class="c1"># x1 &gt;= 0      =&gt;  -x1 &lt;= 0</span>
+<span class="c1"># x2 &gt;= 0      =&gt;  -x2 &lt;= 0</span>
+<span class="c1"># x1 + x2 &lt;= 2 =&gt;   x1 + x2 &lt;= 2</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+
+<span class="c1"># Objective function: squared Euclidean distance</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">objective</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Constraint definition for Scipy (must be &gt;= 0)</span>
+<span class="c1"># h - Gx &gt;= 0</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">constraint_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">h</span> <span class="o">-</span> <span class="n">G</span> <span class="o">@</span> <span class="n">x</span>
+
+<span class="n">constraints</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ineq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="n">constraint_func</span><span class="p">}</span>
+
+<span class="c1"># Run minimization</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)</span>
+
+<span class="n">projected_point</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Point to project: </span><span class="si">{</span><span class="n">x0</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Projected point:  </span><span class="si">{</span><span class="n">projected_point</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance:         </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">fun</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -3673,11 +4324,13 @@ The minimum makespan is <strong>7</strong>.</p></li>
 <section id="uniform-boundedness-principle-banach-steinhaus-theorem">
 <h5>Uniform Boundedness Principle (Banach-Steinhaus Theorem)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus-theorem" title="Permalink to this heading">#</a></h5>
 <p>Using Baire’s theorem, we can prove that pointwise boundedness of a family of operators implies uniform boundedness.</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a Banach space and <span class="math notranslate nohighlight">\(Y\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq B(X, Y)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(x \in X\)</span>, there exists <span class="math notranslate nohighlight">\(C_x \ge 0\)</span> such that:
-$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span><span class="math notranslate nohighlight">\(
-then the operators are uniformly bounded:
-\)</span><span class="math notranslate nohighlight">\(\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\)</span>$</p></li>
+$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span>$
+then the operators are uniformly bounded:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\]</div>
+</li>
 </ul>
 </section>
 </section>
@@ -3718,11 +4371,13 @@ then the operators are uniformly bounded:
 <section id="the-hahn-banach-extension-theorem">
 <h5>The Hahn-Banach Extension Theorem<a class="headerlink" href="#the-hahn-banach-extension-theorem" title="Permalink to this heading">#</a></h5>
 <p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space and <span class="math notranslate nohighlight">\(p: X \to \mathbb{R}\)</span> be a sublinear functional (satisfying <span class="math notranslate nohighlight">\(p(x+y) \le p(x) + p(y)\)</span> and <span class="math notranslate nohighlight">\(p(\alpha x) = \alpha p(x)\)</span> for <span class="math notranslate nohighlight">\(\alpha \ge 0\)</span>).</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Theorem (Real Vector Spaces)</strong>: Let <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a subspace, and <span class="math notranslate nohighlight">\(f: M \to \mathbb{R}\)</span> be a linear functional bounded by <span class="math notranslate nohighlight">\(p\)</span>:
 $<span class="math notranslate nohighlight">\(f(x) \le p(x) \quad \text{for all } x \in M\)</span><span class="math notranslate nohighlight">\(
-Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M<span class="math notranslate nohighlight">\() such that:
-\)</span><span class="math notranslate nohighlight">\(F(x) \le p(x) \quad \text{for all } x \in X\)</span>$</p></li>
+Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M$) such that:</p>
+<div class="math notranslate nohighlight">
+\[F(x) \le p(x) \quad \text{for all } x \in X\]</div>
+</li>
 <li><p><strong>Normed Spaces Corollary</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a subspace of a normed space <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(f \in M^*\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a functional <span class="math notranslate nohighlight">\(F \in X^*\)</span> such that the norms are preserved:
 $<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>$</p></li>
 </ul>
@@ -4047,11 +4702,15 @@ Traditional geometry describes objects using coordinate equations (like <span cl
 <section id="d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k">
 <h5>D. Cycles (<span class="math notranslate nohighlight">\(Z_k\)</span>), Boundaries (<span class="math notranslate nohighlight">\(B_k\)</span>), and Homology Groups (<span class="math notranslate nohighlight">\(H_k\)</span>)<a class="headerlink" href="#d-cycles-z-k-boundaries-b-k-and-homology-groups-h-k" title="Permalink to this heading">#</a></h5>
 <p>Because the boundary of a boundary is zero, we can define two key subspaces of <span class="math notranslate nohighlight">\(C_k(K)\)</span>:</p>
-<ol class="arabic simple">
-<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Cycles (<span class="math notranslate nohighlight">\(Z_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:
-$<span class="math notranslate nohighlight">\(Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}\)</span>$</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Boundaries (<span class="math notranslate nohighlight">\(B_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains that are themselves the boundary of some higher <span class="math notranslate nohighlight">\((k+1)\)</span>-chain. This is the image of the boundary operator:
-$<span class="math notranslate nohighlight">\(B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Cycles (<span class="math notranslate nohighlight">\(Z_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:</p>
+<div class="math notranslate nohighlight">
+\[Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}\]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(k\)</span>-Boundaries (<span class="math notranslate nohighlight">\(B_k(K)\)</span>)</strong>: The set of all <span class="math notranslate nohighlight">\(k\)</span>-chains that are themselves the boundary of some higher <span class="math notranslate nohighlight">\((k+1)\)</span>-chain. This is the image of the boundary operator:</p>
+<div class="math notranslate nohighlight">
+\[B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}\]</div>
+</li>
 </ol>
 <p>Since <span class="math notranslate nohighlight">\(\partial^2 = 0\)</span>, every boundary is automatically a cycle. Therefore, <span class="math notranslate nohighlight">\(B_k(K)\)</span> is a subspace of <span class="math notranslate nohighlight">\(Z_k(K)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -4529,8 +5188,9 @@ A Klein bottle cannot be embedded in 3D space without passing through itself. Ho
 <ul>
 <li><p><strong>Relative Homology (<span class="math notranslate nohighlight">\(H_k(X, A)\)</span>)</strong>: Given a topological space <span class="math notranslate nohighlight">\(X\)</span> and a subspace <span class="math notranslate nohighlight">\(A \subseteq X\)</span>, relative homology group <span class="math notranslate nohighlight">\(H_k(X, A)\)</span> counts the number of <span class="math notranslate nohighlight">\(k\)</span>-dimensional holes in <span class="math notranslate nohighlight">\(X\)</span> that are <em>not</em> contained within <span class="math notranslate nohighlight">\(A\)</span>. In essence, it treats the entire subspace <span class="math notranslate nohighlight">\(A\)</span> as a single, connected component, modding out any cycles that lie entirely within <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 <li><p><strong>The de Silva–Ghrist Theorem</strong>: Let <span class="math notranslate nohighlight">\(D \subseteq \mathbb{R}^2\)</span> be a bounded target domain monitored by sensors. We represent the sensors as a set of nodes <span class="math notranslate nohighlight">\(X\)</span> and construct a Vietoris-Rips complex <span class="math notranslate nohighlight">\(R(X)\)</span> based on their communication range. Let <span class="math notranslate nohighlight">\(R_{\partial}\)</span> be the subcomplex representing sensors near the boundary of the domain.</p>
-<p>De Silva and Ghrist proved that if the relative homology mapping is non-trivial:
-$<span class="math notranslate nohighlight">\(H_2(R(X), R_{\partial}) \neq 0\)</span>$</p>
+<p>De Silva and Ghrist proved that if the relative homology mapping is non-trivial:</p>
+<div class="math notranslate nohighlight">
+\[H_2(R(X), R_{\partial}) \neq 0\]</div>
 <p>then it mathematically guarantees that the union of the sensors’ coverage regions completely covers the domain <span class="math notranslate nohighlight">\(D\)</span>, leaving <strong>no blind spots</strong>. This verification requires no coordinate coordinates, only the network’s connectivity data!</p>
 </li>
 </ul>
@@ -4633,8 +5293,9 @@ $<span class="math notranslate nohighlight">\(H_2(R(X), R_{\partial}) \neq 0\)</
 <p>For instance, when <span class="math notranslate nohighlight">\(x\)</span> is very small, we can approximate <span class="math notranslate nohighlight">\(\ln(1+x)\)</span> using the first term of its Taylor series:</p>
 <div class="math notranslate nohighlight">
 \[\ln(1 + x) \approx x\]</div>
-<p>Similarly:
-$<span class="math notranslate nohighlight">\(e^x \approx 1 + x \quad (\text{for } x \approx 0)\)</span>$</p>
+<p>Similarly:</p>
+<div class="math notranslate nohighlight">
+\[e^x \approx 1 + x \quad (\text{for } x \approx 0)\]</div>
 <section id="python-example-log-approximation">
 <h5>Python Example (Log Approximation)<a class="headerlink" href="#python-example-log-approximation" title="Permalink to this heading">#</a></h5>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -4693,16 +5354,21 @@ $<span class="math notranslate nohighlight">\(e^x \approx 1 + x \quad (\text{for
 <li><p><span class="math notranslate nohighlight">\(f''(x) = -\frac{1}{(1+x)^2} \implies f''(0) = -1\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f'''(x) = \frac{2}{(1+x)^3} \implies f'''(0) = 2\)</span></p></li>
 </ul>
-<p>Substitute into the Taylor formula:
-$<span class="math notranslate nohighlight">\(f(x) \approx 0 + 1(x) + \frac{-1}{2!}x^2 + \frac{2}{3!}x^3 = x - \frac{x^2}{2} + \frac{x^3}{3}\)</span>$</p>
+<p>Substitute into the Taylor formula:</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx 0 + 1(x) + \frac{-1}{2!}x^2 + \frac{2}{3!}x^3 = x - \frac{x^2}{2} + \frac{x^3}{3}\]</div>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution — Exercise 2</p>
-<p>Using the recurrence relation for <span class="math notranslate nohighlight">\(n=3\)</span>:
-$<span class="math notranslate nohighlight">\(T_4(x) = 2x T_3(x) - T_2(x)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 2x(4x^3 - 3x) - (2x^2 - 1)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 8x^4 - 6x^2 - 2x^2 + 1\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(T_4(x) = 8x^4 - 8x^2 + 1\)</span>$</p>
+<p>Using the recurrence relation for <span class="math notranslate nohighlight">\(n=3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 2x T_3(x) - T_2(x)\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 2x(4x^3 - 3x) - (2x^2 - 1)\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 8x^4 - 6x^2 - 2x^2 + 1\]</div>
+<div class="math notranslate nohighlight">
+\[T_4(x) = 8x^4 - 8x^2 + 1\]</div>
 </div>
 </section>
 </section>
@@ -5310,6 +5976,30 @@ Map Reduce can be described on the following steps:</p>
 <li><p><strong>Overview</strong>: The definitive reference for computer vision algorithms. It covers image formation, processing, feature detection, camera geometry, 3D reconstruction, and modern deep learning-based vision systems.</p></li>
 <li><p><strong>Why Read It?</strong>: An essential read for understanding spatial geometry, coordinate transforms, and modern visual perception algorithms in robotics and image processing.</p></li>
 </ul>
+<div style="clear: both; margin-bottom: 20px;"></div>
+</section>
+<section id="convex-optimization">
+<h5>14. Convex Optimization<a class="headerlink" href="#convex-optimization" title="Permalink to this heading">#</a></h5>
+<a class="reference internal image-reference" href="../_images/convex_optimization_cover.png"><img alt="Convex Optimization Cover" class="align-left" src="../_images/convex_optimization_cover.png" style="width: 140px;" /></a>
+<ul class="simple">
+<li><p><strong>Author</strong>: Stephen Boyd and Lieven Vandenberghe</p></li>
+<li><p><strong>Publisher</strong>: Cambridge University Press, 2004 (ISBN: 9780521833783)</p></li>
+<li><p><strong>Official Website</strong>: <a class="reference external" href="https://web.stanford.edu/class/ee364a/">EE364a Stanford Course Page</a></p></li>
+<li><p><strong>Overview</strong>: The absolute gold standard textbook for convex optimization theory, algorithms, and applications. It provides a detailed, rigorous treatment of convex sets, convex functions, standard problem classes (LP, QP, SOCP, SDP, GP), duality, and numerical methods like Newton’s method and interior-point methods.</p></li>
+<li><p><strong>Why Read It?</strong>: The definitive theoretical reference for understanding optimal decision-making, robust engineering design, and modern machine learning formulations.</p></li>
+</ul>
+<div style="clear: both; margin-bottom: 20px;"></div>
+</section>
+<section id="computational-topology-for-data-analysis">
+<h5>15. Computational Topology for Data Analysis<a class="headerlink" href="#computational-topology-for-data-analysis" title="Permalink to this heading">#</a></h5>
+<a class="reference internal image-reference" href="../_images/computational_topology_cover.png"><img alt="Computational Topology for Data Analysis Cover" class="align-left" src="../_images/computational_topology_cover.png" style="width: 140px;" /></a>
+<ul class="simple">
+<li><p><strong>Author</strong>: Tamal Krishna Dey and Yusu Wang</p></li>
+<li><p><strong>Publisher</strong>: Cambridge University Press, 2022 (ISBN: 9781108422741)</p></li>
+<li><p><strong>Official Website</strong>: <a class="reference external" href="https://www.cambridge.org/academic/subjects/computer-science/scientific-computation-numerical-analysis-and-scientific-simula/computational-topology-data-analysis">Cambridge Book Page</a></p></li>
+<li><p><strong>Overview</strong>: A comprehensive and modern introduction to the computational and algorithmic aspects of topology, focusing specifically on topological data analysis (TDA). It covers simplicial complexes, homology, persistent homology, barcodes, and their applications in analyzing shape and structure in high-dimensional datasets.</p></li>
+<li><p><strong>Why Read It?</strong>: Essential for understanding how abstract topological structures are computed algorithmically and applied to extract robust, noise-resistant features from data.</p></li>
+</ul>
 </div>
 </section>
 </section>
@@ -5384,7 +6074,7 @@ Map Reduce can be described on the following steps:</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+    <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="visible nav section-nav flex-column">
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/intro">Introduction</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Number">Number</a></li>
@@ -5397,9 +6087,12 @@ Map Reduce can be described on the following steps:</p>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Summations">Summations</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Exponents">Exponents</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Logarithms">Logarithms</a></li>
-<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/LinearAlgebra">Linear Algebra Basics</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Calculus">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/math_basic/Integration">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav section-nav flex-column">
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/linear_algebra/intro">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav section-nav flex-column">
@@ -5414,6 +6107,8 @@ Map Reduce can be described on the following steps:</p>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/duality">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/gradient_descent">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/algorithms">Optimization Algorithms</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/interior_point">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/geometric_statistical">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1 nav-item toc-entry"><a class="reference internal nav-link" href="book/intro.html#document-book/optimization/combinatorial">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>

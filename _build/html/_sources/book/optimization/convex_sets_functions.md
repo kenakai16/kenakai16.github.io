@@ -59,6 +59,7 @@ The conjugate function $f^*$ is **always convex**, even if the original function
 
 #### Example:
 For $f(x) = \frac{1}{2} x^T Q x$ where $Q$ is symmetric positive definite:
+
 $$f^*(y) = \frac{1}{2} y^T Q^{-1} y$$
 
 ---
@@ -69,21 +70,74 @@ A function $f: \mathbb{R}^n \to \mathbb{R}$ is **quasiconvex** (or unimodal) if 
 
 $$S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}$$
 
-For a quasiconvex function, any point between two points cannot have a value higher than the maximum of the two points:
+#### Modified Jensen's Inequality
+A function $f$ is quasiconvex if and only if its domain is convex and for any $x, y \in \text{dom } f$ and $0 \leq \theta \leq 1$:
+
 $$f(\theta x + (1-\theta)y) \leq \max(f(x), f(y))$$
 
-- *Example*: $f(x) = \sqrt{|x|}$ is quasiconvex on $\mathbb{R}$ (but not convex).
+#### First-order Condition for Quasiconvexity
+A differentiable function $f$ with convex domain is quasiconvex if and only if:
+
+$$f(y) \leq f(x) \implies \nabla f(x)^T (y-x) \leq 0 \quad \text{for all } x, y \in \text{dom } f$$
+
+This means that if we move in a direction that decreases the function value, the directional derivative must be negative or zero.
+
+#### Key Property: Sums
+Unlike convex functions, the sum of two quasiconvex functions is **not necessarily quasiconvex**. For example, the functions:
+
+$$f(x) = x^3 \quad \text{and} \quad g(x) = -x$$
+
+are both quasiconvex on $\mathbb{R}$, but their sum:
+
+$$(f+g)(x) = x^3 - x$$
+
+is not (it is not unimodal and has multiple local extrema on $\mathbb{R}$).
 
 ---
 
 ### 5. Log-Concave and Log-Convex Functions (3.5)
 
-A function $f: \mathbb{R}^n \to \mathbb{R}$ is **log-concave** if $f(x) > 0$ for all $x \in \text{dom } f$ and $\ln f(x)$ is a concave function.
+A function $f: \mathbb{R}^n \to \mathbb{R}$ is **log-concave** if $f(x) > 0$ for all $x \in \text{dom } f$ and the logarithm $\ln f(x)$ is a concave function:
+
+$$f(\theta x + (1-\theta)y) \geq f(x)^\theta f(y)^{1-\theta} \quad \text{for } 0 \leq \theta \leq 1$$
+
 Similarly, $f$ is **log-convex** if $\ln f(x)$ is convex.
 
-#### Probability Applications:
-Many common probability density functions (PDFs) are log-concave, which makes maximum likelihood estimation (MLE) solvable as a convex optimization problem:
-- **Normal Distribution**: $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ is log-concave.
+#### Second-order Condition for Log-Concavity
+A twice-differentiable function $f$ with convex domain is log-concave if and only if:
+
+$$f(x) \nabla^2 f(x) \preceq \nabla f(x) \nabla f(x)^T \quad \text{for all } x \in \text{dom } f$$
+
+#### Important Examples
+*   **Powers**: $f(x) = x^a$ on $\mathbb{R}_{++}$ is log-convex for $a \leq 0$, and log-concave for $a \geq 0$.
+*   **Normal Distribution**: The Gaussian PDF is log-concave.
+*   **Cumulative Gaussian Distribution**: The cumulative distribution function is log-concave:
+
+    $$\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-u^2/2} \, du$$
+
+#### Properties and Integration
+*   **Product & Sum Rules**:
+    *   The product of log-concave functions is log-concave.
+    *   The sum of log-concave functions is **not always** log-concave.
+*   **Integration Theorem**: If $f: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}$ is log-concave, then the marginal integral function:
+
+    $$g(x) = \int f(x, y) \, dy$$
+
+    is log-concave.
+*   **Consequences**:
+    *   **Convolution**: The convolution of two log-concave functions is log-concave:
+
+        $$(f * g)(x) = \int f(x-y)g(y) \, dy$$
+
+    *   **Probability over Convex Sets**: If $y$ is a random variable with a log-concave PDF, the probability that $x+y$ lies in a convex set $C$ is log-concave in $x$:
+
+        $$f(x) = \text{prob}(x+y \in C)$$
+
+    *   **Yield Function Example**: In manufacturing, the yield function (where $x$ represents nominal parameters, $w$ is random variation, and $S$ is the set of acceptable values) is log-concave:
+
+        $$Y(x) = \text{prob}(x+w \in S)$$
+
+        Therefore, the yield regions $\{x \mid Y(x) \geq \alpha\}$ are convex sets.
 
 ---
 
@@ -96,6 +150,24 @@ $$f(\theta x + (1-\theta)y) \preceq_K \theta f(x) + (1-\theta) f(y)$$
 
 This maps the classical definition of convexity to vector-valued functions using cone-based ordering relations.
 
+#### Example: Matrix Square
+The matrix square function $f: \mathbb{S}^m \to \mathbb{S}^m$, defined as $f(X) = X^2$, is $\mathbb{S}^m_+$-convex.
+
+**Proof**:
+For any fixed vector $z \in \mathbb{R}^m$, we can evaluate the scalar function:
+
+$$g(X) = z^T X^2 z = z^T X X z = \| X z \|_2^2$$
+
+Since the Euclidean norm is convex, $g(X) = \| X z \|_2^2$ is a convex function of $X$. Therefore, for all $X, Y \in \mathbb{S}^m$ and $0 \leq \theta \leq 1$:
+
+$$z^T (\theta X + (1-\theta) Y)^2 z \leq \theta z^T X^2 z + (1-\theta) z^T Y^2 z$$
+
+Since this inequality holds for all vectors $z \in \mathbb{R}^m$, by definition of the positive semidefinite cone $\mathbb{S}^m_+$, it implies:
+
+$$(\theta X + (1-\theta) Y)^2 \preceq_{\mathbb{S}^m_+} \theta X^2 + (1-\theta) Y^2$$
+
+This proves that $f(X) = X^2$ is indeed $\mathbb{S}^m_+$-convex.
+
 ---
 
 ## Exercises
@@ -103,6 +175,7 @@ This maps the classical definition of convexity to vector-valued functions using
 ```{admonition} Exercise 1
 :class: tip
 Find the conjugate function $f^*(y)$ of the negative entropy function:
+
 $$f(x) = x \ln x \quad (\text{domain } x > 0)$$
 ```
 
@@ -110,8 +183,10 @@ $$f(x) = x \ln x \quad (\text{domain } x > 0)$$
 :class: dropdown
 The conjugate is defined as $f^*(y) = \sup_{x > 0} (yx - x \ln x)$.
 To find the supremum, take the derivative with respect to $x$ and set to zero:
+
 $$\frac{d}{dx}(yx - x\ln x) = y - \ln x - 1 = 0 \implies \ln x = y - 1 \implies x^* = e^{y-1}$$
 Substitute $x^*$ back into the equation:
+
 $$f^*(y) = y(e^{y-1}) - e^{y-1}(y-1) = e^{y-1}(y - y + 1) = e^{y-1}$$
 Thus, the conjugate function is $f^*(y) = e^{y-1}$.
 ```

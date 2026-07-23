@@ -1,7 +1,7 @@
 format: jb-book
 root: book/intro
 parts:
-  - caption: Basic Math and Calculus Review
+  - caption: Basic Math and Calculus
     chapters:
       - file: book/math_basic/intro
       - file: book/math_basic/Number
@@ -14,9 +14,12 @@ parts:
       - file: book/math_basic/Summations
       - file: book/math_basic/Exponents
       - file: book/math_basic/Logarithms
-      - file: book/math_basic/LinearAlgebra
       - file: book/math_basic/Calculus
       - file: book/math_basic/Integration
+
+  - caption: Linear Algebra
+    chapters:
+      - file: book/linear_algebra/intro
 
   - caption: Probability & Statistics
     chapters:
@@ -31,6 +34,8 @@ parts:
       - file: book/optimization/duality
       - file: book/optimization/gradient_descent
       - file: book/optimization/algorithms
+      - file: book/optimization/interior_point
+      - file: book/optimization/geometric_statistical
       - file: book/optimization/combinatorial
 
   - caption: Functional Analysis & Measure Theory

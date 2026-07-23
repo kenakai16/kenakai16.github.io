@@ -60,6 +60,7 @@ print("2/3 * 3/4 =", Fraction(2, 3) * Fraction(3, 4))
 ```{admonition} Exercise 1
 :class: tip
 Calculate:
+
 $$\frac{3}{4} \div \frac{2}{3} - \frac{1}{2}$$
 ```
 

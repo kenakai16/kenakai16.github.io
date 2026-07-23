@@ -187,4 +187,32 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 *   **Overview**: The definitive reference for computer vision algorithms. It covers image formation, processing, feature detection, camera geometry, 3D reconstruction, and modern deep learning-based vision systems.
 *   **Why Read It?**: An essential read for understanding spatial geometry, coordinate transforms, and modern visual perception algorithms in robotics and image processing.
 
+<div style="clear: both; margin-bottom: 20px;"></div>
+
+### 14. Convex Optimization
+```{image} ../images/convex_optimization_cover.png
+:alt: "Convex Optimization Cover"
+:width: 140px
+:align: left
+```
+*   **Author**: Stephen Boyd and Lieven Vandenberghe
+*   **Publisher**: Cambridge University Press, 2004 (ISBN: 9780521833783)
+*   **Official Website**: [EE364a Stanford Course Page](https://web.stanford.edu/class/ee364a/)
+*   **Overview**: The absolute gold standard textbook for convex optimization theory, algorithms, and applications. It provides a detailed, rigorous treatment of convex sets, convex functions, standard problem classes (LP, QP, SOCP, SDP, GP), duality, and numerical methods like Newton's method and interior-point methods.
+*   **Why Read It?**: The definitive theoretical reference for understanding optimal decision-making, robust engineering design, and modern machine learning formulations.
+
+<div style="clear: both; margin-bottom: 20px;"></div>
+
+### 15. Computational Topology for Data Analysis
+```{image} ../images/computational_topology_cover.png
+:alt: "Computational Topology for Data Analysis Cover"
+:width: 140px
+:align: left
+```
+*   **Author**: Tamal Krishna Dey and Yusu Wang
+*   **Publisher**: Cambridge University Press, 2022 (ISBN: 9781108422741)
+*   **Official Website**: [Cambridge Book Page](https://www.cambridge.org/academic/subjects/computer-science/scientific-computation-numerical-analysis-and-scientific-simula/computational-topology-data-analysis)
+*   **Overview**: A comprehensive and modern introduction to the computational and algorithmic aspects of topology, focusing specifically on topological data analysis (TDA). It covers simplicial complexes, homology, persistent homology, barcodes, and their applications in analyzing shape and structure in high-dimensional datasets.
+*   **Why Read It?**: Essential for understanding how abstract topological structures are computed algorithmically and applied to extract robust, noise-resistant features from data.
+
 </div>

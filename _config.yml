@@ -1,7 +1,7 @@
 # In _config.yml
 title: NghiaHoang
 author: NghiaHoang
-logo: images/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg
+logo: images/book_logo.png
 execute:
   execute_notebooks: 'off'
 

@@ -1,4 +1,4 @@
-# Linear Algebra Basics
+# Linear Algebra
 
 Linear Algebra is the mathematical language of Machine Learning. It allows us to represent and perform calculations on large datasets efficiently using vectors and matrices.
 
@@ -90,9 +90,12 @@ equivalently, $P^{-1}AP = D$.
 ### Eigenvalues and Eigenvectors
 Before diagonalizing a matrix, we must find its eigenvalues and eigenvectors:
 *   **Eigenvalues ($\lambda$)**: The scalars $\lambda$ that satisfy the characteristic equation:
+
     $$\det(A - \lambda I) = 0$$
+
     where $I$ is the identity matrix of the same size.
 *   **Eigenvectors ($v$)**: The non-zero vectors $v$ that satisfy:
+
     $$(A - \lambda I)v = 0$$
 
 ### Conditions for Diagonalizability
@@ -135,13 +138,19 @@ Since the eigenvalues are distinct, $A$ is diagonalizable.
 
 #### Step 2: Find Eigenvectors
 *   **For $\lambda_1 = 5$**: Solve $(A - 5I)v = 0$:
+
     $$\begin{pmatrix} -1 & 1 \\ 2 & -2 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies -x + y = 0 \implies x = y$$
+
     Choosing $x = 1$, we obtain the eigenvector:
+
     $$v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$$
 
 *   **For $\lambda_2 = 2$**: Solve $(A - 2I)v = 0$:
+
     $$\begin{pmatrix} 2 & 1 \\ 2 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \implies 2x + y = 0 \implies y = -2x$$
+
     Choosing $x = 1$, we obtain the eigenvector:
+
     $$v_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}$$
 
 #### Step 3: Form $P$ and $D$
@@ -156,8 +165,10 @@ Thus, $A$ is diagonalized as $A = PDP^{-1}$.
 ### Key Applications
 1.  **Computing Matrix Powers ($A^k$)**:
     Multiplying a matrix by itself $k$ times is computationally expensive. However, using diagonalization:
+
     $$A^k = (PDP^{-1})^k = P D^k P^{-1}$$
     Since $D$ is diagonal, $D^k$ is computed instantly by raising its diagonal entries to the power of $k$:
+
     $$D^k = \begin{pmatrix} 5^k & 0 \\ 0 & 2^k \end{pmatrix}$$
 2.  **Machine Learning Foundations**:
     Diagonalization and eigendecomposition form the mathematical backbone of **Principal Component Analysis (PCA)**, which is used for dimensionality reduction and feature extraction in high-dimensional datasets.
@@ -198,11 +209,13 @@ print(A_reconstructed)
 ```{admonition} Exercise 1
 :class: tip
 Multiply the two matrices:
+
 $$A = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 & 0 \\ 1 & 5 \end{bmatrix}$$
 ```
 
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 Compute the dot product element by element:
+
 $$AB = \begin{bmatrix} (1 \cdot 2 + 3 \cdot 1) & (1 \cdot 0 + 3 \cdot 5) \\ (2 \cdot 2 + 4 \cdot 1) & (2 \cdot 0 + 4 \cdot 5) \end{bmatrix} = \begin{bmatrix} 5 & 15 \\ 8 & 20 \end{bmatrix}$$
 ```

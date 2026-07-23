@@ -191,6 +191,7 @@ P(Success rate > 90%): 0.2252
 The **Law of Large Numbers (LLN)** is a fundamental theorem in probability. It states that as the number of independent trials increases, the empirical average (observed average) of the results converges to the theoretical expected value.
 
 For example, when rolling a fair 6-sided die, the theoretical average of a roll is:
+
 $$\text{Expected Value} = \frac{1+2+3+4+5+6}{6} = 3.5$$
 
 If you roll the die 10 times, your average roll might be $2.8$ or $4.2$. However, if you roll it 10,000 times, the average will be extremely close to $3.5$.

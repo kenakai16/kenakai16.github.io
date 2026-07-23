@@ -138,6 +138,7 @@ print("Result of expression:", result)
 ```{admonition} Exercise 1
 :class: tip
 Evaluate the expression using PEMDAS rules:
+
 $$12 - 3 \times (2 + 1)^2 \div 9 + 4$$
 Verify your answer with Python.
 ```

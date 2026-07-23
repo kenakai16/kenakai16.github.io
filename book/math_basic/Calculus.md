@@ -88,18 +88,21 @@ Find the derivative of $f(x) = 5x^3 - 2x^2 + 7$.
 ```{admonition} Exercise 2
 :class: tip
 Apply the Chain Rule to find the derivative of:
+
 $$f(x) = (3x^2 + 1)^4$$
 ```
 
 ```{admonition} Exercise 3
 :class: tip
 Find the gradient vector $\nabla f(x, y)$ of:
+
 $$f(x, y) = 3x^2y^3 + 2y$$
 ```
 
 ```{admonition} Solution — Exercise 1
 :class: dropdown
 Using the Power and Sum rules:
+
 $$f'(x) = 5(3x^2) - 2(2x) + 0 = 15x^2 - 4x$$
 ```
 
@@ -110,6 +113,7 @@ Let $u = 3x^2 + 1$ (inside function) and $y = u^4$ (outside function).
 - $\frac{du}{dx} = 6x$
 
 Applying the Chain Rule:
+
 $$\frac{dy}{dx} = 4(3x^2 + 1)^3 \cdot 6x = 24x(3x^2 + 1)^3$$
 ```
 
@@ -120,5 +124,6 @@ Compute partial derivatives:
 - $\frac{\partial f}{\partial y} = 9x^2y^2 + 2$
 
 The gradient vector is:
+
 $$\nabla f(x, y) = \begin{bmatrix} 6xy^3 \\ 9x^2y^2 + 2 \end{bmatrix}$$
 ```

@@ -132,62 +132,46 @@ Rather than dry mathematical proofs, we focus on **conceptual intuition** couple
 
 ---
 
-## 📚 Reference Textbooks
-
-Our content and structure draw inspiration from these highly recommended books:
-
-::::{grid} 1 2 2 2
-:gutter: 2
-
-:::{grid-item-card} 📘 Applied Math
-**Essential Math for Data Science**
-*Thomas Nield* (O'Reilly, 2022)
-:::
-
-:::{grid-item-card} 📗 Mathematical Exercises
-**1001 Math Problems**
-*LearningExpress* (2nd Edition)
-:::
-::::
-
----
-
 ## 🗺️ Blog Map & Chapters
 
-The content is organized into 9 key modules, guiding you from basic arithmetic to advanced machine learning foundations:
+The content is organized into 10 key modules, guiding you from basic arithmetic to advanced machine learning foundations:
 
 ### 📖 Part 1: Basic Math & Calculus
 - **Fundamentals**: Number systems, fractions, decimals, order of operations, and algebraic variables.
 - **Functions & Graphs**: Linear and curvilinear functions, summations, exponents, and logarithms (featuring Euler's number and the Rule of 72).
-- **Advanced Core**: Introductions to Linear Algebra, Calculus (derivatives, gradients), and Integration.
+- **Calculus Core**: Introductions to Calculus (derivatives, gradients) and Integration (Riemann sums, symbolic/numerical integration).
 
-### 🎲 Part 2: Probability & Statistics
+### 🧮 Part 2: Linear Algebra
+- **Linear Algebra**: Vectors, matrices, matrix transpose, matrix multiplication, systems of linear equations, eigenvalues/eigenvectors, and diagonalization.
+
+### 🎲 Part 3: Probability & Statistics
 - **Probability**: Core rules, joint and union probability, conditional probability, Bayes' Theorem, and probability distributions (Binomial, Beta).
 - **Statistics**: Mean, median, mode, variance, standard deviation, and key statistical concepts.
 
-### ⚡ Part 3: Optimization
-- **Convexity**: Convex sets, convex functions, and convex optimization problems.
-- **Theory & Algorithms**: Duality (Lagrangian, KKT conditions), gradient descent algorithms, and combinatorial optimization.
+### ⚡ Part 4: Optimization
+- **Convexity**: Convex sets, convex functions (including quasiconvexity, log-concavity, log-convexity, and $K$-convexity), and standard optimization problems (LP, QP, SOCP, SDP, GP).
+- **Theory & Algorithms**: Duality (Lagrangian, KKT conditions), unconstrained/equality-constrained Newton's methods, and Interior-Point algorithms.
+- **Applications**: Geometric & statistical optimization (MLE, MAP, minimum ellipsoids) and combinatorial optimization.
 
-### 🌀 Part 4: Functional Analysis & Measure Theory
+### 🌀 Part 5: Functional Analysis & Measure Theory
 - **Functional Analysis**: Banach spaces, bounded linear operators, quotient spaces, Baire Category Theorem, and Hahn-Banach Theorem.
 - **Measure Theory**: Outer measure, $\sigma$-algebras, Lebesgue measure, measurable functions, and simple functions.
 
-### 🌐 Part 5: Topology
+### 🌐 Part 6: Topology
 - **General Topology**: Metric spaces, open sets, neighborhoods, compactness, and connectedness.
 - **Manifolds**: The Manifold Hypothesis, homeomorphisms (and their role in neural networks), and topological dimensionality reduction (t-SNE, UMAP).
 - **Topological Data Analysis (TDA)**: Simplicial complexes, Betti numbers, and Persistent Homology (barcodes and diagrams).
 
-### 📈 Part 6: Approximation Theory
+### 📈 Part 7: Approximation Theory
 - **Fitting**: Curve fitting, regression analysis, interpolation, and approximating continuous functions.
 
-### 🤖 Part 7: Machine Learning
+### 🤖 Part 8: Machine Learning
 - **Math Foundations**: Practical methodology, supervised learning math, unsupervised learning math, and distributed learning structures.
 
-### 🧠 Part 8: Deep Learning
+### 🧠 Part 9: Deep Learning
 - **Neural Networks**: Artificial neurons, activation functions, loss functions, backpropagation, and gradient descent optimization in deep networks.
 
-### 📚 Part 9: Recommended Reading
+### 📚 Part 10: Recommended Reading
 - **Reading**: Our curated list of recommended textbook resources for mathematics and AI.
 
 ---

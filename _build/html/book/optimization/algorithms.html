@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/optimization/algorithms';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Combinatorial Optimization &amp; Scheduling" href="combinatorial.html" />
+    <link rel="next" title="Numerical Algorithms &amp; Interior-Point Methods" href="interior_point.html" />
     <link rel="prev" title="Gradient Descent &amp; Hessian Curvature" href="gradient_descent.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,14 +160,14 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-light" alt="NghiaHoang - Home"/>
-    <script>document.write(`<img src="../../_static/0cb875e5fae5d1074bc66270c7d519e6--bunny.jpg" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus Review</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number</a></li>
@@ -180,9 +180,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../math_basic/LinearAlgebra.html">Linear Algebra Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
@@ -197,6 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="duality.html">Duality &amp; KKT Conditions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometric_statistical.html">Geometric and Statistical Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
@@ -417,8 +422,9 @@ document.write(`
 <hr class="docutils" />
 <section id="unconstrained-minimization">
 <h2>1. Unconstrained Minimization<a class="headerlink" href="#unconstrained-minimization" title="Permalink to this heading">#</a></h2>
-<p>We want to solve:
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad f(x)\)</span>$</p>
+<p>We want to solve:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad f(x)\]</div>
 <p>Where <span class="math notranslate nohighlight">\(f\)</span> is twice differentiable and convex.</p>
 <section id="descent-methods">
 <h3>Descent Methods<a class="headerlink" href="#descent-methods" title="Permalink to this heading">#</a></h3>
@@ -430,13 +436,15 @@ $<span class="math notranslate nohighlight">\(\text{minimize} \quad f(x)\)</span
 </section>
 <section id="gradient-descent-method">
 <h3>Gradient Descent Method<a class="headerlink" href="#gradient-descent-method" title="Permalink to this heading">#</a></h3>
-<p>The search direction is the negative gradient:
-$<span class="math notranslate nohighlight">\(\Delta x = -\nabla f(x)\)</span>$</p>
+<p>The search direction is the negative gradient:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x = -\nabla f(x)\]</div>
 </section>
 <section id="newton-s-method">
 <h3>Newton’s Method<a class="headerlink" href="#newton-s-method" title="Permalink to this heading">#</a></h3>
-<p>Newton’s method incorporates second-order curvature:
-$<span class="math notranslate nohighlight">\(\Delta x_{\text{nt}} = -(\nabla^2 f(x))^{-1} \nabla f(x)\)</span>$</p>
+<p>Newton’s method incorporates second-order curvature:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x_{\text{nt}} = -(\nabla^2 f(x))^{-1} \nabla f(x)\]</div>
 <p>Newton’s method converges much faster than gradient descent (quadratic convergence) because it scales the gradient step using the inverse Hessian.</p>
 </section>
 </section>
@@ -452,9 +460,10 @@ $<span class="math notranslate nohighlight">\(\Delta x_{\text{nt}} = -(\nabla^2 
 </section>
 <section id="the-barrier-method">
 <h3>The Barrier Method<a class="headerlink" href="#the-barrier-method" title="Permalink to this heading">#</a></h3>
-<p>The Barrier method solves a sequence of unconstrained problems:
-$<span class="math notranslate nohighlight">\(\text{minimize} \quad t f_0(x) + \Phi(x)\)</span><span class="math notranslate nohighlight">\(
-for increasing values of \)</span>t &gt; 0$, tracing the <strong>central path</strong> directly to the global optimum.</p>
+<p>The Barrier method solves a sequence of unconstrained problems:</p>
+<div class="math notranslate nohighlight">
+\[\text{minimize} \quad t f_0(x) + \Phi(x)\]</div>
+<p>for increasing values of <span class="math notranslate nohighlight">\(t &gt; 0\)</span>, tracing the <strong>central path</strong> directly to the global optimum.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -497,8 +506,9 @@ for increasing values of \)</span>t &gt; 0$, tracing the <strong>central path</s
 <li><p><span class="math notranslate nohighlight">\(f'(x) = 3x^2 - 4x \implies f'(2) = 3(4) - 4(2) = 4\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f''(x) = 6x - 4 \implies f''(2) = 6(2) - 4 = 8\)</span></p></li>
 </ul>
-<p>Newton step:
-$<span class="math notranslate nohighlight">\(x_1 = x_0 - \frac{f'(x_0)}{f''(x_0)} = 2 - \frac{4}{8} = 1.5\)</span>$</p>
+<p>Newton step:</p>
+<div class="math notranslate nohighlight">
+\[x_1 = x_0 - \frac{f'(x_0)}{f''(x_0)} = 2 - \frac{4}{8} = 1.5\]</div>
 </div>
 </section>
 </section>
@@ -543,11 +553,11 @@ $<span class="math notranslate nohighlight">\(x_1 = x_0 - \frac{f'(x_0)}{f''(x_0
       </div>
     </a>
     <a class="right-next"
-       href="combinatorial.html"
+       href="interior_point.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Combinatorial Optimization &amp; Scheduling</p>
+        <p class="prev-next-title">Numerical Algorithms &amp; Interior-Point Methods</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

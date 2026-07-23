@@ -27,6 +27,7 @@ Where:
 - $c$ is the **y-intercept** (where the line crosses the y-axis, i.e., $f(0)$).
 
 In Machine Learning, this equation forms the basis of **Simple Linear Regression**, where $m$ is the weight ($w$) and $c$ is the bias ($b$):
+
 $$y = wx + b$$
 
 ---

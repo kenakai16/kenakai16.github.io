@@ -103,8 +103,10 @@ $$\partial_{k-1} \circ \partial_k = 0$$
 Because the boundary of a boundary is zero, we can define two key subspaces of $C_k(K)$:
 
 1.  **$k$-Cycles ($Z_k(K)$)**: The set of all $k$-chains with empty boundaries (representing closed loops or shells). This is the kernel of the boundary operator:
+
     $$Z_k(K) = \ker(\partial_k) = \{c \in C_k(K) \mid \partial_k(c) = 0\}$$
 2.  **$k$-Boundaries ($B_k(K)$)**: The set of all $k$-chains that are themselves the boundary of some higher $(k+1)$-chain. This is the image of the boundary operator:
+
     $$B_k(K) = \text{im}(\partial_{k+1}) = \{\partial_{k+1}(d) \mid d \in C_{k+1}(K)\}$$
 
 Since $\partial^2 = 0$, every boundary is automatically a cycle. Therefore, $B_k(K)$ is a subspace of $Z_k(K)$:

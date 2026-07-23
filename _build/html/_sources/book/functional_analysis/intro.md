@@ -73,6 +73,7 @@ Using Baire's theorem, we can prove that pointwise boundedness of a family of op
 *   **Theorem**: Let $X$ be a Banach space and $Y$ be a normed space. Let $\mathcal{F} \subseteq B(X, Y)$ be a family of bounded linear operators. If for each $x \in X$, there exists $C_x \ge 0$ such that:
     $$\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}$$
     then the operators are uniformly bounded:
+
     $$\sup_{T \in \mathcal{F}} \|T\| < \infty$$
 
 ---
@@ -111,6 +112,7 @@ Let $X$ be a vector space and $p: X \to \mathbb{R}$ be a sublinear functional (s
 *   **Theorem (Real Vector Spaces)**: Let $M \subseteq X$ be a subspace, and $f: M \to \mathbb{R}$ be a linear functional bounded by $p$:
     $$f(x) \le p(x) \quad \text{for all } x \in M$$
     Then there exists a linear functional $F: X \to \mathbb{R}$ extending $f$ ($F(x) = f(x)$ for all $x \in M$) such that:
+
     $$F(x) \le p(x) \quad \text{for all } x \in X$$
 *   **Normed Spaces Corollary**: Let $M$ be a subspace of a normed space $X$, and $f \in M^*$. Then $f$ can be extended to a functional $F \in X^*$ such that the norms are preserved:
     $$\|F\|_{X^*} = \|f\|_{M^*}$$

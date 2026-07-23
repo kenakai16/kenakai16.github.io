@@ -7,6 +7,7 @@ To solve unconstrained and constrained minimization problems, we rely on iterati
 ## 1. Unconstrained Minimization
 
 We want to solve:
+
 $$\text{minimize} \quad f(x)$$
 
 Where $f$ is twice differentiable and convex.
@@ -18,10 +19,12 @@ A descent method produces a sequence of steps $x^{(k+1)} = x^{(k)} + t^{(k)} \De
 
 ### Gradient Descent Method
 The search direction is the negative gradient:
+
 $$\Delta x = -\nabla f(x)$$
 
 ### Newton's Method
 Newton's method incorporates second-order curvature:
+
 $$\Delta x_{\text{nt}} = -(\nabla^2 f(x))^{-1} \nabla f(x)$$
 
 Newton's method converges much faster than gradient descent (quadratic convergence) because it scales the gradient step using the inverse Hessian.
@@ -39,6 +42,7 @@ As $f_i(x) \to 0$, the log barrier $\Phi(x) \to \infty$, preventing the optimiza
 
 ### The Barrier Method
 The Barrier method solves a sequence of unconstrained problems:
+
 $$\text{minimize} \quad t f_0(x) + \Phi(x)$$
 for increasing values of $t > 0$, tracing the **central path** directly to the global optimum.
 
@@ -85,5 +89,6 @@ Derivatives:
 - $f''(x) = 6x - 4 \implies f''(2) = 6(2) - 4 = 8$
 
 Newton step:
+
 $$x_1 = x_0 - \frac{f'(x_0)}{f''(x_0)} = 2 - \frac{4}{8} = 1.5$$
 ```
