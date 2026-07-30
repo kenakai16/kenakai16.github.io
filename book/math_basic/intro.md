@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the **Basic Math and Calculus Review** section. This module covers the essential mathematical foundations required for data science, machine learning, and statistical analysis, structured after the textbook *Essential Math for Data Science*.
+Welcome to the **Basic Math and Calculus** section. This module covers the essential mathematical foundations required for data science, machine learning, and statistical analysis, structured after the textbook *Essential Math for Data Science*.
 
 ---
 
