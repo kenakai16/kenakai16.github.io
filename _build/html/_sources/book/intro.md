@@ -132,6 +132,13 @@ Rather than dry mathematical proofs, we focus on **conceptual intuition** couple
 
 ---
 
+## 📖 Table of Contents
+
+```{tableofcontents}
+```
+
+---
+
 ## 🗺️ Blog Map & Chapters
 
 The content is organized into 10 key modules, guiding you from basic arithmetic to advanced machine learning foundations:
@@ -176,27 +183,27 @@ The content is organized into 10 key modules, guiding you from basic arithmetic 
 
 ---
 
-## ☕️ Buy Me a Coffee / Ủng hộ tác giả
+## ☕️ Buy Me a Coffee / Support the Author
 
-Nếu bạn thấy các bài viết trên blog hữu ích và muốn tiếp thêm động lực cho tác giả duy trì & phát triển nội dung kiến thức Data Science / AI chất lượng:
+If you find these articles helpful and would like to support the ongoing creation of high-quality Data Science & AI content:
 
 <div style="display: flex; justify-content: center; margin: 30px 0;">
 <div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 16px; padding: 25px; max-width: 440px; text-align: center; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); color: #ffffff;">
-<h3 style="margin-top: 0; color: #38bdf8; font-size: 1.4rem;">☕️ Mua tặng tác giả 1 ly cà phê</h3>
-<p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Mọi đóng góp dù lớn hay nhỏ đều là nguồn động lực rất lớn đối với mình!</p>
+<h3 style="margin-top: 0; color: #38bdf8; font-size: 1.4rem;">☕️ Buy Me a Coffee</h3>
+<p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Every contribution, big or small, inspires and helps keep this blog growing!</p>
 
 <div style="background: #ffffff; padding: 12px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-<img src="https://img.vietqr.io/image/TPB-02149545701-compact2.png?accountName=HUYNH%20TRUNG%20NGHIA&addInfo=Ung%20ho%20kenakai16%20blog" alt="VietQR TPBank HUYNH TRUNG NGHIA" style="width: 250px; height: auto; display: block; border-radius: 8px;" />
+<img src="https://img.vietqr.io/image/TPB-02149545701-compact2.png?accountName=HUYNH%20TRUNG%20NGHIA&addInfo=Support%20kenakai16%20blog" alt="VietQR TPBank HUYNH TRUNG NGHIA" style="width: 250px; height: auto; display: block; border-radius: 8px;" />
 </div>
 
 <div style="margin-top: 18px; text-align: left; background: rgba(255, 255, 255, 0.05); padding: 12px 16px; border-radius: 8px; font-size: 0.9rem;">
-<div style="margin-bottom: 4px;"><strong>Ngân hàng:</strong> <span style="color: #38bdf8;">TPBank (Ngân hàng Tiên Phong)</span></div>
-<div style="margin-bottom: 4px;"><strong>Số tài khoản:</strong> <code style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 2px 6px; border-radius: 4px;">0214 9545 701</code></div>
-<div><strong>Chủ tài khoản:</strong> <span style="color: #f1f5f9;">HUYNH TRUNG NGHIA</span></div>
+<div style="margin-bottom: 4px;"><strong>Bank:</strong> <span style="color: #38bdf8;">TPBank (Tien Phong Commercial Joint Stock Bank)</span></div>
+<div style="margin-bottom: 4px;"><strong>Account Number:</strong> <code style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 2px 6px; border-radius: 4px;">0214 9545 701</code></div>
+<div><strong>Account Name:</strong> <span style="color: #f1f5f9;">HUYNH TRUNG NGHIA</span></div>
 </div>
 
 <div style="margin: 20px 0 15px 0; border-top: 1px dashed rgba(255, 255, 255, 0.15); position: relative;">
-<span style="background: #0f172a; color: #64748b; padding: 0 10px; font-size: 0.8rem; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);">HOẶC (QUỐC TẾ)</span>
+<span style="background: #0f172a; color: #64748b; padding: 0 10px; font-size: 0.8rem; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);">OR (INTERNATIONAL)</span>
 </div>
 
 <div style="margin-top: 15px;">
@@ -207,10 +214,3 @@ Support me on Ko-fi
 </div>
 </div>
 </div>
-
----
-
-## 📖 Table of Contents
-
-```{tableofcontents}
-```
