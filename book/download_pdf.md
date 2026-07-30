@@ -8,7 +8,7 @@ You can download the complete **Math for Data Science** book as a single offline
 
 Click the link below to download the complete book:
 
-👉 **[Download Complete Book PDF (A4 Format)](./book.pdf)**
+👉 **[Download Complete Book PDF (A4 Format)](./Math-For-Data-Science.pdf)**
 
 ---
 

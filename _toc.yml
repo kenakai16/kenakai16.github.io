@@ -1,6 +1,10 @@
 format: jb-book
 root: book/intro
 parts:
+  - caption: Table of Contents
+    chapters:
+      - file: book/table_of_contents
+
   - caption: Basic Math and Calculus
     chapters:
       - file: book/math_basic/intro
