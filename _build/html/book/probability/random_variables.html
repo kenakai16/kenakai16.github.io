@@ -421,7 +421,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-variance-moments">2. Expectation, Variance &amp; Moments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-value-mu-or-e-x">Expected Value (<span class="math notranslate nohighlight">\(\mu\)</span> or <span class="math notranslate nohighlight">\(E[X]\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-sigma-2-or-var-x">Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(Var(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-sigma-2-or-operatorname-var-x">Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(\operatorname{Var}(X)\)</span>)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moments">Moments</a></li>
 </ul>
 </li>
@@ -450,42 +450,58 @@ document.write(`
 <section id="discrete-random-variables">
 <h3>Discrete Random Variables<a class="headerlink" href="#discrete-random-variables" title="Permalink to this heading">#</a></h3>
 <p>Discrete random variables take on countable values (e.g., the number of Heads in 3 coin flips, the number of customers entering a store).</p>
-<ul class="simple">
-<li><p><strong>Probability Mass Function (PMF):</strong> Describes the probability that <span class="math notranslate nohighlight">\(X\)</span> takes on a specific value <span class="math notranslate nohighlight">\(x\)</span>.
-$<span class="math notranslate nohighlight">\( P(X = x) \)</span><span class="math notranslate nohighlight">\(
-Property: \)</span>\sum P(X=x) = 1$</p></li>
+<ul>
+<li><p><strong>Probability Mass Function (PMF):</strong> Describes the probability that the random variable <span class="math notranslate nohighlight">\(X\)</span> takes on a specific value <span class="math notranslate nohighlight">\(x\)</span>, denoted as <span class="math notranslate nohighlight">\(P(X = x)\)</span> or <span class="math notranslate nohighlight">\(p(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[P(X = x) \ge 0 \quad \forall x\]</div>
+<p>The sum of probabilities for all possible values must equal 1:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{x} P(X = x) = 1\]</div>
+</li>
 </ul>
 </section>
 <section id="continuous-random-variables">
 <h3>Continuous Random Variables<a class="headerlink" href="#continuous-random-variables" title="Permalink to this heading">#</a></h3>
 <p>Continuous random variables take on values within a continuous range (e.g., a person’s height, waiting time for a bus).</p>
-<ul class="simple">
-<li><p><strong>Probability Density Function (PDF):</strong> Unlike PMF, the probability that a continuous variable takes on a <em>specific, exact</em> value is always 0 (e.g., the probability that you are <em>exactly</em> 170.000000… cm tall is 0). Instead, the PDF <span class="math notranslate nohighlight">\(f(x)\)</span> describes the probability that <span class="math notranslate nohighlight">\(X\)</span> falls within a range.
-$<span class="math notranslate nohighlight">\( P(a \le X \le b) = \int_{a}^{b} f(x) dx \)</span><span class="math notranslate nohighlight">\(
-Property: \)</span>\int_{-\infty}^{\infty} f(x) dx = 1$</p></li>
+<ul>
+<li><p><strong>Probability Density Function (PDF):</strong> Unlike a PMF, the probability that a continuous variable <span class="math notranslate nohighlight">\(X\)</span> takes on a <em>specific, exact</em> value is always 0 (e.g., <span class="math notranslate nohighlight">\(P(X = 170.0000...) = 0\)</span>). Instead, the PDF <span class="math notranslate nohighlight">\(f(x)\)</span> describes the probability density, allowing us to find the probability that <span class="math notranslate nohighlight">\(X\)</span> falls within a range <span class="math notranslate nohighlight">\([a, b]\)</span> by integrating:</p>
+<div class="math notranslate nohighlight">
+\[P(a \le X \le b) = \int_{a}^{b} f(x) dx\]</div>
+<p>The total area under the PDF curve must equal 1:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty} f(x) dx = 1\]</div>
+</li>
 </ul>
 </section>
 <section id="cumulative-distribution-function-cdf">
 <h3>Cumulative Distribution Function (CDF)<a class="headerlink" href="#cumulative-distribution-function-cdf" title="Permalink to this heading">#</a></h3>
-<p>The CDF, denoted as <span class="math notranslate nohighlight">\(F(x)\)</span>, is the probability that the random variable <span class="math notranslate nohighlight">\(X\)</span> takes on a value less than or equal to <span class="math notranslate nohighlight">\(x\)</span>. It applies to both discrete and continuous variables.
-$<span class="math notranslate nohighlight">\( F(x) = P(X \le x) \)</span>$</p>
+<p>The CDF, denoted as <span class="math notranslate nohighlight">\(F(x)\)</span>, is the probability that the random variable <span class="math notranslate nohighlight">\(X\)</span> takes on a value less than or equal to <span class="math notranslate nohighlight">\(x\)</span>. It applies to both discrete and continuous variables:</p>
+<div class="math notranslate nohighlight">
+\[F(x) = P(X \le x)\]</div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="expectation-variance-moments">
 <h2>2. Expectation, Variance &amp; Moments<a class="headerlink" href="#expectation-variance-moments" title="Permalink to this heading">#</a></h2>
 <section id="expected-value-mu-or-e-x">
 <h3>Expected Value (<span class="math notranslate nohighlight">\(\mu\)</span> or <span class="math notranslate nohighlight">\(E[X]\)</span>)<a class="headerlink" href="#expected-value-mu-or-e-x" title="Permalink to this heading">#</a></h3>
 <p>The expected value is the average value we expect <span class="math notranslate nohighlight">\(X\)</span> to take if we run the experiment many times. It acts as the “center of mass” of the distribution.</p>
-<ul class="simple">
-<li><p><strong>Discrete:</strong> <span class="math notranslate nohighlight">\(E[X] = \sum x \cdot P(X=x)\)</span></p></li>
-<li><p><strong>Continuous:</strong> <span class="math notranslate nohighlight">\(E[X] = \int x \cdot f(x) dx\)</span></p></li>
+<ul>
+<li><p><strong>Discrete Expected Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[E[X] = \sum_{x} x \cdot P(X=x)\]</div>
+</li>
+<li><p><strong>Continuous Expected Value:</strong></p>
+<div class="math notranslate nohighlight">
+\[E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx\]</div>
+</li>
 </ul>
 </section>
-<section id="variance-sigma-2-or-var-x">
-<h3>Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(Var(X)\)</span>)<a class="headerlink" href="#variance-sigma-2-or-var-x" title="Permalink to this heading">#</a></h3>
+<section id="variance-sigma-2-or-operatorname-var-x">
+<h3>Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(\operatorname{Var}(X)\)</span>)<a class="headerlink" href="#variance-sigma-2-or-operatorname-var-x" title="Permalink to this heading">#</a></h3>
 <p>Variance measures the spread or dispersion of the data around the expected value.</p>
 <div class="math notranslate nohighlight">
-\[ Var(X) = E[(X - \mu)^2] = E[X^2] - (E[X])^2 \]</div>
+\[\operatorname{Var}(X) = E[(X - \mu)^2] = E[X^2] - (E[X])^2\]</div>
 <p>Standard Deviation (<span class="math notranslate nohighlight">\(\sigma\)</span>) is the square root of the variance, which brings the unit back to the same scale as <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
 <section id="moments">
@@ -501,13 +517,17 @@ $<span class="math notranslate nohighlight">\( F(x) = P(X \le x) \)</span>$</p>
 <section id="joint-distributions-and-correlation">
 <h2>3. Joint Distributions and Correlation<a class="headerlink" href="#joint-distributions-and-correlation" title="Permalink to this heading">#</a></h2>
 <p>When working with multiple variables (e.g., having many features in Machine Learning), we use Joint Distributions.</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Marginal Distribution:</strong> The probability of one variable when we ignore (integrate/sum out) the other variables.</p></li>
-<li><p><strong>Covariance (<span class="math notranslate nohighlight">\(Cov(X, Y)\)</span>):</strong> Measures the tendency of two variables to change together.
-$<span class="math notranslate nohighlight">\( Cov(X, Y) = E[(X - \mu_X)(Y - \mu_Y)] \)</span>$</p></li>
-<li><p><strong>Pearson Correlation Coefficient (<span class="math notranslate nohighlight">\(\rho\)</span>):</strong> Normalizes covariance to the range <span class="math notranslate nohighlight">\([-1, 1]\)</span>.
-$<span class="math notranslate nohighlight">\( \rho = \frac{Cov(X, Y)}{\sigma_X \sigma_Y} \)</span>$
-<em>(Note: Correlation does not imply causation).</em></p></li>
+<li><p><strong>Covariance (<span class="math notranslate nohighlight">\(\operatorname{Cov}(X, Y)\)</span>):</strong> Measures the tendency of two variables to change together.</p>
+<div class="math notranslate nohighlight">
+\[\operatorname{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)]\]</div>
+</li>
+<li><p><strong>Pearson Correlation Coefficient (<span class="math notranslate nohighlight">\(\rho\)</span>):</strong> Normalizes covariance to the range <span class="math notranslate nohighlight">\([-1, 1]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{\operatorname{Cov}(X, Y)}{\sigma_X \sigma_Y}\]</div>
+<p><em>(Note: Correlation does not imply causation).</em></p>
+</li>
 </ul>
 </section>
 <section id="common-distributions-in-data-science">
@@ -693,7 +713,7 @@ A continuous distribution defined on the interval <span class="math notranslate 
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-variance-moments">2. Expectation, Variance &amp; Moments</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-value-mu-or-e-x">Expected Value (<span class="math notranslate nohighlight">\(\mu\)</span> or <span class="math notranslate nohighlight">\(E[X]\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-sigma-2-or-var-x">Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(Var(X)\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-sigma-2-or-operatorname-var-x">Variance (<span class="math notranslate nohighlight">\(\sigma^2\)</span> or <span class="math notranslate nohighlight">\(\operatorname{Var}(X)\)</span>)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moments">Moments</a></li>
 </ul>
 </li>

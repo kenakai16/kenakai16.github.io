@@ -9,33 +9,49 @@ A random variable, often denoted as $X, Y, Z$, is a mathematical function that m
 ### Discrete Random Variables
 Discrete random variables take on countable values (e.g., the number of Heads in 3 coin flips, the number of customers entering a store).
 
-* **Probability Mass Function (PMF):** Describes the probability that $X$ takes on a specific value $x$.
-  $$ P(X = x) $$
-  Property: $\sum P(X=x) = 1$
+* **Probability Mass Function (PMF):** Describes the probability that the random variable $X$ takes on a specific value $x$, denoted as $P(X = x)$ or $p(x)$.
+
+  $$P(X = x) \ge 0 \quad \forall x$$
+
+  The sum of probabilities for all possible values must equal 1:
+
+  $$\sum_{x} P(X = x) = 1$$
 
 ### Continuous Random Variables
 Continuous random variables take on values within a continuous range (e.g., a person's height, waiting time for a bus).
 
-* **Probability Density Function (PDF):** Unlike PMF, the probability that a continuous variable takes on a *specific, exact* value is always 0 (e.g., the probability that you are *exactly* 170.000000... cm tall is 0). Instead, the PDF $f(x)$ describes the probability that $X$ falls within a range.
-  $$ P(a \le X \le b) = \int_{a}^{b} f(x) dx $$
-  Property: $\int_{-\infty}^{\infty} f(x) dx = 1$
+* **Probability Density Function (PDF):** Unlike a PMF, the probability that a continuous variable $X$ takes on a *specific, exact* value is always 0 (e.g., $P(X = 170.0000...) = 0$). Instead, the PDF $f(x)$ describes the probability density, allowing us to find the probability that $X$ falls within a range $[a, b]$ by integrating:
+
+  $$P(a \le X \le b) = \int_{a}^{b} f(x) dx$$
+
+  The total area under the PDF curve must equal 1:
+
+  $$\int_{-\infty}^{\infty} f(x) dx = 1$$
 
 ### Cumulative Distribution Function (CDF)
-The CDF, denoted as $F(x)$, is the probability that the random variable $X$ takes on a value less than or equal to $x$. It applies to both discrete and continuous variables.
-$$ F(x) = P(X \le x) $$
+The CDF, denoted as $F(x)$, is the probability that the random variable $X$ takes on a value less than or equal to $x$. It applies to both discrete and continuous variables:
+
+$$F(x) = P(X \le x)$$
+
+---
 
 ## 2. Expectation, Variance & Moments
 
 ### Expected Value ($\mu$ or $E[X]$)
 The expected value is the average value we expect $X$ to take if we run the experiment many times. It acts as the "center of mass" of the distribution.
 
-* **Discrete:** $E[X] = \sum x \cdot P(X=x)$
-* **Continuous:** $E[X] = \int x \cdot f(x) dx$
+* **Discrete Expected Value:**
+  
+  $$E[X] = \sum_{x} x \cdot P(X=x)$$
 
-### Variance ($\sigma^2$ or $Var(X)$)
+* **Continuous Expected Value:**
+  
+  $$E[X] = \int_{-\infty}^{\infty} x \cdot f(x) dx$$
+
+### Variance ($\sigma^2$ or $\operatorname{Var}(X)$)
 Variance measures the spread or dispersion of the data around the expected value.
 
-$$ Var(X) = E[(X - \mu)^2] = E[X^2] - (E[X])^2 $$
+$$\operatorname{Var}(X) = E[(X - \mu)^2] = E[X^2] - (E[X])^2$$
 
 Standard Deviation ($\sigma$) is the square root of the variance, which brings the unit back to the same scale as $X$.
 
@@ -50,10 +66,14 @@ Standard Deviation ($\sigma$) is the square root of the variance, which brings t
 When working with multiple variables (e.g., having many features in Machine Learning), we use Joint Distributions.
 
 * **Marginal Distribution:** The probability of one variable when we ignore (integrate/sum out) the other variables.
-* **Covariance ($Cov(X, Y)$):** Measures the tendency of two variables to change together.
-  $$ Cov(X, Y) = E[(X - \mu_X)(Y - \mu_Y)] $$
-* **Pearson Correlation Coefficient ($\rho$):** Normalizes covariance to the range $[-1, 1]$.
-  $$ \rho = \frac{Cov(X, Y)}{\sigma_X \sigma_Y} $$
+* **Covariance ($\operatorname{Cov}(X, Y)$):** Measures the tendency of two variables to change together.
+
+  $$\operatorname{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)]$$
+
+* **Pearson Correlation Coefficient ($\rho$):** Normalizes covariance to the range $[-1, 1]$:
+
+  $$\rho = \frac{\operatorname{Cov}(X, Y)}{\sigma_X \sigma_Y}$$
+
   *(Note: Correlation does not imply causation).*
 
 ## 4. Common Distributions in Data Science
