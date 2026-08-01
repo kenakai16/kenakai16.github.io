@@ -18,6 +18,7 @@ parts:
       - file: book/math_basic/Summations
       - file: book/math_basic/Exponents
       - file: book/math_basic/Logarithms
+      - file: book/math_basic/Limits
       - file: book/math_basic/Calculus
       - file: book/math_basic/Integration
 

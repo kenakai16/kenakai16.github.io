@@ -1,0 +1,772 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Limits &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/math_basic/Limits';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Calculus &amp; Derivatives" href="Calculus.html" />
+    <link rel="prev" title="Logarithms" href="Logarithms.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/math_basic/Limits.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Limits</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-need-limits-in-calculus">1. Why Do We Need Limits in Calculus?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-division-by-zero-frac-0-0-crisis">The “Division by Zero” (<span class="math notranslate nohighlight">\(\frac{0}{0}\)</span>) Crisis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-foundation-of-derivatives-and-integrals">The Foundation of Derivatives and Integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tangent-line-problem-a-conceptual-preview">The Tangent Line Problem: A Conceptual Preview</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-intuition-of-a-limit">2. The Intuition of a Limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-definition-of-a-limit-epsilon-delta">3. Formal Definition of a Limit (<span class="math notranslate nohighlight">\(\epsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-epsilon-delta-definition">Understanding the Epsilon-Delta Definition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-limits-and-existence">4. One-Sided Limits and Existence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#existence-criterion">Existence Criterion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-of-limits">5. Basic Properties of Limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">6. Continuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-limit-calculations-in-python">7. Symbolic Limit Calculations in Python</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="limits">
+<h1>Limits<a class="headerlink" href="#limits" title="Permalink to this heading">#</a></h1>
+<p>In mathematics, a <strong>limit</strong> is the foundational building block of Calculus. It describes what value a function <em>approaches</em> as its input variable gets closer and closer to a specific point, regardless of whether the function is actually defined at that exact point.</p>
+<hr class="docutils" />
+<section id="why-do-we-need-limits-in-calculus">
+<h2>1. Why Do We Need Limits in Calculus?<a class="headerlink" href="#why-do-we-need-limits-in-calculus" title="Permalink to this heading">#</a></h2>
+<p>Limits serve as the mathematical “bridge” that allows us to handle division by zero and infinitesimally small quantities, paving the way for the creation of Calculus.</p>
+<section id="the-division-by-zero-frac-0-0-crisis">
+<h3>The “Division by Zero” (<span class="math notranslate nohighlight">\(\frac{0}{0}\)</span>) Crisis<a class="headerlink" href="#the-division-by-zero-frac-0-0-crisis" title="Permalink to this heading">#</a></h3>
+<p>In classical algebra and geometry, division by zero is strictly prohibited. However, the two foundational problems that led to the development of Calculus directly encounter this issue:</p>
+<ul class="simple">
+<li><p><strong>Instantaneous Velocity (Leads to Derivatives):</strong>
+If you travel <span class="math notranslate nohighlight">\(100\text{ km}\)</span> in <span class="math notranslate nohighlight">\(2\text{ hours}\)</span>, your average velocity is <span class="math notranslate nohighlight">\(v = \frac{\Delta s}{\Delta t} = \frac{100}{2} = 50\text{ km/h}\)</span>. But what if you want to know your exact speed at a single instantaneous second (when <span class="math notranslate nohighlight">\(\Delta t = 0\)</span>)? The classical formula yields <span class="math notranslate nohighlight">\(\frac{\Delta s}{\Delta t} = \frac{0}{0}\)</span>, which is algebraically undefined.</p></li>
+<li><p><strong>Tangent Line of a Curve:</strong>
+To find the slope of a line passing through two points, we use <span class="math notranslate nohighlight">\(m = \frac{y_2 - y_1}{x_2 - x_1}\)</span>. But a tangent line only touches a curve at a single point. When the second point merges with the first point, the distance becomes <span class="math notranslate nohighlight">\(0\)</span>, leading to a slope of <span class="math notranslate nohighlight">\(m = \frac{0}{0}\)</span>.</p></li>
+</ul>
+<p><strong>Limits</strong> resolve this by allowing us to calculate behavior <em>infinitely close</em> to <span class="math notranslate nohighlight">\(0\)</span> without ever evaluating at <span class="math notranslate nohighlight">\(0\)</span> directly:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Distinguishing <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> vs. <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> (The Key to Calculus):</strong></p>
+<ul class="simple">
+<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> Form (where <span class="math notranslate nohighlight">\(a \neq 0\)</span>):</strong> This represents a value divided by an infinitely small number, which shoots toward infinity (<span class="math notranslate nohighlight">\(\pm \infty\)</span>). In geometry, this corresponds to a <strong>vertical asymptote</strong>.</p></li>
+<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> Form (Indeterminate Form):</strong> This means the numerator and denominator are both shrinking to zero. We cannot determine the value without further limit analysis. <strong>This <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> form is the only representation for finding slope and defining the derivative!</strong></p></li>
+</ul>
+</div>
+</section>
+<section id="the-foundation-of-derivatives-and-integrals">
+<h3>The Foundation of Derivatives and Integrals<a class="headerlink" href="#the-foundation-of-derivatives-and-integrals" title="Permalink to this heading">#</a></h3>
+<p>Both core operations of Calculus are defined entirely through limits:</p>
+<ul>
+<li><p><strong>Derivatives:</strong> The limit of the rate of change as the interval <span class="math notranslate nohighlight">\(h\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\]</div>
+</li>
+<li><p><strong>Integrals:</strong> The limit of Riemann sums as we divide the area under a curve into an infinite number of infinitely thin rectangles (<span class="math notranslate nohighlight">\(n \to \infty\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^{b} f(x) dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \Delta x\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-tangent-line-problem-a-conceptual-preview">
+<h3>The Tangent Line Problem: A Conceptual Preview<a class="headerlink" href="#the-tangent-line-problem-a-conceptual-preview" title="Permalink to this heading">#</a></h3>
+<p>The most famous geometric illustration of why we need limits is the <strong>Tangent Line Problem</strong>:</p>
+<ul class="simple">
+<li><p><strong>Secant Line:</strong> In algebra, we can easily find the slope between two separate points on a curve. This is called a <em>secant line</em>.</p></li>
+<li><p><strong>The Tangent Obstacle:</strong> If we want to find the slope at exactly <em>one</em> single point (the <em>tangent line</em>), the points merge, the distance becomes zero, and our slope formula results in an undefined division by zero (<span class="math notranslate nohighlight">\(\frac{0}{0}\)</span>).</p></li>
+<li><p><strong>The Limit Solution:</strong> By taking the limit as the distance between the two points approaches zero (<span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>), the secant line gradually rotates and aligns perfectly with the tangent line. This slope is what we call the <strong>derivative</strong>.</p></li>
+</ul>
+<p><em>(We will explore the complete mathematical definition of the derivative and its applications in the next chapter: <strong><a class="reference internal" href="Calculus.html"><span class="doc">Calculus &amp; Derivatives</span></a></strong>).</em></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-intuition-of-a-limit">
+<h2>2. The Intuition of a Limit<a class="headerlink" href="#the-intuition-of-a-limit" title="Permalink to this heading">#</a></h2>
+<p>Consider the function:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{x^2 - 1}{x - 1}\]</div>
+<p>If we try to evaluate this function at <span class="math notranslate nohighlight">\(x = 1\)</span>, we get a division by zero:</p>
+<div class="math notranslate nohighlight">
+\[f(1) = \frac{1^2 - 1}{1 - 1} = \frac{0}{0} \quad \text{(Undefined)}\]</div>
+<p>However, we can look at the values of <span class="math notranslate nohighlight">\(f(x)\)</span> as we choose inputs extremely close to <span class="math notranslate nohighlight">\(1\)</span>:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p><span class="math notranslate nohighlight">\(x\)</span> (approaching from left)</p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(f(x)\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(x\)</span> (approaching from right)</p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(f(x)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(0.9\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.9\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.1\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(2.1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(0.99\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.99\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.01\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(2.01\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(0.9999\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.9999\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1.0001\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(2.0001\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Even though <span class="math notranslate nohighlight">\(f(1)\)</span> is undefined, the output values of <span class="math notranslate nohighlight">\(f(x)\)</span> are heading directly toward <span class="math notranslate nohighlight">\(2\)</span> as <span class="math notranslate nohighlight">\(x\)</span> gets closer to <span class="math notranslate nohighlight">\(1\)</span>. Mathematically, we express this as:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = 2\]</div>
+<p>Using algebra, we can simplify the expression:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1} = \lim_{x \to 1} (x + 1) = 1 + 1 = 2\]</div>
+</section>
+<hr class="docutils" />
+<section id="formal-definition-of-a-limit-epsilon-delta">
+<h2>3. Formal Definition of a Limit (<span class="math notranslate nohighlight">\(\epsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span>)<a class="headerlink" href="#formal-definition-of-a-limit-epsilon-delta" title="Permalink to this heading">#</a></h2>
+<p>To make limits mathematically rigorous, the Karl Weierstrass formal <strong><span class="math notranslate nohighlight">\(\epsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span> (epsilon-delta) definition</strong> of a limit is used:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a} f(x) = L\]</div>
+<p>For every real number <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a real number <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\text{if } 0 &lt; |x - a| &lt; \delta, \quad \text{then } |f(x) - L| &lt; \epsilon\]</div>
+<figure class="align-center" id="limit-epsilon-delta">
+<img alt="../../_images/limit_epsilon_delta.png" src="../../_images/limit_epsilon_delta.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Geometrical illustration of the epsilon-delta limit definition.</span><a class="headerlink" href="#limit-epsilon-delta" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="understanding-the-epsilon-delta-definition">
+<h3>Understanding the Epsilon-Delta Definition<a class="headerlink" href="#understanding-the-epsilon-delta-definition" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\epsilon\)</span> (Epsilon)</strong> represents the target window of error on the vertical <span class="math notranslate nohighlight">\(y\)</span>-axis (output space).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\delta\)</span> (Delta)</strong> represents the search window on the horizontal <span class="math notranslate nohighlight">\(x\)</span>-axis (input space).</p></li>
+<li><p>The definition states: If you want the output <span class="math notranslate nohighlight">\(f(x)\)</span> to be within an extremely small distance <span class="math notranslate nohighlight">\(\epsilon\)</span> from <span class="math notranslate nohighlight">\(L\)</span>, there must exist a matching boundary size <span class="math notranslate nohighlight">\(\delta\)</span> such that any input <span class="math notranslate nohighlight">\(x\)</span> within that distance of <span class="math notranslate nohighlight">\(a\)</span> (excluding <span class="math notranslate nohighlight">\(a\)</span> itself) lands inside the target output window.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="one-sided-limits-and-existence">
+<h2>4. One-Sided Limits and Existence<a class="headerlink" href="#one-sided-limits-and-existence" title="Permalink to this heading">#</a></h2>
+<p>A limit only exists if the function approaches the same value from both directions.</p>
+<ul>
+<li><p><strong>Left-Hand Limit:</strong> The value <span class="math notranslate nohighlight">\(f(x)\)</span> approaches as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> from values less than <span class="math notranslate nohighlight">\(a\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a^-} f(x)\]</div>
+</li>
+<li><p><strong>Right-Hand Limit:</strong> The value <span class="math notranslate nohighlight">\(f(x)\)</span> approaches as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span> from values greater than <span class="math notranslate nohighlight">\(a\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a^+} f(x)\]</div>
+</li>
+</ul>
+<section id="existence-criterion">
+<h3>Existence Criterion<a class="headerlink" href="#existence-criterion" title="Permalink to this heading">#</a></h3>
+<p>The limit <span class="math notranslate nohighlight">\(\lim_{x \to a} f(x)\)</span> exists if and only if both one-sided limits exist and are equal:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L\]</div>
+<p>If the left-hand and right-hand limits are not equal (such as at a step discontinuity), the limit <strong>does not exist (DNE)</strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="basic-properties-of-limits">
+<h2>5. Basic Properties of Limits<a class="headerlink" href="#basic-properties-of-limits" title="Permalink to this heading">#</a></h2>
+<p>Given that <span class="math notranslate nohighlight">\(\lim_{x \to a} f(x) = L\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \to a} g(x) = M\)</span>, the following algebraic properties hold:</p>
+<ul class="simple">
+<li><p><strong>Sum Rule:</strong> <span class="math notranslate nohighlight">\(\lim_{x \to a} [f(x) + g(x)] = L + M\)</span></p></li>
+<li><p><strong>Product Rule:</strong> <span class="math notranslate nohighlight">\(\lim_{x \to a} [f(x) \cdot g(x)] = L \cdot M\)</span></p></li>
+<li><p><strong>Quotient Rule:</strong> <span class="math notranslate nohighlight">\(\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}\)</span> (provided <span class="math notranslate nohighlight">\(M \neq 0\)</span>)</p></li>
+<li><p><strong>Constant Multiple Rule:</strong> <span class="math notranslate nohighlight">\(\lim_{x \to a} [c \cdot f(x)] = c \cdot L\)</span> (where <span class="math notranslate nohighlight">\(c\)</span> is a constant)</p></li>
+<li><p><strong>Power Rule:</strong> <span class="math notranslate nohighlight">\(\lim_{x \to a} [f(x)]^n = L ^ n\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="continuity">
+<h2>6. Continuity<a class="headerlink" href="#continuity" title="Permalink to this heading">#</a></h2>
+<p>In data science, we prioritize <strong>continuous functions</strong>. Intuitively, a function is continuous if you can draw its graph without lifting your pen from the paper.</p>
+<p>Formally, a function <span class="math notranslate nohighlight">\(f(x)\)</span> is <strong>continuous at a point <span class="math notranslate nohighlight">\(x = a\)</span></strong> if and only if three conditions are met:</p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(f(a)\)</span> is defined (the point exists in the domain).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x \to a} f(x)\)</span> exists.</p></li>
+<li><p>The limit equals the function’s value:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a} f(x) = f(a)\]</div>
+</li>
+</ol>
+<p>If any of these conditions fail, the function has a discontinuity at <span class="math notranslate nohighlight">\(x = a\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="symbolic-limit-calculations-in-python">
+<h2>7. Symbolic Limit Calculations in Python<a class="headerlink" href="#symbolic-limit-calculations-in-python" title="Permalink to this heading">#</a></h2>
+<p>We can calculate symbolic limits in Python using the <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># 1. Undefined algebraic expression limit</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">limit1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Limit of (x^2 - 1)/(x - 1) as x-&gt;1 :&quot;</span><span class="p">,</span> <span class="n">limit1</span><span class="p">)</span>  <span class="c1"># 2</span>
+
+<span class="c1"># 2. Limit at infinity</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span>
+<span class="n">limit2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">oo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Limit of 1/x as x-&gt;oo :&quot;</span><span class="p">,</span> <span class="n">limit2</span><span class="p">)</span>  <span class="c1"># 0</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/math_basic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Logarithms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Logarithms</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Calculus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Calculus &amp; Derivatives</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-need-limits-in-calculus">1. Why Do We Need Limits in Calculus?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-division-by-zero-frac-0-0-crisis">The “Division by Zero” (<span class="math notranslate nohighlight">\(\frac{0}{0}\)</span>) Crisis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-foundation-of-derivatives-and-integrals">The Foundation of Derivatives and Integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tangent-line-problem-a-conceptual-preview">The Tangent Line Problem: A Conceptual Preview</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-intuition-of-a-limit">2. The Intuition of a Limit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-definition-of-a-limit-epsilon-delta">3. Formal Definition of a Limit (<span class="math notranslate nohighlight">\(\epsilon\)</span>-<span class="math notranslate nohighlight">\(\delta\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-epsilon-delta-definition">Understanding the Epsilon-Delta Definition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sided-limits-and-existence">4. One-Sided Limits and Existence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#existence-criterion">Existence Criterion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-of-limits">5. Basic Properties of Limits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity">6. Continuity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-limit-calculations-in-python">7. Symbolic Limit Calculations in Python</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

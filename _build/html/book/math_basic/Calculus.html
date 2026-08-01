@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Integration" href="Integration.html" />
-    <link rel="prev" title="Logarithms" href="Logarithms.html" />
+    <link rel="prev" title="Limits" href="Limits.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Summations.html">Summations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exponents.html">Exponents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Limits.html">Limits</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Calculus &amp; Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Integration.html">Integration</a></li>
 </ul>
@@ -410,7 +411,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-derivative">1. What Is a Derivative?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-derivative">1. What Is a Derivative?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tangent-line-problem-transition-from-secant-to-tangent">The Tangent Line Problem: Transition from Secant to Tangent</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-rules-of-differentiation">2. Basic Rules of Differentiation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chain-rule">3. The Chain Rule</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters-in-deep-learning">Why it matters in Deep Learning</a></li>
@@ -441,15 +445,33 @@ document.write(`
 <section id="what-is-a-derivative">
 <h2>1. What Is a Derivative?<a class="headerlink" href="#what-is-a-derivative" title="Permalink to this heading">#</a></h2>
 <p>The <strong>derivative</strong> of a function measures how the output value changes relative to a change in its input. Geometrically, the derivative is the <strong>slope</strong> of the tangent line to the graph of the function at a given point.</p>
-<p>For a function <span class="math notranslate nohighlight">\(f(x)\)</span>, the derivative <span class="math notranslate nohighlight">\(f'(x)\)</span> (also written as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>) is defined using limits:</p>
+<section id="the-tangent-line-problem-transition-from-secant-to-tangent">
+<h3>The Tangent Line Problem: Transition from Secant to Tangent<a class="headerlink" href="#the-tangent-line-problem-transition-from-secant-to-tangent" title="Permalink to this heading">#</a></h3>
+<p>To understand how derivatives work, we look at the transition from average rate of change to instantaneous rate of change:</p>
+<ol class="arabic">
+<li><p><strong>Slope of a Secant Line (Average Rate of Change):</strong>
+Suppose we want to find the slope of a curve between two distinct points <span class="math notranslate nohighlight">\(P(x, f(x))\)</span> and <span class="math notranslate nohighlight">\(Q(x + \Delta x, f(x + \Delta x))\)</span>. Connecting these two points gives a <strong>secant line</strong>. The slope of this secant line represents the average rate of change:</p>
 <div class="math notranslate nohighlight">
-\[\frac{df}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]</div>
+\[m_{\text{secant}} = \frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}\]</div>
+</li>
+<li><p><strong>The Tangent Obstacle (Instantaneous Speed):</strong>
+If we want to know the slope at exactly <em>one</em> single point <span class="math notranslate nohighlight">\(P\)</span> (the <strong>tangent line</strong>), we cannot simply set the second point <span class="math notranslate nohighlight">\(Q\)</span> directly on top of <span class="math notranslate nohighlight">\(P\)</span>. Doing so makes the distance <span class="math notranslate nohighlight">\(\Delta x = 0\)</span>, causing the slope formula to collapse into the undefined division:</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{0}{0}\]</div>
+</li>
+<li><p><strong>The Limit Solution:</strong>
+Instead of forcing <span class="math notranslate nohighlight">\(Q\)</span> to merge with <span class="math notranslate nohighlight">\(P\)</span> immediately, we use a <strong>limit</strong> to slide <span class="math notranslate nohighlight">\(Q\)</span> along the curve <em>infinitely close</em> to <span class="math notranslate nohighlight">\(P\)</span>. As the distance <span class="math notranslate nohighlight">\(\Delta x\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span> (<span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>), the secant line rotates and converges into the tangent line at point <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+</ol>
+<p>The slope of this tangent line is the <strong>derivative</strong> of the function at <span class="math notranslate nohighlight">\(x\)</span>, defined as:</p>
+<div class="math notranslate nohighlight">
+\[m_{\text{tangent}} = f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}\]</div>
 <figure class="align-center" id="calculus-derivative-ai-diagram">
 <img alt="../../_images/calculus_derivative_ai_diagram.png" src="../../_images/calculus_derivative_ai_diagram.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Geometrical interpretation of the Derivative <span class="math notranslate nohighlight">\(f'(x)\)</span> as the slope of the tangent line as <span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>.</span><a class="headerlink" href="#calculus-derivative-ai-diagram" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Geometrical transition of a secant line into a tangent line as <span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>.</span><a class="headerlink" href="#calculus-derivative-ai-diagram" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
 </section>
 <hr class="docutils" />
 <section id="basic-rules-of-differentiation">
@@ -488,7 +510,14 @@ document.write(`
 <p>The <strong>gradient</strong> is a vector containing all the partial derivatives of a multivariable function. It is denoted by the symbol <span class="math notranslate nohighlight">\(\nabla\)</span> (nabla):</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla f(x, y) = \begin{bmatrix} \frac{\partial f}{\partial x} \\ \frac{\partial f}{\partial y} \end{bmatrix}\end{split}\]</div>
-<p><strong>Geometrical Meaning</strong>: The gradient vector points in the direction of the <strong>steepest ascent</strong> (greatest increase) of the function at that point.</p>
+<p><strong>Geometrical Meaning:</strong> The gradient vector points in the direction of the <strong>steepest ascent</strong> (greatest increase) of the function at that point.</p>
+<ul>
+<li><p><strong>Machine Learning Note:</strong> Since our goal in Machine Learning is usually to <em>minimize</em> the Loss Function (find the lowest point of error), we move in the <strong>opposite</strong> direction of the gradient (<span class="math notranslate nohighlight">\(-\nabla f\)</span>). This core optimization technique is called <strong>Gradient Descent</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{w}_{\text{new}} = \mathbf{w}_{\text{old}} - \alpha \nabla f(\mathbf{w})\]</div>
+<p><em>(where <span class="math notranslate nohighlight">\(\alpha\)</span> is the learning rate that controls the size of each step).</em></p>
+</li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
@@ -591,12 +620,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Logarithms.html"
+       href="Limits.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Logarithms</p>
+        <p class="prev-next-title">Limits</p>
       </div>
     </a>
     <a class="right-next"
@@ -624,7 +653,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-derivative">1. What Is a Derivative?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-derivative">1. What Is a Derivative?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tangent-line-problem-transition-from-secant-to-tangent">The Tangent Line Problem: Transition from Secant to Tangent</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-rules-of-differentiation">2. Basic Rules of Differentiation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chain-rule">3. The Chain Rule</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-matters-in-deep-learning">Why it matters in Deep Learning</a></li>
