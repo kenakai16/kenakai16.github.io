@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Number &#8212; NghiaHoang</title>
+    <title>Number Sets &amp; Systems &#8212; NghiaHoang</title>
   
   
   
@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -174,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Number</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Number Sets &amp; Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
@@ -190,11 +193,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -386,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Number</h1>
+    <h1>Number Sets & Systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -396,15 +410,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whole-numbers">Whole Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irrational-numbers">Irrational Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers">Real Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-and-imaginary-numbers">Complex and Imaginary Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-operations-pemdas">Order of Operations (PEMDAS)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-mathbb-n">1. Natural Numbers (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-of-natural-numbers">Roles of Natural Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whole-numbers-mathbb-w">2. Whole Numbers (<span class="math notranslate nohighlight">\(\mathbb{W}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-mathbb-z">3. Integers (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers-mathbb-q">4. Rational Numbers (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irrational-numbers-mathbb-i">5. Irrational Numbers (<span class="math notranslate nohighlight">\(\mathbb{I}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics-famous-examples">Key Characteristics &amp; Famous Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers-mathbb-r">6. Real Numbers (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-and-imaginary-numbers-mathbb-c">7. Complex and Imaginary Numbers (<span class="math notranslate nohighlight">\(\mathbb{C}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-numbers">Imaginary Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-operations-pemdas">8. Order of Operations (PEMDAS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-verification">Python Verification</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
@@ -419,97 +443,146 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="number">
-<h1>Number<a class="headerlink" href="#number" title="Permalink to this heading">#</a></h1>
-<p><img alt="enter image description here" src="../../_images/real_number.png" /></p>
-<section id="natural-numbers">
-<h2>Natural Numbers<a class="headerlink" href="#natural-numbers" title="Permalink to this heading">#</a></h2>
-<p>The <strong>natural numbers</strong> are the <a class="reference external" href="https://en.wikipedia.org/wiki/Number">numbers</a> 1, 2, 3, etc., possibly including 0 as well.</p>
-<p>The natural numbers start with 0, corresponding to the <strong>non-negative integers</strong> 0, 1, 2, 3, …, whereas others start with 1, corresponding to the <strong>positive integers</strong>  1, 2, 3, …</p>
-<p>The natural numbers can be used for counting (as in “there are <em>six</em> coins on the table”), in which case they serve as <em><a class="reference external" href="https://en.wikipedia.org/wiki/Cardinal_number">cardinal numbers</a></em>. They may also be used for ordering (as in “this is the <em>third</em> largest city in the country”), in which case they serve as <em><a class="reference external" href="https://en.wikipedia.org/wiki/Ordinal_number">ordinal numbers</a></em>. Natural numbers are sometimes used as labels, known as <em><a class="reference external" href="https://en.wikipedia.org/wiki/Nominal_number">nominal numbers</a></em>, having none of the properties of numbers in a mathematical sense (e.g. sports <a class="reference external" href="https://en.wikipedia.org/wiki/Number_(sports)">jersey numbers</a>).<a class="reference external" href="https://en.wikipedia.org/wiki/Natural_number#cite_note-:1-4">[3]</a><a class="reference external" href="https://en.wikipedia.org/wiki/Natural_number#cite_note-8">[6]</a></p>
-<ul>
-<li><p>Set of Natural Numbers: <strong>N</strong> = {1, 2, 3, 4, 5, 6, 7, 8, 9,…}</p>
- <!-- ![Natural Numbers](../../images/w_vs_N.png) -->
-</li>
-</ul>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/w_vs_N.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/w_vs_N.png" style="width: 70%;" /></a>
-</section>
-<section id="whole-numbers">
-<h2>Whole Numbers<a class="headerlink" href="#whole-numbers" title="Permalink to this heading">#</a></h2>
-<p>Whole numbers are a set of numbers including all <strong>natural numbers</strong> and <strong>0</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="number-sets-systems">
+<h1>Number Sets &amp; Systems<a class="headerlink" href="#number-sets-systems" title="Permalink to this heading">#</a></h1>
+<p>Understanding number classification and arithmetic rules is fundamental to data representation, indexing, and mathematical operations in Data Science.</p>
+<figure class="align-center" id="number-sets-hierarchy-ai-diagram">
+<img alt="../../_images/number_sets_hierarchy_ai_diagram.png" src="../../_images/number_sets_hierarchy_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Hierarchy of number sets.</span><a class="headerlink" href="#number-sets-hierarchy-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="natural-numbers-mathbb-n">
+<h2>1. Natural Numbers (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>)<a class="headerlink" href="#natural-numbers-mathbb-n" title="Permalink to this heading">#</a></h2>
+<p>The <strong>natural numbers</strong> are the positive counting numbers <span class="math notranslate nohighlight">\(1, 2, 3, \dots\)</span>, possibly including <span class="math notranslate nohighlight">\(0\)</span> as well depending on the mathematical convention:</p>
 <ul class="simple">
-<li><p>Set of Whole Numbers: <strong>W</strong> = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10……}</p></li>
+<li><p>Starting with <span class="math notranslate nohighlight">\(0\)</span> corresponds to the <strong>non-negative integers</strong>: <span class="math notranslate nohighlight">\(\{0, 1, 2, 3, \dots\}\)</span>.</p></li>
+<li><p>Starting with <span class="math notranslate nohighlight">\(1\)</span> corresponds to the <strong>positive integers</strong>: <span class="math notranslate nohighlight">\(\{1, 2, 3, \dots\}\)</span>.</p></li>
 </ul>
-<!-- ![Whole Numbers](../../images/w_number.png) -->
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/w_number.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/w_number.png" style="width: 70%;" /></a>
-</section>
-<section id="integers">
-<h2>Integers<a class="headerlink" href="#integers" title="Permalink to this heading">#</a></h2>
-<p>Integers include <code class="docutils literal notranslate"><span class="pre">positive</span></code> and <code class="docutils literal notranslate"><span class="pre">negative</span></code> <strong>whole numbers</strong> as well as <strong>0</strong>. In In the language of mathematics, the set of integers is often denoted by the boldface <strong>Z</strong></p>
-<ul>
-<li><p>Set of Integers:  <strong>Z</strong> = {….-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,…}</p>
-<!-- ![Integers](../../images/p_vs_n_interger.png) -->
-</li>
+<section id="roles-of-natural-numbers">
+<h3>Roles of Natural Numbers<a class="headerlink" href="#roles-of-natural-numbers" title="Permalink to this heading">#</a></h3>
+<p>Natural numbers serve three distinct roles in data and everyday life:</p>
+<ol class="arabic simple">
+<li><p><strong>Cardinal Numbers:</strong> Used for counting quantities (e.g., <em>“there are six coins on the table”</em>).</p></li>
+<li><p><strong>Ordinal Numbers:</strong> Used for ordering or ranking (e.g., <em>“this is the third largest city in the country”</em>).</p></li>
+<li><p><strong>Nominal Numbers:</strong> Used purely as labels or identifiers, carrying no quantitative value (e.g., sports jersey numbers or user ID codes).</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Set Notation:</strong> <span class="math notranslate nohighlight">\(\mathbb{N} = \{1, 2, 3, 4, 5, \dots\}\)</span></p></li>
 </ul>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/p_vs_n_interger.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/p_vs_n_interger.png" style="width: 70%;" /></a>
 </section>
-<section id="rational-numbers">
-<h2>Rational Numbers<a class="headerlink" href="#rational-numbers" title="Permalink to this heading">#</a></h2>
-<p>a <strong>rational number</strong> is a <a class="reference external" href="https://en.wikipedia.org/wiki/Number">number</a> that can be expressed as the <a class="reference external" href="https://en.wikipedia.org/wiki/Quotient">quotient</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Fraction_(mathematics)">fraction</a>  <img alt="{\displaystyle {\tfrac {p}{q}}}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4b38d2684323653daafdd152b7e988594003897d" /> of two <a class="reference external" href="https://en.wikipedia.org/wiki/Integer">integers</a>, a <a class="reference external" href="https://en.wikipedia.org/wiki/Numerator">numerator</a>  pand a non-zero <a class="reference external" href="https://en.wikipedia.org/wiki/Denominator">denominator</a>  q.<a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number#cite_note-Rosen-1">[1]</a></p>
-<p>For example, <img alt="{\displaystyle {\tfrac {-3}{7}}}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7cab87e59f4cbc2681c834139ece9aa609bf9b51" /> is a rational number, as is every integer (e.g. 5 = 5/1). The <a class="reference external" href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a> of all rational numbers, also referred to as “<strong>the rationals</strong>”,<a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number#cite_note-2">[2]</a> the <strong>field of rationals</strong><a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number#cite_note-3">[3]</a> or the <strong>field of rational numbers</strong> is usually denoted by boldface <strong>Q</strong>,<a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number#cite_note-4">[4]</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Blackboard_bold">blackboard bold</a>  <img alt="{\displaystyle \mathbb {Q} .}" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/869719f08f506bf866043442858fb3da1d4b4b5b" /><a class="reference external" href="https://en.wikipedia.org/wiki/Rational_number#cite_note-5">[5]</a></p>
-<!-- ![enter image description here](../../images/The_Rational_Number_Definition.png) -->
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/The_Rational_Number_Definition.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/The_Rational_Number_Definition.png" style="width: 70%;" /></a>
 </section>
-<section id="irrational-numbers">
-<h2>Irrational Numbers<a class="headerlink" href="#irrational-numbers" title="Permalink to this heading">#</a></h2>
-<p>Irrational numbers cannot be expressed as a fraction (That is, irrational numbers cannot be expressed as the ratio of two integers.
-When the ratio of lengths of two line segments is an irrational number, the line segments are also described as being incommensurable, meaning that they share no “measure” in common, that is, there is no length (“the measure”), no matter how short, that could be used to express the lengths of both of the two given segments as integer multiples of itself.</p>
-<p>Among irrational numbers are the ratio π of a circle’s circumference to its diameter, Euler’s number e, the golden ratio φ, and the square root of two.[1] In fact, all square roots of natural numbers, other than of perfect squares, are irrational.[2]). This includes the famous Pi , square roots of certain numbers like , and Euler’s number which we will learn about later. These numbers have an infinite number of decimal digits, such as :
-<img alt="enter image description here" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Square_root_of_2_triangle.svg/480px-Square_root_of_2_triangle.svg.png" /></p>
-<blockquote>
-<div><p>The common examples of irrational numbers are pi(π=3⋅14159265…), √2, √3, √5, Euler’s number (e = 2⋅718281…..), 2.010010001….,etc.</p>
-</div></blockquote>
-<p><img alt="enter image description here" src="https://cdn-academy.pressidium.com/academy/wp-content/uploads/2022/02/Number-classification.png" /></p>
+<hr class="docutils" />
+<section id="whole-numbers-mathbb-w">
+<h2>2. Whole Numbers (<span class="math notranslate nohighlight">\(\mathbb{W}\)</span>)<a class="headerlink" href="#whole-numbers-mathbb-w" title="Permalink to this heading">#</a></h2>
+<p>Whole numbers consist of all <strong>natural numbers</strong> together with <strong>zero (<span class="math notranslate nohighlight">\(0\)</span>)</strong>.</p>
+<ul class="simple">
+<li><p><strong>Set Notation:</strong> <span class="math notranslate nohighlight">\(\mathbb{W} = \{0, 1, 2, 3, 4, \dots\}\)</span></p></li>
+<li><p><strong>Data Science Note:</strong> Zero-indexed data structures (such as Python lists, NumPy arrays, and Pandas DataFrames) rely on whole numbers for indexing positions <span class="math notranslate nohighlight">\(0, 1, 2, \dots, n-1\)</span>.</p></li>
+</ul>
+<figure class="align-center" id="whole-numbers-ai-diagram">
+<img alt="../../_images/whole_numbers_ai_diagram.png" src="../../_images/whole_numbers_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Whole numbers starting at zero and their application in 0-based array indexing.</span><a class="headerlink" href="#whole-numbers-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="real-numbers">
-<h2>Real Numbers<a class="headerlink" href="#real-numbers" title="Permalink to this heading">#</a></h2>
-<p>Real numbers include <strong>rational</strong> as well as <strong>irrational numbers</strong>. In practicality, when you are doing any data science work you can treat any decimals you work with as real numbers.</p>
-<!-- ![enter image description here](../../images/Real_Numbers_Definition.png) -->
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Real_Numbers_Definition.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/Real_Numbers_Definition.png" style="width: 70%;" /></a>
+<hr class="docutils" />
+<section id="integers-mathbb-z">
+<h2>3. Integers (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>)<a class="headerlink" href="#integers-mathbb-z" title="Permalink to this heading">#</a></h2>
+<p>Integers extend whole numbers to include negative values. In mathematics, the set of integers is denoted by the boldface letter <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> (from the German word <em>Zahlen</em>, meaning “numbers”).</p>
+<ul class="simple">
+<li><p><strong>Set Notation:</strong> <span class="math notranslate nohighlight">\(\mathbb{Z} = \{\dots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, \dots\}\)</span></p></li>
+</ul>
+<figure class="align-center" id="number-line-integers-ai-diagram">
+<img alt="../../_images/number_line_integers_ai_diagram.png" src="../../_images/number_line_integers_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Number line showing negative integers, zero, and positive integers.</span><a class="headerlink" href="#number-line-integers-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="complex-and-imaginary-numbers">
-<h2>Complex and Imaginary Numbers<a class="headerlink" href="#complex-and-imaginary-numbers" title="Permalink to this heading">#</a></h2>
-<p>The numbers which are not real are imaginary numbers. When we square an imaginary number, it gives a negative result. It is represented as Im().</p>
-<blockquote>
-<div><p>Example: √-2, √-7, √-11 are all imaginary numbers</p>
-</div></blockquote>
-<p>The complex numbers were introduced to solve the equation <code class="docutils literal notranslate"><span class="pre">x2+1</span> <span class="pre">=</span> <span class="pre">0</span></code>. The roots of the equation are of form <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">±√-1</span></code> and no real roots exist. Thus, with the introduction of complex numbers, we have Imaginary roots.</p>
-<p>We denote <code class="docutils literal notranslate"><span class="pre">√-1</span></code> with the symbol <code class="docutils literal notranslate"><span class="pre">I</span></code>, which denotes Iota (<strong>Imaginary number</strong>).</p>
-<p>The <strong>complex number</strong> is basically the combination of a real number and an imaginary number. The complex number is in the form of <strong>a+ib,</strong> where <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">real</span> <span class="pre">number</span></code> and <code class="docutils literal notranslate"><span class="pre">ib</span> <span class="pre">=</span> <span class="pre">imaginary</span> <span class="pre">number</span></code>. Also, a,b belongs to real numbers and <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span>&#160; <span class="pre">√-1.</span></code></p>
-<p>Hence, a complex number is a simple representation of addition of two numbers, i.e., real number and an imaginary number. One part of it is purely real and the other part is purely imaginary.</p>
-<!-- ![enter image description here](../../images/Complex_Number.png) -->
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Complex_Number.png"><img alt="fishy" class="bg-primary mb-1 align-center" src="../../_images/Complex_Number.png" style="width: 70%;" /></a>
+<hr class="docutils" />
+<section id="rational-numbers-mathbb-q">
+<h2>4. Rational Numbers (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>)<a class="headerlink" href="#rational-numbers-mathbb-q" title="Permalink to this heading">#</a></h2>
+<p>A <strong>rational number</strong> is any number that can be expressed as the quotient or fraction <span class="math notranslate nohighlight">\(\frac{p}{q}\)</span> of two integers, where <span class="math notranslate nohighlight">\(p\)</span> is the numerator and <span class="math notranslate nohighlight">\(q \neq 0\)</span> is the non-zero denominator.</p>
+<p>The set of all rational numbers is denoted by the boldface letter <span class="math notranslate nohighlight">\(\mathbf{Q}\)</span> or blackboard bold <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> (for “quotient”).</p>
+<ul class="simple">
+<li><p><strong>Examples:</strong> <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(\frac{-3}{7}\)</span>, and every integer since any integer <span class="math notranslate nohighlight">\(k\)</span> can be written as <span class="math notranslate nohighlight">\(\frac{k}{1}\)</span> (e.g., <span class="math notranslate nohighlight">\(5 = \frac{5}{1}\)</span>).</p></li>
+<li><p><strong>Decimal Expansion:</strong> Rational numbers have decimal expansions that either terminate (e.g., <span class="math notranslate nohighlight">\(\frac{3}{4} = 0.75\)</span>) or repeat infinitely (e.g., <span class="math notranslate nohighlight">\(\frac{1}{3} = 0.3333\dots\)</span>).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="irrational-numbers-mathbb-i">
+<h2>5. Irrational Numbers (<span class="math notranslate nohighlight">\(\mathbb{I}\)</span>)<a class="headerlink" href="#irrational-numbers-mathbb-i" title="Permalink to this heading">#</a></h2>
+<p><strong>Irrational numbers</strong> cannot be expressed as a fraction <span class="math notranslate nohighlight">\(\frac{p}{q}\)</span> of two integers.</p>
+<p>Geometrically, when the ratio of lengths of two line segments is an irrational number, the segments are described as <strong>incommensurable</strong> — meaning they share no common unit of measure, no matter how small, that can divide both lengths into exact integer multiples.</p>
+<section id="key-characteristics-famous-examples">
+<h3>Key Characteristics &amp; Famous Examples<a class="headerlink" href="#key-characteristics-famous-examples" title="Permalink to this heading">#</a></h3>
+<p>Irrational numbers possess an infinite number of non-repeating decimal digits:</p>
+<ul class="simple">
+<li><p><strong>Circle Ratio (<span class="math notranslate nohighlight">\(\pi\)</span>):</strong> <span class="math notranslate nohighlight">\(\pi = 3.14159265\dots\)</span> (the ratio of a circle’s circumference to its diameter).</p></li>
+<li><p><strong>Euler’s Number (<span class="math notranslate nohighlight">\(e\)</span>):</strong> <span class="math notranslate nohighlight">\(e = 2.71828182\dots\)</span> (the base of the natural logarithm).</p></li>
+<li><p><strong>Golden Ratio (<span class="math notranslate nohighlight">\(\phi\)</span>):</strong> <span class="math notranslate nohighlight">\(\phi = \frac{1 + \sqrt{5}}{2} \approx 1.618033\dots\)</span></p></li>
+<li><p><strong>Square Roots:</strong> <span class="math notranslate nohighlight">\(\sqrt{2} \approx 1.414213\dots\)</span>, <span class="math notranslate nohighlight">\(\sqrt{3}\)</span>, <span class="math notranslate nohighlight">\(\sqrt{5}\)</span>. In fact, all square roots of natural numbers that are not perfect squares are irrational.</p></li>
+<li><p><strong>Non-repeating Decimals:</strong> Patterns like <span class="math notranslate nohighlight">\(2.010010001\dots\)</span></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="real-numbers-mathbb-r">
+<h2>6. Real Numbers (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)<a class="headerlink" href="#real-numbers-mathbb-r" title="Permalink to this heading">#</a></h2>
+<p>The set of <strong>Real Numbers</strong> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span>) is the union of all rational and irrational numbers.</p>
+<p>In practical Data Science and Machine Learning, almost all continuous feature values (such as prices, weights, temperatures, or probability scores) are represented as real numbers using floating-point data types (<code class="docutils literal notranslate"><span class="pre">float32</span></code> or <code class="docutils literal notranslate"><span class="pre">float64</span></code>).</p>
+</section>
+<hr class="docutils" />
+<section id="complex-and-imaginary-numbers-mathbb-c">
+<h2>7. Complex and Imaginary Numbers (<span class="math notranslate nohighlight">\(\mathbb{C}\)</span>)<a class="headerlink" href="#complex-and-imaginary-numbers-mathbb-c" title="Permalink to this heading">#</a></h2>
+<section id="imaginary-numbers">
+<h3>Imaginary Numbers<a class="headerlink" href="#imaginary-numbers" title="Permalink to this heading">#</a></h3>
+<p>Numbers that are not real are called <strong>imaginary numbers</strong>. Squaring an imaginary number yields a negative result.</p>
+<ul class="simple">
+<li><p><strong>Examples:</strong> <span class="math notranslate nohighlight">\(\sqrt{-2}\)</span>, <span class="math notranslate nohighlight">\(\sqrt{-7}\)</span>, <span class="math notranslate nohighlight">\(\sqrt{-11}\)</span>.</p></li>
+</ul>
+<p>Imaginary numbers arose historically to solve polynomial equations like <span class="math notranslate nohighlight">\(x^2 + 1 = 0\)</span>, whose solutions <span class="math notranslate nohighlight">\(x = \pm\sqrt{-1}\)</span> cannot exist within the real number line <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. We denote <span class="math notranslate nohighlight">\(\sqrt{-1}\)</span> with the symbol <span class="math notranslate nohighlight">\(i\)</span> (called <strong>iota</strong>), so <span class="math notranslate nohighlight">\(i^2 = -1\)</span>.</p>
+</section>
+<section id="complex-numbers">
+<h3>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">#</a></h3>
+<p>A <strong>Complex Number</strong> is a combination of a real number and an imaginary number written in the standard form:</p>
+<div class="math notranslate nohighlight">
+\[z = a + b i \quad (\text{where } a, b \in \mathbb{R} \text{ and } i = \sqrt{-1})\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a\)</span> is the <strong>Real Part</strong> (<span class="math notranslate nohighlight">\(\text{Re}(z)\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(b\)</span> is the <strong>Imaginary Part</strong> (<span class="math notranslate nohighlight">\(\text{Im}(z)\)</span>).</p></li>
+</ul>
+<figure class="align-center" id="complex-numbers-plane-ai-diagram">
+<img alt="../../_images/complex_numbers_plane_ai_diagram.png" src="../../_images/complex_numbers_plane_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Complex plane representation of a complex number.</span><a class="headerlink" href="#complex-numbers-plane-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 <hr class="docutils" />
 <section id="order-of-operations-pemdas">
-<h2>Order of Operations (PEMDAS)<a class="headerlink" href="#order-of-operations-pemdas" title="Permalink to this heading">#</a></h2>
-<p>When evaluating mathematical expressions, we must follow a strict order of operations to avoid ambiguity. The standard convention is <strong>PEMDAS</strong>:</p>
+<h2>8. Order of Operations (PEMDAS)<a class="headerlink" href="#order-of-operations-pemdas" title="Permalink to this heading">#</a></h2>
+<p>When evaluating mathematical expressions, we must follow the strict order of operations (<strong>PEMDAS</strong>) to ensure consistent results:</p>
 <ol class="arabic simple">
 <li><p><strong>P</strong>arentheses <code class="docutils literal notranslate"><span class="pre">()</span></code></p></li>
 <li><p><strong>E</strong>xponents (Powers and Roots)</p></li>
-<li><p><strong>M</strong>ultiplication and <strong>D</strong>ivision (from left to right)</p></li>
-<li><p><strong>A</strong>ddition and <strong>S</strong>ubtraction (from left to right)</p></li>
+<li><p><strong>M</strong>ultiplication and <strong>D</strong>ivision (left to right)</p></li>
+<li><p><strong>A</strong>ddition and <strong>S</strong>ubtraction (left to right)</p></li>
 </ol>
-<section id="python-implementation">
-<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Permalink to this heading">#</a></h3>
-<p>Python automatically follows PEMDAS when evaluating expressions:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 + 5 * 2^3 - (4 / 2)</span>
-<span class="c1"># 1. Parentheses: (4 / 2) -&gt; 2</span>
+<section id="python-verification">
+<h3>Python Verification<a class="headerlink" href="#python-verification" title="Permalink to this heading">#</a></h3>
+<p>Python automatically enforces PEMDAS rules:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expression: 3 + 5 * 2^3 - (4 / 2)</span>
+<span class="c1"># 1. Parentheses: (4 / 2) -&gt; 2.0</span>
 <span class="c1"># 2. Exponents: 2^3 -&gt; 8</span>
 <span class="c1"># 3. Multiplication: 5 * 8 -&gt; 40</span>
-<span class="c1"># 4. Addition/Subtraction: 3 + 40 - 2 -&gt; 41</span>
+<span class="c1"># 4. Addition &amp; Subtraction: 3 + 40 - 2.0 -&gt; 41.0</span>
 <span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of expression:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of expression:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> <span class="c1"># Output: 41.0</span>
 </pre></div>
 </div>
 </section>
@@ -530,27 +603,15 @@ When the ratio of lengths of two line segments is an irrational number, the line
 <ol class="arabic simple">
 <li><p>Parentheses: <span class="math notranslate nohighlight">\((2 + 1) = 3\)</span></p></li>
 <li><p>Exponents: <span class="math notranslate nohighlight">\(3^2 = 9\)</span></p></li>
-<li><p>Multiplication/Division (left to right):</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(3 \times 9 = 27\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(27 \div 9 = 3\)</span></p></li>
-</ul>
-</li>
-<li><p>Addition/Subtraction (left to right):</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(12 - 3 = 9\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(9 + 4 = 13\)</span></p></li>
-</ul>
-</li>
+<li><p>Multiplication/Division (left to right): <span class="math notranslate nohighlight">\(3 \times 9 \div 9 = 3\)</span></p></li>
+<li><p>Addition/Subtraction (left to right): <span class="math notranslate nohighlight">\(12 - 3 + 4 = 13\)</span></p></li>
 </ol>
-<p>Verification in Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ans</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">4</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer:&quot;</span><span class="p">,</span> <span class="n">ans</span><span class="p">)</span> <span class="c1"># Output: 13.0</span>
 </pre></div>
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
 </pre></div>
 </div>
 </section>
@@ -620,15 +681,25 @@ When the ratio of lengths of two line segments is an irrational number, the line
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whole-numbers">Whole Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irrational-numbers">Irrational Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers">Real Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-and-imaginary-numbers">Complex and Imaginary Numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-operations-pemdas">Order of Operations (PEMDAS)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-mathbb-n">1. Natural Numbers (<span class="math notranslate nohighlight">\(\mathbb{N}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles-of-natural-numbers">Roles of Natural Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whole-numbers-mathbb-w">2. Whole Numbers (<span class="math notranslate nohighlight">\(\mathbb{W}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-mathbb-z">3. Integers (<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers-mathbb-q">4. Rational Numbers (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irrational-numbers-mathbb-i">5. Irrational Numbers (<span class="math notranslate nohighlight">\(\mathbb{I}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics-famous-examples">Key Characteristics &amp; Famous Examples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers-mathbb-r">6. Real Numbers (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-and-imaginary-numbers-mathbb-c">7. Complex and Imaginary Numbers (<span class="math notranslate nohighlight">\(\mathbb{C}\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-numbers">Imaginary Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#order-of-operations-pemdas">8. Order of Operations (PEMDAS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-verification">Python Verification</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>

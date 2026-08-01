@@ -19,6 +19,14 @@ $$\int_{a}^{b} f(x)\, dx$$
 
 This represents the **area** between the curve $f(x)$ and the x-axis, from $x = a$ to $x = b$.
 
+```{figure} ../../images/integration_area_ai_diagram.png
+---
+name: integration_area_ai_diagram
+align: center
+---
+Definite integration as area under a curve.
+```
+
 ```{note}
 If $f(x)$ is negative in some region, the area there is counted as **negative**. The integral gives the *net signed area*.
 ```
@@ -27,35 +35,48 @@ If $f(x)$ is negative in some region, the area there is counted as **negative**.
 
 ## Riemann Sums — Approximating the Area
 
-Before computers, mathematicians approximated integrals by slicing the area under a curve into many thin rectangles and summing their areas. This is called a **Riemann Sum**.
+Before numerical integration libraries existed, mathematicians approximated the area under a curve by slicing the region into $n$ thin vertical rectangles and summing their areas. This fundamental concept is known as a **Riemann Sum**.
 
-### Step 1: Understand the idea
+### Core Intuition
+Suppose we want to find the area under a function $f(x)$ over the interval $[a, b]$.
 
-Suppose we want to find the area under $f(x) = x^2$ from $x = 0$ to $x = 1$.
+We divide the interval $[a, b]$ into $n$ equal sub-intervals, each with width:
 
-We divide the interval $[0, 1]$ into $n$ equal slices, each of width:
+$$\Delta x = \frac{b - a}{n}$$
 
-$$\Delta x = \frac{b - a}{n} = \frac{1}{n}$$
+For each sub-interval $i$, we select a sample point $x_i^*$ and construct a rectangle of height $f(x_i^*)$ and width $\Delta x$.
 
-For each slice $i$, we pick a point $x_i$ and draw a rectangle of height $f(x_i)$ and width $\Delta x$.
+The total approximated area is the sum of these rectangle areas:
 
-The total approximated area is:
+$$\text{Area} \approx \sum_{i=1}^{n} f(x_i^*) \cdot \Delta x$$
 
-$$\text{Area} \approx \sum_{i=0}^{n-1} f(x_i) \cdot \Delta x$$
+As the number of slices approaches infinity ($n \to \infty$), the width $\Delta x \to 0$, and the Riemann Sum converges to the exact **Definite Integral**:
 
-As $n \to \infty$, the approximation becomes exact:
+$$\int_{a}^{b} f(x)\, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \cdot \Delta x$$
 
-$$\int_{a}^{b} f(x)\, dx = \lim_{n \to \infty} \sum_{i=0}^{n-1} f(x_i) \cdot \Delta x$$
+```{figure} ../../images/riemann_ai_diagram.png
+---
+name: riemann_ai_diagram
+align: center
+---
+Riemann sum approximation converging to definite integral area.
+```
 
-### Step 2: Three types of Riemann Sums
+---
 
-| Type | How to pick $x_i$ | Tendency |
-|------|-------------------|---------|
-| **Left Riemann Sum** | Left edge of each slice | Under-estimates for increasing $f$ |
-| **Right Riemann Sum** | Right edge of each slice | Over-estimates for increasing $f$ |
-| **Midpoint Riemann Sum** | Center of each slice | Most accurate of the three |
+### Three Types of Riemann Sums
 
-### Step 3: Implement in Python
+Depending on where we choose the sample point $x_i^*$ within each sub-interval, we get three common types of Riemann Sums:
+
+| Type | Sample Point Selection ($x_i^*$) | Behavior for Increasing Functions |
+| :--- | :--- | :--- |
+| **Left Riemann Sum** | Left endpoint of each slice | Under-estimates area |
+| **Right Riemann Sum** | Right endpoint of each slice | Over-estimates area |
+| **Midpoint Riemann Sum** | Midpoint of each slice | Most balanced & accurate approximation |
+
+---
+
+### Python Implementation
 
 ```python
 import numpy as np
@@ -97,7 +118,7 @@ Midpoint Sum      (n=10): 0.332500
 Exact answer             : 0.333333
 ```
 
-### Step 4: Visualize the rectangles
+### Visualizing the Rectangles
 
 ```python
 import numpy as np
@@ -131,7 +152,7 @@ plt.savefig('../../images/riemann_sum.png', dpi=150)
 plt.show()
 ```
 
-### Step 5: Increasing accuracy with more rectangles
+### Increasing Accuracy with More Rectangles
 
 ```python
 import numpy as np
@@ -179,7 +200,7 @@ The midpoint rule converges the fastest — with $n = 1000$ it's already accurat
 
 Instead of approximating manually, we can use `scipy.integrate.quad` for accurate numerical integration.
 
-### Step 1: Basic usage of `quad`
+### Basic Usage of `quad`
 
 ```python
 from scipy.integrate import quad
@@ -203,7 +224,7 @@ Estimated error : 3.70e-15
 Exact value     : 0.3333333333
 ```
 
-### Step 2: Integrate more complex functions
+### Integrating Complex Functions
 
 ```python
 from scipy.integrate import quad
@@ -232,7 +253,7 @@ print(f"√π = {np.sqrt(np.pi):.6f}")
 
 SymPy can compute integrals **symbolically** (exact answers, not approximations).
 
-### Step 1: Indefinite integrals (antiderivatives)
+### Indefinite Integrals (Antiderivatives)
 
 ```python
 from sympy import symbols, integrate, sin, exp, oo, sqrt, pi
@@ -254,7 +275,7 @@ print(f"∫ sin(x) dx = {integrate(sin(x), x)} + C")
 ∫ sin(x) dx = -cos(x) + C
 ```
 
-### Step 2: Definite integrals
+### Definite Integrals
 
 ```python
 from sympy import symbols, integrate, sin, Rational
@@ -295,19 +316,19 @@ import numpy as np
 def normal_pdf(x, mu=0, sigma=1):
     return (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
 
-# Step 1: Compute P(-1 ≤ X ≤ 1) by integration
+# Compute P(-1 ≤ X ≤ 1) by integration
 prob_1sigma, _ = quad(normal_pdf, -1, 1)
 print(f"P(-1 ≤ X ≤ 1) = {prob_1sigma:.4f} ({prob_1sigma*100:.2f}%)")
 
-# Step 2: P(-2 ≤ X ≤ 2)
+# P(-2 ≤ X ≤ 2)
 prob_2sigma, _ = quad(normal_pdf, -2, 2)
 print(f"P(-2 ≤ X ≤ 2) = {prob_2sigma:.4f} ({prob_2sigma*100:.2f}%)")
 
-# Step 3: P(-3 ≤ X ≤ 3)
+# P(-3 ≤ X ≤ 3)
 prob_3sigma, _ = quad(normal_pdf, -3, 3)
 print(f"P(-3 ≤ X ≤ 3) = {prob_3sigma:.4f} ({prob_3sigma*100:.2f}%)")
 
-# Step 4: Verify using scipy's built-in CDF
+# Verify using scipy's built-in CDF
 print("\n--- Verification using scipy.stats.norm.cdf ---")
 print(f"P(-1 ≤ X ≤ 1) = {norm.cdf(1) - norm.cdf(-1):.4f}")
 print(f"P(-2 ≤ X ≤ 2) = {norm.cdf(2) - norm.cdf(-2):.4f}")

@@ -8,7 +8,7 @@ Welcome to the **Basic Math and Calculus** section. This module covers the essen
 
 In this section, you will explore:
 
-- **{doc}`Number Theory <Number>`**: Understanding number systems (Natural, Whole, Integers, Rational, Irrational, Real, and Complex numbers) which form the foundation of computing and data representation.
+- **{doc}`Number <Number>`**: Understanding number systems (Natural, Whole, Integers, Rational, Irrational, Real, and Complex numbers) which form the foundation of computing and data representation.
 - **{doc}`Fractions <Fractions>`**: Proportions, ratios, and fractional calculations.
 - **{doc}`Decimals & Percentages <Decimals>`**: Decimals, percentage change, and performance metric conversions.
 - **{doc}`Order of Operations <OrderOfOperations>`**: Following the PEMDAS rules in mathematical calculations.
@@ -18,7 +18,6 @@ In this section, you will explore:
 - **{doc}`Summations <Summations>`**: Iterative addition and using Sigma ($\sum$) notation in statistics and cost functions.
 - **{doc}`Exponents <Exponents>`**: Understanding powers, square roots, and Euler's constant.
 - **{doc}`Logarithms <Logarithms>`**: Properties of logs, natural log, and log-transformations.
-- **{doc}`Linear Algebra <../linear_algebra/intro>`**: Working with vectors, matrices, operations, and determinants.
 - **{doc}`Calculus & Derivatives <Calculus>`**: Exploring derivatives, partial derivatives, chain rule, and gradients.
 - **{doc}`Integration <Integration>`**: Learning about integrals, Riemann sums approximation, symbolic/numerical integration, and probability density functions.
 

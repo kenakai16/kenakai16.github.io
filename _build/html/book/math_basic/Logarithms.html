@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -174,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">Number Sets &amp; Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
@@ -190,11 +193,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -466,10 +480,25 @@ document.write(`
 <p>Here is how logarithms are used across various scientific domains and real-world phenomena:</p>
 <section id="earthquakes-the-richter-scale">
 <h4>1. Earthquakes (The Richter Scale)<a class="headerlink" href="#earthquakes-the-richter-scale" title="Permalink to this heading">#</a></h4>
-<p>The Richter scale measures earthquake magnitude logarithmically (<span class="math notranslate nohighlight">\(\text{Magnitude} = \log_{10}(A) + C\)</span>):</p>
+<p>The Richter scale quantifies the energy released by earthquakes on a base-10 logarithmic scale:</p>
+<div class="math notranslate nohighlight">
+\[\text{Magnitude } M = \log_{10}(A) - \log_{10}(A_0)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(A\)</span> is the maximum amplitude recorded by a seismograph.</p>
+<ul>
+<li><p><strong>Seismic Wave Amplitude:</strong> Because of the <span class="math notranslate nohighlight">\(\log_{10}\)</span> scale, each whole unit increase of <span class="math notranslate nohighlight">\(+1.0\)</span> on the Richter scale means the ground shaking amplitude is <strong>10 times greater</strong>.</p>
 <ul class="simple">
-<li><p><strong>Wave Amplitude</strong>: Each increase of <span class="math notranslate nohighlight">\(1.0\)</span> on the Richter scale means the seismic wave amplitude is <strong>10 times larger</strong>.</p></li>
-<li><p><strong>Energy Release</strong>: Energy released scales as <span class="math notranslate nohighlight">\(10^{1.5 \times M} \approx 31.6^M\)</span>. Thus, a magnitude 7.0 earthquake releases <strong>~31.6 times more energy</strong> than a magnitude 6.0, and <strong>1,000 times more energy</strong> than a magnitude 5.0!</p></li>
+<li><p>A magnitude 6.0 earthquake has <strong>10 times</strong> the amplitude of a 5.0 earthquake.</p></li>
+<li><p>A magnitude 7.0 earthquake has <span class="math notranslate nohighlight">\(10 \times 10 = \mathbf{100\text{ times}}\)</span> the amplitude of a 5.0 earthquake.</p></li>
+</ul>
+</li>
+<li><p><strong>Radiated Energy (<span class="math notranslate nohighlight">\(E\)</span>):</strong> The actual energy released scales exponentially as <span class="math notranslate nohighlight">\(10^{1.5 \times M}\)</span> (or <span class="math notranslate nohighlight">\(\approx 31.6^M\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_2}{E_1} = 10^{1.5 \times (M_2 - M_1)}\]</div>
+<ul class="simple">
+<li><p>An increase of <span class="math notranslate nohighlight">\(+1.0\)</span> in magnitude releases <span class="math notranslate nohighlight">\(10^{1.5} \approx \mathbf{31.6\text{ times}}\)</span> more energy.</p></li>
+<li><p>An increase of <span class="math notranslate nohighlight">\(+2.0\)</span> in magnitude (e.g., from 5.0 to 7.0) releases <span class="math notranslate nohighlight">\(10^{1.5 \times 2} = 10^3 = \mathbf{1,000\text{ times}}\)</span> more energy!</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="sound-intensity-decibel-scale-db">
@@ -503,9 +532,28 @@ document.write(`
 </section>
 <section id="viral-growth-data-science-log-transform">
 <h4>6. Viral Growth &amp; Data Science (Log-Transform)<a class="headerlink" href="#viral-growth-data-science-log-transform" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Epidemics &amp; Social Trends (Logarithmic Scaling):</strong>
+Viral phenomena—such as the spread of infectious diseases (e.g., COVID-19) or viral social media videos—begin with <strong>exponential growth</strong> (e.g., <span class="math notranslate nohighlight">\(y = 2^t\)</span> or <span class="math notranslate nohighlight">\(y = e^{kt}\)</span>). On a standard linear axis, these curves shoot up almost vertically, making early trends impossible to analyze.</p>
+<p>By plotting data on a <strong>logarithmic scale</strong> (<span class="math notranslate nohighlight">\(\log(y)\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span>), exponential growth curves transform into <strong>straight lines</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\ln(y) = \ln(e^{kt}) = kt\]</div>
+<p>The slope of this line represents the constant growth rate <span class="math notranslate nohighlight">\(k\)</span>. A bending of the line downward indicates that the growth rate is flattening out (turning point), making log plots essential for epidemiologists and growth analysts.</p>
+</li>
+<li><p><strong>Handling Skewed Data in Machine Learning (Log Feature Scaling):</strong>
+Real-world features like income levels, housing prices, or website traffic usually exhibit extreme <strong>right-skewness</strong> (heavy-tailed distributions) with values ranging over several orders of magnitude (e.g., $10,000 to $1,000,000,000).</p>
+<p>Applying a log transformation (such as <span class="math notranslate nohighlight">\(y = \log_{10}(x)\)</span> or <span class="math notranslate nohighlight">\(y = \ln(1 + x)\)</span>) compresses these extreme scales:</p>
 <ul class="simple">
-<li><p><strong>Epidemics &amp; Social Trends</strong>: Disease spread (COVID-19) or viral videos start with exponential growth (<span class="math notranslate nohighlight">\(2^t\)</span> or <span class="math notranslate nohighlight">\(e^{kt}\)</span>). Plotting total cases on a logarithmic scale turns exponential curves into straight lines, making it easy to spot whether the growth rate is accelerating or flattening out.</p></li>
-<li><p><strong>Handling Skewed Data in Machine Learning</strong>: Income levels, housing prices, or website traffic often contain extreme outliers (e.g., net worths ranging from $10,000 to $100,000,000,000). Applying a <span class="math notranslate nohighlight">\(\log(x)\)</span> transformation compresses $100,000 to <span class="math notranslate nohighlight">\(5\)</span> (<span class="math notranslate nohighlight">\(\log_{10}\)</span>) and $1,000,000,000 to <span class="math notranslate nohighlight">\(9\)</span>, preventing gradient descent algorithms from overshooting or failing to converge.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\$10,000 \implies \log_{10}(10,000) = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\$100,000 \implies \log_{10}(100,000) = 5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\$1,000,000,000 \implies \log_{10}(1,000,000,000) = 9\)</span></p></li>
+</ul>
+<p><strong>Why this matters in ML:</strong></p>
+<ol class="arabic simple">
+<li><p>It transforms highly skewed distributions into bell-shaped (Gaussian-like) distributions, satisfying key assumptions of algorithms like Linear Regression.</p></li>
+<li><p>It stabilizes feature variance and prevents extreme outliers from producing massive gradients, allowing gradient descent to converge faster and more reliably.</p></li>
+</ol>
+</li>
 </ul>
 </section>
 </section>

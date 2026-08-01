@@ -1,0 +1,31 @@
+/* Center align figures, figure images, and all caption text elements */
+figure.align-center,
+.figure.align-center,
+div.figure.align-center {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+figure.align-center img,
+.figure.align-center img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+figure.align-center figcaption,
+figure.align-center figcaption p,
+figure.align-center figcaption span,
+.figure.align-center .caption,
+figcaption p,
+figcaption .caption-text,
+figcaption .caption-number {
+    text-align: center !important;
+    justify-content: center !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}

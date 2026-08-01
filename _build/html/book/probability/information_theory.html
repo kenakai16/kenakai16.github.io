@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Information Theory Basics &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/probability/information_theory';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Statistics" href="../statistics/intro.html" />
+    <link rel="prev" title="Convergence &amp; Limit Theorems" href="limit_theorems.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/probability/information_theory.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Information Theory Basics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-content">1. Information Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-probability-and-information">2. Equivalence of Probability and Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-uncertainty-chaos">3. Entropy (Uncertainty / Chaos)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-entropy">4. Cross-Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kullback-leibler-kl-divergence-distribution-distance">5. Kullback-Leibler (KL) Divergence (Distribution Distance)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-with-python">Illustration with Python</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="information-theory-basics">
+<h1>Information Theory Basics<a class="headerlink" href="#information-theory-basics" title="Permalink to this heading">#</a></h1>
+<p>Although originating from telecommunications engineering (by Claude Shannon), Information Theory has incredibly deep mathematical connections to Probability. In modern Deep Learning and Machine Learning, concepts from information theory are used as the default <strong>Loss functions</strong> for almost all Classification problems.</p>
+<p>This chapter will visually explain Entropy, Cross-Entropy, and KL Divergence.</p>
+<section id="information-content">
+<h2>1. Information Content<a class="headerlink" href="#information-content" title="Permalink to this heading">#</a></h2>
+<p>Imagine you are waiting for the outcome of an event.</p>
+<ul class="simple">
+<li><p>If that event is <strong>100% certain to happen</strong> (e.g., “The sun rises in the East”), when it actually happens, you gain no new information.</p></li>
+<li><p>Conversely, if that event is <strong>very rare</strong> (e.g., “Winning the lottery jackpot”), when it happens, you receive a massive amount of information.</p></li>
+</ul>
+<p>Mathematically, the Information Content (<span class="math notranslate nohighlight">\(I\)</span>) of an event <span class="math notranslate nohighlight">\(x\)</span> (with probability <span class="math notranslate nohighlight">\(P(x)\)</span>) is defined as inversely proportional to its probability:</p>
+<div class="math notranslate nohighlight">
+\[ I(x) = -\log_2(P(x)) \]</div>
+<p><em>Note: We use base 2 to measure in units of <strong>bits</strong> (as in computers).</em></p>
+</section>
+<section id="equivalence-of-probability-and-information">
+<h2>2. Equivalence of Probability and Information<a class="headerlink" href="#equivalence-of-probability-and-information" title="Permalink to this heading">#</a></h2>
+<p>There is a direct mathematical equivalence between probability, uncertainty, and information. Whenever we reduce uncertainty about an outcome by eliminating alternative possibilities, we are gaining information.</p>
+<figure class="align-center" id="probability-information-equivalence">
+<img alt="../../_images/probability_information_equivalence.png" src="../../_images/probability_information_equivalence.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Visualizing the equivalence of probability reduction and information gain.</span><a class="headerlink" href="#probability-information-equivalence" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As illustrated in the diagram above:</p>
+<ul>
+<li><p><strong>a) Independent Random Sampling:</strong> Consider drawing colored marbles from an urn with replacement. The probabilities are:</p>
+<div class="math notranslate nohighlight">
+\[p(\text{blue}) = \frac{1}{2}, \quad p(\text{grey}) = \frac{1}{4}, \quad p(\text{yellow}) = \frac{1}{8}, \quad p(\text{green}) = \frac{1}{8}\]</div>
+</li>
+<li><p><strong>b) 2-Sequences Distribution:</strong> Shows the combined joint probability distribution of drawing two marbles consecutively (<span class="math notranslate nohighlight">\(X_1, X_2\)</span>), yielding 16 possible outcomes.</p></li>
+<li><p><strong>c) Information Content of Propositions:</strong> By learning a proposition about the two draws is true, we eliminate certain possible outcomes, reducing the probability mass and gaining information:</p>
+<ul class="simple">
+<li><p><strong>Proposition <span class="math notranslate nohighlight">\(X_1 \neq \text{blue}, X_2 \neq \text{blue}\)</span>:</strong> Eliminates all sequences containing blue marbles. The remaining probability mass is <span class="math notranslate nohighlight">\(\frac{8}{32}\)</span> (a 75% reduction), yielding exactly <strong>2 bits</strong> of information.</p></li>
+<li><p><strong>Proposition <span class="math notranslate nohighlight">\(X_1 \neq \text{green}\)</span>:</strong> Eliminates green outcomes. The remaining probability mass is <span class="math notranslate nohighlight">\(\frac{28}{32}\)</span>, yielding only <strong>0.2 bits</strong> of information (since green was already rare).</p></li>
+<li><p><strong>Proposition <span class="math notranslate nohighlight">\(X_1 = X_2\)</span>:</strong> Learning that both marbles have the same color has a probability of <span class="math notranslate nohighlight">\(\frac{11}{32}\)</span>, yielding <strong>1.5 bits</strong> of information.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Core Rule:</strong> Eliminating probability mass, reducing uncertainty, and gaining information are mathematically equivalent. A <strong>50% reduction</strong> in the remaining probability mass corresponds to exactly <strong>1 bit</strong> of information gained.</p>
+</section>
+<hr class="docutils" />
+<section id="entropy-uncertainty-chaos">
+<h2>3. Entropy (Uncertainty / Chaos)<a class="headerlink" href="#entropy-uncertainty-chaos" title="Permalink to this heading">#</a></h2>
+<p>While <span class="math notranslate nohighlight">\(I(x)\)</span> only measures the information content of a <em>single</em> specific event, <strong>Entropy (<span class="math notranslate nohighlight">\(H\)</span>)</strong> measures the <strong>expected</strong> information content of the <em>entire probability distribution</em>. In other words, Entropy measures the level of “uncertainty” or “chaos” of a random variable <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ H(X) = E[I(X)] = -\sum_{x} P(x) \log_2(P(x)) \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Mathematical Edge Cases &amp; Practical Notes:</strong></p>
+<ul class="simple">
+<li><p><strong>Convention for <span class="math notranslate nohighlight">\(0 \log_2 0\)</span>:</strong> By convention, <span class="math notranslate nohighlight">\(0 \log_2(0) = 0\)</span> because <span class="math notranslate nohighlight">\(\lim_{p \to 0^+} p \log_2(p) = 0\)</span>.</p></li>
+<li><p><strong>Base 2 vs. Natural Log:</strong></p>
+<ul>
+<li><p>Base 2 (<span class="math notranslate nohighlight">\(\log_2\)</span>) measures information in <strong>bits</strong> (standard in pure Information Theory).</p></li>
+<li><p>Natural log (<span class="math notranslate nohighlight">\(\ln\)</span>) measures information in <strong>nats</strong> (standard in Machine Learning frameworks like PyTorch and TensorFlow for loss computations).</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><strong>Low Entropy:</strong> The system is very predictable (high certainty). Example: A rigged coin that always lands on Heads (<span class="math notranslate nohighlight">\(P(H) = 1, P(T) = 0\)</span>). In this case, <span class="math notranslate nohighlight">\(H(X) = 0\)</span>.</p></li>
+<li><p><strong>High Entropy:</strong> The system is completely chaotic and most unpredictable. Example: A fair coin (<span class="math notranslate nohighlight">\(P(H) = 0.5, P(T) = 0.5\)</span>). In this case, <span class="math notranslate nohighlight">\(H(X)\)</span> reaches its maximum.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="cross-entropy">
+<h2>4. Cross-Entropy<a class="headerlink" href="#cross-entropy" title="Permalink to this heading">#</a></h2>
+<p>Cross-Entropy answers the question: <em>If the true data follows distribution <span class="math notranslate nohighlight">\(P\)</span>, but we assume it follows an approximate distribution <span class="math notranslate nohighlight">\(Q\)</span>, how many bits on average do we need to encode the information?</em></p>
+<div class="math notranslate nohighlight">
+\[ H(P, Q) = -\sum_{x} P(x) \log_2(Q(x)) \]</div>
+<p>In Machine Learning:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(P\)</span> (True distribution):</strong> The actual distribution of the data (usually ground-truth labels, e.g., <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> for a picture of a dog).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(Q\)</span> (Predicted distribution):</strong> The distribution predicted by the AI model (e.g., <code class="docutils literal notranslate"><span class="pre">[0.7,</span> <span class="pre">0.2,</span> <span class="pre">0.1]</span></code>).</p></li>
+</ul>
+<p>The goal of an ML model is to make <span class="math notranslate nohighlight">\(Q\)</span> as similar to <span class="math notranslate nohighlight">\(P\)</span> as possible. When <span class="math notranslate nohighlight">\(Q = P\)</span>, Cross-Entropy reaches its minimum value (which is exactly the Entropy of <span class="math notranslate nohighlight">\(P\)</span>). Therefore, <strong>Cross-Entropy Loss</strong> is used as the loss function to optimize Neural Networks in Classification problems.</p>
+</section>
+<hr class="docutils" />
+<section id="kullback-leibler-kl-divergence-distribution-distance">
+<h2>5. Kullback-Leibler (KL) Divergence (Distribution Distance)<a class="headerlink" href="#kullback-leibler-kl-divergence-distribution-distance" title="Permalink to this heading">#</a></h2>
+<p>KL Divergence (KLD) measures the <strong>difference</strong> between two probability distributions <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span>. It answers the question: <em>By using <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(P\)</span>, how much extra information content are we wasting?</em></p>
+<div class="math notranslate nohighlight">
+\[ D_{KL}(P || Q) = H(P, Q) - H(P) \]</div>
+<div class="math notranslate nohighlight">
+\[ D_{KL}(P || Q) = \sum_{x} P(x) \log_2\left(\frac{P(x)}{Q(x)}\right) \]</div>
+<p><strong>Important Properties:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(D_{KL}(P || Q) \ge 0\)</span>. It is only equal to 0 when <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are identical.</p></li>
+<li><p>It is not symmetric: <span class="math notranslate nohighlight">\(D_{KL}(P || Q) \neq D_{KL}(Q || P)\)</span>. Therefore, it is not a true “distance metric” in a geometric sense.</p></li>
+</ul>
+<p>In Machine Learning (especially Generative AI like VAEs - Variational Autoencoders or t-SNE), KLD is used as a Loss function to force the predicted distribution <span class="math notranslate nohighlight">\(Q\)</span> (latent space) to closely match a standard distribution <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<hr class="docutils" />
+<section id="illustration-with-python">
+<h3>Illustration with Python<a class="headerlink" href="#illustration-with-python" title="Permalink to this heading">#</a></h3>
+<p>How to calculate Entropy and KL Divergence using Numpy and Scipy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">entropy</span>
+
+<span class="c1"># Distribution P (actual - ground truth)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">])</span>
+
+<span class="c1"># Distribution Q (prediction from model 1 - quite good)</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">])</span>
+
+<span class="c1"># Distribution Q (prediction from model 2 - very bad)</span>
+<span class="n">Q2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+
+<span class="c1"># 1. Calculate Entropy of P (base 2)</span>
+<span class="c1"># entropy() in scipy defaults to natural log (ln), we change the base with base=2</span>
+<span class="n">H_P</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entropy H(P): </span><span class="si">{</span><span class="n">H_P</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> bits&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. Calculate KL Divergence: D_KL(P || Q1) and D_KL(P || Q2)</span>
+<span class="n">kl_1</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">qk</span><span class="o">=</span><span class="n">Q1</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">kl_2</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">qk</span><span class="o">=</span><span class="n">Q2</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;KL Divergence (P || Q1): </span><span class="si">{</span><span class="n">kl_1</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> bits (Good model, small KLD)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;KL Divergence (P || Q2): </span><span class="si">{</span><span class="n">kl_2</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> bits (Bad model, large KLD)&quot;</span><span class="p">)</span>
+
+<span class="c1"># 3. Calculate Cross-Entropy H(P, Q) = H(P) + D_KL(P || Q)</span>
+<span class="n">ce_1</span> <span class="o">=</span> <span class="n">H_P</span> <span class="o">+</span> <span class="n">kl_1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cross-Entropy H(P, Q1): </span><span class="si">{</span><span class="n">ce_1</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> bits&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/probability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="limit_theorems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Convergence &amp; Limit Theorems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../statistics/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Statistics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-content">1. Information Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-probability-and-information">2. Equivalence of Probability and Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-uncertainty-chaos">3. Entropy (Uncertainty / Chaos)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-entropy">4. Cross-Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kullback-leibler-kl-divergence-distribution-distance">5. Kullback-Leibler (KL) Divergence (Distribution Distance)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-with-python">Illustration with Python</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

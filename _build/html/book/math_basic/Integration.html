@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -174,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">Number Sets &amp; Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
@@ -190,11 +193,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -398,21 +412,21 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-integral">What Is an Integral?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums-approximating-the-area">Riemann Sums — Approximating the Area</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-understand-the-idea">Step 1: Understand the idea</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-three-types-of-riemann-sums">Step 2: Three types of Riemann Sums</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-implement-in-python">Step 3: Implement in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-visualize-the-rectangles">Step 4: Visualize the rectangles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-increasing-accuracy-with-more-rectangles">Step 5: Increasing accuracy with more rectangles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-intuition">Core Intuition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-types-of-riemann-sums">Three Types of Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-rectangles">Visualizing the Rectangles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-accuracy-with-more-rectangles">Increasing Accuracy with More Rectangles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-integrals-with-scipy">Computing Integrals with SciPy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-basic-usage-of-quad">Step 1: Basic usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-integrate-more-complex-functions">Step 2: Integrate more complex functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage-of-quad">Basic Usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-complex-functions">Integrating Complex Functions</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-integration-with-sympy">Symbolic Integration with SymPy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-indefinite-integrals-antiderivatives">Step 1: Indefinite integrals (antiderivatives)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-definite-integrals">Step 2: Definite integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-antiderivatives">Indefinite Integrals (Antiderivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite Integrals</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-application-probability-from-a-pdf">Real-World Application: Probability from a PDF</a><ul class="nav section-nav flex-column">
@@ -448,6 +462,12 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\int_{a}^{b} f(x)\, dx\]</div>
 <p>This represents the <strong>area</strong> between the curve <span class="math notranslate nohighlight">\(f(x)\)</span> and the x-axis, from <span class="math notranslate nohighlight">\(x = a\)</span> to <span class="math notranslate nohighlight">\(x = b\)</span>.</p>
+<figure class="align-center" id="integration-area-ai-diagram">
+<img alt="../../_images/integration_area_ai_diagram.png" src="../../_images/integration_area_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Definite integration as area under a curve.</span><a class="headerlink" href="#integration-area-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If <span class="math notranslate nohighlight">\(f(x)\)</span> is negative in some region, the area there is counted as <strong>negative</strong>. The integral gives the <em>net signed area</em>.</p>
@@ -456,49 +476,58 @@ document.write(`
 <hr class="docutils" />
 <section id="riemann-sums-approximating-the-area">
 <h2>Riemann Sums — Approximating the Area<a class="headerlink" href="#riemann-sums-approximating-the-area" title="Permalink to this heading">#</a></h2>
-<p>Before computers, mathematicians approximated integrals by slicing the area under a curve into many thin rectangles and summing their areas. This is called a <strong>Riemann Sum</strong>.</p>
-<section id="step-1-understand-the-idea">
-<h3>Step 1: Understand the idea<a class="headerlink" href="#step-1-understand-the-idea" title="Permalink to this heading">#</a></h3>
-<p>Suppose we want to find the area under <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> from <span class="math notranslate nohighlight">\(x = 0\)</span> to <span class="math notranslate nohighlight">\(x = 1\)</span>.</p>
-<p>We divide the interval <span class="math notranslate nohighlight">\([0, 1]\)</span> into <span class="math notranslate nohighlight">\(n\)</span> equal slices, each of width:</p>
+<p>Before numerical integration libraries existed, mathematicians approximated the area under a curve by slicing the region into <span class="math notranslate nohighlight">\(n\)</span> thin vertical rectangles and summing their areas. This fundamental concept is known as a <strong>Riemann Sum</strong>.</p>
+<section id="core-intuition">
+<h3>Core Intuition<a class="headerlink" href="#core-intuition" title="Permalink to this heading">#</a></h3>
+<p>Suppose we want to find the area under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>We divide the interval <span class="math notranslate nohighlight">\([a, b]\)</span> into <span class="math notranslate nohighlight">\(n\)</span> equal sub-intervals, each with width:</p>
 <div class="math notranslate nohighlight">
-\[\Delta x = \frac{b - a}{n} = \frac{1}{n}\]</div>
-<p>For each slice <span class="math notranslate nohighlight">\(i\)</span>, we pick a point <span class="math notranslate nohighlight">\(x_i\)</span> and draw a rectangle of height <span class="math notranslate nohighlight">\(f(x_i)\)</span> and width <span class="math notranslate nohighlight">\(\Delta x\)</span>.</p>
-<p>The total approximated area is:</p>
+\[\Delta x = \frac{b - a}{n}\]</div>
+<p>For each sub-interval <span class="math notranslate nohighlight">\(i\)</span>, we select a sample point <span class="math notranslate nohighlight">\(x_i^*\)</span> and construct a rectangle of height <span class="math notranslate nohighlight">\(f(x_i^*)\)</span> and width <span class="math notranslate nohighlight">\(\Delta x\)</span>.</p>
+<p>The total approximated area is the sum of these rectangle areas:</p>
 <div class="math notranslate nohighlight">
-\[\text{Area} \approx \sum_{i=0}^{n-1} f(x_i) \cdot \Delta x\]</div>
-<p>As <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the approximation becomes exact:</p>
+\[\text{Area} \approx \sum_{i=1}^{n} f(x_i^*) \cdot \Delta x\]</div>
+<p>As the number of slices approaches infinity (<span class="math notranslate nohighlight">\(n \to \infty\)</span>), the width <span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>, and the Riemann Sum converges to the exact <strong>Definite Integral</strong>:</p>
 <div class="math notranslate nohighlight">
-\[\int_{a}^{b} f(x)\, dx = \lim_{n \to \infty} \sum_{i=0}^{n-1} f(x_i) \cdot \Delta x\]</div>
+\[\int_{a}^{b} f(x)\, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \cdot \Delta x\]</div>
+<figure class="align-center" id="riemann-ai-diagram">
+<img alt="../../_images/riemann_ai_diagram.png" src="../../_images/riemann_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Riemann sum approximation converging to definite integral area.</span><a class="headerlink" href="#riemann-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="step-2-three-types-of-riemann-sums">
-<h3>Step 2: Three types of Riemann Sums<a class="headerlink" href="#step-2-three-types-of-riemann-sums" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="three-types-of-riemann-sums">
+<h3>Three Types of Riemann Sums<a class="headerlink" href="#three-types-of-riemann-sums" title="Permalink to this heading">#</a></h3>
+<p>Depending on where we choose the sample point <span class="math notranslate nohighlight">\(x_i^*\)</span> within each sub-interval, we get three common types of Riemann Sums:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Type</p></th>
-<th class="head"><p>How to pick <span class="math notranslate nohighlight">\(x_i\)</span></p></th>
-<th class="head"><p>Tendency</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Sample Point Selection (<span class="math notranslate nohighlight">\(x_i^*\)</span>)</p></th>
+<th class="head text-left"><p>Behavior for Increasing Functions</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Left Riemann Sum</strong></p></td>
-<td><p>Left edge of each slice</p></td>
-<td><p>Under-estimates for increasing <span class="math notranslate nohighlight">\(f\)</span></p></td>
+<tr class="row-even"><td class="text-left"><p><strong>Left Riemann Sum</strong></p></td>
+<td class="text-left"><p>Left endpoint of each slice</p></td>
+<td class="text-left"><p>Under-estimates area</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Right Riemann Sum</strong></p></td>
-<td><p>Right edge of each slice</p></td>
-<td><p>Over-estimates for increasing <span class="math notranslate nohighlight">\(f\)</span></p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>Right Riemann Sum</strong></p></td>
+<td class="text-left"><p>Right endpoint of each slice</p></td>
+<td class="text-left"><p>Over-estimates area</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Midpoint Riemann Sum</strong></p></td>
-<td><p>Center of each slice</p></td>
-<td><p>Most accurate of the three</p></td>
+<tr class="row-even"><td class="text-left"><p><strong>Midpoint Riemann Sum</strong></p></td>
+<td class="text-left"><p>Midpoint of each slice</p></td>
+<td class="text-left"><p>Most balanced &amp; accurate approximation</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="step-3-implement-in-python">
-<h3>Step 3: Implement in Python<a class="headerlink" href="#step-3-implement-in-python" title="Permalink to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="python-implementation">
+<h3>Python Implementation<a class="headerlink" href="#python-implementation" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
@@ -538,8 +567,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="step-4-visualize-the-rectangles">
-<h3>Step 4: Visualize the rectangles<a class="headerlink" href="#step-4-visualize-the-rectangles" title="Permalink to this heading">#</a></h3>
+<section id="visualizing-the-rectangles">
+<h3>Visualizing the Rectangles<a class="headerlink" href="#visualizing-the-rectangles" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
@@ -572,8 +601,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="step-5-increasing-accuracy-with-more-rectangles">
-<h3>Step 5: Increasing accuracy with more rectangles<a class="headerlink" href="#step-5-increasing-accuracy-with-more-rectangles" title="Permalink to this heading">#</a></h3>
+<section id="increasing-accuracy-with-more-rectangles">
+<h3>Increasing Accuracy with More Rectangles<a class="headerlink" href="#increasing-accuracy-with-more-rectangles" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -617,8 +646,8 @@ document.write(`
 <section id="computing-integrals-with-scipy">
 <h2>Computing Integrals with SciPy<a class="headerlink" href="#computing-integrals-with-scipy" title="Permalink to this heading">#</a></h2>
 <p>Instead of approximating manually, we can use <code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code> for accurate numerical integration.</p>
-<section id="step-1-basic-usage-of-quad">
-<h3>Step 1: Basic usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code><a class="headerlink" href="#step-1-basic-usage-of-quad" title="Permalink to this heading">#</a></h3>
+<section id="basic-usage-of-quad">
+<h3>Basic Usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code><a class="headerlink" href="#basic-usage-of-quad" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 
 <span class="c1"># Define the function</span>
@@ -640,8 +669,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="step-2-integrate-more-complex-functions">
-<h3>Step 2: Integrate more complex functions<a class="headerlink" href="#step-2-integrate-more-complex-functions" title="Permalink to this heading">#</a></h3>
+<section id="integrating-complex-functions">
+<h3>Integrating Complex Functions<a class="headerlink" href="#integrating-complex-functions" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
@@ -667,8 +696,8 @@ document.write(`
 <section id="symbolic-integration-with-sympy">
 <h2>Symbolic Integration with SymPy<a class="headerlink" href="#symbolic-integration-with-sympy" title="Permalink to this heading">#</a></h2>
 <p>SymPy can compute integrals <strong>symbolically</strong> (exact answers, not approximations).</p>
-<section id="step-1-indefinite-integrals-antiderivatives">
-<h3>Step 1: Indefinite integrals (antiderivatives)<a class="headerlink" href="#step-1-indefinite-integrals-antiderivatives" title="Permalink to this heading">#</a></h3>
+<section id="indefinite-integrals-antiderivatives">
+<h3>Indefinite Integrals (Antiderivatives)<a class="headerlink" href="#indefinite-integrals-antiderivatives" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">oo</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
@@ -688,8 +717,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="step-2-definite-integrals">
-<h3>Step 2: Definite integrals<a class="headerlink" href="#step-2-definite-integrals" title="Permalink to this heading">#</a></h3>
+<section id="definite-integrals">
+<h3>Definite Integrals<a class="headerlink" href="#definite-integrals" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">Rational</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
@@ -725,19 +754,19 @@ document.write(`
 <span class="k">def</span><span class="w"> </span><span class="nf">normal_pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Step 1: Compute P(-1 ≤ X ≤ 1) by integration</span>
+<span class="c1"># Compute P(-1 ≤ X ≤ 1) by integration</span>
 <span class="n">prob_1sigma</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">normal_pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(-1 ≤ X ≤ 1) = </span><span class="si">{</span><span class="n">prob_1sigma</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">prob_1sigma</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
 
-<span class="c1"># Step 2: P(-2 ≤ X ≤ 2)</span>
+<span class="c1"># P(-2 ≤ X ≤ 2)</span>
 <span class="n">prob_2sigma</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">normal_pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(-2 ≤ X ≤ 2) = </span><span class="si">{</span><span class="n">prob_2sigma</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">prob_2sigma</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
 
-<span class="c1"># Step 3: P(-3 ≤ X ≤ 3)</span>
+<span class="c1"># P(-3 ≤ X ≤ 3)</span>
 <span class="n">prob_3sigma</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">normal_pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(-3 ≤ X ≤ 3) = </span><span class="si">{</span><span class="n">prob_3sigma</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">prob_3sigma</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%)&quot;</span><span class="p">)</span>
 
-<span class="c1"># Step 4: Verify using scipy&#39;s built-in CDF</span>
+<span class="c1"># Verify using scipy&#39;s built-in CDF</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Verification using scipy.stats.norm.cdf ---&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(-1 ≤ X ≤ 1) = </span><span class="si">{</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;P(-2 ≤ X ≤ 2) = </span><span class="si">{</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -878,21 +907,21 @@ P(-3 ≤ X ≤ 3) = 0.9973
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-integral">What Is an Integral?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-sums-approximating-the-area">Riemann Sums — Approximating the Area</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-understand-the-idea">Step 1: Understand the idea</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-three-types-of-riemann-sums">Step 2: Three types of Riemann Sums</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-implement-in-python">Step 3: Implement in Python</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-visualize-the-rectangles">Step 4: Visualize the rectangles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-increasing-accuracy-with-more-rectangles">Step 5: Increasing accuracy with more rectangles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-intuition">Core Intuition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-types-of-riemann-sums">Three Types of Riemann Sums</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation">Python Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-rectangles">Visualizing the Rectangles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-accuracy-with-more-rectangles">Increasing Accuracy with More Rectangles</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-integrals-with-scipy">Computing Integrals with SciPy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-basic-usage-of-quad">Step 1: Basic usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-integrate-more-complex-functions">Step 2: Integrate more complex functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage-of-quad">Basic Usage of <code class="docutils literal notranslate"><span class="pre">quad</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-complex-functions">Integrating Complex Functions</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-integration-with-sympy">Symbolic Integration with SymPy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-indefinite-integrals-antiderivatives">Step 1: Indefinite integrals (antiderivatives)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-definite-integrals">Step 2: Definite integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indefinite-integrals-antiderivatives">Indefinite Integrals (Antiderivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite Integrals</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-world-application-probability-from-a-pdf">Real-World Application: Probability from a PDF</a><ul class="nav section-nav flex-column">

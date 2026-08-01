@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -67,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/math_basic/intro';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Number" href="Number.html" />
+    <link rel="next" title="Number Sets &amp; Systems" href="Number.html" />
     <link rel="prev" title="Table of Contents" href="../table_of_contents.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">Number Sets &amp; Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
@@ -190,11 +193,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -417,7 +431,7 @@ document.write(`
 <h2>📂 Topics Covered<a class="headerlink" href="#topics-covered" title="Permalink to this heading">#</a></h2>
 <p>In this section, you will explore:</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="Number.html"><span class="doc">Number Theory</span></a></strong>: Understanding number systems (Natural, Whole, Integers, Rational, Irrational, Real, and Complex numbers) which form the foundation of computing and data representation.</p></li>
+<li><p><strong><a class="reference internal" href="Number.html"><span class="doc">Number</span></a></strong>: Understanding number systems (Natural, Whole, Integers, Rational, Irrational, Real, and Complex numbers) which form the foundation of computing and data representation.</p></li>
 <li><p><strong><a class="reference internal" href="Fractions.html"><span class="doc">Fractions</span></a></strong>: Proportions, ratios, and fractional calculations.</p></li>
 <li><p><strong><a class="reference internal" href="Decimals.html"><span class="doc">Decimals &amp; Percentages</span></a></strong>: Decimals, percentage change, and performance metric conversions.</p></li>
 <li><p><strong><a class="reference internal" href="OrderOfOperations.html"><span class="doc">Order of Operations</span></a></strong>: Following the PEMDAS rules in mathematical calculations.</p></li>
@@ -427,7 +441,6 @@ document.write(`
 <li><p><strong><a class="reference internal" href="Summations.html"><span class="doc">Summations</span></a></strong>: Iterative addition and using Sigma (<span class="math notranslate nohighlight">\(\sum\)</span>) notation in statistics and cost functions.</p></li>
 <li><p><strong><a class="reference internal" href="Exponents.html"><span class="doc">Exponents</span></a></strong>: Understanding powers, square roots, and Euler’s constant.</p></li>
 <li><p><strong><a class="reference internal" href="Logarithms.html"><span class="doc">Logarithms</span></a></strong>: Properties of logs, natural log, and log-transformations.</p></li>
-<li><p><strong><a class="reference internal" href="../linear_algebra/intro.html"><span class="doc">Linear Algebra</span></a></strong>: Working with vectors, matrices, operations, and determinants.</p></li>
 <li><p><strong><a class="reference internal" href="Calculus.html"><span class="doc">Calculus &amp; Derivatives</span></a></strong>: Exploring derivatives, partial derivatives, chain rule, and gradients.</p></li>
 <li><p><strong><a class="reference internal" href="Integration.html"><span class="doc">Integration</span></a></strong>: Learning about integrals, Riemann sums approximation, symbolic/numerical integration, and probability density functions.</p></li>
 </ul>
@@ -483,7 +496,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Number</p>
+        <p class="prev-next-title">Number Sets &amp; Systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Convergence &amp; Limit Theorems &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/probability/limit_theorems';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Information Theory Basics" href="information_theory.html" />
+    <link rel="prev" title="Random Variables &amp; Probability Distributions" href="random_variables.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/probability/limit_theorems.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Convergence & Limit Theorems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-limit-theorems">1. What Are Limit Theorems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modes-of-convergence">2. Modes of Convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-in-probability-x-n-xrightarrow-p-x">2.1 Convergence in Probability (<span class="math notranslate nohighlight">\(X_n \xrightarrow{P} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#almost-sure-convergence-x-n-xrightarrow-a-s-x">2.2 Almost Sure Convergence (<span class="math notranslate nohighlight">\(X_n \xrightarrow{a.s.} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-in-distribution-x-n-xrightarrow-d-x">2.3 Convergence in Distribution (<span class="math notranslate nohighlight">\(X_n \xrightarrow{d} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-of-convergence">2.4 Hierarchy of Convergence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-large-numbers-lln">3. Law of Large Numbers (LLN)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-lln-matters-in-data-science">Why LLN Matters in Data Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-roll-average-comparison">Python Simulation: Roll Average Comparison</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-cumulative-convergence-curve">Python Simulation: Cumulative Convergence Curve</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-limit-theorem-clt">4. Central Limit Theorem (CLT)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-statement">Theorem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-clt-is-the-mathematical-miracle-of-statistics">Why CLT is the “Mathematical Miracle” of Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-clt">Python Simulation: CLT</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="convergence-limit-theorems">
+<h1>Convergence &amp; Limit Theorems<a class="headerlink" href="#convergence-limit-theorems" title="Permalink to this heading">#</a></h1>
+<p>In Data Science and Machine Learning, we rarely have access to an entire “population”. Instead, we collect a finite “sample” of size <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Limit Theorems are the fundamental theorems of probability theory that describe how sample statistics (such as the sample mean <span class="math notranslate nohighlight">\(\bar{X}_n\)</span>) behave as the sample size approaches infinity (<span class="math notranslate nohighlight">\(n \to \infty\)</span>).</p>
+<hr class="docutils" />
+<section id="what-are-limit-theorems">
+<h2>1. What Are Limit Theorems?<a class="headerlink" href="#what-are-limit-theorems" title="Permalink to this heading">#</a></h2>
+<p>A Limit Theorem describes the asymptotic behavior of a sequence of random variables <span class="math notranslate nohighlight">\((X_n)_{n=1}^\infty\)</span>.</p>
+<p>In probability theory, there are two primary pillars of Limit Theorems:</p>
+<ul class="simple">
+<li><p><strong>Law of Large Numbers (LLN):</strong> Governs the <strong>value convergence</strong> — establishing that as <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the sample mean <span class="math notranslate nohighlight">\(\bar{X}_n\)</span> converges to the true population expectation <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
+<li><p><strong>Central Limit Theorem (CLT):</strong> Governs the <strong>distribution shape convergence</strong> — establishing that as <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the normalized sum or sample mean converges in distribution to a standard Normal Distribution <span class="math notranslate nohighlight">\(\mathcal{N}(0, 1)\)</span>, regardless of the underlying distribution shape.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="modes-of-convergence">
+<h2>2. Modes of Convergence<a class="headerlink" href="#modes-of-convergence" title="Permalink to this heading">#</a></h2>
+<p>To understand how a sequence of random variables <span class="math notranslate nohighlight">\(X_n\)</span> behaves as <span class="math notranslate nohighlight">\(n \to \infty\)</span>, mathematicians define three primary modes of convergence:</p>
+<section id="convergence-in-probability-x-n-xrightarrow-p-x">
+<h3>2.1 Convergence in Probability (<span class="math notranslate nohighlight">\(X_n \xrightarrow{P} X\)</span>)<a class="headerlink" href="#convergence-in-probability-x-n-xrightarrow-p-x" title="Permalink to this heading">#</a></h3>
+<p>A sequence <span class="math notranslate nohighlight">\(X_n\)</span> converges in probability to a random variable <span class="math notranslate nohighlight">\(X\)</span> if, as the sequence progresses, the probability that the difference between them is larger than any arbitrarily small positive number <span class="math notranslate nohighlight">\(\epsilon\)</span> vanishes to zero.</p>
+<p><strong>Mathematical Definition:</strong></p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} P(\vert{}X_n - X\vert{} &gt; \epsilon) = 0 \quad \forall \epsilon &gt; 0\]</div>
+<blockquote>
+<div><p><strong>Machine Learning Intuition:</strong> This forms the basis of the <strong>Weak Law of Large Numbers (WLLN)</strong>. It guarantees that as you collect more data points, the sample statistic (like the sample mean) will cluster closer and closer to the true population value, with the probability of a large error dropping to zero.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="almost-sure-convergence-x-n-xrightarrow-a-s-x">
+<h3>2.2 Almost Sure Convergence (<span class="math notranslate nohighlight">\(X_n \xrightarrow{a.s.} X\)</span>)<a class="headerlink" href="#almost-sure-convergence-x-n-xrightarrow-a-s-x" title="Permalink to this heading">#</a></h3>
+<p>A sequence <span class="math notranslate nohighlight">\(X_n\)</span> converges almost surely (with probability 1) to <span class="math notranslate nohighlight">\(X\)</span> if the sequence of actual values realized by <span class="math notranslate nohighlight">\(X_n\)</span> converges to the realized value <span class="math notranslate nohighlight">\(X\)</span> for almost all outcomes.</p>
+<p><strong>Mathematical Definition:</strong></p>
+<div class="math notranslate nohighlight">
+\[P\left(\lim_{n \to \infty} X_n = X\right) = 1\]</div>
+<blockquote>
+<div><p><strong>Machine Learning Intuition:</strong> This is a stronger form of convergence that underpins the <strong>Strong Law of Large Numbers (SLLN)</strong>. While convergence in probability states that large deviations become rare at any single step <span class="math notranslate nohighlight">\(n\)</span>, almost sure convergence guarantees that the entire path of sample statistics will eventually enter and never leave an arbitrarily small interval around the true mean.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="convergence-in-distribution-x-n-xrightarrow-d-x">
+<h3>2.3 Convergence in Distribution (<span class="math notranslate nohighlight">\(X_n \xrightarrow{d} X\)</span>)<a class="headerlink" href="#convergence-in-distribution-x-n-xrightarrow-d-x" title="Permalink to this heading">#</a></h3>
+<p>A sequence <span class="math notranslate nohighlight">\(X_n\)</span> converges in distribution to <span class="math notranslate nohighlight">\(X\)</span> if their Cumulative Distribution Functions (CDFs) converge to the CDF of <span class="math notranslate nohighlight">\(X\)</span> at all points where the limiting CDF is continuous.</p>
+<p><strong>Mathematical Definition:</strong></p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} F_{X_n}(x) = F_X(x) \quad \forall x \text{ where } F_X \text{ is continuous}\]</div>
+<blockquote>
+<div><p><strong>Machine Learning Intuition:</strong> This is the weakest form of convergence and serves as the mathematical foundation for the <strong>Central Limit Theorem (CLT)</strong>. It doesn’t mean the individual sample values become equal, but rather that the overall shape of the histogram of these values settles into a specific probability distribution (like the Gaussian bell curve).</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="hierarchy-of-convergence">
+<h3>2.4 Hierarchy of Convergence<a class="headerlink" href="#hierarchy-of-convergence" title="Permalink to this heading">#</a></h3>
+<p>The relationship and strength between these three modes of convergence can be ordered hierarchically:</p>
+<div class="math notranslate nohighlight">
+\[X_n \xrightarrow{a.s.} X \implies X_n \xrightarrow{P} X \implies X_n \xrightarrow{d} X\]</div>
+<p><em>(Almost Sure Convergence is the strongest mode, implying Convergence in Probability, which in turn implies Convergence in Distribution. The reverse implications do not hold in general without additional conditions).</em></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="law-of-large-numbers-lln">
+<h2>3. Law of Large Numbers (LLN)<a class="headerlink" href="#law-of-large-numbers-lln" title="Permalink to this heading">#</a></h2>
+<p>The Law of Large Numbers (LLN) is a fundamental theorem in probability. It states that as the number of independent trials increases, the empirical average (observed average) of the results converges to the theoretical expected value.</p>
+<p>For example, when rolling a fair 6-sided die, the theoretical expected value (mean) of a roll is:</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] = \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3.5\]</div>
+<p>If you roll the die 10 times, your average roll might be <span class="math notranslate nohighlight">\(2.1\)</span> or <span class="math notranslate nohighlight">\(4.8\)</span> (high variance). However, if you roll it 10,000 times, the average will be extremely close to <span class="math notranslate nohighlight">\(3.5\)</span> as <span class="math notranslate nohighlight">\(n \to \infty\)</span>.</p>
+<figure class="align-center" id="lln-simulation">
+<img alt="../../_images/lln_simulation.gif" src="../../_images/lln_simulation.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Simulation demonstrating the Law of Large Numbers.</span><a class="headerlink" href="#lln-simulation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="why-lln-matters-in-data-science">
+<h3>Why LLN Matters in Data Science<a class="headerlink" href="#why-lln-matters-in-data-science" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Guarantees Sample Reliability:</strong> Collecting more data increases estimation precision.</p></li>
+<li><p><strong>Foundation of Machine Learning:</strong> Ensures that training model parameters on finite sample datasets generalizes to true population distributions.</p></li>
+</ul>
+</section>
+<section id="python-simulation-roll-average-comparison">
+<h3>Python Simulation: Roll Average Comparison<a class="headerlink" href="#python-simulation-roll-average-comparison" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Theoretical expected value for a fair die roll</span>
+<span class="n">expected_value</span> <span class="o">=</span> <span class="mf">3.5</span>
+
+<span class="k">for</span> <span class="n">rolls</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]:</span>
+    <span class="c1"># Simulate die rolls (1 to 6)</span>
+    <span class="n">simulated_rolls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">rolls</span><span class="p">)</span>
+    <span class="n">empirical_average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">simulated_rolls</span><span class="p">)</span>
+    <span class="n">difference</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">empirical_average</span> <span class="o">-</span> <span class="n">expected_value</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rolls: </span><span class="si">{</span><span class="n">rolls</span><span class="si">:</span><span class="s2">&lt;6</span><span class="si">}</span><span class="s2"> | Average: </span><span class="si">{</span><span class="n">empirical_average</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | Difference: </span><span class="si">{</span><span class="n">difference</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="python-simulation-cumulative-convergence-curve">
+<h3>Python Simulation: Cumulative Convergence Curve<a class="headerlink" href="#python-simulation-cumulative-convergence-curve" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">rolls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_means</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">rolls</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Sample Mean $\bar</span><span class="si">{X}</span><span class="s1">_n$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">3.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;True Mean $\mu = 3.5$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of rolls (n)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Law of Large Numbers Convergence&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="central-limit-theorem-clt">
+<h2>4. Central Limit Theorem (CLT)<a class="headerlink" href="#central-limit-theorem-clt" title="Permalink to this heading">#</a></h2>
+<p>While LLN explains <em>what value</em> the sample mean converges to, the Central Limit Theorem (CLT) explains the <em>shape of the distribution</em> of sample means.</p>
+<section id="theorem-statement">
+<h3>Theorem Statement<a class="headerlink" href="#theorem-statement" title="Permalink to this heading">#</a></h3>
+<p>Given independent and identically distributed (i.i.d) random variables <span class="math notranslate nohighlight">\(X_1, X_2, \dots, X_n\)</span> with finite mean <span class="math notranslate nohighlight">\(\mu\)</span> and variance <span class="math notranslate nohighlight">\(\sigma^2\)</span>, as <span class="math notranslate nohighlight">\(n \to \infty\)</span> (typically <span class="math notranslate nohighlight">\(n \ge 30\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\bar{X}_n \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)\]</div>
+<p>Or in standardized form:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{\bar{X}_n - \mu}{\sigma / \sqrt{n}} \xrightarrow{d} \mathcal{N}(0, 1)\]</div>
+</section>
+<section id="why-clt-is-the-mathematical-miracle-of-statistics">
+<h3>Why CLT is the “Mathematical Miracle” of Statistics<a class="headerlink" href="#why-clt-is-the-mathematical-miracle-of-statistics" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Distribution Agnostic:</strong> The original population can be uniform, exponential, or skewed. The distribution of sample means <span class="math notranslate nohighlight">\(\bar{X}_n\)</span> will always form a Gaussian bell curve.</p></li>
+<li><p><strong>Enables Hypothesis Testing:</strong> Provides the foundation for confidence intervals, z-tests, t-tests, and A/B testing in Data Science.</p></li>
+</ul>
+</section>
+<section id="python-simulation-clt">
+<h3>Python Simulation: CLT<a class="headerlink" href="#python-simulation-clt" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="c1"># Generate Uniform random matrix (10,000 trials x 50 samples)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_trials</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">))</span>
+<span class="n">sample_means</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;CLT: Distribution of Sample Means (n=</span><span class="si">{</span><span class="n">n_samples</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/probability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="random_variables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Random Variables &amp; Probability Distributions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="information_theory.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Information Theory Basics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-limit-theorems">1. What Are Limit Theorems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modes-of-convergence">2. Modes of Convergence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-in-probability-x-n-xrightarrow-p-x">2.1 Convergence in Probability (<span class="math notranslate nohighlight">\(X_n \xrightarrow{P} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#almost-sure-convergence-x-n-xrightarrow-a-s-x">2.2 Almost Sure Convergence (<span class="math notranslate nohighlight">\(X_n \xrightarrow{a.s.} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-in-distribution-x-n-xrightarrow-d-x">2.3 Convergence in Distribution (<span class="math notranslate nohighlight">\(X_n \xrightarrow{d} X\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-of-convergence">2.4 Hierarchy of Convergence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-large-numbers-lln">3. Law of Large Numbers (LLN)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-lln-matters-in-data-science">Why LLN Matters in Data Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-roll-average-comparison">Python Simulation: Roll Average Comparison</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-cumulative-convergence-curve">Python Simulation: Cumulative Convergence Curve</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-limit-theorem-clt">4. Central Limit Theorem (CLT)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-statement">Theorem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-clt-is-the-mathematical-miracle-of-statistics">Why CLT is the “Mathematical Miracle” of Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-clt">Python Simulation: CLT</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

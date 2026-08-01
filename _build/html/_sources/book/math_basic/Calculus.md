@@ -14,6 +14,14 @@ For a function $f(x)$, the derivative $f'(x)$ (also written as $\frac{df}{dx}$) 
 
 $$\frac{df}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
 
+```{figure} ../../images/calculus_derivative_ai_diagram.png
+---
+name: calculus_derivative_ai_diagram
+align: center
+---
+Geometrical interpretation of the Derivative $f'(x)$ as the slope of the tangent line as $\Delta x \to 0$.
+```
+
 ---
 
 ## 2. Basic Rules of Differentiation

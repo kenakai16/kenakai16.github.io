@@ -1,136 +1,149 @@
-# Number
+# Number Sets & Systems
 
-![enter image description here](../../images/real_number.png)
+Understanding number classification and arithmetic rules is fundamental to data representation, indexing, and mathematical operations in Data Science.
 
-## Natural Numbers
-The **natural numbers** are the [numbers](https://en.wikipedia.org/wiki/Number "Number") 1, 2, 3, etc., possibly including 0 as well.
-
-The natural numbers start with 0, corresponding to the **non-negative integers** 0, 1, 2, 3, ..., whereas others start with 1, corresponding to the **positive integers**  1, 2, 3, ...
-
-The natural numbers can be used for counting (as in "there are _six_ coins on the table"), in which case they serve as _[cardinal numbers](https://en.wikipedia.org/wiki/Cardinal_number "Cardinal number")_. They may also be used for ordering (as in "this is the _third_ largest city in the country"), in which case they serve as _[ordinal numbers](https://en.wikipedia.org/wiki/Ordinal_number "Ordinal number")_. Natural numbers are sometimes used as labels, known as _[nominal numbers](https://en.wikipedia.org/wiki/Nominal_number "Nominal number")_, having none of the properties of numbers in a mathematical sense (e.g. sports [jersey numbers](https://en.wikipedia.org/wiki/Number_(sports) "Number (sports)")).[[3]](https://en.wikipedia.org/wiki/Natural_number#cite_note-:1-4)[[6]](https://en.wikipedia.org/wiki/Natural_number#cite_note-8)
-
--  Set of Natural Numbers: **N** = {1, 2, 3, 4, 5, 6, 7, 8, 9,…}
-
-    <!-- ![Natural Numbers](../../images/w_vs_N.png) -->
-```{image} ../../images/w_vs_N.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
-```
-
-## Whole Numbers
-
-Whole numbers are a set of numbers including all **natural numbers** and **0**
-
--  Set of Whole Numbers: **W** = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10……}
-
-<!-- ![Whole Numbers](../../images/w_number.png) -->
-```{image} ../../images/w_number.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
-```
-
-## Integers
-
-Integers include `positive` and `negative` **whole numbers** as well as **0**. In In the language of mathematics, the set of integers is often denoted by the boldface **Z** 
-
--   Set of Integers:  **Z** = {….-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,…}
-    <!-- ![Integers](../../images/p_vs_n_interger.png) -->
-```{image} ../../images/p_vs_n_interger.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
-```
-
-## Rational Numbers
-
-
-a **rational number** is a [number](https://en.wikipedia.org/wiki/Number "Number") that can be expressed as the [quotient](https://en.wikipedia.org/wiki/Quotient "Quotient") or [fraction](https://en.wikipedia.org/wiki/Fraction_(mathematics) "Fraction (mathematics)")  ![{\displaystyle {\tfrac {p}{q}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/4b38d2684323653daafdd152b7e988594003897d) of two [integers](https://en.wikipedia.org/wiki/Integer "Integer"), a [numerator](https://en.wikipedia.org/wiki/Numerator "Numerator")  pand a non-zero [denominator](https://en.wikipedia.org/wiki/Denominator "Denominator")  q.[[1]](https://en.wikipedia.org/wiki/Rational_number#cite_note-Rosen-1) 
-
-For example, ![{\displaystyle {\tfrac {-3}{7}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/7cab87e59f4cbc2681c834139ece9aa609bf9b51) is a rational number, as is every integer (e.g. 5 = 5/1). The [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)") of all rational numbers, also referred to as "**the rationals**",[[2]](https://en.wikipedia.org/wiki/Rational_number#cite_note-2) the **field of rationals**[[3]](https://en.wikipedia.org/wiki/Rational_number#cite_note-3) or the **field of rational numbers** is usually denoted by boldface **Q**,[[4]](https://en.wikipedia.org/wiki/Rational_number#cite_note-4) or [blackboard bold](https://en.wikipedia.org/wiki/Blackboard_bold "Blackboard bold")  ![{\displaystyle \mathbb {Q} .}](https://wikimedia.org/api/rest_v1/media/math/render/svg/869719f08f506bf866043442858fb3da1d4b4b5b)[[5]](https://en.wikipedia.org/wiki/Rational_number#cite_note-5)
-
-
-<!-- ![enter image description here](../../images/The_Rational_Number_Definition.png) -->
-```{image} ../../images/The_Rational_Number_Definition.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
-```
-
-## Irrational Numbers
-Irrational numbers cannot be expressed as a fraction (That is, irrational numbers cannot be expressed as the ratio of two integers. 
-When the ratio of lengths of two line segments is an irrational number, the line segments are also described as being incommensurable, meaning that they share no "measure" in common, that is, there is no length ("the measure"), no matter how short, that could be used to express the lengths of both of the two given segments as integer multiples of itself.
-
-Among irrational numbers are the ratio π of a circle's circumference to its diameter, Euler's number e, the golden ratio φ, and the square root of two.[1] In fact, all square roots of natural numbers, other than of perfect squares, are irrational.[2]). This includes the famous Pi , square roots of certain numbers like , and Euler’s number which we will learn about later. These numbers have an infinite number of decimal digits, such as :
-![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Square_root_of_2_triangle.svg/480px-Square_root_of_2_triangle.svg.png)
-
->The common examples of irrational numbers are pi(π=3⋅14159265…), √2, √3, √5, Euler’s number (e = 2⋅718281…..), 2.010010001….,etc.
-
-
-![enter image description here](https://cdn-academy.pressidium.com/academy/wp-content/uploads/2022/02/Number-classification.png)
-
-
-## Real Numbers
-
-Real numbers include **rational** as well as **irrational numbers**. In practicality, when you are doing any data science work you can treat any decimals you work with as real numbers.
-
-<!-- ![enter image description here](../../images/Real_Numbers_Definition.png) -->
-```{image} ../../images/Real_Numbers_Definition.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
-```
-
-## Complex and Imaginary Numbers
-The numbers which are not real are imaginary numbers. When we square an imaginary number, it gives a negative result. It is represented as Im().
-
->Example: √-2, √-7, √-11 are all imaginary numbers
-
-The complex numbers were introduced to solve the equation `x2+1 = 0`. The roots of the equation are of form `x = ±√-1` and no real roots exist. Thus, with the introduction of complex numbers, we have Imaginary roots.
-
-We denote `√-1` with the symbol `I`, which denotes Iota (**Imaginary number**).
-
-The **complex number** is basically the combination of a real number and an imaginary number. The complex number is in the form of **a+ib,** where `a = real number` and `ib = imaginary number`. Also, a,b belongs to real numbers and `i =  √-1.`
-
-Hence, a complex number is a simple representation of addition of two numbers, i.e., real number and an imaginary number. One part of it is purely real and the other part is purely imaginary.
-
-<!-- ![enter image description here](../../images/Complex_Number.png) -->
-```{image} ../../images/Complex_Number.png
-:alt: fishy
-:class: bg-primary mb-1
-:width: 70%
-:align: center
+```{figure} ../../images/number_sets_hierarchy_ai_diagram.png
+---
+name: number_sets_hierarchy_ai_diagram
+align: center
+---
+Hierarchy of number sets.
 ```
 
 ---
 
-## Order of Operations (PEMDAS)
+## 1. Natural Numbers ($\mathbb{N}$)
 
-When evaluating mathematical expressions, we must follow a strict order of operations to avoid ambiguity. The standard convention is **PEMDAS**:
+The **natural numbers** are the positive counting numbers $1, 2, 3, \dots$, possibly including $0$ as well depending on the mathematical convention:
+- Starting with $0$ corresponds to the **non-negative integers**: $\{0, 1, 2, 3, \dots\}$.
+- Starting with $1$ corresponds to the **positive integers**: $\{1, 2, 3, \dots\}$.
+
+### Roles of Natural Numbers
+Natural numbers serve three distinct roles in data and everyday life:
+1. **Cardinal Numbers:** Used for counting quantities (e.g., *"there are six coins on the table"*).
+2. **Ordinal Numbers:** Used for ordering or ranking (e.g., *"this is the third largest city in the country"*).
+3. **Nominal Numbers:** Used purely as labels or identifiers, carrying no quantitative value (e.g., sports jersey numbers or user ID codes).
+
+* **Set Notation:** $\mathbb{N} = \{1, 2, 3, 4, 5, \dots\}$
+
+---
+
+## 2. Whole Numbers ($\mathbb{W}$)
+
+Whole numbers consist of all **natural numbers** together with **zero ($0$)**.
+
+* **Set Notation:** $\mathbb{W} = \{0, 1, 2, 3, 4, \dots\}$
+* **Data Science Note:** Zero-indexed data structures (such as Python lists, NumPy arrays, and Pandas DataFrames) rely on whole numbers for indexing positions $0, 1, 2, \dots, n-1$.
+
+```{figure} ../../images/whole_numbers_ai_diagram.png
+---
+name: whole_numbers_ai_diagram
+align: center
+---
+Whole numbers starting at zero and their application in 0-based array indexing.
+```
+
+---
+
+## 3. Integers ($\mathbb{Z}$)
+
+Integers extend whole numbers to include negative values. In mathematics, the set of integers is denoted by the boldface letter $\mathbb{Z}$ (from the German word *Zahlen*, meaning "numbers").
+
+* **Set Notation:** $\mathbb{Z} = \{\dots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, \dots\}$
+
+```{figure} ../../images/number_line_integers_ai_diagram.png
+---
+name: number_line_integers_ai_diagram
+align: center
+---
+Number line showing negative integers, zero, and positive integers.
+```
+
+---
+
+## 4. Rational Numbers ($\mathbb{Q}$)
+
+A **rational number** is any number that can be expressed as the quotient or fraction $\frac{p}{q}$ of two integers, where $p$ is the numerator and $q \neq 0$ is the non-zero denominator.
+
+The set of all rational numbers is denoted by the boldface letter $\mathbf{Q}$ or blackboard bold $\mathbb{Q}$ (for "quotient").
+
+* **Examples:** $\frac{1}{2}$, $\frac{-3}{7}$, and every integer since any integer $k$ can be written as $\frac{k}{1}$ (e.g., $5 = \frac{5}{1}$).
+* **Decimal Expansion:** Rational numbers have decimal expansions that either terminate (e.g., $\frac{3}{4} = 0.75$) or repeat infinitely (e.g., $\frac{1}{3} = 0.3333\dots$).
+
+---
+
+## 5. Irrational Numbers ($\mathbb{I}$)
+
+**Irrational numbers** cannot be expressed as a fraction $\frac{p}{q}$ of two integers. 
+
+Geometrically, when the ratio of lengths of two line segments is an irrational number, the segments are described as **incommensurable** — meaning they share no common unit of measure, no matter how small, that can divide both lengths into exact integer multiples.
+
+### Key Characteristics & Famous Examples
+Irrational numbers possess an infinite number of non-repeating decimal digits:
+- **Circle Ratio ($\pi$):** $\pi = 3.14159265\dots$ (the ratio of a circle's circumference to its diameter).
+- **Euler's Number ($e$):** $e = 2.71828182\dots$ (the base of the natural logarithm).
+- **Golden Ratio ($\phi$):** $\phi = \frac{1 + \sqrt{5}}{2} \approx 1.618033\dots$
+- **Square Roots:** $\sqrt{2} \approx 1.414213\dots$, $\sqrt{3}$, $\sqrt{5}$. In fact, all square roots of natural numbers that are not perfect squares are irrational.
+- **Non-repeating Decimals:** Patterns like $2.010010001\dots$
+
+---
+
+## 6. Real Numbers ($\mathbb{R}$)
+
+The set of **Real Numbers** ($\mathbb{R}$) is the union of all rational and irrational numbers. 
+
+In practical Data Science and Machine Learning, almost all continuous feature values (such as prices, weights, temperatures, or probability scores) are represented as real numbers using floating-point data types (`float32` or `float64`).
+
+---
+
+## 7. Complex and Imaginary Numbers ($\mathbb{C}$)
+
+### Imaginary Numbers
+Numbers that are not real are called **imaginary numbers**. Squaring an imaginary number yields a negative result.
+* **Examples:** $\sqrt{-2}$, $\sqrt{-7}$, $\sqrt{-11}$.
+
+Imaginary numbers arose historically to solve polynomial equations like $x^2 + 1 = 0$, whose solutions $x = \pm\sqrt{-1}$ cannot exist within the real number line $\mathbb{R}$. We denote $\sqrt{-1}$ with the symbol $i$ (called **iota**), so $i^2 = -1$.
+
+### Complex Numbers
+A **Complex Number** is a combination of a real number and an imaginary number written in the standard form:
+
+$$z = a + b i \quad (\text{where } a, b \in \mathbb{R} \text{ and } i = \sqrt{-1})$$
+
+- $a$ is the **Real Part** ($\text{Re}(z)$).
+- $b$ is the **Imaginary Part** ($\text{Im}(z)$).
+
+```{figure} ../../images/complex_numbers_plane_ai_diagram.png
+---
+name: complex_numbers_plane_ai_diagram
+align: center
+---
+Complex plane representation of a complex number.
+```
+
+---
+
+## 8. Order of Operations (PEMDAS)
+
+When evaluating mathematical expressions, we must follow the strict order of operations (**PEMDAS**) to ensure consistent results:
 
 1. **P**arentheses `()`
 2. **E**xponents (Powers and Roots)
-3. **M**ultiplication and **D**ivision (from left to right)
-4. **A**ddition and **S**ubtraction (from left to right)
+3. **M**ultiplication and **D**ivision (left to right)
+4. **A**ddition and **S**ubtraction (left to right)
 
-### Python Implementation
-Python automatically follows PEMDAS when evaluating expressions:
+### Python Verification
+Python automatically enforces PEMDAS rules:
 
 ```python
-# 3 + 5 * 2^3 - (4 / 2)
-# 1. Parentheses: (4 / 2) -> 2
+# Expression: 3 + 5 * 2^3 - (4 / 2)
+# 1. Parentheses: (4 / 2) -> 2.0
 # 2. Exponents: 2^3 -> 8
 # 3. Multiplication: 5 * 8 -> 40
-# 4. Addition/Subtraction: 3 + 40 - 2 -> 41
+# 4. Addition & Subtraction: 3 + 40 - 2.0 -> 41.0
 result = 3 + 5 * 2**3 - (4 / 2)
-print("Result of expression:", result)
+print("Result of expression:", result) # Output: 41.0
 ```
+
 ---
 
 ## Exercises
@@ -148,18 +161,11 @@ Verify your answer with Python.
 According to PEMDAS:
 1. Parentheses: $(2 + 1) = 3$
 2. Exponents: $3^2 = 9$
-3. Multiplication/Division (left to right): 
-   - $3 \times 9 = 27$
-   - $27 \div 9 = 3$
-4. Addition/Subtraction (left to right):
-   - $12 - 3 = 9$
-   - $9 + 4 = 13$
+3. Multiplication/Division (left to right): $3 \times 9 \div 9 = 3$
+4. Addition/Subtraction (left to right): $12 - 3 + 4 = 13$
 
-Verification in Python:
 ```python
 ans = 12 - 3 * (2 + 1)**2 / 9 + 4
 print("Answer:", ans) # Output: 13.0
 ```
 ```
-
-

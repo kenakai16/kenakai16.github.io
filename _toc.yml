@@ -24,11 +24,22 @@ parts:
   - caption: Linear Algebra
     chapters:
       - file: book/linear_algebra/intro
+      - file: book/linear_algebra/vector_spaces
+      - file: book/linear_algebra/norms_and_orthogonality
+      - file: book/linear_algebra/eigen_and_pca
+      - file: book/linear_algebra/svd_and_factorizations
+      - file: book/linear_algebra/linear_transformations
 
   - caption: Probability & Statistics
     chapters:
       - file: book/probability/intro
+      - file: book/probability/foundations
+      - file: book/probability/random_variables
+      - file: book/probability/limit_theorems
+      - file: book/probability/information_theory
       - file: book/statistics/intro
+      - file: book/statistics/inferential
+      - file: book/statistics/stochastic_processes
 
   - caption: Optimization
     chapters:

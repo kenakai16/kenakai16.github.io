@@ -23,12 +23,23 @@ Welcome to the full **Table of Contents** for *Math for Data Science*. Below is 
 
 ## 🧮 Linear Algebra
 - **{doc}`Linear Algebra <linear_algebra/intro>`**
+- **{doc}`Vector Spaces & Matrix Rank <linear_algebra/vector_spaces>`**
+- **{doc}`Norms & Orthogonality <linear_algebra/norms_and_orthogonality>`**
+- **{doc}`Eigenvalues, Eigenvectors & PCA <linear_algebra/eigen_and_pca>`**
+- **{doc}`SVD & Matrix Factorizations <linear_algebra/svd_and_factorizations>`**
+- **{doc}`Linear Transformations & Neural Networks <linear_algebra/linear_transformations>`**
 
 ---
 
 ## 🎲 Probability & Statistics
 - **{doc}`Probability <probability/intro>`**
+- **{doc}`Foundations of Probability <probability/foundations>`**
+- **{doc}`Random Variables & Probability Distributions <probability/random_variables>`**
+- **{doc}`Convergence & Limit Theorems <probability/limit_theorems>`**
+- **{doc}`Information Theory Basics <probability/information_theory>`**
 - **{doc}`Statistics <statistics/intro>`**
+- **{doc}`Statistical Inference <statistics/inferential>`**
+- **{doc}`Stochastic Processes <statistics/stochastic_processes>`**
 
 ---
 

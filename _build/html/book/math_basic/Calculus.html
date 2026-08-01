@@ -35,6 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -174,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Number.html">Number</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Number.html">Number Sets &amp; Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Fractions.html">Fractions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decimals.html">Decimals &amp; Percentages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OrderOfOperations.html">Order of Operations</a></li>
@@ -190,11 +193,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -430,6 +444,12 @@ document.write(`
 <p>For a function <span class="math notranslate nohighlight">\(f(x)\)</span>, the derivative <span class="math notranslate nohighlight">\(f'(x)\)</span> (also written as <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>) is defined using limits:</p>
 <div class="math notranslate nohighlight">
 \[\frac{df}{dx} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]</div>
+<figure class="align-center" id="calculus-derivative-ai-diagram">
+<img alt="../../_images/calculus_derivative_ai_diagram.png" src="../../_images/calculus_derivative_ai_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Geometrical interpretation of the Derivative <span class="math notranslate nohighlight">\(f'(x)\)</span> as the slope of the tangent line as <span class="math notranslate nohighlight">\(\Delta x \to 0\)</span>.</span><a class="headerlink" href="#calculus-derivative-ai-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <hr class="docutils" />
 <section id="basic-rules-of-differentiation">
