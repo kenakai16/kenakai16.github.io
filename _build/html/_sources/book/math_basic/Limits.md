@@ -8,7 +8,7 @@ In mathematics, a **limit** is the foundational building block of Calculus. It d
 
 Limits serve as the mathematical "bridge" that allows us to handle division by zero and infinitesimally small quantities, paving the way for the creation of Calculus.
 
-### The "Division by Zero" ($\frac{0}{0}$) Crisis
+### The $\frac{0}{0}$ Indeterminate Form
 In classical algebra and geometry, division by zero is strictly prohibited. However, the two foundational problems that led to the development of Calculus directly encounter this issue:
 
 * **Instantaneous Velocity (Leads to Derivatives):**
