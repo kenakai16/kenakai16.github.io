@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Determinants &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/linear_algebra/determinants';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Norms &amp; Orthogonality" href="norms_and_orthogonality.html" />
+    <link rel="prev" title="Vector Spaces &amp; Matrix Rank" href="vector_spaces.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Limits.html">Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Determinants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/markov_chains.html">Markov Chains</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/linear_algebra/determinants.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Determinants</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-examples-small-cases">1. Simple Examples (Small Cases)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-the-general-definition">2. Permutations and the General Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-permutation">What is a Permutation?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-definition-of-the-determinant">General Definition of the Determinant</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-under-row-and-column-operations">3. Properties under Row and Column Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-invariance">Transpose Invariance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-by-minors-cofactor-expansion">4. Expansion by Minors (Cofactor Expansion)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-formula">Expansion Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-times-3-expansion-by-minors">Example: <span class="math notranslate nohighlight">\(3 \times 3\)</span> Expansion by Minors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simplification-using-row-operations">Simplification Using Row Operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinants-of-products-diagonals-and-inverses">5. Determinants of Products, Diagonals, and Inverses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-adjoint-matrix-and-inverse-formula">6. The Adjoint Matrix and Inverse Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-relation">Important Relation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-application-volume-of-a-parallelepiped">7. Geometric Application: Volume of a Parallelepiped</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy-sympy">8. Python Implementation (NumPy &amp; SymPy)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="determinants">
+<h1>Determinants<a class="headerlink" href="#determinants" title="Permalink to this heading">#</a></h1>
+<p>Given a square matrix, is there an easy way to know when it is invertible? Answering this fundamental question is the main goal of this chapter. The <strong>determinant</strong> of a square matrix is a single scalar value that determines whether the matrix is invertible (non-singular) and measures how the matrix scales areas or volumes under linear transformations.</p>
+<hr class="docutils" />
+<section id="simple-examples-small-cases">
+<h2>1. Simple Examples (Small Cases)<a class="headerlink" href="#simple-examples-small-cases" title="Permalink to this heading">#</a></h2>
+<p>For small matrices, the determinant formula is straightforward:</p>
+<ul>
+<li><p><strong><span class="math notranslate nohighlight">\(1 \times 1\)</span> Matrix:</strong>
+If <span class="math notranslate nohighlight">\(M = \begin{bmatrix} m \end{bmatrix}\)</span>, then <span class="math notranslate nohighlight">\(M^{-1} = \begin{bmatrix} 1/m \end{bmatrix}\)</span>. Thus, <span class="math notranslate nohighlight">\(M\)</span> is invertible if and only if:</p>
+<div class="math notranslate nohighlight">
+\[\det(M) = m \neq 0\]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(2 \times 2\)</span> Matrix:</strong>
+If <span class="math notranslate nohighlight">\(M = \begin{bmatrix} m_{11} &amp; m_{12} \\ m_{21} &amp; m_{22} \end{bmatrix}\)</span>, its inverse is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M^{-1} = \frac{1}{m_{11}m_{22} - m_{12}m_{21}} \begin{bmatrix} m_{22} &amp; -m_{12} \\ -m_{21} &amp; m_{11} \end{bmatrix}\end{split}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(M\)</span> is invertible if and only if the denominator is non-zero. This quantity is defined as the determinant:</p>
+<div class="math notranslate nohighlight">
+\[\det(M) = m_{11}m_{22} - m_{12}m_{21}\]</div>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(3 \times 3\)</span> Matrix:</strong>
+For <span class="math notranslate nohighlight">\(M = \begin{bmatrix} m_{11} &amp; m_{12} &amp; m_{13} \\ m_{21} &amp; m_{22} &amp; m_{23} \\ m_{31} &amp; m_{32} &amp; m_{33} \end{bmatrix}\)</span>, the determinant is:</p>
+<div class="math notranslate nohighlight">
+\[\det(M) = m_{11}m_{22}m_{33} - m_{11}m_{23}m_{32} + m_{12}m_{23}m_{31} - m_{12}m_{21}m_{33} + m_{13}m_{21}m_{32} - m_{13}m_{22}m_{31}\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="permutations-and-the-general-definition">
+<h2>2. Permutations and the General Definition<a class="headerlink" href="#permutations-and-the-general-definition" title="Permalink to this heading">#</a></h2>
+<p>To generalize the determinant formula to <span class="math notranslate nohighlight">\(n \times n\)</span> matrices, we use the mathematics of <strong>permutations</strong>.</p>
+<section id="what-is-a-permutation">
+<h3>What is a Permutation?<a class="headerlink" href="#what-is-a-permutation" title="Permalink to this heading">#</a></h3>
+<p>A permutation <span class="math notranslate nohighlight">\(\sigma\)</span> of the set <span class="math notranslate nohighlight">\(\{1, 2, \dots, n\}\)</span> is a bijective mapping of the set onto itself (a shuffle).</p>
+<ul class="simple">
+<li><p>There are <span class="math notranslate nohighlight">\(n!\)</span> possible permutations of <span class="math notranslate nohighlight">\(n\)</span> distinct objects.</p></li>
+<li><p>Every permutation can be built by successively swapping pairs of objects (transpositions).</p></li>
+<li><p><strong>Parity (Sign of Permutation):</strong> A permutation is <strong>even</strong> if it requires an even number of swaps to be built from the identity permutation <span class="math notranslate nohighlight">\([1, 2, \dots, n]\)</span>, and <strong>odd</strong> if it requires an odd number of swaps.</p></li>
+</ul>
+<p>We define the sign function <span class="math notranslate nohighlight">\(\operatorname{sgn}(\sigma)\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\operatorname{sgn}(\sigma) = \begin{cases} 1 &amp; \text{if } \sigma \text{ is even} \\ -1 &amp; \text{if } \sigma \text{ is odd} \end{cases}\end{split}\]</div>
+</section>
+<section id="general-definition-of-the-determinant">
+<h3>General Definition of the Determinant<a class="headerlink" href="#general-definition-of-the-determinant" title="Permalink to this heading">#</a></h3>
+<p>The determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(M = (m_{ij})\)</span> is defined by the Leibniz formula:</p>
+<div class="math notranslate nohighlight">
+\[\det(M) = \sum_{\sigma} \operatorname{sgn}(\sigma) m_{1\sigma(1)} m_{2\sigma(2)} \cdots m_{n\sigma(n)}\]</div>
+<p>The sum is taken over all <span class="math notranslate nohighlight">\(n!\)</span> possible permutations <span class="math notranslate nohighlight">\(\sigma\)</span> of the set <span class="math notranslate nohighlight">\(\{1, \dots, n\}\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="properties-under-row-and-column-operations">
+<h2>3. Properties under Row and Column Operations<a class="headerlink" href="#properties-under-row-and-column-operations" title="Permalink to this heading">#</a></h2>
+<p>We can compute the determinant of larger matrices efficiently by analyzing how elementary row operations affect the determinant:</p>
+<ol class="arabic">
+<li><p><strong>Row Swap (<span class="math notranslate nohighlight">\(E_{ij}\)</span>):</strong> Swapping two rows of a matrix flips the sign of the determinant:</p>
+<div class="math notranslate nohighlight">
+\[\det(E_{ij}M) = -\det(M)\]</div>
+<ul class="simple">
+<li><p><em>Corollary:</em> If a matrix <span class="math notranslate nohighlight">\(M\)</span> has two identical rows, then swapping them changes the sign of the determinant but leaves the matrix unchanged (<span class="math notranslate nohighlight">\(\det(M) = -\det(M)\)</span>), which means <strong><span class="math notranslate nohighlight">\(\det(M) = 0\)</span></strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Row Scaling (<span class="math notranslate nohighlight">\(R_i(\lambda)\)</span>):</strong> Multiplying a single row by a scalar <span class="math notranslate nohighlight">\(\lambda\)</span> scales the determinant by <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\det(R_i(\lambda)M) = \lambda \det(M)\]</div>
+</li>
+<li><p><strong>Row Addition (<span class="math notranslate nohighlight">\(S_{ij}(\mu)\)</span>):</strong> Adding a scalar multiple of one row to another row leaves the determinant unchanged:</p>
+<div class="math notranslate nohighlight">
+\[\det(S_{ij}(\mu)M) = \det(M)\]</div>
+</li>
+</ol>
+<section id="transpose-invariance">
+<h3>Transpose Invariance<a class="headerlink" href="#transpose-invariance" title="Permalink to this heading">#</a></h3>
+<p>An important theorem states that the transpose of a matrix has the same determinant as the original matrix:</p>
+<div class="math notranslate nohighlight">
+\[\det(M^T) = \det(M)\]</div>
+<p>Because of this property, <strong>every property of determinants regarding rows also applies to columns</strong> (e.g., swapping two columns flips the sign of the determinant).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="expansion-by-minors-cofactor-expansion">
+<h2>4. Expansion by Minors (Cofactor Expansion)<a class="headerlink" href="#expansion-by-minors-cofactor-expansion" title="Permalink to this heading">#</a></h2>
+<p>For matrices larger than <span class="math notranslate nohighlight">\(2 \times 2\)</span>, we can recursively calculate the determinant by expanding along any row or column using <strong>minors</strong> and <strong>cofactors</strong>.</p>
+<ul>
+<li><p><strong>Minor (<span class="math notranslate nohighlight">\(M_{ij}\)</span>):</strong> The determinant of the submatrix obtained by deleting row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> from <span class="math notranslate nohighlight">\(M\)</span>.</p></li>
+<li><p><strong>Cofactor (<span class="math notranslate nohighlight">\(C_{ij}\)</span>):</strong> The minor multiplied by a grid sign factor:</p>
+<div class="math notranslate nohighlight">
+\[\text{cofactor}(m_{ij}) = C_{ij} = (-1)^{i+j} M_{ij}\]</div>
+</li>
+</ul>
+<section id="expansion-formula">
+<h3>Expansion Formula<a class="headerlink" href="#expansion-formula" title="Permalink to this heading">#</a></h3>
+<p>Expanding along the <span class="math notranslate nohighlight">\(i\)</span>-th row:</p>
+<div class="math notranslate nohighlight">
+\[\det(M) = \sum_{j=1}^{n} m_{ij} C_{ij} = \sum_{j=1}^{n} (-1)^{i+j} m_{ij} M_{ij}\]</div>
+</section>
+<section id="example-3-times-3-expansion-by-minors">
+<h3>Example: <span class="math notranslate nohighlight">\(3 \times 3\)</span> Expansion by Minors<a class="headerlink" href="#example-3-times-3-expansion-by-minors" title="Permalink to this heading">#</a></h3>
+<p>Let’s compute the determinant of:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}\end{split}\]</div>
+<p>Expanding along the first row:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det(M) = 1 \det \begin{bmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{bmatrix} - 2 \det \begin{bmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{bmatrix} + 3 \det \begin{bmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\det(M) = 1(5 \cdot 9 - 8 \cdot 6) - 2(4 \cdot 9 - 7 \cdot 6) + 3(4 \cdot 8 - 7 \cdot 5)\]</div>
+<div class="math notranslate nohighlight">
+\[\det(M) = 1(-3) - 2(-6) + 3(-3) = -3 + 12 - 9 = 0\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\det(M) = 0\)</span>, <span class="math notranslate nohighlight">\(M\)</span> is not invertible.</p>
+</section>
+<section id="simplification-using-row-operations">
+<h3>Simplification Using Row Operations<a class="headerlink" href="#simplification-using-row-operations" title="Permalink to this heading">#</a></h3>
+<p>We can apply row operations to introduce zeros into a row or column before performing cofactor expansion to simplify calculations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}N = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 0 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}\end{split}\]</div>
+<p>Since the second row has many zeros, we can swap Row 1 and Row 2 (which multiplies the determinant by <span class="math notranslate nohighlight">\(-1\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det(N) = -\det \begin{bmatrix} 4 &amp; 0 &amp; 0 \\ 1 &amp; 2 &amp; 3 \\ 7 &amp; 8 &amp; 9 \end{bmatrix} = -4 \det \begin{bmatrix} 2 &amp; 3 \\ 8 &amp; 9 \end{bmatrix} = -4(2 \cdot 9 - 8 \cdot 3) = 24\end{split}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="determinants-of-products-diagonals-and-inverses">
+<h2>5. Determinants of Products, Diagonals, and Inverses<a class="headerlink" href="#determinants-of-products-diagonals-and-inverses" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><strong>Diagonal Matrices:</strong> The determinant of a diagonal matrix is the product of its diagonal entries.</p>
+<div class="math notranslate nohighlight">
+\[\det(\text{diag}(d_1, \dots, d_n)) = d_1 d_2 \cdots d_n \implies \det(I) = 1\]</div>
+</li>
+<li><p><strong>Product Rule:</strong> For any two square matrices <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\det(MN) = \det(M) \det(N)\]</div>
+</li>
+<li><p><strong>Inverse Rule:</strong></p>
+<div class="math notranslate nohighlight">
+\[\det(M^{-1}) = \frac{1}{\det(M)}\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-adjoint-matrix-and-inverse-formula">
+<h2>6. The Adjoint Matrix and Inverse Formula<a class="headerlink" href="#the-adjoint-matrix-and-inverse-formula" title="Permalink to this heading">#</a></h2>
+<p>For any square matrix <span class="math notranslate nohighlight">\(M\)</span>, we can define the <strong>Cofactor Matrix</strong> <span class="math notranslate nohighlight">\(C\)</span> where each entry is <span class="math notranslate nohighlight">\(C_{ij} = \text{cofactor}(m_{ij})\)</span>.
+The transpose of the cofactor matrix is called the <strong>Adjoint (or Adjuggate) Matrix</strong>, denoted as <span class="math notranslate nohighlight">\(\operatorname{adj}(M)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\operatorname{adj}(M) = C^T\]</div>
+<section id="important-relation">
+<h3>Important Relation<a class="headerlink" href="#important-relation" title="Permalink to this heading">#</a></h3>
+<p>The product of a matrix and its adjoint always yields a diagonal matrix of determinants:</p>
+<div class="math notranslate nohighlight">
+\[M \operatorname{adj}(M) = \det(M) I\]</div>
+<p>This gives us an explicit analytical formula for the inverse matrix:</p>
+<div class="math notranslate nohighlight">
+\[M^{-1} = \frac{1}{\det(M)} \operatorname{adj}(M)\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="geometric-application-volume-of-a-parallelepiped">
+<h2>7. Geometric Application: Volume of a Parallelepiped<a class="headerlink" href="#geometric-application-volume-of-a-parallelepiped" title="Permalink to this heading">#</a></h2>
+<p>In three-dimensional space, the absolute value of the determinant of a <span class="math notranslate nohighlight">\(3 \times 3\)</span> matrix represents the <strong>volume of the parallelepiped</strong> spanned by its column vectors <span class="math notranslate nohighlight">\(u, v\)</span>, and <span class="math notranslate nohighlight">\(w\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\text{Volume} = |\det(\begin{bmatrix} u &amp; v &amp; w \end{bmatrix})|\]</div>
+<p>This matches the scalar triple product <span class="math notranslate nohighlight">\(|u \cdot (v \times w)|\)</span> learned in multivariate calculus.</p>
+</section>
+<hr class="docutils" />
+<section id="python-implementation-numpy-sympy">
+<h2>8. Python Implementation (NumPy &amp; SymPy)<a class="headerlink" href="#python-implementation-numpy-sympy" title="Permalink to this heading">#</a></h2>
+<p>We can compute determinants, transposes, inverses, and adjoint matrices in Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># 1. Numerical calculations with NumPy</span>
+<span class="n">M_num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">det_num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">M_num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numerical Determinant (NumPy):&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">det_num</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1"># 6.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numerical Inverse (NumPy):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">M_num</span><span class="p">))</span>
+
+<span class="c1"># 2. Symbolic and Adjoint calculations with SymPy</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a b c d&#39;</span><span class="p">)</span>
+<span class="n">M_sym</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">]])</span>
+
+<span class="c1"># Compute symbolic determinant, inverse, and adjoint</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Symbolic Determinant:&quot;</span><span class="p">,</span> <span class="n">M_sym</span><span class="o">.</span><span class="n">det</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Symbolic Adjoint (adj M):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">M_sym</span><span class="o">.</span><span class="n">adjugate</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Symbolic Inverse (M^-1):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">M_sym</span><span class="o">.</span><span class="n">inv</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/linear_algebra"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="vector_spaces.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Vector Spaces &amp; Matrix Rank</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="norms_and_orthogonality.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Norms &amp; Orthogonality</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-examples-small-cases">1. Simple Examples (Small Cases)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-and-the-general-definition">2. Permutations and the General Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-permutation">What is a Permutation?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-definition-of-the-determinant">General Definition of the Determinant</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-under-row-and-column-operations">3. Properties under Row and Column Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-invariance">Transpose Invariance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-by-minors-cofactor-expansion">4. Expansion by Minors (Cofactor Expansion)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expansion-formula">Expansion Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-times-3-expansion-by-minors">Example: <span class="math notranslate nohighlight">\(3 \times 3\)</span> Expansion by Minors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simplification-using-row-operations">Simplification Using Row Operations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinants-of-products-diagonals-and-inverses">5. Determinants of Products, Diagonals, and Inverses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-adjoint-matrix-and-inverse-formula">6. The Adjoint Matrix and Inverse Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-relation">Important Relation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-application-volume-of-a-parallelepiped">7. Geometric Application: Volume of a Parallelepiped</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy-sympy">8. Python Implementation (NumPy &amp; SymPy)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -26,6 +26,7 @@ parts:
     chapters:
       - file: book/linear_algebra/intro
       - file: book/linear_algebra/vector_spaces
+      - file: book/linear_algebra/determinants
       - file: book/linear_algebra/norms_and_orthogonality
       - file: book/linear_algebra/eigen_and_pca
       - file: book/linear_algebra/svd_and_factorizations

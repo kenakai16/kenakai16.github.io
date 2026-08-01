@@ -25,6 +25,7 @@ Welcome to the full **Table of Contents** for *Math for Data Science*. Below is 
 ## 🧮 Linear Algebra
 - **{doc}`Linear Algebra <linear_algebra/intro>`**
 - **{doc}`Vector Spaces & Matrix Rank <linear_algebra/vector_spaces>`**
+- **{doc}`Determinants <linear_algebra/determinants>`**
 - **{doc}`Norms & Orthogonality <linear_algebra/norms_and_orthogonality>`**
 - **{doc}`Eigenvalues, Eigenvectors & PCA <linear_algebra/eigen_and_pca>`**
 - **{doc}`SVD & Matrix Factorizations <linear_algebra/svd_and_factorizations>`**

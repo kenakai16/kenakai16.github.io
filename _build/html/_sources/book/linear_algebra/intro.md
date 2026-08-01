@@ -5,10 +5,11 @@ Linear Algebra is the mathematical language of Data Science and Machine Learning
 This module is organized into six specialized chapters:
 
 1. **{doc}`Vector Spaces & Matrix Rank <vector_spaces>`:** Explores vector space foundations, linear independence, basis, dimension, and rank deficiency (multicollinearity).
-2. **{doc}`Norms & Orthogonality <norms_and_orthogonality>`:** Introduces vector norms ($L_1, L_2, L_\infty$), orthogonality, Gram-Schmidt process, and ML regularization (Lasso & Ridge).
-3. **{doc}`Eigenvalues, Eigenvectors & PCA <eigen_and_pca>`:** Covers matrix diagonalization, eigendecomposition, and Principal Component Analysis (PCA) for dimensionality reduction.
-4. **{doc}`SVD & Matrix Factorizations <svd_and_factorizations>`:** Explores Singular Value Decomposition (SVD), LU & QR Factorizations, and numerically stable Least Squares.
-5. **{doc}`Linear Transformations & Neural Networks <linear_transformations>`:** Explains geometric matrix transformations and how Dense layers in Neural Networks operate.
+2. **{doc}`Determinants <determinants>`:** Explores matrix determinants, permutation-based definitions, properties under row operations, and invertibility conditions.
+3. **{doc}`Norms & Orthogonality <norms_and_orthogonality>`:** Introduces vector norms ($L_1, L_2, L_\infty$), orthogonality, Gram-Schmidt process, and ML regularization (Lasso & Ridge).
+4. **{doc}`Eigenvalues, Eigenvectors & PCA <eigen_and_pca>`:** Covers matrix diagonalization, eigendecomposition, and Principal Component Analysis (PCA) for dimensionality reduction.
+5. **{doc}`SVD & Matrix Factorizations <svd_and_factorizations>`:** Explores Singular Value Decomposition (SVD), LU & QR Factorizations, and numerically stable Least Squares.
+6. **{doc}`Linear Transformations & Neural Networks <linear_transformations>`:** Explains geometric matrix transformations and how Dense layers in Neural Networks operate.
 
 ---
 
