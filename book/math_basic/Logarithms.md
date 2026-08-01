@@ -31,6 +31,14 @@ To understand logarithms intuitively, think of the **base-10 logarithm** ($\log_
 
 Thus, the logarithm tells us the "scale" or "order of magnitude" of a number. If a number falls between $100$ and $1,000$ (e.g., $500$), its logarithm will be a decimal between $2$ and $3$ ($\log_{10}(500) \approx 2.699$).
 
+```{figure} ../../images/logarithm_exponential_vs_linear.png
+---
+name: logarithm_exponential_vs_linear
+align: center
+---
+Visualizing how the logarithm maps an "exponential reality" onto a manageable "linear scale".
+```
+
 ---
 
 ### Why Do We Use Logarithms? Real-World Applications

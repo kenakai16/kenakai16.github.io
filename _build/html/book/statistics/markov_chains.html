@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Markov Chains &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/statistics/markov_chains';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction to Optimization" href="../optimization/intro.html" />
+    <link rel="prev" title="Stochastic Processes" href="stochastic_processes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Limits.html">Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic_processes.html">Stochastic Processes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Markov Chains</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../functional_analysis/intro.html">Functional Analysis &amp; Operator Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/statistics/markov_chains.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Markov Chains</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-markov-property">1. The Markov Property</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-matrix-p">2. Transition Matrix (<span class="math notranslate nohighlight">\(P\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-properties-of-p">Important Properties of <span class="math notranslate nohighlight">\(P\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-diagrams">3. State Transition Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-vector-update-over-time">4. State Vector Update over Time</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-step-calculation-example">Multi-Step Calculation Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-distribution-pi">5. Stationary Distribution (<span class="math notranslate nohighlight">\(\pi\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-solution">Analytical Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors-connection">6. Eigenvalues and Eigenvectors Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy">7. Python Implementation (NumPy)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-google-pagerank-algorithm">8. Application: Google PageRank Algorithm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-formulation">Mathematical Formulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-pagerank-calculation">Python Simulation: PageRank Calculation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="markov-chains">
+<h1>Markov Chains<a class="headerlink" href="#markov-chains" title="Permalink to this heading">#</a></h1>
+<p>A <strong>Markov Chain</strong> is a stochastic process that models a sequence of events where the probability of each event depends only on the state attained in the previous event. In Machine Learning, Markov Chains are the foundation for models like Markov Decision Processes (MDPs) in Reinforcement Learning, Hidden Markov Models (HMMs) in speech processing, and PageRank in web search.</p>
+<hr class="docutils" />
+<section id="the-markov-property">
+<h2>1. The Markov Property<a class="headerlink" href="#the-markov-property" title="Permalink to this heading">#</a></h2>
+<p>A discrete-time stochastic process <span class="math notranslate nohighlight">\(\{X_0, X_1, X_2, \dots\}\)</span> has the <strong>Markov Property</strong> (or memoryless property) if the conditional probability distribution of future states depends only upon the present state, not on the path of past states:</p>
+<div class="math notranslate nohighlight">
+\[P(X_{t+1} = x_{t+1} \mid X_t = x_t, X_{t-1} = x_{t-1}, \dots, X_0 = x_0) = P(X_{t+1} = x_{t+1} \mid X_t = x_t)\]</div>
+<p>In plain terms: <em>“The future depends only on the present, not on the past.”</em></p>
+</section>
+<hr class="docutils" />
+<section id="transition-matrix-p">
+<h2>2. Transition Matrix (<span class="math notranslate nohighlight">\(P\)</span>)<a class="headerlink" href="#transition-matrix-p" title="Permalink to this heading">#</a></h2>
+<p>If a system has <span class="math notranslate nohighlight">\(n\)</span> distinct states, we define the probability of transitioning from state <span class="math notranslate nohighlight">\(i\)</span> to state <span class="math notranslate nohighlight">\(j\)</span> as <span class="math notranslate nohighlight">\(P_{ij}\)</span>. We can group these probabilities into an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix called the <strong>Transition Matrix (or Stochastic Matrix)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P = \begin{bmatrix} 
+P_{11} &amp; P_{12} &amp; \dots &amp; P_{1n} \\
+P_{21} &amp; P_{22} &amp; \dots &amp; P_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+P_{n1} &amp; P_{n2} &amp; \dots &amp; P_{nn}
+\end{bmatrix}\end{split}\]</div>
+<section id="important-properties-of-p">
+<h3>Important Properties of <span class="math notranslate nohighlight">\(P\)</span><a class="headerlink" href="#important-properties-of-p" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Non-negativity:</strong> Every element is a probability, so <span class="math notranslate nohighlight">\(P_{ij} \ge 0\)</span>.</p></li>
+<li><p><strong>Sum of Outgoing Probabilities:</strong> The sum of probabilities in each row (representing transitions from a given state to all possible next states, including itself) must equal 1:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{j} P_{ij} = 1 \quad \forall i\]</div>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="state-transition-diagrams">
+<h2>3. State Transition Diagrams<a class="headerlink" href="#state-transition-diagrams" title="Permalink to this heading">#</a></h2>
+<p>A Markov Chain can be represented as a directed graph where nodes are states and edges represent transition probabilities.</p>
+<figure class="align-center" id="markov-chain-states-diagram">
+<img alt="../../_images/markov_chain_states_diagram.png" src="../../_images/markov_chain_states_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">State transition diagram for a three-state web browsing model (Pages A, B, and C).</span><a class="headerlink" href="#markov-chain-states-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the web browsing model above, the transition matrix is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P = \begin{bmatrix}
+P_{AA} &amp; P_{AB} &amp; P_{AC} \\
+P_{BA} &amp; P_{BB} &amp; P_{BC} \\
+P_{CA} &amp; P_{CB} &amp; P_{CC}
+\end{bmatrix} = \begin{bmatrix}
+0.2 &amp; 0.6 &amp; 0.2 \\
+0.1 &amp; 0.5 &amp; 0.4 \\
+0.2 &amp; 0.3 &amp; 0.5
+\end{bmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Rows</strong> represent the starting page.</p></li>
+<li><p><strong>Columns</strong> represent the destination page.</p></li>
+<li><p><strong>Sum Rule check (Row A):</strong> <span class="math notranslate nohighlight">\(P_{AA} + P_{AB} + P_{AC} = 0.2 + 0.6 + 0.2 = 1.0\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="state-vector-update-over-time">
+<h2>4. State Vector Update over Time<a class="headerlink" href="#state-vector-update-over-time" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\pi^{(t)}\)</span> be a row vector representing the probability distribution of the system’s states at time <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi^{(t)} = \begin{bmatrix} P(A) &amp; P(B) &amp; P(C) \end{bmatrix}\]</div>
+<p>To compute the probability distribution at the next time step, we perform a vector-matrix multiplication:</p>
+<div class="math notranslate nohighlight">
+\[\pi^{(t+1)} = \pi^{(t)} \cdot P\]</div>
+<p>By induction, the state probability vector after <span class="math notranslate nohighlight">\(k\)</span> steps is:</p>
+<div class="math notranslate nohighlight">
+\[\pi^{(k)} = \pi^{(0)} \cdot P^k\]</div>
+<section id="multi-step-calculation-example">
+<h3>Multi-Step Calculation Example<a class="headerlink" href="#multi-step-calculation-example" title="Permalink to this heading">#</a></h3>
+<p>Suppose a user starts browsing and is definitely on <strong>Page B</strong> at <span class="math notranslate nohighlight">\(t = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi^{(0)} = \begin{bmatrix} 0 &amp; 1 &amp; 0 \end{bmatrix}\]</div>
+<ul>
+<li><p><strong>At step 1 (<span class="math notranslate nohighlight">\(t = 1\)</span>):</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\pi^{(1)} = \pi^{(0)} P = \begin{bmatrix} 0 &amp; 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 0.2 &amp; 0.6 &amp; 0.2 \\ 0.1 &amp; 0.5 &amp; 0.4 \\ 0.2 &amp; 0.3 &amp; 0.5 \end{bmatrix} = \begin{bmatrix} 0.1 &amp; 0.5 &amp; 0.4 \end{bmatrix}\end{split}\]</div>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="stationary-distribution-pi">
+<h2>5. Stationary Distribution (<span class="math notranslate nohighlight">\(\pi\)</span>)<a class="headerlink" href="#stationary-distribution-pi" title="Permalink to this heading">#</a></h2>
+<p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span>, many Markov Chains reach a steady state where the probability distribution across states no longer changes. This limiting distribution is called the <strong>Stationary Distribution (<span class="math notranslate nohighlight">\(\pi\)</span>)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\pi P = \pi\]</div>
+<p>Or represented as a linear system:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} \pi_A &amp; \pi_B &amp; \pi_C \end{bmatrix} \begin{bmatrix} 0.2 &amp; 0.6 &amp; 0.2 \\ 0.1 &amp; 0.5 &amp; 0.4 \\ 0.2 &amp; 0.3 &amp; 0.5 \end{bmatrix} = \begin{bmatrix} \pi_A &amp; \pi_B &amp; \pi_C \end{bmatrix}\end{split}\]</div>
+<section id="analytical-solution">
+<h3>Analytical Solution<a class="headerlink" href="#analytical-solution" title="Permalink to this heading">#</a></h3>
+<p>To find a unique probability vector, we must combine the system of equations with the <strong>Normalization Constraint</strong> (since the sum of all state probabilities must equal 1):</p>
+<div class="math notranslate nohighlight">
+\[\pi_A + \pi_B + \pi_C = 1 \quad \text{and} \quad \pi_i \ge 0\]</div>
+<p>Expanding the matrix multiplication <span class="math notranslate nohighlight">\(\pi P = \pi\)</span>, we get:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(0.2 \pi_A + 0.1 \pi_B + 0.2 \pi_C = \pi_A \implies 0.1 \pi_B + 0.2 \pi_C = 0.8 \pi_A \implies \pi_B + 2\pi_C = 8\pi_A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0.6 \pi_A + 0.5 \pi_B + 0.3 \pi_C = \pi_B \implies 0.6 \pi_A + 0.3 \pi_C = 0.5 \pi_B\)</span></p></li>
+</ol>
+<p>From (1), we express <span class="math notranslate nohighlight">\(\pi_B = 8\pi_A - 2\pi_C\)</span>. Substituting this into (2):</p>
+<div class="math notranslate nohighlight">
+\[6\pi_A + 3\pi_C = 5(8\pi_A - 2\pi_C) \implies 13\pi_C = 34\pi_A \implies \pi_C = \frac{34}{13}\pi_A\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(\pi_C\)</span> back to find <span class="math notranslate nohighlight">\(\pi_B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi_B = 8\pi_A - 2\left(\frac{34}{13}\pi_A\right) = \frac{36}{13}\pi_A\]</div>
+<p>Using the normalization constraint <span class="math notranslate nohighlight">\(\pi_A + \pi_B + \pi_C = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi_A + \frac{36}{13}\pi_A + \frac{34}{13}\pi_A = 1 \implies \pi_A \left(\frac{83}{13}\right) = 1 \implies \pi_A = \frac{13}{83} \approx 0.1566\]</div>
+<p>Solving for the rest of the states:</p>
+<div class="math notranslate nohighlight">
+\[\pi_B = \frac{36}{83} \approx 0.4337, \quad \pi_C = \frac{34}{83} \approx 0.4096\]</div>
+<p>Thus, the stationary distribution is:</p>
+<div class="math notranslate nohighlight">
+\[\pi = \begin{bmatrix} 0.1566 &amp; 0.4337 &amp; 0.4096 \end{bmatrix}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note on Convergence (Ergodicity):</strong>
+A Markov Chain is guaranteed to converge to a <em>unique</em> stationary distribution regardless of the initial starting state <span class="math notranslate nohighlight">\(\pi^{(0)}\)</span> if the chain is <strong>Ergodic</strong>. An ergodic Markov Chain must be:</p>
+<ul class="simple">
+<li><p><strong>Irreducible:</strong> It is possible to get from any state to any other state (all states communicate).</p></li>
+<li><p><strong>Aperiodic:</strong> The return times to any state do not follow a fixed periodic cycle.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="eigenvalues-and-eigenvectors-connection">
+<h2>6. Eigenvalues and Eigenvectors Connection<a class="headerlink" href="#eigenvalues-and-eigenvectors-connection" title="Permalink to this heading">#</a></h2>
+<p>In Linear Algebra, the eigenvector equation for a square matrix <span class="math notranslate nohighlight">\(M\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[v M = \lambda v\]</div>
+<p>Comparing this to our stationary distribution equation <span class="math notranslate nohighlight">\(\pi P = \pi\)</span>, we find that:</p>
+<ul class="simple">
+<li><p>The stationary distribution vector <span class="math notranslate nohighlight">\(\pi\)</span> is the <strong>Left Eigenvector</strong> of the transition matrix <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p>The corresponding <strong>Eigenvalue</strong> is <span class="math notranslate nohighlight">\(\lambda = 1\)</span>.</p></li>
+</ul>
+<p>In any stochastic transition matrix, the largest eigenvalue is always <span class="math notranslate nohighlight">\(1\)</span>, guaranteeing the existence of a stationary distribution.</p>
+</section>
+<hr class="docutils" />
+<section id="python-implementation-numpy">
+<h2>7. Python Implementation (NumPy)<a class="headerlink" href="#python-implementation-numpy" title="Permalink to this heading">#</a></h2>
+<p>We can simulate state transitions and solve for the stationary distribution using Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Define Transition Matrix P</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># 1. Simulation over 15 steps starting from Page B: [0.0, 1.0, 0.0]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Step </span><span class="si">{</span><span class="n">step</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> Probabilities: A = </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, B = </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, C = </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. Solving for Stationary Distribution analytically using Eigenvectors</span>
+<span class="c1"># Since \pi P = \pi is equivalent to P^T \pi^T = \pi^T,</span>
+<span class="c1"># \pi^T is the right eigenvector of P^T associated with eigenvalue 1.</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Find the eigenvector corresponding to eigenvalue 1.0</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">eigenvalues</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">))</span>
+<span class="n">stationary</span> <span class="o">=</span> <span class="n">eigenvectors</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">real</span>
+
+<span class="c1"># Normalize the eigenvector to sum to 1</span>
+<span class="n">stationary</span> <span class="o">=</span> <span class="n">stationary</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">stationary</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stationary Distribution: A = </span><span class="si">{</span><span class="n">stationary</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, B = </span><span class="si">{</span><span class="n">stationary</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, C = </span><span class="si">{</span><span class="n">stationary</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="application-google-pagerank-algorithm">
+<h2>8. Application: Google PageRank Algorithm<a class="headerlink" href="#application-google-pagerank-algorithm" title="Permalink to this heading">#</a></h2>
+<p>PageRank models a “Random Surfer” who clicks on links on the web.</p>
+<p>To prevent the surfer from getting trapped in pages with no outgoing links (dead ends) or circular loops, PageRank introduces a <strong>Damping Factor (<span class="math notranslate nohighlight">\(d \approx 0.85\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>With probability <span class="math notranslate nohighlight">\(d\)</span>, the surfer clicks a random link on the current page.</p></li>
+<li><p>With probability <span class="math notranslate nohighlight">\(1 - d\)</span>, the surfer gets bored and jumps to a completely random page on the entire web.</p></li>
+</ul>
+<section id="mathematical-formulation">
+<h3>Mathematical Formulation<a class="headerlink" href="#mathematical-formulation" title="Permalink to this heading">#</a></h3>
+<p>Given an adjacency matrix <span class="math notranslate nohighlight">\(A\)</span> where <span class="math notranslate nohighlight">\(A_{ij} = 1\)</span> if page <span class="math notranslate nohighlight">\(i\)</span> links to page <span class="math notranslate nohighlight">\(j\)</span>, we construct a transition probability matrix <span class="math notranslate nohighlight">\(M\)</span> where <span class="math notranslate nohighlight">\(M_{ij} = \frac{A_{ij}}{\text{out-degree}(i)}\)</span>.</p>
+<p>The PageRank Google Matrix <span class="math notranslate nohighlight">\(G\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[G = d \cdot M + \frac{1 - d}{N} \mathbf{E}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the total number of pages and <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> is an <span class="math notranslate nohighlight">\(N \times N\)</span> matrix of all ones.</p>
+</section>
+<section id="python-simulation-pagerank-calculation">
+<h3>Python Simulation: PageRank Calculation<a class="headerlink" href="#python-simulation-pagerank-calculation" title="Permalink to this heading">#</a></h3>
+<p>Here is how to calculate PageRank scores for a 4-page web graph using <strong>NumPy</strong> and <strong>NetworkX</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+
+<span class="c1"># 1. Define Web Graph Structure (4 Pages: A, B, C, D)</span>
+<span class="c1"># Directed links: A -&gt; B, A -&gt; C, B -&gt; D, C -&gt; A, C -&gt; B, C -&gt; D, D -&gt; C</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)]</span>
+<span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+
+<span class="c1"># 2. Build Transition Matrix M</span>
+<span class="c1"># M[i, j] = probability of moving from node i to node j</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<span class="n">node_to_idx</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nodes</span><span class="p">)}</span>
+
+<span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+    <span class="n">M</span><span class="p">[</span><span class="n">node_to_idx</span><span class="p">[</span><span class="n">u</span><span class="p">],</span> <span class="n">node_to_idx</span><span class="p">[</span><span class="n">v</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Normalize rows so each row sums to 1</span>
+<span class="n">row_sums</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">M</span> <span class="o">/</span> <span class="n">row_sums</span>
+
+<span class="c1"># 3. Apply Damping Factor (d = 0.85) to create Google Matrix G</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">0.85</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">d</span> <span class="o">*</span> <span class="n">M</span> <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">E</span>
+
+<span class="c1"># 4. Power Iteration Method to find Stationary Distribution</span>
+<span class="n">pagerank</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span>  <span class="c1"># Initial uniform distribution</span>
+
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">pagerank</span> <span class="o">=</span> <span class="n">pagerank</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PageRank Scores (Power Iteration):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">pagerank</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Page </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 5. Verification using NetworkX library</span>
+<span class="n">G_nx</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span>
+<span class="n">pr_nx</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G_nx</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">PageRank Scores (NetworkX Verification):&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pr_nx</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Page </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/statistics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="stochastic_processes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Stochastic Processes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../optimization/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to Optimization</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-markov-property">1. The Markov Property</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-matrix-p">2. Transition Matrix (<span class="math notranslate nohighlight">\(P\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-properties-of-p">Important Properties of <span class="math notranslate nohighlight">\(P\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-transition-diagrams">3. State Transition Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-vector-update-over-time">4. State Vector Update over Time</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-step-calculation-example">Multi-Step Calculation Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-distribution-pi">5. Stationary Distribution (<span class="math notranslate nohighlight">\(\pi\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-solution">Analytical Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors-connection">6. Eigenvalues and Eigenvectors Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-implementation-numpy">7. Python Implementation (NumPy)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-google-pagerank-algorithm">8. Application: Google PageRank Algorithm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-formulation">Mathematical Formulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-simulation-pagerank-calculation">Python Simulation: PageRank Calculation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

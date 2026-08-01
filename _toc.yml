@@ -41,6 +41,7 @@ parts:
       - file: book/statistics/intro
       - file: book/statistics/inferential
       - file: book/statistics/stochastic_processes
+      - file: book/statistics/markov_chains
 
   - caption: Optimization
     chapters:

@@ -210,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/markov_chains.html">Markov Chains</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
 <ul class="nav bd-sidenav">
@@ -462,11 +463,32 @@ To find the slope of a line passing through two points, we use <span class="math
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Distinguishing <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> vs. <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> (The Key to Calculus):</strong></p>
+<ul>
+<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> Form (where <span class="math notranslate nohighlight">\(a \neq 0\)</span>, e.g., <span class="math notranslate nohighlight">\(\frac{1}{x}\)</span>):</strong>
+If we let <span class="math notranslate nohighlight">\(x\)</span> approach <span class="math notranslate nohighlight">\(0\)</span> on the number line:</p>
 <ul class="simple">
-<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> Form (where <span class="math notranslate nohighlight">\(a \neq 0\)</span>):</strong> This represents a value divided by an infinitely small number, which shoots toward infinity (<span class="math notranslate nohighlight">\(\pm \infty\)</span>). In geometry, this corresponds to a <strong>vertical asymptote</strong>.</p></li>
-<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> Form (Indeterminate Form):</strong> This means the numerator and denominator are both shrinking to zero. We cannot determine the value without further limit analysis. <strong>This <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> form is the only representation for finding slope and defining the derivative!</strong></p></li>
+<li><p>Approaching from the left (<span class="math notranslate nohighlight">\(-1 \to 0\)</span>): We divide by extremely small negative values (e.g., <span class="math notranslate nohighlight">\(\frac{1}{-0.000001} = -1,000,000\)</span>), so the value shoots to <strong>negative infinity (<span class="math notranslate nohighlight">\(-\infty\)</span>)</strong>.</p></li>
+<li><p>Approaching from the right (<span class="math notranslate nohighlight">\(1 \to 0\)</span>): We divide by extremely small positive values (e.g., <span class="math notranslate nohighlight">\(\frac{1}{0.000001} = 1,000,000\)</span>), so the value shoots to <strong>positive infinity (<span class="math notranslate nohighlight">\(+\infty\)</span>)</strong>.</p></li>
+</ul>
+<p>Because the two sides head in opposite directions to different infinities (<span class="math notranslate nohighlight">\(\pm \infty\)</span>), the limit <strong>does not exist</strong>, and we observe a <strong>vertical asymptote</strong>.</p>
+</li>
+<li><p><strong>The <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> Form (Indeterminate Form):</strong>
+Unlike the <span class="math notranslate nohighlight">\(\frac{a}{0}\)</span> case, here the numerator is also shrinking to zero, which “counters” the division-by-zero explosion. The result depends entirely on how fast the numerator and denominator approach zero relative to each other:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(x) = \frac{x}{x}\)</span>, the ratio is always <span class="math notranslate nohighlight">\(1\)</span> for any <span class="math notranslate nohighlight">\(x \neq 0\)</span>. The limit is <strong><span class="math notranslate nohighlight">\(1\)</span></strong>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(g(x) = \frac{2x}{x}\)</span>, the ratio is always <span class="math notranslate nohighlight">\(2\)</span> for any <span class="math notranslate nohighlight">\(x \neq 0\)</span>. The limit is <strong><span class="math notranslate nohighlight">\(2\)</span></strong>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(h(x) = \frac{x^2}{x}\)</span>, the ratio simplifies to <span class="math notranslate nohighlight">\(x\)</span>. As <span class="math notranslate nohighlight">\(x \to 0\)</span>, the limit is <strong><span class="math notranslate nohighlight">\(0\)</span></strong>.</p></li>
+</ul>
+<p>Since <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> can resolve to <span class="math notranslate nohighlight">\(1, 2, 0\)</span>, or any other real number, it is called <strong>indeterminate</strong> (undetermined) and is the only form capable of representing rates of change and derivatives.</p>
+</li>
 </ul>
 </div>
+<figure class="align-center" id="limit-cases-a-over-0-vs-0-over-0">
+<img alt="../../_images/limit_cases_a_over_0_vs_0_over_0.png" src="../../_images/limit_cases_a_over_0_vs_0_over_0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Comparison between a/0 (Limit does not exist) and 0/0 (Limit exists) forms.</span><a class="headerlink" href="#limit-cases-a-over-0-vs-0-over-0" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="the-foundation-of-derivatives-and-integrals">
 <h3>The Foundation of Derivatives and Integrals<a class="headerlink" href="#the-foundation-of-derivatives-and-integrals" title="Permalink to this heading">#</a></h3>
@@ -537,6 +559,13 @@ To find the slope of a line passing through two points, we use <span class="math
 <p>Using algebra, we can simplify the expression:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1} = \lim_{x \to 1} (x + 1) = 1 + 1 = 2\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>L’Hôpital’s Rule Preview:</strong>
+When encountering indeterminate forms like <span class="math notranslate nohighlight">\(\frac{0}{0}\)</span> or <span class="math notranslate nohighlight">\(\frac{\pm \infty}{\pm \infty}\)</span>, instead of algebraic simplification, we can use <strong>L’Hôpital’s Rule</strong> (which utilizes derivatives):</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}\]</div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="formal-definition-of-a-limit-epsilon-delta">
@@ -550,7 +579,7 @@ To find the slope of a line passing through two points, we use <span class="math
 <figure class="align-center" id="limit-epsilon-delta">
 <img alt="../../_images/limit_epsilon_delta.png" src="../../_images/limit_epsilon_delta.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Geometrical illustration of the epsilon-delta limit definition.</span><a class="headerlink" href="#limit-epsilon-delta" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Geometrical illustration of the epsilon-delta limit definition.</span><a class="headerlink" href="#limit-epsilon-delta" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="understanding-the-epsilon-delta-definition">
@@ -610,6 +639,9 @@ To find the slope of a line passing through two points, we use <span class="math
 </li>
 </ol>
 <p>If any of these conditions fail, the function has a discontinuity at <span class="math notranslate nohighlight">\(x = a\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Machine Learning Connection:</strong> Continuity (along with smoothness and differentiability) is a critical requirement for gradient-based optimization algorithms (like Gradient Descent in Neural Networks). If a Loss Function is discontinuous, gradients cannot be computed, preventing the model from updating its weights properly.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="symbolic-limit-calculations-in-python">

@@ -41,6 +41,7 @@ Welcome to the full **Table of Contents** for *Math for Data Science*. Below is 
 - **{doc}`Statistics <statistics/intro>`**
 - **{doc}`Statistical Inference <statistics/inferential>`**
 - **{doc}`Stochastic Processes <statistics/stochastic_processes>`**
+- **{doc}`Markov Chains <statistics/markov_chains>`**
 
 ---
 

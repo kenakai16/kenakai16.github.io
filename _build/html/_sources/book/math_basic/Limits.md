@@ -23,8 +23,30 @@ $$\lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t}$$
 
 ```{note}
 **Distinguishing $\frac{a}{0}$ vs. $\frac{0}{0}$ (The Key to Calculus):**
-* **The $\frac{a}{0}$ Form (where $a \neq 0$):** This represents a value divided by an infinitely small number, which shoots toward infinity ($\pm \infty$). In geometry, this corresponds to a **vertical asymptote**.
-* **The $\frac{0}{0}$ Form (Indeterminate Form):** This means the numerator and denominator are both shrinking to zero. We cannot determine the value without further limit analysis. **This $\frac{0}{0}$ form is the only representation for finding slope and defining the derivative!**
+
+* **The $\frac{a}{0}$ Form (where $a \neq 0$, e.g., $\frac{1}{x}$):**
+  If we let $x$ approach $0$ on the number line:
+  - Approaching from the left ($-1 \to 0$): We divide by extremely small negative values (e.g., $\frac{1}{-0.000001} = -1,000,000$), so the value shoots to **negative infinity ($-\infty$)**.
+  - Approaching from the right ($1 \to 0$): We divide by extremely small positive values (e.g., $\frac{1}{0.000001} = 1,000,000$), so the value shoots to **positive infinity ($+\infty$)**.
+  
+  Because the two sides head in opposite directions to different infinities ($\pm \infty$), the limit **does not exist**, and we observe a **vertical asymptote**.
+
+* **The $\frac{0}{0}$ Form (Indeterminate Form):**
+  Unlike the $\frac{a}{0}$ case, here the numerator is also shrinking to zero, which "counters" the division-by-zero explosion. The result depends entirely on how fast the numerator and denominator approach zero relative to each other:
+  
+  - If $f(x) = \frac{x}{x}$, the ratio is always $1$ for any $x \neq 0$. The limit is **$1$**.
+  - If $g(x) = \frac{2x}{x}$, the ratio is always $2$ for any $x \neq 0$. The limit is **$2$**.
+  - If $h(x) = \frac{x^2}{x}$, the ratio simplifies to $x$. As $x \to 0$, the limit is **$0$**.
+
+  Since $\frac{0}{0}$ can resolve to $1, 2, 0$, or any other real number, it is called **indeterminate** (undetermined) and is the only form capable of representing rates of change and derivatives.
+```
+
+```{figure} ../../images/limit_cases_a_over_0_vs_0_over_0.png
+---
+name: limit_cases_a_over_0_vs_0_over_0
+align: center
+---
+Comparison between a/0 (Limit does not exist) and 0/0 (Limit exists) forms.
 ```
 
 ### The Foundation of Derivatives and Integrals
@@ -76,6 +98,13 @@ $$\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = 2$$
 Using algebra, we can simplify the expression:
 
 $$\lim_{x \to 1} \frac{(x - 1)(x + 1)}{x - 1} = \lim_{x \to 1} (x + 1) = 1 + 1 = 2$$
+
+```{note}
+**L'Hôpital's Rule Preview:**
+When encountering indeterminate forms like $\frac{0}{0}$ or $\frac{\pm \infty}{\pm \infty}$, instead of algebraic simplification, we can use **L'Hôpital's Rule** (which utilizes derivatives):
+
+$$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$$
+```
 
 ---
 
@@ -150,6 +179,8 @@ Formally, a function $f(x)$ is **continuous at a point $x = a$** if and only if 
    $$\lim_{x \to a} f(x) = f(a)$$
 
 If any of these conditions fail, the function has a discontinuity at $x = a$.
+
+* **Machine Learning Connection:** Continuity (along with smoothness and differentiability) is a critical requirement for gradient-based optimization algorithms (like Gradient Descent in Neural Networks). If a Loss Function is discontinuous, gradients cannot be computed, preventing the model from updating its weights properly.
 
 ---
 
