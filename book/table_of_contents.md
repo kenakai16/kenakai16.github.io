@@ -16,6 +16,7 @@ Welcome to the full **Table of Contents** for *Math for Data Science*. Below is 
 - **{doc}`Summations <math_basic/Summations>`**
 - **{doc}`Exponents <math_basic/Exponents>`**
 - **{doc}`Logarithms <math_basic/Logarithms>`**
+- **{doc}`Limits <math_basic/Limits>`**
 - **{doc}`Calculus & Derivatives <math_basic/Calculus>`**
 - **{doc}`Integration <math_basic/Integration>`**
 
