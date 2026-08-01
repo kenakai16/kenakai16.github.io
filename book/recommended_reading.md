@@ -9,7 +9,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 ## Core Textbooks
 
 ### 1. Essential Math for Data Science
-```{image} ../images/essential_math_cover.png
+```{image} ../images/essential_math_cover.jpg
 :alt: Essential Math for Data Science Cover
 :width: 140px
 :align: left
@@ -23,7 +23,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 2. 1001 Math Problems (2nd Edition)
-```{image} ../images/math_1001_cover.png
+```{image} ../images/math_1001_cover.jpg
 :alt: 1001 Math Problems Cover
 :width: 140px
 :align: left
@@ -36,7 +36,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 3. Mathematics for Machine Learning
-```{image} ../images/mml_book_cover.png
+```{image} ../images/mml_book_cover.jpg
 :alt: Mathematics for Machine Learning Cover
 :width: 140px
 :align: left
@@ -50,7 +50,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 4. An Introduction to Statistical Learning (ISL)
-```{image} ../images/is_learning_cover.png
+```{image} ../images/is_learning_cover.jpg
 :alt: An Introduction to Statistical Learning Cover
 :width: 140px
 :align: left
@@ -64,7 +64,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 5. Deep Learning
-```{image} ../images/deep_learning_cover.png
+```{image} ../images/deep_learning_cover.jpg
 :alt: Deep Learning Cover
 :width: 140px
 :align: left
@@ -78,7 +78,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 6. Dive into Deep Learning (D2L)
-```{image} ../images/d2l_cover.png
+```{image} ../images/d2l_cover.jpg
 :alt: Dive into Deep Learning Cover
 :width: 140px
 :align: left
@@ -92,7 +92,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 7. Machine Learning (commonly known as the "Watermelon Book")
-```{image} ../images/watermelon_book_cover.png
+```{image} ../images/watermelon_book_cover.jpg
 :alt: Machine Learning Cover
 :width: 140px
 :align: left
@@ -106,7 +106,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 8. Machine Learning with PyTorch and Scikit-Learn
-```{image} ../images/pytorch_scikit_cover.png
+```{image} ../images/pytorch_scikit_cover.jpg
 :alt: Machine Learning with PyTorch and Scikit-Learn Cover
 :width: 140px
 :align: left
@@ -120,7 +120,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 9. Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow (3rd Edition)
-```{image} ../images/hands_on_ml_cover.png
+```{image} ../images/hands_on_ml_cover.jpg
 :alt: Hands-on Machine Learning Cover
 :width: 140px
 :align: left
@@ -134,7 +134,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 10. Generative Deep Learning (2nd Edition)
-```{image} ../images/generative_dl_cover.png
+```{image} ../images/generative_dl_cover.jpg
 :alt: Generative Deep Learning Cover
 :width: 140px
 :align: left
@@ -148,7 +148,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 11. Deep Reinforcement Learning Hands-on (2nd Edition)
-```{image} ../images/reinforcement_learning_cover.png
+```{image} ../images/reinforcement_learning_cover.jpg
 :alt: Deep Reinforcement Learning Hands-on Cover
 :width: 140px
 :align: left
@@ -162,7 +162,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 12. Build a Large Language Model (From Scratch)
-```{image} ../images/build_llm_cover.png
+```{image} ../images/build_llm_cover.jpg
 :alt: Build a Large Language Model Cover
 :width: 140px
 :align: left
@@ -176,7 +176,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 13. Computer Vision: Algorithms and Applications (2nd Edition)
-```{image} ../images/computer_vision_cover.png
+```{image} ../images/computer_vision_cover.jpg
 :alt: "Computer Vision - Algorithms and Applications Cover"
 :width: 140px
 :align: left
@@ -190,7 +190,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 14. Convex Optimization
-```{image} ../images/convex_optimization_cover.png
+```{image} ../images/convex_optimization_cover.jpg
 :alt: "Convex Optimization Cover"
 :width: 140px
 :align: left
@@ -204,7 +204,7 @@ To deepen your understanding of the mathematical foundations of Data Science, Ma
 <div style="clear: both; margin-bottom: 20px;"></div>
 
 ### 15. Computational Topology for Data Analysis
-```{image} ../images/computational_topology_cover.png
+```{image} ../images/computational_topology_cover.jpg
 :alt: "Computational Topology for Data Analysis Cover"
 :width: 140px
 :align: left
