@@ -1,0 +1,669 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Double Dual &amp; Outer Measure &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/functional_analysis/double_dual_outer_measure';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sigma Algebras" href="../measure_theory/sigma_algebras.html" />
+    <link rel="prev" title="Zorn’s Lemma &amp; Hahn-Banach Theorem" href="zorns_lemma_hahn_banach.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Limits.html">Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/determinants.html">Determinants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/markov_chains.html">Markov Chains</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Functional Analysis &amp; Measure Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_banach_spaces.html">Basic Banach Space Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounded_linear_operators.html">Bounded Linear Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quotient_spaces_baire_category.html">Quotient Spaces &amp; Baire Category Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_mapping_closed_graph.html">Open Mapping &amp; Closed Graph Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zorns_lemma_hahn_banach.html">Zorn’s Lemma &amp; Hahn-Banach Theorem</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Double Dual &amp; Outer Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/sigma_algebras.html">Sigma Algebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_subsets_measure.html">Lebesgue Measurable Subsets and Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_functions.html">Lebesgue Measurable Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/simple_functions.html">Simple Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction to Topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/functional_analysis/double_dual_outer_measure.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Double Dual & Outer Measure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-double-dual-and-reflexivity">1. The Double Dual and Reflexivity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-outer-measure-of-real-subsets">2. The Outer Measure of Real Subsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem">3. Connection to ML/DL: Reproducing Kernel Hilbert Spaces (RKHS) &amp; The Representer Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riesz-representation-theorem-evaluation-functionals">Riesz Representation Theorem &amp; Evaluation Functionals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-representer-theorem">The Representer Theorem</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-double-dual-outer-measure">
+<h1>The Double Dual &amp; Outer Measure<a class="headerlink" href="#the-double-dual-outer-measure" title="Permalink to this heading">#</a></h1>
+<p>This lecture discusses the canonical injection into the double dual space, defines reflexivity, and introduces the Lebesgue outer measure.</p>
+<hr class="docutils" />
+<section id="the-double-dual-and-reflexivity">
+<h2>1. The Double Dual and Reflexivity<a class="headerlink" href="#the-double-dual-and-reflexivity" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(V\)</span> be a normed space. For any <span class="math notranslate nohighlight">\(v \in V \setminus \{0\}\)</span>, there exists <span class="math notranslate nohighlight">\(f \in V'\)</span> (the dual space) such that <span class="math notranslate nohighlight">\(\|f\| = 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>.</p>
+<p><strong>Proof</strong>:
+Define <span class="math notranslate nohighlight">\(u: \mathbb{C}v \to \mathbb{C}\)</span> on the span of <span class="math notranslate nohighlight">\(v\)</span> by <span class="math notranslate nohighlight">\(u(\lambda v) = \lambda \|v\|\)</span>. Clearly, <span class="math notranslate nohighlight">\(|u(t)| \le \|t\|\)</span> for all <span class="math notranslate nohighlight">\(t \in \mathbb{C}v\)</span> and <span class="math notranslate nohighlight">\(u(v) = \|v\|\)</span>. By the Hahn-Banach Theorem, there exists an extension <span class="math notranslate nohighlight">\(f \in V'\)</span> with <span class="math notranslate nohighlight">\(\|f\| \le 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>. Since <span class="math notranslate nohighlight">\(f(v/\|v\|) = 1\)</span>, we have <span class="math notranslate nohighlight">\(\|f\| = 1\)</span>.</p>
+</li>
+<li><p><strong>Definition</strong>: The <strong>double dual</strong> <span class="math notranslate nohighlight">\(V''\)</span> of a normed space <span class="math notranslate nohighlight">\(V\)</span> is the dual space of <span class="math notranslate nohighlight">\(V'\)</span>. For any <span class="math notranslate nohighlight">\(v \in V\)</span>, the evaluation map <span class="math notranslate nohighlight">\(T_v: V' \to \mathbb{C}\)</span> defined by <span class="math notranslate nohighlight">\(T_v(f) = f(v)\)</span> is an element of <span class="math notranslate nohighlight">\(V''\)</span>.</p></li>
+<li><p><strong>Theorem</strong>: The canonical map <span class="math notranslate nohighlight">\(T: V \to V''\)</span> sending <span class="math notranslate nohighlight">\(v \mapsto T_v\)</span> is an isometric isomorphism into <span class="math notranslate nohighlight">\(V''\)</span>.</p>
+<p><strong>Proof</strong>:
+Linearity is clear. For boundedness, <span class="math notranslate nohighlight">\(|T_v(f)| = |f(v)| \le \|v\| \|f\|\)</span>, so <span class="math notranslate nohighlight">\(\|T_v\| \le \|v\|\)</span>.
+For <span class="math notranslate nohighlight">\(v \neq 0\)</span>, choose <span class="math notranslate nohighlight">\(f \in V'\)</span> with <span class="math notranslate nohighlight">\(\|f\| = 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\|T_v\| \ge |T_v(f)| = |f(v)| = \|v\|\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\|T_v\| = \|v\|\)</span>, and the map is isometric.</p>
+</li>
+<li><p><strong>Definition</strong>: A Banach space <span class="math notranslate nohighlight">\(V\)</span> is <strong>reflexive</strong> if the canonical map <span class="math notranslate nohighlight">\(T: V \to V''\)</span> is surjective (onto).</p>
+<ul class="simple">
+<li><p><strong>Examples</strong>: <span class="math notranslate nohighlight">\(\ell^p\)</span> spaces for <span class="math notranslate nohighlight">\(1 &lt; p &lt; \infty\)</span> are reflexive. <span class="math notranslate nohighlight">\(\ell^1\)</span> and <span class="math notranslate nohighlight">\(c_0\)</span> are not reflexive.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-outer-measure-of-real-subsets">
+<h2>2. The Outer Measure of Real Subsets<a class="headerlink" href="#the-outer-measure-of-real-subsets" title="Permalink to this heading">#</a></h2>
+<p>To measure the size of arbitrary subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we define the outer measure.</p>
+<ul>
+<li><p><strong>Definition</strong>: For any interval <span class="math notranslate nohighlight">\(I\)</span>, let <span class="math notranslate nohighlight">\(\ell(I)\)</span> denote its length. The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(m^*: \mathcal{P}(\mathbb{R}) \to [0, \infty]\)</span> of a subset <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) = \inf \left\{ \sum_{n=1}^\infty \ell(I_n) \;\middle|\; A \subseteq \bigcup_{n=1}^\infty I_n, \text{ where } I_n \text{ are open intervals} \right\}\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is countable, then <span class="math notranslate nohighlight">\(m^*(A) = 0\)</span>.</p>
+<p><strong>Proof</strong>:
+Enumerate <span class="math notranslate nohighlight">\(A = \{a_1, a_2, \dots\}\)</span>. Fix <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. For each <span class="math notranslate nohighlight">\(n\)</span>, define the open interval:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \left( a_n - \frac{\epsilon}{2^{n+1}}, a_n + \frac{\epsilon}{2^{n+1}} \right)\]</div>
+<p>Then <span class="math notranslate nohighlight">\(A \subseteq \bigcup_{n=1}^\infty I_n\)</span>. By definition:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) \le \sum_{n=1}^\infty \ell(I_n) = \sum_{n=1}^\infty \frac{\epsilon}{2^n} = \epsilon\]</div>
+<p>Since this holds for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, we have <span class="math notranslate nohighlight">\(m^*(A) = 0\)</span>.</p>
+</li>
+<li><p><strong>Theorem (Countable Subadditivity)</strong>: Let <span class="math notranslate nohighlight">\(\{A_n\}_{n=1}^\infty\)</span> be a countable family of subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[m^*\left( \bigcup_{n=1}^\infty A_n \right) \le \sum_{n=1}^\infty m^*(A_n)\]</div>
+<p><strong>Proof</strong>:
+If any <span class="math notranslate nohighlight">\(m^*(A_n) = \infty\)</span>, the inequality is trivial. Assume <span class="math notranslate nohighlight">\(m^*(A_n) &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Fix <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. For each <span class="math notranslate nohighlight">\(n\)</span>, choose open intervals <span class="math notranslate nohighlight">\(\{I_{nk}\}_{k=1}^\infty\)</span> covering <span class="math notranslate nohighlight">\(A_n\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^\infty \ell(I_{nk}) &lt; m^*(A_n) + \frac{\epsilon}{2^n}\]</div>
+<p>The countable collection <span class="math notranslate nohighlight">\(\{I_{nk}\}_{n,k=1}^\infty\)</span> covers <span class="math notranslate nohighlight">\(\bigcup_{n=1}^\infty A_n\)</span>. Thus:</p>
+<div class="math notranslate nohighlight">
+\[m^*\left( \bigcup_{n=1}^\infty A_n \right) \le \sum_{n=1}^\infty \sum_{k=1}^\infty \ell(I_{nk}) \le \sum_{n=1}^\infty \left( m^*(A_n) + \frac{\epsilon}{2^n} \right) = \sum_{n=1}^\infty m^*(A_n) + \epsilon\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(\epsilon \to 0\)</span> yields the result.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem">
+<h2>3. Connection to ML/DL: Reproducing Kernel Hilbert Spaces (RKHS) &amp; The Representer Theorem<a class="headerlink" href="#connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem" title="Permalink to this heading">#</a></h2>
+<p>In machine learning, <strong>kernel methods</strong> (such as Support Vector Machines (SVMs), Kernel PCA, and Gaussian Processes) construct non-linear decision boundaries by mapping inputs <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span> into an infinite-dimensional feature space. A <strong>Reproducing Kernel Hilbert Space (RKHS)</strong> is a complete Hilbert space of functions where evaluation functionals are continuous.</p>
+<section id="riesz-representation-theorem-evaluation-functionals">
+<h3>Riesz Representation Theorem &amp; Evaluation Functionals<a class="headerlink" href="#riesz-representation-theorem-evaluation-functionals" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> be a Hilbert space of functions <span class="math notranslate nohighlight">\(f: \mathcal{X} \to \mathbb{R}\)</span>. For a fixed <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span>, the <strong>evaluation functional</strong> <span class="math notranslate nohighlight">\(L_x: \mathcal{H} \to \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[L_x(f) = f(x)\]</div>
+<p>If <span class="math notranslate nohighlight">\(L_x\)</span> is a bounded (continuous) linear functional for all <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span> (which defines an RKHS), then by the <strong>Riesz Representation Theorem</strong>, there exists a unique function <span class="math notranslate nohighlight">\(K_x \in \mathcal{H}\)</span> (denoted as <span class="math notranslate nohighlight">\(K(x, \cdot)\)</span>) such that:</p>
+<div class="math notranslate nohighlight">
+\[L_x(f) = f(x) = \langle f, K(x, \cdot) \rangle_{\mathcal{H}}\]</div>
+<p>This is the <strong>reproducing property</strong>. The symmetric positive-definite reproducing kernel <span class="math notranslate nohighlight">\(K: \mathcal{X} \times \mathcal{X} \to \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[K(x, y) = \langle K(x, \cdot), K(y, \cdot) \rangle_{\mathcal{H}}\]</div>
+<p>This provides the foundation for the <strong>Kernel Trick</strong>: computing inner products in an infinite-dimensional feature space <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> can be performed simply by evaluating the closed-form kernel function <span class="math notranslate nohighlight">\(K(x, y)\)</span> in the low-dimensional input space.</p>
+</section>
+<section id="the-representer-theorem">
+<h3>The Representer Theorem<a class="headerlink" href="#the-representer-theorem" title="Permalink to this heading">#</a></h3>
+<p>Normally, finding a function <span class="math notranslate nohighlight">\(f \in \mathcal{H}\)</span> that minimizes a regularized empirical risk function:</p>
+<div class="math notranslate nohighlight">
+\[\min_{f \in \mathcal{H}} \sum_{i=1}^N \mathcal{L}(f(x_i), y_i) + \lambda \Omega(\|f\|_{\mathcal{H}})\]</div>
+<p>is an infinite-dimensional optimization problem since <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> is infinite-dimensional.</p>
+<p>The <strong>Representer Theorem</strong> guarantees that the optimal solution <span class="math notranslate nohighlight">\(f^*\)</span> must lie in the finite-dimensional span of the kernels evaluated at the training points:</p>
+<div class="math notranslate nohighlight">
+\[f^*(x) = \sum_{i=1}^N \alpha_i K(x_i, x)\]</div>
+<p><strong>Proof</strong>:
+Any function <span class="math notranslate nohighlight">\(f \in \mathcal{H}\)</span> can be decomposed orthogonally as <span class="math notranslate nohighlight">\(f = f_{\parallel} + f_{\perp}\)</span>, where <span class="math notranslate nohighlight">\(f_{\parallel}\)</span> lies in the subspace <span class="math notranslate nohighlight">\(\mathcal{H}_{\parallel} = \text{span}(\{K(x_i, \cdot)\}_{i=1}^N)\)</span> and <span class="math notranslate nohighlight">\(f_{\perp}\)</span> lies in the orthogonal complement <span class="math notranslate nohighlight">\(\mathcal{H}_{\perp}\)</span>.</p>
+<p>For any training point <span class="math notranslate nohighlight">\(x_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x_i) = \langle f, K(x_i, \cdot) \rangle_{\mathcal{H}} = \langle f_{\parallel} + f_{\perp}, K(x_i, \cdot) \rangle_{\mathcal{H}} = \langle f_{\parallel}, K(x_i, \cdot) \rangle_{\mathcal{H}} + 0 = f_{\parallel}(x_i)\]</div>
+<p>Thus, the empirical loss term is independent of <span class="math notranslate nohighlight">\(f_{\perp}\)</span>.</p>
+<p>For the regularization term, if <span class="math notranslate nohighlight">\(\Omega\)</span> is strictly monotonically increasing:</p>
+<div class="math notranslate nohighlight">
+\[\|f\|_{\mathcal{H}}^2 = \|f_{\parallel}\|_{\mathcal{H}}^2 + \|f_{\perp}\|_{\mathcal{H}}^2 \ge \|f_{\parallel}\|_{\mathcal{H}}^2\]</div>
+<p>Thus, setting <span class="math notranslate nohighlight">\(f_{\perp} = 0\)</span> minimizes the regularizer without changing the empirical loss. The optimal function must therefore have the form <span class="math notranslate nohighlight">\(f^*(x) = \sum_{i=1}^N \alpha_i K(x_i, x)\)</span>, reducing the infinite-dimensional optimization problem to finding the finite-dimensional coefficients <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}^N\)</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/functional_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="zorns_lemma_hahn_banach.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Zorn’s Lemma &amp; Hahn-Banach Theorem</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../measure_theory/sigma_algebras.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sigma Algebras</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-double-dual-and-reflexivity">1. The Double Dual and Reflexivity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-outer-measure-of-real-subsets">2. The Outer Measure of Real Subsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem">3. Connection to ML/DL: Reproducing Kernel Hilbert Spaces (RKHS) &amp; The Representer Theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riesz-representation-theorem-evaluation-functionals">Riesz Representation Theorem &amp; Evaluation Functionals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-representer-theorem">The Representer Theorem</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

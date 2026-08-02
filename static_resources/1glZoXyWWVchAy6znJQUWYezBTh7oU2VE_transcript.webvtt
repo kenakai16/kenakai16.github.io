@@ -1,0 +1,3782 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.944 align:middle line:90%
+[SQUEAKING][RUSTLING][CLICKING]
+
+00:00:03.944 --> 00:00:18.760 align:middle line:90%
+
+
+00:00:18.760 --> 00:00:25.020 align:middle line:84%
+CASEY RODRIGUEZ: OK, so
+the name of the game today
+
+00:00:25.020 --> 00:00:26.520 align:middle line:90%
+is compactness.
+
+00:00:26.520 --> 00:00:33.000 align:middle line:90%
+
+
+00:00:33.000 --> 00:00:36.360 align:middle line:84%
+And so last time I recalled
+that the definition
+
+00:00:36.360 --> 00:00:48.390 align:middle line:84%
+of a subset of A metric
+space x is compact
+
+00:00:48.390 --> 00:01:04.080 align:middle line:84%
+if every sequence xn in k, so
+every sequence of elements in k
+
+00:01:04.080 --> 00:01:14.000 align:middle line:84%
+has a subsequence
+converging in K,
+
+00:01:14.000 --> 00:01:18.230 align:middle line:84%
+has a subsequence which
+converges to an element in k.
+
+00:01:18.230 --> 00:01:24.290 align:middle line:84%
+And so for example by
+the Heiner-Borel theorem,
+
+00:01:24.290 --> 00:01:29.510 align:middle line:84%
+closed and bounded subsets
+of Rn or Cn are compact.
+
+00:01:29.510 --> 00:01:36.280 align:middle line:90%
+This is from 18100.
+
+00:01:36.280 --> 00:01:40.520 align:middle line:84%
+And general closed and bounded
+subsets of a Hilbert space
+
+00:01:40.520 --> 00:01:41.720 align:middle line:90%
+are not necessarily compact.
+
+00:01:41.720 --> 00:01:48.470 align:middle line:84%
+Last time we looked at the
+closed unit ball in the Hilbert
+
+00:01:48.470 --> 00:01:51.380 align:middle line:84%
+space, or let's
+say in little l2,
+
+00:01:51.380 --> 00:01:55.490 align:middle line:84%
+this is not compact because
+you can take or orthonormal
+
+00:01:55.490 --> 00:02:00.680 align:middle line:84%
+basis vectors which are the
+sequences that have zero
+
+00:02:00.680 --> 00:02:02.900 align:middle line:90%
+except for one in the n-th spot.
+
+00:02:02.900 --> 00:02:05.270 align:middle line:90%
+These are all of unit linked.
+
+00:02:05.270 --> 00:02:10.910 align:middle line:84%
+And the sequence consisting
+of these basis vectors, which
+
+00:02:10.910 --> 00:02:12.950 align:middle line:84%
+are sequences, so the
+sequence of sequences
+
+00:02:12.950 --> 00:02:16.370 align:middle line:84%
+does not converge in little
+l2 or have a subsequence which
+
+00:02:16.370 --> 00:02:18.200 align:middle line:90%
+converges in little l2.
+
+00:02:18.200 --> 00:02:20.930 align:middle line:84%
+So we were looking for
+an additional condition
+
+00:02:20.930 --> 00:02:22.820 align:middle line:90%
+that would ensure compactness.
+
+00:02:22.820 --> 00:02:25.430 align:middle line:84%
+And as a warm up
+to this, last time
+
+00:02:25.430 --> 00:02:32.375 align:middle line:84%
+we proved the
+following that at--
+
+00:02:32.375 --> 00:02:37.020 align:middle line:90%
+
+
+00:02:37.020 --> 00:02:39.000 align:middle line:84%
+so we're always working
+in a Hilbert space that
+
+00:02:39.000 --> 00:02:41.665 align:middle line:84%
+may be separable or not
+depending on if I say it is
+
+00:02:41.665 --> 00:02:42.165 align:middle line:90%
+or not--
+
+00:02:42.165 --> 00:02:45.930 align:middle line:90%
+
+
+00:02:45.930 --> 00:03:05.190 align:middle line:84%
+that if we take a sequence,
+a convergent sequence in H,
+
+00:03:05.190 --> 00:03:10.710 align:middle line:84%
+then the conclusion is, 1,
+that the set k consisting
+
+00:03:10.710 --> 00:03:19.680 align:middle line:84%
+of all the elements of
+this sequence and the limit
+
+00:03:19.680 --> 00:03:20.445 align:middle line:90%
+is compact.
+
+00:03:20.445 --> 00:03:23.280 align:middle line:90%
+
+
+00:03:23.280 --> 00:03:30.060 align:middle line:84%
+And the set k has what are
+called equi-small tails with
+
+00:03:30.060 --> 00:03:37.060 align:middle line:84%
+respect to any
+orthonormal subset of H.
+
+00:03:37.060 --> 00:03:55.370 align:middle line:84%
+If e sub k is a countable
+orthonormal subset of H,
+
+00:03:55.370 --> 00:04:00.380 align:middle line:84%
+then the following holds, this
+condition we called K having
+
+00:04:00.380 --> 00:04:06.330 align:middle line:84%
+equi-small tails, then for
+every epsilon positive,
+
+00:04:06.330 --> 00:04:12.770 align:middle line:84%
+there exists a natural
+number N such that for all--
+
+00:04:12.770 --> 00:04:23.090 align:middle line:84%
+let's call it-- use a
+different letter, v tilde in K,
+
+00:04:23.090 --> 00:04:27.900 align:middle line:84%
+so either an element
+of the sequence or v,
+
+00:04:27.900 --> 00:04:39.900 align:middle line:84%
+we have that the sum over K
+bigger than N squared is less
+
+00:04:39.900 --> 00:04:41.710 align:middle line:90%
+than epsilon squared.
+
+00:04:41.710 --> 00:04:43.470 align:middle line:84%
+So what this says
+in this condition
+
+00:04:43.470 --> 00:04:53.950 align:middle line:84%
+we called K has equi-small
+tails with respect
+
+00:04:53.950 --> 00:04:55.480 align:middle line:90%
+to this orthonormal subset.
+
+00:04:55.480 --> 00:05:02.050 align:middle line:84%
+So of course for any fixed
+v, because this entire some--
+
+00:05:02.050 --> 00:05:04.210 align:middle line:84%
+forget just K over
+N-- is bounded
+
+00:05:04.210 --> 00:05:08.620 align:middle line:84%
+by the norm of this v tilde
+squared by Bessel's inequality.
+
+00:05:08.620 --> 00:05:14.360 align:middle line:84%
+We can always choose an N
+for any individual v tilde.
+
+00:05:14.360 --> 00:05:17.120 align:middle line:84%
+Now equi-small
+tails means that I
+
+00:05:17.120 --> 00:05:22.190 align:middle line:84%
+can choose this independent
+of the element in K.
+
+00:05:22.190 --> 00:05:24.950 align:middle line:84%
+So if you like uniformly
+small tails is another way
+
+00:05:24.950 --> 00:05:27.870 align:middle line:90%
+you could think about it.
+
+00:05:27.870 --> 00:05:32.300 align:middle line:84%
+But the terminology equi
+has been used instead.
+
+00:05:32.300 --> 00:05:34.850 align:middle line:84%
+But another way is to
+think we can uniformly
+
+00:05:34.850 --> 00:05:39.740 align:middle line:84%
+make the tails with respect
+to an orthonormal sequence,
+
+00:05:39.740 --> 00:05:42.140 align:middle line:84%
+or orthonormal
+subset of H small.
+
+00:05:42.140 --> 00:05:48.260 align:middle line:90%
+
+
+00:05:48.260 --> 00:05:51.110 align:middle line:84%
+Now, what we're
+going to prove is
+
+00:05:51.110 --> 00:05:56.180 align:middle line:84%
+that, in fact, this condition
+here of having equi-small tails
+
+00:05:56.180 --> 00:06:01.100 align:middle line:84%
+with respect to an orthonormal
+basis on top of the set being
+
+00:06:01.100 --> 00:06:04.940 align:middle line:84%
+closed and bounded,
+suffice to prove
+
+00:06:04.940 --> 00:06:07.170 align:middle line:90%
+that the subset is compact.
+
+00:06:07.170 --> 00:06:11.890 align:middle line:84%
+And that's the
+following theorem.
+
+00:06:11.890 --> 00:06:22.795 align:middle line:84%
+So let H be a separable
+Hilbert space.
+
+00:06:22.795 --> 00:06:33.110 align:middle line:90%
+
+
+00:06:33.110 --> 00:06:54.740 align:middle line:84%
+And let ek be an orthonormal
+basis of H. So I said suffice,
+
+00:06:54.740 --> 00:06:56.150 align:middle line:90%
+but not just suffice.
+
+00:06:56.150 --> 00:06:58.160 align:middle line:84%
+It's also necessary,
+as we'll show.
+
+00:06:58.160 --> 00:07:16.650 align:middle line:84%
+Then K subset of H is compact
+if and only if K is closed,
+
+00:07:16.650 --> 00:07:32.880 align:middle line:84%
+bounded, and has equi-small
+tails with respect
+
+00:07:32.880 --> 00:07:38.670 align:middle line:84%
+to this orthonormal
+basis, so in particular
+
+00:07:38.670 --> 00:07:39.855 align:middle line:90%
+for any orthonormal basis.
+
+00:07:39.855 --> 00:07:50.110 align:middle line:90%
+
+
+00:07:50.110 --> 00:07:53.110 align:middle line:84%
+So this is a
+complete description
+
+00:07:53.110 --> 00:07:55.300 align:middle line:84%
+of compact subsets
+of a Hilbert space,
+
+00:07:55.300 --> 00:07:57.850 align:middle line:84%
+it's those subsets which
+are closed, bounded,
+
+00:07:57.850 --> 00:08:00.940 align:middle line:84%
+and have equi-small
+details with respect
+
+00:08:00.940 --> 00:08:05.170 align:middle line:90%
+to one orthonormal basis.
+
+00:08:05.170 --> 00:08:06.910 align:middle line:84%
+And what this
+theorem also says is
+
+00:08:06.910 --> 00:08:09.520 align:middle line:84%
+that if it has equi-small
+details with respect
+
+00:08:09.520 --> 00:08:12.670 align:middle line:84%
+to one orthonormal basis
+and is closed and bounded,
+
+00:08:12.670 --> 00:08:15.265 align:middle line:84%
+then the same holds with respect
+to any orthonormal basis.
+
+00:08:15.265 --> 00:08:18.630 align:middle line:90%
+
+
+00:08:18.630 --> 00:08:20.460 align:middle line:90%
+OK, so let's prove--
+
+00:08:20.460 --> 00:08:21.645 align:middle line:90%
+so it's a two way street.
+
+00:08:21.645 --> 00:08:26.830 align:middle line:90%
+
+
+00:08:26.830 --> 00:08:30.550 align:middle line:84%
+Well, it doesn't make sense
+to say one street is shorter,
+
+00:08:30.550 --> 00:08:33.010 align:middle line:84%
+one side of the
+street is shorter--
+
+00:08:33.010 --> 00:08:35.740 align:middle line:90%
+maybe wider, easier to use.
+
+00:08:35.740 --> 00:08:37.870 align:middle line:84%
+But let's prove that
+if K is compact,
+
+00:08:37.870 --> 00:08:39.289 align:middle line:90%
+then it implies all of this.
+
+00:08:39.289 --> 00:08:56.840 align:middle line:84%
+So suppose K is compact
+and K is closed and bounded
+
+00:08:56.840 --> 00:08:58.430 align:middle line:90%
+by general metric space theory.
+
+00:08:58.430 --> 00:09:05.220 align:middle line:90%
+
+
+00:09:05.220 --> 00:09:13.170 align:middle line:84%
+So look this up in
+the 18100's material,
+
+00:09:13.170 --> 00:09:16.950 align:middle line:90%
+or intro to analysis material.
+
+00:09:16.950 --> 00:09:27.130 align:middle line:84%
+So let's-- this also gives us an
+opportunity to understand this
+
+00:09:27.130 --> 00:09:29.960 align:middle line:84%
+equi-small tail condition as
+well by having to negate it.
+
+00:09:29.960 --> 00:09:32.890 align:middle line:84%
+So we're also going to prove
+that K has equi-small details
+
+00:09:32.890 --> 00:09:34.310 align:middle line:90%
+by contradiction.
+
+00:09:34.310 --> 00:09:49.410 align:middle line:84%
+So suppose K does not have
+equi-small tails with respect
+
+00:09:49.410 --> 00:09:55.360 align:middle line:84%
+to this basis, or this
+orthonormal basis.
+
+00:09:55.360 --> 00:09:58.130 align:middle line:90%
+Then what's that mean?
+
+00:09:58.130 --> 00:10:02.520 align:middle line:84%
+So this is a for all there
+exists in a statement.
+
+00:10:02.520 --> 00:10:09.130 align:middle line:84%
+So then there exists
+some bad epsilon
+
+00:10:09.130 --> 00:10:28.280 align:middle line:84%
+so that for all N, a natural
+number, there exist a uN in K
+
+00:10:28.280 --> 00:10:29.840 align:middle line:90%
+such that--
+
+00:10:29.840 --> 00:10:34.700 align:middle line:84%
+so these N's are
+increasing such that u--
+
+00:10:34.700 --> 00:10:38.090 align:middle line:84%
+so we have the negation
+of the condition that
+
+00:10:38.090 --> 00:10:46.070 align:middle line:84%
+satisfied K bigger
+than N of uN eK squared
+
+00:10:46.070 --> 00:10:48.425 align:middle line:84%
+is bigger than or equal
+to this epsilon 0 squared.
+
+00:10:48.425 --> 00:11:00.690 align:middle line:90%
+
+
+00:11:00.690 --> 00:11:10.200 align:middle line:84%
+So note that this is a
+sequence in this compact set K.
+
+00:11:10.200 --> 00:11:13.560 align:middle line:84%
+And so by the defining
+property of a compact set,
+
+00:11:13.560 --> 00:11:20.350 align:middle line:84%
+it must have a convergent
+subsequence, which
+
+00:11:20.350 --> 00:11:35.580 align:middle line:84%
+implies there exists
+subsequence which you usually
+
+00:11:35.580 --> 00:11:40.320 align:middle line:84%
+denote use of N, capital N
+sub m, some other letter.
+
+00:11:40.320 --> 00:11:45.646 align:middle line:84%
+But I'll just call
+it, to make it
+
+00:11:45.646 --> 00:11:50.090 align:middle line:84%
+a little connection back to what
+we wrote a minute ago, v sub n.
+
+00:11:50.090 --> 00:11:58.670 align:middle line:84%
+So this is a subsequence of u
+sub capital N and v in K such
+
+00:11:58.670 --> 00:12:11.660 align:middle line:84%
+that v sub n converges to v. Now
+then for all N, natural number,
+
+00:12:11.660 --> 00:12:22.070 align:middle line:84%
+we have that sum over K
+bigger than n of vN eK squared
+
+00:12:22.070 --> 00:12:27.230 align:middle line:84%
+is bigger than epsilon
+0 squared because this
+
+00:12:27.230 --> 00:12:30.080 align:middle line:84%
+is a subsequence of the
+original sequence which
+
+00:12:30.080 --> 00:12:31.430 align:middle line:90%
+satisfied this condition.
+
+00:12:31.430 --> 00:12:35.660 align:middle line:90%
+
+
+00:12:35.660 --> 00:12:38.450 align:middle line:84%
+Now this would actually
+be capital N sub n.
+
+00:12:38.450 --> 00:12:41.150 align:middle line:84%
+But if I throw in some
+more, capital N sub n
+
+00:12:41.150 --> 00:12:45.990 align:middle line:84%
+would be an increasing
+sequence of numbers.
+
+00:12:45.990 --> 00:12:47.240 align:middle line:90%
+And it's always bigger than n.
+
+00:12:47.240 --> 00:12:49.790 align:middle line:84%
+So I can replace that
+capital N sub n with this.
+
+00:12:49.790 --> 00:12:51.485 align:middle line:90%
+All right, so this is fine.
+
+00:12:51.485 --> 00:12:54.070 align:middle line:90%
+
+
+00:12:54.070 --> 00:12:59.680 align:middle line:84%
+Then that says the subset
+consisting of the elements v
+
+00:12:59.680 --> 00:13:07.990 align:middle line:84%
+sub n in the natural
+number union v
+
+00:13:07.990 --> 00:13:13.110 align:middle line:84%
+does not have
+equi-small tails, which
+
+00:13:13.110 --> 00:13:17.760 align:middle line:84%
+is a contradiction to the
+theorem we proved last time.
+
+00:13:17.760 --> 00:13:20.450 align:middle line:90%
+
+
+00:13:20.450 --> 00:13:22.670 align:middle line:84%
+This contradicts the previous
+theorem that I stated
+
+00:13:22.670 --> 00:13:25.490 align:middle line:90%
+and we proved last time.
+
+00:13:25.490 --> 00:13:29.420 align:middle line:84%
+So any convergent sequence along
+with its limit is a compact set
+
+00:13:29.420 --> 00:13:32.160 align:middle line:90%
+and has equi-small tails.
+
+00:13:32.160 --> 00:13:36.240 align:middle line:90%
+So that's a contradiction.
+
+00:13:36.240 --> 00:13:41.520 align:middle line:84%
+And what was the assumption that
+brought us to this road forking
+
+00:13:41.520 --> 00:13:46.200 align:middle line:84%
+itself is the assumption
+that K is not compact.
+
+00:13:46.200 --> 00:13:47.550 align:middle line:90%
+So therefore K--
+
+00:13:47.550 --> 00:13:48.720 align:middle line:90%
+I mean, not K's compact.
+
+00:13:48.720 --> 00:13:59.840 align:middle line:84%
+K has equi-small
+tails with respect
+
+00:13:59.840 --> 00:14:03.690 align:middle line:90%
+to this orthonormal basis.
+
+00:14:03.690 --> 00:14:08.570 align:middle line:84%
+So that's one direction
+that if K is compact then
+
+00:14:08.570 --> 00:14:10.828 align:middle line:84%
+it has to have equi-small
+tails with respect
+
+00:14:10.828 --> 00:14:11.870 align:middle line:90%
+to the orthonormal basis.
+
+00:14:11.870 --> 00:14:14.920 align:middle line:90%
+
+
+00:14:14.920 --> 00:14:17.750 align:middle line:84%
+We didn't use anything
+about it being a basis,
+
+00:14:17.750 --> 00:14:21.760 align:middle line:84%
+so this also says that if
+you have a compact set, then
+
+00:14:21.760 --> 00:14:23.890 align:middle line:84%
+with respect to any
+orthonormal subset,
+
+00:14:23.890 --> 00:14:25.450 align:middle line:84%
+it has equi-small
+tails with respect
+
+00:14:25.450 --> 00:14:28.480 align:middle line:90%
+to that orthonormal subset.
+
+00:14:28.480 --> 00:14:35.940 align:middle line:84%
+So now let's use this condition
+that K is closed and bounded
+
+00:14:35.940 --> 00:14:41.850 align:middle line:84%
+and has equi-small tails
+to prove that K is compact.
+
+00:14:41.850 --> 00:14:56.480 align:middle line:84%
+So suppose K is closed,
+bounded, and has
+
+00:14:56.480 --> 00:15:07.860 align:middle line:84%
+equi-small tails with respect
+to this orthonormal basis.
+
+00:15:07.860 --> 00:15:11.760 align:middle line:90%
+
+
+00:15:11.760 --> 00:15:23.320 align:middle line:84%
+Now let uN be a
+sequence in K. So we
+
+00:15:23.320 --> 00:15:27.460 align:middle line:84%
+want to show that it has a
+subsequence which converges
+
+00:15:27.460 --> 00:15:30.280 align:middle line:84%
+to an element in K.
+Now, K is closed,
+
+00:15:30.280 --> 00:15:34.450 align:middle line:84%
+which means that if I take any
+sequence which converges in K,
+
+00:15:34.450 --> 00:15:37.790 align:middle line:84%
+or which any sequence of
+elements in K that converges,
+
+00:15:37.790 --> 00:15:40.390 align:middle line:84%
+the limit has to be in
+K. That's the definition
+
+00:15:40.390 --> 00:15:41.860 align:middle line:90%
+of a set being closed.
+
+00:15:41.860 --> 00:15:45.320 align:middle line:84%
+So I just need to show that
+this sequence, in fact,
+
+00:15:45.320 --> 00:15:47.527 align:middle line:90%
+has a convergence subsequence.
+
+00:15:47.527 --> 00:15:48.610 align:middle line:90%
+That's all I have to show.
+
+00:15:48.610 --> 00:16:10.300 align:middle line:84%
+So since K is closed,
+we just need to show uN
+
+00:16:10.300 --> 00:16:15.840 align:middle line:90%
+as a convergent subsequence.
+
+00:16:15.840 --> 00:16:19.860 align:middle line:90%
+
+
+00:16:19.860 --> 00:16:32.000 align:middle line:84%
+So the idea is to use what
+we know about bounded subsets
+
+00:16:32.000 --> 00:16:33.060 align:middle line:90%
+of complex numbers.
+
+00:16:33.060 --> 00:16:38.970 align:middle line:84%
+So we know about bounded
+subsets of complex numbers.
+
+00:16:38.970 --> 00:16:41.570 align:middle line:90%
+If I have a bounded sequence--
+
+00:16:41.570 --> 00:16:43.880 align:middle line:84%
+I shouldn't say
+subsets, but if I
+
+00:16:43.880 --> 00:16:46.820 align:middle line:84%
+have a bounded sequence
+of complex numbers,
+
+00:16:46.820 --> 00:16:48.290 align:middle line:90%
+it has a convergent subsequence.
+
+00:16:48.290 --> 00:16:50.900 align:middle line:90%
+This is a Bolzano-Weierstrass.
+
+00:16:50.900 --> 00:16:53.420 align:middle line:84%
+Usually it's stated in
+terms of subsets of R.
+
+00:16:53.420 --> 00:16:58.170 align:middle line:84%
+But sequences of complex
+numbers converge if and only
+
+00:16:58.170 --> 00:17:01.260 align:middle line:84%
+if the real and imaginary
+part converge, and are
+
+00:17:01.260 --> 00:17:03.780 align:middle line:84%
+bounded if and only if the
+real and imaginary part, which
+
+00:17:03.780 --> 00:17:06.960 align:middle line:84%
+are sequences of real
+numbers, are bounded.
+
+00:17:06.960 --> 00:17:09.690 align:middle line:84%
+So Bolzano-Weierstrass
+immediately implies
+
+00:17:09.690 --> 00:17:12.180 align:middle line:84%
+a similar statement
+for complex numbers,
+
+00:17:12.180 --> 00:17:15.089 align:middle line:84%
+that every bounded
+sequence of complex numbers
+
+00:17:15.089 --> 00:17:18.470 align:middle line:90%
+has a convergent subsequence.
+
+00:17:18.470 --> 00:17:19.010 align:middle line:90%
+so.
+
+00:17:19.010 --> 00:17:20.240 align:middle line:90%
+How would we use that?
+
+00:17:20.240 --> 00:17:24.577 align:middle line:84%
+What we're going to do is
+we're going to expand uN's.
+
+00:17:24.577 --> 00:17:26.119 align:middle line:84%
+And this is where
+we'll use that this
+
+00:17:26.119 --> 00:17:29.850 align:middle line:84%
+as an orthonormal basis in
+terms of this orthonormal basis.
+
+00:17:29.850 --> 00:17:33.290 align:middle line:84%
+So for each K, we'll
+have a sequence
+
+00:17:33.290 --> 00:17:38.240 align:middle line:84%
+of complex numbers given by
+the entry, the K-th entry,
+
+00:17:38.240 --> 00:17:41.495 align:middle line:84%
+of course the K-th
+entry of this sequence.
+
+00:17:41.495 --> 00:17:44.060 align:middle line:90%
+
+
+00:17:44.060 --> 00:17:47.510 align:middle line:84%
+And that will be a bounded
+sequence of complex numbers
+
+00:17:47.510 --> 00:17:50.600 align:middle line:84%
+because we're
+assuming K is bounded,
+
+00:17:50.600 --> 00:17:53.570 align:middle line:84%
+and therefore this
+sequence is bounded in K.
+
+00:17:53.570 --> 00:17:56.510 align:middle line:84%
+So what we're going to end
+up having is entry by entry,
+
+00:17:56.510 --> 00:17:59.900 align:middle line:84%
+a bounded sequence
+of complex numbers
+
+00:17:59.900 --> 00:18:04.220 align:middle line:84%
+where these complex numbers
+represent the K-th entry
+
+00:18:04.220 --> 00:18:08.940 align:middle line:90%
+of the sequence of vectors.
+
+00:18:08.940 --> 00:18:11.790 align:middle line:84%
+And we're going to then
+take a subsequence that
+
+00:18:11.790 --> 00:18:13.962 align:middle line:90%
+converges for the first entry.
+
+00:18:13.962 --> 00:18:16.170 align:middle line:84%
+We're going to take a
+subsequence of that subsequence
+
+00:18:16.170 --> 00:18:19.410 align:middle line:84%
+to get a subsequence
+which converges
+
+00:18:19.410 --> 00:18:22.710 align:middle line:84%
+for the first and second entry,
+and then so on and so on,
+
+00:18:22.710 --> 00:18:25.230 align:middle line:90%
+a diagonalization argument.
+
+00:18:25.230 --> 00:18:29.740 align:middle line:84%
+And that subsequence
+we'll show converges.
+
+00:18:29.740 --> 00:18:33.270 align:middle line:84%
+Now, it's not that simple
+because if you can do something
+
+00:18:33.270 --> 00:18:37.710 align:middle line:84%
+10 times it doesn't mean you
+can get some uniform control.
+
+00:18:37.710 --> 00:18:42.210 align:middle line:84%
+We just have control for any
+finite number of entries.
+
+00:18:42.210 --> 00:18:46.710 align:middle line:84%
+What saves us in the end is
+this equi-small tail condition,
+
+00:18:46.710 --> 00:18:53.160 align:middle line:84%
+which allows us to
+basically throw away
+
+00:18:53.160 --> 00:18:54.790 align:middle line:90%
+infinitely many entries.
+
+00:18:54.790 --> 00:18:58.210 align:middle line:90%
+
+
+00:18:58.210 --> 00:19:01.120 align:middle line:84%
+That's what this says is that
+you can always choose an N,
+
+00:19:01.120 --> 00:19:05.120 align:middle line:84%
+so that the tail end of
+the entries don't matter.
+
+00:19:05.120 --> 00:19:10.360 align:middle line:84%
+And so that, with having control
+over the first large block
+
+00:19:10.360 --> 00:19:13.660 align:middle line:84%
+of entries, will be
+enough to conclude.
+
+00:19:13.660 --> 00:19:15.130 align:middle line:90%
+So that was the roadmap.
+
+00:19:15.130 --> 00:19:16.910 align:middle line:84%
+If you didn't follow
+the roadmap, fine.
+
+00:19:16.910 --> 00:19:18.202 align:middle line:90%
+Hopefully you follow the proof.
+
+00:19:18.202 --> 00:19:23.290 align:middle line:90%
+
+
+00:19:23.290 --> 00:19:26.200 align:middle line:90%
+But it's a diagonal argument.
+
+00:19:26.200 --> 00:19:33.280 align:middle line:84%
+And those are relatively
+easy to understand,
+
+00:19:33.280 --> 00:19:38.110 align:middle line:84%
+somewhat difficult to write
+down, so I will do my best.
+
+00:19:38.110 --> 00:19:52.000 align:middle line:84%
+So since K is
+bounded, that implies
+
+00:19:52.000 --> 00:20:00.520 align:middle line:84%
+there exists a c non-negative
+such that for all n,
+
+00:20:00.520 --> 00:20:04.930 align:middle line:84%
+norm of u sub n is less
+than or equal to C.
+
+00:20:04.930 --> 00:20:06.790 align:middle line:90%
+The C is independent of n.
+
+00:20:06.790 --> 00:20:11.970 align:middle line:90%
+It just depends on the set K.
+
+00:20:11.970 --> 00:20:18.060 align:middle line:84%
+And therefore that
+sets for all K and n--
+
+00:20:18.060 --> 00:20:27.560 align:middle line:84%
+I should say for all K, for
+all n, if I look at the K-th--
+
+00:20:27.560 --> 00:20:30.650 align:middle line:84%
+if you let me call this
+the Fourier coefficient
+
+00:20:30.650 --> 00:20:35.870 align:middle line:84%
+in this basis in this
+orthonormal basis of ek,
+
+00:20:35.870 --> 00:20:39.320 align:middle line:84%
+if I look at the K-th
+Fourier coefficient,
+
+00:20:39.320 --> 00:20:46.510 align:middle line:84%
+this is bounded by
+Cauchy-Schwartz, u n ek.
+
+00:20:46.510 --> 00:20:48.920 align:middle line:84%
+And these are orthonormal
+so this has unit length.
+
+00:20:48.920 --> 00:20:51.220 align:middle line:90%
+This is bounded by c.
+
+00:20:51.220 --> 00:20:55.300 align:middle line:84%
+So for each fixed K,
+this is a sequence
+
+00:20:55.300 --> 00:20:57.235 align:middle line:84%
+in N of complex numbers
+which is bounded.
+
+00:20:57.235 --> 00:21:04.380 align:middle line:90%
+
+
+00:21:04.380 --> 00:21:09.370 align:middle line:84%
+The sequence consisting of
+the K-th Fourier coefficient
+
+00:21:09.370 --> 00:21:17.830 align:middle line:84%
+of the elements u sub n, so n
+is the thing that's changing,
+
+00:21:17.830 --> 00:21:25.455 align:middle line:84%
+is the bounded sequence
+of complex numbers.
+
+00:21:25.455 --> 00:21:28.520 align:middle line:90%
+
+
+00:21:28.520 --> 00:21:32.960 align:middle line:84%
+So now this is where we're going
+to start choosing subsequences
+
+00:21:32.960 --> 00:21:36.080 align:middle line:84%
+of subsequences so that we get
+convergence along the entries.
+
+00:21:36.080 --> 00:21:39.470 align:middle line:90%
+
+
+00:21:39.470 --> 00:21:53.420 align:middle line:84%
+So since u sub is bounded,
+this implies that there exists
+
+00:21:53.420 --> 00:21:56.390 align:middle line:84%
+by Bolzano-Weierstrass,
+a subsequence,
+
+00:21:56.390 --> 00:21:59.960 align:middle line:84%
+which I'll denote u
+sub n sub 1 of k--
+
+00:21:59.960 --> 00:22:03.170 align:middle line:90%
+
+
+00:22:03.170 --> 00:22:04.190 align:middle line:90%
+let me not use k.
+
+00:22:04.190 --> 00:22:07.520 align:middle line:84%
+Let's use-- what
+do I use here? j--
+
+00:22:07.520 --> 00:22:10.560 align:middle line:90%
+
+
+00:22:10.560 --> 00:22:12.795 align:middle line:90%
+e1, so 1, 1--
+
+00:22:12.795 --> 00:22:20.740 align:middle line:90%
+
+
+00:22:20.740 --> 00:22:34.980 align:middle line:90%
+in n, which converges in c.
+
+00:22:34.980 --> 00:22:48.520 align:middle line:90%
+
+
+00:22:48.520 --> 00:22:54.500 align:middle line:84%
+OK, so I now have a subsequence
+of the original sequence
+
+00:22:54.500 --> 00:23:02.960 align:middle line:84%
+of the un's so that the
+first entry converges here.
+
+00:23:02.960 --> 00:23:05.220 align:middle line:90%
+Or this sequence converges.
+
+00:23:05.220 --> 00:23:06.410 align:middle line:90%
+Now I'm going to take--
+
+00:23:06.410 --> 00:23:21.500 align:middle line:84%
+OK, so since un1 of j e2, this
+is still a bounded sequence
+
+00:23:21.500 --> 00:23:30.850 align:middle line:84%
+by what I showed here,
+bounded sequence.
+
+00:23:30.850 --> 00:23:36.050 align:middle line:84%
+This implies there
+exists a subsequence.
+
+00:23:36.050 --> 00:23:49.270 align:middle line:84%
+Now I'll call this
+subsequence un2 of j e2 j.
+
+00:23:49.270 --> 00:23:52.060 align:middle line:84%
+So in 2 of j, this is
+a sequence of integers.
+
+00:23:52.060 --> 00:23:54.460 align:middle line:84%
+That is a subset of
+these guys that's
+
+00:23:54.460 --> 00:24:06.870 align:middle line:90%
+increasing --of un1 of j.
+
+00:24:06.870 --> 00:24:07.755 align:middle line:90%
+So I should say--
+
+00:24:07.755 --> 00:24:15.730 align:middle line:90%
+
+
+00:24:15.730 --> 00:24:19.290 align:middle line:90%
+which converges.
+
+00:24:19.290 --> 00:24:26.290 align:middle line:84%
+So now note, this
+sequence converges.
+
+00:24:26.290 --> 00:24:37.520 align:middle line:84%
+But the n2 of j, so this is
+a subsequence of integers
+
+00:24:37.520 --> 00:24:39.040 align:middle line:90%
+of the n1 of j's.
+
+00:24:39.040 --> 00:24:44.860 align:middle line:90%
+
+
+00:24:44.860 --> 00:24:47.800 align:middle line:84%
+Since the n2 of
+j's a subsequence
+
+00:24:47.800 --> 00:24:57.640 align:middle line:84%
+of the n1 of j's,
+we get that limit j
+
+00:24:57.640 --> 00:25:02.920 align:middle line:90%
+goes to infinity of un1 of j--
+
+00:25:02.920 --> 00:25:05.215 align:middle line:90%
+or should say n2 of j--
+
+00:25:05.215 --> 00:25:06.550 align:middle line:90%
+e1.
+
+00:25:06.550 --> 00:25:12.630 align:middle line:84%
+So this is a subsequence
+of this sequence.
+
+00:25:12.630 --> 00:25:16.910 align:middle line:84%
+So the n2 of j is just a
+subsequence of n1 of j's.
+
+00:25:16.910 --> 00:25:21.800 align:middle line:84%
+So since this sequence
+in j converges,
+
+00:25:21.800 --> 00:25:23.900 align:middle line:90%
+this subsequence also converges.
+
+00:25:23.900 --> 00:25:26.730 align:middle line:90%
+
+
+00:25:26.730 --> 00:25:35.300 align:middle line:84%
+But now we've chosen the two
+so that we also have not just
+
+00:25:35.300 --> 00:25:37.280 align:middle line:84%
+convergence along
+the first entry,
+
+00:25:37.280 --> 00:25:42.725 align:middle line:84%
+but convergence along
+the second entry.
+
+00:25:42.725 --> 00:25:46.670 align:middle line:90%
+
+
+00:25:46.670 --> 00:25:48.260 align:middle line:90%
+But now you see what--
+
+00:25:48.260 --> 00:25:51.800 align:middle line:84%
+so this is how the
+argument goes, that now I
+
+00:25:51.800 --> 00:25:54.500 align:middle line:84%
+will take a subsequence
+of the n2 of j
+
+00:25:54.500 --> 00:25:58.760 align:middle line:84%
+so that the
+subsequence converges
+
+00:25:58.760 --> 00:26:01.940 align:middle line:90%
+when I pair it with e3.
+
+00:26:01.940 --> 00:26:05.450 align:middle line:84%
+And then I take a subsequence
+of that subsequence
+
+00:26:05.450 --> 00:26:07.560 align:middle line:84%
+so that I get e4 and
+so on, and so on.
+
+00:26:07.560 --> 00:26:12.020 align:middle line:84%
+And all of these subsequences
+are subsequences of--
+
+00:26:12.020 --> 00:26:13.670 align:middle line:84%
+or these subsequences
+of integers
+
+00:26:13.670 --> 00:26:16.080 align:middle line:84%
+are subsequences of the
+previous set of integers,
+
+00:26:16.080 --> 00:26:20.105 align:middle line:84%
+which are again a subsequence
+of the original integers n.
+
+00:26:20.105 --> 00:26:31.370 align:middle line:90%
+
+
+00:26:31.370 --> 00:26:40.385 align:middle line:90%
+So then what do we get?
+
+00:26:40.385 --> 00:26:43.130 align:middle line:90%
+
+
+00:26:43.130 --> 00:26:52.370 align:middle line:84%
+For all l there exists a
+subsequence of integers
+
+00:26:52.370 --> 00:27:00.310 align:middle line:84%
+in l of j of the previous
+set of integers in,
+
+00:27:00.310 --> 00:27:17.280 align:middle line:84%
+let's say, l minus 1 of j, such
+that for all k between 1 and l
+
+00:27:17.280 --> 00:27:30.595 align:middle line:84%
+limit as j goes to infinity
+of u in l of j ek exists.
+
+00:27:30.595 --> 00:27:34.880 align:middle line:90%
+
+
+00:27:34.880 --> 00:27:38.450 align:middle line:90%
+So I hope this is clear.
+
+00:27:38.450 --> 00:27:41.190 align:middle line:84%
+So you just take a subsequence
+of the original sequence
+
+00:27:41.190 --> 00:27:42.800 align:middle line:84%
+so that the first
+entry converges,
+
+00:27:42.800 --> 00:27:45.020 align:middle line:84%
+take a subsequence of that
+so that the second entry
+
+00:27:45.020 --> 00:27:46.920 align:middle line:90%
+converges, and so on and so on.
+
+00:27:46.920 --> 00:27:54.260 align:middle line:84%
+So then you have this
+nested subsequences so
+
+00:27:54.260 --> 00:28:00.115 align:middle line:84%
+that at each fixed l, you have
+convergence of the first l
+
+00:28:00.115 --> 00:28:00.615 align:middle line:90%
+entries.
+
+00:28:00.615 --> 00:28:03.470 align:middle line:90%
+
+
+00:28:03.470 --> 00:28:05.850 align:middle line:84%
+And so what you now
+do is that you pick--
+
+00:28:05.850 --> 00:28:18.600 align:middle line:84%
+so let me write or pick
+vl to be the diagonal
+
+00:28:18.600 --> 00:28:21.090 align:middle line:90%
+along this sequence.
+
+00:28:21.090 --> 00:28:35.460 align:middle line:84%
+So u in l of l, where l
+equals 1, 2, 3, and so on.
+
+00:28:35.460 --> 00:28:38.140 align:middle line:90%
+
+
+00:28:38.140 --> 00:28:46.390 align:middle line:84%
+Then what we get is since the
+l-th subsequence converges--
+
+00:28:46.390 --> 00:28:52.330 align:middle line:90%
+or the k-th entry for one--
+
+00:28:52.330 --> 00:28:56.740 align:middle line:84%
+OK, so let me back up and
+say this one more time.
+
+00:28:56.740 --> 00:29:02.680 align:middle line:84%
+Since four fixed l here I have
+convergence of the first l
+
+00:29:02.680 --> 00:29:05.620 align:middle line:84%
+entries, by picking
+along the diagonal
+
+00:29:05.620 --> 00:29:30.090 align:middle line:84%
+I get a subsequence of
+un such that for all k
+
+00:29:30.090 --> 00:29:38.780 align:middle line:84%
+I have convergence for the k-th
+entry as l goes to infinity,
+
+00:29:38.780 --> 00:29:39.780 align:middle line:90%
+converges.
+
+00:29:39.780 --> 00:29:46.150 align:middle line:90%
+
+
+00:29:46.150 --> 00:29:50.940 align:middle line:84%
+All right, so I can take
+subsequences of subsequences
+
+00:29:50.940 --> 00:29:52.770 align:middle line:84%
+and obtain a
+subsequence in the end
+
+00:29:52.770 --> 00:29:57.600 align:middle line:84%
+so that for this subsequence
+of the original sequence un's,
+
+00:29:57.600 --> 00:30:02.100 align:middle line:84%
+I have convergence of the
+entries entry by entry,
+
+00:30:02.100 --> 00:30:04.830 align:middle line:84%
+or I have convergence of
+the Fourier coefficients
+
+00:30:04.830 --> 00:30:08.410 align:middle line:90%
+as l goes to infinity.
+
+00:30:08.410 --> 00:30:12.510 align:middle line:84%
+And now we're going to use
+this equi-small tails to prove
+
+00:30:12.510 --> 00:30:16.245 align:middle line:84%
+that the sequence
+v sub l converges.
+
+00:30:16.245 --> 00:30:18.120 align:middle line:84%
+We're just actually
+going to show its Cauchy.
+
+00:30:18.120 --> 00:30:20.010 align:middle line:84%
+Since H is a Hilbert
+space, we then
+
+00:30:20.010 --> 00:30:25.420 align:middle line:90%
+conclude that it must converge.
+
+00:30:25.420 --> 00:30:36.020 align:middle line:90%
+So claim vl is Cauchy.
+
+00:30:36.020 --> 00:30:38.300 align:middle line:84%
+And then that will conclude
+the proof because then it
+
+00:30:38.300 --> 00:30:42.350 align:middle line:84%
+must converge in H. And by
+what I said at the beginning,
+
+00:30:42.350 --> 00:30:45.530 align:middle line:84%
+since this is a
+sequence of elements
+
+00:30:45.530 --> 00:30:48.920 align:middle line:84%
+in k, which is a closed set,
+the limit has to be in k.
+
+00:30:48.920 --> 00:30:51.080 align:middle line:84%
+All right, so we just
+need to show it's Cauchy,
+
+00:30:51.080 --> 00:30:52.500 align:middle line:90%
+and then the proof is done.
+
+00:30:52.500 --> 00:30:54.410 align:middle line:90%
+So let epsilon be positive.
+
+00:30:54.410 --> 00:30:59.470 align:middle line:90%
+
+
+00:30:59.470 --> 00:31:13.220 align:middle line:84%
+So since k has
+equi-small tails--
+
+00:31:13.220 --> 00:31:15.880 align:middle line:90%
+let's go over here--
+
+00:31:15.880 --> 00:31:21.930 align:middle line:84%
+there exists natural
+number capital N
+
+00:31:21.930 --> 00:31:31.250 align:middle line:84%
+so that for all l we have
+that the sum of squares k
+
+00:31:31.250 --> 00:31:38.330 align:middle line:84%
+bigger than N of the
+tails, vl, ek squared,
+
+00:31:38.330 --> 00:31:41.270 align:middle line:84%
+is less than epsilon
+squared over 16.
+
+00:31:41.270 --> 00:31:42.260 align:middle line:90%
+Why 16?
+
+00:31:42.260 --> 00:31:48.410 align:middle line:84%
+Because I want everything to
+come out correct in the end.
+
+00:31:48.410 --> 00:32:01.870 align:middle line:84%
+So since the N sequences
+given by the first N
+
+00:32:01.870 --> 00:32:10.690 align:middle line:84%
+entries of the sequence vl, so
+since the N sequences vl, e1 l
+
+00:32:10.690 --> 00:32:15.970 align:middle line:90%
+up to vl, vn, l--
+
+00:32:15.970 --> 00:32:17.060 align:middle line:90%
+so these are only--
+
+00:32:17.060 --> 00:32:22.030 align:middle line:84%
+so this is the bit where I
+said equi-small tails allows
+
+00:32:22.030 --> 00:32:28.840 align:middle line:84%
+us to throw away the tail
+end of these entries,
+
+00:32:28.840 --> 00:32:33.130 align:middle line:84%
+and just control over the first
+finitely many entries gives us
+
+00:32:33.130 --> 00:32:36.320 align:middle line:84%
+the condition or the
+convergence that we want.
+
+00:32:36.320 --> 00:32:40.010 align:middle line:90%
+This is where that's happening.
+
+00:32:40.010 --> 00:32:50.210 align:middle line:84%
+So since these converge, there
+exists a natural number M
+
+00:32:50.210 --> 00:32:58.950 align:middle line:84%
+so that for all l, m
+bigger than capital M,
+
+00:32:58.950 --> 00:33:07.170 align:middle line:84%
+I have that the sum n equals
+1 to capital N of vl, ek
+
+00:33:07.170 --> 00:33:18.760 align:middle line:84%
+minus vm, ek squared is less
+than epsilon squared over 4.
+
+00:33:18.760 --> 00:33:24.370 align:middle line:84%
+So each of these are
+convergent sequences.
+
+00:33:24.370 --> 00:33:27.130 align:middle line:84%
+So each of these are
+Cauchy sequences.
+
+00:33:27.130 --> 00:33:31.270 align:middle line:84%
+So for each one, I can
+find a capital M sub 1
+
+00:33:31.270 --> 00:33:36.480 align:middle line:84%
+so that just one of these
+entries is very small for l
+
+00:33:36.480 --> 00:33:38.820 align:middle line:84%
+and m bigger than
+that capital M sub 1.
+
+00:33:38.820 --> 00:33:42.540 align:middle line:84%
+And then I can do the
+next one so that for--
+
+00:33:42.540 --> 00:33:44.490 align:middle line:90%
+so this should be k.
+
+00:33:44.490 --> 00:33:47.300 align:middle line:84%
+I don't know what that
+looks like, but k.
+
+00:33:47.300 --> 00:33:49.940 align:middle line:84%
+So that for k equals 2, it's
+very small, and then up to k
+
+00:33:49.940 --> 00:33:50.600 align:middle line:90%
+equals n.
+
+00:33:50.600 --> 00:33:58.060 align:middle line:84%
+And then I choose capital M to
+be the maximum over all those M
+
+00:33:58.060 --> 00:34:00.550 align:middle line:90%
+sub N's.
+
+00:34:00.550 --> 00:34:03.430 align:middle line:84%
+So I can always choose this
+because, again, there's
+
+00:34:03.430 --> 00:34:07.879 align:middle line:84%
+only finitely many conditions
+I have to verify, all right.
+
+00:34:07.879 --> 00:34:14.239 align:middle line:90%
+
+
+00:34:14.239 --> 00:34:20.510 align:middle line:84%
+So now I claim this
+capital M works.
+
+00:34:20.510 --> 00:34:24.380 align:middle line:84%
+Then for all lm bigger
+than or equal to M,
+
+00:34:24.380 --> 00:34:30.199 align:middle line:84%
+if we look at the
+norm of vl minus vm,
+
+00:34:30.199 --> 00:34:39.080 align:middle line:90%
+so this is equal to sum--
+
+00:34:39.080 --> 00:34:46.670 align:middle line:84%
+it should say k equals
+1 to n of vl minus vm.
+
+00:34:46.670 --> 00:34:51.469 align:middle line:90%
+
+
+00:34:51.469 --> 00:34:58.430 align:middle line:90%
+So by k equals--
+
+00:34:58.430 --> 00:35:07.700 align:middle line:84%
+k bigger than N, vl
+minus vm, ek 1/2.
+
+00:35:07.700 --> 00:35:13.370 align:middle line:84%
+So here I'm using the fact that
+we have an orthonormal basis.
+
+00:35:13.370 --> 00:35:18.230 align:middle line:84%
+Then in that case, the norm is
+equal to the sum of the squares
+
+00:35:18.230 --> 00:35:21.540 align:middle line:90%
+of the Fourier coefficients.
+
+00:35:21.540 --> 00:35:23.630 align:middle line:84%
+Bessel's inequality would
+say this is less than
+
+00:35:23.630 --> 00:35:24.770 align:middle line:90%
+or equal to this side.
+
+00:35:24.770 --> 00:35:27.380 align:middle line:84%
+It wouldn't give us any control
+we want over the actual norm.
+
+00:35:27.380 --> 00:35:30.080 align:middle line:84%
+But because we're working
+in orthonormal basis,
+
+00:35:30.080 --> 00:35:32.930 align:middle line:84%
+the norm of that is equal
+to the sum of squares,
+
+00:35:32.930 --> 00:35:33.980 align:middle line:90%
+take the square root.
+
+00:35:33.980 --> 00:35:39.760 align:middle line:90%
+
+
+00:35:39.760 --> 00:35:43.290 align:middle line:84%
+And so now the square
+root of A plus B,
+
+00:35:43.290 --> 00:35:46.030 align:middle line:84%
+that's always less than or equal
+to the square root of A plus
+
+00:35:46.030 --> 00:35:53.020 align:middle line:84%
+the square root of B. So
+that's less than A equals 1
+
+00:35:53.020 --> 00:36:15.880 align:middle line:84%
+to N of vl minus vm squared 1/2
+plus k bigger than n vl, ek.
+
+00:36:15.880 --> 00:36:21.280 align:middle line:84%
+So I'm just going to write this
+out a little differently, vm,
+
+00:36:21.280 --> 00:36:26.170 align:middle line:90%
+ek, 1/2.
+
+00:36:26.170 --> 00:36:28.990 align:middle line:84%
+Now this part we
+know is less than--
+
+00:36:28.990 --> 00:36:32.260 align:middle line:84%
+by how we've chosen capital
+M, this finite part is small.
+
+00:36:32.260 --> 00:36:34.840 align:middle line:90%
+It's less than epsilon over 2.
+
+00:36:34.840 --> 00:36:39.870 align:middle line:90%
+
+
+00:36:39.870 --> 00:36:44.070 align:middle line:84%
+So that's less than
+epsilon over 2.
+
+00:36:44.070 --> 00:36:50.250 align:middle line:84%
+Plus now we use the triangle
+inequality now for little l2.
+
+00:36:50.250 --> 00:36:55.530 align:middle line:84%
+I can think of this as
+the sum in little l2--
+
+00:36:55.530 --> 00:36:57.960 align:middle line:84%
+or I can think of
+this as the norm
+
+00:36:57.960 --> 00:37:03.960 align:middle line:84%
+in little l2 of this sequence
+in k minus this sequence in k.
+
+00:37:03.960 --> 00:37:14.470 align:middle line:84%
+So this is less
+than or equal to k
+
+00:37:14.470 --> 00:37:43.430 align:middle line:84%
+bigger than N, vl, ek, 1/2 plus
+sum k bigger than vm, ek 1/2
+
+00:37:43.430 --> 00:37:44.790 align:middle line:90%
+All right, we're almost done.
+
+00:37:44.790 --> 00:37:48.290 align:middle line:84%
+So this is less than,
+the square part is less
+
+00:37:48.290 --> 00:37:50.700 align:middle line:90%
+than epsilon squared over 16.
+
+00:37:50.700 --> 00:37:56.530 align:middle line:84%
+So taking the square root of
+that, I get epsilon over 4
+
+00:37:56.530 --> 00:38:00.910 align:middle line:84%
+by how we chose N. So this is
+based on how we chose N, plus--
+
+00:38:00.910 --> 00:38:02.740 align:middle line:84%
+which came from the
+equi-small tails part.
+
+00:38:02.740 --> 00:38:08.680 align:middle line:84%
+And this part also because of
+N is less than epsilon over 4
+
+00:38:08.680 --> 00:38:09.680 align:middle line:90%
+equals epsilon.
+
+00:38:09.680 --> 00:38:13.450 align:middle line:84%
+So we've now shown the claim
+that the subsequence v sub l
+
+00:38:13.450 --> 00:38:16.735 align:middle line:84%
+is Cauchy, and therefore it
+converges since H is complete.
+
+00:38:16.735 --> 00:38:25.080 align:middle line:90%
+
+
+00:38:25.080 --> 00:38:34.600 align:middle line:84%
+Now, so for example, one
+can readily verify now
+
+00:38:34.600 --> 00:38:35.725 align:middle line:90%
+that the following subset.
+
+00:38:35.725 --> 00:38:38.650 align:middle line:90%
+
+
+00:38:38.650 --> 00:38:45.790 align:middle line:84%
+Let k be the i set of
+all sequences n little l2
+
+00:38:45.790 --> 00:38:52.120 align:middle line:84%
+with the property that ak
+is less than or equal to 2
+
+00:38:52.120 --> 00:38:53.170 align:middle line:90%
+to the minus k.
+
+00:38:53.170 --> 00:38:55.495 align:middle line:84%
+So this is not a
+subspace, it's a subset--
+
+00:38:55.495 --> 00:39:01.980 align:middle line:90%
+
+
+00:39:01.980 --> 00:39:03.960 align:middle line:90%
+is compact.
+
+00:39:03.960 --> 00:39:06.540 align:middle line:84%
+This subset is known
+as the Hilbert cube.
+
+00:39:06.540 --> 00:39:10.970 align:middle line:90%
+
+
+00:39:10.970 --> 00:39:15.570 align:middle line:84%
+All right, now maybe
+it's a bit unwieldy
+
+00:39:15.570 --> 00:39:20.430 align:middle line:84%
+that our condition
+for being compact
+
+00:39:20.430 --> 00:39:25.380 align:middle line:84%
+is phrased in terms of
+an orthonormal basis.
+
+00:39:25.380 --> 00:39:28.350 align:middle line:84%
+Maybe that's not
+so simple to verify
+
+00:39:28.350 --> 00:39:36.190 align:middle line:84%
+or definitely not
+necessarily, what's
+
+00:39:36.190 --> 00:39:38.470 align:middle line:84%
+the word I'm looking
+for, canonical--
+
+00:39:38.470 --> 00:39:40.830 align:middle line:84%
+I guess that's the
+word I'm looking for--
+
+00:39:40.830 --> 00:39:42.580 align:middle line:84%
+in the sense that we
+have to make a choice
+
+00:39:42.580 --> 00:39:43.750 align:middle line:90%
+to verify compactness.
+
+00:39:43.750 --> 00:39:45.910 align:middle line:84%
+But a different way
+of characterizing
+
+00:39:45.910 --> 00:39:48.500 align:middle line:84%
+compact subsets of a Hilbert
+space is the following.
+
+00:39:48.500 --> 00:39:50.960 align:middle line:84%
+Now, I'm not going to
+give the proof of this.
+
+00:39:50.960 --> 00:39:54.190 align:middle line:84%
+You can look it up
+in Melrose's notes.
+
+00:39:54.190 --> 00:39:56.380 align:middle line:84%
+Maybe I'll say a word
+about why you should
+
+00:39:56.380 --> 00:39:58.960 align:middle line:90%
+believe or think it's true.
+
+00:39:58.960 --> 00:40:02.570 align:middle line:84%
+But, again, it involves
+a diagonal argument,
+
+00:40:02.570 --> 00:40:05.590 align:middle line:84%
+which that was tough
+enough to do here,
+
+00:40:05.590 --> 00:40:08.122 align:middle line:84%
+or at least painful
+enough to write out.
+
+00:40:08.122 --> 00:40:09.580 align:middle line:84%
+And so I don't want
+to do it again.
+
+00:40:09.580 --> 00:40:11.770 align:middle line:90%
+So we have the following that--
+
+00:40:11.770 --> 00:40:18.400 align:middle line:84%
+and this theorem also holds in
+a nonseparable Hilbert space,
+
+00:40:18.400 --> 00:40:22.450 align:middle line:84%
+basically by a trick of reducing
+it to a separable Hilbert
+
+00:40:22.450 --> 00:40:24.070 align:middle line:90%
+space, but that's OK.
+
+00:40:24.070 --> 00:40:33.020 align:middle line:84%
+A subset K of a Hilbert space
+H is compact if and only
+
+00:40:33.020 --> 00:40:39.060 align:middle line:90%
+if K is closed, bounded.
+
+00:40:39.060 --> 00:40:41.610 align:middle line:90%
+
+
+00:40:41.610 --> 00:40:43.020 align:middle line:84%
+And the following
+condition holds
+
+00:40:43.020 --> 00:40:46.860 align:middle line:84%
+what you can think of
+as K can be approximated
+
+00:40:46.860 --> 00:40:50.350 align:middle line:90%
+by finite dimensional subspaces.
+
+00:40:50.350 --> 00:40:53.530 align:middle line:90%
+
+
+00:40:53.530 --> 00:40:58.670 align:middle line:84%
+And for all epsilon
+positive, there
+
+00:40:58.670 --> 00:41:16.170 align:middle line:84%
+exists a finite dimensional
+subspace W in K such
+
+00:41:16.170 --> 00:41:24.540 align:middle line:84%
+that for all u in K, if I
+look at the distance from u
+
+00:41:24.540 --> 00:41:27.953 align:middle line:84%
+to this finite dimensional
+subspace-- which
+
+00:41:27.953 --> 00:41:29.370 align:middle line:84%
+I think I said at
+one point, maybe
+
+00:41:29.370 --> 00:41:31.770 align:middle line:84%
+I didn't, but a finite
+dimensional subspace is always
+
+00:41:31.770 --> 00:41:39.768 align:middle line:90%
+a closed subspace in H.
+
+00:41:39.768 --> 00:41:42.000 align:middle line:84%
+A finite dimensional
+subspace is always closed.
+
+00:41:42.000 --> 00:41:46.970 align:middle line:84%
+But if I look at the
+distance from this point
+
+00:41:46.970 --> 00:41:52.020 align:middle line:84%
+to the subspace, this
+finite dimensional subspace,
+
+00:41:52.020 --> 00:41:55.150 align:middle line:90%
+this is less than epsilon.
+
+00:41:55.150 --> 00:41:59.040 align:middle line:84%
+So a subset in the Hilbert
+space is compact if and only
+
+00:41:59.040 --> 00:42:00.880 align:middle line:84%
+if it's closed,
+bounded, and if you like
+
+00:42:00.880 --> 00:42:04.500 align:middle line:84%
+can be approximated
+by compact subsets
+
+00:42:04.500 --> 00:42:11.130 align:middle line:84%
+of finite dimensional subspaces,
+another way to think about it.
+
+00:42:11.130 --> 00:42:15.240 align:middle line:84%
+Now, why is this believable
+in the first place?
+
+00:42:15.240 --> 00:42:17.720 align:middle line:90%
+Well, what this-- where is it?
+
+00:42:17.720 --> 00:42:20.950 align:middle line:90%
+
+
+00:42:20.950 --> 00:42:29.070 align:middle line:84%
+What the equi-small tail
+condition says is basically
+
+00:42:29.070 --> 00:42:36.270 align:middle line:84%
+that all elements in K
+can be approximated by--
+
+00:42:36.270 --> 00:42:39.000 align:middle line:84%
+if you let epsilon
+be positive-- can
+
+00:42:39.000 --> 00:42:42.630 align:middle line:84%
+be approximated by the
+subspace consisting
+
+00:42:42.630 --> 00:42:49.260 align:middle line:84%
+of the span of the first
+one up to N basis vectors
+
+00:42:49.260 --> 00:42:51.360 align:middle line:90%
+or orthonormal basis vectors.
+
+00:42:51.360 --> 00:42:52.620 align:middle line:90%
+That's what this is.
+
+00:42:52.620 --> 00:42:54.760 align:middle line:84%
+For all epsilon the
+tails are small.
+
+00:42:54.760 --> 00:42:58.770 align:middle line:84%
+Another way of saying that
+is that for all epsilon,
+
+00:42:58.770 --> 00:43:00.870 align:middle line:84%
+you can approximate
+any element in the set
+
+00:43:00.870 --> 00:43:07.510 align:middle line:84%
+K in the span of the
+first N basis vectors.
+
+00:43:07.510 --> 00:43:18.980 align:middle line:84%
+So K has to be close to
+finite dimensional subspace.
+
+00:43:18.980 --> 00:43:22.020 align:middle line:84%
+But one can go the
+opposite direction as well,
+
+00:43:22.020 --> 00:43:28.010 align:middle line:84%
+showing that finite
+dimensional subspace--
+
+00:43:28.010 --> 00:43:30.350 align:middle line:84%
+being able to be
+approximated by those guys
+
+00:43:30.350 --> 00:43:31.640 align:middle line:90%
+implies that K is compact.
+
+00:43:31.640 --> 00:43:34.010 align:middle line:84%
+And it's another diagonal
+argument that I just
+
+00:43:34.010 --> 00:43:36.080 align:middle line:84%
+don't want to write out
+and rather just start
+
+00:43:36.080 --> 00:43:39.802 align:middle line:84%
+using these conditions
+instead to start saying things
+
+00:43:39.802 --> 00:43:41.510 align:middle line:84%
+about when we can
+solve certain equations
+
+00:43:41.510 --> 00:43:43.520 align:middle line:84%
+and certain
+interesting operators
+
+00:43:43.520 --> 00:43:47.450 align:middle line:90%
+that arise quite naturally.
+
+00:43:47.450 --> 00:43:50.400 align:middle line:90%
+
+
+00:43:50.400 --> 00:43:57.860 align:middle line:84%
+So let's start talking about
+certain classes of operators.
+
+00:43:57.860 --> 00:43:59.540 align:middle line:84%
+And we should start
+with the simplest,
+
+00:43:59.540 --> 00:44:05.110 align:middle line:90%
+which are finite rank operator.
+
+00:44:05.110 --> 00:44:12.450 align:middle line:84%
+So the only linear operators
+you came into this class knowing
+
+00:44:12.450 --> 00:44:13.950 align:middle line:90%
+probably--
+
+00:44:13.950 --> 00:44:17.760 align:middle line:84%
+if you didn't and you were more
+sophisticated, that's good--
+
+00:44:17.760 --> 00:44:22.830 align:middle line:90%
+but were matrices.
+
+00:44:22.830 --> 00:44:26.340 align:middle line:84%
+Now a matrix is just a
+linear transformation
+
+00:44:26.340 --> 00:44:29.510 align:middle line:84%
+defined in terms of an
+orthonormal-- or not
+
+00:44:29.510 --> 00:44:35.597 align:middle line:84%
+orthonormal basis, but a basis
+in both the domain and target.
+
+00:44:35.597 --> 00:44:37.180 align:middle line:84%
+We picked the target
+to be the domain.
+
+00:44:37.180 --> 00:44:38.680 align:middle line:84%
+We just fix a basis,
+and then we can
+
+00:44:38.680 --> 00:44:43.950 align:middle line:84%
+express a linear transformation
+as an array of numbers.
+
+00:44:43.950 --> 00:44:48.390 align:middle line:84%
+Finite rank operators
+are the generalization
+
+00:44:48.390 --> 00:44:54.780 align:middle line:84%
+of what you think of matrices
+now for to Hilbert spaces.
+
+00:44:54.780 --> 00:44:59.730 align:middle line:84%
+And we'll see that
+in just a minute.
+
+00:44:59.730 --> 00:45:07.490 align:middle line:84%
+And what follows H
+is a Hilbert space.
+
+00:45:07.490 --> 00:45:10.270 align:middle line:90%
+
+
+00:45:10.270 --> 00:45:17.790 align:middle line:84%
+And instead of writing the space
+of bounded linear operators,
+
+00:45:17.790 --> 00:45:23.460 align:middle line:84%
+B H, H, I'm just going to
+concatenate this by dropping
+
+00:45:23.460 --> 00:45:24.390 align:middle line:90%
+one of those H's.
+
+00:45:24.390 --> 00:45:27.240 align:middle line:84%
+So the space of bounded linear
+operators from H to itself
+
+00:45:27.240 --> 00:45:36.200 align:middle line:90%
+will be denoted by B of H.
+
+00:45:36.200 --> 00:45:40.790 align:middle line:84%
+So finite rank
+operators, these are,
+
+00:45:40.790 --> 00:45:43.205 align:middle line:84%
+like I said, these will
+be the analog of matrices.
+
+00:45:43.205 --> 00:45:45.920 align:middle line:90%
+
+
+00:45:45.920 --> 00:45:54.470 align:middle line:84%
+But let me give a
+invariant definition first.
+
+00:45:54.470 --> 00:46:06.030 align:middle line:84%
+So a bounded linear operator
+is a finite rank operator
+
+00:46:06.030 --> 00:46:27.260 align:middle line:84%
+if the range of T which
+is a subspace of H
+
+00:46:27.260 --> 00:46:32.570 align:middle line:90%
+is finite dimensional, OK.
+
+00:46:32.570 --> 00:46:37.680 align:middle line:90%
+
+
+00:46:37.680 --> 00:46:42.970 align:middle line:84%
+So, for example, let me
+give you the simple--
+
+00:46:42.970 --> 00:46:48.630 align:middle line:84%
+well of course the zero
+operator is a simple one.
+
+00:46:48.630 --> 00:46:52.350 align:middle line:84%
+If H is a finite dimensional
+Hilbert space, [INAUDIBLE],,
+
+00:46:52.350 --> 00:46:55.290 align:middle line:84%
+then every bounded
+linear operator
+
+00:46:55.290 --> 00:46:57.930 align:middle line:84%
+is a finite rank operator
+because the range is always
+
+00:46:57.930 --> 00:47:02.520 align:middle line:84%
+contained in Cn, which
+is finite dimensional.
+
+00:47:02.520 --> 00:47:06.720 align:middle line:84%
+For example on little
+l2, if I define
+
+00:47:06.720 --> 00:47:20.100 align:middle line:84%
+Ta to be now the sequence
+given by a1 over 1,
+
+00:47:20.100 --> 00:47:30.990 align:middle line:84%
+a2 over 2, up to an over n for
+some n and then 0 afterwards,
+
+00:47:30.990 --> 00:47:39.530 align:middle line:84%
+and this is for a equals
+sequence in little l2,
+
+00:47:39.530 --> 00:47:50.520 align:middle line:84%
+then T is a finite rank
+operator because the range
+
+00:47:50.520 --> 00:47:56.280 align:middle line:84%
+of this operator-- so
+here N is a fixed number
+
+00:47:56.280 --> 00:47:57.480 align:middle line:90%
+acting on sequences.
+
+00:47:57.480 --> 00:47:59.370 align:middle line:84%
+And little l2 just
+spits out the first--
+
+00:47:59.370 --> 00:48:02.760 align:middle line:90%
+
+
+00:48:02.760 --> 00:48:04.890 align:middle line:84%
+let's make this
+even more explicit.
+
+00:48:04.890 --> 00:48:07.680 align:middle line:90%
+Let's say that's 5.
+
+00:48:07.680 --> 00:48:09.720 align:middle line:84%
+This is a finite rank
+operator because it's
+
+00:48:09.720 --> 00:48:11.580 align:middle line:84%
+contained in the
+subspace consisting
+
+00:48:11.580 --> 00:48:17.740 align:middle line:84%
+of those sequences which
+are 0 after the fifth entry.
+
+00:48:17.740 --> 00:48:18.990 align:middle line:90%
+And that's finite dimensional.
+
+00:48:18.990 --> 00:48:22.860 align:middle line:84%
+A basis is given by the sequence
+consisting of 0's with a 1
+
+00:48:22.860 --> 00:48:26.980 align:middle line:84%
+here, 0's with a 1 here, 0's
+with a 1 here, and so on.
+
+00:48:26.980 --> 00:48:28.650 align:middle line:84%
+So this is a finite
+rank operator.
+
+00:48:28.650 --> 00:48:32.300 align:middle line:90%
+
+
+00:48:32.300 --> 00:48:37.550 align:middle line:84%
+And so let me just put over here
+that as far as notation goes,
+
+00:48:37.550 --> 00:48:45.865 align:middle line:84%
+we write T is in RH, R
+for rank, finite rank.
+
+00:48:45.865 --> 00:48:49.860 align:middle line:90%
+
+
+00:48:49.860 --> 00:48:52.500 align:middle line:84%
+All right, so R of
+H, this is the set
+
+00:48:52.500 --> 00:48:53.910 align:middle line:90%
+of all finite rank operators.
+
+00:48:53.910 --> 00:48:55.005 align:middle line:90%
+Now, it's not just a set.
+
+00:48:55.005 --> 00:49:07.190 align:middle line:90%
+
+
+00:49:07.190 --> 00:49:14.270 align:middle line:84%
+It's easy to see that this is
+a subspace of the Banach space
+
+00:49:14.270 --> 00:49:20.190 align:middle line:84%
+consisting of all bounded linear
+operators from H to itself.
+
+00:49:20.190 --> 00:49:21.180 align:middle line:90%
+Why is that?
+
+00:49:21.180 --> 00:49:25.400 align:middle line:84%
+Well, so if I take
+an operator that
+
+00:49:25.400 --> 00:49:29.000 align:middle line:84%
+has finite dimensional range
+and multiply it by a scalar,
+
+00:49:29.000 --> 00:49:32.930 align:middle line:84%
+then the range of the scalar
+multiple of that operator
+
+00:49:32.930 --> 00:49:36.110 align:middle line:84%
+is equal to the range
+of the original operator
+
+00:49:36.110 --> 00:49:38.150 align:middle line:90%
+unless it's the scalar 0.
+
+00:49:38.150 --> 00:49:40.340 align:middle line:84%
+So that will be
+finite dimensional.
+
+00:49:40.340 --> 00:49:43.860 align:middle line:84%
+On the other hand, if I take
+two finite rank operators
+
+00:49:43.860 --> 00:49:48.050 align:middle line:84%
+and I consider their
+sum, the range of the sum
+
+00:49:48.050 --> 00:49:55.520 align:middle line:84%
+is going to be contained in
+the direct sum of the ranges.
+
+00:49:55.520 --> 00:50:01.520 align:middle line:84%
+And the direct sum of two finite
+dimensional spaces, subspaces,
+
+00:50:01.520 --> 00:50:04.200 align:middle line:90%
+is again finite dimensional.
+
+00:50:04.200 --> 00:50:08.120 align:middle line:84%
+So if one has dimension 5 and
+the other has dimension 6,
+
+00:50:08.120 --> 00:50:12.920 align:middle line:84%
+then the direct sum of these
+two will be of dimension 11.
+
+00:50:12.920 --> 00:50:16.720 align:middle line:84%
+So that is me talking
+you through the proof
+
+00:50:16.720 --> 00:50:18.020 align:middle line:90%
+that this is a subspace.
+
+00:50:18.020 --> 00:50:23.150 align:middle line:84%
+So take a minute
+to write it down.
+
+00:50:23.150 --> 00:50:35.920 align:middle line:84%
+But now let me prove that these
+finite rank operators really
+
+00:50:35.920 --> 00:50:39.625 align:middle line:90%
+are essentially matrices.
+
+00:50:39.625 --> 00:50:50.740 align:middle line:90%
+
+
+00:50:50.740 --> 00:50:53.590 align:middle line:84%
+I have the following theorem
+characterizing finite rank
+
+00:50:53.590 --> 00:50:54.700 align:middle line:90%
+operators.
+
+00:50:54.700 --> 00:50:59.890 align:middle line:84%
+So T is a finite rank
+operator if and only
+
+00:50:59.890 --> 00:51:13.502 align:middle line:84%
+if there exists an orthonormal,
+finite orthonormal subset ek,
+
+00:51:13.502 --> 00:51:25.590 align:middle line:84%
+k equals 1 to some integer
+L. And complex numbers
+
+00:51:25.590 --> 00:51:30.920 align:middle line:90%
+cij ij equals 1 to l.
+
+00:51:30.920 --> 00:51:39.420 align:middle line:84%
+So this is subsequence-- or
+a subset of complex numbers
+
+00:51:39.420 --> 00:51:44.490 align:middle line:84%
+such that if I want to
+compute what T applied to u
+
+00:51:44.490 --> 00:51:56.010 align:middle line:84%
+is, it's just going to be sum
+i equals j, ij goes from 1 to l
+
+00:51:56.010 --> 00:52:07.290 align:middle line:84%
+of these numbers Cij times
+the j entry of u times ei.
+
+00:52:07.290 --> 00:52:12.270 align:middle line:84%
+So, in other words, T
+corresponds to a matrix where
+
+00:52:12.270 --> 00:52:15.420 align:middle line:84%
+the coefficients are
+these c's, basically,
+
+00:52:15.420 --> 00:52:19.935 align:middle line:84%
+acting on this finite
+dimensional subspace of ek's.
+
+00:52:19.935 --> 00:52:28.390 align:middle line:90%
+
+
+00:52:28.390 --> 00:52:31.340 align:middle line:90%
+So let's give the proof of this.
+
+00:52:31.340 --> 00:52:34.580 align:middle line:90%
+One direction is immediate.
+
+00:52:34.580 --> 00:52:38.390 align:middle line:84%
+If T has such a
+representation, then
+
+00:52:38.390 --> 00:52:41.420 align:middle line:84%
+it has finite rank
+because then the image is
+
+00:52:41.420 --> 00:52:45.470 align:middle line:84%
+contained in the span of the
+ei's for i going from 1 to l.
+
+00:52:45.470 --> 00:52:47.820 align:middle line:84%
+And that's a finite
+dimensional subspace.
+
+00:52:47.820 --> 00:52:54.460 align:middle line:84%
+So this is clear that this
+condition implies that T
+
+00:52:54.460 --> 00:52:55.850 align:middle line:90%
+is a finite rank operator.
+
+00:52:55.850 --> 00:53:02.680 align:middle line:84%
+So let's go the
+opposite direction.
+
+00:53:02.680 --> 00:53:16.880 align:middle line:84%
+So since the range of T
+is finite dimensional, we
+
+00:53:16.880 --> 00:53:30.800 align:middle line:84%
+can find an orthonormal
+basis, call it ek,
+
+00:53:30.800 --> 00:53:42.540 align:middle line:84%
+k equals 1 to N such that T
+applied to u is equal to--
+
+00:53:42.540 --> 00:53:46.440 align:middle line:84%
+so it's an element
+in the span of--
+
+00:53:46.440 --> 00:53:49.500 align:middle line:90%
+so this spans the range.
+
+00:53:49.500 --> 00:53:56.060 align:middle line:84%
+So I can write this as some
+numbers times the ek's.
+
+00:53:56.060 --> 00:53:58.575 align:middle line:90%
+
+
+00:53:58.575 --> 00:53:59.700 align:middle line:90%
+And what are these numbers?
+
+00:53:59.700 --> 00:54:01.742 align:middle line:84%
+Well, these numbers, since
+these are orthonormal,
+
+00:54:01.742 --> 00:54:06.100 align:middle line:84%
+have to be T applied
+to u in a product ek.
+
+00:54:06.100 --> 00:54:09.460 align:middle line:90%
+
+
+00:54:09.460 --> 00:54:11.095 align:middle line:90%
+All right, so Tu--
+
+00:54:11.095 --> 00:54:13.660 align:middle line:90%
+
+
+00:54:13.660 --> 00:54:17.590 align:middle line:84%
+so the ranges spanned by
+these orthonormal vectors,
+
+00:54:17.590 --> 00:54:21.040 align:middle line:84%
+and anything in the span
+of this orthonormal vectors
+
+00:54:21.040 --> 00:54:25.205 align:middle line:84%
+has to be written as that
+thing in a product ek times ek.
+
+00:54:25.205 --> 00:54:27.940 align:middle line:90%
+
+
+00:54:27.940 --> 00:54:30.250 align:middle line:84%
+But let me now
+make an observation
+
+00:54:30.250 --> 00:54:39.710 align:middle line:84%
+that this thing
+right here we can
+
+00:54:39.710 --> 00:54:53.880 align:middle line:84%
+write as using the adjoint as
+u in a product T star ek, ek.
+
+00:54:53.880 --> 00:54:56.490 align:middle line:90%
+
+
+00:54:56.490 --> 00:55:00.990 align:middle line:84%
+The adjoint operator,
+so T star which
+
+00:55:00.990 --> 00:55:03.870 align:middle line:84%
+goes from H to H, remember
+satisfies this property
+
+00:55:03.870 --> 00:55:07.200 align:middle line:90%
+that given any two vectors a--
+
+00:55:07.200 --> 00:55:10.320 align:middle line:84%
+or u and v, T applied
+to u in a product v
+
+00:55:10.320 --> 00:55:13.440 align:middle line:84%
+is equal to u in a
+product T star v. That's
+
+00:55:13.440 --> 00:55:17.580 align:middle line:84%
+the defining property
+of the adjoint
+
+00:55:17.580 --> 00:55:19.090 align:middle line:90%
+So I can write it like this.
+
+00:55:19.090 --> 00:55:24.680 align:middle line:84%
+And-- which is k equals
+1 to N of u in a product,
+
+00:55:24.680 --> 00:55:31.040 align:middle line:84%
+call this vk, ek bar,
+where here vk is simply
+
+00:55:31.040 --> 00:55:46.240 align:middle line:84%
+defined to be T star
+ek now, let e1 up
+
+00:55:46.240 --> 00:56:07.470 align:middle line:84%
+to el be the orthonormal
+subset of H obtained
+
+00:56:07.470 --> 00:56:20.530 align:middle line:84%
+by applying the Gram-Schmidt
+process to vectors E1, e2
+
+00:56:20.530 --> 00:56:26.290 align:middle line:90%
+up to eL vL, up to vL.
+
+00:56:26.290 --> 00:56:31.210 align:middle line:84%
+So applying it to this subset,
+I keep the e1 up to eL's.
+
+00:56:31.210 --> 00:56:32.740 align:middle line:84%
+And then I might
+pick up some more
+
+00:56:32.740 --> 00:56:35.380 align:middle line:84%
+from some more
+orthonormal vectors
+
+00:56:35.380 --> 00:56:39.160 align:middle line:84%
+that are the normal
+to these guys when
+
+00:56:39.160 --> 00:56:40.480 align:middle line:90%
+I hit the v1's up to vl.
+
+00:56:40.480 --> 00:56:44.020 align:middle line:90%
+
+
+00:56:44.020 --> 00:56:47.120 align:middle line:84%
+I should have gone
+to N, I'm sorry.
+
+00:56:47.120 --> 00:56:55.110 align:middle line:90%
+So not L here, but N.
+
+00:56:55.110 --> 00:56:58.440 align:middle line:84%
+So I obtained an
+orthonormal subset
+
+00:56:58.440 --> 00:57:02.740 align:middle line:84%
+that spans the same
+span of these guys.
+
+00:57:02.740 --> 00:57:05.910 align:middle line:90%
+And so what does that mean?
+
+00:57:05.910 --> 00:57:09.940 align:middle line:90%
+
+
+00:57:09.940 --> 00:57:20.590 align:middle line:84%
+Then there exists
+numbers akj, bkj--
+
+00:57:20.590 --> 00:57:21.430 align:middle line:90%
+let's call it i--
+
+00:57:21.430 --> 00:57:25.460 align:middle line:90%
+
+
+00:57:25.460 --> 00:57:33.180 align:middle line:84%
+such that ek bar is in the span
+of these orthonormal vectors.
+
+00:57:33.180 --> 00:57:44.500 align:middle line:84%
+So I can write it as
+aki, ei k equals 1 to l--
+
+00:57:44.500 --> 00:57:46.990 align:middle line:84%
+no, no, no, sums
+going the wrong way--
+
+00:57:46.990 --> 00:57:58.550 align:middle line:84%
+i equals 1 to l, and also
+the same for the v's, some vk
+
+00:57:58.550 --> 00:58:09.500 align:middle line:90%
+equals j equals 1 to l bkj kj.
+
+00:58:09.500 --> 00:58:14.810 align:middle line:84%
+So these are obtained by the
+Gram-Schmidt process applied
+
+00:58:14.810 --> 00:58:16.280 align:middle line:90%
+to this collection of vectors.
+
+00:58:16.280 --> 00:58:18.890 align:middle line:84%
+And therefore I can write
+each one of these vectors
+
+00:58:18.890 --> 00:58:22.020 align:middle line:84%
+as a linear combination of
+these orthonormal vectors.
+
+00:58:22.020 --> 00:58:25.580 align:middle line:90%
+So that's all I'm saying here.
+
+00:58:25.580 --> 00:58:32.110 align:middle line:84%
+Now we just plug this
+in to this computation.
+
+00:58:32.110 --> 00:58:36.040 align:middle line:84%
+And we have Tu which we
+computed was equal to sum from k
+
+00:58:36.040 --> 00:58:42.280 align:middle line:84%
+equals 1 to N of u in
+a product vk, ek bar.
+
+00:58:42.280 --> 00:58:43.540 align:middle line:90%
+This is equal to--
+
+00:58:43.540 --> 00:58:47.360 align:middle line:84%
+now if I stick in
+these sums here,
+
+00:58:47.360 --> 00:58:53.080 align:middle line:84%
+I get sum ij equals
+1 to L of some k
+
+00:58:53.080 --> 00:59:06.290 align:middle line:84%
+equals 1 to N of aki,
+bkj complex conjugate.
+
+00:59:06.290 --> 00:59:12.040 align:middle line:90%
+
+
+00:59:12.040 --> 00:59:14.175 align:middle line:90%
+Now, u in a product ej--
+
+00:59:14.175 --> 00:59:18.610 align:middle line:90%
+
+
+00:59:18.610 --> 00:59:21.970 align:middle line:84%
+this is coming from when
+I stick in the vk's--
+
+00:59:21.970 --> 00:59:23.260 align:middle line:90%
+ei.
+
+00:59:23.260 --> 00:59:24.760 align:middle line:84%
+And this is coming
+from when I stick
+
+00:59:24.760 --> 00:59:29.200 align:middle line:90%
+in what I have for the ek bar.
+
+00:59:29.200 --> 00:59:33.430 align:middle line:84%
+And this number right
+here is my number cij.
+
+00:59:33.430 --> 00:59:38.370 align:middle line:90%
+
+
+00:59:38.370 --> 00:59:39.240 align:middle line:90%
+And that's the end.
+
+00:59:39.240 --> 00:59:44.370 align:middle line:84%
+So finite rank operators
+are really just matrices.
+
+00:59:44.370 --> 00:59:46.350 align:middle line:84%
+You can just compute
+these numbers
+
+00:59:46.350 --> 00:59:50.730 align:middle line:84%
+and they completely characterize
+the linear operator.
+
+00:59:50.730 --> 00:59:55.760 align:middle line:90%
+
+
+00:59:55.760 --> 00:59:59.350 align:middle line:84%
+So in particular, the
+kernel, the null space of T
+
+00:59:59.350 --> 01:00:06.370 align:middle line:84%
+is the subspace that's
+orthogonal to the e1 up to eL,
+
+01:00:06.370 --> 01:00:07.690 align:middle line:90%
+or at least includes that.
+
+01:00:07.690 --> 01:00:20.660 align:middle line:90%
+
+
+01:00:20.660 --> 01:00:31.670 align:middle line:84%
+Now from this we can conclude a
+nice property about finite rank
+
+01:00:31.670 --> 01:00:36.260 align:middle line:84%
+operators, namely the first
+is that if T is a finite rank
+
+01:00:36.260 --> 01:00:40.160 align:middle line:84%
+operator, then its adjoint is
+also a finite rank operator.
+
+01:00:40.160 --> 01:00:47.200 align:middle line:90%
+
+
+01:00:47.200 --> 01:00:53.790 align:middle line:84%
+And if T is a
+finite rank operator
+
+01:00:53.790 --> 01:01:02.280 align:middle line:84%
+and A and B are just bounded
+linear operators on H, then
+
+01:01:02.280 --> 01:01:09.520 align:middle line:84%
+A times T times B, this is
+also a finite rank operator.
+
+01:01:09.520 --> 01:01:12.640 align:middle line:84%
+In fancy or in
+short form you would
+
+01:01:12.640 --> 01:01:20.590 align:middle line:84%
+say that this is a star closed
+two-sided ideal in the space
+
+01:01:20.590 --> 01:01:26.110 align:middle line:84%
+of bounded linear operators, or
+its closed undertaking adjoints
+
+01:01:26.110 --> 01:01:29.590 align:middle line:84%
+in closed undertaking the
+two-sided multiplication
+
+01:01:29.590 --> 01:01:33.600 align:middle line:90%
+by bounded linear operators.
+
+01:01:33.600 --> 01:01:36.910 align:middle line:90%
+So 2 I'll leave as an exercise.
+
+01:01:36.910 --> 01:01:42.790 align:middle line:90%
+
+
+01:01:42.790 --> 01:01:45.310 align:middle line:90%
+What's the point?
+
+01:01:45.310 --> 01:01:49.270 align:middle line:84%
+The T has finite
+dimensional range.
+
+01:01:49.270 --> 01:01:52.270 align:middle line:84%
+A then acts on that
+finite dimensional range.
+
+01:01:52.270 --> 01:01:56.970 align:middle line:84%
+And therefore its range,
+the range of A hitting T
+
+01:01:56.970 --> 01:01:59.130 align:middle line:90%
+must then be finite dimensional.
+
+01:01:59.130 --> 01:02:03.200 align:middle line:84%
+And what you do with B
+really doesn't matter.
+
+01:02:03.200 --> 01:02:05.150 align:middle line:90%
+So 1 is an exercise.
+
+01:02:05.150 --> 01:02:05.905 align:middle line:90%
+So let's prove 1.
+
+01:02:05.905 --> 01:02:10.690 align:middle line:84%
+1 we'll prove using this
+characterization of finite rink
+
+01:02:10.690 --> 01:02:11.810 align:middle line:90%
+operators.
+
+01:02:11.810 --> 01:02:17.470 align:middle line:84%
+So we're assuming
+T is finite rank.
+
+01:02:17.470 --> 01:02:29.650 align:middle line:84%
+So we can write T as some
+constant cij, u and a product
+
+01:02:29.650 --> 01:02:37.530 align:middle line:84%
+ej, ei, u in H. So we can
+express it in that way
+
+01:02:37.530 --> 01:02:41.680 align:middle line:84%
+where these are just some fixed
+constants not depending on u.
+
+01:02:41.680 --> 01:02:46.950 align:middle line:84%
+Now let's compute how
+T star x on vectors
+
+01:02:46.950 --> 01:02:50.280 align:middle line:84%
+by using this defining
+property of the adjoint.
+
+01:02:50.280 --> 01:02:53.410 align:middle line:90%
+
+
+01:02:53.410 --> 01:02:56.720 align:middle line:90%
+Then u, T star v--
+
+01:02:56.720 --> 01:02:58.720 align:middle line:84%
+what we're going to do
+is we're going to come up
+
+01:02:58.720 --> 01:03:03.700 align:middle line:84%
+with an expression for this
+as u in a product something
+
+01:03:03.700 --> 01:03:06.820 align:middle line:84%
+and from which we can conclude
+that T star v has to equal
+
+01:03:06.820 --> 01:03:12.040 align:middle line:90%
+that something for all v.
+
+01:03:12.040 --> 01:03:16.120 align:middle line:84%
+Now this is equal
+to, by the defining
+
+01:03:16.120 --> 01:03:20.980 align:middle line:84%
+property of the adjoint,
+T applied to u, v. So this
+
+01:03:20.980 --> 01:03:21.625 align:middle line:90%
+is equal to--
+
+01:03:21.625 --> 01:03:25.840 align:middle line:90%
+
+
+01:03:25.840 --> 01:03:28.300 align:middle line:84%
+i and j will be understood
+to go from 1 to l.
+
+01:03:28.300 --> 01:03:31.960 align:middle line:84%
+So this is just finite,
+a finite sum, OK--
+
+01:03:31.960 --> 01:03:39.590 align:middle line:90%
+cij, u, ei-- or ej, sorry--
+
+01:03:39.590 --> 01:03:42.850 align:middle line:90%
+ei, inner product v.
+
+01:03:42.850 --> 01:03:50.000 align:middle line:84%
+Now taking the inner product
+is linear in the first entry.
+
+01:03:50.000 --> 01:03:52.070 align:middle line:90%
+So this is equal to sum ij.
+
+01:03:52.070 --> 01:03:58.530 align:middle line:84%
+Again, this is a finite sum
+ij, u, ej, inner product
+
+01:03:58.530 --> 01:04:08.990 align:middle line:84%
+ei, v. And now I'm just going
+to switch what I'm summing.
+
+01:04:08.990 --> 01:04:25.880 align:middle line:84%
+This I can write as now u
+inner product sum ij cij bar.
+
+01:04:25.880 --> 01:04:28.100 align:middle line:90%
+So if I want to--
+
+01:04:28.100 --> 01:04:41.430 align:middle line:84%
+this I can write as bar, bar,
+but ei, v, complex conjugate,
+
+01:04:41.430 --> 01:04:41.930 align:middle line:90%
+ej.
+
+01:04:41.930 --> 01:04:46.350 align:middle line:90%
+
+
+01:04:46.350 --> 01:04:48.570 align:middle line:84%
+We can check this
+as correct because--
+
+01:04:48.570 --> 01:04:50.640 align:middle line:84%
+so u will then inner
+product with each
+
+01:04:50.640 --> 01:04:53.070 align:middle line:84%
+of the ej's and these
+constants when they come out
+
+01:04:53.070 --> 01:04:56.310 align:middle line:84%
+of the inner product, get hit
+by a complex conjugate, which
+
+01:04:56.310 --> 01:05:01.190 align:middle line:84%
+turns them back
+into cij and ei, v.
+
+01:05:01.190 --> 01:05:05.630 align:middle line:84%
+Now, the complex conjugate
+of the inner product
+
+01:05:05.630 --> 01:05:11.370 align:middle line:84%
+is just the same as
+if I flip the entry.
+
+01:05:11.370 --> 01:05:19.235 align:middle line:84%
+So this is equal to
+cij times v, ei, ej.
+
+01:05:19.235 --> 01:05:24.070 align:middle line:90%
+
+
+01:05:24.070 --> 01:05:27.040 align:middle line:84%
+Now, this holds for all u
+and v. So what have I shown?
+
+01:05:27.040 --> 01:05:34.570 align:middle line:84%
+I've shown that u T star v minus
+this finite sum, so I actually
+
+01:05:34.570 --> 01:05:46.210 align:middle line:84%
+put it in here, cij v, ei,
+vj, this equals 0 for all u,
+
+01:05:46.210 --> 01:05:48.190 align:middle line:90%
+for all v.
+
+01:05:48.190 --> 01:05:51.790 align:middle line:84%
+Now, for a fixed v
+this quantity here
+
+01:05:51.790 --> 01:05:56.410 align:middle line:84%
+is orthogonal to everything
+in H. So it has to be 0.
+
+01:05:56.410 --> 01:05:58.300 align:middle line:84%
+And therefore I
+conclude that T star
+
+01:05:58.300 --> 01:06:04.690 align:middle line:84%
+v has to equal sum
+from ij equals 1 to l,
+
+01:06:04.690 --> 01:06:11.350 align:middle line:84%
+the complex conjugates of
+cij, v inner product ei,
+
+01:06:11.350 --> 01:06:16.450 align:middle line:84%
+ej for all v in
+H. And that proves
+
+01:06:16.450 --> 01:06:24.350 align:middle line:84%
+that T star is a
+finite rank, and also
+
+01:06:24.350 --> 01:06:28.220 align:middle line:84%
+gives you the expression for
+the coefficients in terms
+
+01:06:28.220 --> 01:06:29.150 align:middle line:90%
+of the old ones.
+
+01:06:29.150 --> 01:06:32.120 align:middle line:90%
+I could write this--
+
+01:06:32.120 --> 01:06:36.110 align:middle line:84%
+now if I wanted to write
+it in terms of the i
+
+01:06:36.110 --> 01:06:39.740 align:middle line:84%
+being in front of the bases
+vector that I'm having here,
+
+01:06:39.740 --> 01:06:42.254 align:middle line:90%
+I write it as sum ij.
+
+01:06:42.254 --> 01:06:48.870 align:middle line:90%
+
+
+01:06:48.870 --> 01:06:52.920 align:middle line:84%
+So we see that the matrix
+corresponding to the adjoint is
+
+01:06:52.920 --> 01:06:55.830 align:middle line:84%
+what we computed
+last class basically,
+
+01:06:55.830 --> 01:07:01.080 align:middle line:84%
+is the complex conjugate of
+the transpose of this matrix,
+
+01:07:01.080 --> 01:07:02.390 align:middle line:90%
+of the original matrix cij's.
+
+01:07:02.390 --> 01:07:06.520 align:middle line:90%
+
+
+01:07:06.520 --> 01:07:09.775 align:middle line:84%
+All right, so that proves
+adjoints are also finite rank.
+
+01:07:09.775 --> 01:07:13.330 align:middle line:90%
+
+
+01:07:13.330 --> 01:07:25.270 align:middle line:84%
+Now, so taking the
+adjoint of a finite rank,
+
+01:07:25.270 --> 01:07:31.570 align:middle line:84%
+operator leaves you in the
+space of finite rank operators.
+
+01:07:31.570 --> 01:07:34.750 align:middle line:84%
+If you take finite
+rank operators
+
+01:07:34.750 --> 01:07:37.750 align:middle line:84%
+and compose them on the
+left and on the right
+
+01:07:37.750 --> 01:07:42.295 align:middle line:84%
+with bounded operators,
+you remain finite rank.
+
+01:07:42.295 --> 01:07:47.610 align:middle line:90%
+
+
+01:07:47.610 --> 01:07:49.470 align:middle line:84%
+The subset of finite
+rank operators
+
+01:07:49.470 --> 01:07:54.600 align:middle line:84%
+also form a subspace
+in the Banach space
+
+01:07:54.600 --> 01:07:58.830 align:middle line:84%
+of bounded linear operators
+on a Hilbert space.
+
+01:07:58.830 --> 01:08:01.650 align:middle line:84%
+So the space of bounded linear
+operators on a Hilbert space
+
+01:08:01.650 --> 01:08:07.620 align:middle line:84%
+naturally come with a norm
+as well, the operator norm.
+
+01:08:07.620 --> 01:08:17.109 align:middle line:84%
+So the next obvious question is,
+is the subspace of finite rank
+
+01:08:17.109 --> 01:08:18.990 align:middle line:90%
+operators, is this closed?
+
+01:08:18.990 --> 01:08:38.490 align:middle line:90%
+
+
+01:08:38.490 --> 01:08:41.979 align:middle line:84%
+Closed not meaning-- not
+as a closed undertaking
+
+01:08:41.979 --> 01:08:42.939 align:middle line:90%
+linear combinations.
+
+01:08:42.939 --> 01:08:44.606 align:middle line:84%
+Of course that holds
+for every subspace.
+
+01:08:44.606 --> 01:08:56.770 align:middle line:84%
+But if I take a sequence
+of finite rank operators
+
+01:08:56.770 --> 01:09:11.460 align:middle line:84%
+that are converging in
+operator norm to something,
+
+01:09:11.460 --> 01:09:18.200 align:middle line:84%
+then is the limit also
+a finite rank operator?
+
+01:09:18.200 --> 01:09:23.090 align:middle line:84%
+So that's the definition
+of being a closed subspace,
+
+01:09:23.090 --> 01:09:29.830 align:middle line:84%
+or let me say subset so
+that we're now asking
+
+01:09:29.830 --> 01:09:31.870 align:middle line:90%
+about this in a metric sense.
+
+01:09:31.870 --> 01:09:37.210 align:middle line:84%
+Is it a closed
+subset in the space
+
+01:09:37.210 --> 01:09:39.290 align:middle line:90%
+of bounded linear operators?
+
+01:09:39.290 --> 01:09:40.749 align:middle line:90%
+Now, the answer to this is no.
+
+01:09:40.749 --> 01:09:45.540 align:middle line:90%
+
+
+01:09:45.540 --> 01:09:48.000 align:middle line:90%
+Why?
+
+01:09:48.000 --> 01:09:54.180 align:middle line:90%
+Let's, for example, take Tn.
+
+01:09:54.180 --> 01:09:59.280 align:middle line:84%
+So this will be a sequence
+of operators from little l2
+
+01:09:59.280 --> 01:10:01.740 align:middle line:90%
+to little l2.
+
+01:10:01.740 --> 01:10:12.610 align:middle line:84%
+And for an element
+a in little l2,
+
+01:10:12.610 --> 01:10:14.920 align:middle line:84%
+this should give me another
+sequence in little l2.
+
+01:10:14.920 --> 01:10:19.720 align:middle line:84%
+And it'll be the sequence
+given by a1 over 1, a2 over 2,
+
+01:10:19.720 --> 01:10:26.290 align:middle line:84%
+up to an over n, and
+then zeros after that.
+
+01:10:26.290 --> 01:10:38.780 align:middle line:84%
+All right, so T1,
+the operator T1
+
+01:10:38.780 --> 01:10:41.210 align:middle line:84%
+takes the sequence in
+little l2 and just spits out
+
+01:10:41.210 --> 01:10:44.180 align:middle line:84%
+the sequence that has the
+first entry divided by 1.
+
+01:10:44.180 --> 01:10:45.950 align:middle line:90%
+And 0's followed after that.
+
+01:10:45.950 --> 01:10:47.990 align:middle line:90%
+That's the operator T1.
+
+01:10:47.990 --> 01:10:50.840 align:middle line:84%
+T2 takes a sequence
+in little l2 and spits
+
+01:10:50.840 --> 01:10:53.150 align:middle line:84%
+out the first
+entry divided by 1,
+
+01:10:53.150 --> 01:11:01.970 align:middle line:84%
+the second entry divided by 2,
+and o's after that, T3, so on.
+
+01:11:01.970 --> 01:11:09.260 align:middle line:90%
+Now, this is just a picture.
+
+01:11:09.260 --> 01:11:09.980 align:middle line:90%
+This is formal.
+
+01:11:09.980 --> 01:11:12.050 align:middle line:84%
+This is not meant
+to mean anything.
+
+01:11:12.050 --> 01:11:15.590 align:middle line:84%
+If I were to express this
+as an infinite matrix
+
+01:11:15.590 --> 01:11:18.830 align:middle line:84%
+times an infinite vector, or
+infinite length vector where
+
+01:11:18.830 --> 01:11:22.400 align:middle line:84%
+the infinite length is
+the sequence ak's, this
+
+01:11:22.400 --> 01:11:33.100 align:middle line:84%
+is 1, 1/2, 1/3, 1
+over n, 0, 0, 0, 0.
+
+01:11:33.100 --> 01:11:54.130 align:middle line:84%
+This infinite matrix times
+a1, a2, a3, and so on.
+
+01:11:54.130 --> 01:12:00.810 align:middle line:84%
+So I'm just multiplying a1
+by 1, a2 by 1/2, a3 by a 1/3,
+
+01:12:00.810 --> 01:12:06.150 align:middle line:84%
+and then up to a n over n,
+multiplying a n by 1 over n.
+
+01:12:06.150 --> 01:12:09.720 align:middle line:84%
+And then the rest of the entries
+get spat out to give me 0.
+
+01:12:09.720 --> 01:12:12.960 align:middle line:84%
+So these are the
+finite rank operators.
+
+01:12:12.960 --> 01:12:21.870 align:middle line:90%
+
+
+01:12:21.870 --> 01:12:36.930 align:middle line:84%
+And you can check that the
+Tn minus T in operator norm
+
+01:12:36.930 --> 01:12:42.240 align:middle line:90%
+goes to 0, where what is T?
+
+01:12:42.240 --> 01:12:45.990 align:middle line:84%
+T is the operator that
+takes a spits out--
+
+01:12:45.990 --> 01:12:53.320 align:middle line:84%
+so a will be an
+element in little l2.
+
+01:12:53.320 --> 01:12:55.780 align:middle line:84%
+Now as n goes to
+infinity, you can kind of
+
+01:12:55.780 --> 01:12:58.720 align:middle line:84%
+guess what's going to happen is
+I end up multiplying everything
+
+01:12:58.720 --> 01:13:03.730 align:middle line:84%
+by 1 over wherever
+entry I'm at, a1 over 1,
+
+01:13:03.730 --> 01:13:10.600 align:middle line:84%
+a2 over 2, a3 over 3, a4
+over 4, and so on, and on.
+
+01:13:10.600 --> 01:13:15.390 align:middle line:90%
+
+
+01:13:15.390 --> 01:13:20.600 align:middle line:84%
+So as an exercise you can
+show that the operator
+
+01:13:20.600 --> 01:13:22.850 align:middle line:84%
+norm of T minus Tn,
+this is less than
+
+01:13:22.850 --> 01:13:30.180 align:middle line:84%
+or equal to v1 over n plus
+1, something like that, OK.
+
+01:13:30.180 --> 01:13:34.880 align:middle line:90%
+
+
+01:13:34.880 --> 01:13:39.620 align:middle line:84%
+Now, this operator here
+does not have finite rank
+
+01:13:39.620 --> 01:13:52.920 align:middle line:84%
+because then I can find
+infinitely many linearly
+
+01:13:52.920 --> 01:13:54.360 align:middle line:84%
+independent vectors
+in the range.
+
+01:13:54.360 --> 01:13:58.590 align:middle line:84%
+For example T of e1
+where this here is
+
+01:13:58.590 --> 01:14:01.580 align:middle line:90%
+the basis vector gives me the--
+
+01:14:01.580 --> 01:14:07.760 align:middle line:90%
+
+
+01:14:07.760 --> 01:14:10.340 align:middle line:84%
+this is the first basis
+vector in little l2.
+
+01:14:10.340 --> 01:14:13.130 align:middle line:84%
+If this is the second
+basis vector in little l2,
+
+01:14:13.130 --> 01:14:13.955 align:middle line:90%
+this is just--
+
+01:14:13.955 --> 01:14:20.470 align:middle line:90%
+
+
+01:14:20.470 --> 01:14:21.500 align:middle line:90%
+and so on.
+
+01:14:21.500 --> 01:14:26.690 align:middle line:90%
+If I applied T to en, This.
+
+01:14:26.690 --> 01:14:30.560 align:middle line:90%
+Is 1 over n, 0, 0, and so on.
+
+01:14:30.560 --> 01:14:31.760 align:middle line:90%
+This is in the n spot.
+
+01:14:31.760 --> 01:14:36.040 align:middle line:90%
+
+
+01:14:36.040 --> 01:14:39.720 align:middle line:84%
+So it just takes each
+basis vector and--
+
+01:14:39.720 --> 01:14:47.070 align:middle line:84%
+so if you like, this is e1, this
+is 1/2 e2, this is 1 over n en,
+
+01:14:47.070 --> 01:14:52.560 align:middle line:84%
+and multiplies each of these
+basis vectors by 1 over
+
+01:14:52.560 --> 01:14:56.600 align:middle line:90%
+the integer that's--
+
+01:14:56.600 --> 01:15:00.080 align:middle line:90%
+
+
+01:15:00.080 --> 01:15:04.080 align:middle line:84%
+not delineating--
+denoting, I'm sorry.
+
+01:15:04.080 --> 01:15:11.990 align:middle line:84%
+All right, it's the end of
+a day so some of my thinking
+
+01:15:11.990 --> 01:15:12.680 align:middle line:90%
+has slowed down.
+
+01:15:12.680 --> 01:15:15.230 align:middle line:90%
+
+
+01:15:15.230 --> 01:15:19.010 align:middle line:84%
+So finite rank operators
+are not closed--
+
+01:15:19.010 --> 01:15:22.580 align:middle line:84%
+is not a closed
+subset of the space
+
+01:15:22.580 --> 01:15:24.770 align:middle line:90%
+of bounded linear operators.
+
+01:15:24.770 --> 01:15:27.870 align:middle line:90%
+So what's the closure?
+
+01:15:27.870 --> 01:15:32.120 align:middle line:90%
+
+
+01:15:32.120 --> 01:15:34.520 align:middle line:84%
+And finite rank operators
+we'd like to think we
+
+01:15:34.520 --> 01:15:36.770 align:middle line:90%
+know how to solve equations for.
+
+01:15:36.770 --> 01:15:41.690 align:middle line:84%
+I mean, just based on this
+expression for a finite rank
+
+01:15:41.690 --> 01:15:48.630 align:middle line:84%
+operator, well, if we want to
+solve Tu equals v, well, first
+
+01:15:48.630 --> 01:15:55.240 align:middle line:84%
+we know v has to be in the
+range of or in the span
+
+01:15:55.240 --> 01:15:57.610 align:middle line:84%
+of these basis vectors
+that appear here.
+
+01:15:57.610 --> 01:16:00.610 align:middle line:84%
+And now once we've
+restricted to that,
+
+01:16:00.610 --> 01:16:05.620 align:middle line:84%
+then we can solve the equation
+by looking at the properties
+
+01:16:05.620 --> 01:16:06.550 align:middle line:90%
+of this matrix.
+
+01:16:06.550 --> 01:16:09.880 align:middle line:84%
+And the null space will
+be not only the null space
+
+01:16:09.880 --> 01:16:12.730 align:middle line:84%
+that sits inside the span
+of these basis vectors,
+
+01:16:12.730 --> 01:16:16.870 align:middle line:84%
+but it will also include
+the orthogonal complement
+
+01:16:16.870 --> 01:16:20.170 align:middle line:90%
+in H of these basis vectors.
+
+01:16:20.170 --> 01:16:25.950 align:middle line:84%
+So solving equations involving
+finite rank operators
+
+01:16:25.950 --> 01:16:29.490 align:middle line:84%
+ought to be fairly
+straightforward
+
+01:16:29.490 --> 01:16:30.785 align:middle line:90%
+if we remember linear algebra.
+
+01:16:30.785 --> 01:16:34.050 align:middle line:90%
+
+
+01:16:34.050 --> 01:16:37.847 align:middle line:84%
+Unfortunately, they're
+not closed upon taking
+
+01:16:37.847 --> 01:16:38.930 align:middle line:90%
+some subsequential limits.
+
+01:16:38.930 --> 01:16:44.750 align:middle line:84%
+But we can identify
+the closure of--
+
+01:16:44.750 --> 01:16:54.440 align:middle line:84%
+so now the question
+is, what is the closure
+
+01:16:54.440 --> 01:16:59.990 align:middle line:84%
+of finite rank
+operators in the space
+
+01:16:59.990 --> 01:17:02.060 align:middle line:84%
+of bounded linear
+operators on H?
+
+01:17:02.060 --> 01:17:04.640 align:middle line:84%
+So something in the closure has
+to be a limit of finite rank
+
+01:17:04.640 --> 01:17:05.510 align:middle line:90%
+operators.
+
+01:17:05.510 --> 01:17:09.140 align:middle line:84%
+And since we know
+how to solve finite--
+
+01:17:09.140 --> 01:17:11.150 align:middle line:84%
+equations involving
+finite rank operators,
+
+01:17:11.150 --> 01:17:13.670 align:middle line:84%
+hopefully we know how
+to solve equations use
+
+01:17:13.670 --> 01:17:15.980 align:middle line:90%
+with these operators as well.
+
+01:17:15.980 --> 01:17:18.440 align:middle line:84%
+Is there a simple way
+we can characterize--
+
+01:17:18.440 --> 01:17:23.160 align:middle line:84%
+or not simple, but at
+least a more useful way
+
+01:17:23.160 --> 01:17:26.430 align:middle line:84%
+to characterize them than just
+being the limit of finite rank
+
+01:17:26.430 --> 01:17:27.330 align:middle line:90%
+operators?
+
+01:17:27.330 --> 01:17:30.810 align:middle line:90%
+
+
+01:17:30.810 --> 01:17:33.030 align:middle line:84%
+So the answer to
+this question is--
+
+01:17:33.030 --> 01:17:34.290 align:middle line:90%
+so I won't even write--
+
+01:17:34.290 --> 01:17:36.360 align:middle line:90%
+OK, I'll write answer--
+
+01:17:36.360 --> 01:17:40.800 align:middle line:84%
+is what are called
+compact operators, so
+
+01:17:40.800 --> 01:17:42.810 align:middle line:84%
+the subspace of
+compact operators.
+
+01:17:42.810 --> 01:17:48.340 align:middle line:90%
+
+
+01:17:48.340 --> 01:17:50.780 align:middle line:90%
+So let me make a definition.
+
+01:17:50.780 --> 01:18:06.040 align:middle line:84%
+So k, a bounded linear
+operator is compact operator
+
+01:18:06.040 --> 01:18:24.770 align:middle line:84%
+if the closure of the image
+of the closed unit ball in H--
+
+01:18:24.770 --> 01:18:28.340 align:middle line:84%
+so the closure of
+the image by k--
+
+01:18:28.340 --> 01:18:30.590 align:middle line:84%
+or the closure of the image
+of the closed unit ball
+
+01:18:30.590 --> 01:18:31.145 align:middle line:90%
+is compact.
+
+01:18:31.145 --> 01:18:35.010 align:middle line:90%
+
+
+01:18:35.010 --> 01:18:41.520 align:middle line:84%
+I can also write this as a
+closure of the subset ku norm
+
+01:18:41.520 --> 01:18:43.140 align:middle line:90%
+of u less than or equal to 1.
+
+01:18:43.140 --> 01:18:51.550 align:middle line:90%
+
+
+01:18:51.550 --> 01:18:56.520 align:middle line:84%
+So I won't have time to prove
+this theorem in this class,
+
+01:18:56.520 --> 01:18:58.440 align:middle line:90%
+but we'll do it next time.
+
+01:18:58.440 --> 01:19:02.200 align:middle line:84%
+And we'll actually
+show that, in fact,
+
+01:19:02.200 --> 01:19:17.430 align:middle line:84%
+this class of compact operators
+which are defined in this way,
+
+01:19:17.430 --> 01:19:21.930 align:middle line:84%
+this is a compact operator
+according to this definition
+
+01:19:21.930 --> 01:19:31.750 align:middle line:84%
+if and only if k is in
+the closure of finite rank
+
+01:19:31.750 --> 01:19:34.570 align:middle line:84%
+operators, meaning there exists
+a sequence of finite rank
+
+01:19:34.570 --> 01:19:38.920 align:middle line:84%
+operators converging
+in operator norm to k.
+
+01:19:38.920 --> 01:19:41.350 align:middle line:84%
+And, again, why
+are we interested
+
+01:19:41.350 --> 01:19:44.830 align:middle line:90%
+in compact operators?
+
+01:19:44.830 --> 01:19:47.320 align:middle line:84%
+Well, we know how
+to solve finite rank
+
+01:19:47.320 --> 01:19:49.990 align:middle line:84%
+or equations involving
+finite rank operators.
+
+01:19:49.990 --> 01:19:57.040 align:middle line:84%
+We just look at the subspace
+which that contains the range.
+
+01:19:57.040 --> 01:20:01.120 align:middle line:84%
+And then we look at the
+matrix that appears there
+
+01:20:01.120 --> 01:20:03.870 align:middle line:90%
+in that decomposition.
+
+01:20:03.870 --> 01:20:11.580 align:middle line:84%
+Compact operators there are
+something completely new.
+
+01:20:11.580 --> 01:20:16.620 align:middle line:84%
+When we move from finite
+dimensional linear algebra
+
+01:20:16.620 --> 01:20:20.850 align:middle line:84%
+now to functional
+analysis because these
+
+01:20:20.850 --> 01:20:25.740 align:middle line:84%
+are not exactly necessarily
+equal to finite rank operators.
+
+01:20:25.740 --> 01:20:27.600 align:middle line:84%
+I mean, we just did
+this example a minute
+
+01:20:27.600 --> 01:20:34.090 align:middle line:84%
+ago of this operator
+given here by where
+
+01:20:34.090 --> 01:20:38.440 align:middle line:84%
+I take the entry of the sequence
+and divide it by the place
+
+01:20:38.440 --> 01:20:42.400 align:middle line:84%
+that it occurred in the sequence
+for a sequence given in l2.
+
+01:20:42.400 --> 01:20:47.230 align:middle line:84%
+So if you believe the theorem,
+this is a finite rank--
+
+01:20:47.230 --> 01:20:48.040 align:middle line:90%
+I mean, not finite.
+
+01:20:48.040 --> 01:20:49.630 align:middle line:90%
+This is a compact operator.
+
+01:20:49.630 --> 01:20:56.940 align:middle line:84%
+It's the limit of this sequence
+of finite rank operators.
+
+01:20:56.940 --> 01:21:01.170 align:middle line:84%
+Perhaps you want to
+take a try at trying
+
+01:21:01.170 --> 01:21:03.090 align:middle line:84%
+to prove this as
+a compact operator
+
+01:21:03.090 --> 01:21:07.140 align:middle line:84%
+directly from the
+definition, or not.
+
+01:21:07.140 --> 01:21:10.710 align:middle line:84%
+you can wait till next time
+and just use this theorem.
+
+01:21:10.710 --> 01:21:15.110 align:middle line:84%
+But many other operators,
+many interesting operators,
+
+01:21:15.110 --> 01:21:18.530 align:middle line:84%
+for example, inverses of
+differentiable operators
+
+01:21:18.530 --> 01:21:21.020 align:middle line:84%
+in fact turn out to
+be compact operators.
+
+01:21:21.020 --> 01:21:22.880 align:middle line:84%
+That's also why we're
+interested in them.
+
+01:21:22.880 --> 01:21:27.440 align:middle line:90%
+
+
+01:21:27.440 --> 01:21:32.480 align:middle line:84%
+So we got these by taking
+the closure of finite rank
+
+01:21:32.480 --> 01:21:33.170 align:middle line:90%
+operators.
+
+01:21:33.170 --> 01:21:39.490 align:middle line:84%
+And then after-- so now we
+have this interesting subspace
+
+01:21:39.490 --> 01:21:43.720 align:middle line:84%
+of operators that we hope to
+be able to solve equations
+
+01:21:43.720 --> 01:21:44.850 align:middle line:90%
+involving.
+
+01:21:44.850 --> 01:21:50.630 align:middle line:84%
+And that'll be basically
+what takes up the remainder
+
+01:21:50.630 --> 01:21:52.385 align:middle line:90%
+of our time in this course.
+
+01:21:52.385 --> 01:21:56.500 align:middle line:90%
+
+
+01:21:56.500 --> 01:21:59.870 align:middle line:84%
+So you just staring
+at this definition,
+
+01:21:59.870 --> 01:22:01.240 align:middle line:90%
+you can kind of see that--
+
+01:22:01.240 --> 01:22:05.350 align:middle line:84%
+well, you can see that if k
+is a finite rank operator,
+
+01:22:05.350 --> 01:22:07.390 align:middle line:90%
+then it's a compact operator.
+
+01:22:07.390 --> 01:22:10.630 align:middle line:84%
+So we're not going to prove this
+theorem, like I said, but just
+
+01:22:10.630 --> 01:22:17.390 align:middle line:84%
+to see or do a sanity check
+that finite rank operators ought
+
+01:22:17.390 --> 01:22:18.590 align:middle line:90%
+to be compact operators.
+
+01:22:18.590 --> 01:22:24.830 align:middle line:84%
+Well, a finite rank
+operator, the image of this
+
+01:22:24.830 --> 01:22:28.400 align:middle line:84%
+closed unit ball of a finite
+by a finite rank operator,
+
+01:22:28.400 --> 01:22:32.240 align:middle line:84%
+that's going to be
+a bounded subset
+
+01:22:32.240 --> 01:22:35.540 align:middle line:84%
+of a finite
+dimensional subspace.
+
+01:22:35.540 --> 01:22:39.260 align:middle line:84%
+Any bounded operator takes
+bounded sets to bounded sets.
+
+01:22:39.260 --> 01:22:43.880 align:middle line:84%
+So if it's finite rank,
+it takes this bounded set
+
+01:22:43.880 --> 01:22:51.270 align:middle line:84%
+to a bounded subset of a finite
+dimensional subspace of H.
+
+01:22:51.270 --> 01:22:52.470 align:middle line:90%
+And then I take the closure.
+
+01:22:52.470 --> 01:22:55.770 align:middle line:84%
+I get a bounded
+and closed subset
+
+01:22:55.770 --> 01:22:58.120 align:middle line:84%
+of a finite
+dimensional subspace.
+
+01:22:58.120 --> 01:23:04.290 align:middle line:84%
+And we know by Heine-Borel
+that closed and bounded subsets
+
+01:23:04.290 --> 01:23:07.650 align:middle line:84%
+of finite dimensional
+subspaces are compact.
+
+01:23:07.650 --> 01:23:11.100 align:middle line:84%
+So that shows why
+at the very minimum
+
+01:23:11.100 --> 01:23:13.830 align:middle line:84%
+you should believe that finite
+rank operators are compact.
+
+01:23:13.830 --> 01:23:16.430 align:middle line:90%
+OK, so we'll stop there.
+
+01:23:16.430 --> 01:23:22.000 align:middle line:90%

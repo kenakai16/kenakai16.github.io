@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Quotient Spaces &amp; Baire Category Theorem &#8212; NghiaHoang</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/functional_analysis/quotient_spaces_baire_category';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Open Mapping &amp; Closed Graph Theorems" href="open_mapping_closed_graph.html" />
+    <link rel="prev" title="Bounded Linear Operators" href="bounded_linear_operators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/book_logo.png" class="logo__image only-light" alt="NghiaHoang - Home"/>
+    <script>document.write(`<img src="../../_static/book_logo.png" class="logo__image only-dark" alt="NghiaHoang - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../table_of_contents.html">Table of Contents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Math and Calculus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Number.html">Number Sets &amp; Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Fractions.html">Fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Decimals.html">Decimals &amp; Percentages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/OrderOfOperations.html">Order of Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Curvilinear.html">Curvilinear Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Summations.html">Summations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Exponents.html">Exponents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Logarithms.html">Logarithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Limits.html">Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Calculus.html">Calculus &amp; Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math_basic/Integration.html">Integration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear Algebra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/intro.html">Linear Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/vector_spaces.html">Vector Spaces &amp; Matrix Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/determinants.html">Determinants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/norms_and_orthogonality.html">Norms &amp; Orthogonality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/eigen_and_pca.html">Eigenvalues, Eigenvectors &amp; PCA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/svd_and_factorizations.html">SVD &amp; Matrix Factorizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linear_algebra/linear_transformations.html">Linear Transformations &amp; Neural Networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../probability/intro.html">Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/foundations.html">Foundations of Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/random_variables.html">Random Variables &amp; Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/limit_theorems.html">Convergence &amp; Limit Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../probability/information_theory.html">Information Theory Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/intro.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/inferential.html">Statistical Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/stochastic_processes.html">Stochastic Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/markov_chains.html">Markov Chains</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optimization/intro.html">Introduction to Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_sets_functions.html">Convex Sets &amp; Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/convex_problems.html">Convex Optimization Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/duality.html">Duality &amp; KKT Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/gradient_descent.html">Gradient Descent &amp; Hessian Curvature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/algorithms.html">Optimization Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/interior_point.html">Numerical Algorithms &amp; Interior-Point Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/geometric_statistical.html">Geometric and Statistical Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optimization/combinatorial.html">Combinatorial Optimization &amp; Scheduling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Functional Analysis &amp; Measure Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_banach_spaces.html">Basic Banach Space Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounded_linear_operators.html">Bounded Linear Operators</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quotient Spaces &amp; Baire Category Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_mapping_closed_graph.html">Open Mapping &amp; Closed Graph Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zorns_lemma_hahn_banach.html">Zorn’s Lemma &amp; Hahn-Banach Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="double_dual_outer_measure.html">The Double Dual &amp; Outer Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/sigma_algebras.html">Sigma Algebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_subsets_measure.html">Lebesgue Measurable Subsets and Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_functions.html">Lebesgue Measurable Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/simple_functions.html">Simple Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction to Topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../approximation/intro.html">Approximation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approximation/fitting.html">Approximation and Fitting</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/intro.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Methodology%20for%20usage.html">Methodology for usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Supervised%20Learning.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Unsupervised%20Learning.html">Unsupervised Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/Distributed%20Learning.html">Distributed Learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning/intro.html">Deep Learning Foundations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../recommended_reading.html">Recommended Reading &amp; Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Download PDF</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../download_pdf.html">Download PDF Version</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/book/functional_analysis/quotient_spaces_baire_category.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quotient Spaces & Baire Category Theorem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-subspaces-and-quotients">1. Closed Subspaces and Quotients</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category-theorem">2. Baire Category Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-boundedness-principle-banach-steinhaus">3. Uniform Boundedness Principle (Banach-Steinhaus)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ml-dl-optimization-in-function-space">4. Connection to ML/DL: Optimization in Function Space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml-dl-applications">ML/DL Applications</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="quotient-spaces-baire-category-theorem">
+<h1>Quotient Spaces &amp; Baire Category Theorem<a class="headerlink" href="#quotient-spaces-baire-category-theorem" title="Permalink to this heading">#</a></h1>
+<p>This lecture explores closed subspaces, quotient normed spaces, the topological foundations of the Baire Category Theorem, and the Uniform Boundedness Principle.</p>
+<hr class="docutils" />
+<section id="closed-subspaces-and-quotients">
+<h2>1. Closed Subspaces and Quotients<a class="headerlink" href="#closed-subspaces-and-quotients" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><strong>Proposition</strong>: A subspace <span class="math notranslate nohighlight">\(W\)</span> of a Banach space <span class="math notranslate nohighlight">\(V\)</span> is complete (Banach) under the inherited norm if and only if <span class="math notranslate nohighlight">\(W\)</span> is a closed subset of <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p><strong>Definition</strong>: Let <span class="math notranslate nohighlight">\(W \subseteq V\)</span> be a closed subspace. The <strong>quotient space</strong> <span class="math notranslate nohighlight">\(V/W\)</span> is the set of cosets <span class="math notranslate nohighlight">\(v + W\)</span> equipped with the quotient norm:</p>
+<div class="math notranslate nohighlight">
+\[\|v + W\|_{V/W} = \inf_{w \in W} \|v - w\|\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(V\)</span> is a Banach space and <span class="math notranslate nohighlight">\(W\)</span> is a closed subspace, then <span class="math notranslate nohighlight">\(V/W\)</span> is a Banach space.</p>
+<p>If we define a seminorm <span class="math notranslate nohighlight">\(\|\cdot\|\)</span> on <span class="math notranslate nohighlight">\(V\)</span>, the set <span class="math notranslate nohighlight">\(E = \{v \in V \mid \|v\| = 0\}\)</span> is a closed subspace of <span class="math notranslate nohighlight">\(V\)</span>, and the quotient space <span class="math notranslate nohighlight">\(V/E\)</span> becomes a normed space under <span class="math notranslate nohighlight">\(\|v + E\|_{V/E} = \|v\|\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="baire-category-theorem">
+<h2>2. Baire Category Theorem<a class="headerlink" href="#baire-category-theorem" title="Permalink to this heading">#</a></h2>
+<p>The Baire Category Theorem is a crucial topological property of complete metric spaces.</p>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a complete metric space. If <span class="math notranslate nohighlight">\(M = \bigcup_{n=1}^\infty C_n\)</span>, where each <span class="math notranslate nohighlight">\(C_n \subseteq M\)</span> is a closed subset, then at least one of the subsets <span class="math notranslate nohighlight">\(C_n\)</span> must contain an open ball <span class="math notranslate nohighlight">\(B(x, r)\)</span> (i.e., it has a non-empty interior).</p>
+<p><strong>Proof</strong>:
+Suppose for contradiction that each <span class="math notranslate nohighlight">\(C_n\)</span> has empty interior. Then <span class="math notranslate nohighlight">\(M \setminus C_1\)</span> is a dense open set. Choose <span class="math notranslate nohighlight">\(p_1 \in M \setminus C_1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_1 &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\overline{B(p_1, \epsilon_1)} \cap C_1 = \emptyset\)</span>.</p>
+<p>Inductively, since <span class="math notranslate nohighlight">\(C_{k+1}\)</span> has empty interior, the open ball <span class="math notranslate nohighlight">\(B(p_k, \epsilon_k/3)\)</span> is not contained in <span class="math notranslate nohighlight">\(C_{k+1}\)</span>. Choose <span class="math notranslate nohighlight">\(p_{k+1} \in B(p_k, \epsilon_k/3) \setminus C_{k+1}\)</span> and choose <span class="math notranslate nohighlight">\(\epsilon_{k+1} &lt; \epsilon_k/3\)</span> such that <span class="math notranslate nohighlight">\(\overline{B(p_{k+1}, \epsilon_{k+1})} \cap C_{k+1} = \emptyset\)</span>.</p>
+<p>This yields a sequence <span class="math notranslate nohighlight">\(\{p_k\}\)</span> satisfying <span class="math notranslate nohighlight">\(d(p_{k+1}, p_k) &lt; \epsilon_k/3\)</span>. By the triangle inequality:</p>
+<div class="math notranslate nohighlight">
+\[d(p_k, p_{k+l}) &lt; \sum_{j=k}^{k+l-1} \frac{\epsilon_j}{3} &lt; \epsilon_1 \sum_{j=k}^\infty 3^{-j} = \frac{\epsilon_1}{2} 3^{-k+1}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\{p_k\}\)</span> is a Cauchy sequence. Since <span class="math notranslate nohighlight">\(M\)</span> is complete, <span class="math notranslate nohighlight">\(p_k \to p \in M\)</span>. For any fixed <span class="math notranslate nohighlight">\(k\)</span>, since <span class="math notranslate nohighlight">\(p_{k+l} \in B(p_k, \epsilon_k)\)</span> for all <span class="math notranslate nohighlight">\(l\)</span>, the limit <span class="math notranslate nohighlight">\(p\)</span> lies in the closed ball <span class="math notranslate nohighlight">\(\overline{B(p_k, \epsilon_k/2)} \subset B(p_k, \epsilon_k)\)</span>.</p>
+<p>By construction, <span class="math notranslate nohighlight">\(B(p_k, \epsilon_k) \cap C_k = \emptyset\)</span>, so <span class="math notranslate nohighlight">\(p \notin C_k\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>. This contradicts <span class="math notranslate nohighlight">\(M = \bigcup_{n=1}^\infty C_n\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="uniform-boundedness-principle-banach-steinhaus">
+<h2>3. Uniform Boundedness Principle (Banach-Steinhaus)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(B\)</span> be a Banach space and <span class="math notranslate nohighlight">\(V\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\{T_i\}_{i \in I} \subseteq B(B, V)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(b \in B\)</span>, the set of values is pointwise bounded:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{i \in I} \|T_i b\|_V &lt; \infty\]</div>
+<p>then the family is uniformly bounded in the operator norm:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{i \in I} \|T_i\| &lt; \infty\]</div>
+<p><strong>Proof</strong>:
+For each <span class="math notranslate nohighlight">\(k \in \mathbb{N}\)</span>, define the subset:</p>
+<div class="math notranslate nohighlight">
+\[C_k = \{b \in B \mid \sup_{i \in I} \|T_i b\|_V \le k\}\]</div>
+<p>Each <span class="math notranslate nohighlight">\(C_k\)</span> is closed by the continuity of <span class="math notranslate nohighlight">\(T_i\)</span> and the norm. Since <span class="math notranslate nohighlight">\(\sup_{i \in I} \|T_i b\|_V &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(b\)</span>, we have <span class="math notranslate nohighlight">\(B = \bigcup_{k=1}^\infty C_k\)</span>.</p>
+<p>By the Baire Category Theorem, some <span class="math notranslate nohighlight">\(C_{k_0}\)</span> contains an open ball <span class="math notranslate nohighlight">\(B(b_0, r)\)</span>. For any <span class="math notranslate nohighlight">\(b \in B\)</span> with <span class="math notranslate nohighlight">\(\|b\| &lt; r\)</span>, we have <span class="math notranslate nohighlight">\(b_0 + b \in B(b_0, r) \subset C_{k_0}\)</span>. Thus, for all <span class="math notranslate nohighlight">\(i \in I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\|T_i b\|_V = \|T_i(b_0 + b) - T_i b_0\|_V \le \|T_i(b_0 + b)\|_V + \|T_i b_0\|_V \le k_0 + k_0 = 2k_0\]</div>
+<p>For any unit vector <span class="math notranslate nohighlight">\(u \in B\)</span> (<span class="math notranslate nohighlight">\(\|u\| = 1\)</span>), the vector <span class="math notranslate nohighlight">\(b = \frac{r}{2} u\)</span> has norm less than <span class="math notranslate nohighlight">\(r\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[\left\| T_i\left(\frac{r}{2} u\right) \right\|_V \le 2k_0 \implies \|T_i u\|_V \le \frac{4k_0}{r}\]</div>
+<p>Taking the supremum over <span class="math notranslate nohighlight">\(\|u\| = 1\)</span>, we get <span class="math notranslate nohighlight">\(\|T_i\| \le \frac{4k_0}{r}\)</span> for all <span class="math notranslate nohighlight">\(i \in I\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-optimization-in-function-space">
+<h2>4. Connection to ML/DL: Optimization in Function Space<a class="headerlink" href="#connection-to-ml-dl-optimization-in-function-space" title="Permalink to this heading">#</a></h2>
+<p>In standard machine learning, optimization occurs in parameter space <span class="math notranslate nohighlight">\(\mathbb{R}^d\)</span> (e.g., gradient descent on network weights <span class="math notranslate nohighlight">\(\theta\)</span>). However, some models—such as <strong>Gradient Boosting</strong> and generative <strong>Diffusion Models</strong>—optimize directly in <em>function spaces</em> or <em>measure spaces</em>.</p>
+<p>To perform calculus on infinite-dimensional Banach spaces, we generalize the derivative:</p>
+<ul>
+<li><p><strong>Gâteaux Derivative</strong>: Generalizes the directional derivative. For a functional <span class="math notranslate nohighlight">\(J: V \to \mathbb{R}\)</span> at <span class="math notranslate nohighlight">\(u \in V\)</span> in the direction <span class="math notranslate nohighlight">\(h \in V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[dJ(u; h) = \lim_{\epsilon \to 0} \frac{J(u + \epsilon h) - J(u)}{\epsilon} = \left. \frac{d}{d\epsilon} J(u + \epsilon h) \right|_{\epsilon=0}\]</div>
+</li>
+<li><p><strong>Fréchet Derivative</strong>: Generalizes the total derivative. A linear operator <span class="math notranslate nohighlight">\(DF(u) \in B(V, W)\)</span> is the Fréchet derivative of <span class="math notranslate nohighlight">\(F: V \to W\)</span> at <span class="math notranslate nohighlight">\(u\)</span> if:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h \to 0} \frac{\|F(u + h) - F(u) - DF(u)h\|_W}{\|h\|_V} = 0\]</div>
+</li>
+</ul>
+<section id="ml-dl-applications">
+<h3>ML/DL Applications<a class="headerlink" href="#ml-dl-applications" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Gradient Boosting</strong>: Minimizes an empirical loss <span class="math notranslate nohighlight">\(\sum_{i=1}^N \mathcal{L}(y_i, F(x_i))\)</span> by performing gradient descent directly in function space. At step <span class="math notranslate nohighlight">\(m\)</span>, the model updates:</p>
+<div class="math notranslate nohighlight">
+\[F_m(x) = F_{m-1}(x) - \gamma_m g_m(x)\]</div>
+<p>where <span class="math notranslate nohighlight">\(g_m(x)\)</span> is a weak learner (like a decision tree) fitted to approximate the negative Gâteaux derivative (pseudo-residuals) of the loss with respect to <span class="math notranslate nohighlight">\(F(x_i)\)</span>.</p>
+</li>
+<li><p><strong>Wasserstein Gradient Flows &amp; Diffusion Models</strong>: Generative diffusion models learn to transport a simple noise distribution to a complex data distribution. This is modeled mathematically as a gradient flow of the Kullback-Leibler (KL) divergence or free energy in the Wasserstein space of probability measures <span class="math notranslate nohighlight">\(\mathcal{P}(\mathbb{R}^d)\)</span> (equipped with the Wasserstein metric). The optimization of the density path follows the Fokker-Planck equation, which represents a gradient flow optimizing a functional over a space of measures.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/functional_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bounded_linear_operators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bounded Linear Operators</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="open_mapping_closed_graph.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Open Mapping &amp; Closed Graph Theorems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closed-subspaces-and-quotients">1. Closed Subspaces and Quotients</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category-theorem">2. Baire Category Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-boundedness-principle-banach-steinhaus">3. Uniform Boundedness Principle (Banach-Steinhaus)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-ml-dl-optimization-in-function-space">4. Connection to ML/DL: Optimization in Function Space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ml-dl-applications">ML/DL Applications</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NghiaHoang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -60,18 +60,27 @@ Welcome to the full **Table of Contents** for *Math for Data Science*. Below is 
 ---
 
 ## 🌀 Functional Analysis & Measure Theory
-- **{doc}`Functional Analysis & Operator Theory <functional_analysis/intro>`**
-- **{doc}`Measure Theory & Lebesgue Integration <measure_theory/intro>`**
+- **{doc}`Functional Analysis & Measure Theory (Syllabus) <functional_analysis/intro>`**
+- **{doc}`Basic Banach Space Theory <functional_analysis/basic_banach_spaces>`**
+- **{doc}`Bounded Linear Operators <functional_analysis/bounded_linear_operators>`**
+- **{doc}`Quotient Spaces & Baire Category Theorem <functional_analysis/quotient_spaces_baire_category>`**
+- **{doc}`Open Mapping & Closed Graph Theorems <functional_analysis/open_mapping_closed_graph>`**
+- **{doc}`Zorn's Lemma & Hahn-Banach Theorem <functional_analysis/zorns_lemma_hahn_banach>`**
+- **{doc}`The Double Dual & Outer Measure <functional_analysis/double_dual_outer_measure>`**
+- **{doc}`Sigma Algebras <measure_theory/sigma_algebras>`**
+- **{doc}`Lebesgue Measurable Subsets and Measure <measure_theory/lebesgue_measurable_subsets_measure>`**
+- **{doc}`Lebesgue Measurable Functions <measure_theory/lebesgue_measurable_functions>`**
+- **{doc}`Simple Functions <measure_theory/simple_functions>`**
 
 ---
 
 ## 🌐 Topology
-- **{doc}`Introduction <topology/intro>`**
+- **{doc}`Introduction to Topology <topology/intro>`**
 - **{doc}`Topological Spaces & Metric Spaces <topology/spaces>`**
+- **{doc}`Topological Surfaces & Singularities <topology/surfaces>`**
 - **{doc}`Manifolds & Dimensionality Reduction <topology/manifolds>`**
 - **{doc}`Topological Data Analysis (TDA) & Persistent Homology <topology/tda>`**
 - **{doc}`Advanced Topological Algorithms <topology/advanced_tda>`**
-- **{doc}`Topological Surfaces & Singularities <topology/surfaces>`**
 - **{doc}`Interdisciplinary Applications of Topology <topology/applications>`**
 
 ---

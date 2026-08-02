@@ -229,6 +229,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 
 
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
 <ul class="nav bd-sidenav">
@@ -621,20 +630,29 @@ Support me on Ko-fi
 <section id="functional-analysis-measure-theory">
 <h3>🌀 Functional Analysis &amp; Measure Theory<a class="headerlink" href="#functional-analysis-measure-theory" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/intro"><span class="doc">Functional Analysis &amp; Operator Theory</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/intro"><span class="doc">Measure Theory &amp; Lebesgue Integration</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/intro"><span class="doc">Functional Analysis &amp; Measure Theory (Syllabus)</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/basic_banach_spaces"><span class="doc">Basic Banach Space Theory</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/bounded_linear_operators"><span class="doc">Bounded Linear Operators</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/quotient_spaces_baire_category"><span class="doc">Quotient Spaces &amp; Baire Category Theorem</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/open_mapping_closed_graph"><span class="doc">Open Mapping &amp; Closed Graph Theorems</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/zorns_lemma_hahn_banach"><span class="doc">Zorn’s Lemma &amp; Hahn-Banach Theorem</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/double_dual_outer_measure"><span class="doc">The Double Dual &amp; Outer Measure</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/sigma_algebras"><span class="doc">Sigma Algebras</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/lebesgue_measurable_subsets_measure"><span class="doc">Lebesgue Measurable Subsets and Measure</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/lebesgue_measurable_functions"><span class="doc">Lebesgue Measurable Functions</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/simple_functions"><span class="doc">Simple Functions</span></a></strong></p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="topology">
 <h3>🌐 Topology<a class="headerlink" href="#topology" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/intro"><span class="doc">Introduction</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/intro"><span class="doc">Introduction to Topology</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/spaces"><span class="doc">Topological Spaces &amp; Metric Spaces</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/surfaces"><span class="doc">Topological Surfaces &amp; Singularities</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/manifolds"><span class="doc">Manifolds &amp; Dimensionality Reduction</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/tda"><span class="doc">Topological Data Analysis (TDA) &amp; Persistent Homology</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/advanced_tda"><span class="doc">Advanced Topological Algorithms</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/surfaces"><span class="doc">Topological Surfaces &amp; Singularities</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="book/intro.html#document-book/topology/applications"><span class="doc">Interdisciplinary Applications of Topology</span></a></strong></p></li>
 </ul>
 </section>
@@ -5943,372 +5961,868 @@ The minimum makespan is <strong>7</strong>.</p></li>
 </section>
 </div>
 <div class="toctree-wrapper compound">
-<span id="document-book/functional_analysis/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="functional-analysis-operator-theory">
-<h2>Functional Analysis &amp; Operator Theory<a class="headerlink" href="#functional-analysis-operator-theory" title="Permalink to this heading">#</a></h2>
-<p>Functional Analysis is the branch of mathematics that generalizes linear algebra from finite-dimensional vector spaces to infinite-dimensional spaces. It provides the rigorous mathematical framework for quantum mechanics, differential equations, and advanced machine learning models (such as kernel methods, Support Vector Machines, and Reproducing Kernel Hilbert Spaces).</p>
-<hr class="docutils" />
-<section id="lecture-1-basic-banach-space-theory">
-<h3>Lecture 1: Basic Banach Space Theory<a class="headerlink" href="#lecture-1-basic-banach-space-theory" title="Permalink to this heading">#</a></h3>
-<section id="normed-vector-spaces">
-<h4>Normed Vector Spaces<a class="headerlink" href="#normed-vector-spaces" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(K\)</span> (where <span class="math notranslate nohighlight">\(K = \mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>). A <strong>norm</strong> on <span class="math notranslate nohighlight">\(X\)</span> is a function <span class="math notranslate nohighlight">\(\|\cdot\|: X \to \mathbb{R}\)</span> satisfying three axioms for all <span class="math notranslate nohighlight">\(x, y \in X\)</span> and <span class="math notranslate nohighlight">\(\alpha \in K\)</span>:</p>
+<span id="document-book/functional_analysis/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="functional-analysis-measure-theory">
+<h2>Functional Analysis &amp; Measure Theory<a class="headerlink" href="#functional-analysis-measure-theory" title="Permalink to this heading">#</a></h2>
+<p>Functional Analysis generalizes linear algebra to infinite-dimensional spaces, while Measure Theory establishes a rigorous generalization of length, area, and volume. Together, they form the mathematical backbone of modern probability theory, kernel methods, optimization, and generative modeling in machine learning.</p>
+<p>This module is organized as a unified 10-lecture course:</p>
+<section id="module-curriculum">
+<h3>Module Curriculum<a class="headerlink" href="#module-curriculum" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Positive Definiteness</strong>: <span class="math notranslate nohighlight">\(\|x\| \ge 0\)</span>, and <span class="math notranslate nohighlight">\(\|x\| = 0\)</span> if and only if <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
-<li><p><strong>Absolute Homogeneity</strong>: <span class="math notranslate nohighlight">\(\|\alpha x\| = |\alpha| \|x\|\)</span>.</p></li>
-<li><p><strong>Triangle Inequality</strong>: <span class="math notranslate nohighlight">\(\|x + y\| \le \|x\| + \|y\|\)</span>.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/basic_banach_spaces"><span class="doc">Basic Banach Space Theory</span></a></strong>
+Introduces normed spaces, convergence, Cauchy sequences, completeness, and Banach spaces.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/bounded_linear_operators"><span class="doc">Bounded Linear Operators</span></a></strong>
+Discusses linear operators, boundedness, continuity, and the operator norm.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/quotient_spaces_baire_category"><span class="doc">Quotient Spaces &amp; Baire Category Theorem</span></a></strong>
+Covers quotient normed spaces, topological completeness, and the Uniform Boundedness Principle.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/open_mapping_closed_graph"><span class="doc">Open Mapping &amp; Closed Graph Theorems</span></a></strong>
+Details the open mapping theorem, bounded inverse theorem, and closed graph theorem.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/zorns_lemma_hahn_banach"><span class="doc">Zorn’s Lemma &amp; Hahn-Banach Theorem</span></a></strong>
+Explores partial orders, Zorn’s Lemma, and the Hahn-Banach extension theorem.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/functional_analysis/double_dual_outer_measure"><span class="doc">The Double Dual &amp; Outer Measure</span></a></strong>
+Bridges functional dual spaces and the Lebesgue outer measure of real subsets.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/sigma_algebras"><span class="doc">Sigma Algebras</span></a></strong>
+Covers <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras, Borel sets, and the prevention of measure paradoxes.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/lebesgue_measurable_subsets_measure"><span class="doc">Lebesgue Measurable Subsets and Measure</span></a></strong>
+Explores Carathéodory’s slicing condition, the Lebesgue measure, and complete null spaces.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/lebesgue_measurable_functions"><span class="doc">Lebesgue Measurable Functions</span></a></strong>
+Defines measurable functions, pointwise operations, and closure properties.</p></li>
+<li><p><strong><a class="reference internal" href="book/intro.html#document-book/measure_theory/simple_functions"><span class="doc">Simple Functions</span></a></strong>
+Covers step-like simple functions and constructs the Lebesgue integral.</p></li>
 </ol>
-<p>A vector space equipped with a norm is called a <strong>normed vector space</strong> <span class="math notranslate nohighlight">\((X, \|\cdot\|)\)</span>.</p>
-</section>
-<section id="completeness-and-banach-spaces">
-<h4>Completeness and Banach Spaces<a class="headerlink" href="#completeness-and-banach-spaces" title="Permalink to this heading">#</a></h4>
-<p>A sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> in a normed space <span class="math notranslate nohighlight">\(X\)</span> is a <strong>Cauchy sequence</strong> if for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists an integer <span class="math notranslate nohighlight">\(N\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\|x_n - x_m\| &lt; \epsilon \quad \text{for all } n, m \ge N\]</div>
-<p>A normed space <span class="math notranslate nohighlight">\(X\)</span> is <strong>complete</strong> if every Cauchy sequence in <span class="math notranslate nohighlight">\(X\)</span> converges to a limit that also lies within <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<ul class="simple">
-<li><p><strong>Banach Space</strong>: A complete normed vector space is called a <strong>Banach space</strong>.</p></li>
-<li><p><strong>Examples</strong>:</p>
-<ul>
-<li><p><strong>Finite-Dimensional</strong>: <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathbb{C}^n\)</span> are complete under any norm.</p></li>
-<li><p><strong>Sequence Spaces</strong>: <span class="math notranslate nohighlight">\(l^p\)</span> spaces (the set of sequences whose <span class="math notranslate nohighlight">\(p\)</span>-th power sums are finite) are Banach spaces under the norm <span class="math notranslate nohighlight">\(\|x\|_p = (\sum |x_i|^p)^{1/p}\)</span>.</p></li>
-<li><p><strong>Continuous Functions</strong>: <span class="math notranslate nohighlight">\(C([a,b])\)</span>, the space of continuous functions on an interval, is a Banach space under the supremum norm <span class="math notranslate nohighlight">\(\|f\|_\infty = \sup_{t \in [a,b]} |f(t)|\)</span>.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-2-bounded-linear-operators">
-<h3>Lecture 2: Bounded Linear Operators<a class="headerlink" href="#lecture-2-bounded-linear-operators" title="Permalink to this heading">#</a></h3>
-<p>A function <span class="math notranslate nohighlight">\(T: X \to Y\)</span> between two normed vector spaces is a <strong>linear operator</strong> if <span class="math notranslate nohighlight">\(T(\alpha x + \beta y) = \alpha Tx + \beta Ty\)</span> for all <span class="math notranslate nohighlight">\(x, y \in X\)</span> and scalars <span class="math notranslate nohighlight">\(\alpha, \beta\)</span>.</p>
-<section id="boundedness-and-continuity">
-<h4>Boundedness and Continuity<a class="headerlink" href="#boundedness-and-continuity" title="Permalink to this heading">#</a></h4>
-<p>A linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is <strong>bounded</strong> if there exists a constant <span class="math notranslate nohighlight">\(M \ge 0\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\|Tx\|_Y \le M \|x\|_X \quad \text{for all } x \in X\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: For a linear operator <span class="math notranslate nohighlight">\(T\)</span>, the following statements are equivalent:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is continuous at <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is continuous everywhere on <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is bounded.</p></li>
-</ol>
-</li>
-</ul>
-</section>
-<section id="the-operator-norm">
-<h4>The Operator Norm<a class="headerlink" href="#the-operator-norm" title="Permalink to this heading">#</a></h4>
-<p>For a bounded linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span>, the <strong>operator norm</strong> <span class="math notranslate nohighlight">\(\|T\|\)</span> is defined as the supremum of the ratio of the output norm to the input norm:</p>
-<div class="math notranslate nohighlight">
-\[\|T\| = \sup_{x \neq 0} \frac{\|Tx\|_Y}{\|x\|_X} = \sup_{\|x\|_X \le 1} \|Tx\|_Y\]</div>
-<p>The set of all bounded linear operators from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(Y\)</span> is denoted as <span class="math notranslate nohighlight">\(B(X, Y)\)</span>. If <span class="math notranslate nohighlight">\(Y\)</span> is a Banach space, then <span class="math notranslate nohighlight">\(B(X, Y)\)</span> is also a Banach space under the operator norm.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-3-quotient-spaces-the-baire-category-theorem">
-<h3>Lecture 3: Quotient Spaces &amp; The Baire Category Theorem<a class="headerlink" href="#lecture-3-quotient-spaces-the-baire-category-theorem" title="Permalink to this heading">#</a></h3>
-<section id="quotient-spaces">
-<h4>Quotient Spaces<a class="headerlink" href="#quotient-spaces" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a normed space and <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a closed subspace. The <strong>quotient space</strong> <span class="math notranslate nohighlight">\(X/M\)</span> is the set of equivalence classes (cosets) <span class="math notranslate nohighlight">\([x] = x + M\)</span> under the norm:</p>
-<div class="math notranslate nohighlight">
-\[\|[x]\| = \inf_{m \in M} \|x - m\|\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(X\)</span> is a Banach space, then the quotient space <span class="math notranslate nohighlight">\(X/M\)</span> is also a Banach space under this quotient norm.</p></li>
-</ul>
-</section>
-<section id="baire-category-theorem">
-<h4>Baire Category Theorem<a class="headerlink" href="#baire-category-theorem" title="Permalink to this heading">#</a></h4>
-<p>The Baire Category Theorem is a foundational topological property of complete metric spaces.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a complete metric space. If <span class="math notranslate nohighlight">\(X\)</span> is written as a countable union of closed subsets <span class="math notranslate nohighlight">\(X = \bigcup_{n=1}^\infty F_n\)</span>, then at least one of the subsets <span class="math notranslate nohighlight">\(F_n\)</span> must have a non-empty interior.</p></li>
-<li><p><strong>Intuition</strong>: A complete space cannot be constructed by gluing together a countable number of “thin” (nowhere dense) sets.</p></li>
-</ul>
-</section>
-<section id="uniform-boundedness-principle-banach-steinhaus-theorem">
-<h4>Uniform Boundedness Principle (Banach-Steinhaus Theorem)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus-theorem" title="Permalink to this heading">#</a></h4>
-<p>Using Baire’s theorem, we can prove that pointwise boundedness of a family of operators implies uniform boundedness.</p>
-<ul>
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a Banach space and <span class="math notranslate nohighlight">\(Y\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq B(X, Y)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(x \in X\)</span>, there exists <span class="math notranslate nohighlight">\(C_x \ge 0\)</span> such that:
-$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span>$
-then the operators are uniformly bounded:</p>
-<div class="math notranslate nohighlight">
-\[\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\]</div>
-</li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-4-the-open-mapping-closed-graph-theorems">
-<h3>Lecture 4: The Open Mapping &amp; Closed Graph Theorems<a class="headerlink" href="#lecture-4-the-open-mapping-closed-graph-theorems" title="Permalink to this heading">#</a></h3>
-<p>These theorems describe the properties of linear operators between Banach spaces.</p>
-<section id="the-open-mapping-theorem">
-<h4>The Open Mapping Theorem<a class="headerlink" href="#the-open-mapping-theorem" title="Permalink to this heading">#</a></h4>
-<p>A mapping <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is an <strong>open map</strong> if the image of every open set in <span class="math notranslate nohighlight">\(X\)</span> is an open set in <span class="math notranslate nohighlight">\(Y\)</span>.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be Banach spaces. If <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is a bounded linear operator that is surjective (onto), then <span class="math notranslate nohighlight">\(T\)</span> is an open mapping.</p></li>
-<li><p><strong>Bounded Inverse Theorem</strong>: If a bounded linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> between Banach spaces is bijective (one-to-one and onto), then its inverse <span class="math notranslate nohighlight">\(T^{-1}: Y \to X\)</span> is automatically bounded.</p></li>
-</ul>
-</section>
-<section id="the-closed-graph-theorem">
-<h4>The Closed Graph Theorem<a class="headerlink" href="#the-closed-graph-theorem" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\(T: X \to Y\)</span> be an operator. The <strong>graph</strong> of <span class="math notranslate nohighlight">\(T\)</span> is the set <span class="math notranslate nohighlight">\(\Gamma(T) = \{(x, Tx) \mid x \in X\} \subseteq X \times Y\)</span>. We say <span class="math notranslate nohighlight">\(T\)</span> has a <strong>closed graph</strong> if <span class="math notranslate nohighlight">\(\Gamma(T)\)</span> is a closed subspace of <span class="math notranslate nohighlight">\(X \times Y\)</span> under the product norm.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be Banach spaces. A linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is bounded if and only if its graph is closed.</p></li>
-<li><p><strong>Practical Use</strong>: To prove an operator is continuous, we only need to show that if <span class="math notranslate nohighlight">\(x_n \to 0\)</span> and <span class="math notranslate nohighlight">\(Tx_n \to y\)</span>, then <span class="math notranslate nohighlight">\(y = 0\)</span>.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-5-zorn-s-lemma-the-hahn-banach-theorem">
-<h3>Lecture 5: Zorn’s Lemma &amp; The Hahn-Banach Theorem<a class="headerlink" href="#lecture-5-zorn-s-lemma-the-hahn-banach-theorem" title="Permalink to this heading">#</a></h3>
-<p>The Hahn-Banach Theorem guarantees that there are “enough” continuous linear functionals on a normed space to separate points.</p>
-<section id="zorn-s-lemma">
-<h4>Zorn’s Lemma<a class="headerlink" href="#zorn-s-lemma" title="Permalink to this heading">#</a></h4>
-<p>Zorn’s Lemma is an axiom equivalent to the Axiom of Choice.</p>
-<ul class="simple">
-<li><p><strong>Poset</strong>: A set equipped with a partial order <span class="math notranslate nohighlight">\(\le\)</span>.</p></li>
-<li><p><strong>Chain</strong>: A subset of a poset where every pair of elements is comparable.</p></li>
-<li><p><strong>Theorem</strong>: If every chain in a poset <span class="math notranslate nohighlight">\(P\)</span> has an upper bound in <span class="math notranslate nohighlight">\(P\)</span>, then <span class="math notranslate nohighlight">\(P\)</span> contains at least one maximal element.</p></li>
-</ul>
-</section>
-<section id="the-hahn-banach-extension-theorem">
-<h4>The Hahn-Banach Extension Theorem<a class="headerlink" href="#the-hahn-banach-extension-theorem" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space and <span class="math notranslate nohighlight">\(p: X \to \mathbb{R}\)</span> be a sublinear functional (satisfying <span class="math notranslate nohighlight">\(p(x+y) \le p(x) + p(y)\)</span> and <span class="math notranslate nohighlight">\(p(\alpha x) = \alpha p(x)\)</span> for <span class="math notranslate nohighlight">\(\alpha \ge 0\)</span>).</p>
-<ul>
-<li><p><strong>Theorem (Real Vector Spaces)</strong>: Let <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a subspace, and <span class="math notranslate nohighlight">\(f: M \to \mathbb{R}\)</span> be a linear functional bounded by <span class="math notranslate nohighlight">\(p\)</span>:
-$<span class="math notranslate nohighlight">\(f(x) \le p(x) \quad \text{for all } x \in M\)</span><span class="math notranslate nohighlight">\(
-Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M$) such that:</p>
-<div class="math notranslate nohighlight">
-\[F(x) \le p(x) \quad \text{for all } x \in X\]</div>
-</li>
-<li><p><strong>Normed Spaces Corollary</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a subspace of a normed space <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(f \in M^*\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a functional <span class="math notranslate nohighlight">\(F \in X^*\)</span> such that the norms are preserved:
-$<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>$</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-6-part-1-the-double-dual-reflexivity">
-<h3>Lecture 6 (Part 1): The Double Dual &amp; Reflexivity<a class="headerlink" href="#lecture-6-part-1-the-double-dual-reflexivity" title="Permalink to this heading">#</a></h3>
-<section id="the-dual-space-x">
-<h4>The Dual Space (<span class="math notranslate nohighlight">\(X^*\)</span>)<a class="headerlink" href="#the-dual-space-x" title="Permalink to this heading">#</a></h4>
-<p>For a normed space <span class="math notranslate nohighlight">\(X\)</span>, the space of all bounded linear functionals <span class="math notranslate nohighlight">\(f: X \to K\)</span> is the <strong>dual space</strong> <span class="math notranslate nohighlight">\(X^* = B(X, K)\)</span>. Since the field <span class="math notranslate nohighlight">\(K\)</span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>) is complete, <span class="math notranslate nohighlight">\(X^*\)</span> is always a Banach space.</p>
-</section>
-<section id="the-double-dual-x">
-<h4>The Double Dual (<span class="math notranslate nohighlight">\(X^{**}\)</span>)<a class="headerlink" href="#the-double-dual-x" title="Permalink to this heading">#</a></h4>
-<p>The <strong>double dual</strong> (or bidual) <span class="math notranslate nohighlight">\(X^{**} = (X^*)^*\)</span> is the dual of <span class="math notranslate nohighlight">\(X^*\)</span>.</p>
-<p>There is a natural map called the <strong>canonical injection</strong> <span class="math notranslate nohighlight">\(J: X \to X^{**}\)</span> defined by evaluating a functional at a point <span class="math notranslate nohighlight">\(x\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[J(x)(f) = f(x) \quad \text{for all } f \in X^*\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: The canonical injection <span class="math notranslate nohighlight">\(J\)</span> is an isometric isomorphism (it preserves norms: <span class="math notranslate nohighlight">\(\|J(x)\|_{X^{**}} = \|x\|_X\)</span>).</p></li>
-<li><p><strong>Reflexive Spaces</strong>: If <span class="math notranslate nohighlight">\(J\)</span> is surjective (meaning <span class="math notranslate nohighlight">\(J(X) = X^{**}\)</span>), the Banach space <span class="math notranslate nohighlight">\(X\)</span> is said to be <strong>reflexive</strong>.</p></li>
-<li><p><strong>Examples</strong>: All Hilbert spaces and <span class="math notranslate nohighlight">\(L^p\)</span> spaces for <span class="math notranslate nohighlight">\(1 &lt; p &lt; \infty\)</span> are reflexive. The spaces <span class="math notranslate nohighlight">\(L^1\)</span> and <span class="math notranslate nohighlight">\(C([a,b])\)</span> are not reflexive.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<span id="document-book/measure_theory/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="measure-theory-lebesgue-integration">
-<h2>Measure Theory &amp; Lebesgue Integration<a class="headerlink" href="#measure-theory-lebesgue-integration" title="Permalink to this heading">#</a></h2>
-<p>Classical Riemann integration is sufficient for basic functions, but fails for highly discontinuous functions (such as the Dirichlet function). <strong>Measure Theory</strong> provides the rigorous generalization of length, area, and volume, underpinning modern Probability Theory and integration.</p>
-<hr class="docutils" />
-<section id="lecture-6-part-2-outer-measure">
-<h3>Lecture 6 (Part 2): Outer Measure<a class="headerlink" href="#lecture-6-part-2-outer-measure" title="Permalink to this heading">#</a></h3>
-<p>To measure the “size” of arbitrary subsets of real numbers, we introduce the concept of <strong>Outer Measure</strong>.</p>
-<section id="definition-of-outer-measure">
-<h4>Definition of Outer Measure<a class="headerlink" href="#definition-of-outer-measure" title="Permalink to this heading">#</a></h4>
-<p>The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(\mu^*: \mathcal{P}(\mathbb{R}) \to [0, \infty]\)</span> of a subset <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is the infimum of the sum of lengths of open intervals that cover <span class="math notranslate nohighlight">\(A\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\mu^*(A) = \inf \left\{ \sum_{n=1}^\infty (b_n - a_n) \mid A \subseteq \bigcup_{n=1}^\infty (a_n, b_n) \right\}\]</div>
-</section>
-<section id="properties-of-outer-measure">
-<h4>Properties of Outer Measure<a class="headerlink" href="#properties-of-outer-measure" title="Permalink to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p><strong>Empty Set</strong>: <span class="math notranslate nohighlight">\(\mu^*(\emptyset) = 0\)</span>.</p></li>
-<li><p><strong>Monotonicity</strong>: If <span class="math notranslate nohighlight">\(A \subseteq B\)</span>, then <span class="math notranslate nohighlight">\(\mu^*(A) \le \mu^*(B)\)</span>.</p></li>
-<li><p><strong>Countable Subadditivity</strong>: For any countable collection of sets <span class="math notranslate nohighlight">\(\{A_n\}\)</span>, the outer measure of their union is bounded by the sum of their individual outer measures:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\mu^*\left(\bigcup_{n=1}^\infty A_n\right) \le \sum_{n=1}^\infty \mu^*(A_n)\]</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-7-sigma-algebras-sigma-algebras">
-<h3>Lecture 7: Sigma Algebras (<span class="math notranslate nohighlight">\(\sigma\)</span>-algebras)<a class="headerlink" href="#lecture-7-sigma-algebras-sigma-algebras" title="Permalink to this heading">#</a></h3>
-<p>We cannot define a consistent measure on <em>all</em> subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> while preserving translation-invariance and countable additivity (due to Vitali sets). Therefore, we must restrict our measure to a collection of “well-behaved” sets called a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra.</p>
-<section id="definition-of-a-sigma-algebra">
-<h4>Definition of a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra<a class="headerlink" href="#definition-of-a-sigma-algebra" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a set. A collection <span class="math notranslate nohighlight">\(\Sigma\)</span> of subsets of <span class="math notranslate nohighlight">\(X\)</span> is a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> if it satisfies three axioms:</p>
-<ol class="arabic simple">
-<li><p><strong>Contains the Whole Set</strong>: <span class="math notranslate nohighlight">\(X \in \Sigma\)</span>.</p></li>
-<li><p><strong>Closed under Complement</strong>: If <span class="math notranslate nohighlight">\(A \in \Sigma\)</span>, then <span class="math notranslate nohighlight">\(A^c = X \setminus A \in \Sigma\)</span>.</p></li>
-<li><p><strong>Closed under Countable Unions</strong>: If <span class="math notranslate nohighlight">\(\{A_n\}_{n=1}^\infty \subseteq \Sigma\)</span>, then:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\bigcup_{n=1}^\infty A_n \in \Sigma\]</div>
-</section>
-<section id="the-borel-sigma-algebra-mathcal-b-mathbb-r">
-<h4>The Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra (<span class="math notranslate nohighlight">\(\mathcal{B}(\mathbb{R})\)</span>)<a class="headerlink" href="#the-borel-sigma-algebra-mathcal-b-mathbb-r" title="Permalink to this heading">#</a></h4>
-<p>The <strong>Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra that contains all open intervals <span class="math notranslate nohighlight">\((a, b)\)</span>. It includes all open sets, closed sets (as complements of open sets), countable intersections of open sets (<span class="math notranslate nohighlight">\(G_\delta\)</span> sets), and countable unions of closed sets (<span class="math notranslate nohighlight">\(F_\sigma\)</span> sets).</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-8-lebesgue-measurable-sets-measure">
-<h3>Lecture 8: Lebesgue Measurable Sets &amp; Measure<a class="headerlink" href="#lecture-8-lebesgue-measurable-sets-measure" title="Permalink to this heading">#</a></h3>
-<section id="caratheodory-s-condition">
-<h4>Carathéodory’s Condition<a class="headerlink" href="#caratheodory-s-condition" title="Permalink to this heading">#</a></h4>
-<p>To select the well-behaved subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we use Constantin Carathéodory’s slicing condition.</p>
-<p>A set <span class="math notranslate nohighlight">\(E \subseteq \mathbb{R}\)</span> is <strong>Lebesgue measurable</strong> if it splits any arbitrary “test set” <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> additively:</p>
-<div class="math notranslate nohighlight">
-\[\mu^*(A) = \mu^*(A \cap E) + \mu^*(A \cap E^c)\]</div>
-<p>The collection of all Lebesgue measurable sets forms a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra, denoted by <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>.</p>
-</section>
-<section id="the-lebesgue-measure-mu">
-<h4>The Lebesgue Measure (<span class="math notranslate nohighlight">\(\mu\)</span>)<a class="headerlink" href="#the-lebesgue-measure-mu" title="Permalink to this heading">#</a></h4>
-<p>When we restrict the outer measure <span class="math notranslate nohighlight">\(\mu^*\)</span> to the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of measurable sets <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, it is called the <strong>Lebesgue measure</strong> <span class="math notranslate nohighlight">\(\mu\)</span>. Unlike outer measure, the Lebesgue measure is <strong>countably additive</strong>:</p>
-<p>If <span class="math notranslate nohighlight">\(\{E_n\}_{n=1}^\infty\)</span> is a countable collection of pairwise disjoint measurable sets, then:</p>
-<div class="math notranslate nohighlight">
-\[\mu\left(\bigcup_{n=1}^\infty E_n\right) = \sum_{n=1}^\infty \mu(E_n)\]</div>
-<ul class="simple">
-<li><p><strong>Null Sets</strong>: A set <span class="math notranslate nohighlight">\(N\)</span> is a null set if <span class="math notranslate nohighlight">\(\mu^*(N) = 0\)</span>. Every subset of a null set is Lebesgue measurable (with measure 0), making the Lebesgue measure space complete.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-9-lebesgue-measurable-functions">
-<h3>Lecture 9: Lebesgue Measurable Functions<a class="headerlink" href="#lecture-9-lebesgue-measurable-functions" title="Permalink to this heading">#</a></h3>
-<p>In integration, we integrate functions. For a function to be integrable, it must map measurable sets to measurable sets.</p>
-<section id="definition-of-measurable-functions">
-<h4>Definition of Measurable Functions<a class="headerlink" href="#definition-of-measurable-functions" title="Permalink to this heading">#</a></h4>
-<p>Let <span class="math notranslate nohighlight">\((X, \Sigma)\)</span> be a measurable space. A function <span class="math notranslate nohighlight">\(f: X \to \overline{\mathbb{R}}\)</span> (where <span class="math notranslate nohighlight">\(\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty, \infty\}\)</span>) is <strong>measurable</strong> if the preimage of every open interval is a measurable set:</p>
-<div class="math notranslate nohighlight">
-\[f^{-1}((a, \infty)) = \{x \in X \mid f(x) &gt; a\} \in \Sigma \quad \text{for all } a \in \mathbb{R}\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is a sequence of measurable functions, then the functions <span class="math notranslate nohighlight">\(\inf f_n\)</span>, <span class="math notranslate nohighlight">\(\sup f_n\)</span>, <span class="math notranslate nohighlight">\(\liminf f_n\)</span>, and <span class="math notranslate nohighlight">\(\limsup f_n\)</span> are also measurable. If the pointwise limit <span class="math notranslate nohighlight">\(f(x) = \lim_{n \to \infty} f_n(x)\)</span> exists, then <span class="math notranslate nohighlight">\(f\)</span> is measurable.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-10-simple-functions-the-lebesgue-integral">
-<h3>Lecture 10: Simple Functions &amp; The Lebesgue Integral<a class="headerlink" href="#lecture-10-simple-functions-the-lebesgue-integral" title="Permalink to this heading">#</a></h3>
-<p>To construct the Lebesgue integral, we build it from the bottom up, starting with simple step-like functions.</p>
-<section id="simple-functions">
-<h4>Simple Functions<a class="headerlink" href="#simple-functions" title="Permalink to this heading">#</a></h4>
-<p>A <strong>simple function</strong> <span class="math notranslate nohighlight">\(\phi: X \to \mathbb{R}\)</span> is a real-valued function that takes only a finite number of distinct values. It can be written in its <strong>canonical representation</strong>:</p>
-<div class="math notranslate nohighlight">
-\[\phi(x) = \sum_{i=1}^n c_i \chi_{E_i}(x)\]</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(c_i\)</span> are distinct real numbers.</p></li>
-<li><p><span class="math notranslate nohighlight">\(E_i = \{x \in X \mid \phi(x) = c_i\}\)</span> are pairwise disjoint measurable sets.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\chi_{E_i}\)</span> is the <strong>indicator function</strong> of <span class="math notranslate nohighlight">\(E_i\)</span> (<span class="math notranslate nohighlight">\(\chi_{E_i}(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x \in E_i\)</span>, and <span class="math notranslate nohighlight">\(0\)</span> otherwise).</p></li>
-</ul>
-</section>
-<section id="the-lebesgue-integral-of-simple-functions">
-<h4>The Lebesgue Integral of Simple Functions<a class="headerlink" href="#the-lebesgue-integral-of-simple-functions" title="Permalink to this heading">#</a></h4>
-<p>The <strong>Lebesgue integral</strong> of a non-negative simple function <span class="math notranslate nohighlight">\(\phi\)</span> over a measurable set <span class="math notranslate nohighlight">\(E\)</span> is defined as:</p>
-<div class="math notranslate nohighlight">
-\[\int_{E} \phi \, d\mu = \sum_{i=1}^n c_i \mu(E_i \cap E)\]</div>
-<ul>
-<li><p><strong>Constructing the General Lebesgue Integral</strong>: For any non-negative measurable function <span class="math notranslate nohighlight">\(f\)</span>, its Lebesgue integral is defined as the supremum of the integrals of all simple functions bounded by <span class="math notranslate nohighlight">\(f\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\int_{E} f \, d\mu = \sup \left\{ \int_{E} \phi \, d\mu \mid 0 \le \phi \le f, \, \phi \text{ is simple} \right\}\]</div>
-</li>
-</ul>
-</section>
 </section>
 <hr class="docutils" />
 <section id="connection-to-machine-learning-deep-learning-ml-dl">
 <h3>Connection to Machine Learning &amp; Deep Learning (ML/DL)<a class="headerlink" href="#connection-to-machine-learning-deep-learning-ml-dl" title="Permalink to this heading">#</a></h3>
-<p>While you will rarely need to compute a Lebesgue integral by hand in practical Machine Learning or Deep Learning pipelines, the <strong>entire mathematical framework of ML/DL relies on this foundation</strong> to remain theoretically rigorous.</p>
-<p>Here is how Lebesgue Measure &amp; Integration underpins modern ML/DL:</p>
-<section id="probability-theory-probability-density-functions-pdfs">
-<h4>1. Probability Theory &amp; Probability Density Functions (PDFs)<a class="headerlink" href="#probability-theory-probability-density-functions-pdfs" title="Permalink to this heading">#</a></h4>
+<p>While you will rarely need to compute a Lebesgue integral or prove Banach space operators by hand in day-to-day ML engineering, <strong>almost all theoretical foundations of ML and DL are built upon this mathematics</strong>.</p>
+<section id="reproducing-kernel-hilbert-spaces-rkhs-kernel-methods">
+<h4>1. Reproducing Kernel Hilbert Spaces (RKHS) &amp; Kernel Methods<a class="headerlink" href="#reproducing-kernel-hilbert-spaces-rkhs-kernel-methods" title="Permalink to this heading">#</a></h4>
+<p>In models like Support Vector Machines (SVMs), Gaussian Processes (GPs), and Kernel PCA, we analyze functions as vectors in an infinite-dimensional feature space.</p>
 <ul class="simple">
-<li><p><strong>Probability as a Lebesgue Measure:</strong> A probability space <span class="math notranslate nohighlight">\((\Omega, \mathcal{F}, P)\)</span> is formally a measure space with <span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span>. The Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span> provides the rigorous foundation for defining “volume” or “area” in <span class="math notranslate nohighlight">\(d\)</span>-dimensional space <span class="math notranslate nohighlight">\(\mathbb{R}^d\)</span>.</p></li>
-<li><p><strong>Radon-Nikodym Theorem:</strong> When we state that <span class="math notranslate nohighlight">\(p(x)\)</span> is the probability density function (PDF) of a continuous random variable <span class="math notranslate nohighlight">\(X\)</span>, it formally means that the probability measure <span class="math notranslate nohighlight">\(P\)</span> is absolutely continuous with respect to the Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span>. The density <span class="math notranslate nohighlight">\(p = \frac{dP}{d\lambda}\)</span> is the <strong>Radon-Nikodym derivative</strong>.</p></li>
-<li><p><strong>Probability at a Single Point is Zero:</strong> Lebesgue theory explains why <span class="math notranslate nohighlight">\(P(X = x) = 0\)</span> for a continuous random variable (since a single point has a Lebesgue measure of 0), yet the union of these points can still accumulate to a total probability of 1.</p></li>
+<li><p><strong>Hilbert Space (<span class="math notranslate nohighlight">\(H\)</span>):</strong> A complete vector space with an inner product.</p></li>
+<li><p><strong>Riesz Representation Theorem:</strong> For any bounded linear evaluation functional <span class="math notranslate nohighlight">\(L_x(f) = f(x)\)</span>, there exists a unique function <span class="math notranslate nohighlight">\(k_x \in H\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \langle f, k_x \rangle_H\)</span>. This underpins the <strong>Kernel Trick</strong>: <span class="math notranslate nohighlight">\(k(x, y) = \langle k_x, k_y \rangle_H\)</span>.</p></li>
+<li><p><strong>The Representer Theorem:</strong> Proves that the minimizer of any regularized empirical risk function over an infinite-dimensional RKHS lies in a finite-dimensional span of kernel evaluations: <span class="math notranslate nohighlight">\(f^*(x) = \sum_{i=1}^N \alpha_i k(x_i, x)\)</span>, making optimization computationally feasible.</p></li>
 </ul>
 </section>
-<section id="expectation-and-loss-functions">
-<h4>2. Expectation and Loss Functions<a class="headerlink" href="#expectation-and-loss-functions" title="Permalink to this heading">#</a></h4>
-<p>Every loss function in ML/DL (e.g., MSE, Cross-Entropy, or KL-Divergence) is an expectation:</p>
+<section id="universal-approximation-theorem-hahn-banach-application">
+<h4>2. Universal Approximation Theorem (Hahn-Banach Application)<a class="headerlink" href="#universal-approximation-theorem-hahn-banach-application" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Cybenko’s Proof (1989):</strong> Proves that single-hidden-layer neural networks can approximate any continuous function on a compact subset of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p></li>
+<li><p>The proof uses the <strong>Hahn-Banach Extension Theorem</strong> to show that if the span of neural network functions were not dense in the Banach space of continuous functions <span class="math notranslate nohighlight">\(C(K)\)</span> (equipped with the supremum norm), a non-zero linear functional would vanish on all network outputs. Cybenko proved no such non-zero functional exists, concluding that the network functions are indeed dense in <span class="math notranslate nohighlight">\(C(K)\)</span>.</p></li>
+</ul>
+</section>
+<section id="probability-densities-radon-nikodym-expectation-lebesgue-integration">
+<h4>3. Probability Densities (Radon-Nikodym) &amp; Expectation (Lebesgue Integration)<a class="headerlink" href="#probability-densities-radon-nikodym-expectation-lebesgue-integration" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Radon-Nikodym Theorem:</strong> A probability density function (PDF) <span class="math notranslate nohighlight">\(p(x)\)</span> is defined as the Radon-Nikodym derivative of a probability measure <span class="math notranslate nohighlight">\(P\)</span> with respect to the Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span>: <span class="math notranslate nohighlight">\(p = \frac{dP}{d\lambda}\)</span>. This is only possible because the probability measure is absolutely continuous with respect to the Lebesgue measure.</p></li>
+<li><p><strong>Lebesgue Integral:</strong> Expectation is defined via the Lebesgue integral:</p>
 <div class="math notranslate nohighlight">
-\[\mathcal{L}(\theta) = \mathbb{E}_{(x,y) \sim p_{data}} [\ell(f_\theta(x), y)] = \int_{\Omega} \ell(f_\theta(x), y) \, dP(x)\]</div>
-<p>This integral is formally a <strong>Lebesgue integral</strong>. Utilizing the Lebesgue integral allows us to:</p>
-<ul class="simple">
-<li><p>Unify the mathematical treatment of <strong>discrete</strong>, <strong>continuous</strong>, or <strong>mixed</strong> random variables under a single integral notation (which standard Riemann integration cannot do).</p></li>
-<li><p>Guarantee the existence and completeness of expectations in generalized representation spaces.</p></li>
+\[\mathbb{E}[X] = \int_\Omega X \, dP\]</div>
+<p>This unifies discrete and continuous variables under a single, rigorous notation, guaranteeing expectation limits exist and behave predictably.</p>
+</li>
 </ul>
 </section>
-<section id="interchanging-integrals-and-derivatives-lebesgue-dominated-convergence-theorem">
-<h4>3. Interchanging Integrals and Derivatives (Lebesgue Dominated Convergence Theorem)<a class="headerlink" href="#interchanging-integrals-and-derivatives-lebesgue-dominated-convergence-theorem" title="Permalink to this heading">#</a></h4>
-<p>When training neural networks using Gradient Descent, we compute the gradient of the loss function with respect to the network parameters <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<section id="gradient-descent-lebesgue-dominated-convergence-dct">
+<h4>4. Gradient Descent &amp; Lebesgue Dominated Convergence (DCT)<a class="headerlink" href="#gradient-descent-lebesgue-dominated-convergence-dct" title="Permalink to this heading">#</a></h4>
+<p>During neural network training, we swap the order of differentiation (gradient) and integration (expectation):</p>
 <div class="math notranslate nohighlight">
-\[\nabla_\theta \mathbb{E}[L(x, \theta)] = \nabla_\theta \int L(x, \theta) \, dp(x) \stackrel{?}{=} \int \nabla_\theta L(x, \theta) \, dp(x)\]</div>
-<p>Pushing the gradient operator <span class="math notranslate nohighlight">\(\nabla_\theta\)</span> <strong>inside</strong> the integral <span class="math notranslate nohighlight">\(\int\)</span> is not always mathematically valid. The <strong>Lebesgue Dominated Convergence Theorem (DCT)</strong> provides the sufficient conditions to perform this interchange. This theorem serves as the theoretical backbone for:</p>
+\[\nabla_\theta \mathbb{E}[L(x, \theta)] = \nabla_\theta \int L(x, \theta) \, dp(x) = \int \nabla_\theta L(x, \theta) \, dp(x)\]</div>
+<p>The <strong>Lebesgue Dominated Convergence Theorem (DCT)</strong> provides the mathematical justification for this swap. It is the core assumption behind <strong>Backpropagation</strong>, the <strong>Reparameterization Trick</strong> in VAEs, and <strong>Policy Gradients</strong> in Reinforcement Learning.</p>
+</section>
+<section id="almost-everywhere-a-e-differentiability-of-relu">
+<h4>5. “Almost Everywhere” (a.e.) Differentiability of ReLU<a class="headerlink" href="#almost-everywhere-a-e-differentiability-of-relu" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Backpropagation through expectation-based layers.</p></li>
-<li><p>The <strong>Reparameterization Trick</strong> in Variational Autoencoders (VAEs).</p></li>
-<li><p>Policy Gradient methods in Reinforcement Learning (such as the REINFORCE algorithm).</p></li>
+<li><p>Many activation functions like <strong>ReLU</strong> (<span class="math notranslate nohighlight">\(f(x) = \max(0, x)\)</span>) are not differentiable at <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
+<li><p>Because a single point has a Lebesgue measure of 0, ReLU is differentiable <em>almost everywhere</em> (a.e.). Measure theory guarantees that gradient descent will not be disrupted by these isolated non-differentiable points.</p></li>
 </ul>
 </section>
-<section id="l-p-function-spaces-and-regularization">
-<h4>4. <span class="math notranslate nohighlight">\(L^p\)</span> Function Spaces and Regularization<a class="headerlink" href="#l-p-function-spaces-and-regularization" title="Permalink to this heading">#</a></h4>
-<p>In ML, the function space <span class="math notranslate nohighlight">\(L^p(\Omega, \mu)\)</span>—defined via the Lebesgue integral—plays a central role:</p>
-<ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(L^2\)</span> Space (Hilbert Space):</strong> Serves as the foundation for <strong>Kernel Methods</strong> (Support Vector Machines, Gaussian Processes) and <strong>Reproducing Kernel Hilbert Spaces (RKHS)</strong>.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(L^1\)</span> and <span class="math notranslate nohighlight">\(L^2\)</span> Regularization (Lasso &amp; Ridge):</strong> The size of a function <span class="math notranslate nohighlight">\(f\)</span> or parameter vector <span class="math notranslate nohighlight">\(w\)</span> is measured using <span class="math notranslate nohighlight">\(L^p\)</span> norms:</p></li>
-</ul>
+</section>
+</section>
+<span id="document-book/functional_analysis/basic_banach_spaces"></span><section class="tex2jax_ignore mathjax_ignore" id="basic-banach-space-theory">
+<h2>Basic Banach Space Theory<a class="headerlink" href="#basic-banach-space-theory" title="Permalink to this heading">#</a></h2>
+<p>This lecture introduces the foundational concepts of normed spaces, convergence, completeness, and infinite-dimensional vector spaces.</p>
+<hr class="docutils" />
+<section id="infinite-dimensional-vector-spaces">
+<h3>1. Infinite-Dimensional Vector Spaces<a class="headerlink" href="#infinite-dimensional-vector-spaces" title="Permalink to this heading">#</a></h3>
+<p>Unlike calculus and linear algebra on <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, which deal with finitely many variables, functional analysis aims to solve equations in spaces of functions, which are infinite-dimensional.</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(\mathbb{K}\)</span> (either <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>).</p>
+<ul>
+<li><p><strong>Definition</strong>: A vector space <span class="math notranslate nohighlight">\(V\)</span> is <strong>finite-dimensional</strong> if every linearly independent set in <span class="math notranslate nohighlight">\(V\)</span> is finite. That is, for all subsets <span class="math notranslate nohighlight">\(E \subseteq V\)</span> such that:</p>
 <div class="math notranslate nohighlight">
-\[\Vert f \Vert_{L^p} = \left( \int |f(x)|^p \, d\mu(x) \right)^{1/p}\]</div>
-<ul class="simple">
-<li><p><strong>“Almost Everywhere” (a.e.) Differentiability:</strong> In Deep Learning, activation functions like <strong>ReLU</strong> (<span class="math notranslate nohighlight">\(f(x) = \max(0, x)\)</span>) are not differentiable at <span class="math notranslate nohighlight">\(x = 0\)</span>. However, since the point <span class="math notranslate nohighlight">\(x=0\)</span> has a Lebesgue measure of 0, ReLU is differentiable <em>almost everywhere</em> (a.e.). This explains why Stochastic Gradient Descent (SGD) works perfectly despite the lack of differentiability at isolated points.</p></li>
-</ul>
-</section>
-<section id="advanced-generative-models-gans-diffusion-optimal-transport">
-<h4>5. Advanced Generative Models (GANs, Diffusion, Optimal Transport)<a class="headerlink" href="#advanced-generative-models-gans-diffusion-optimal-transport" title="Permalink to this heading">#</a></h4>
-<p>Modern generative modeling heavily leverages Lebesgue measure theory:</p>
-<ul class="simple">
-<li><p><strong>Wasserstein GAN (WGAN):</strong> Uses the Earth Mover’s Distance (Wasserstein Distance) to measure the distance between two probability distributions. This distance is defined using Lebesgue integration and the theory of <strong>Optimal Transport</strong>.</p></li>
-<li><p><strong>Continuous-time Diffusion Models &amp; SDEs:</strong> Modern score-based diffusion models simulate data generation using Stochastic Differential Equations (SDEs), where stochastic integration (Itô/Stratonovich calculus) is built directly on Lebesgue-Stieltjes integration.</p></li>
+\[\sum_{i=1}^N a_i v_i = 0 \implies a_1 = a_2 = \cdots = a_N = 0 \quad \text{for all } v_1, \dots, v_N \in E\]</div>
+<p><span class="math notranslate nohighlight">\(E\)</span> must have a finite cardinality. <span class="math notranslate nohighlight">\(V\)</span> is <strong>infinite-dimensional</strong> if it is not finite-dimensional.</p>
+</li>
+<li><p><strong>Example</strong>: The space <span class="math notranslate nohighlight">\(C([0, 1])\)</span> of continuous functions from <span class="math notranslate nohighlight">\([0, 1]\)</span> to <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> is infinite-dimensional. To see this, consider the set of monomials:</p>
+<div class="math notranslate nohighlight">
+\[E = \{f_n(x) = x^n \mid n \in \mathbb{Z}_{\ge 0}\}\]</div>
+<p>This set is linearly independent and contains infinitely many elements.</p>
+</li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="summary-lebesgue-in-ml-dl">
-<h4>Summary: Lebesgue in ML/DL<a class="headerlink" href="#summary-lebesgue-in-ml-dl" title="Permalink to this heading">#</a></h4>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Lebesgue Concept</p></th>
-<th class="head text-left"><p>Application in ML/DL</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p><strong>Lebesgue Measure / Integration</strong></p></td>
-<td class="text-left"><p>Defines PDFs and computes expectations <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p><strong>Dominated Convergence Theorem (DCT)</strong></p></td>
-<td class="text-left"><p>Justifies interchanging <span class="math notranslate nohighlight">\(\nabla\)</span> and <span class="math notranslate nohighlight">\(\int\)</span> in Gradient Descent, VAEs, and RL</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p><strong>Measure 0 / Almost Everywhere (a.e.)</strong></p></td>
-<td class="text-left"><p>Justifies differentiability of ReLU, Leaky ReLU, etc.</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p><strong><span class="math notranslate nohighlight">\(L^p\)</span> Spaces / RKHS</strong></p></td>
-<td class="text-left"><p>Kernel Methods, Loss functions, and Regularization (<span class="math notranslate nohighlight">\(L^1, L^2\)</span>)</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p><strong>Radon-Nikodym Derivative</strong></p></td>
-<td class="text-left"><p>Calculates KL-Divergence, Likelihood Ratios, and Loss in GANs/Diffusion</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>In short, <strong>while Riemann integration is the tool of choice for classical calculations, Lebesgue integration is the mathematical language of machine learning theory, optimization, and probability.</strong></p>
+<section id="norms-and-inducing-metrics">
+<h3>2. Norms and Inducing Metrics<a class="headerlink" href="#norms-and-inducing-metrics" title="Permalink to this heading">#</a></h3>
+<p>To perform analysis on infinite-dimensional spaces, we need a way to measure distance.</p>
+<ul>
+<li><p><strong>Definition</strong>: A <strong>norm</strong> on a vector space <span class="math notranslate nohighlight">\(V\)</span> is a function <span class="math notranslate nohighlight">\(\|\cdot\|: V \to [0, \infty)\)</span> satisfying:</p>
+<ol class="arabic simple">
+<li><p><strong>Positive Definiteness</strong>: <span class="math notranslate nohighlight">\(\|v\| = 0\)</span> if and only if <span class="math notranslate nohighlight">\(v = 0\)</span>.</p></li>
+<li><p><strong>Absolute Homogeneity</strong>: <span class="math notranslate nohighlight">\(\|\lambda v\| = |\lambda| \|v\|\)</span> for all <span class="math notranslate nohighlight">\(v \in V\)</span> and <span class="math notranslate nohighlight">\(\lambda \in \mathbb{K}\)</span>.</p></li>
+<li><p><strong>Triangle Inequality</strong>: <span class="math notranslate nohighlight">\(\|v_1 + v_2\| \le \|v_1\| + \|v_2\|\)</span> for all <span class="math notranslate nohighlight">\(v_1, v_2 \in V\)</span>.</p></li>
+</ol>
+<p>A <strong>seminorm</strong> satisfies properties (2) and (3), but not necessarily (1). A vector space equipped with a norm is called a <strong>normed space</strong>.</p>
+</li>
+<li><p><strong>Proposition</strong>: A norm <span class="math notranslate nohighlight">\(\|\cdot\|\)</span> on <span class="math notranslate nohighlight">\(V\)</span> induces a metric <span class="math notranslate nohighlight">\(d(v, w) = \|v - w\|\)</span> on <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>Proof</strong>:</p>
+<ol class="arabic">
+<li><p>Definiteness: <span class="math notranslate nohighlight">\(d(v, w) = \|v - w\| = 0 \iff v - w = 0 \iff v = w\)</span>.</p></li>
+<li><p>Symmetry: <span class="math notranslate nohighlight">\(d(v, w) = \|v - w\| = \|(-1)(w - v)\| = |-1| \cdot \|w - v\| = d(w, v)\)</span>.</p></li>
+<li><p>Triangle Inequality: For all <span class="math notranslate nohighlight">\(u, v, w \in V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[d(u, w) = \|u - w\| = \|(u - v) + (v - w)\| \le \|u - v\| + \|v - w\| = d(u, v) + d(v, w)\]</div>
+</li>
+</ol>
+</li>
+<li><p><strong>Examples in Finite Dimensions</strong>: On <span class="math notranslate nohighlight">\(\mathbb{K}^n\)</span>, we define the <span class="math notranslate nohighlight">\(l^p\)</span> norm for <span class="math notranslate nohighlight">\(1 \le p &lt; \infty\)</span> and the <span class="math notranslate nohighlight">\(l^\infty\)</span> norm as:</p>
+<div class="math notranslate nohighlight">
+\[\|x\|_p = \left( \sum_{i=1}^n |x_i|^p \right)^{1/p}, \quad \|x\|_\infty = \max_{1 \le i \le n} |x_i|\]</div>
+<p>These norms define different geometric unit balls (spherical, diamond, or square), but they are topologically equivalent.</p>
+</li>
+</ul>
 </section>
+<hr class="docutils" />
+<section id="completeness-of-c-infty-x-and-banach-spaces">
+<h3>3. Completeness of <span class="math notranslate nohighlight">\(C_\infty(X)\)</span> and Banach Spaces<a class="headerlink" href="#completeness-of-c-infty-x-and-banach-spaces" title="Permalink to this heading">#</a></h3>
+<p>Completeness ensures that Cauchy sequences converge to a limit inside the space.</p>
+<ul>
+<li><p><strong>Definition</strong>: A normed space is a <strong>Banach space</strong> if it is complete with respect to the metric induced by its norm.</p></li>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a metric space. The space <span class="math notranslate nohighlight">\(C_\infty(X)\)</span> of all bounded, continuous functions <span class="math notranslate nohighlight">\(u: X \to \mathbb{C}\)</span> equipped with the supremum norm:</p>
+<div class="math notranslate nohighlight">
+\[\|u\|_\infty = \sup_{x \in X} |u(x)|\]</div>
+<p>is a Banach space.</p>
+<p><strong>Proof</strong>:
+Let <span class="math notranslate nohighlight">\(\{u_n\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(C_\infty(X)\)</span>. We must show it converges to a limit <span class="math notranslate nohighlight">\(u \in C_\infty(X)\)</span>.</p>
+<p>First, the sequence is bounded. Since it is Cauchy, choose <span class="math notranslate nohighlight">\(N_0\)</span> such that for all <span class="math notranslate nohighlight">\(n, m \ge N_0\)</span>, <span class="math notranslate nohighlight">\(\|u_n - u_m\|_\infty &lt; 1\)</span>. Thus, for all <span class="math notranslate nohighlight">\(n \ge N_0\)</span>, <span class="math notranslate nohighlight">\(\|u_n\|_\infty \le \|u_{N_0}\|_\infty + 1\)</span>. The finite set <span class="math notranslate nohighlight">\(\{u_1, \dots, u_{N_0-1}\}\)</span> is also bounded. So there exists <span class="math notranslate nohighlight">\(B &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\|u_n\|_\infty \le B\)</span> for all <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+<p>Second, define a pointwise limit. For any fixed <span class="math notranslate nohighlight">\(x \in X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[|u_n(x) - u_m(x)| \le \|u_n - u_m\|_\infty\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is Cauchy, <span class="math notranslate nohighlight">\(\{u_n(x)\}\)</span> is a Cauchy sequence of complex numbers. By the completeness of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>, the limit exists, allowing us to define:</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \lim_{n \to \infty} u_n(x)\]</div>
+<p>This limit function is bounded because <span class="math notranslate nohighlight">\(|u(x)| = \lim_{n\to\infty} |u_n(x)| \le B\)</span>, hence <span class="math notranslate nohighlight">\(\sup_x |u(x)| \le B\)</span>.</p>
+<p>Third, show uniform convergence and continuity. Fix <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is Cauchy, choose <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(\|u_n - u_m\|_\infty &lt; \epsilon / 2\)</span> for all <span class="math notranslate nohighlight">\(n, m \ge N\)</span>. For any <span class="math notranslate nohighlight">\(x \in X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[|u_n(x) - u_m(x)| &lt; \frac{\epsilon}{2} \quad \text{for all } n, m \ge N\]</div>
+<p>Taking the limit as <span class="math notranslate nohighlight">\(m \to \infty\)</span> yields:</p>
+<div class="math notranslate nohighlight">
+\[|u_n(x) - u(x)| \le \frac{\epsilon}{2} &lt; \epsilon \quad \text{for all } n \ge N\]</div>
+<p>Taking the supremum over <span class="math notranslate nohighlight">\(x \in X\)</span>, we get <span class="math notranslate nohighlight">\(\|u_n - u\|_\infty \to 0\)</span>, meaning <span class="math notranslate nohighlight">\(u_n\)</span> converges to <span class="math notranslate nohighlight">\(u\)</span> uniformly. Since the uniform limit of continuous functions is continuous, <span class="math notranslate nohighlight">\(u \in C_\infty(X)\)</span>, and <span class="math notranslate nohighlight">\(C_\infty(X)\)</span> is complete.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-robustness-adversarial-training-under-banach-norms">
+<h3>4. Connection to ML/DL: Robustness &amp; Adversarial Training under Banach Norms<a class="headerlink" href="#connection-to-ml-dl-robustness-adversarial-training-under-banach-norms" title="Permalink to this heading">#</a></h3>
+<p>In machine learning, the robustness of a model <span class="math notranslate nohighlight">\(f_\theta: \mathbb{R}^d \to \mathbb{R}\)</span> against adversarial attacks is analyzed by considering perturbations under different Banach norms.</p>
+<p>An adversarial attack seeks to find a perturbation <span class="math notranslate nohighlight">\(\delta\)</span> that maximizes the loss:</p>
+<div class="math notranslate nohighlight">
+\[\max_{\|\delta\| \le \epsilon} \mathcal{L}(f_\theta(x + \delta), y)\]</div>
+<p>The geometry of the adversarial perturbation depends directly on the chosen norm <span class="math notranslate nohighlight">\(\|\cdot\|_p\)</span>:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(L^\infty\)</span> Robustness (Supremum Norm)</strong>: Perturbations are bounded such that <span class="math notranslate nohighlight">\(\|\delta\|_\infty \le \epsilon\)</span>. This means every single input feature (e.g., pixel) can be changed independently by at most <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(L^2\)</span> Robustness (Euclidean Norm)</strong>: Perturbations satisfy <span class="math notranslate nohighlight">\(\|\delta\|_2 \le \epsilon\)</span>. This bounds the total energy of the perturbation, allowing larger changes in a few directions but constraining the collective vector length.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(L^1\)</span> Robustness (Sparsity)</strong>: Bounded by <span class="math notranslate nohighlight">\(\|\delta\|_1 \le \epsilon\)</span>. This encourages sparse perturbations where only a few features are allowed to change, but those changes can be relatively large.</p></li>
+</ul>
+<p>Adversarial training solves a minimax optimization problem:</p>
+<div class="math notranslate nohighlight">
+\[\min_\theta \mathbb{E}_{(x,y)} \left[ \max_{\|\delta\| \le \epsilon} \mathcal{L}(f_\theta(x + \delta), y) \right]\]</div>
+<p>The choice of the Banach space norm determines the dual norm needed to calculate the worst-case gradient direction using the linear approximation:</p>
+<div class="math notranslate nohighlight">
+\[\delta^* = \arg\max_{\|\delta\| \le \epsilon} \delta^T \nabla_x \mathcal{L}\]</div>
+<p>which is given by the dual norm dual projection (e.g., sign of the gradient for <span class="math notranslate nohighlight">\(L^\infty\)</span>, normalized gradient for <span class="math notranslate nohighlight">\(L^2\)</span>, and one-hot direction of the maximum coordinate for <span class="math notranslate nohighlight">\(L^1\)</span>).</p>
+</section>
+</section>
+<span id="document-book/functional_analysis/bounded_linear_operators"></span><section class="tex2jax_ignore mathjax_ignore" id="bounded-linear-operators">
+<h2>Bounded Linear Operators<a class="headerlink" href="#bounded-linear-operators" title="Permalink to this heading">#</a></h2>
+<p>This lecture covers the equivalence of completeness and absolute summability in normed spaces, the properties of bounded linear operators, and the operator norm.</p>
+<hr class="docutils" />
+<section id="absolute-summability-and-completeness">
+<h3>1. Absolute Summability and Completeness<a class="headerlink" href="#absolute-summability-and-completeness" title="Permalink to this heading">#</a></h3>
+<p>In real analysis, absolute convergence of a series implies convergence. In general normed spaces, this property characterizes completeness.</p>
+<ul>
+<li><p><strong>Definition</strong>: Let <span class="math notranslate nohighlight">\(\{v_n\}_{n=1}^\infty\)</span> be a sequence in a normed space <span class="math notranslate nohighlight">\(V\)</span>. The series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty v_n\)</span> is:</p>
+<ul class="simple">
+<li><p><strong>Summable</strong> if the sequence of partial sums <span class="math notranslate nohighlight">\(s_m = \sum_{n=1}^m v_n\)</span> converges in <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p><strong>Absolutely Summable</strong> if the series of norms <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \|v_n\|\)</span> converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Theorem</strong>: A normed vector space <span class="math notranslate nohighlight">\(V\)</span> is a Banach space if and only if every absolutely summable series is summable.</p>
+<p><strong>Proof</strong>:
+<span class="math notranslate nohighlight">\((\implies)\)</span> Suppose <span class="math notranslate nohighlight">\(V\)</span> is Banach. Let <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty v_n\)</span> be absolutely summable, meaning <span class="math notranslate nohighlight">\(S = \sum_{n=1}^\infty \|v_n\| &lt; \infty\)</span>. For <span class="math notranslate nohighlight">\(m &gt; k\)</span>, by the triangle inequality:</p>
+<div class="math notranslate nohighlight">
+\[\|s_m - s_k\| = \left\| \sum_{n=k+1}^m v_n \right\| \le \sum_{n=k+1}^m \|v_n\|\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \|v_n\|\)</span> converges, the tail sum goes to <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(k \to \infty\)</span>. Thus <span class="math notranslate nohighlight">\(\{s_m\}\)</span> is Cauchy, and since <span class="math notranslate nohighlight">\(V\)</span> is complete, <span class="math notranslate nohighlight">\(\{s_m\}\)</span> converges.</p>
+<p><span class="math notranslate nohighlight">\((\impliedby)\)</span> Suppose every absolutely summable series in <span class="math notranslate nohighlight">\(V\)</span> is summable. Let <span class="math notranslate nohighlight">\(\{v_n\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(V\)</span>. We construct a subsequence <span class="math notranslate nohighlight">\(\{v_{n_k}\}\)</span> that converges. For each <span class="math notranslate nohighlight">\(k \in \mathbb{N}\)</span>, choose <span class="math notranslate nohighlight">\(N_k\)</span> such that <span class="math notranslate nohighlight">\(\|v_n - v_m\| &lt; 2^{-k}\)</span> for all <span class="math notranslate nohighlight">\(n, m \ge N_k\)</span>. Define <span class="math notranslate nohighlight">\(n_k = \sum_{j=1}^k N_j\)</span>, which forms an increasing sequence with <span class="math notranslate nohighlight">\(n_k \ge N_k\)</span>.</p>
+<p>Then:</p>
+<div class="math notranslate nohighlight">
+\[\|v_{n_{k+1}} - v_{n_k}\| &lt; 2^{-k}\]</div>
+<p>The series <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty (v_{n_{k+1}} - v_{n_k})\)</span> is absolutely summable because <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty 2^{-k} = 1 &lt; \infty\)</span>. By assumption, this series converges. Its partial sums are:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{m-1} (v_{n_{k+1}} - v_{n_k}) = v_{n_m} - v_{n_1}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(v_{n_m} \to v\)</span> for some <span class="math notranslate nohighlight">\(v \in V\)</span>. Since <span class="math notranslate nohighlight">\(\{v_n\}\)</span> is Cauchy and has a convergent subsequence, <span class="math notranslate nohighlight">\(\{v_n\}\)</span> converges to <span class="math notranslate nohighlight">\(v\)</span>, showing <span class="math notranslate nohighlight">\(V\)</span> is Banach.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="bounded-and-continuous-operators">
+<h3>2. Bounded and Continuous Operators<a class="headerlink" href="#bounded-and-continuous-operators" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be normed vector spaces. A map <span class="math notranslate nohighlight">\(T: V \to W\)</span> is a <strong>linear operator</strong> if <span class="math notranslate nohighlight">\(T(a x + b y) = a T(x) + b T(y)\)</span> for all <span class="math notranslate nohighlight">\(x, y \in V\)</span> and <span class="math notranslate nohighlight">\(a, b \in \mathbb{K}\)</span>.</p>
+<ul>
+<li><p><strong>Theorem</strong>: A linear operator <span class="math notranslate nohighlight">\(T: V \to W\)</span> is continuous if and only if it is <strong>bounded</strong>, meaning there exists <span class="math notranslate nohighlight">\(C &gt; 0\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\|Tv\|_W \le C \|v\|_V \quad \text{for all } v \in V\]</div>
+<p><strong>Proof</strong>:
+<span class="math notranslate nohighlight">\((\implies)\)</span> Suppose <span class="math notranslate nohighlight">\(T\)</span> is continuous. The preimage of the open unit ball <span class="math notranslate nohighlight">\(B_W(0, 1)\)</span> is open in <span class="math notranslate nohighlight">\(V\)</span> and contains <span class="math notranslate nohighlight">\(0\)</span> (since <span class="math notranslate nohighlight">\(T(0) = 0\)</span>). Thus, there exists <span class="math notranslate nohighlight">\(r &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(B_V(0, r) \subset T^{-1}(B_W(0, 1))\)</span>. For any <span class="math notranslate nohighlight">\(v \in V \setminus \{0\}\)</span>, the scaled vector <span class="math notranslate nohighlight">\(v' = \frac{r}{2\|v\|_V} v\)</span> has norm <span class="math notranslate nohighlight">\(r/2 &lt; r\)</span>, so <span class="math notranslate nohighlight">\(v' \in B_V(0, r)\)</span>. Thus:</p>
+<div class="math notranslate nohighlight">
+\[\|Tv'\|_W &lt; 1 \implies \left\| T\left(\frac{r}{2\|v\|_V} v\right) \right\|_W &lt; 1 \implies \|Tv\|_W \le \frac{2}{r} \|v\|_V\]</div>
+<p>Setting <span class="math notranslate nohighlight">\(C = 2/r\)</span> yields the result.</p>
+<p><span class="math notranslate nohighlight">\((\impliedby)\)</span> Suppose <span class="math notranslate nohighlight">\(\|Tv\|_W \le C \|v\|_V\)</span> for all <span class="math notranslate nohighlight">\(v\)</span>. If <span class="math notranslate nohighlight">\(v_n \to v\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\|Tv_n - Tv\|_W = \|T(v_n - v)\|_W \le C \|v_n - v\|_V \to 0\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(Tv_n \to Tv\)</span>, proving continuity.</p>
+</li>
+<li><p><strong>Integral Operator Example</strong>: Let <span class="math notranslate nohighlight">\(K: [0, 1] \times [0, 1] \to \mathbb{C}\)</span> be continuous. The operator <span class="math notranslate nohighlight">\(T: C([0, 1]) \to C([0, 1])\)</span> defined by:</p>
+<div class="math notranslate nohighlight">
+\[(Tf)(x) = \int_0^1 K(x, y) f(y) \, dy\]</div>
+<p>is linear and bounded. Indeed:</p>
+<div class="math notranslate nohighlight">
+\[|(Tf)(x)| \le \int_0^1 |K(x, y)| |f(y)| \, dy \le \|K\|_\infty \|f\|_\infty\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(\|Tf\|_\infty \le \|K\|_\infty \|f\|_\infty\)</span>, showing <span class="math notranslate nohighlight">\(T\)</span> is bounded with constant <span class="math notranslate nohighlight">\(C = \|K\|_\infty\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-operator-norm-and-b-v-w">
+<h3>3. The Operator Norm and B(V, W)<a class="headerlink" href="#the-operator-norm-and-b-v-w" title="Permalink to this heading">#</a></h3>
+<p>The space of all bounded linear operators from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span> is denoted <span class="math notranslate nohighlight">\(B(V, W)\)</span>.</p>
+<ul>
+<li><p><strong>Definition</strong>: The <strong>operator norm</strong> of <span class="math notranslate nohighlight">\(T \in B(V, W)\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\|T\| = \sup_{\|v\|_V = 1} \|Tv\|_W\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(W\)</span> is a Banach space, then <span class="math notranslate nohighlight">\(B(V, W)\)</span> is a Banach space under the operator norm.</p>
+<p><strong>Proof</strong>:
+Let <span class="math notranslate nohighlight">\(\{T_n\}\)</span> be a sequence in <span class="math notranslate nohighlight">\(B(V, W)\)</span> such that <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \|T_n\| &lt; \infty\)</span>. For any <span class="math notranslate nohighlight">\(v \in V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty \|T_n v\| \le \sum_{n=1}^\infty \|T_n\| \|v\| = \|v\| \sum_{n=1}^\infty \|T_n\| &lt; \infty\]</div>
+<p>Thus the series <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty T_n v\)</span> is absolutely summable in <span class="math notranslate nohighlight">\(W\)</span>. Since <span class="math notranslate nohighlight">\(W\)</span> is complete, it converges, defining a pointwise operator <span class="math notranslate nohighlight">\(Tv = \sum_{n=1}^\infty T_n v\)</span>. One can easily verify <span class="math notranslate nohighlight">\(T\)</span> is linear. To see it is bounded:</p>
+<div class="math notranslate nohighlight">
+\[\|Tv\| \le \sum_{n=1}^\infty \|T_n v\| \le \left( \sum_{n=1}^\infty \|T_n\| \right) \|v\|\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(T \in B(V, W)\)</span>. Finally, <span class="math notranslate nohighlight">\(\left\| T - \sum_{n=1}^m T_n \right\| \le \sum_{n=m+1}^\infty \|T_n\| \to 0\)</span> as <span class="math notranslate nohighlight">\(m \to \infty\)</span>, showing convergence in operator norm.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-operator-learning-deeponet-fnos">
+<h3>4. Connection to ML/DL: Operator Learning (DeepONet &amp; FNOs)<a class="headerlink" href="#connection-to-ml-dl-operator-learning-deeponet-fnos" title="Permalink to this heading">#</a></h3>
+<p>In classical deep learning, neural networks learn functions that map vectors to vectors (e.g., <span class="math notranslate nohighlight">\(\mathbb{R}^d \to \mathbb{R}^c\)</span>). In <strong>Operator Learning</strong>, modern architectures (such as <strong>DeepONets</strong> and <strong>Fourier Neural Operators - FNOs</strong>) are designed to learn mappings between <em>infinite-dimensional function spaces</em> (i.e., operators <span class="math notranslate nohighlight">\(T: \mathcal{X} \to \mathcal{Y}\)</span>).</p>
+<p>A classical example is learning the solution operator of a Partial Differential Equation (PDE):</p>
+<div class="math notranslate nohighlight">
+\[T: a(x) \mapsto u(x)\]</div>
+<p>where <span class="math notranslate nohighlight">\(a(x)\)</span> is the initial condition or coefficient function, and <span class="math notranslate nohighlight">\(u(x)\)</span> is the PDE solution.</p>
+<ul>
+<li><p><strong>DeepONet (Deep Operator Network)</strong>: Based on the Chen-Chen universal approximation theorem for operators, a DeepONet approximates an operator <span class="math notranslate nohighlight">\(T(a)(y)\)</span> by splitting the architecture into a <strong>Branch net</strong> (which processes the input function <span class="math notranslate nohighlight">\(a(x)\)</span> evaluated at sensor locations) and a <strong>Trunk net</strong> (which processes the evaluation coordinate <span class="math notranslate nohighlight">\(y\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[T(a)(y) \approx \sum_{k=1}^p b_k(a(x_1), \dots, a(x_m)) \cdot t_k(y)\]</div>
+</li>
+<li><p><strong>Fourier Neural Operator (FNO)</strong>: Parameterizes the operator directly in the Fourier domain. An FNO layer is formulated as:</p>
+<div class="math notranslate nohighlight">
+\[v^{(t+1)}(x) = \sigma \left( W v^{(t)}(x) + \mathcal{F}^{-1} \left( R \cdot \mathcal{F}(v^{(t)}) \right)(x) \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is the Fourier transform, <span class="math notranslate nohighlight">\(R\)</span> is a parameter matrix that filters high-frequency components, and <span class="math notranslate nohighlight">\(W\)</span> is a local linear transformation.</p>
+</li>
+<li><p><strong>Operator Norm and Stability</strong>: In operator learning, the stability of the learned operator network is quantified by its operator norm:</p>
+<div class="math notranslate nohighlight">
+\[\|T\|_{op} = \sup_{a \neq 0} \frac{\|T(a)\|_{\mathcal{Y}}}{\|a\|_{\mathcal{X}}}\]</div>
+<p>If the operator norm is bounded, the model is guaranteed to be stable, meaning small perturbations in the input function <span class="math notranslate nohighlight">\(a(x)\)</span> (e.g., measurement noise) will result in bounded perturbations in the output function <span class="math notranslate nohighlight">\(u(x)\)</span>.</p>
+</li>
+</ul>
+</section>
+</section>
+<span id="document-book/functional_analysis/quotient_spaces_baire_category"></span><section class="tex2jax_ignore mathjax_ignore" id="quotient-spaces-baire-category-theorem">
+<h2>Quotient Spaces &amp; Baire Category Theorem<a class="headerlink" href="#quotient-spaces-baire-category-theorem" title="Permalink to this heading">#</a></h2>
+<p>This lecture explores closed subspaces, quotient normed spaces, the topological foundations of the Baire Category Theorem, and the Uniform Boundedness Principle.</p>
+<hr class="docutils" />
+<section id="closed-subspaces-and-quotients">
+<h3>1. Closed Subspaces and Quotients<a class="headerlink" href="#closed-subspaces-and-quotients" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Proposition</strong>: A subspace <span class="math notranslate nohighlight">\(W\)</span> of a Banach space <span class="math notranslate nohighlight">\(V\)</span> is complete (Banach) under the inherited norm if and only if <span class="math notranslate nohighlight">\(W\)</span> is a closed subset of <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p><strong>Definition</strong>: Let <span class="math notranslate nohighlight">\(W \subseteq V\)</span> be a closed subspace. The <strong>quotient space</strong> <span class="math notranslate nohighlight">\(V/W\)</span> is the set of cosets <span class="math notranslate nohighlight">\(v + W\)</span> equipped with the quotient norm:</p>
+<div class="math notranslate nohighlight">
+\[\|v + W\|_{V/W} = \inf_{w \in W} \|v - w\|\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(V\)</span> is a Banach space and <span class="math notranslate nohighlight">\(W\)</span> is a closed subspace, then <span class="math notranslate nohighlight">\(V/W\)</span> is a Banach space.</p>
+<p>If we define a seminorm <span class="math notranslate nohighlight">\(\|\cdot\|\)</span> on <span class="math notranslate nohighlight">\(V\)</span>, the set <span class="math notranslate nohighlight">\(E = \{v \in V \mid \|v\| = 0\}\)</span> is a closed subspace of <span class="math notranslate nohighlight">\(V\)</span>, and the quotient space <span class="math notranslate nohighlight">\(V/E\)</span> becomes a normed space under <span class="math notranslate nohighlight">\(\|v + E\|_{V/E} = \|v\|\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="baire-category-theorem">
+<h3>2. Baire Category Theorem<a class="headerlink" href="#baire-category-theorem" title="Permalink to this heading">#</a></h3>
+<p>The Baire Category Theorem is a crucial topological property of complete metric spaces.</p>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a complete metric space. If <span class="math notranslate nohighlight">\(M = \bigcup_{n=1}^\infty C_n\)</span>, where each <span class="math notranslate nohighlight">\(C_n \subseteq M\)</span> is a closed subset, then at least one of the subsets <span class="math notranslate nohighlight">\(C_n\)</span> must contain an open ball <span class="math notranslate nohighlight">\(B(x, r)\)</span> (i.e., it has a non-empty interior).</p>
+<p><strong>Proof</strong>:
+Suppose for contradiction that each <span class="math notranslate nohighlight">\(C_n\)</span> has empty interior. Then <span class="math notranslate nohighlight">\(M \setminus C_1\)</span> is a dense open set. Choose <span class="math notranslate nohighlight">\(p_1 \in M \setminus C_1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_1 &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\overline{B(p_1, \epsilon_1)} \cap C_1 = \emptyset\)</span>.</p>
+<p>Inductively, since <span class="math notranslate nohighlight">\(C_{k+1}\)</span> has empty interior, the open ball <span class="math notranslate nohighlight">\(B(p_k, \epsilon_k/3)\)</span> is not contained in <span class="math notranslate nohighlight">\(C_{k+1}\)</span>. Choose <span class="math notranslate nohighlight">\(p_{k+1} \in B(p_k, \epsilon_k/3) \setminus C_{k+1}\)</span> and choose <span class="math notranslate nohighlight">\(\epsilon_{k+1} &lt; \epsilon_k/3\)</span> such that <span class="math notranslate nohighlight">\(\overline{B(p_{k+1}, \epsilon_{k+1})} \cap C_{k+1} = \emptyset\)</span>.</p>
+<p>This yields a sequence <span class="math notranslate nohighlight">\(\{p_k\}\)</span> satisfying <span class="math notranslate nohighlight">\(d(p_{k+1}, p_k) &lt; \epsilon_k/3\)</span>. By the triangle inequality:</p>
+<div class="math notranslate nohighlight">
+\[d(p_k, p_{k+l}) &lt; \sum_{j=k}^{k+l-1} \frac{\epsilon_j}{3} &lt; \epsilon_1 \sum_{j=k}^\infty 3^{-j} = \frac{\epsilon_1}{2} 3^{-k+1}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\{p_k\}\)</span> is a Cauchy sequence. Since <span class="math notranslate nohighlight">\(M\)</span> is complete, <span class="math notranslate nohighlight">\(p_k \to p \in M\)</span>. For any fixed <span class="math notranslate nohighlight">\(k\)</span>, since <span class="math notranslate nohighlight">\(p_{k+l} \in B(p_k, \epsilon_k)\)</span> for all <span class="math notranslate nohighlight">\(l\)</span>, the limit <span class="math notranslate nohighlight">\(p\)</span> lies in the closed ball <span class="math notranslate nohighlight">\(\overline{B(p_k, \epsilon_k/2)} \subset B(p_k, \epsilon_k)\)</span>.</p>
+<p>By construction, <span class="math notranslate nohighlight">\(B(p_k, \epsilon_k) \cap C_k = \emptyset\)</span>, so <span class="math notranslate nohighlight">\(p \notin C_k\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>. This contradicts <span class="math notranslate nohighlight">\(M = \bigcup_{n=1}^\infty C_n\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="uniform-boundedness-principle-banach-steinhaus">
+<h3>3. Uniform Boundedness Principle (Banach-Steinhaus)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(B\)</span> be a Banach space and <span class="math notranslate nohighlight">\(V\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\{T_i\}_{i \in I} \subseteq B(B, V)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(b \in B\)</span>, the set of values is pointwise bounded:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{i \in I} \|T_i b\|_V &lt; \infty\]</div>
+<p>then the family is uniformly bounded in the operator norm:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{i \in I} \|T_i\| &lt; \infty\]</div>
+<p><strong>Proof</strong>:
+For each <span class="math notranslate nohighlight">\(k \in \mathbb{N}\)</span>, define the subset:</p>
+<div class="math notranslate nohighlight">
+\[C_k = \{b \in B \mid \sup_{i \in I} \|T_i b\|_V \le k\}\]</div>
+<p>Each <span class="math notranslate nohighlight">\(C_k\)</span> is closed by the continuity of <span class="math notranslate nohighlight">\(T_i\)</span> and the norm. Since <span class="math notranslate nohighlight">\(\sup_{i \in I} \|T_i b\|_V &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(b\)</span>, we have <span class="math notranslate nohighlight">\(B = \bigcup_{k=1}^\infty C_k\)</span>.</p>
+<p>By the Baire Category Theorem, some <span class="math notranslate nohighlight">\(C_{k_0}\)</span> contains an open ball <span class="math notranslate nohighlight">\(B(b_0, r)\)</span>. For any <span class="math notranslate nohighlight">\(b \in B\)</span> with <span class="math notranslate nohighlight">\(\|b\| &lt; r\)</span>, we have <span class="math notranslate nohighlight">\(b_0 + b \in B(b_0, r) \subset C_{k_0}\)</span>. Thus, for all <span class="math notranslate nohighlight">\(i \in I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\|T_i b\|_V = \|T_i(b_0 + b) - T_i b_0\|_V \le \|T_i(b_0 + b)\|_V + \|T_i b_0\|_V \le k_0 + k_0 = 2k_0\]</div>
+<p>For any unit vector <span class="math notranslate nohighlight">\(u \in B\)</span> (<span class="math notranslate nohighlight">\(\|u\| = 1\)</span>), the vector <span class="math notranslate nohighlight">\(b = \frac{r}{2} u\)</span> has norm less than <span class="math notranslate nohighlight">\(r\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[\left\| T_i\left(\frac{r}{2} u\right) \right\|_V \le 2k_0 \implies \|T_i u\|_V \le \frac{4k_0}{r}\]</div>
+<p>Taking the supremum over <span class="math notranslate nohighlight">\(\|u\| = 1\)</span>, we get <span class="math notranslate nohighlight">\(\|T_i\| \le \frac{4k_0}{r}\)</span> for all <span class="math notranslate nohighlight">\(i \in I\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-optimization-in-function-space">
+<h3>4. Connection to ML/DL: Optimization in Function Space<a class="headerlink" href="#connection-to-ml-dl-optimization-in-function-space" title="Permalink to this heading">#</a></h3>
+<p>In standard machine learning, optimization occurs in parameter space <span class="math notranslate nohighlight">\(\mathbb{R}^d\)</span> (e.g., gradient descent on network weights <span class="math notranslate nohighlight">\(\theta\)</span>). However, some models—such as <strong>Gradient Boosting</strong> and generative <strong>Diffusion Models</strong>—optimize directly in <em>function spaces</em> or <em>measure spaces</em>.</p>
+<p>To perform calculus on infinite-dimensional Banach spaces, we generalize the derivative:</p>
+<ul>
+<li><p><strong>Gâteaux Derivative</strong>: Generalizes the directional derivative. For a functional <span class="math notranslate nohighlight">\(J: V \to \mathbb{R}\)</span> at <span class="math notranslate nohighlight">\(u \in V\)</span> in the direction <span class="math notranslate nohighlight">\(h \in V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[dJ(u; h) = \lim_{\epsilon \to 0} \frac{J(u + \epsilon h) - J(u)}{\epsilon} = \left. \frac{d}{d\epsilon} J(u + \epsilon h) \right|_{\epsilon=0}\]</div>
+</li>
+<li><p><strong>Fréchet Derivative</strong>: Generalizes the total derivative. A linear operator <span class="math notranslate nohighlight">\(DF(u) \in B(V, W)\)</span> is the Fréchet derivative of <span class="math notranslate nohighlight">\(F: V \to W\)</span> at <span class="math notranslate nohighlight">\(u\)</span> if:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h \to 0} \frac{\|F(u + h) - F(u) - DF(u)h\|_W}{\|h\|_V} = 0\]</div>
+</li>
+</ul>
+<section id="ml-dl-applications">
+<h4>ML/DL Applications<a class="headerlink" href="#ml-dl-applications" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p><strong>Gradient Boosting</strong>: Minimizes an empirical loss <span class="math notranslate nohighlight">\(\sum_{i=1}^N \mathcal{L}(y_i, F(x_i))\)</span> by performing gradient descent directly in function space. At step <span class="math notranslate nohighlight">\(m\)</span>, the model updates:</p>
+<div class="math notranslate nohighlight">
+\[F_m(x) = F_{m-1}(x) - \gamma_m g_m(x)\]</div>
+<p>where <span class="math notranslate nohighlight">\(g_m(x)\)</span> is a weak learner (like a decision tree) fitted to approximate the negative Gâteaux derivative (pseudo-residuals) of the loss with respect to <span class="math notranslate nohighlight">\(F(x_i)\)</span>.</p>
+</li>
+<li><p><strong>Wasserstein Gradient Flows &amp; Diffusion Models</strong>: Generative diffusion models learn to transport a simple noise distribution to a complex data distribution. This is modeled mathematically as a gradient flow of the Kullback-Leibler (KL) divergence or free energy in the Wasserstein space of probability measures <span class="math notranslate nohighlight">\(\mathcal{P}(\mathbb{R}^d)\)</span> (equipped with the Wasserstein metric). The optimization of the density path follows the Fokker-Planck equation, which represents a gradient flow optimizing a functional over a space of measures.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<span id="document-book/functional_analysis/open_mapping_closed_graph"></span><section class="tex2jax_ignore mathjax_ignore" id="open-mapping-closed-graph-theorems">
+<h2>Open Mapping &amp; Closed Graph Theorems<a class="headerlink" href="#open-mapping-closed-graph-theorems" title="Permalink to this heading">#</a></h2>
+<p>This lecture covers the Open Mapping Theorem, its corollaries on bounded inverses, and the Closed Graph Theorem.</p>
+<hr class="docutils" />
+<section id="the-open-mapping-theorem">
+<h3>1. The Open Mapping Theorem<a class="headerlink" href="#the-open-mapping-theorem" title="Permalink to this heading">#</a></h3>
+<p>An open map maps open sets to open sets.</p>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(B_1, B_2\)</span> be Banach spaces. If <span class="math notranslate nohighlight">\(T \in B(B_1, B_2)\)</span> is surjective, then <span class="math notranslate nohighlight">\(T\)</span> is an open map.</p>
+<p><strong>Proof</strong>:
+We first show that the image of the open unit ball <span class="math notranslate nohighlight">\(B_1(0, 1)\)</span> contains an open ball in <span class="math notranslate nohighlight">\(B_2\)</span> centered at <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(T\)</span> is surjective and <span class="math notranslate nohighlight">\(B_1 = \bigcup_{n=1}^\infty B(0, n)\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[B_2 = \bigcup_{n=1}^\infty T(B(0, n)) \implies B_2 = \bigcup_{n=1}^\infty \overline{T(B(0, n))}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(B_2\)</span> is a Banach space, by the Baire Category Theorem, there exists <span class="math notranslate nohighlight">\(n_0\)</span> such that the closed set <span class="math notranslate nohighlight">\(\overline{T(B(0, n_0))} = n_0 \overline{T(B(0, 1))}\)</span> contains an open ball. Thus, <span class="math notranslate nohighlight">\(\overline{T(B(0, 1))}\)</span> contains an open ball <span class="math notranslate nohighlight">\(B_2(v_0, 4r)\)</span> for some <span class="math notranslate nohighlight">\(v_0 \in B_2\)</span> and <span class="math notranslate nohighlight">\(r &gt; 0\)</span>.</p>
+<p>Choose <span class="math notranslate nohighlight">\(v_1 = Tu_1 \in T(B(0, 1))\)</span> such that <span class="math notranslate nohighlight">\(\|v_0 - v_1\| &lt; 2r\)</span>. Then <span class="math notranslate nohighlight">\(B_2(v_1, 2r) \subset B_2(v_0, 4r) \subset \overline{T(B(0, 1))}\)</span>.</p>
+<p>We show that <span class="math notranslate nohighlight">\(B_2(0, r) \subset \overline{T(B(0, 1))}\)</span>. For any <span class="math notranslate nohighlight">\(v \in B_2\)</span> with <span class="math notranslate nohighlight">\(\|v\| &lt; r\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}(2v + v_1) \in B_2\left(\frac{v_1}{2}, r\right) \subset \overline{T\left(B\left(0, \frac{1}{2}\right)\right)}\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight">
+\[v \in -T\left(\frac{u_1}{2}\right) + \overline{T\left(B\left(0, \frac{1}{2}\right)\right)} = \overline{T\left(-\frac{u_1}{2} + B\left(0, \frac{1}{2}\right)\right)} \subset \overline{T(B(0, 1))}\]</div>
+<p>since <span class="math notranslate nohighlight">\(\|u_1\| &lt; 1\)</span>. Thus, <span class="math notranslate nohighlight">\(B_2(0, r) \subset \overline{T(B(0, 1))}\)</span>. By scaling, <span class="math notranslate nohighlight">\(B_2(0, 2^{-n}r) \subset \overline{T(B(0, 2^{-n}))}\)</span>.</p>
+<p>We now show <span class="math notranslate nohighlight">\(B_2(0, r/2) \subset T(B(0, 1))\)</span>. Let <span class="math notranslate nohighlight">\(v \in B_2\)</span> with <span class="math notranslate nohighlight">\(\|v\| &lt; r/2\)</span>. Since <span class="math notranslate nohighlight">\(v \in \overline{T(B(0, 1/2))}\)</span>, choose <span class="math notranslate nohighlight">\(b_1 \in B_1(0, 1/2)\)</span> such that <span class="math notranslate nohighlight">\(\|v - Tb_1\| &lt; r/4\)</span>.</p>
+<p>Inductively, choose <span class="math notranslate nohighlight">\(b_k \in B_1(0, 2^{-k})\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\left\| v - T\left( \sum_{j=1}^k b_j \right) \right\| &lt; 2^{-(k+1)}r\]</div>
+<p>The series <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty b_k\)</span> is absolutely summable in <span class="math notranslate nohighlight">\(B_1\)</span>, so it converges to some <span class="math notranslate nohighlight">\(b \in B_1\)</span>. Furthermore:</p>
+<div class="math notranslate nohighlight">
+\[\|b\| \le \sum_{k=1}^\infty \|b_k\| &lt; \sum_{k=1}^\infty 2^{-k} = 1\]</div>
+<p>By the continuity of <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Tb = \lim_{k\to\infty} T\left( \sum_{j=1}^k b_j \right) = v\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(v \in T(B(0, 1))\)</span>, so <span class="math notranslate nohighlight">\(B_2(0, r/2) \subset T(B(0, 1))\)</span>. Linearity and translation extend this to show that the image of any open set is open.</p>
+</li>
+<li><p><strong>Bounded Inverse Theorem</strong>: If <span class="math notranslate nohighlight">\(B_1, B_2\)</span> are Banach spaces and <span class="math notranslate nohighlight">\(T \in B(B_1, B_2)\)</span> is bijective, then <span class="math notranslate nohighlight">\(T^{-1} \in B(B_2, B_1)\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-closed-graph-theorem">
+<h3>2. The Closed Graph Theorem<a class="headerlink" href="#the-closed-graph-theorem" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(T: B_1 \to B_2\)</span> be a linear operator between Banach spaces. The <strong>graph</strong> of <span class="math notranslate nohighlight">\(T\)</span> is the subspace <span class="math notranslate nohighlight">\(\Gamma(T) = \{(x, Tx) \mid x \in B_1\} \subset B_1 \times B_2\)</span>.</p>
+<ul>
+<li><p><strong>Theorem</strong>: <span class="math notranslate nohighlight">\(T\)</span> is bounded if and only if <span class="math notranslate nohighlight">\(\Gamma(T)\)</span> is closed in <span class="math notranslate nohighlight">\(B_1 \times B_2\)</span> equipped with the product norm <span class="math notranslate nohighlight">\(\|(x, y)\| = \|x\| + \|y\|\)</span>.</p>
+<p><strong>Proof</strong>:
+<span class="math notranslate nohighlight">\((\implies)\)</span> If <span class="math notranslate nohighlight">\(T\)</span> is continuous, and <span class="math notranslate nohighlight">\((x_n, Tx_n) \to (x, y)\)</span>, then <span class="math notranslate nohighlight">\(x_n \to x\)</span> and <span class="math notranslate nohighlight">\(Tx_n \to y\)</span>. By continuity, <span class="math notranslate nohighlight">\(Tx_n \to Tx\)</span>, so <span class="math notranslate nohighlight">\(y = Tx\)</span>. Thus <span class="math notranslate nohighlight">\((x, y) \in \Gamma(T)\)</span>, and the graph is closed.</p>
+<p><span class="math notranslate nohighlight">\((\impliedby)\)</span> Suppose <span class="math notranslate nohighlight">\(\Gamma(T)\)</span> is closed. Since <span class="math notranslate nohighlight">\(B_1 \times B_2\)</span> is Banach, <span class="math notranslate nohighlight">\(\Gamma(T)\)</span> is a Banach space. Define the projection maps <span class="math notranslate nohighlight">\(\pi_1: \Gamma(T) \to B_1\)</span> and <span class="math notranslate nohighlight">\(\pi_2: \Gamma(T) \to B_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\pi_1(x, Tx) = x, \quad \pi_2(x, Tx) = Tx\]</div>
+<p>Both projections are bounded linear operators because <span class="math notranslate nohighlight">\(\|\pi_1(x, Tx)\| = \|x\| \le \|x\| + \|Tx\| = \|(x, Tx)\|\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\pi_1\)</span> is bijective. By the Bounded Inverse Theorem, its inverse <span class="math notranslate nohighlight">\(S = \pi_1^{-1}: B_1 \to \Gamma(T)\)</span> defined by <span class="math notranslate nohighlight">\(Sx = (x, Tx)\)</span> is bounded.</p>
+<p>Since <span class="math notranslate nohighlight">\(T = \pi_2 \circ S\)</span> is a composition of bounded operators, <span class="math notranslate nohighlight">\(T\)</span> is bounded.</p>
+</li>
+</ul>
+</section>
+</section>
+<span id="document-book/functional_analysis/zorns_lemma_hahn_banach"></span><section class="tex2jax_ignore mathjax_ignore" id="zorn-s-lemma-hahn-banach-theorem">
+<h2>Zorn’s Lemma &amp; Hahn-Banach Theorem<a class="headerlink" href="#zorn-s-lemma-hahn-banach-theorem" title="Permalink to this heading">#</a></h2>
+<p>This lecture covers Zorn’s Lemma, its application to showing the existence of a Hamel basis, and the proof of the Hahn-Banach Extension Theorem.</p>
+<hr class="docutils" />
+<section id="zorn-s-lemma-and-hamel-bases">
+<h3>1. Zorn’s Lemma and Hamel Bases<a class="headerlink" href="#zorn-s-lemma-and-hamel-bases" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: Every vector space <span class="math notranslate nohighlight">\(V\)</span> has a Hamel basis.</p>
+<p><strong>Proof</strong>:
+Let <span class="math notranslate nohighlight">\(E\)</span> be the set of all linearly independent subsets of <span class="math notranslate nohighlight">\(V\)</span>. Order <span class="math notranslate nohighlight">\(E\)</span> by set inclusion <span class="math notranslate nohighlight">\(\subseteq\)</span>. Let <span class="math notranslate nohighlight">\(C\)</span> be a chain in <span class="math notranslate nohighlight">\(E\)</span>. We show that <span class="math notranslate nohighlight">\(c = \bigcup_{e \in C} e\)</span> is an upper bound in <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<p>To show <span class="math notranslate nohighlight">\(c \in E\)</span>, let <span class="math notranslate nohighlight">\(v_1, \dots, v_n \in c\)</span>. There exist <span class="math notranslate nohighlight">\(e_1, \dots, e_n \in C\)</span> such that <span class="math notranslate nohighlight">\(v_i \in e_i\)</span>. Since <span class="math notranslate nohighlight">\(C\)</span> is a chain, we can order these subsets by inclusion: <span class="math notranslate nohighlight">\(e_{i_1} \subseteq e_{i_2} \subseteq \dots \subseteq e_{i_n}\)</span>. Thus, all <span class="math notranslate nohighlight">\(v_1, \dots, v_n\)</span> lie in <span class="math notranslate nohighlight">\(e_{i_n}\)</span>. Since <span class="math notranslate nohighlight">\(e_{i_n}\)</span> is linearly independent, <span class="math notranslate nohighlight">\(v_1, \dots, v_n\)</span> are linearly independent. Thus, <span class="math notranslate nohighlight">\(c \in E\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(e \subseteq c\)</span> for all <span class="math notranslate nohighlight">\(e \in C\)</span>, <span class="math notranslate nohighlight">\(c\)</span> is an upper bound. By Zorn’s Lemma, <span class="math notranslate nohighlight">\(E\)</span> has a maximal element <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<p>We show <span class="math notranslate nohighlight">\(H\)</span> spans <span class="math notranslate nohighlight">\(V\)</span>. If not, choose <span class="math notranslate nohighlight">\(v \in V \setminus \text{span}(H)\)</span>. Then <span class="math notranslate nohighlight">\(H \cup \{v\}\)</span> is linearly independent, contradicting the maximality of <span class="math notranslate nohighlight">\(H\)</span>. Thus <span class="math notranslate nohighlight">\(H\)</span> is a Hamel basis.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="hahn-banach-extension-theorem">
+<h3>2. Hahn-Banach Extension Theorem<a class="headerlink" href="#hahn-banach-extension-theorem" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(V\)</span> be a normed space and <span class="math notranslate nohighlight">\(M \subseteq V\)</span> be a subspace. If <span class="math notranslate nohighlight">\(u: M \to \mathbb{C}\)</span> is a bounded linear functional satisfying <span class="math notranslate nohighlight">\(|u(t)| \le C \|t\|\)</span> for all <span class="math notranslate nohighlight">\(t \in M\)</span>, then there exists a linear extension <span class="math notranslate nohighlight">\(U: V \to \mathbb{C}\)</span> such that <span class="math notranslate nohighlight">\(U|_M = u\)</span> and <span class="math notranslate nohighlight">\(|U(t)| \le C \|t\|\)</span> for all <span class="math notranslate nohighlight">\(t \in V\)</span>.</p>
+<p>To prove this, we first establish a single-dimension extension lemma.</p>
+</li>
+<li><p><strong>Lemma</strong>: Let <span class="math notranslate nohighlight">\(M \subset V\)</span> be a subspace and <span class="math notranslate nohighlight">\(x \notin M\)</span>. If <span class="math notranslate nohighlight">\(u: M \to \mathbb{C}\)</span> is a linear functional satisfying <span class="math notranslate nohighlight">\(|u(t)| \le C \|t\|\)</span> for all <span class="math notranslate nohighlight">\(t \in M\)</span>, then there exists an extension <span class="math notranslate nohighlight">\(u': M \oplus \mathbb{C}x \to \mathbb{C}\)</span> with the same bound <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p><strong>Proof</strong>:
+Without loss of generality, assume <span class="math notranslate nohighlight">\(C = 1\)</span>. Any <span class="math notranslate nohighlight">\(t' \in M \oplus \mathbb{C}x\)</span> is uniquely written as <span class="math notranslate nohighlight">\(t' = t + ax\)</span> for <span class="math notranslate nohighlight">\(t \in M, a \in \mathbb{C}\)</span>. We must choose <span class="math notranslate nohighlight">\(\lambda \in \mathbb{C}\)</span> to define <span class="math notranslate nohighlight">\(u'(t + ax) = u(t) + a\lambda\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[|u(t) + a\lambda| \le \|t + ax\|\]</div>
+<p>Dividing by <span class="math notranslate nohighlight">\(|a|\)</span>, this is equivalent to finding <span class="math notranslate nohighlight">\(\lambda\)</span> such that for all <span class="math notranslate nohighlight">\(t \in M\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[|u(t) - \lambda| \le \|t - x\|\]</div>
+<p>We first find the real part <span class="math notranslate nohighlight">\(\alpha = \text{Re}(\lambda)\)</span>. Let <span class="math notranslate nohighlight">\(w(t) = \text{Re}(u(t))\)</span>. For any <span class="math notranslate nohighlight">\(t_1, t_2 \in M\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[w(t_1) - w(t_2) = w(t_1 - t_2) \le \|t_1 - t_2\| \le \|t_1 - x\| + \|t_2 - x\|\]</div>
+<p>Rearranging gives:</p>
+<div class="math notranslate nohighlight">
+\[w(t_1) - \|t_1 - x\| \le w(t_2) + \|t_2 - x\|\]</div>
+<p>Taking the supremum over <span class="math notranslate nohighlight">\(t_1\)</span> and the infimum over <span class="math notranslate nohighlight">\(t_2\)</span>, we choose a real number <span class="math notranslate nohighlight">\(\alpha\)</span> satisfying:</p>
+<div class="math notranslate nohighlight">
+\[\sup_{t \in M} (w(t) - \|t - x\|) \le \alpha \le \inf_{t \in M} (w(t) + \|t - x\|)\]</div>
+<p>This ensures <span class="math notranslate nohighlight">\(|w(t) - \alpha| \le \|t - x\|\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>. A symmetric argument using <span class="math notranslate nohighlight">\(ix\)</span> instead of <span class="math notranslate nohighlight">\(x\)</span> determines the imaginary part of <span class="math notranslate nohighlight">\(\lambda\)</span>, yielding the desired extension.</p>
+</li>
+<li><p><strong>Proof of Hahn-Banach Theorem</strong>:
+Let <span class="math notranslate nohighlight">\(E\)</span> be the set of all bounded linear extensions <span class="math notranslate nohighlight">\((v, N)\)</span> of <span class="math notranslate nohighlight">\(u\)</span> to subspaces <span class="math notranslate nohighlight">\(N \supseteq M\)</span> preserving the bound <span class="math notranslate nohighlight">\(C\)</span>. Order <span class="math notranslate nohighlight">\(E\)</span> by <span class="math notranslate nohighlight">\((v_1, N_1) \le (v_2, N_2)\)</span> if <span class="math notranslate nohighlight">\(N_1 \subseteq N_2\)</span> and <span class="math notranslate nohighlight">\(v_2|_{N_1} = v_1\)</span>.</p>
+<p>For any chain in <span class="math notranslate nohighlight">\(E\)</span>, the union of the subspaces and the pointwise limit of the functionals define an upper bound. By Zorn’s Lemma, there exists a maximal extension <span class="math notranslate nohighlight">\((U, N)\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(N \neq V\)</span>, choose <span class="math notranslate nohighlight">\(x \in V \setminus N\)</span>. By the Lemma, we can extend <span class="math notranslate nohighlight">\(U\)</span> to <span class="math notranslate nohighlight">\(N \oplus \mathbb{C}x\)</span>, contradicting the maximality of <span class="math notranslate nohighlight">\((U, N)\)</span>. Thus, <span class="math notranslate nohighlight">\(N = V\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-universal-approximation-theorem-hahn-banach-perspective">
+<h3>3. Connection to ML/DL: Universal Approximation Theorem (Hahn-Banach Perspective)<a class="headerlink" href="#connection-to-ml-dl-universal-approximation-theorem-hahn-banach-perspective" title="Permalink to this heading">#</a></h3>
+<p>The <strong>Universal Approximation Theorem</strong> (Cybenko, 1989) states that a feedforward neural network with a single hidden layer and a continuous sigmoidal activation function <span class="math notranslate nohighlight">\(\sigma\)</span> can approximate any continuous function on a compact subset of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> to arbitrary accuracy.</p>
+<p>Historically, Cybenko’s proof relies directly on the <strong>Hahn-Banach Theorem</strong> (specifically, Riesz-Markov and Hahn-Banach Riesz representations).</p>
+<p>Let <span class="math notranslate nohighlight">\(K \subset \mathbb{R}^n\)</span> be a compact set, and let <span class="math notranslate nohighlight">\(C(K)\)</span> be the Banach space of continuous real-valued functions on <span class="math notranslate nohighlight">\(K\)</span> equipped with the supremum norm <span class="math notranslate nohighlight">\(\|f\|_\infty = \sup_{x \in K} |f(x)|\)</span>. Let <span class="math notranslate nohighlight">\(S \subset C(K)\)</span> be the set of functions of the form:</p>
+<div class="math notranslate nohighlight">
+\[G(x) = \sum_{j=1}^N \alpha_j \sigma(w_j^T x + b_j)\]</div>
+<p>We want to prove that <span class="math notranslate nohighlight">\(S\)</span> is <strong>dense</strong> in <span class="math notranslate nohighlight">\(C(K)\)</span> under the supremum norm.</p>
+<p><strong>The Hahn-Banach Riesz Argument</strong>:
+By a direct corollary of the Hahn-Banach Theorem, a subspace <span class="math notranslate nohighlight">\(S\)</span> is dense in a normed space <span class="math notranslate nohighlight">\(V\)</span> if and only if the only bounded linear functional <span class="math notranslate nohighlight">\(L \in V^*\)</span> that vanishes on <span class="math notranslate nohighlight">\(S\)</span> is the zero functional:</p>
+<div class="math notranslate nohighlight">
+\[L(s) = 0 \quad \text{for all } s \in S \implies L = 0\]</div>
+<p>By the Riesz Representation Theorem, any bounded linear functional <span class="math notranslate nohighlight">\(L\)</span> on <span class="math notranslate nohighlight">\(C(K)\)</span> corresponds to integration against a signed Borel measure <span class="math notranslate nohighlight">\(\mu\)</span> on <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[L(f) = \int_K f(x) \, d\mu(x)\]</div>
+<p>Suppose <span class="math notranslate nohighlight">\(L(G) = 0\)</span> for all <span class="math notranslate nohighlight">\(G \in S\)</span>. This implies that for all weights <span class="math notranslate nohighlight">\(w \in \mathbb{R}^n\)</span> and biases <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\int_K \sigma(w^T x + b) \, d\mu(x) = 0\]</div>
+<p>Cybenko proved that if <span class="math notranslate nohighlight">\(\sigma\)</span> is a continuous sigmoidal function, then the family of functions <span class="math notranslate nohighlight">\(\sigma(w^T x + b)\)</span> is <strong>discriminatory</strong>, meaning that the above integral vanishing for all <span class="math notranslate nohighlight">\(w, b\)</span> forces the signed measure <span class="math notranslate nohighlight">\(\mu\)</span> to be the zero measure (<span class="math notranslate nohighlight">\(\mu = 0\)</span>).</p>
+<p>Since <span class="math notranslate nohighlight">\(\mu = 0\)</span>, the functional <span class="math notranslate nohighlight">\(L\)</span> must be the zero functional. By the Hahn-Banach theorem, this implies that the span of the neural network functions <span class="math notranslate nohighlight">\(S\)</span> is dense in <span class="math notranslate nohighlight">\(C(K)\)</span>. Hence, any continuous function <span class="math notranslate nohighlight">\(f \in C(K)\)</span> can be approximated to arbitrary precision by a single-hidden-layer neural network.</p>
+</section>
+</section>
+<span id="document-book/functional_analysis/double_dual_outer_measure"></span><section class="tex2jax_ignore mathjax_ignore" id="the-double-dual-outer-measure">
+<h2>The Double Dual &amp; Outer Measure<a class="headerlink" href="#the-double-dual-outer-measure" title="Permalink to this heading">#</a></h2>
+<p>This lecture discusses the canonical injection into the double dual space, defines reflexivity, and introduces the Lebesgue outer measure.</p>
+<hr class="docutils" />
+<section id="the-double-dual-and-reflexivity">
+<h3>1. The Double Dual and Reflexivity<a class="headerlink" href="#the-double-dual-and-reflexivity" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(V\)</span> be a normed space. For any <span class="math notranslate nohighlight">\(v \in V \setminus \{0\}\)</span>, there exists <span class="math notranslate nohighlight">\(f \in V'\)</span> (the dual space) such that <span class="math notranslate nohighlight">\(\|f\| = 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>.</p>
+<p><strong>Proof</strong>:
+Define <span class="math notranslate nohighlight">\(u: \mathbb{C}v \to \mathbb{C}\)</span> on the span of <span class="math notranslate nohighlight">\(v\)</span> by <span class="math notranslate nohighlight">\(u(\lambda v) = \lambda \|v\|\)</span>. Clearly, <span class="math notranslate nohighlight">\(|u(t)| \le \|t\|\)</span> for all <span class="math notranslate nohighlight">\(t \in \mathbb{C}v\)</span> and <span class="math notranslate nohighlight">\(u(v) = \|v\|\)</span>. By the Hahn-Banach Theorem, there exists an extension <span class="math notranslate nohighlight">\(f \in V'\)</span> with <span class="math notranslate nohighlight">\(\|f\| \le 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>. Since <span class="math notranslate nohighlight">\(f(v/\|v\|) = 1\)</span>, we have <span class="math notranslate nohighlight">\(\|f\| = 1\)</span>.</p>
+</li>
+<li><p><strong>Definition</strong>: The <strong>double dual</strong> <span class="math notranslate nohighlight">\(V''\)</span> of a normed space <span class="math notranslate nohighlight">\(V\)</span> is the dual space of <span class="math notranslate nohighlight">\(V'\)</span>. For any <span class="math notranslate nohighlight">\(v \in V\)</span>, the evaluation map <span class="math notranslate nohighlight">\(T_v: V' \to \mathbb{C}\)</span> defined by <span class="math notranslate nohighlight">\(T_v(f) = f(v)\)</span> is an element of <span class="math notranslate nohighlight">\(V''\)</span>.</p></li>
+<li><p><strong>Theorem</strong>: The canonical map <span class="math notranslate nohighlight">\(T: V \to V''\)</span> sending <span class="math notranslate nohighlight">\(v \mapsto T_v\)</span> is an isometric isomorphism into <span class="math notranslate nohighlight">\(V''\)</span>.</p>
+<p><strong>Proof</strong>:
+Linearity is clear. For boundedness, <span class="math notranslate nohighlight">\(|T_v(f)| = |f(v)| \le \|v\| \|f\|\)</span>, so <span class="math notranslate nohighlight">\(\|T_v\| \le \|v\|\)</span>.
+For <span class="math notranslate nohighlight">\(v \neq 0\)</span>, choose <span class="math notranslate nohighlight">\(f \in V'\)</span> with <span class="math notranslate nohighlight">\(\|f\| = 1\)</span> and <span class="math notranslate nohighlight">\(f(v) = \|v\|\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\|T_v\| \ge |T_v(f)| = |f(v)| = \|v\|\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\|T_v\| = \|v\|\)</span>, and the map is isometric.</p>
+</li>
+<li><p><strong>Definition</strong>: A Banach space <span class="math notranslate nohighlight">\(V\)</span> is <strong>reflexive</strong> if the canonical map <span class="math notranslate nohighlight">\(T: V \to V''\)</span> is surjective (onto).</p>
+<ul class="simple">
+<li><p><strong>Examples</strong>: <span class="math notranslate nohighlight">\(\ell^p\)</span> spaces for <span class="math notranslate nohighlight">\(1 &lt; p &lt; \infty\)</span> are reflexive. <span class="math notranslate nohighlight">\(\ell^1\)</span> and <span class="math notranslate nohighlight">\(c_0\)</span> are not reflexive.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="the-outer-measure-of-real-subsets">
+<h3>2. The Outer Measure of Real Subsets<a class="headerlink" href="#the-outer-measure-of-real-subsets" title="Permalink to this heading">#</a></h3>
+<p>To measure the size of arbitrary subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, we define the outer measure.</p>
+<ul>
+<li><p><strong>Definition</strong>: For any interval <span class="math notranslate nohighlight">\(I\)</span>, let <span class="math notranslate nohighlight">\(\ell(I)\)</span> denote its length. The <strong>Lebesgue outer measure</strong> <span class="math notranslate nohighlight">\(m^*: \mathcal{P}(\mathbb{R}) \to [0, \infty]\)</span> of a subset <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) = \inf \left\{ \sum_{n=1}^\infty \ell(I_n) \;\middle|\; A \subseteq \bigcup_{n=1}^\infty I_n, \text{ where } I_n \text{ are open intervals} \right\}\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> is countable, then <span class="math notranslate nohighlight">\(m^*(A) = 0\)</span>.</p>
+<p><strong>Proof</strong>:
+Enumerate <span class="math notranslate nohighlight">\(A = \{a_1, a_2, \dots\}\)</span>. Fix <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. For each <span class="math notranslate nohighlight">\(n\)</span>, define the open interval:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \left( a_n - \frac{\epsilon}{2^{n+1}}, a_n + \frac{\epsilon}{2^{n+1}} \right)\]</div>
+<p>Then <span class="math notranslate nohighlight">\(A \subseteq \bigcup_{n=1}^\infty I_n\)</span>. By definition:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) \le \sum_{n=1}^\infty \ell(I_n) = \sum_{n=1}^\infty \frac{\epsilon}{2^n} = \epsilon\]</div>
+<p>Since this holds for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, we have <span class="math notranslate nohighlight">\(m^*(A) = 0\)</span>.</p>
+</li>
+<li><p><strong>Theorem (Countable Subadditivity)</strong>: Let <span class="math notranslate nohighlight">\(\{A_n\}_{n=1}^\infty\)</span> be a countable family of subsets of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[m^*\left( \bigcup_{n=1}^\infty A_n \right) \le \sum_{n=1}^\infty m^*(A_n)\]</div>
+<p><strong>Proof</strong>:
+If any <span class="math notranslate nohighlight">\(m^*(A_n) = \infty\)</span>, the inequality is trivial. Assume <span class="math notranslate nohighlight">\(m^*(A_n) &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Fix <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. For each <span class="math notranslate nohighlight">\(n\)</span>, choose open intervals <span class="math notranslate nohighlight">\(\{I_{nk}\}_{k=1}^\infty\)</span> covering <span class="math notranslate nohighlight">\(A_n\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^\infty \ell(I_{nk}) &lt; m^*(A_n) + \frac{\epsilon}{2^n}\]</div>
+<p>The countable collection <span class="math notranslate nohighlight">\(\{I_{nk}\}_{n,k=1}^\infty\)</span> covers <span class="math notranslate nohighlight">\(\bigcup_{n=1}^\infty A_n\)</span>. Thus:</p>
+<div class="math notranslate nohighlight">
+\[m^*\left( \bigcup_{n=1}^\infty A_n \right) \le \sum_{n=1}^\infty \sum_{k=1}^\infty \ell(I_{nk}) \le \sum_{n=1}^\infty \left( m^*(A_n) + \frac{\epsilon}{2^n} \right) = \sum_{n=1}^\infty m^*(A_n) + \epsilon\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(\epsilon \to 0\)</span> yields the result.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem">
+<h3>3. Connection to ML/DL: Reproducing Kernel Hilbert Spaces (RKHS) &amp; The Representer Theorem<a class="headerlink" href="#connection-to-ml-dl-reproducing-kernel-hilbert-spaces-rkhs-the-representer-theorem" title="Permalink to this heading">#</a></h3>
+<p>In machine learning, <strong>kernel methods</strong> (such as Support Vector Machines (SVMs), Kernel PCA, and Gaussian Processes) construct non-linear decision boundaries by mapping inputs <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span> into an infinite-dimensional feature space. A <strong>Reproducing Kernel Hilbert Space (RKHS)</strong> is a complete Hilbert space of functions where evaluation functionals are continuous.</p>
+<section id="riesz-representation-theorem-evaluation-functionals">
+<h4>Riesz Representation Theorem &amp; Evaluation Functionals<a class="headerlink" href="#riesz-representation-theorem-evaluation-functionals" title="Permalink to this heading">#</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> be a Hilbert space of functions <span class="math notranslate nohighlight">\(f: \mathcal{X} \to \mathbb{R}\)</span>. For a fixed <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span>, the <strong>evaluation functional</strong> <span class="math notranslate nohighlight">\(L_x: \mathcal{H} \to \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[L_x(f) = f(x)\]</div>
+<p>If <span class="math notranslate nohighlight">\(L_x\)</span> is a bounded (continuous) linear functional for all <span class="math notranslate nohighlight">\(x \in \mathcal{X}\)</span> (which defines an RKHS), then by the <strong>Riesz Representation Theorem</strong>, there exists a unique function <span class="math notranslate nohighlight">\(K_x \in \mathcal{H}\)</span> (denoted as <span class="math notranslate nohighlight">\(K(x, \cdot)\)</span>) such that:</p>
+<div class="math notranslate nohighlight">
+\[L_x(f) = f(x) = \langle f, K(x, \cdot) \rangle_{\mathcal{H}}\]</div>
+<p>This is the <strong>reproducing property</strong>. The symmetric positive-definite reproducing kernel <span class="math notranslate nohighlight">\(K: \mathcal{X} \times \mathcal{X} \to \mathbb{R}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[K(x, y) = \langle K(x, \cdot), K(y, \cdot) \rangle_{\mathcal{H}}\]</div>
+<p>This provides the foundation for the <strong>Kernel Trick</strong>: computing inner products in an infinite-dimensional feature space <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> can be performed simply by evaluating the closed-form kernel function <span class="math notranslate nohighlight">\(K(x, y)\)</span> in the low-dimensional input space.</p>
+</section>
+<section id="the-representer-theorem">
+<h4>The Representer Theorem<a class="headerlink" href="#the-representer-theorem" title="Permalink to this heading">#</a></h4>
+<p>Normally, finding a function <span class="math notranslate nohighlight">\(f \in \mathcal{H}\)</span> that minimizes a regularized empirical risk function:</p>
+<div class="math notranslate nohighlight">
+\[\min_{f \in \mathcal{H}} \sum_{i=1}^N \mathcal{L}(f(x_i), y_i) + \lambda \Omega(\|f\|_{\mathcal{H}})\]</div>
+<p>is an infinite-dimensional optimization problem since <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> is infinite-dimensional.</p>
+<p>The <strong>Representer Theorem</strong> guarantees that the optimal solution <span class="math notranslate nohighlight">\(f^*\)</span> must lie in the finite-dimensional span of the kernels evaluated at the training points:</p>
+<div class="math notranslate nohighlight">
+\[f^*(x) = \sum_{i=1}^N \alpha_i K(x_i, x)\]</div>
+<p><strong>Proof</strong>:
+Any function <span class="math notranslate nohighlight">\(f \in \mathcal{H}\)</span> can be decomposed orthogonally as <span class="math notranslate nohighlight">\(f = f_{\parallel} + f_{\perp}\)</span>, where <span class="math notranslate nohighlight">\(f_{\parallel}\)</span> lies in the subspace <span class="math notranslate nohighlight">\(\mathcal{H}_{\parallel} = \text{span}(\{K(x_i, \cdot)\}_{i=1}^N)\)</span> and <span class="math notranslate nohighlight">\(f_{\perp}\)</span> lies in the orthogonal complement <span class="math notranslate nohighlight">\(\mathcal{H}_{\perp}\)</span>.</p>
+<p>For any training point <span class="math notranslate nohighlight">\(x_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x_i) = \langle f, K(x_i, \cdot) \rangle_{\mathcal{H}} = \langle f_{\parallel} + f_{\perp}, K(x_i, \cdot) \rangle_{\mathcal{H}} = \langle f_{\parallel}, K(x_i, \cdot) \rangle_{\mathcal{H}} + 0 = f_{\parallel}(x_i)\]</div>
+<p>Thus, the empirical loss term is independent of <span class="math notranslate nohighlight">\(f_{\perp}\)</span>.</p>
+<p>For the regularization term, if <span class="math notranslate nohighlight">\(\Omega\)</span> is strictly monotonically increasing:</p>
+<div class="math notranslate nohighlight">
+\[\|f\|_{\mathcal{H}}^2 = \|f_{\parallel}\|_{\mathcal{H}}^2 + \|f_{\perp}\|_{\mathcal{H}}^2 \ge \|f_{\parallel}\|_{\mathcal{H}}^2\]</div>
+<p>Thus, setting <span class="math notranslate nohighlight">\(f_{\perp} = 0\)</span> minimizes the regularizer without changing the empirical loss. The optimal function must therefore have the form <span class="math notranslate nohighlight">\(f^*(x) = \sum_{i=1}^N \alpha_i K(x_i, x)\)</span>, reducing the infinite-dimensional optimization problem to finding the finite-dimensional coefficients <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}^N\)</span>.</p>
+</section>
+</section>
+</section>
+<span id="document-book/measure_theory/sigma_algebras"></span><section class="tex2jax_ignore mathjax_ignore" id="sigma-algebras">
+<h2>Sigma Algebras<a class="headerlink" href="#sigma-algebras" title="Permalink to this heading">#</a></h2>
+<p>This lecture covers the outer measure of intervals, open approximations of subsets, and the formal definition of algebras and <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras.</p>
+<hr class="docutils" />
+<section id="outer-measure-of-intervals">
+<h3>1. Outer Measure of Intervals<a class="headerlink" href="#outer-measure-of-intervals" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Proposition</strong>: If <span class="math notranslate nohighlight">\(I\)</span> is any interval in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, then <span class="math notranslate nohighlight">\(m^*(I) = \ell(I)\)</span>.</p>
+<p><strong>Proof</strong>:
+We prove the case where <span class="math notranslate nohighlight">\(I = [a, b]\)</span> is closed and bounded. The inequality <span class="math notranslate nohighlight">\(m^*(I) \le b-a\)</span> is clear since for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, <span class="math notranslate nohighlight">\([a, b] \subset (a-\epsilon, b+\epsilon)\)</span>, so <span class="math notranslate nohighlight">\(m^*(I) \le b-a+2\epsilon \to b-a\)</span>.</p>
+<p>For the reverse inequality, let <span class="math notranslate nohighlight">\(\{I_n\}\)</span> be open intervals covering <span class="math notranslate nohighlight">\([a, b]\)</span>. Since <span class="math notranslate nohighlight">\([a, b]\)</span> is compact, by the Heine-Borel theorem, there exists a finite subcover <span class="math notranslate nohighlight">\(\{J_1, \dots, J_N\}\)</span>.</p>
+<p>Choose <span class="math notranslate nohighlight">\(J_1 = (a_1, b_1)\)</span> containing <span class="math notranslate nohighlight">\(a\)</span>. If <span class="math notranslate nohighlight">\(b_1 \le b\)</span>, there must exist <span class="math notranslate nohighlight">\(J_2 = (a_2, b_2)\)</span> containing <span class="math notranslate nohighlight">\(b_1\)</span>. Inductively, we construct a chain <span class="math notranslate nohighlight">\(J_1, \dots, J_K\)</span> such that <span class="math notranslate nohighlight">\(a_{k+1} &lt; b_k &lt; b_{k+1}\)</span> and <span class="math notranslate nohighlight">\(b_K &gt; b\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty \ell(I_n) \ge \sum_{k=1}^K \ell(J_k) = (b_K - a_K) + \dots + (b_1 - a_1) \ge b_K - a_1 &gt; b-a\]</div>
+<p>Taking the infimum, we obtain <span class="math notranslate nohighlight">\(m^*(I) \ge b-a\)</span>.</p>
+<p>For other finite intervals, the result follows by approximating them with closed intervals: <span class="math notranslate nohighlight">\([a+\epsilon, b-\epsilon] \subset I \subset [a-\epsilon, b+\epsilon]\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="approximating-sets-with-open-sets">
+<h3>2. Approximating Sets with Open Sets<a class="headerlink" href="#approximating-sets-with-open-sets" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: For any subset <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists an open set <span class="math notranslate nohighlight">\(O \supseteq A\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) \le m^*(O) \le m^*(A) + \epsilon\]</div>
+<p><strong>Proof</strong>:
+If <span class="math notranslate nohighlight">\(m^*(A) = \infty\)</span>, take <span class="math notranslate nohighlight">\(O = \mathbb{R}\)</span>. Otherwise, choose open intervals <span class="math notranslate nohighlight">\(\{I_n\}\)</span> covering <span class="math notranslate nohighlight">\(A\)</span> such that <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \ell(I_n) &lt; m^*(A) + \epsilon\)</span>. Define <span class="math notranslate nohighlight">\(O = \bigcup_{n=1}^\infty I_n\)</span>. Then <span class="math notranslate nohighlight">\(O\)</span> is open, <span class="math notranslate nohighlight">\(A \subseteq O\)</span>, and by subadditivity:</p>
+<div class="math notranslate nohighlight">
+\[m^*(O) \le \sum_{n=1}^\infty m^*(I_n) = \sum_{n=1}^\infty \ell(I_n) &lt; m^*(A) + \epsilon\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="algebras-and-sigma-algebras">
+<h3>3. Algebras and <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras<a class="headerlink" href="#algebras-and-sigma-algebras" title="Permalink to this heading">#</a></h3>
+<p>To define a countably additive measure, we restrict our domain to a subset of <span class="math notranslate nohighlight">\(\mathcal{P}(\mathbb{R})\)</span> closed under countable operations.</p>
+<ul>
+<li><p><strong>Definition</strong>: A collection <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> of subsets of <span class="math notranslate nohighlight">\(X\)</span> is an <strong>algebra</strong> if:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(X \in \mathcal{A}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(E \in \mathcal{A} \implies E^c \in \mathcal{A}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_1, \dots, E_n \in \mathcal{A} \implies \bigcup_{i=1}^n E_i \in \mathcal{A}\)</span>.</p></li>
+</ol>
+<p>An algebra is a <strong><span class="math notranslate nohighlight">\(\sigma\)</span>-algebra</strong> if it is also closed under countable unions:</p>
+<div class="math notranslate nohighlight">
+\[\{E_n\}_{n=1}^\infty \subseteq \mathcal{A} \implies \bigcup_{n=1}^\infty E_n \in \mathcal{A}\]</div>
+</li>
+<li><p><strong>Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span>)</strong>: The smallest <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing all open sets in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is defined as the intersection of all <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> containing the open sets.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-book/measure_theory/lebesgue_measurable_subsets_measure"></span><section class="tex2jax_ignore mathjax_ignore" id="lebesgue-measurable-subsets-and-measure">
+<h2>Lebesgue Measurable Subsets and Measure<a class="headerlink" href="#lebesgue-measurable-subsets-and-measure" title="Permalink to this heading">#</a></h2>
+<p>This lecture establishes the <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra of Lebesgue measurable sets, defines the Lebesgue measure, and proves its countable additivity.</p>
+<hr class="docutils" />
+<section id="caratheodory-s-definition-of-measurability">
+<h3>1. Carathéodory’s Definition of Measurability<a class="headerlink" href="#caratheodory-s-definition-of-measurability" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Definition</strong>: A subset <span class="math notranslate nohighlight">\(E \subseteq \mathbb{R}\)</span> is <strong>Lebesgue measurable</strong> if for all test sets <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) = m^*(A \cap E) + m^*(A \cap E^c)\]</div>
+<p>We denote the collection of all Lebesgue measurable sets as <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. By subadditivity, <span class="math notranslate nohighlight">\(E\)</span> is measurable if and only if <span class="math notranslate nohighlight">\(m^*(A \cap E) + m^*(A \cap E^c) \le m^*(A)\)</span> for all <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</li>
+<li><p><strong>Lemma</strong>: If <span class="math notranslate nohighlight">\(m^*(E) = 0\)</span>, then <span class="math notranslate nohighlight">\(E \in \mathcal{M}\)</span>.</p>
+<p><strong>Proof</strong>: Since <span class="math notranslate nohighlight">\(A \cap E \subseteq E\)</span>, we have <span class="math notranslate nohighlight">\(m^*(A \cap E) \le m^*(E) = 0\)</span>. Thus:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A \cap E) + m^*(A \cap E^c) = 0 + m^*(A \cap E^c) \le m^*(A)\]</div>
+<p>since <span class="math notranslate nohighlight">\(A \cap E^c \subseteq A\)</span>. Thus, <span class="math notranslate nohighlight">\(E\)</span> is measurable.</p>
+</li>
+<li><p><strong>Lemma</strong>: Let <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> be an algebra, and let <span class="math notranslate nohighlight">\(\{E_n\}_{n=1}^\infty\)</span> be a countable collection of elements in <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>. Then there exists a disjoint countable collection <span class="math notranslate nohighlight">\(\{F_n\}_{n=1}^\infty\)</span> in <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> such that <span class="math notranslate nohighlight">\(\bigcup_{n=1}^\infty E_n = \bigcup_{n=1}^\infty F_n\)</span>.</p>
+<p><strong>Proof</strong>: Define <span class="math notranslate nohighlight">\(G_n = \bigcup_{k=1}^n E_k \in \mathcal{A}\)</span>. Let <span class="math notranslate nohighlight">\(F_1 = G_1\)</span>, and <span class="math notranslate nohighlight">\(F_{n+1} = G_{n+1} \setminus G_n \in \mathcal{A}\)</span> for all <span class="math notranslate nohighlight">\(n \ge 1\)</span>. The sets <span class="math notranslate nohighlight">\(\{F_n\}\)</span> are pairwise disjoint and satisfy the union property.</p>
+</li>
+<li><p><strong>Proposition</strong>: Let <span class="math notranslate nohighlight">\(E_1, \dots, E_n\)</span> be pairwise disjoint measurable sets. For any test set <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m^*\left( A \cap \left[ \bigcup_{k=1}^n E_k \right] \right) = \sum_{k=1}^n m^*(A \cap E_k)\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="measurable-sets-form-a-sigma-algebra">
+<h3>2. Measurable Sets form a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra<a class="headerlink" href="#measurable-sets-form-a-sigma-algebra" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: The collection <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> of all Lebesgue measurable sets is a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra, and it contains the Borel <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>.</p>
+<p><strong>Proof Sketch</strong>:
+We already know <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is closed under complementation and finite union. To show closure under countable disjoint union, let <span class="math notranslate nohighlight">\(E = \bigcup_{n=1}^\infty E_n\)</span> be a disjoint union of measurable sets. For any test set <span class="math notranslate nohighlight">\(A\)</span> and any <span class="math notranslate nohighlight">\(N \in \mathbb{N}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) = m^*\left( A \cap \left[ \bigcup_{n=1}^N E_n \right] \right) + m^*\left( A \cap \left[ \bigcup_{n=1}^N E_n \right]^c \right) \ge \sum_{n=1}^N m^*(A \cap E_n) + m^*(A \cap E^c)\]</div>
+<p>Letting <span class="math notranslate nohighlight">\(N \to \infty\)</span> and applying countable subadditivity:</p>
+<div class="math notranslate nohighlight">
+\[m^*(A) \ge \sum_{n=1}^\infty m^*(A \cap E_n) + m^*(A \cap E^c) \ge m^*(A \cap E) + m^*(A \cap E^c)\]</div>
+<p>which proves <span class="math notranslate nohighlight">\(E \in \mathcal{M}\)</span>.</p>
+<p>To show <span class="math notranslate nohighlight">\(\mathcal{B} \subseteq \mathcal{M}\)</span>, we prove <span class="math notranslate nohighlight">\((a, \infty)\)</span> is measurable for all <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>. This holds because for any test set <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> with finite outer measure, we can cover <span class="math notranslate nohighlight">\(A\)</span> with open intervals and split them at <span class="math notranslate nohighlight">\(a\)</span>. Since open intervals can be split additive-lengthwise at <span class="math notranslate nohighlight">\(a\)</span>, the limit of the sum of lengths yields <span class="math notranslate nohighlight">\(m^*(A \cap (a, \infty)) + m^*(A \cap (-\infty, a]) \le m^*(A)\)</span>. Since <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is a <span class="math notranslate nohighlight">\(\sigma\)</span>-algebra containing all <span class="math notranslate nohighlight">\((a, \infty)\)</span>, it contains all open intervals and thus all open sets, meaning <span class="math notranslate nohighlight">\(\mathcal{B} \subseteq \mathcal{M}\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="properties-of-lebesgue-measure">
+<h3>3. Properties of Lebesgue Measure<a class="headerlink" href="#properties-of-lebesgue-measure" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Definition</strong>: The <strong>Lebesgue measure</strong> <span class="math notranslate nohighlight">\(m(E)\)</span> of a measurable set <span class="math notranslate nohighlight">\(E \in \mathcal{M}\)</span> is defined as <span class="math notranslate nohighlight">\(m(E) = m^*(E)\)</span>.</p></li>
+<li><p><strong>Theorem (Countable Additivity)</strong>: If <span class="math notranslate nohighlight">\(\{E_n\}_{n=1}^\infty\)</span> is a countable collection of pairwise disjoint measurable sets, then:</p>
+<div class="math notranslate nohighlight">
+\[m\left( \bigcup_{n=1}^\infty E_n \right) = \sum_{n=1}^\infty m(E_n)\]</div>
+</li>
+<li><p><strong>Theorem (Continuity of Measure)</strong>: If <span class="math notranslate nohighlight">\(\{E_n\}\)</span> is a sequence of measurable sets with <span class="math notranslate nohighlight">\(E_1 \subseteq E_2 \subseteq \dots\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[m\left( \bigcup_{n=1}^\infty E_n \right) = \lim_{n\to\infty} m(E_n)\]</div>
+</li>
+</ul>
+</section>
+</section>
+<span id="document-book/measure_theory/lebesgue_measurable_functions"></span><section class="tex2jax_ignore mathjax_ignore" id="lebesgue-measurable-functions">
+<h2>Lebesgue Measurable Functions<a class="headerlink" href="#lebesgue-measurable-functions" title="Permalink to this heading">#</a></h2>
+<p>This lecture defines measurable functions, establishes their algebraic closure properties, and covers pointwise limit behavior.</p>
+<hr class="docutils" />
+<section id="definition-and-equivalence">
+<h3>1. Definition and Equivalence<a class="headerlink" href="#definition-and-equivalence" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Definition</strong>: Let <span class="math notranslate nohighlight">\(E \subseteq \mathbb{R}\)</span> be measurable. A function <span class="math notranslate nohighlight">\(f: E \to [-\infty, \infty]\)</span> is <strong>Lebesgue measurable</strong> if for all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f^{-1}((\alpha, \infty]) = \{x \in E \mid f(x) &gt; \alpha\} \in \mathcal{M}\]</div>
+</li>
+<li><p><strong>Theorem</strong>: The following conditions are equivalent for a function <span class="math notranslate nohighlight">\(f: E \to [-\infty, \infty]\)</span>:</p>
+<ol class="arabic simple">
+<li><p>For all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f^{-1}((\alpha, \infty]) \in \mathcal{M}\)</span>.</p></li>
+<li><p>For all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f^{-1}([\alpha, \infty]) \in \mathcal{M}\)</span>.</p></li>
+<li><p>For all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f^{-1}([-\infty, \alpha)) \in \mathcal{M}\)</span>.</p></li>
+<li><p>For all <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(f^{-1}([-\infty, \alpha]) \in \mathcal{M}\)</span>.</p></li>
+</ol>
+<p><strong>Proof</strong>:
+<span class="math notranslate nohighlight">\((1 \implies 2)\)</span> follows from <span class="math notranslate nohighlight">\([\alpha, \infty] = \bigcap_{n=1}^\infty (\alpha - 1/n, \infty]\)</span>, which translates to a countable intersection of preimages.</p>
+<p><span class="math notranslate nohighlight">\((2 \implies 1)\)</span> follows from <span class="math notranslate nohighlight">\((\alpha, \infty] = \bigcup_{n=1}^\infty [\alpha + 1/n, \infty]\)</span>, which is a countable union.</p>
+<p><span class="math notranslate nohighlight">\((2 \iff 3)\)</span> follows from complementation: <span class="math notranslate nohighlight">\([-\infty, \alpha) = ([\alpha, \infty])^c\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((3 \iff 4)\)</span> is proved similarly.</p>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(f: E \to \mathbb{R}\)</span> is measurable, then for any Borel set <span class="math notranslate nohighlight">\(F \in \mathcal{B}\)</span>, <span class="math notranslate nohighlight">\(f^{-1}(F) \in \mathcal{M}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Corollary</strong>: Every continuous function <span class="math notranslate nohighlight">\(f: \mathbb{R} \to \mathbb{R}\)</span> is measurable.</p></li>
+<li><p><strong>Corollary</strong>: The indicator function <span class="math notranslate nohighlight">\(\chi_F: E \to \mathbb{R}\)</span> is measurable if and only if <span class="math notranslate nohighlight">\(F \cap E\)</span> is measurable.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="algebraic-properties-of-measurable-functions">
+<h3>2. Algebraic Properties of Measurable Functions<a class="headerlink" href="#algebraic-properties-of-measurable-functions" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(f, g: E \to \mathbb{R}\)</span> are measurable and <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>, then <span class="math notranslate nohighlight">\(cf\)</span>, <span class="math notranslate nohighlight">\(f+g\)</span>, and <span class="math notranslate nohighlight">\(fg\)</span> are measurable.</p>
+<p><strong>Proof Sketch</strong>:
+For <span class="math notranslate nohighlight">\(f+g\)</span>, we use the density of the rationals:</p>
+<div class="math notranslate nohighlight">
+\[f(x) + g(x) &gt; \alpha \iff \exists r \in \mathbb{Q} \text{ such that } f(x) &gt; r &gt; \alpha - g(x)\]</div>
+<p>Thus:</p>
+<div class="math notranslate nohighlight">
+\[(f+g)^{-1}((\alpha, \infty]) = \bigcup_{r \in \mathbb{Q}} \Big( f^{-1}((r, \infty]) \cap g^{-1}((\alpha - r, \infty]) \Big)\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, this is a countable union of intersections of measurable sets, which is measurable.</p>
+<p>For <span class="math notranslate nohighlight">\(fg\)</span>, we show <span class="math notranslate nohighlight">\(f^2\)</span> is measurable by checking preimages, then write <span class="math notranslate nohighlight">\(fg = \frac{1}{4} ((f+g)^2 - (f-g)^2)\)</span>.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="limit-behavior-almost-everywhere-a-e">
+<h3>3. Limit Behavior &amp; “Almost Everywhere” (a.e.)<a class="headerlink" href="#limit-behavior-almost-everywhere-a-e" title="Permalink to this heading">#</a></h3>
+<p>One of the key advantages of Lebesgue integration theory over Riemann integration is its robust behavior under pointwise limits.</p>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(f_n: E \to [-\infty, \infty]\)</span> be a sequence of measurable functions. Then:</p>
+<div class="math notranslate nohighlight">
+\[g_1(x) = \sup_n f_n(x), \quad g_2(x) = \inf_n f_n(x), \quad g_3(x) = \limsup_{n\to\infty} f_n(x), \quad g_4(x) = \liminf_{n\to\infty} f_n(x)\]</div>
+<p>are all measurable.</p>
+<p><strong>Proof</strong>:
+For <span class="math notranslate nohighlight">\(g_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x \in g_1^{-1}((\alpha, \infty]) \iff \sup_n f_n(x) &gt; \alpha \iff \exists n \text{ such that } f_n(x) &gt; \alpha \iff x \in \bigcup_n f_n^{-1}((\alpha, \infty])\]</div>
+<p>Since it is a countable union of measurable sets, <span class="math notranslate nohighlight">\(g_1\)</span> is measurable. Similarly, <span class="math notranslate nohighlight">\(g_2\)</span> is measurable using intersections.</p>
+<p>Since <span class="math notranslate nohighlight">\(\limsup f_n = \inf_n (\sup_{k \ge n} f_k)\)</span> and <span class="math notranslate nohighlight">\(\liminf f_n = \sup_n (\inf_{k \ge n} f_k)\)</span>, <span class="math notranslate nohighlight">\(g_3\)</span> and <span class="math notranslate nohighlight">\(g_4\)</span> are measurable.</p>
+</li>
+<li><p><strong>Corollary</strong>: If <span class="math notranslate nohighlight">\(f_n \to f\)</span> pointwise, then <span class="math notranslate nohighlight">\(f\)</span> is measurable.</p>
+<ul class="simple">
+<li><p><em>Note</em>: This is false for Riemann integrable functions (e.g., the limit of piecewise continuous indicators of rational sequences converges pointwise to the Dirichlet function, which is not Riemann integrable).</p></li>
+</ul>
+</li>
+<li><p><strong>Definition</strong>: A property holds <strong>almost everywhere (a.e.)</strong> on <span class="math notranslate nohighlight">\(E\)</span> if the set of points where it does not hold has measure zero.</p>
+<ul class="simple">
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(f = g\)</span> a.e. on <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is measurable, then <span class="math notranslate nohighlight">\(g\)</span> is measurable.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<span id="document-book/measure_theory/simple_functions"></span><section class="tex2jax_ignore mathjax_ignore" id="simple-functions">
+<h2>Simple Functions<a class="headerlink" href="#simple-functions" title="Permalink to this heading">#</a></h2>
+<p>This lecture defines complex-valued measurable functions, introduces simple functions, proves the simple function approximation theorem, and defines the Lebesgue integral for non-negative simple functions.</p>
+<hr class="docutils" />
+<section id="complex-measurability-simple-functions">
+<h3>1. Complex Measurability &amp; Simple Functions<a class="headerlink" href="#complex-measurability-simple-functions" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Definition</strong>: A complex-valued function <span class="math notranslate nohighlight">\(f: E \to \mathbb{C}\)</span> is <strong>measurable</strong> if its real part <span class="math notranslate nohighlight">\(\text{Re}(f)\)</span> and imaginary part <span class="math notranslate nohighlight">\(\text{Im}(f)\)</span> are measurable real-valued functions.</p>
+<p>All standard algebraic combinations (<span class="math notranslate nohighlight">\(\alpha f\)</span>, <span class="math notranslate nohighlight">\(f+g\)</span>, <span class="math notranslate nohighlight">\(fg\)</span>, <span class="math notranslate nohighlight">\(\bar{f}\)</span>, <span class="math notranslate nohighlight">\(|f|\)</span>) and pointwise limits of complex measurable functions remain measurable.</p>
+</li>
+<li><p><strong>Definition</strong>: A measurable function <span class="math notranslate nohighlight">\(\phi: E \to \mathbb{C}\)</span> is <strong>simple</strong> if its range <span class="math notranslate nohighlight">\(\phi(E)\)</span> is a finite set.</p>
+<p>If the range is <span class="math notranslate nohighlight">\(\{a_1, \dots, a_n\}\)</span>, we can partition <span class="math notranslate nohighlight">\(E\)</span> into disjoint measurable sets <span class="math notranslate nohighlight">\(A_i = \phi^{-1}(\{a_i\})\)</span>. The function can then be written in its <strong>canonical representation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\phi(x) = \sum_{i=1}^n a_i \chi_{A_i}(x)\]</div>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="simple-function-approximation">
+<h3>2. Simple Function Approximation<a class="headerlink" href="#simple-function-approximation" title="Permalink to this heading">#</a></h3>
+<p>Simple functions act as the fundamental step-like building blocks of Lebesgue integration.</p>
+<ul>
+<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(f: E \to [0, \infty]\)</span> be a non-negative measurable function. Then there exists a sequence of simple functions <span class="math notranslate nohighlight">\(\{\phi_n\}_{n=1}^\infty\)</span> on <span class="math notranslate nohighlight">\(E\)</span> such that:</p>
+<ol class="arabic simple">
+<li><p><strong>Monotonicity</strong>: <span class="math notranslate nohighlight">\(0 \le \phi_1 \le \phi_2 \le \dots \le f\)</span>.</p></li>
+<li><p><strong>Pointwise Convergence</strong>: <span class="math notranslate nohighlight">\(\lim_{n\to\infty} \phi_n(x) = f(x)\)</span> for all <span class="math notranslate nohighlight">\(x \in E\)</span>.</p></li>
+<li><p><strong>Uniform Convergence</strong>: <span class="math notranslate nohighlight">\(\phi_n \to f\)</span> uniformly on any set where <span class="math notranslate nohighlight">\(f\)</span> is bounded.</p></li>
+</ol>
+<p><strong>Proof</strong>:
+For each <span class="math notranslate nohighlight">\(n \ge 1\)</span> and <span class="math notranslate nohighlight">\(0 \le k \le 2^{2n} - 1\)</span>, define:</p>
+<div class="math notranslate nohighlight">
+\[E_n^k = \left\{ x \in E \;\middle|\; k 2^{-n} &lt; f(x) \le (k+1) 2^{-n} \right\}, \quad F_n = \left\{ x \in E \;\middle|\; f(x) &gt; 2^n \right\}\]</div>
+<p>These sets are measurable since they are preimages of intervals. Define:</p>
+<div class="math notranslate nohighlight">
+\[\phi_n(x) = \sum_{k=0}^{2^{2n}-1} k 2^{-n} \chi_{E_n^k}(x) + 2^n \chi_{F_n}(x)\]</div>
+<p>Each <span class="math notranslate nohighlight">\(\phi_n\)</span> is a simple function since it takes only finitely many values. By construction, <span class="math notranslate nohighlight">\(0 \le \phi_n \le f\)</span>.</p>
+<p>To show monotonicity, note that the partition for <span class="math notranslate nohighlight">\(n+1\)</span> refines the partition for <span class="math notranslate nohighlight">\(n\)</span>. Specifically, <span class="math notranslate nohighlight">\(E_n^k = E_{n+1}^{2k} \cup E_{n+1}^{2k+1}\)</span>, and on these sub-intervals the value of <span class="math notranslate nohighlight">\(\phi_{n+1}\)</span> is either <span class="math notranslate nohighlight">\(2k \cdot 2^{-(n+1)} = k 2^{-n}\)</span> or <span class="math notranslate nohighlight">\((2k+1) \cdot 2^{-(n+1)} &gt; k 2^{-n}\)</span>. Thus, <span class="math notranslate nohighlight">\(\phi_n \le \phi_{n+1}\)</span>.</p>
+<p>To show convergence, note that for any <span class="math notranslate nohighlight">\(x\)</span> where <span class="math notranslate nohighlight">\(f(x) &lt; \infty\)</span>, if we choose <span class="math notranslate nohighlight">\(n\)</span> large enough so that <span class="math notranslate nohighlight">\(f(x) \le 2^n\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[0 \le f(x) - \phi_n(x) \le 2^{-n}\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(n \to \infty\)</span> yields pointwise convergence. Uniform convergence on bounded subsets follows because the choice of <span class="math notranslate nohighlight">\(n\)</span> to satisfy <span class="math notranslate nohighlight">\(f(x) \le 2^n\)</span> can be made uniform.</p>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="lebesgue-integral-of-simple-functions">
+<h3>3. Lebesgue Integral of Simple Functions<a class="headerlink" href="#lebesgue-integral-of-simple-functions" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Definition</strong>: Let <span class="math notranslate nohighlight">\(\phi \in L^+(E)\)</span> be a non-negative simple function with canonical representation <span class="math notranslate nohighlight">\(\phi = \sum_{j=1}^n a_j \chi_{A_j}\)</span> (where <span class="math notranslate nohighlight">\(A_j\)</span> are disjoint and partition <span class="math notranslate nohighlight">\(E\)</span>). The <strong>Lebesgue integral</strong> of <span class="math notranslate nohighlight">\(\phi\)</span> over <span class="math notranslate nohighlight">\(E\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\int_E \phi \, d\mu = \sum_{j=1}^n a_j m(A_j) \in [0, \infty]\]</div>
+</li>
+<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> are non-negative simple functions, then:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\int_E c \phi \, d\mu = c \int_E \phi \, d\mu\)</span> for any <span class="math notranslate nohighlight">\(c \ge 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_E (\phi + \psi) \, d\mu = \int_E \phi \, d\mu + \int_E \psi \, d\mu\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\phi \le \psi\)</span> pointwise, then <span class="math notranslate nohighlight">\(\int_E \phi \, d\mu \le \int_E \psi \, d\mu\)</span>.</p></li>
+</ol>
+<p><strong>Proof of (2)</strong>:
+Let <span class="math notranslate nohighlight">\(\phi = \sum_{j=1}^n a_j \chi_{A_j}\)</span> and <span class="math notranslate nohighlight">\(\psi = \sum_{k=1}^m b_k \chi_{B_k}\)</span>. Since <span class="math notranslate nohighlight">\(\{A_j\}\)</span> and <span class="math notranslate nohighlight">\(\{B_k\}\)</span> partition <span class="math notranslate nohighlight">\(E\)</span>, we have <span class="math notranslate nohighlight">\(A_j = \bigcup_k (A_j \cap B_k)\)</span> and <span class="math notranslate nohighlight">\(B_k = \bigcup_j (A_j \cap B_k)\)</span>. By the additive property of measure:</p>
+<div class="math notranslate nohighlight">
+\[\int_E \phi \, d\mu + \int_E \psi \, d\mu = \sum_{j=1}^n a_j m(A_j) + \sum_{k=1}^m b_k m(B_k) = \sum_{j,k} (a_j + b_k) m(A_j \cap B_k)\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\phi + \psi = \sum_{j,k} (a_j + b_k) \chi_{A_j \cap B_k}\)</span> is a representation of the sum as a simple function on disjoint sets, the result follows.</p>
+</li>
+</ul>
 </section>
 </section>
 </div>
 <div class="toctree-wrapper compound">
-<span id="document-book/topology/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<span id="document-book/topology/intro"></span><section class="tex2jax_ignore mathjax_ignore" id="introduction-to-topology">
+<h2>Introduction to Topology<a class="headerlink" href="#introduction-to-topology" title="Permalink to this heading">#</a></h2>
 <p>Topology is the branch of mathematics that studies geometric properties and spatial relations that remain unaffected by the continuous change of shape or size of figures. Often described as <strong>“rubber-sheet geometry,”</strong> topology focuses on qualitative properties like connectivity, holes, and boundaries rather than quantitative measurements like distance, coordinates, or angles.</p>
 <p>In data science, machine learning, and deep learning, topology provides robust tools to understand the fundamental “shape” of high-dimensional data, optimize neural network structures, and perform noise-resistant feature engineering.</p>
 <hr class="docutils" />
@@ -6517,6 +7031,99 @@ Traditional geometry describes objects using coordinate equations (like <span cl
 </section>
 </section>
 </section>
+<span id="document-book/topology/surfaces"></span><section class="tex2jax_ignore mathjax_ignore" id="topological-surfaces-singularities">
+<h2>Topological Surfaces &amp; Singularities<a class="headerlink" href="#topological-surfaces-singularities" title="Permalink to this heading">#</a></h2>
+<p>This section covers special non-orientable topological surfaces, polar singularities, and vector field singularities on spheres.</p>
+<hr class="docutils" />
+<section id="special-topological-surfaces">
+<h3>1. Special Topological Surfaces<a class="headerlink" href="#special-topological-surfaces" title="Permalink to this heading">#</a></h3>
+<section id="the-mobius-strip">
+<h4>The Möbius Strip<a class="headerlink" href="#the-mobius-strip" title="Permalink to this heading">#</a></h4>
+<p>The <strong>Möbius strip</strong> is a two-dimensional surface with only <strong>one side</strong> and <strong>one boundary curve</strong>.</p>
+<p>You can easily construct a physical model of a Möbius strip by taking a rectangular strip of paper, giving one end a half-twist (<span class="math notranslate nohighlight">\(180^\circ\)</span> turn), and then gluing the two ends together.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/mobius_strip.gif"><img alt="Animated Möbius Strip" class="bg-primary mb-1 align-center" src="../_images/mobius_strip.gif" style="width: 75%;" /></a>
+<ul class="simple">
+<li><p><strong>One-sided Property</strong>: If you start drawing a line down the middle of a Möbius strip with a pen, you will eventually cover both “sides” of the paper and return to your starting point without ever lifting your pen or crossing the boundary edge.</p></li>
+<li><p><strong>Topological Significance</strong>: It is the simplest non-orientable surface. In data science, the Möbius strip is used to model cyclical datasets that have a twist or reflection in their state space.</p></li>
+</ul>
+</section>
+<section id="the-klein-bottle">
+<h4>The Klein Bottle<a class="headerlink" href="#the-klein-bottle" title="Permalink to this heading">#</a></h4>
+<p>The <strong>Klein bottle</strong> is a closed 2D manifold (surface) that takes the concept of the Möbius strip one step further. It has <strong>no boundaries</strong> (like a sphere) but possesses only <strong>one side</strong> (like a Möbius strip).</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/klein_bottle.png"><img alt="Figure-8 Klein Bottle Wireframe" class="bg-primary mb-1 align-center" src="../_images/klein_bottle.png" style="width: 45%;" /></a>
+<ul>
+<li><p><strong>Topological Connection to the Möbius Strip</strong>:
+A Klein bottle can be mathematically constructed by <strong>gluing two Möbius strips together along their circular boundaries</strong>. Since a Möbius strip only has a single boundary edge (which is topologically a circle <span class="math notranslate nohighlight">\(S^1\)</span>), joining two Möbius strips along this single edge closes the surface, yielding a Klein bottle.</p></li>
+<li><p><strong>Dimensionality Embedding &amp; Figure-8 Immersion</strong>:
+A Klein bottle cannot be embedded in 3D space without passing through itself. However, it can be embedded perfectly in <strong>4D space</strong> (<span class="math notranslate nohighlight">\(d = 4\)</span>) without self-intersection.</p>
+<p>The illustration above shows the <strong>Figure-8 immersion</strong> (often called the Klein Bagel) in 3D:</p>
+<ul class="simple">
+<li><p>It is represented as a clean blue wireframe mesh on a light background.</p></li>
+<li><p>In 4D space, the self-intersection is resolved because the intersecting parts have different values in the fourth dimension (<span class="math notranslate nohighlight">\(w\)</span>-axis).</p></li>
+</ul>
+</li>
+<li><p><strong>Data Science Application</strong>: Non-orientable manifolds like the Klein bottle are used as challenging benchmark datasets in manifold learning. They test whether non-linear dimensionality reduction algorithms (like UMAP or Isomap) can map high-dimensional topological structures into lower dimensions without losing essential topological characteristics.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="singularities-on-a-sphere">
+<h3>2. Singularities on a Sphere<a class="headerlink" href="#singularities-on-a-sphere" title="Permalink to this heading">#</a></h3>
+<p>A <strong>singularity</strong> is a point where a mathematical object loses its normal properties, collapses in dimension, or becomes mathematically undefined. Singularities on a sphere are studied in two major topological contexts:</p>
+<section id="a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">
+<h4>A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems<a class="headerlink" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems" title="Permalink to this heading">#</a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>The Hairy Ball Theorem</strong> from algebraic topology states that there is no continuous, non-vanishing tangent vector field on even-dimensional spheres (such as a 2D sphere <span class="math notranslate nohighlight">\(S^2\)</span>).</p>
+<p><em>Intuition:</em> <strong>“You cannot comb a hairy ball flat without creating at least one cowlick (singularity/whorl).”</strong></p>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/hairy_ball_singularity.png"><img alt="Hairy Ball Theorem and Vector Field Singularities" class="bg-primary mb-1 align-center" src="../_images/hairy_ball_singularity.png" style="width: 70%;" /></a>
+<p>This theorem is a direct consequence of a much deeper topological principle: the <strong>Poincaré-Hopf Theorem</strong>.</p>
+<section id="understanding-the-poincare-hopf-theorem">
+<h5>Understanding the Poincaré-Hopf Theorem<a class="headerlink" href="#understanding-the-poincare-hopf-theorem" title="Permalink to this heading">#</a></h5>
+<p>The Poincaré-Hopf Theorem links the local behavior of a vector field (such as wind) to the global topology of the surface it lies on. It states that for any smooth vector field on a compact manifold <span class="math notranslate nohighlight">\(M\)</span> with isolated zeroes (singularities), the sum of the <strong>indices</strong> of these zeroes equals the <strong>Euler characteristic</strong> (<span class="math notranslate nohighlight">\(\chi(M)\)</span>) of the manifold:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i} \text{index}_{z_i}(v) = \chi(M)\]</div>
+</section>
+<section id="what-is-the-index-of-a-singularity">
+<h5>What is the “Index” of a Singularity?<a class="headerlink" href="#what-is-the-index-of-a-singularity" title="Permalink to this heading">#</a></h5>
+<p>The <strong>index</strong> measures how the vectors rotate as you walk counter-clockwise in a small loop around the singularity:</p>
+<ol class="arabic simple">
+<li><p><strong>Source / Outflow</strong> (Wind blowing outward in all directions): <strong>Index = +1</strong></p></li>
+<li><p><strong>Sink / Inflow</strong> (Wind blowing inward in all directions): <strong>Index = +1</strong></p></li>
+<li><p><strong>Vortex / Whorl</strong> (Wind spiraling or rotating around a center): <strong>Index = +1</strong></p></li>
+<li><p><strong>Saddle Point / Col</strong> (Wind coming in from two directions and leaving in two other directions): <strong>Index = -1</strong></p></li>
+</ol>
+</section>
+<section id="meteorological-application-wind-systems-on-earth">
+<h5>Meteorological Application: Wind Systems on Earth<a class="headerlink" href="#meteorological-application-wind-systems-on-earth" title="Permalink to this heading">#</a></h5>
+<p>The Earth’s surface is topologically a 2-sphere (<span class="math notranslate nohighlight">\(S^2\)</span>), which has an Euler characteristic of <span class="math notranslate nohighlight">\(\chi(S^2) = 2\)</span>. Applying the Poincaré-Hopf Theorem to the Earth’s wind vector field:</p>
+<div class="math notranslate nohighlight">
+\[\sum \text{index} = 2\]</div>
+<p>This leads to several fascinating meteorological rules:</p>
+<ul class="simple">
+<li><p><strong>At least one calm spot</strong>: It is mathematically impossible to have a continuous wind blowing everywhere on Earth without any calm spots (points of zero wind speed). There must always be at least one cyclone, anticyclone, or saddle point.</p></li>
+<li><p><strong>The Balance of Weather Systems</strong>:</p>
+<ul>
+<li><p>If the Earth only has standard swirling systems (cyclones and anticyclones, which have an index of <strong>+1</strong>), there must be exactly <strong>two</strong> of them on the entire globe (e.g., 1 + 1 = 2, representing 1 Cyclone + 1 Anticyclone).</p></li>
+<li><p>If a weather map features multiple storm centers (cyclones) and high-pressure centers (anticyclones), they must be balanced by <strong>saddle points (cols)</strong> (index of <strong>-1</strong>). For instance, if there are 3 cyclones/anticyclones (total index of <strong>+3</strong>), there must be exactly 1 saddle point (index of <strong>-1</strong>) to keep the global sum equal to 2: (+1) + (+1) + (+1) + (-1) = 2</p></li>
+<li><p>Meteorologists use this topological constraint to validate global wind simulations and ensure that pressure systems and calm spots mapped by forecast models are topologically consistent.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="b-coordinate-singularities-poles">
+<h4>B. Coordinate Singularities (Poles)<a class="headerlink" href="#b-coordinate-singularities-poles" title="Permalink to this heading">#</a></h4>
+<p>When mapping a 2D sphere using spherical coordinates (latitude <span class="math notranslate nohighlight">\(\phi\)</span> and longitude <span class="math notranslate nohighlight">\(\theta\)</span>), the North Pole and South Pole become <strong>coordinate singularities</strong>:</p>
+<ul class="simple">
+<li><p>Longitude <span class="math notranslate nohighlight">\(\theta\)</span> is completely undefined at the poles (all longitude lines converge to a single point).</p></li>
+<li><p>The Jacobian matrix of coordinate transformations collapses (loses rank) at the poles.</p></li>
+<li><p><strong>Data Science &amp; ML Relevance</strong>: In global climate forecasting, geographical information systems (GIS), and deep learning on spherical grids (e.g., Spherical CNNs), polar singularities cause mathematical distortions and numerical instability during grid-based operations. To resolve this, researchers use grid-free spherical representations (such as Healpix grids) or project spherical coordinates into Cartesian 3D space <span class="math notranslate nohighlight">\((x, y, z)\)</span> to eliminate the singularities.</p></li>
+</ul>
+</section>
+</section>
+</section>
 <span id="document-book/topology/manifolds"></span><section class="tex2jax_ignore mathjax_ignore" id="manifolds-dimensionality-reduction">
 <h2>Manifolds &amp; Dimensionality Reduction<a class="headerlink" href="#manifolds-dimensionality-reduction" title="Permalink to this heading">#</a></h2>
 <p>This section explores how manifold theory simplifies high-dimensional data representation, avoids numerical singularities, and enables smooth orientation changes in 3D applications.</p>
@@ -6561,8 +7168,8 @@ Traditional geometry describes objects using coordinate equations (like <span cl
 </div>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/gimbal_lock_illustration.gif"><img alt="Animated Gimbal Lock Illustration" class="bg-primary mb-1 align-center" src="../_images/gimbal_lock_illustration.gif" style="width: 85%;" /></a>
 </section>
-<section id="the-solution-quaternions">
-<h4>The Solution: Quaternions<a class="headerlink" href="#the-solution-quaternions" title="Permalink to this heading">#</a></h4>
+<section id="quaternions">
+<h4>Quaternions<a class="headerlink" href="#quaternions" title="Permalink to this heading">#</a></h4>
 <p>To avoid this singularity, modern game engines (such as Unity, Unreal Engine, and Godot) represent rotations using <strong>Quaternions</strong> instead of Euler angles.</p>
 <p>A quaternion is a 4-dimensional hypercomplex number:</p>
 <div class="math notranslate nohighlight">
@@ -6863,99 +7470,6 @@ Traditional geometry describes objects using coordinate equations (like <span cl
 <li><p><strong>Fibered Barcodes</strong>: We project the 2D parameter space onto various 1D lines and compute the standard 1D barcodes along those lines.</p></li>
 <li><p><strong>Rank Invariants</strong>: We compute the Betti numbers between pairs of coordinates in the multi-parameter grid.</p></li>
 <li><p><strong>RIVET (Rank Invariant Visualization and Exploration Tool)</strong>: A software package specifically designed to calculate and visualize these rank invariants for 2D persistence modules.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<span id="document-book/topology/surfaces"></span><section class="tex2jax_ignore mathjax_ignore" id="topological-surfaces-singularities">
-<h2>Topological Surfaces &amp; Singularities<a class="headerlink" href="#topological-surfaces-singularities" title="Permalink to this heading">#</a></h2>
-<p>This section covers special non-orientable topological surfaces, polar singularities, and vector field singularities on spheres.</p>
-<hr class="docutils" />
-<section id="special-topological-surfaces">
-<h3>1. Special Topological Surfaces<a class="headerlink" href="#special-topological-surfaces" title="Permalink to this heading">#</a></h3>
-<section id="the-mobius-strip">
-<h4>The Möbius Strip<a class="headerlink" href="#the-mobius-strip" title="Permalink to this heading">#</a></h4>
-<p>The <strong>Möbius strip</strong> is a two-dimensional surface with only <strong>one side</strong> and <strong>one boundary curve</strong>.</p>
-<p>You can easily construct a physical model of a Möbius strip by taking a rectangular strip of paper, giving one end a half-twist (<span class="math notranslate nohighlight">\(180^\circ\)</span> turn), and then gluing the two ends together.</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/mobius_strip.gif"><img alt="Animated Möbius Strip" class="bg-primary mb-1 align-center" src="../_images/mobius_strip.gif" style="width: 75%;" /></a>
-<ul class="simple">
-<li><p><strong>One-sided Property</strong>: If you start drawing a line down the middle of a Möbius strip with a pen, you will eventually cover both “sides” of the paper and return to your starting point without ever lifting your pen or crossing the boundary edge.</p></li>
-<li><p><strong>Topological Significance</strong>: It is the simplest non-orientable surface. In data science, the Möbius strip is used to model cyclical datasets that have a twist or reflection in their state space.</p></li>
-</ul>
-</section>
-<section id="the-klein-bottle">
-<h4>The Klein Bottle<a class="headerlink" href="#the-klein-bottle" title="Permalink to this heading">#</a></h4>
-<p>The <strong>Klein bottle</strong> is a closed 2D manifold (surface) that takes the concept of the Möbius strip one step further. It has <strong>no boundaries</strong> (like a sphere) but possesses only <strong>one side</strong> (like a Möbius strip).</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/klein_bottle.png"><img alt="Figure-8 Klein Bottle Wireframe" class="bg-primary mb-1 align-center" src="../_images/klein_bottle.png" style="width: 45%;" /></a>
-<ul>
-<li><p><strong>Topological Connection to the Möbius Strip</strong>:
-A Klein bottle can be mathematically constructed by <strong>gluing two Möbius strips together along their circular boundaries</strong>. Since a Möbius strip only has a single boundary edge (which is topologically a circle <span class="math notranslate nohighlight">\(S^1\)</span>), joining two Möbius strips along this single edge closes the surface, yielding a Klein bottle.</p></li>
-<li><p><strong>Dimensionality Embedding &amp; Figure-8 Immersion</strong>:
-A Klein bottle cannot be embedded in 3D space without passing through itself. However, it can be embedded perfectly in <strong>4D space</strong> (<span class="math notranslate nohighlight">\(d = 4\)</span>) without self-intersection.</p>
-<p>The illustration above shows the <strong>Figure-8 immersion</strong> (often called the Klein Bagel) in 3D:</p>
-<ul class="simple">
-<li><p>It is represented as a clean blue wireframe mesh on a light background.</p></li>
-<li><p>In 4D space, the self-intersection is resolved because the intersecting parts have different values in the fourth dimension (<span class="math notranslate nohighlight">\(w\)</span>-axis).</p></li>
-</ul>
-</li>
-<li><p><strong>Data Science Application</strong>: Non-orientable manifolds like the Klein bottle are used as challenging benchmark datasets in manifold learning. They test whether non-linear dimensionality reduction algorithms (like UMAP or Isomap) can map high-dimensional topological structures into lower dimensions without losing essential topological characteristics.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="singularities-on-a-sphere">
-<h3>2. Singularities on a Sphere<a class="headerlink" href="#singularities-on-a-sphere" title="Permalink to this heading">#</a></h3>
-<p>A <strong>singularity</strong> is a point where a mathematical object loses its normal properties, collapses in dimension, or becomes mathematically undefined. Singularities on a sphere are studied in two major topological contexts:</p>
-<section id="a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems">
-<h4>A. Topological Vector Field Singularities: The Hairy Ball &amp; Poincaré-Hopf Theorems<a class="headerlink" href="#a-topological-vector-field-singularities-the-hairy-ball-poincare-hopf-theorems" title="Permalink to this heading">#</a></h4>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p><strong>The Hairy Ball Theorem</strong> from algebraic topology states that there is no continuous, non-vanishing tangent vector field on even-dimensional spheres (such as a 2D sphere <span class="math notranslate nohighlight">\(S^2\)</span>).</p>
-<p><em>Intuition:</em> <strong>“You cannot comb a hairy ball flat without creating at least one cowlick (singularity/whorl).”</strong></p>
-</div>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/hairy_ball_singularity.png"><img alt="Hairy Ball Theorem and Vector Field Singularities" class="bg-primary mb-1 align-center" src="../_images/hairy_ball_singularity.png" style="width: 70%;" /></a>
-<p>This theorem is a direct consequence of a much deeper topological principle: the <strong>Poincaré-Hopf Theorem</strong>.</p>
-<section id="understanding-the-poincare-hopf-theorem">
-<h5>Understanding the Poincaré-Hopf Theorem<a class="headerlink" href="#understanding-the-poincare-hopf-theorem" title="Permalink to this heading">#</a></h5>
-<p>The Poincaré-Hopf Theorem links the local behavior of a vector field (such as wind) to the global topology of the surface it lies on. It states that for any smooth vector field on a compact manifold <span class="math notranslate nohighlight">\(M\)</span> with isolated zeroes (singularities), the sum of the <strong>indices</strong> of these zeroes equals the <strong>Euler characteristic</strong> (<span class="math notranslate nohighlight">\(\chi(M)\)</span>) of the manifold:</p>
-<div class="math notranslate nohighlight">
-\[\sum_{i} \text{index}_{z_i}(v) = \chi(M)\]</div>
-</section>
-<section id="what-is-the-index-of-a-singularity">
-<h5>What is the “Index” of a Singularity?<a class="headerlink" href="#what-is-the-index-of-a-singularity" title="Permalink to this heading">#</a></h5>
-<p>The <strong>index</strong> measures how the vectors rotate as you walk counter-clockwise in a small loop around the singularity:</p>
-<ol class="arabic simple">
-<li><p><strong>Source / Outflow</strong> (Wind blowing outward in all directions): <strong>Index = +1</strong></p></li>
-<li><p><strong>Sink / Inflow</strong> (Wind blowing inward in all directions): <strong>Index = +1</strong></p></li>
-<li><p><strong>Vortex / Whorl</strong> (Wind spiraling or rotating around a center): <strong>Index = +1</strong></p></li>
-<li><p><strong>Saddle Point / Col</strong> (Wind coming in from two directions and leaving in two other directions): <strong>Index = -1</strong></p></li>
-</ol>
-</section>
-<section id="meteorological-application-wind-systems-on-earth">
-<h5>Meteorological Application: Wind Systems on Earth<a class="headerlink" href="#meteorological-application-wind-systems-on-earth" title="Permalink to this heading">#</a></h5>
-<p>The Earth’s surface is topologically a 2-sphere (<span class="math notranslate nohighlight">\(S^2\)</span>), which has an Euler characteristic of <span class="math notranslate nohighlight">\(\chi(S^2) = 2\)</span>. Applying the Poincaré-Hopf Theorem to the Earth’s wind vector field:</p>
-<div class="math notranslate nohighlight">
-\[\sum \text{index} = 2\]</div>
-<p>This leads to several fascinating meteorological rules:</p>
-<ul class="simple">
-<li><p><strong>At least one calm spot</strong>: It is mathematically impossible to have a continuous wind blowing everywhere on Earth without any calm spots (points of zero wind speed). There must always be at least one cyclone, anticyclone, or saddle point.</p></li>
-<li><p><strong>The Balance of Weather Systems</strong>:</p>
-<ul>
-<li><p>If the Earth only has standard swirling systems (cyclones and anticyclones, which have an index of <strong>+1</strong>), there must be exactly <strong>two</strong> of them on the entire globe (e.g., 1 + 1 = 2, representing 1 Cyclone + 1 Anticyclone).</p></li>
-<li><p>If a weather map features multiple storm centers (cyclones) and high-pressure centers (anticyclones), they must be balanced by <strong>saddle points (cols)</strong> (index of <strong>-1</strong>). For instance, if there are 3 cyclones/anticyclones (total index of <strong>+3</strong>), there must be exactly 1 saddle point (index of <strong>-1</strong>) to keep the global sum equal to 2: (+1) + (+1) + (+1) + (-1) = 2</p></li>
-<li><p>Meteorologists use this topological constraint to validate global wind simulations and ensure that pressure systems and calm spots mapped by forecast models are topologically consistent.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<section id="b-coordinate-singularities-poles">
-<h4>B. Coordinate Singularities (Poles)<a class="headerlink" href="#b-coordinate-singularities-poles" title="Permalink to this heading">#</a></h4>
-<p>When mapping a 2D sphere using spherical coordinates (latitude <span class="math notranslate nohighlight">\(\phi\)</span> and longitude <span class="math notranslate nohighlight">\(\theta\)</span>), the North Pole and South Pole become <strong>coordinate singularities</strong>:</p>
-<ul class="simple">
-<li><p>Longitude <span class="math notranslate nohighlight">\(\theta\)</span> is completely undefined at the poles (all longitude lines converge to a single point).</p></li>
-<li><p>The Jacobian matrix of coordinate transformations collapses (loses rank) at the poles.</p></li>
-<li><p><strong>Data Science &amp; ML Relevance</strong>: In global climate forecasting, geographical information systems (GIS), and deep learning on spherical grids (e.g., Spherical CNNs), polar singularities cause mathematical distortions and numerical instability during grid-based operations. To resolve this, researchers use grid-free spherical representations (such as Healpix grids) or project spherical coordinates into Cartesian 3D space <span class="math notranslate nohighlight">\((x, y, z)\)</span> to eliminate the singularities.</p></li>
 </ul>
 </section>
 </section>

@@ -1,0 +1,3880 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.968 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.968 --> 00:00:03.936 align:middle line:90%
+[RUSTLING]
+
+00:00:03.936 --> 00:00:05.412 align:middle line:90%
+[CLICKING]
+
+00:00:05.412 --> 00:00:19.560 align:middle line:90%
+
+
+00:00:19.560 --> 00:00:22.350 align:middle line:84%
+PROFESSOR: So let's finish our
+discussion of the Hahn-Banach
+
+00:00:22.350 --> 00:00:23.010 align:middle line:90%
+Theorem.
+
+00:00:23.010 --> 00:00:24.060 align:middle line:90%
+Let me just recall.
+
+00:00:24.060 --> 00:00:30.060 align:middle line:90%
+
+
+00:00:30.060 --> 00:00:42.420 align:middle line:84%
+This was the theorem that
+stated, that if v is norm space,
+
+00:00:42.420 --> 00:00:44.130 align:middle line:90%
+m is a vector--
+
+00:00:44.130 --> 00:00:52.680 align:middle line:90%
+or is a subspace of v.
+
+00:00:52.680 --> 00:00:59.745 align:middle line:84%
+And u is a bounded
+linear functional on m.
+
+00:00:59.745 --> 00:01:07.290 align:middle line:90%
+
+
+00:01:07.290 --> 00:01:12.420 align:middle line:84%
+So it's a linear map that also
+satisfies for all t and m, u
+
+00:01:12.420 --> 00:01:15.720 align:middle line:90%
+of t, and absolute value is--
+
+00:01:15.720 --> 00:01:17.940 align:middle line:84%
+or the modulus of
+u of t is less than
+
+00:01:17.940 --> 00:01:21.225 align:middle line:84%
+or equal to a constant
+times norm of t.
+
+00:01:21.225 --> 00:01:25.850 align:middle line:90%
+
+
+00:01:25.850 --> 00:01:31.190 align:middle line:84%
+Then there exists a
+bounded linear functional
+
+00:01:31.190 --> 00:01:35.540 align:middle line:84%
+on the whole space,
+which extends it.
+
+00:01:35.540 --> 00:01:37.520 align:middle line:84%
+So that there
+exists a capital U,
+
+00:01:37.520 --> 00:01:42.980 align:middle line:84%
+so that when U is restricted
+to m this gives me little u.
+
+00:01:42.980 --> 00:01:45.860 align:middle line:84%
+And it's extended
+continuously in the sense
+
+00:01:45.860 --> 00:01:49.355 align:middle line:84%
+that it satisfies the same
+bound that little u does.
+
+00:01:49.355 --> 00:01:53.920 align:middle line:90%
+
+
+00:01:53.920 --> 00:02:01.540 align:middle line:84%
+Now for all t and v.
+u of t is less than
+
+00:02:01.540 --> 00:02:05.915 align:middle line:84%
+or equal to a constant
+times the norm of t.
+
+00:02:05.915 --> 00:02:07.540 align:middle line:84%
+So last time, we went
+through the proof
+
+00:02:07.540 --> 00:02:14.050 align:middle line:84%
+of this using Zorn's
+lemma and the lemma
+
+00:02:14.050 --> 00:02:17.060 align:middle line:84%
+that we ran up against
+at the end of class.
+
+00:02:17.060 --> 00:02:20.170 align:middle line:84%
+Which, when writing my
+notes for the lecture,
+
+00:02:20.170 --> 00:02:24.670 align:middle line:84%
+I got a little bit
+flippant towards the end
+
+00:02:24.670 --> 00:02:26.625 align:middle line:90%
+and made a little small error.
+
+00:02:26.625 --> 00:02:28.000 align:middle line:84%
+Which can be
+remedied if you just
+
+00:02:28.000 --> 00:02:31.092 align:middle line:84%
+look at the lecture notes,
+which I have online.
+
+00:02:31.092 --> 00:02:32.800 align:middle line:84%
+Or if you look at
+Richard's lecture notes
+
+00:02:32.800 --> 00:02:36.220 align:middle line:84%
+just for the very end of
+concluding that Lemma we needed.
+
+00:02:36.220 --> 00:02:38.730 align:middle line:90%
+
+
+00:02:38.730 --> 00:02:43.160 align:middle line:84%
+So minus epsilon, we proved
+the Hahn-Banach Theorem.
+
+00:02:43.160 --> 00:02:46.930 align:middle line:84%
+You can fill in the epsilon
+by just looking at the notes.
+
+00:02:46.930 --> 00:02:52.550 align:middle line:84%
+But the proof of the Hahn-Banach
+Theorem is not the point.
+
+00:02:52.550 --> 00:02:54.895 align:middle line:90%
+It's not the main point.
+
+00:02:54.895 --> 00:02:57.380 align:middle line:84%
+It's important to know it,
+or at least have seen it,
+
+00:02:57.380 --> 00:03:01.150 align:middle line:84%
+but what is important
+is it as a tool.
+
+00:03:01.150 --> 00:03:08.880 align:middle line:90%
+
+
+00:03:08.880 --> 00:03:11.070 align:middle line:84%
+And I mentioned last
+time, one application
+
+00:03:11.070 --> 00:03:14.010 align:middle line:84%
+is to show that the
+dual of little l
+
+00:03:14.010 --> 00:03:16.620 align:middle line:90%
+infinity is not little l1.
+
+00:03:16.620 --> 00:03:19.800 align:middle line:84%
+Another application
+is the following is,
+
+00:03:19.800 --> 00:03:22.110 align:middle line:84%
+so v is going to
+be a norm space.
+
+00:03:22.110 --> 00:03:32.870 align:middle line:90%
+
+
+00:03:32.870 --> 00:03:38.495 align:middle line:84%
+Then for all v and
+t, take away 0.
+
+00:03:38.495 --> 00:03:41.660 align:middle line:90%
+
+
+00:03:41.660 --> 00:03:45.170 align:middle line:84%
+There exists a bounded
+linear functional
+
+00:03:45.170 --> 00:03:51.410 align:middle line:84%
+and element of the dual
+space such that the norm of f
+
+00:03:51.410 --> 00:03:54.410 align:middle line:90%
+equals 1.
+
+00:03:54.410 --> 00:04:07.050 align:middle line:84%
+And f of v gives
+me the norm of v.
+
+00:04:07.050 --> 00:04:09.970 align:middle line:84%
+So there is a bounded
+linear functional
+
+00:04:09.970 --> 00:04:17.339 align:middle line:84%
+that, when you apply it to
+v, you get the norm of v.
+
+00:04:17.339 --> 00:04:20.250 align:middle line:84%
+And we'll use this just in
+a second to say something
+
+00:04:20.250 --> 00:04:23.940 align:middle line:84%
+a little bit deeper about
+the relation between the dual
+
+00:04:23.940 --> 00:04:25.810 align:middle line:84%
+and then taking
+the dual of that.
+
+00:04:25.810 --> 00:04:28.290 align:middle line:84%
+But let's prove
+this simple theorem.
+
+00:04:28.290 --> 00:04:29.415 align:middle line:90%
+So first, I define.
+
+00:04:29.415 --> 00:04:31.940 align:middle line:90%
+
+
+00:04:31.940 --> 00:04:35.380 align:middle line:84%
+So I have a little v
+that's non-0 in the space,
+
+00:04:35.380 --> 00:04:39.790 align:middle line:84%
+and I define a bounded
+linear-- or a linear map
+
+00:04:39.790 --> 00:04:53.300 align:middle line:84%
+from the span of v
+to c by u of lambda v
+
+00:04:53.300 --> 00:05:01.210 align:middle line:84%
+equals lambda times
+the norm of v.
+
+00:05:01.210 --> 00:05:04.720 align:middle line:84%
+Now, every element that's
+a scalar multiple of v
+
+00:05:04.720 --> 00:05:06.070 align:middle line:90%
+can be written uniquely as this.
+
+00:05:06.070 --> 00:05:07.450 align:middle line:84%
+So this function
+is well-defined,
+
+00:05:07.450 --> 00:05:10.720 align:middle line:84%
+and it's clear that it's
+linear because linearity
+
+00:05:10.720 --> 00:05:14.250 align:middle line:90%
+is occurring in lambda.
+
+00:05:14.250 --> 00:05:15.190 align:middle line:90%
+v is fixed.
+
+00:05:15.190 --> 00:05:15.690 align:middle line:90%
+Remember?
+
+00:05:15.690 --> 00:05:20.930 align:middle line:90%
+
+
+00:05:20.930 --> 00:05:29.990 align:middle line:84%
+So, in particular,
+I get that u of t
+
+00:05:29.990 --> 00:05:31.550 align:middle line:90%
+is less than or equal to u--
+
+00:05:31.550 --> 00:05:40.660 align:middle line:84%
+to the norm of t for all t in
+the span of this fixed vector v.
+
+00:05:40.660 --> 00:05:48.190 align:middle line:84%
+And you have one-- or I should
+say, u of v, which, remember,
+
+00:05:48.190 --> 00:05:49.090 align:middle line:90%
+is just a--
+
+00:05:49.090 --> 00:05:51.870 align:middle line:90%
+
+
+00:05:51.870 --> 00:05:56.840 align:middle line:84%
+So this is equal to just
+1 times the norm of v.
+
+00:05:56.840 --> 00:05:59.500 align:middle line:90%
+It gives me norm of v.
+
+00:05:59.500 --> 00:06:05.970 align:middle line:84%
+And so, then, by the
+Hahn-Banach Theorem,
+
+00:06:05.970 --> 00:06:15.450 align:middle line:84%
+there exists an f element
+of the dual extending u.
+
+00:06:15.450 --> 00:06:24.730 align:middle line:84%
+Such that now, for all t
+and v, f of t and modulus
+
+00:06:24.730 --> 00:06:29.920 align:middle line:84%
+is less than or equal
+to the norm of t.
+
+00:06:29.920 --> 00:06:31.390 align:middle line:90%
+And in particular.
+
+00:06:31.390 --> 00:06:36.970 align:middle line:90%
+
+
+00:06:36.970 --> 00:06:52.630 align:middle line:84%
+So since it extends, u must
+have equals the norm of v.
+
+00:06:52.630 --> 00:06:56.170 align:middle line:84%
+And by that inequality over
+there, the norm of little f
+
+00:06:56.170 --> 00:06:57.595 align:middle line:90%
+must be less than or equal to 1.
+
+00:06:57.595 --> 00:07:04.200 align:middle line:90%
+
+
+00:07:04.200 --> 00:07:06.880 align:middle line:84%
+Well, first, let me finish with
+what this inequality tells you.
+
+00:07:06.880 --> 00:07:07.755 align:middle line:90%
+This tells you that--
+
+00:07:07.755 --> 00:07:11.840 align:middle line:90%
+
+
+00:07:11.840 --> 00:07:26.430 align:middle line:84%
+So since f of t is less than
+or equal to t for all t and v,
+
+00:07:26.430 --> 00:07:29.790 align:middle line:84%
+this implies that
+the norm of f--
+
+00:07:29.790 --> 00:07:35.640 align:middle line:84%
+Which, remember, is the sup
+of f of t with t unit length.
+
+00:07:35.640 --> 00:07:37.620 align:middle line:84%
+It must be less
+than or equal to 1.
+
+00:07:37.620 --> 00:07:46.370 align:middle line:90%
+
+
+00:07:46.370 --> 00:07:49.970 align:middle line:84%
+But I have that 1
+is equal to f of b
+
+00:07:49.970 --> 00:07:53.270 align:middle line:84%
+over norm of b, which
+must be less than
+
+00:07:53.270 --> 00:07:55.400 align:middle line:90%
+or equal to the norm of f.
+
+00:07:55.400 --> 00:08:00.530 align:middle line:84%
+And, therefore, the
+norm of f equals 1.
+
+00:08:00.530 --> 00:08:08.170 align:middle line:84%
+So f is this desired, continuous
+linear functional on v
+
+00:08:08.170 --> 00:08:10.750 align:middle line:84%
+that, when it hits
+v, little v, it
+
+00:08:10.750 --> 00:08:22.790 align:middle line:90%
+spits out the norm of little v.
+
+00:08:22.790 --> 00:08:27.080 align:middle line:90%
+The double dual of a space is--
+
+00:08:27.080 --> 00:08:28.580 align:middle line:84%
+if you can take the
+dual of a space,
+
+00:08:28.580 --> 00:08:30.090 align:middle line:84%
+you can take the
+dual of that space.
+
+00:08:30.090 --> 00:08:40.530 align:middle line:90%
+
+
+00:08:40.530 --> 00:08:47.900 align:middle line:84%
+The double dual
+of a norm space v
+
+00:08:47.900 --> 00:08:51.810 align:middle line:84%
+is, by definition, we
+denote it by v double prime.
+
+00:08:51.810 --> 00:09:01.040 align:middle line:84%
+This is the dual of the
+dual of v. So, remember,
+
+00:09:01.040 --> 00:09:06.740 align:middle line:84%
+the prime is the space of
+bounded linear functionals on v.
+
+00:09:06.740 --> 00:09:10.610 align:middle line:84%
+And so, then, v double
+prime is the space
+
+00:09:10.610 --> 00:09:13.220 align:middle line:84%
+of bounded linear
+functionals on the space
+
+00:09:13.220 --> 00:09:24.100 align:middle line:84%
+of bounded linear
+functionals of v.
+
+00:09:24.100 --> 00:09:27.610 align:middle line:84%
+Now, let me just give
+you an example of--
+
+00:09:27.610 --> 00:09:34.820 align:middle line:84%
+so, a quick little example
+of an element that you can
+
+00:09:34.820 --> 00:09:36.695 align:middle line:90%
+associate in v double prime.
+
+00:09:36.695 --> 00:09:39.830 align:middle line:90%
+
+
+00:09:39.830 --> 00:09:47.860 align:middle line:84%
+Fix an element in
+capital V and define.
+
+00:09:47.860 --> 00:09:54.880 align:middle line:90%
+Now, let's call it something.
+
+00:09:54.880 --> 00:10:00.630 align:middle line:84%
+Let's call it t
+of v. So this will
+
+00:10:00.630 --> 00:10:04.320 align:middle line:84%
+be an element of the dual
+space of v prime in the end.
+
+00:10:04.320 --> 00:10:10.020 align:middle line:90%
+But t sub v by--
+
+00:10:10.020 --> 00:10:18.390 align:middle line:84%
+So this thing has to eat an
+element of the dull space
+
+00:10:18.390 --> 00:10:19.680 align:middle line:90%
+and spit out a number.
+
+00:10:19.680 --> 00:10:23.980 align:middle line:84%
+Now, think about the two
+pieces of data I have here.
+
+00:10:23.980 --> 00:10:27.010 align:middle line:84%
+I have some fixed
+little v and capital V,
+
+00:10:27.010 --> 00:10:29.980 align:middle line:84%
+and I would like to
+use that to define
+
+00:10:29.980 --> 00:10:35.370 align:middle line:84%
+some bounded linear
+functional on capital V prime.
+
+00:10:35.370 --> 00:10:40.170 align:middle line:84%
+Now, capital V prime eats
+elements of capital V.
+
+00:10:40.170 --> 00:10:49.290 align:middle line:84%
+So I can define a map
+from V prime to C by that.
+
+00:10:49.290 --> 00:10:55.880 align:middle line:90%
+
+
+00:10:55.880 --> 00:11:01.430 align:middle line:84%
+Then I claim that T of V is
+an element of the double dual.
+
+00:11:01.430 --> 00:11:05.740 align:middle line:90%
+
+
+00:11:05.740 --> 00:11:08.590 align:middle line:90%
+So the dual space of V prime.
+
+00:11:08.590 --> 00:11:09.740 align:middle line:90%
+And why is that?
+
+00:11:09.740 --> 00:11:13.360 align:middle line:84%
+So first off, it has to
+be linear in the argument.
+
+00:11:13.360 --> 00:11:17.590 align:middle line:84%
+So little v prime is
+in capital V prime.
+
+00:11:17.590 --> 00:11:20.530 align:middle line:84%
+It has to be linear in
+the argument V prime.
+
+00:11:20.530 --> 00:11:21.640 align:middle line:90%
+And this is clear.
+
+00:11:21.640 --> 00:11:23.600 align:middle line:90%
+So remember, little v is fixed.
+
+00:11:23.600 --> 00:11:27.580 align:middle line:84%
+So if I take a
+linear combination
+
+00:11:27.580 --> 00:11:29.650 align:middle line:84%
+of two elements of
+capital V prime,
+
+00:11:29.650 --> 00:11:34.430 align:middle line:84%
+then this expression is
+clearly linear in V prime.
+
+00:11:34.430 --> 00:11:40.590 align:middle line:90%
+So T sub V is linear clearly.
+
+00:11:40.590 --> 00:11:42.870 align:middle line:84%
+Now we just need to
+check that it's bounded.
+
+00:11:42.870 --> 00:11:46.290 align:middle line:90%
+And if I take--
+
+00:11:46.290 --> 00:11:54.280 align:middle line:90%
+so T sub v is linear.
+
+00:11:54.280 --> 00:11:56.620 align:middle line:90%
+This is a check.
+
+00:11:56.620 --> 00:11:59.190 align:middle line:90%
+Just how we talk through it.
+
+00:11:59.190 --> 00:12:11.460 align:middle line:84%
+And T sub v is bounded because
+if we take T sub v of v prime,
+
+00:12:11.460 --> 00:12:15.150 align:middle line:84%
+if we take its modulus,
+this is by definition
+
+00:12:15.150 --> 00:12:17.130 align:middle line:90%
+equal to v prime of v.
+
+00:12:17.130 --> 00:12:21.240 align:middle line:84%
+Now, v prime is a bounded
+linear functional on v.
+
+00:12:21.240 --> 00:12:25.890 align:middle line:84%
+So this is less than or equal
+to the norm of v prime times
+
+00:12:25.890 --> 00:12:33.350 align:middle line:84%
+the norm of v. And in fact,
+let me write it this way.
+
+00:12:33.350 --> 00:12:35.100 align:middle line:90%
+Norm of v, v prime.
+
+00:12:35.100 --> 00:12:41.150 align:middle line:84%
+So we've shown that this
+linear operator from v
+
+00:12:41.150 --> 00:12:46.550 align:middle line:84%
+prime to C in modulus is
+bounded by this constant times
+
+00:12:46.550 --> 00:12:48.810 align:middle line:90%
+the norm of v prime.
+
+00:12:48.810 --> 00:12:52.070 align:middle line:84%
+And therefore, we
+conclude that T of v--
+
+00:12:52.070 --> 00:13:00.200 align:middle line:84%
+or T sub v is in the dual
+of V prime, the double dual.
+
+00:13:00.200 --> 00:13:08.780 align:middle line:84%
+And the norm of this as an
+operator going from v prime
+
+00:13:08.780 --> 00:13:13.250 align:middle line:84%
+to C, which we've just shown,
+is bounded by this constant.
+
+00:13:13.250 --> 00:13:16.370 align:middle line:84%
+Remember, the operator
+norm is the best constant
+
+00:13:16.370 --> 00:13:17.580 align:middle line:90%
+that appears here.
+
+00:13:17.580 --> 00:13:23.030 align:middle line:84%
+And therefore, this is
+less than or equal to that.
+
+00:13:23.030 --> 00:13:28.100 align:middle line:90%
+
+
+00:13:28.100 --> 00:13:33.050 align:middle line:84%
+So we've shown that
+every element of v,
+
+00:13:33.050 --> 00:13:39.110 align:middle line:84%
+we can associate an element of
+the double dual, the dual space
+
+00:13:39.110 --> 00:13:45.150 align:middle line:84%
+of the dual space,
+via this relation.
+
+00:13:45.150 --> 00:13:48.620 align:middle line:84%
+So an element of
+v can be defined
+
+00:13:48.620 --> 00:13:52.160 align:middle line:84%
+as an element of v
+double prime by letting
+
+00:13:52.160 --> 00:13:56.360 align:middle line:84%
+it act on v prime by
+this formula here.
+
+00:13:56.360 --> 00:14:06.940 align:middle line:90%
+
+
+00:14:06.940 --> 00:14:08.530 align:middle line:84%
+But we can say a
+little bit more.
+
+00:14:08.530 --> 00:14:13.330 align:middle line:84%
+And let me just introduce
+some terminology.
+
+00:14:13.330 --> 00:14:26.430 align:middle line:84%
+Let v be in capital V. Or,
+no, I'm not quite there.
+
+00:14:26.430 --> 00:14:30.330 align:middle line:90%
+
+
+00:14:30.330 --> 00:14:43.460 align:middle line:84%
+If V and W are normed
+spaces, then we
+
+00:14:43.460 --> 00:14:49.790 align:middle line:84%
+say that a bounded linear
+operator from V to W
+
+00:14:49.790 --> 00:14:54.900 align:middle line:90%
+is isometric.
+
+00:14:54.900 --> 00:14:57.470 align:middle line:84%
+So isometric meaning
+doesn't change length,
+
+00:14:57.470 --> 00:15:00.800 align:middle line:90%
+doesn't change distances.
+
+00:15:00.800 --> 00:15:09.860 align:middle line:84%
+If for all v and capital
+V the length of T of V
+
+00:15:09.860 --> 00:15:18.920 align:middle line:90%
+is equal to the length of V.
+
+00:15:18.920 --> 00:15:26.270 align:middle line:84%
+And now, the next theorem is
+that this map, this relation
+
+00:15:26.270 --> 00:15:29.630 align:middle line:84%
+I've given between elements
+of v and the double dual
+
+00:15:29.630 --> 00:15:32.950 align:middle line:90%
+is, in fact isometric.
+
+00:15:32.950 --> 00:15:39.460 align:middle line:90%
+
+
+00:15:39.460 --> 00:15:54.350 align:middle line:84%
+So let v be in V. And as before,
+define T sub v as the map from v
+
+00:15:54.350 --> 00:16:03.930 align:middle line:84%
+prime to C via T sub v needs
+to be elements of the dual.
+
+00:16:03.930 --> 00:16:08.270 align:middle line:84%
+So you can spit out numbers
+so it's defined in this way.
+
+00:16:08.270 --> 00:16:14.930 align:middle line:90%
+
+
+00:16:14.930 --> 00:16:25.440 align:middle line:84%
+Then the map T from
+V to V double prime,
+
+00:16:25.440 --> 00:16:36.880 align:middle line:84%
+where this map T is taking V
+to T little v is isometric.
+
+00:16:36.880 --> 00:16:41.910 align:middle line:90%
+
+
+00:16:41.910 --> 00:16:46.460 align:middle line:84%
+So it's a bounded
+linear operator from V
+
+00:16:46.460 --> 00:16:47.780 align:middle line:90%
+to its double dual.
+
+00:16:47.780 --> 00:16:52.070 align:middle line:84%
+And the length of
+a vector in v is
+
+00:16:52.070 --> 00:16:56.180 align:middle line:84%
+same as the length of its
+image in the double dual.
+
+00:16:56.180 --> 00:16:59.510 align:middle line:84%
+Which is the length
+in the double dual
+
+00:16:59.510 --> 00:17:01.415 align:middle line:84%
+is defined in terms
+of the operator norm.
+
+00:17:01.415 --> 00:17:04.960 align:middle line:90%
+
+
+00:17:04.960 --> 00:17:10.780 align:middle line:84%
+So we've done basically
+all of the work when
+
+00:17:10.780 --> 00:17:12.260 align:middle line:90%
+I was discussing the example.
+
+00:17:12.260 --> 00:17:33.740 align:middle line:84%
+So we've shown already
+that the map v to T of v,
+
+00:17:33.740 --> 00:17:40.010 align:middle line:84%
+this is a bounded
+linear operator from v
+
+00:17:40.010 --> 00:17:41.100 align:middle line:90%
+to v double prime.
+
+00:17:41.100 --> 00:17:43.400 align:middle line:84%
+So we showed it's
+bounded, namely
+
+00:17:43.400 --> 00:17:45.290 align:middle line:90%
+that the image is bounded by--
+
+00:17:45.290 --> 00:17:51.680 align:middle line:84%
+or the norm of the image is
+bounded by the norm of v.
+
+00:17:51.680 --> 00:17:54.470 align:middle line:84%
+But it's also clear that
+this is linear in little v.
+
+00:17:54.470 --> 00:17:57.320 align:middle line:84%
+So a minute ago, we showed
+it's linear in v prime.
+
+00:17:57.320 --> 00:18:02.000 align:middle line:84%
+But it's also linear in v.
+Because for each fixed v prime,
+
+00:18:02.000 --> 00:18:07.280 align:middle line:84%
+this is linear in v.
+So this is a bounded--
+
+00:18:07.280 --> 00:18:12.140 align:middle line:84%
+this map from v taking you
+to this element in T of v,
+
+00:18:12.140 --> 00:18:15.590 align:middle line:84%
+this is a bounded
+linear operator from v
+
+00:18:15.590 --> 00:18:18.180 align:middle line:90%
+to v double prime.
+
+00:18:18.180 --> 00:18:21.830 align:middle line:84%
+So what's left is to
+show that it's isometric.
+
+00:18:21.830 --> 00:18:25.500 align:middle line:90%
+
+
+00:18:25.500 --> 00:18:36.460 align:middle line:84%
+So we've shown this and that the
+norm of the image in the double
+
+00:18:36.460 --> 00:18:40.510 align:middle line:84%
+dual is less than or
+equal to the norm of v.
+
+00:18:40.510 --> 00:18:43.630 align:middle line:84%
+Now to show it's isometric, we
+must show that the norm of v
+
+00:18:43.630 --> 00:18:45.340 align:middle line:90%
+equals T of v.
+
+00:18:45.340 --> 00:18:55.020 align:middle line:84%
+So by the theorem we
+just proved a minute ago,
+
+00:18:55.020 --> 00:19:13.780 align:middle line:84%
+so first off, so as in the
+statement of the theorem,
+
+00:19:13.780 --> 00:19:20.100 align:middle line:84%
+let me denote this
+map by this is T.
+
+00:19:20.100 --> 00:19:27.540 align:middle line:84%
+So we've shown that the norm of
+T is less than or equal to 1.
+
+00:19:27.540 --> 00:19:31.140 align:middle line:84%
+Because we've shown that
+the norm of the image
+
+00:19:31.140 --> 00:19:35.730 align:middle line:84%
+is always less than or equal
+to the norm of the input.
+
+00:19:35.730 --> 00:19:38.100 align:middle line:84%
+And now to show that it's
+isometric we just need
+
+00:19:38.100 --> 00:19:39.585 align:middle line:90%
+to show the norm of T equals 1.
+
+00:19:39.585 --> 00:19:50.970 align:middle line:90%
+
+
+00:19:50.970 --> 00:19:56.760 align:middle line:90%
+So let v be in v non-zero.
+
+00:19:56.760 --> 00:20:03.370 align:middle line:90%
+
+
+00:20:03.370 --> 00:20:05.005 align:middle line:90%
+with norm v equal to 1.
+
+00:20:05.005 --> 00:20:21.630 align:middle line:90%
+
+
+00:20:21.630 --> 00:20:26.820 align:middle line:84%
+Well, so I just said something
+really stupid a minute ago.
+
+00:20:26.820 --> 00:20:31.420 align:middle line:84%
+Let me go back to what I had
+written down there a minute ago.
+
+00:20:31.420 --> 00:20:36.030 align:middle line:84%
+So not that-- so
+remember, we're trying
+
+00:20:36.030 --> 00:20:40.290 align:middle line:84%
+to show not that the norm is one
+but that the norm of the image
+
+00:20:40.290 --> 00:20:42.920 align:middle line:84%
+is equal to the
+norm of the input.
+
+00:20:42.920 --> 00:20:47.460 align:middle line:84%
+I got backwards there
+for a minute, sorry.
+
+00:20:47.460 --> 00:20:52.800 align:middle line:84%
+And the norm of the
+image is less than
+
+00:20:52.800 --> 00:20:55.217 align:middle line:84%
+or equal to the
+norm of the input.
+
+00:20:55.217 --> 00:20:57.300 align:middle line:84%
+So now we just want to
+show the reverse inequality
+
+00:20:57.300 --> 00:21:12.490 align:middle line:84%
+for all little v in capital V.
+Now we show all v in capital V,
+
+00:21:12.490 --> 00:21:18.908 align:middle line:84%
+T of v is equal to
+the length of v.
+
+00:21:18.908 --> 00:21:20.700 align:middle line:84%
+And to do that, we use
+this theorem we just
+
+00:21:20.700 --> 00:21:22.330 align:middle line:90%
+proved a minute ago.
+
+00:21:22.330 --> 00:21:26.250 align:middle line:90%
+So this is clear if v is 0.
+
+00:21:26.250 --> 00:21:33.460 align:middle line:84%
+So suppose v is
+non-zero, then there
+
+00:21:33.460 --> 00:21:40.900 align:middle line:84%
+exists an element of the dual
+space by the previous theorem
+
+00:21:40.900 --> 00:21:55.960 align:middle line:84%
+such that the norm of f equals 1
+and f of v equals the norm of v.
+
+00:21:55.960 --> 00:22:03.270 align:middle line:84%
+Then the norm of v
+is equal to f of v.
+
+00:22:03.270 --> 00:22:07.970 align:middle line:84%
+And I can even put
+modulus on that.
+
+00:22:07.970 --> 00:22:10.430 align:middle line:84%
+And this is less
+than or equal to
+
+00:22:10.430 --> 00:22:12.740 align:middle line:90%
+though, thinking of this as a--
+
+00:22:12.740 --> 00:22:23.390 align:middle line:90%
+
+
+00:22:23.390 --> 00:22:25.970 align:middle line:84%
+so now thinking of
+this as an operator
+
+00:22:25.970 --> 00:22:29.990 align:middle line:84%
+from bounded linear
+functional, so [INAUDIBLE],
+
+00:22:29.990 --> 00:22:32.090 align:middle line:84%
+so as an element of the
+dual this is less than
+
+00:22:32.090 --> 00:22:38.480 align:middle line:84%
+or equal to the norm of T
+sub v times the norm of f.
+
+00:22:38.480 --> 00:22:46.109 align:middle line:90%
+
+
+00:22:46.109 --> 00:22:48.480 align:middle line:90%
+And now the norm of f is 1.
+
+00:22:48.480 --> 00:22:54.000 align:middle line:84%
+So this is equal to the norm
+of T sub v. And therefore,
+
+00:22:54.000 --> 00:22:58.560 align:middle line:84%
+v, the norm of v, is less than
+or equal to the norm of T sub v.
+
+00:22:58.560 --> 00:23:02.610 align:middle line:84%
+And since I already had
+the reverse inequality,
+
+00:23:02.610 --> 00:23:11.980 align:middle line:84%
+I conclude that the norm of
+T sub v equals the norm of v.
+
+00:23:11.980 --> 00:23:20.770 align:middle line:84%
+And thus, this map going from
+v to v, to the double dual of v
+
+00:23:20.770 --> 00:23:23.860 align:middle line:84%
+described this way is,
+in fact, isometric.
+
+00:23:23.860 --> 00:23:26.695 align:middle line:84%
+It's a bounded linear
+operator that preserves links.
+
+00:23:26.695 --> 00:23:30.990 align:middle line:90%
+
+
+00:23:30.990 --> 00:23:32.940 align:middle line:90%
+Now we have a special name.
+
+00:23:32.940 --> 00:23:38.790 align:middle line:84%
+So first off, it should be clear
+that isometric bounded linear
+
+00:23:38.790 --> 00:23:41.340 align:middle line:90%
+operators are one to one.
+
+00:23:41.340 --> 00:23:44.340 align:middle line:84%
+So for something to be one to
+one for a linear operator, that
+
+00:23:44.340 --> 00:23:47.520 align:middle line:84%
+means the only thing
+that gets sent to 0 is 0.
+
+00:23:47.520 --> 00:23:53.820 align:middle line:84%
+And from this equality here
+we have that if this equals 0,
+
+00:23:53.820 --> 00:23:56.100 align:middle line:90%
+then the vector had to be 0.
+
+00:23:56.100 --> 00:24:02.860 align:middle line:84%
+So isometric bounded linear
+operators are always one to one.
+
+00:24:02.860 --> 00:24:05.400 align:middle line:84%
+So what this
+theorem tells you is
+
+00:24:05.400 --> 00:24:09.210 align:middle line:84%
+that this map
+defined in this way
+
+00:24:09.210 --> 00:24:15.480 align:middle line:84%
+gives you a isometric injection
+from v to v double prime,
+
+00:24:15.480 --> 00:24:18.790 align:middle line:90%
+from v to its double dual.
+
+00:24:18.790 --> 00:24:24.150 align:middle line:84%
+So I have this map that goes
+into the double dual that's
+
+00:24:24.150 --> 00:24:29.630 align:middle line:84%
+isometric, meaning it
+doesn't change distances.
+
+00:24:29.630 --> 00:24:30.800 align:middle line:90%
+Is it onto?
+
+00:24:30.800 --> 00:24:35.540 align:middle line:84%
+Is the double dual always equal
+to the original space itself?
+
+00:24:35.540 --> 00:24:38.750 align:middle line:84%
+So we have a name for
+spaces that satisfy that.
+
+00:24:38.750 --> 00:24:43.360 align:middle line:90%
+
+
+00:24:43.360 --> 00:24:59.780 align:middle line:84%
+So a Banach space V is
+reflexive if using--
+
+00:24:59.780 --> 00:25:00.980 align:middle line:90%
+if this map is onto.
+
+00:25:00.980 --> 00:25:04.320 align:middle line:90%
+
+
+00:25:04.320 --> 00:25:12.010 align:middle line:84%
+If V equals v double
+prime, in the sense
+
+00:25:12.010 --> 00:25:18.100 align:middle line:84%
+that this map taking
+element of capital V
+
+00:25:18.100 --> 00:25:25.570 align:middle line:84%
+to an element of the double dual
+that, as we defined earlier,
+
+00:25:25.570 --> 00:25:28.210 align:middle line:90%
+is onto.
+
+00:25:28.210 --> 00:25:33.270 align:middle line:90%
+
+
+00:25:33.270 --> 00:25:43.590 align:middle line:84%
+Now for example, and
+you can check that.
+
+00:25:43.590 --> 00:25:45.750 align:middle line:84%
+This may seem like
+abstract stuff.
+
+00:25:45.750 --> 00:25:51.060 align:middle line:84%
+But for little lp
+spaces, this letting
+
+00:25:51.060 --> 00:25:56.100 align:middle line:84%
+the dual space eat a vector
+or whatever, remember,
+
+00:25:56.100 --> 00:25:58.800 align:middle line:84%
+we identify the dual
+space of little lp
+
+00:25:58.800 --> 00:26:03.900 align:middle line:84%
+with little lq, where 1 over
+p plus 1 over q equals 1.
+
+00:26:03.900 --> 00:26:16.070 align:middle line:84%
+So little lp is reflexive
+for p between 1 and infinity
+
+00:26:16.070 --> 00:26:20.000 align:middle line:84%
+because the dual of
+little lp is going
+
+00:26:20.000 --> 00:26:24.110 align:middle line:84%
+to be little lq, where 1 over
+p plus 1 over q equals 1.
+
+00:26:24.110 --> 00:26:26.930 align:middle line:90%
+And the dual of 1 over--
+
+00:26:26.930 --> 00:26:30.290 align:middle line:84%
+of little lq is going to
+be a little lp as long as q
+
+00:26:30.290 --> 00:26:32.570 align:middle line:90%
+is between 1 and infinity.
+
+00:26:32.570 --> 00:26:36.560 align:middle line:84%
+There is that one case
+where the dual is not given
+
+00:26:36.560 --> 00:26:39.610 align:middle line:90%
+by what you think it should be.
+
+00:26:39.610 --> 00:26:44.370 align:middle line:90%
+So little l1 is not reflexive.
+
+00:26:44.370 --> 00:26:48.610 align:middle line:90%
+
+
+00:26:48.610 --> 00:26:55.840 align:middle line:84%
+Since if I take a look
+at the dual of little l1,
+
+00:26:55.840 --> 00:27:04.450 align:middle line:84%
+so this should be 1, this
+is equal to l infinity.
+
+00:27:04.450 --> 00:27:09.280 align:middle line:84%
+And as you'll show in the
+homework, the dual of little l
+
+00:27:09.280 --> 00:27:12.670 align:middle line:84%
+infinity is not
+equal to little l1.
+
+00:27:12.670 --> 00:27:14.800 align:middle line:84%
+So the dual of the
+dual is not going
+
+00:27:14.800 --> 00:27:18.115 align:middle line:84%
+to give you back the
+space you started with.
+
+00:27:18.115 --> 00:27:21.890 align:middle line:90%
+
+
+00:27:21.890 --> 00:27:24.800 align:middle line:84%
+And I don't know if I'm going
+to put this in the assignment
+
+00:27:24.800 --> 00:27:28.730 align:middle line:90%
+or eventually on a midterm.
+
+00:27:28.730 --> 00:27:30.800 align:middle line:84%
+The space C0,
+which was the space
+
+00:27:30.800 --> 00:27:34.460 align:middle line:84%
+of all sequences converging to
+0, this is not reflexive either.
+
+00:27:34.460 --> 00:27:39.490 align:middle line:90%
+
+
+00:27:39.490 --> 00:27:46.000 align:middle line:84%
+The reason is because you can,
+in fact, identify the dual of C0
+
+00:27:46.000 --> 00:27:47.062 align:middle line:90%
+with little l1.
+
+00:27:47.062 --> 00:27:49.590 align:middle line:90%
+
+
+00:27:49.590 --> 00:27:58.740 align:middle line:84%
+And the dual of little
+l1 is little L infinity.
+
+00:27:58.740 --> 00:28:01.110 align:middle line:90%
+Which does not equal C0.
+
+00:28:01.110 --> 00:28:04.910 align:middle line:90%
+
+
+00:28:04.910 --> 00:28:09.590 align:middle line:84%
+So this also, you can
+see how the space is
+
+00:28:09.590 --> 00:28:13.550 align:middle line:90%
+a subspace of the double dual.
+
+00:28:13.550 --> 00:28:17.300 align:middle line:84%
+The space of all
+sequences converging
+
+00:28:17.300 --> 00:28:23.330 align:middle line:84%
+to 0, that's a subspace of the
+space of all bounded sequences.
+
+00:28:23.330 --> 00:28:30.970 align:middle line:84%
+So you see this, I shouldn't
+say by hand, but OK, by hand,
+
+00:28:30.970 --> 00:28:33.430 align:middle line:90%
+that the original space--
+
+00:28:33.430 --> 00:28:37.150 align:middle line:84%
+forget this prime-- is a
+subspace of the double dual
+
+00:28:37.150 --> 00:28:39.280 align:middle line:84%
+which in this case
+is little infinity.
+
+00:28:39.280 --> 00:28:48.500 align:middle line:90%
+
+
+00:28:48.500 --> 00:28:56.900 align:middle line:84%
+So that concludes
+the general stuff
+
+00:28:56.900 --> 00:29:00.040 align:middle line:90%
+about Banach spaces for now.
+
+00:29:00.040 --> 00:29:01.540 align:middle line:84%
+And we're going to
+turn to Lebesgue
+
+00:29:01.540 --> 00:29:04.420 align:middle line:90%
+measure and integration.
+
+00:29:04.420 --> 00:29:09.600 align:middle line:84%
+Because so we've been talking
+about little lp spaces.
+
+00:29:09.600 --> 00:29:11.320 align:middle line:90%
+These are spaces of sequences.
+
+00:29:11.320 --> 00:29:15.570 align:middle line:84%
+And so you might think, well,
+maybe we can define big LP
+
+00:29:15.570 --> 00:29:20.460 align:middle line:84%
+spaces to be, let's say,
+Riemann integral functions whose
+
+00:29:20.460 --> 00:29:22.950 align:middle line:84%
+p'th power is integrable
+or something like that.
+
+00:29:22.950 --> 00:29:28.240 align:middle line:84%
+Just how these are
+p'th power summable.
+
+00:29:28.240 --> 00:29:42.420 align:middle line:84%
+So moving on now to Lebesgue
+measure and integration.
+
+00:29:42.420 --> 00:29:50.020 align:middle line:90%
+
+
+00:29:50.020 --> 00:29:51.220 align:middle line:90%
+Missing a letter there.
+
+00:29:51.220 --> 00:29:55.760 align:middle line:90%
+
+
+00:29:55.760 --> 00:29:58.280 align:middle line:84%
+Now, why the Lebesgue
+measure and integration,
+
+00:29:58.280 --> 00:30:02.120 align:middle line:84%
+why not just stick to
+Riemann integration?
+
+00:30:02.120 --> 00:30:04.080 align:middle line:90%
+There's a couple of reasons.
+
+00:30:04.080 --> 00:30:08.210 align:middle line:84%
+One is Lebesgue
+integration has much
+
+00:30:08.210 --> 00:30:09.770 align:middle line:90%
+better convergence theorems.
+
+00:30:09.770 --> 00:30:14.330 align:middle line:84%
+So you only have really
+one convergence theorem
+
+00:30:14.330 --> 00:30:19.040 align:middle line:84%
+for Riemann integration, which
+is the uniform limit of Riemann
+
+00:30:19.040 --> 00:30:21.110 align:middle line:84%
+integrable functions
+is Riemann integrable.
+
+00:30:21.110 --> 00:30:25.850 align:middle line:84%
+And the integral of the limits
+is the limit of the integrals.
+
+00:30:25.850 --> 00:30:29.850 align:middle line:90%
+
+
+00:30:29.850 --> 00:30:33.240 align:middle line:84%
+But there are much
+better limit theorems.
+
+00:30:33.240 --> 00:30:36.270 align:middle line:84%
+And in the sense that
+they're more useful,
+
+00:30:36.270 --> 00:30:41.580 align:middle line:84%
+you can use them more often, and
+therefore prove better things.
+
+00:30:41.580 --> 00:30:47.220 align:middle line:84%
+And maybe you're just
+like, OK, so what?
+
+00:30:47.220 --> 00:30:49.860 align:middle line:84%
+But there's even
+bigger reasons why
+
+00:30:49.860 --> 00:30:51.930 align:middle line:84%
+you consider Lebesgue
+measure and integration.
+
+00:30:51.930 --> 00:30:54.570 align:middle line:84%
+And this is because
+that if you look
+
+00:30:54.570 --> 00:31:00.750 align:middle line:84%
+at the space of Riemann
+integrable functions on a, b,
+
+00:31:00.750 --> 00:31:10.140 align:middle line:84%
+say, 0, 1, say, let's make it
+concrete, then let me in fact
+
+00:31:10.140 --> 00:31:10.815 align:middle line:90%
+write this down.
+
+00:31:10.815 --> 00:31:14.130 align:middle line:90%
+
+
+00:31:14.130 --> 00:31:15.705 align:middle line:84%
+L1-- and I'm going
+to put an R here.
+
+00:31:15.705 --> 00:31:20.230 align:middle line:90%
+
+
+00:31:20.230 --> 00:31:28.660 align:middle line:84%
+This is a set of all f
+from 0, 1 C such that f
+
+00:31:28.660 --> 00:31:34.480 align:middle line:90%
+is Riemann integrable on 0, 1.
+
+00:31:34.480 --> 00:31:39.670 align:middle line:84%
+Now in 18.100 and 100A, these
+are usually real-valued.
+
+00:31:39.670 --> 00:31:42.077 align:middle line:84%
+But when I mean Riemann
+integrable and its complex
+
+00:31:42.077 --> 00:31:44.410 align:middle line:84%
+valued, I just mean the real
+part and the imaginary part
+
+00:31:44.410 --> 00:31:46.800 align:middle line:90%
+are Riemann integrable.
+
+00:31:46.800 --> 00:31:49.440 align:middle line:90%
+
+
+00:31:49.440 --> 00:31:53.230 align:middle line:84%
+So you don't need to
+know anything fancy.
+
+00:31:53.230 --> 00:31:58.705 align:middle line:84%
+And if I define a norm
+on capital L1 by--
+
+00:31:58.705 --> 00:32:15.010 align:middle line:90%
+
+
+00:32:15.010 --> 00:32:17.530 align:middle line:84%
+so I have this space
+I have this norm.
+
+00:32:17.530 --> 00:32:19.090 align:middle line:90%
+Now, it's not quite a norm.
+
+00:32:19.090 --> 00:32:21.280 align:middle line:84%
+Because you can have
+Riemann integrable
+
+00:32:21.280 --> 00:32:25.780 align:middle line:84%
+functions which are not 0
+everywhere, whose integral is 0.
+
+00:32:25.780 --> 00:32:28.810 align:middle line:84%
+If you have a function that's
+0 except for at one point,
+
+00:32:28.810 --> 00:32:32.530 align:middle line:84%
+and at that one point it's 5,
+well, the function's non-zero,
+
+00:32:32.530 --> 00:32:33.910 align:middle line:90%
+but the integral is 0.
+
+00:32:33.910 --> 00:32:35.770 align:middle line:90%
+So this is a semi-norm.
+
+00:32:35.770 --> 00:32:37.465 align:middle line:90%
+But let's imagine it's a norm.
+
+00:32:37.465 --> 00:32:41.230 align:middle line:90%
+
+
+00:32:41.230 --> 00:32:54.260 align:middle line:84%
+So the problem is, is that even
+if I mod out by those things
+
+00:32:54.260 --> 00:32:56.780 align:middle line:84%
+that give me a
+semi-norm equal to 0
+
+00:32:56.780 --> 00:32:59.630 align:middle line:84%
+so that I get an
+actual norm space,
+
+00:32:59.630 --> 00:33:01.230 align:middle line:90%
+but ignore that for a minute.
+
+00:33:01.230 --> 00:33:04.280 align:middle line:84%
+Let's just imagine that this is
+an actual honest to God norm.
+
+00:33:04.280 --> 00:33:10.595 align:middle line:84%
+Then this thing ends up being
+this is not a Banach space.
+
+00:33:10.595 --> 00:33:15.590 align:middle line:90%
+
+
+00:33:15.590 --> 00:33:19.190 align:middle line:84%
+So one reason to consider
+more general integration
+
+00:33:19.190 --> 00:33:24.960 align:middle line:84%
+is because Riemann
+integration, or at least
+
+00:33:24.960 --> 00:33:26.820 align:middle line:84%
+only restricting
+to those functions
+
+00:33:26.820 --> 00:33:29.040 align:middle line:84%
+which are Riemann
+integrable does not
+
+00:33:29.040 --> 00:33:30.150 align:middle line:90%
+give you a Banach space.
+
+00:33:30.150 --> 00:33:34.470 align:middle line:84%
+This is not-- this is a norm
+space modulo this little bit
+
+00:33:34.470 --> 00:33:38.910 align:middle line:84%
+that there are functions that
+have norm 0 that aren't exactly
+
+00:33:38.910 --> 00:33:41.070 align:middle line:90%
+identically 0.
+
+00:33:41.070 --> 00:33:43.470 align:middle line:90%
+But it's not a Banach space.
+
+00:33:43.470 --> 00:33:45.690 align:middle line:90%
+It's not complete.
+
+00:33:45.690 --> 00:33:47.430 align:middle line:84%
+And in functional
+analysis, we're
+
+00:33:47.430 --> 00:33:52.020 align:middle line:84%
+interested in spaces
+that are complete.
+
+00:33:52.020 --> 00:33:56.850 align:middle line:84%
+And not just in functional
+analysis for the abstract love
+
+00:33:56.850 --> 00:34:02.898 align:middle line:84%
+of it, but in
+problems where, as I
+
+00:34:02.898 --> 00:34:04.440 align:middle line:84%
+said at the beginning
+of this course,
+
+00:34:04.440 --> 00:34:07.020 align:middle line:84%
+where you have
+differentiable equations
+
+00:34:07.020 --> 00:34:10.350 align:middle line:84%
+or some functional defined
+on some space functions
+
+00:34:10.350 --> 00:34:11.969 align:middle line:84%
+you want to deal
+with complete spaces.
+
+00:34:11.969 --> 00:34:21.659 align:middle line:84%
+And a lot of functionals are
+defined on not just L1 but say
+
+00:34:21.659 --> 00:34:25.830 align:middle line:84%
+LP, where now I replace
+this by a p'th power.
+
+00:34:25.830 --> 00:34:33.340 align:middle line:84%
+So in order to be able to say
+certain things exist or get
+
+00:34:33.340 --> 00:34:35.530 align:middle line:84%
+to the heart of
+the subject, I need
+
+00:34:35.530 --> 00:34:36.867 align:middle line:90%
+these spaces to be complete.
+
+00:34:36.867 --> 00:34:39.159 align:middle line:84%
+And if I just restrict to
+Riemann integrable functions,
+
+00:34:39.159 --> 00:34:40.219 align:middle line:90%
+it's not complete.
+
+00:34:40.219 --> 00:34:44.560 align:middle line:84%
+So we have to do
+Lebesgue integration.
+
+00:34:44.560 --> 00:34:47.020 align:middle line:84%
+Now, what we'll
+find out is that--
+
+00:34:47.020 --> 00:34:50.620 align:middle line:84%
+and this is how it's done in the
+original notes for this class,
+
+00:34:50.620 --> 00:34:53.900 align:middle line:84%
+is that this is
+not a Banach space.
+
+00:34:53.900 --> 00:34:56.179 align:middle line:90%
+But I can take its completion.
+
+00:34:56.179 --> 00:34:59.300 align:middle line:84%
+Just like the set of rational
+numbers is not complete,
+
+00:34:59.300 --> 00:35:01.820 align:middle line:84%
+I can take it's what's
+called completion
+
+00:35:01.820 --> 00:35:03.560 align:middle line:90%
+and get the set of real numbers.
+
+00:35:03.560 --> 00:35:06.500 align:middle line:84%
+I could take this space,
+take its completion,
+
+00:35:06.500 --> 00:35:11.870 align:middle line:84%
+and what I get is a abstract
+space, which I can actually
+
+00:35:11.870 --> 00:35:16.310 align:middle line:84%
+identify with the space of
+Lebesgue integrable functions.
+
+00:35:16.310 --> 00:35:17.790 align:middle line:84%
+That's how it's
+done in the notes.
+
+00:35:17.790 --> 00:35:20.540 align:middle line:84%
+But I don't want
+to do it that way.
+
+00:35:20.540 --> 00:35:24.680 align:middle line:84%
+Instead, we're just going
+to build up Lebesgue measure
+
+00:35:24.680 --> 00:35:26.910 align:middle line:84%
+and integration
+from the ground up.
+
+00:35:26.910 --> 00:35:31.940 align:middle line:84%
+And we will see at one
+point that these functions
+
+00:35:31.940 --> 00:35:35.240 align:middle line:84%
+are in fact dense in the
+space of Lebesgue integrable
+
+00:35:35.240 --> 00:35:36.110 align:middle line:90%
+functions.
+
+00:35:36.110 --> 00:35:43.500 align:middle line:84%
+And therefore, we conclude
+that the abstract completion--
+
+00:35:43.500 --> 00:35:46.190 align:middle line:84%
+if you haven't covered
+completions, that's fine--
+
+00:35:46.190 --> 00:35:50.300 align:middle line:84%
+of this space is, in
+fact, the integrable--
+
+00:35:50.300 --> 00:35:53.400 align:middle line:84%
+the space of Lebesgue
+integrable functions.
+
+00:35:53.400 --> 00:36:01.930 align:middle line:84%
+So summing it up is that we
+have to do Lebesgue measure
+
+00:36:01.930 --> 00:36:04.180 align:middle line:84%
+and integration because these
+spaces are not complete.
+
+00:36:04.180 --> 00:36:06.840 align:middle line:90%
+
+
+00:36:06.840 --> 00:36:10.410 align:middle line:84%
+And we have better convergence
+theorems in these spaces.
+
+00:36:10.410 --> 00:36:14.760 align:middle line:84%
+But it just takes a little
+bit of effort to learn.
+
+00:36:14.760 --> 00:36:17.370 align:middle line:84%
+Not much, but I mean,
+it's quite intuitive
+
+00:36:17.370 --> 00:36:21.540 align:middle line:84%
+once you start seeing the
+arguments and going through it.
+
+00:36:21.540 --> 00:36:27.290 align:middle line:90%
+
+
+00:36:27.290 --> 00:36:30.520 align:middle line:84%
+So we're going to be defining a
+new notion of integration that's
+
+00:36:30.520 --> 00:36:33.550 align:middle line:84%
+more general than
+Riemann integration.
+
+00:36:33.550 --> 00:36:36.330 align:middle line:90%
+
+
+00:36:36.330 --> 00:36:41.510 align:middle line:84%
+And so, integration
+should somehow
+
+00:36:41.510 --> 00:36:46.490 align:middle line:84%
+be the theory of area
+underneath the curve.
+
+00:36:46.490 --> 00:36:59.460 align:middle line:84%
+So the simplest
+type of functions
+
+00:36:59.460 --> 00:37:09.990 align:middle line:84%
+you should consider first
+is, if I have a subset E,
+
+00:37:09.990 --> 00:37:13.620 align:middle line:84%
+maybe it's crazy, or
+maybe it's simple.
+
+00:37:13.620 --> 00:37:22.010 align:middle line:84%
+And I have a function, which is
+just a 1 when I'm on it and 0
+
+00:37:22.010 --> 00:37:22.750 align:middle line:90%
+otherwise.
+
+00:37:22.750 --> 00:37:31.400 align:middle line:90%
+
+
+00:37:31.400 --> 00:37:37.390 align:middle line:84%
+So I'll denote this function
+by 1 with an E beneath it.
+
+00:37:37.390 --> 00:37:42.890 align:middle line:84%
+Then in some sense, I want to be
+able to integrate this function.
+
+00:37:42.890 --> 00:37:53.020 align:middle line:84%
+So 1E is the function that's 1
+if x is in E and 0 if x is not
+
+00:37:53.020 --> 00:37:56.110 align:middle line:84%
+in E. So if E is just
+the interval a, b,
+
+00:37:56.110 --> 00:37:59.500 align:middle line:84%
+then I just have the function
+that 0 outside of a, b and 1
+
+00:37:59.500 --> 00:38:00.400 align:middle line:90%
+over a, b.
+
+00:38:00.400 --> 00:38:06.195 align:middle line:84%
+So the question is, how do
+we integrate such functions?
+
+00:38:06.195 --> 00:38:11.450 align:middle line:84%
+Or our first task is
+to define the integral
+
+00:38:11.450 --> 00:38:13.350 align:middle line:90%
+for these types of functions.
+
+00:38:13.350 --> 00:38:16.490 align:middle line:84%
+Well, since the
+integral should be
+
+00:38:16.490 --> 00:38:19.280 align:middle line:84%
+a theory of the area
+underneath the curve,
+
+00:38:19.280 --> 00:38:22.130 align:middle line:90%
+for example, if E equals--
+
+00:38:22.130 --> 00:38:25.370 align:middle line:84%
+so this is all just discussion
+right now, I should add.
+
+00:38:25.370 --> 00:38:26.958 align:middle line:90%
+So this is motivation.
+
+00:38:26.958 --> 00:38:29.000 align:middle line:84%
+In a minute I'll get to
+definitions and theorems.
+
+00:38:29.000 --> 00:38:32.570 align:middle line:90%
+But this is just a discussion.
+
+00:38:32.570 --> 00:38:35.930 align:middle line:84%
+If E equals a, b
+so that I'm just--
+
+00:38:35.930 --> 00:38:51.030 align:middle line:84%
+I have a, b, 1, 0 outside,
+then the integral of this guy
+
+00:38:51.030 --> 00:38:57.980 align:middle line:84%
+in whatever sense
+this integral is,
+
+00:38:57.980 --> 00:39:01.950 align:middle line:84%
+this should be at least the
+area underneath this curve.
+
+00:39:01.950 --> 00:39:05.690 align:middle line:90%
+So it should be b minus a.
+
+00:39:05.690 --> 00:39:12.590 align:middle line:84%
+Which is the length
+of the interval a, b.
+
+00:39:12.590 --> 00:39:29.540 align:middle line:84%
+So and therefore, if we
+have a general set E,
+
+00:39:29.540 --> 00:39:37.800 align:middle line:84%
+we should expect that our
+integral over the function,
+
+00:39:37.800 --> 00:39:41.540 align:middle line:84%
+which is 1 on E and 0
+off it, should somehow--
+
+00:39:41.540 --> 00:39:45.470 align:middle line:84%
+this should be the length of E.
+But length is not a very good
+
+00:39:45.470 --> 00:39:48.710 align:middle line:84%
+word because length
+applies to an interval a,
+
+00:39:48.710 --> 00:39:50.930 align:middle line:84%
+b because there's a
+start and there's a stop.
+
+00:39:50.930 --> 00:39:53.510 align:middle line:84%
+And everything in
+between is in the set.
+
+00:39:53.510 --> 00:39:59.240 align:middle line:84%
+So rather than write the
+length of E, I'll write m of E.
+
+00:39:59.240 --> 00:40:06.590 align:middle line:84%
+And m of E being
+the what I'll say
+
+00:40:06.590 --> 00:40:12.800 align:middle line:84%
+is a measure of E. A measure
+of how much of E there is.
+
+00:40:12.800 --> 00:40:16.060 align:middle line:84%
+And so, our first
+task, if we're hoping
+
+00:40:16.060 --> 00:40:20.350 align:middle line:84%
+to develop a notion
+of integration more
+
+00:40:20.350 --> 00:40:25.630 align:middle line:84%
+general than Riemann, in
+which the resulting spaces are
+
+00:40:25.630 --> 00:40:28.090 align:middle line:84%
+a Banach space, that's
+really the goal in the end
+
+00:40:28.090 --> 00:40:33.220 align:middle line:84%
+we should start by defining
+what does this mean?
+
+00:40:33.220 --> 00:40:36.370 align:middle line:90%
+What is a measure of a set?
+
+00:40:36.370 --> 00:40:38.290 align:middle line:90%
+Which sets are we measuring?
+
+00:40:38.290 --> 00:40:42.700 align:middle line:90%
+
+
+00:40:42.700 --> 00:40:56.785 align:middle line:84%
+So our task right now
+is define before we even
+
+00:40:56.785 --> 00:40:59.410 align:middle line:84%
+get to integration, we should be
+able to integrate the simplest
+
+00:40:59.410 --> 00:41:00.220 align:middle line:90%
+types of functions.
+
+00:41:00.220 --> 00:41:11.550 align:middle line:84%
+And this requires us to be able
+to define the measure of subsets
+
+00:41:11.550 --> 00:41:14.550 align:middle line:84%
+of R. And this is
+Lebesgue measure
+
+00:41:14.550 --> 00:41:16.630 align:middle line:90%
+that we'll be developing.
+
+00:41:16.630 --> 00:41:25.510 align:middle line:84%
+So what are some
+properties that we
+
+00:41:25.510 --> 00:41:34.190 align:middle line:84%
+want that a reasonable
+measure of sets to have?
+
+00:41:34.190 --> 00:41:36.610 align:middle line:84%
+So the first one
+we would like is,
+
+00:41:36.610 --> 00:41:38.500 align:middle line:84%
+we should be able to
+measure everything.
+
+00:41:38.500 --> 00:41:40.510 align:middle line:84%
+What's awful about
+Riemann integration
+
+00:41:40.510 --> 00:41:45.310 align:middle line:84%
+is we can't really
+integrate any function.
+
+00:41:45.310 --> 00:41:49.350 align:middle line:84%
+But we can't even integrate
+this function when E is,
+
+00:41:49.350 --> 00:41:52.440 align:middle line:84%
+say, the rational
+numbers between 0 and 1.
+
+00:41:52.440 --> 00:41:56.520 align:middle line:84%
+When I have the function
+which is 1 on the rationals
+
+00:41:56.520 --> 00:42:01.120 align:middle line:84%
+and 0 off of that, that's
+not Riemann integrable.
+
+00:42:01.120 --> 00:42:03.270 align:middle line:84%
+So I would like to
+be able to measure
+
+00:42:03.270 --> 00:42:04.985 align:middle line:90%
+any subset of real numbers.
+
+00:42:04.985 --> 00:42:11.200 align:middle line:90%
+
+
+00:42:11.200 --> 00:42:16.090 align:middle line:84%
+So I would like to be
+able to define the measure
+
+00:42:16.090 --> 00:42:18.100 align:middle line:90%
+of any subset of real numbers.
+
+00:42:18.100 --> 00:42:24.910 align:middle line:84%
+And the second property I would
+like is kind of a sanity check,
+
+00:42:24.910 --> 00:42:37.380 align:middle line:84%
+that if I is an interval,
+then the measure of E
+
+00:42:37.380 --> 00:42:41.060 align:middle line:90%
+should be the length of I.
+
+00:42:41.060 --> 00:42:44.780 align:middle line:84%
+And by I, I mean half
+open, half closed.
+
+00:42:44.780 --> 00:42:47.150 align:middle line:84%
+I guess, a half
+open is half closed.
+
+00:42:47.150 --> 00:42:52.060 align:middle line:84%
+But closed, open interval,
+the measure of that
+
+00:42:52.060 --> 00:42:54.850 align:middle line:84%
+should not care about
+missing the two endpoints.
+
+00:42:54.850 --> 00:42:57.160 align:middle line:84%
+And I should just get out
+the length of that interval
+
+00:42:57.160 --> 00:42:58.148 align:middle line:90%
+b minus a.
+
+00:42:58.148 --> 00:43:01.284 align:middle line:90%
+
+
+00:43:01.284 --> 00:43:09.690 align:middle line:84%
+A third property is a
+measure of the whole
+
+00:43:09.690 --> 00:43:14.850 align:middle line:84%
+should be the sum of the
+measures of its parts.
+
+00:43:14.850 --> 00:43:17.370 align:middle line:84%
+If I have some set
+which can be written
+
+00:43:17.370 --> 00:43:24.330 align:middle line:84%
+as a union of disjoint
+chunks, then the measure
+
+00:43:24.330 --> 00:43:27.780 align:middle line:84%
+of that whole set should
+be the sum of the measure
+
+00:43:27.780 --> 00:43:29.250 align:middle line:90%
+of the individual chunks.
+
+00:43:29.250 --> 00:43:45.620 align:middle line:84%
+So that's stated as if En is
+a collection of disjoint sets.
+
+00:43:45.620 --> 00:43:48.950 align:middle line:84%
+So think of these as
+making up a bigger set.
+
+00:43:48.950 --> 00:43:55.750 align:middle line:84%
+And this is, I should say, a
+countable collection of disjoint
+
+00:43:55.750 --> 00:44:03.130 align:middle line:84%
+sets, then I would like for
+the measure of their union
+
+00:44:03.130 --> 00:44:05.740 align:middle line:90%
+to be the sum of the measures.
+
+00:44:05.740 --> 00:44:08.800 align:middle line:90%
+
+
+00:44:08.800 --> 00:44:12.490 align:middle line:84%
+This is a reasonable
+thing to ask for.
+
+00:44:12.490 --> 00:44:16.270 align:middle line:84%
+The measure of the whole is the
+sum of the measure of the parts.
+
+00:44:16.270 --> 00:44:19.270 align:middle line:84%
+And in the last one, which
+is kind of specific to how
+
+00:44:19.270 --> 00:44:25.650 align:middle line:84%
+we view R is, if I take a set
+here next to where I'm standing,
+
+00:44:25.650 --> 00:44:28.330 align:middle line:84%
+and then I take that set,
+don't do anything to it,
+
+00:44:28.330 --> 00:44:31.260 align:middle line:84%
+I just walk it over here
+and take it's measure,
+
+00:44:31.260 --> 00:44:34.200 align:middle line:84%
+that measure, the measure
+of this set which I've now
+
+00:44:34.200 --> 00:44:35.970 align:middle line:84%
+walked over here
+should be the same
+
+00:44:35.970 --> 00:44:40.570 align:middle line:84%
+as the measure of that set over
+when I was standing over here.
+
+00:44:40.570 --> 00:44:45.030 align:middle line:84%
+So we should like m to
+be translation invariant.
+
+00:44:45.030 --> 00:44:56.570 align:middle line:90%
+
+
+00:44:56.570 --> 00:45:06.730 align:middle line:84%
+Meaning if E is in R
+and x is an element
+
+00:45:06.730 --> 00:45:12.760 align:middle line:84%
+of r, then the
+measure of the set
+
+00:45:12.760 --> 00:45:18.520 align:middle line:84%
+x plus E, which means the
+measure of the set of elements
+
+00:45:18.520 --> 00:45:24.730 align:middle line:84%
+x plus y, where y is in E. So
+just take E and shift it by x.
+
+00:45:24.730 --> 00:45:45.160 align:middle line:84%
+This should be the same as the
+measure of the original set E.
+
+00:45:45.160 --> 00:45:55.160 align:middle line:84%
+So unfortunately, this
+is impossible to have
+
+00:45:55.160 --> 00:46:04.050 align:middle line:84%
+a function which is defined on
+every subset of real numbers
+
+00:46:04.050 --> 00:46:06.400 align:middle line:84%
+satisfying these
+three properties.
+
+00:46:06.400 --> 00:46:11.360 align:middle line:90%
+So that's very unfortunate.
+
+00:46:11.360 --> 00:46:14.910 align:middle line:90%
+
+
+00:46:14.910 --> 00:46:19.770 align:middle line:84%
+Such a function m going from
+the power set of R, meaning
+
+00:46:19.770 --> 00:46:23.730 align:middle line:84%
+the set of all subsets
+of R, and of course
+
+00:46:23.730 --> 00:46:25.140 align:middle line:84%
+this thing should
+be non-negative
+
+00:46:25.140 --> 00:46:36.855 align:middle line:84%
+since it's a measure of how
+much is there, does not exist.
+
+00:46:36.855 --> 00:46:42.688 align:middle line:90%
+
+
+00:46:42.688 --> 00:46:43.230 align:middle line:90%
+Meaning what?
+
+00:46:43.230 --> 00:46:45.900 align:middle line:84%
+If you assume all of
+these four properties,
+
+00:46:45.900 --> 00:46:53.150 align:middle line:84%
+you'll be able to come up with
+a set which has finite measure
+
+00:46:53.150 --> 00:46:55.850 align:middle line:84%
+and then also simultaneously
+has infinite measure.
+
+00:46:55.850 --> 00:46:58.700 align:middle line:90%
+
+
+00:46:58.700 --> 00:47:04.650 align:middle line:84%
+So it's impossible to
+have a function which
+
+00:47:04.650 --> 00:47:06.750 align:middle line:84%
+is defined for every
+subset of real numbers
+
+00:47:06.750 --> 00:47:11.880 align:middle line:84%
+satisfying the conditions
+two, three, and four.
+
+00:47:11.880 --> 00:47:14.770 align:middle line:84%
+It's just not logically--
+it's just not possible.
+
+00:47:14.770 --> 00:47:20.480 align:middle line:90%
+So that's unfortunate.
+
+00:47:20.480 --> 00:47:29.640 align:middle line:84%
+But what we can do is
+drop the assumption
+
+00:47:29.640 --> 00:47:35.310 align:middle line:84%
+that measure is defined for
+every subset of real numbers
+
+00:47:35.310 --> 00:47:43.360 align:middle line:84%
+and focus on trying to
+find a set function--
+
+00:47:43.360 --> 00:47:46.630 align:middle line:84%
+I mean, defined on
+subsets of real numbers.
+
+00:47:46.630 --> 00:47:48.880 align:middle line:84%
+So that's why I'm calling
+it a set function--
+
+00:47:48.880 --> 00:47:53.980 align:middle line:84%
+m which satisfies two, three
+and four on a big collection
+
+00:47:53.980 --> 00:47:58.330 align:middle line:84%
+of sets, that's defined on
+a large collection of sets.
+
+00:47:58.330 --> 00:48:02.870 align:middle line:90%
+
+
+00:48:02.870 --> 00:48:07.940 align:middle line:84%
+And these sets for which
+such a measure will
+
+00:48:07.940 --> 00:48:11.750 align:middle line:84%
+be defined on satisfying
+two, three, and four will
+
+00:48:11.750 --> 00:48:13.910 align:middle line:90%
+be quite large in the end.
+
+00:48:13.910 --> 00:48:19.130 align:middle line:84%
+This is the set of
+Lebesgue measurable sets.
+
+00:48:19.130 --> 00:48:22.520 align:middle line:90%
+And m is the Lebesgue measure.
+
+00:48:22.520 --> 00:48:26.780 align:middle line:84%
+And so, our goal is to
+construct the Lebesgue measure
+
+00:48:26.780 --> 00:48:30.780 align:middle line:90%
+and Lebesgue integrable sets.
+
+00:48:30.780 --> 00:48:32.300 align:middle line:90%
+So this is our task.
+
+00:48:32.300 --> 00:48:34.980 align:middle line:90%
+
+
+00:48:34.980 --> 00:48:38.730 align:middle line:84%
+Or I guess we had
+that task before.
+
+00:48:38.730 --> 00:48:40.605 align:middle line:90%
+So what is the plan now?
+
+00:48:40.605 --> 00:48:49.090 align:middle line:90%
+
+
+00:48:49.090 --> 00:49:05.595 align:middle line:84%
+Construct an m defined
+for a large class--
+
+00:49:05.595 --> 00:49:21.340 align:middle line:90%
+
+
+00:49:21.340 --> 00:49:25.300 align:middle line:84%
+so defined for many different
+sets but not necessarily--
+
+00:49:25.300 --> 00:49:27.130 align:middle line:90%
+but not every set.
+
+00:49:27.130 --> 00:49:30.000 align:middle line:90%
+
+
+00:49:30.000 --> 00:49:34.020 align:middle line:84%
+And these sets will be, we
+will call Lebesgue measurable
+
+00:49:34.020 --> 00:49:53.210 align:middle line:84%
+sets such that the conditions
+two through four hold.
+
+00:49:53.210 --> 00:49:56.490 align:middle line:84%
+That if I have an interval,
+the measure of that interval--
+
+00:49:56.490 --> 00:50:00.260 align:middle line:84%
+so first off, this class of sets
+should contain all intervals.
+
+00:50:00.260 --> 00:50:02.360 align:middle line:84%
+And the measure of
+that interval gives me
+
+00:50:02.360 --> 00:50:04.340 align:middle line:90%
+the length of the interval.
+
+00:50:04.340 --> 00:50:08.030 align:middle line:84%
+And if I have a
+countable collection
+
+00:50:08.030 --> 00:50:11.930 align:middle line:84%
+of sets for which I can measure,
+then their union is measurable.
+
+00:50:11.930 --> 00:50:16.340 align:middle line:84%
+And the measure of
+that disjoint union
+
+00:50:16.340 --> 00:50:18.020 align:middle line:84%
+is equal to the sum
+of the measures.
+
+00:50:18.020 --> 00:50:20.600 align:middle line:84%
+And then it's also
+translation-invariant.
+
+00:50:20.600 --> 00:50:23.330 align:middle line:90%
+So that's the plan.
+
+00:50:23.330 --> 00:50:26.110 align:middle line:90%
+
+
+00:50:26.110 --> 00:50:29.100 align:middle line:84%
+So it won't be defined
+on for every set.
+
+00:50:29.100 --> 00:50:32.130 align:middle line:84%
+But it will be defined for
+a large class of sets which
+
+00:50:32.130 --> 00:50:34.930 align:middle line:90%
+contain most reasonable sets.
+
+00:50:34.930 --> 00:50:46.190 align:middle line:84%
+And how we're going to do
+this is due to Carathéodory.
+
+00:50:46.190 --> 00:50:48.000 align:middle line:90%
+And we'll go about it like this.
+
+00:50:48.000 --> 00:50:58.390 align:middle line:84%
+We'll first-- so how
+we'll construct this,
+
+00:50:58.390 --> 00:51:05.450 align:middle line:84%
+we'll first construct
+a function m
+
+00:51:05.450 --> 00:51:15.090 align:middle line:84%
+star, which is defined for
+every subset of real numbers.
+
+00:51:15.090 --> 00:51:23.820 align:middle line:84%
+This we'll call the outer
+measure, which satisfies two,
+
+00:51:23.820 --> 00:51:29.100 align:middle line:84%
+namely that the m
+star of an interval
+
+00:51:29.100 --> 00:51:33.120 align:middle line:90%
+is the length of the interval 3.
+
+00:51:33.120 --> 00:51:39.045 align:middle line:84%
+And I shouldn't say
+3, but and almost 3.
+
+00:51:39.045 --> 00:51:45.430 align:middle line:90%
+
+
+00:51:45.430 --> 00:51:53.760 align:middle line:84%
+Then we restrict, I
+should say, satisfying
+
+00:51:53.760 --> 00:51:59.230 align:middle line:90%
+two, almost three, and four.
+
+00:51:59.230 --> 00:52:02.570 align:middle line:90%
+
+
+00:52:02.570 --> 00:52:17.230 align:middle line:84%
+Then we restrict m star to
+well-behaved subsets of R.
+
+00:52:17.230 --> 00:52:23.610 align:middle line:84%
+These will be the class
+of the big Lebesgue sets.
+
+00:52:23.610 --> 00:52:26.715 align:middle line:84%
+And m will just be m star
+restricted to these subsets.
+
+00:52:26.715 --> 00:52:30.590 align:middle line:90%
+
+
+00:52:30.590 --> 00:52:35.300 align:middle line:84%
+So this is the plan
+of this chapter,
+
+00:52:35.300 --> 00:52:37.550 align:middle line:90%
+this part of the course.
+
+00:52:37.550 --> 00:52:42.060 align:middle line:90%
+Again, this is all discussion.
+
+00:52:42.060 --> 00:52:47.340 align:middle line:84%
+So our first topic
+will be m star,
+
+00:52:47.340 --> 00:52:48.975 align:middle line:90%
+which is called outer measure.
+
+00:52:48.975 --> 00:52:58.270 align:middle line:90%
+
+
+00:52:58.270 --> 00:53:02.430 align:middle line:84%
+So this was all game
+plan discussion.
+
+00:53:02.430 --> 00:53:06.010 align:middle line:84%
+If you didn't follow everything
+I just said, that's fine.
+
+00:53:06.010 --> 00:53:08.800 align:middle line:90%
+You could start listening now.
+
+00:53:08.800 --> 00:53:11.350 align:middle line:84%
+Because then I'm just going
+to start defining things
+
+00:53:11.350 --> 00:53:12.730 align:middle line:90%
+and proving theorems about them.
+
+00:53:12.730 --> 00:53:17.860 align:middle line:84%
+But you should know
+the path that we're
+
+00:53:17.860 --> 00:53:22.282 align:middle line:84%
+on so that you don't lose
+the forest through the trees
+
+00:53:22.282 --> 00:53:23.240 align:middle line:90%
+or something like that.
+
+00:53:23.240 --> 00:53:24.740 align:middle line:84%
+I think it goes
+something like that.
+
+00:53:24.740 --> 00:53:31.225 align:middle line:90%
+Anyways, so outer measure--
+
+00:53:31.225 --> 00:53:35.070 align:middle line:90%
+
+
+00:53:35.070 --> 00:53:37.560 align:middle line:90%
+so for an interval--
+
+00:53:37.560 --> 00:53:40.090 align:middle line:90%
+
+
+00:53:40.090 --> 00:53:42.870 align:middle line:84%
+so let me just note
+a little notation,
+
+00:53:42.870 --> 00:53:44.130 align:middle line:90%
+as I used a minute ago.
+
+00:53:44.130 --> 00:53:58.170 align:middle line:90%
+
+
+00:53:58.170 --> 00:54:09.810 align:middle line:84%
+If I is an interval,
+meaning open closed, half
+
+00:54:09.810 --> 00:54:15.790 align:middle line:84%
+open, infinite, little l
+of I denotes its length.
+
+00:54:15.790 --> 00:54:21.360 align:middle line:84%
+If it's unbounded, then this
+just is a stand-in for infinity.
+
+00:54:21.360 --> 00:54:27.330 align:middle line:90%
+
+
+00:54:27.330 --> 00:54:30.240 align:middle line:84%
+And the length of the
+interval-- so the length
+
+00:54:30.240 --> 00:54:37.920 align:middle line:84%
+of a, b both including a, b
+or not, or over 1 and maybe
+
+00:54:37.920 --> 00:54:41.640 align:middle line:84%
+not the other, is equal
+to b minus a regardless
+
+00:54:41.640 --> 00:54:44.160 align:middle line:84%
+if it's an open, closed,
+or half open interval.
+
+00:54:44.160 --> 00:54:47.300 align:middle line:90%
+
+
+00:54:47.300 --> 00:54:56.145 align:middle line:84%
+So for a subset of real numbers,
+we define its outer measure--
+
+00:54:56.145 --> 00:55:08.620 align:middle line:90%
+
+
+00:55:08.620 --> 00:55:10.577 align:middle line:84%
+we define the
+outer measure of a.
+
+00:55:10.577 --> 00:55:13.000 align:middle line:90%
+This is m star of a.
+
+00:55:13.000 --> 00:55:23.500 align:middle line:84%
+This is equal to the infimum
+of numbers sum of lengths of I
+
+00:55:23.500 --> 00:55:25.090 align:middle line:90%
+sub n.
+
+00:55:25.090 --> 00:55:28.480 align:middle line:90%
+And what are the I sub n's?
+
+00:55:28.480 --> 00:55:39.100 align:middle line:84%
+This is equal where I sub
+n is a countable collection
+
+00:55:39.100 --> 00:55:49.790 align:middle line:84%
+of open intervals such that a
+is contained in their union.
+
+00:55:49.790 --> 00:55:53.500 align:middle line:90%
+
+
+00:55:53.500 --> 00:55:57.640 align:middle line:84%
+So how I compute
+the outer measure,
+
+00:55:57.640 --> 00:56:03.010 align:middle line:84%
+so I can cover any set-- any
+subset of the real numbers
+
+00:56:03.010 --> 00:56:07.100 align:middle line:90%
+by a union of open intervals.
+
+00:56:07.100 --> 00:56:13.670 align:middle line:84%
+And so then, the
+outer measure is then
+
+00:56:13.670 --> 00:56:17.360 align:middle line:84%
+defined as the infimum
+of the sum of the lengths
+
+00:56:17.360 --> 00:56:19.010 align:middle line:90%
+of these open intervals.
+
+00:56:19.010 --> 00:56:20.730 align:middle line:90%
+So you have your set.
+
+00:56:20.730 --> 00:56:22.160 align:middle line:90%
+You cover it by open intervals.
+
+00:56:22.160 --> 00:56:24.230 align:middle line:84%
+You sum up the length
+of the open intervals.
+
+00:56:24.230 --> 00:56:30.100 align:middle line:84%
+This gives you some rough
+approximation to the size of a.
+
+00:56:30.100 --> 00:56:32.540 align:middle line:84%
+And now if you make those
+intervals small, and smaller,
+
+00:56:32.540 --> 00:56:34.290 align:middle line:84%
+and smaller, then you
+should be picking up
+
+00:56:34.290 --> 00:56:35.640 align:middle line:90%
+more detailed information.
+
+00:56:35.640 --> 00:56:39.887 align:middle line:84%
+And so, the infimum
+of some of the length
+
+00:56:39.887 --> 00:56:41.720 align:middle line:84%
+of these intervals that
+are covering a, this
+
+00:56:41.720 --> 00:56:43.070 align:middle line:90%
+gives you the outer measure.
+
+00:56:43.070 --> 00:56:50.690 align:middle line:84%
+So let me give you the
+stupidest example ever, which is
+
+00:56:50.690 --> 00:56:53.690 align:middle line:90%
+the outer measure of a point.
+
+00:56:53.690 --> 00:56:57.590 align:middle line:84%
+So let's say, I don't know,
+the set containing just 1.
+
+00:56:57.590 --> 00:56:58.580 align:middle line:90%
+So I claim that--
+
+00:56:58.580 --> 00:57:02.070 align:middle line:90%
+
+
+00:57:02.070 --> 00:57:03.930 align:middle line:90%
+or the set containing 0.
+
+00:57:03.930 --> 00:57:07.180 align:middle line:84%
+The outer measure
+of this is just 0.
+
+00:57:07.180 --> 00:57:09.600 align:middle line:84%
+So the set with just
+one point should--
+
+00:57:09.600 --> 00:57:11.130 align:middle line:90%
+it doesn't fill anything.
+
+00:57:11.130 --> 00:57:16.070 align:middle line:84%
+So it shouldn't
+have any measure,
+
+00:57:16.070 --> 00:57:18.650 align:middle line:84%
+it shouldn't have
+a positive measure.
+
+00:57:18.650 --> 00:57:25.920 align:middle line:84%
+At least if we're
+wanting to have measure
+
+00:57:25.920 --> 00:57:27.480 align:middle line:90%
+be related to length.
+
+00:57:27.480 --> 00:57:31.590 align:middle line:90%
+
+
+00:57:31.590 --> 00:57:33.670 align:middle line:90%
+Now, why is this?
+
+00:57:33.670 --> 00:57:39.140 align:middle line:90%
+Well, let epsilon be positive.
+
+00:57:39.140 --> 00:57:41.770 align:middle line:84%
+What I'm going to show is that
+the outer measure of this set
+
+00:57:41.770 --> 00:57:44.630 align:middle line:90%
+is less than epsilon.
+
+00:57:44.630 --> 00:57:46.990 align:middle line:84%
+And since this is always
+a non-negative number,
+
+00:57:46.990 --> 00:57:50.750 align:middle line:84%
+it's the infimum over a
+subset of positive numbers.
+
+00:57:50.750 --> 00:57:58.090 align:middle line:84%
+So therefore, that infimum
+is always non-negative.
+
+00:57:58.090 --> 00:58:01.390 align:middle line:84%
+So I should note
+that this is always
+
+00:58:01.390 --> 00:58:02.980 align:middle line:90%
+bigger than or equal to 0.
+
+00:58:02.980 --> 00:58:05.470 align:middle line:84%
+So I'm going to show
+that the outer measure is
+
+00:58:05.470 --> 00:58:09.030 align:middle line:90%
+less than epsilon.
+
+00:58:09.030 --> 00:58:11.550 align:middle line:84%
+Then the set
+containing only 0 is
+
+00:58:11.550 --> 00:58:18.160 align:middle line:84%
+contained in the open interval
+epsilon over 2-- minus epsilon
+
+00:58:18.160 --> 00:58:19.840 align:middle line:90%
+over 2 to epsilon over 2.
+
+00:58:19.840 --> 00:58:25.060 align:middle line:84%
+And therefore, the
+outer measure of 0,
+
+00:58:25.060 --> 00:58:27.640 align:middle line:84%
+which is the infimum
+of the sum of links
+
+00:58:27.640 --> 00:58:31.150 align:middle line:84%
+over all collection of
+intervals covering a, this
+
+00:58:31.150 --> 00:58:34.330 align:middle line:84%
+should be less than or equal
+to if I just take one of these.
+
+00:58:34.330 --> 00:58:44.520 align:middle line:84%
+So length of, which
+equals epsilon.
+
+00:58:44.520 --> 00:58:47.570 align:middle line:84%
+Now, the measure of this is
+always less than or equal
+
+00:58:47.570 --> 00:58:50.040 align:middle line:84%
+to epsilon for all
+epsilon positive.
+
+00:58:50.040 --> 00:58:51.620 align:middle line:90%
+So then I can take--
+
+00:58:51.620 --> 00:58:52.790 align:middle line:90%
+send epsilon to 0.
+
+00:58:52.790 --> 00:58:59.170 align:middle line:84%
+And I get that this
+measure-- outer measure is 0.
+
+00:58:59.170 --> 00:59:11.000 align:middle line:90%
+
+
+00:59:11.000 --> 00:59:14.000 align:middle line:84%
+So again, the outer
+measure is the infimum
+
+00:59:14.000 --> 00:59:15.770 align:middle line:84%
+of the sum of
+lengths, of intervals,
+
+00:59:15.770 --> 00:59:19.960 align:middle line:84%
+of open intervals, where
+these open intervals cover a.
+
+00:59:19.960 --> 00:59:25.620 align:middle line:90%
+
+
+00:59:25.620 --> 00:59:28.710 align:middle line:84%
+Simplest one is the set
+containing a single point.
+
+00:59:28.710 --> 00:59:29.940 align:middle line:90%
+It has measure 0.
+
+00:59:29.940 --> 00:59:33.150 align:middle line:84%
+Now I bet if you sit and
+think for a little bit,
+
+00:59:33.150 --> 00:59:36.000 align:middle line:84%
+you can then prove
+that the outer measure
+
+00:59:36.000 --> 00:59:40.890 align:middle line:84%
+of a set containing finitely
+many points, this is also 0.
+
+00:59:40.890 --> 00:59:45.140 align:middle line:90%
+
+
+00:59:45.140 --> 00:59:46.640 align:middle line:84%
+And if you work a
+little bit harder,
+
+00:59:46.640 --> 00:59:50.120 align:middle line:84%
+you can even prove that the
+measure of a countable set
+
+00:59:50.120 --> 00:59:57.520 align:middle line:84%
+is also 0 just based on what
+we've done here, just based on--
+
+00:59:57.520 --> 00:59:59.967 align:middle line:90%
+
+
+00:59:59.967 --> 01:00:00.550 align:middle line:90%
+you know what?
+
+01:00:00.550 --> 01:00:01.510 align:middle line:90%
+Let's do that.
+
+01:00:01.510 --> 01:00:02.920 align:middle line:90%
+That's a fun exercise.
+
+01:00:02.920 --> 01:00:08.730 align:middle line:90%
+
+
+01:00:08.730 --> 01:00:22.710 align:middle line:84%
+So is countable, then the
+measure of a equals 0.
+
+01:00:22.710 --> 01:00:28.110 align:middle line:84%
+So for example, the rational
+numbers are countable.
+
+01:00:28.110 --> 01:00:30.840 align:middle line:84%
+There's a lot of rational
+numbers throughout R.
+
+01:00:30.840 --> 01:00:32.040 align:middle line:90%
+But they have measure 0.
+
+01:00:32.040 --> 01:00:35.430 align:middle line:84%
+They don't fill anything
+in a certain sense.
+
+01:00:35.430 --> 01:00:55.110 align:middle line:84%
+Not feel as in F-E-E-L,
+fill, as an F-I-L-L.
+
+01:00:55.110 --> 01:00:57.120 align:middle line:90%
+So what's the proof of this?
+
+01:00:57.120 --> 01:01:06.860 align:middle line:84%
+So if a is countable, then I
+can list the elements of a.
+
+01:01:06.860 --> 01:01:10.370 align:middle line:84%
+I mean, a being countable
+means there's a bijection
+
+01:01:10.370 --> 01:01:11.765 align:middle line:90%
+from a to the natural numbers.
+
+01:01:11.765 --> 01:01:15.470 align:middle line:90%
+
+
+01:01:15.470 --> 01:01:17.720 align:middle line:84%
+And I'll do the
+countably infinite one
+
+01:01:17.720 --> 01:01:24.020 align:middle line:84%
+and leave the
+finite case to you.
+
+01:01:24.020 --> 01:01:32.380 align:middle line:90%
+
+
+01:01:32.380 --> 01:01:34.590 align:middle line:84%
+So that means there
+exists a bijection
+
+01:01:34.590 --> 01:01:36.760 align:middle line:90%
+from a to the natural numbers.
+
+01:01:36.760 --> 01:01:42.660 align:middle line:84%
+But that just means that I can
+list the elements of a, a1, a2,
+
+01:01:42.660 --> 01:01:47.820 align:middle line:90%
+a3, a4, and so on.
+
+01:01:47.820 --> 01:01:48.710 align:middle line:90%
+You can write it as--
+
+01:01:48.710 --> 01:01:55.110 align:middle line:90%
+
+
+01:01:55.110 --> 01:01:56.680 align:middle line:90%
+OK.
+
+01:01:56.680 --> 01:01:59.890 align:middle line:84%
+Now, I am, just like
+I did a minute ago,
+
+01:01:59.890 --> 01:02:02.200 align:middle line:84%
+I'm going to show that the
+outer measure of this set
+
+01:02:02.200 --> 01:02:04.840 align:middle line:84%
+is less than or equal to
+epsilon, where epsilon is
+
+01:02:04.840 --> 01:02:07.220 align:middle line:90%
+an arbitrary positive number.
+
+01:02:07.220 --> 01:02:11.830 align:middle line:84%
+And therefore, the outer
+measure has to be 0.
+
+01:02:11.830 --> 01:02:13.240 align:middle line:90%
+Let epsilon be positive.
+
+01:02:13.240 --> 01:02:17.820 align:middle line:90%
+
+
+01:02:17.820 --> 01:02:22.565 align:middle line:84%
+We will show the
+outer measure of a,
+
+01:02:22.565 --> 01:02:24.690 align:middle line:84%
+which is, again, a non-negative
+number is less than
+
+01:02:24.690 --> 01:02:25.523 align:middle line:90%
+or equal to epsilon.
+
+01:02:25.523 --> 01:02:28.190 align:middle line:90%
+
+
+01:02:28.190 --> 01:02:30.130 align:middle line:84%
+And then, any number
+that's less than
+
+01:02:30.130 --> 01:02:33.655 align:middle line:84%
+or equal to an arbitrarily
+small number has to be 0.
+
+01:02:33.655 --> 01:02:39.630 align:middle line:90%
+
+
+01:02:39.630 --> 01:02:52.030 align:middle line:84%
+For each n natural number, let
+I n be the interval that takes
+
+01:02:52.030 --> 01:03:00.550 align:middle line:90%
+the form epsilon over 2n plus 1.
+
+01:03:00.550 --> 01:03:01.550 align:middle line:90%
+I should write it this--
+
+01:03:01.550 --> 01:03:04.320 align:middle line:90%
+
+
+01:03:04.320 --> 01:03:08.820 align:middle line:84%
+a sub n minus epsilon
+over 2n plus 1,
+
+01:03:08.820 --> 01:03:12.810 align:middle line:84%
+a sub n plus epsilon
+over 2n plus 1.
+
+01:03:12.810 --> 01:03:16.070 align:middle line:90%
+
+
+01:03:16.070 --> 01:03:20.270 align:middle line:84%
+So I sub n is an
+open interval that
+
+01:03:20.270 --> 01:03:26.820 align:middle line:90%
+contains a sub n for each n.
+
+01:03:26.820 --> 01:03:38.910 align:middle line:84%
+And so, a is contained
+in this countable union,
+
+01:03:38.910 --> 01:03:43.510 align:middle line:84%
+or this countable union
+of open intervals.
+
+01:03:43.510 --> 01:03:46.150 align:middle line:84%
+And since the outer
+measure is the infimum
+
+01:03:46.150 --> 01:03:49.630 align:middle line:84%
+of the sum of lengths of
+open intervals covering a,
+
+01:03:49.630 --> 01:03:54.610 align:middle line:84%
+this implies that the measure,
+the outer measure of a, which
+
+01:03:54.610 --> 01:03:59.590 align:middle line:84%
+again is the infimum, so it's
+smaller than sum of lengths
+
+01:03:59.590 --> 01:04:01.540 align:middle line:84%
+of open intervals
+covering a, this
+
+01:04:01.540 --> 01:04:05.290 align:middle line:84%
+is less than or equal
+to sum n equals 1
+
+01:04:05.290 --> 01:04:12.100 align:middle line:84%
+to infinity of the length of
+I n, which equals sum from n
+
+01:04:12.100 --> 01:04:16.450 align:middle line:84%
+equals 1 to infinity of
+now the length of each
+
+01:04:16.450 --> 01:04:19.360 align:middle line:84%
+of these intervals is
+epsilon over 2 to the n.
+
+01:04:19.360 --> 01:04:23.580 align:middle line:90%
+
+
+01:04:23.580 --> 01:04:27.690 align:middle line:84%
+And the sum from n equals 1
+to infinity of epsilon over 2
+
+01:04:27.690 --> 01:04:29.770 align:middle line:90%
+to the n, this is just epsilon.
+
+01:04:29.770 --> 01:04:41.170 align:middle line:84%
+And therefore, the outer
+measure is less than epsilon.
+
+01:04:41.170 --> 01:04:51.080 align:middle line:84%
+Since epsilon was arbitrary
+and the outer measure
+
+01:04:51.080 --> 01:04:53.930 align:middle line:84%
+is non-negative, that we
+conclude that the outer measure
+
+01:04:53.930 --> 01:04:54.800 align:middle line:90%
+has to be 0.
+
+01:04:54.800 --> 01:05:04.250 align:middle line:90%
+
+
+01:05:04.250 --> 01:05:08.030 align:middle line:84%
+I mean, this argument,
+we can generalize
+
+01:05:08.030 --> 01:05:12.950 align:middle line:84%
+this argument a little bit
+to prove something that I'm
+
+01:05:12.950 --> 01:05:15.260 align:middle line:90%
+getting a little out of--
+
+01:05:15.260 --> 01:05:18.690 align:middle line:84%
+what I'm about to do is
+slightly out of order.
+
+01:05:18.690 --> 01:05:21.150 align:middle line:84%
+But we can generalize the
+argument we just gave.
+
+01:05:21.150 --> 01:05:23.010 align:middle line:84%
+And I want to do it
+now since it's there
+
+01:05:23.010 --> 01:05:27.690 align:middle line:84%
+and we just did it, to prove
+that outer measure satisfies
+
+01:05:27.690 --> 01:05:30.420 align:middle line:84%
+something that's
+almost like three.
+
+01:05:30.420 --> 01:05:36.540 align:middle line:84%
+So and it's kind a
+generalization of this argument.
+
+01:05:36.540 --> 01:05:37.920 align:middle line:84%
+Except for, this
+argument we were
+
+01:05:37.920 --> 01:05:40.620 align:middle line:84%
+able to give an
+explicit I sub n.
+
+01:05:40.620 --> 01:05:46.580 align:middle line:84%
+So we have the
+following theorem that,
+
+01:05:46.580 --> 01:05:52.030 align:middle line:84%
+well, first off let me state
+that a very easy property
+
+01:05:52.030 --> 01:05:53.920 align:middle line:84%
+of outer measure
+is that if I have
+
+01:05:53.920 --> 01:05:58.120 align:middle line:84%
+two subsets of real numbers,
+and a is contained in b, then
+
+01:05:58.120 --> 01:06:01.240 align:middle line:84%
+the outer measure
+of a is less than
+
+01:06:01.240 --> 01:06:05.230 align:middle line:84%
+or equal to the
+outer measure of b.
+
+01:06:05.230 --> 01:06:07.300 align:middle line:84%
+Because this just follows
+from the definition.
+
+01:06:07.300 --> 01:06:12.190 align:middle line:84%
+Any covering of b
+by open intervals
+
+01:06:12.190 --> 01:06:16.120 align:middle line:84%
+is a covering of a
+by open intervals.
+
+01:06:16.120 --> 01:06:18.250 align:middle line:84%
+And therefore, the infimum
+has to be less than
+
+01:06:18.250 --> 01:06:21.262 align:middle line:84%
+or equal to the sum
+of those lengths.
+
+01:06:21.262 --> 01:06:23.720 align:middle line:84%
+Or I should say, then the outer
+measure has to be less than
+
+01:06:23.720 --> 01:06:25.760 align:middle line:84%
+or equal to the
+sum of those links.
+
+01:06:25.760 --> 01:06:30.050 align:middle line:84%
+And thus, the infimum over all
+of those intervals covering
+
+01:06:30.050 --> 01:06:31.610 align:middle line:84%
+b, which is the
+outer measure, has
+
+01:06:31.610 --> 01:06:33.970 align:middle line:84%
+to be bigger than or equal
+to the outer measure of a.
+
+01:06:33.970 --> 01:06:37.020 align:middle line:84%
+So just think about
+it for a minute.
+
+01:06:37.020 --> 01:06:40.640 align:middle line:84%
+But this should be pretty much
+clear from the definition.
+
+01:06:40.640 --> 01:06:50.110 align:middle line:90%
+
+
+01:06:50.110 --> 01:06:59.118 align:middle line:84%
+So the next theorem
+is that we have
+
+01:06:59.118 --> 01:07:00.285 align:middle line:90%
+something that's like three.
+
+01:07:00.285 --> 01:07:06.570 align:middle line:90%
+
+
+01:07:06.570 --> 01:07:12.790 align:middle line:90%
+Let a and A n be a collection--
+
+01:07:12.790 --> 01:07:14.770 align:middle line:84%
+be a countable
+collection, I should say.
+
+01:07:14.770 --> 01:07:31.380 align:middle line:84%
+So here n is a natural number,
+collection of subsets of R.
+
+01:07:31.380 --> 01:07:36.150 align:middle line:84%
+Then the outer measure
+of their union--
+
+01:07:36.150 --> 01:07:39.960 align:middle line:84%
+so this is just
+arbitrary subsets.
+
+01:07:39.960 --> 01:07:45.480 align:middle line:84%
+I mean, they don't have to
+be pairwise disjoint like one
+
+01:07:45.480 --> 01:07:45.980 align:middle line:90%
+and three.
+
+01:07:45.980 --> 01:07:48.140 align:middle line:84%
+But so, just an
+arbitrary collection.
+
+01:07:48.140 --> 01:07:50.390 align:middle line:84%
+If I take the outer
+measure of the union,
+
+01:07:50.390 --> 01:07:54.200 align:middle line:84%
+this is less than or equal to
+the sum of the outer measures.
+
+01:07:54.200 --> 01:08:17.350 align:middle line:90%
+
+
+01:08:17.350 --> 01:08:20.470 align:middle line:84%
+So in particular,
+if this collection
+
+01:08:20.470 --> 01:08:26.760 align:middle line:84%
+is a collection of
+pairwise disjoint sets,
+
+01:08:26.760 --> 01:08:32.640 align:middle line:84%
+then the measure of the
+hole is less than or equal--
+
+01:08:32.640 --> 01:08:35.850 align:middle line:84%
+less than or equal to the sum
+of the measure of the parts,
+
+01:08:35.850 --> 01:08:41.609 align:middle line:84%
+which is half of the
+three that we want.
+
+01:08:41.609 --> 01:08:42.899 align:middle line:90%
+So we're getting there.
+
+01:08:42.899 --> 01:08:45.559 align:middle line:84%
+But anyways, so
+let's prove this.
+
+01:08:45.559 --> 01:08:48.140 align:middle line:90%
+
+
+01:08:48.140 --> 01:09:03.790 align:middle line:84%
+First off, if there
+exists an n such
+
+01:09:03.790 --> 01:09:08.790 align:middle line:84%
+that it has infinite
+outer measure,
+
+01:09:08.790 --> 01:09:12.930 align:middle line:84%
+just meaning that that subset
+that I'm taking the infimum over
+
+01:09:12.930 --> 01:09:16.529 align:middle line:90%
+is unbounded, or--
+
+01:09:16.529 --> 01:09:17.149 align:middle line:90%
+no, no, no.
+
+01:09:17.149 --> 01:09:19.520 align:middle line:90%
+That's not what I mean.
+
+01:09:19.520 --> 01:09:29.170 align:middle line:84%
+But if that infimum
+is infinite, meaning
+
+01:09:29.170 --> 01:09:33.850 align:middle line:84%
+I can't cover the set by a
+collection of intervals with sum
+
+01:09:33.850 --> 01:09:47.279 align:middle line:84%
+of links as a finite number,
+or the sum is infinite,
+
+01:09:47.279 --> 01:10:02.130 align:middle line:84%
+meaning it's not convergent,
+then this inequality is true.
+
+01:10:02.130 --> 01:10:06.420 align:middle line:84%
+I mean, then I'm
+just saying something
+
+01:10:06.420 --> 01:10:09.360 align:middle line:84%
+is less than or
+equal to infinity.
+
+01:10:09.360 --> 01:10:12.427 align:middle line:84%
+Or now I'm treating
+infinity like an element
+
+01:10:12.427 --> 01:10:13.635 align:middle line:90%
+of the extended real numbers.
+
+01:10:13.635 --> 01:10:17.110 align:middle line:90%
+
+
+01:10:17.110 --> 01:10:22.180 align:middle line:84%
+So if one of the
+measures is infinite,
+
+01:10:22.180 --> 01:10:26.030 align:middle line:84%
+or if this series diverges and
+I just get an infinite number,
+
+01:10:26.030 --> 01:10:28.310 align:middle line:84%
+then this inequality
+holds trivially.
+
+01:10:28.310 --> 01:10:31.638 align:middle line:84%
+So let's just consider
+the case when--
+
+01:10:31.638 --> 01:10:34.180 align:middle line:84%
+so we just need to consider the
+case when all of the measures
+
+01:10:34.180 --> 01:10:38.790 align:middle line:84%
+are finite and the sum of
+the measures is finite.
+
+01:10:38.790 --> 01:10:50.930 align:middle line:84%
+So suppose while n be
+an outer measure of
+
+01:10:50.930 --> 01:10:59.245 align:middle line:84%
+and the outer measure-- the sum
+of the outer measures converges.
+
+01:10:59.245 --> 01:10:59.870 align:middle line:90%
+So it's finite.
+
+01:10:59.870 --> 01:11:09.120 align:middle line:90%
+
+
+01:11:09.120 --> 01:11:13.440 align:middle line:84%
+So this is an argument
+you have to get used to,
+
+01:11:13.440 --> 01:11:16.440 align:middle line:84%
+that instead of proving the
+inequality that you want
+
+01:11:16.440 --> 01:11:19.630 align:middle line:84%
+to prove, you prove this
+inequality plus epsilon,
+
+01:11:19.630 --> 01:11:21.510 align:middle line:84%
+where epsilon is an
+arbitrary thing--
+
+01:11:21.510 --> 01:11:25.920 align:middle line:84%
+arbitrary positive number, just
+to give yourself a little room.
+
+01:11:25.920 --> 01:11:28.380 align:middle line:84%
+And then if you're able to
+prove the inequality you want,
+
+01:11:28.380 --> 01:11:31.680 align:middle line:84%
+plus epsilon, where epsilon is
+an arbitrary positive number,
+
+01:11:31.680 --> 01:11:36.420 align:middle line:84%
+then the inequality holds
+by letting epsilon go to 0.
+
+01:11:36.420 --> 01:11:39.320 align:middle line:90%
+
+
+01:11:39.320 --> 01:11:41.990 align:middle line:84%
+So that's the goal
+is we're going
+
+01:11:41.990 --> 01:11:45.510 align:middle line:84%
+to prove that inequality with an
+epsilon on the right-hand side.
+
+01:11:45.510 --> 01:11:46.670 align:middle line:90%
+So plus an epsilon.
+
+01:11:46.670 --> 01:11:48.230 align:middle line:90%
+Let epsilon be positive.
+
+01:11:48.230 --> 01:11:53.370 align:middle line:90%
+
+
+01:11:53.370 --> 01:12:01.730 align:middle line:84%
+For each n let
+collection I n sub k,
+
+01:12:01.730 --> 01:12:15.250 align:middle line:84%
+kn natural number, be a
+collection of open intervals
+
+01:12:15.250 --> 01:12:16.645 align:middle line:90%
+covering a sub n--
+
+01:12:16.645 --> 01:12:21.090 align:middle line:90%
+
+
+01:12:21.090 --> 01:12:28.240 align:middle line:90%
+so I sub n sub k.
+
+01:12:28.240 --> 01:12:32.190 align:middle line:90%
+
+
+01:12:32.190 --> 01:12:39.390 align:middle line:84%
+And so remember, the outer
+measure is an infimum.
+
+01:12:39.390 --> 01:12:42.480 align:middle line:84%
+So if I go above this
+infimum a little bit,
+
+01:12:42.480 --> 01:12:45.840 align:middle line:84%
+I can always find a collection
+of open intervals covering
+
+01:12:45.840 --> 01:12:48.780 align:middle line:84%
+the set whose sum
+of links is less
+
+01:12:48.780 --> 01:12:51.480 align:middle line:84%
+than that infimum
+plus the small number.
+
+01:12:51.480 --> 01:12:58.590 align:middle line:84%
+So and sum of k equals
+1 to infinity of I n
+
+01:12:58.590 --> 01:13:11.320 align:middle line:90%
+sub k is less than 2 to the n.
+
+01:13:11.320 --> 01:13:15.070 align:middle line:84%
+Again, just because this
+is defined as an infimum,
+
+01:13:15.070 --> 01:13:18.670 align:middle line:84%
+and so I can always for any
+little bit, if I go above it--
+
+01:13:18.670 --> 01:13:20.710 align:middle line:90%
+or a sub n, sorry--
+
+01:13:20.710 --> 01:13:22.960 align:middle line:84%
+if I go above it,
+then I should be
+
+01:13:22.960 --> 01:13:25.360 align:middle line:84%
+able to find a collection
+of open intervals
+
+01:13:25.360 --> 01:13:28.660 align:middle line:84%
+so that the sum of the
+links-- oh, God, what is that?
+
+01:13:28.660 --> 01:13:33.640 align:middle line:84%
+Sum of links-- it's
+the end of the day.
+
+01:13:33.640 --> 01:13:36.420 align:middle line:84%
+So I'm starting to make
+careless board mistakes.
+
+01:13:36.420 --> 01:13:54.210 align:middle line:90%
+
+
+01:13:54.210 --> 01:13:59.670 align:middle line:84%
+And now, each of these
+collections for each n cover
+
+01:13:59.670 --> 01:14:03.030 align:middle line:90%
+the a sub n's.
+
+01:14:03.030 --> 01:14:07.140 align:middle line:84%
+And therefore, the
+union of the a sub
+
+01:14:07.140 --> 01:14:20.110 align:middle line:84%
+n's is contained in the union
+of n in n, k in n of I in k.
+
+01:14:20.110 --> 01:14:25.540 align:middle line:84%
+So this is a collection
+of open intervals covering
+
+01:14:25.540 --> 01:14:27.310 align:middle line:90%
+this union is a countable, yes.
+
+01:14:27.310 --> 01:14:31.090 align:middle line:84%
+Because it's in one to one
+correspondence with n cross n.
+
+01:14:31.090 --> 01:14:36.530 align:middle line:84%
+n cross n is, again,
+a countable set.
+
+01:14:36.530 --> 01:14:42.620 align:middle line:84%
+So this is a countable
+collection of open intervals
+
+01:14:42.620 --> 01:14:47.390 align:middle line:90%
+covering the union of a sub n.
+
+01:14:47.390 --> 01:14:55.142 align:middle line:84%
+And therefore, the measure of
+a sub n should be less than
+
+01:14:55.142 --> 01:14:56.600 align:middle line:84%
+or equal to the
+length of the sums.
+
+01:14:56.600 --> 01:15:08.800 align:middle line:90%
+
+
+01:15:08.800 --> 01:15:18.280 align:middle line:84%
+And this is equal to sum
+over n sum over k, I in k.
+
+01:15:18.280 --> 01:15:23.440 align:middle line:90%
+And this is less than sum n--
+
+01:15:23.440 --> 01:15:27.220 align:middle line:84%
+if I'm summing in k,
+remember I have that--
+
+01:15:27.220 --> 01:15:35.700 align:middle line:84%
+the sum in k is less
+than m star of a sub n
+
+01:15:35.700 --> 01:15:39.480 align:middle line:90%
+plus epsilon over 2 to the n.
+
+01:15:39.480 --> 01:15:41.100 align:middle line:90%
+And now I'm summing in n.
+
+01:15:41.100 --> 01:15:44.100 align:middle line:84%
+So n is going from 1 to
+infinity and so is k.
+
+01:15:44.100 --> 01:15:54.260 align:middle line:84%
+And so this equals the sum of n,
+m star of a sub n plus epsilon.
+
+01:15:54.260 --> 01:15:55.960 align:middle line:90%
+So I started with--
+
+01:15:55.960 --> 01:15:59.860 align:middle line:84%
+ah, I keep making
+silly mistakes.
+
+01:15:59.860 --> 01:16:06.570 align:middle line:90%
+
+
+01:16:06.570 --> 01:16:07.690 align:middle line:90%
+Sorry about that.
+
+01:16:07.690 --> 01:16:12.240 align:middle line:84%
+So I started with the measure
+of the union of the a sub n's.
+
+01:16:12.240 --> 01:16:14.160 align:middle line:84%
+It's less than or
+equal to the sum
+
+01:16:14.160 --> 01:16:19.410 align:middle line:84%
+of the lengths of these open
+intervals that cover this union.
+
+01:16:19.410 --> 01:16:22.845 align:middle line:84%
+Because the outer measure is
+the infimum over all such sums.
+
+01:16:22.845 --> 01:16:26.190 align:middle line:90%
+
+
+01:16:26.190 --> 01:16:27.680 align:middle line:90%
+So that's equal to this sum.
+
+01:16:27.680 --> 01:16:29.600 align:middle line:84%
+How did we choose
+these open intervals?
+
+01:16:29.600 --> 01:16:32.810 align:middle line:84%
+We chose them so that these
+lengths, the sum and k
+
+01:16:32.810 --> 01:16:36.080 align:middle line:84%
+of these lengths gives me
+approximately the outer measure
+
+01:16:36.080 --> 01:16:38.990 align:middle line:84%
+of each a sub n
+plus a little error.
+
+01:16:38.990 --> 01:16:41.187 align:middle line:84%
+And I chose this error
+so that it's summable.
+
+01:16:41.187 --> 01:16:42.770 align:middle line:84%
+If I would have just
+put epsilon here,
+
+01:16:42.770 --> 01:16:48.670 align:middle line:84%
+I would have been summing
+something that can't be summed.
+
+01:16:48.670 --> 01:16:51.130 align:middle line:90%
+And in the end, I get this.
+
+01:16:51.130 --> 01:16:58.580 align:middle line:84%
+So I've shown that for
+all epsilon positive,
+
+01:16:58.580 --> 01:17:03.800 align:middle line:84%
+the outer measure of
+the union is less than
+
+01:17:03.800 --> 01:17:10.070 align:middle line:84%
+or equal to the sum of the
+outer measures plus epsilon.
+
+01:17:10.070 --> 01:17:11.360 align:middle line:90%
+I guess, less than.
+
+01:17:11.360 --> 01:17:14.150 align:middle line:90%
+
+
+01:17:14.150 --> 01:17:16.670 align:middle line:84%
+And now I just let
+epsilon go to 0.
+
+01:17:16.670 --> 01:17:17.990 align:middle line:90%
+And I conclude that--
+
+01:17:17.990 --> 01:17:28.750 align:middle line:90%
+
+
+01:17:28.750 --> 01:17:29.725 align:middle line:90%
+the bound that I want.
+
+01:17:29.725 --> 01:17:35.260 align:middle line:90%
+
+
+01:17:35.260 --> 01:17:37.660 align:middle line:84%
+So this also gives
+a second proof,
+
+01:17:37.660 --> 01:17:40.740 align:middle line:84%
+if you like, of what
+we proved a minute ago,
+
+01:17:40.740 --> 01:17:43.650 align:middle line:84%
+that countable sets
+have measure 0.
+
+01:17:43.650 --> 01:17:46.840 align:middle line:84%
+And if you-- and what
+we did right there,
+
+01:17:46.840 --> 01:17:51.030 align:middle line:90%
+which is one element.
+
+01:17:51.030 --> 01:17:55.170 align:middle line:84%
+We proved that the set
+containing one element
+
+01:17:55.170 --> 01:17:57.390 align:middle line:90%
+has outer measure 0.
+
+01:17:57.390 --> 01:18:02.910 align:middle line:84%
+Now, a countable set is equal
+to a union of such sets.
+
+01:18:02.910 --> 01:18:06.090 align:middle line:84%
+We've shown that the outer
+measure of this union,
+
+01:18:06.090 --> 01:18:08.460 align:middle line:84%
+which would be this
+countable set, is less than
+
+01:18:08.460 --> 01:18:12.150 align:middle line:84%
+or equal to the sum of the outer
+measure of the individual points
+
+01:18:12.150 --> 01:18:12.990 align:middle line:90%
+in that set.
+
+01:18:12.990 --> 01:18:15.930 align:middle line:84%
+And we did, in this
+example, we did it for 0.
+
+01:18:15.930 --> 01:18:18.180 align:middle line:84%
+But it doesn't
+matter that it was 0,
+
+01:18:18.180 --> 01:18:20.490 align:middle line:84%
+that the outer measure
+of a singleton, a set
+
+01:18:20.490 --> 01:18:21.990 align:middle line:90%
+with a single point, is 0.
+
+01:18:21.990 --> 01:18:24.210 align:middle line:84%
+And therefore, the
+sum would be 0.
+
+01:18:24.210 --> 01:18:29.290 align:middle line:84%
+And we would conclude that the
+outer measure of countable set
+
+01:18:29.290 --> 01:18:29.860 align:middle line:90%
+is 0.
+
+01:18:29.860 --> 01:18:35.710 align:middle line:84%
+So that's a second proof
+showing that the outer measure
+
+01:18:35.710 --> 01:18:36.865 align:middle line:90%
+of a countable set is 0.
+
+01:18:36.865 --> 01:18:41.990 align:middle line:90%
+
+
+01:18:41.990 --> 01:18:45.290 align:middle line:84%
+So we've shown that
+outer measure is--
+
+01:18:45.290 --> 01:18:47.000 align:middle line:84%
+so this is something
+that's defined
+
+01:18:47.000 --> 01:18:53.460 align:middle line:84%
+for every subset of real numbers
+and that it satisfies three.
+
+01:18:53.460 --> 01:18:58.580 align:middle line:84%
+Now, I'm going to
+leave-- it's actually
+
+01:18:58.580 --> 01:19:02.870 align:middle line:84%
+going to be an exercise
+in the assignment,
+
+01:19:02.870 --> 01:19:05.930 align:middle line:84%
+that outer measure
+also satisfies four.
+
+01:19:05.930 --> 01:19:08.390 align:middle line:84%
+The outer measure
+of a set shifted
+
+01:19:08.390 --> 01:19:11.780 align:middle line:84%
+is equal to the outer
+measure of the original set.
+
+01:19:11.780 --> 01:19:13.250 align:middle line:90%
+Why is this?
+
+01:19:13.250 --> 01:19:15.950 align:middle line:84%
+A way to think about
+it is that if something
+
+01:19:15.950 --> 01:19:20.000 align:middle line:84%
+holds for open intervals it
+should hold for outer measure.
+
+01:19:20.000 --> 01:19:27.140 align:middle line:84%
+Because outer measure is
+defined in terms of sums
+
+01:19:27.140 --> 01:19:29.000 align:middle line:90%
+of lengths of open intervals.
+
+01:19:29.000 --> 01:19:32.970 align:middle line:84%
+So if I take an open
+interval and shift it,
+
+01:19:32.970 --> 01:19:37.230 align:middle line:84%
+then it's length
+does not change.
+
+01:19:37.230 --> 01:19:40.800 align:middle line:84%
+The length of ab is the
+same as the length of a plus
+
+01:19:40.800 --> 01:19:42.990 align:middle line:90%
+x to b plus x.
+
+01:19:42.990 --> 01:19:46.710 align:middle line:84%
+So it's going to be an
+exercise in the assignment,
+
+01:19:46.710 --> 01:19:49.590 align:middle line:84%
+that outer measure, in
+fact, satisfies four.
+
+01:19:49.590 --> 01:19:52.110 align:middle line:84%
+So what's left, and
+what we'll do next time,
+
+01:19:52.110 --> 01:19:55.440 align:middle line:84%
+is show that if
+I is an interval,
+
+01:19:55.440 --> 01:19:58.470 align:middle line:84%
+that the outer
+measure is the same
+
+01:19:58.470 --> 01:20:01.170 align:middle line:90%
+as the length of the interval.
+
+01:20:01.170 --> 01:20:04.530 align:middle line:84%
+And as intuitive as that is, it
+takes just a little bit of work
+
+01:20:04.530 --> 01:20:06.250 align:middle line:90%
+to show--
+
+01:20:06.250 --> 01:20:09.760 align:middle line:90%
+not too much, but just a little.
+
+01:20:09.760 --> 01:20:14.020 align:middle line:84%
+And that will complete our
+construction of outer measure
+
+01:20:14.020 --> 01:20:23.160 align:middle line:84%
+which is this set function
+which satisfies one through four
+
+01:20:23.160 --> 01:20:26.100 align:middle line:90%
+but not three really.
+
+01:20:26.100 --> 01:20:29.310 align:middle line:90%
+It satisfies almost three.
+
+01:20:29.310 --> 01:20:31.980 align:middle line:84%
+And then, once we restrict
+that outer measure
+
+01:20:31.980 --> 01:20:38.610 align:middle line:84%
+to a certain class of subsets,
+certain well-behaved subsets,
+
+01:20:38.610 --> 01:20:40.620 align:middle line:90%
+then we'll be able to get three.
+
+01:20:40.620 --> 01:20:44.670 align:middle line:84%
+And that class of
+well-behaved subsets
+
+01:20:44.670 --> 01:20:48.490 align:middle line:84%
+we will call Lebesgue
+measurable sets.
+
+01:20:48.490 --> 01:20:48.990 align:middle line:90%
+All right.
+
+01:20:48.990 --> 01:20:51.440 align:middle line:90%
+So I think we'll stop there.
+
+01:20:51.440 --> 01:20:58.000 align:middle line:90%

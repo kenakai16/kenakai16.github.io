@@ -1,0 +1,2898 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:18.740 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:18.740 --> 00:00:29.020 align:middle line:84%
+PROFESSOR: OK, so let's continue
+our discussion of normed spaces
+
+00:00:29.020 --> 00:00:30.010 align:middle line:90%
+and Banach spaces.
+
+00:00:30.010 --> 00:00:33.940 align:middle line:84%
+So last time, I
+introduced the space
+
+00:00:33.940 --> 00:00:38.500 align:middle line:84%
+of bounded linear operators from
+one normed space from another.
+
+00:00:38.500 --> 00:00:42.200 align:middle line:84%
+And we saw that when the
+target is a Banach space,
+
+00:00:42.200 --> 00:00:44.680 align:middle line:84%
+then this space of
+bounded linear operators
+
+00:00:44.680 --> 00:00:45.865 align:middle line:90%
+is also a Banach space.
+
+00:00:45.865 --> 00:00:49.420 align:middle line:90%
+
+
+00:00:49.420 --> 00:00:55.290 align:middle line:84%
+So now, we'll look at
+another example of a way
+
+00:00:55.290 --> 00:00:59.430 align:middle line:84%
+to obtain a normed space
+from a given normed space.
+
+00:00:59.430 --> 00:01:17.265 align:middle line:84%
+So I'll be talking about
+subspaces and quotients,
+
+00:01:17.265 --> 00:01:17.765 align:middle line:90%
+all right?
+
+00:01:17.765 --> 00:01:20.350 align:middle line:90%
+
+
+00:01:20.350 --> 00:01:25.720 align:middle line:84%
+So let me just recall
+briefly what a subspace is.
+
+00:01:25.720 --> 00:01:27.610 align:middle line:84%
+You should remember this
+from linear algebra.
+
+00:01:27.610 --> 00:01:31.510 align:middle line:84%
+V will always be
+at least a vector
+
+00:01:31.510 --> 00:01:36.380 align:middle line:90%
+space, usually a normed space.
+
+00:01:36.380 --> 00:01:39.050 align:middle line:90%
+So we say a subset--
+
+00:01:39.050 --> 00:01:40.730 align:middle line:84%
+and I've been using
+this notation.
+
+00:01:40.730 --> 00:01:41.750 align:middle line:90%
+It doesn't mean strict--
+
+00:01:41.750 --> 00:01:44.380 align:middle line:90%
+
+
+00:01:44.380 --> 00:01:45.490 align:middle line:90%
+a strict subset.
+
+00:01:45.490 --> 00:01:49.510 align:middle line:84%
+I'm just kind of used to using
+this notation from 18.100A.
+
+00:01:49.510 --> 00:01:51.910 align:middle line:84%
+And the textbook
+use this notation
+
+00:01:51.910 --> 00:01:56.080 align:middle line:84%
+for just being a subset, not
+necessarily a strict subset.
+
+00:01:56.080 --> 00:01:59.820 align:middle line:90%
+So quick note about that.
+
+00:01:59.820 --> 00:02:14.760 align:middle line:84%
+So a subset of V is a subspace
+if for all elements, two
+
+00:02:14.760 --> 00:02:23.420 align:middle line:84%
+elements in the field of
+scalars and elements in W,
+
+00:02:23.420 --> 00:02:30.280 align:middle line:84%
+their linear combination is
+also in W. So W is closed,
+
+00:02:30.280 --> 00:02:32.620 align:middle line:90%
+undertaking linear combinations.
+
+00:02:32.620 --> 00:02:38.650 align:middle line:90%
+
+
+00:02:38.650 --> 00:02:43.020 align:middle line:84%
+And so it's quite
+easy to prove--
+
+00:02:43.020 --> 00:02:53.940 align:middle line:84%
+and I'll leave this to you--
+that the subspace of a normed
+
+00:02:53.940 --> 00:02:54.870 align:middle line:90%
+space--
+
+00:02:54.870 --> 00:03:02.460 align:middle line:84%
+of a Banach space,
+sorry, is itself
+
+00:03:02.460 --> 00:03:06.480 align:middle line:84%
+a Banach space, meaning
+it's complete with respect
+
+00:03:06.480 --> 00:03:13.830 align:middle line:84%
+to the norm it inherits
+from V. It's a Banach space
+
+00:03:13.830 --> 00:03:26.080 align:middle line:84%
+if and only if it's a closed
+subset of V with respect
+
+00:03:26.080 --> 00:03:29.395 align:middle line:84%
+to this metric we have
+induced by the norm.
+
+00:03:29.395 --> 00:03:35.970 align:middle line:90%
+
+
+00:03:35.970 --> 00:03:40.590 align:middle line:84%
+I mean, you can let me talk
+our way through it real quick.
+
+00:03:40.590 --> 00:03:43.470 align:middle line:84%
+Assuming W is a
+Banach space, we want
+
+00:03:43.470 --> 00:03:47.400 align:middle line:84%
+to show W is also a
+closed subset of V. So
+
+00:03:47.400 --> 00:03:51.980 align:middle line:84%
+that means you need to
+show, for example, that--
+
+00:03:51.980 --> 00:03:53.570 align:middle line:84%
+one equivalent way
+of showing this
+
+00:03:53.570 --> 00:03:56.600 align:middle line:84%
+is that every sequence
+that converges--
+
+00:03:56.600 --> 00:03:58.370 align:middle line:84%
+every sequence of
+elements from W
+
+00:03:58.370 --> 00:04:02.330 align:middle line:84%
+that converges converges
+to an element of W.
+
+00:04:02.330 --> 00:04:08.600 align:middle line:84%
+Now, take a sequence in W that
+converges to some element in V.
+
+00:04:08.600 --> 00:04:11.540 align:middle line:84%
+We now want to show that
+element's in W. Then
+
+00:04:11.540 --> 00:04:14.330 align:middle line:90%
+that sequence converges in W--
+
+00:04:14.330 --> 00:04:18.980 align:middle line:84%
+or is Cauchy in W. And
+since W is a Banach space,
+
+00:04:18.980 --> 00:04:21.560 align:middle line:84%
+there must be an element
+in W which it converges to.
+
+00:04:21.560 --> 00:04:23.870 align:middle line:84%
+And therefore, by
+uniqueness of limits,
+
+00:04:23.870 --> 00:04:31.430 align:middle line:84%
+that limit of that original
+sequence must lie in W.
+
+00:04:31.430 --> 00:04:34.310 align:middle line:84%
+And now, going the
+opposite direction,
+
+00:04:34.310 --> 00:04:38.810 align:middle line:84%
+assuming the subspace
+is closed, we
+
+00:04:38.810 --> 00:04:43.050 align:middle line:84%
+want to show that now
+this subspace is a Banach
+
+00:04:43.050 --> 00:04:44.870 align:middle line:90%
+space, meaning it's complete.
+
+00:04:44.870 --> 00:04:47.690 align:middle line:84%
+Well, let's take a
+Cauchy sequence in W.
+
+00:04:47.690 --> 00:04:50.630 align:middle line:84%
+This is also a Cauchy
+sequence in V. Therefore,
+
+00:04:50.630 --> 00:04:52.130 align:middle line:90%
+it has a limit.
+
+00:04:52.130 --> 00:04:55.220 align:middle line:84%
+This limit has to be in
+W, since W is closed.
+
+00:04:55.220 --> 00:04:58.580 align:middle line:84%
+And therefore, every Cauchy
+sequence in W has a limit in W.
+
+00:04:58.580 --> 00:05:01.050 align:middle line:84%
+And therefore, W
+is a Banach space.
+
+00:05:01.050 --> 00:05:03.332 align:middle line:84%
+OK, so I didn't
+write out what the--
+
+00:05:03.332 --> 00:05:05.540 align:middle line:84%
+I didn't write out the
+details, but we talked our way
+
+00:05:05.540 --> 00:05:06.140 align:middle line:90%
+through it.
+
+00:05:06.140 --> 00:05:09.830 align:middle line:90%
+
+
+00:05:09.830 --> 00:05:12.290 align:middle line:84%
+Since we're taking a
+trip down memory lane,
+
+00:05:12.290 --> 00:05:14.270 align:middle line:84%
+I just recalled
+what a subspace is.
+
+00:05:14.270 --> 00:05:19.310 align:middle line:84%
+Now, given a subspace, we can
+obtain another vector space
+
+00:05:19.310 --> 00:05:24.230 align:middle line:84%
+with the data of the
+space and the subspace
+
+00:05:24.230 --> 00:05:25.500 align:middle line:90%
+called the quotient.
+
+00:05:25.500 --> 00:05:27.320 align:middle line:90%
+So let me recall the quotient.
+
+00:05:27.320 --> 00:05:31.790 align:middle line:90%
+
+
+00:05:31.790 --> 00:05:38.750 align:middle line:84%
+So this is about briefly
+recalling what the quotient is.
+
+00:05:38.750 --> 00:05:58.040 align:middle line:84%
+So let's take a
+subspace of V. We
+
+00:05:58.040 --> 00:06:05.090 align:middle line:84%
+define an equivalence
+relation on V
+
+00:06:05.090 --> 00:06:14.260 align:middle line:84%
+by saying that v is
+related to v-prime if
+
+00:06:14.260 --> 00:06:20.670 align:middle line:84%
+and only if v minus
+v-prime is in W.
+
+00:06:20.670 --> 00:06:24.815 align:middle line:84%
+Now, what do I mean by
+equivalence relation?
+
+00:06:24.815 --> 00:06:29.050 align:middle line:90%
+
+
+00:06:29.050 --> 00:06:33.040 align:middle line:84%
+v is always related to v
+because the difference of v
+
+00:06:33.040 --> 00:06:35.410 align:middle line:84%
+is equal to 0, which
+is an element of W
+
+00:06:35.410 --> 00:06:40.940 align:middle line:84%
+because W is the subspace
+and therefore a vector
+
+00:06:40.940 --> 00:06:42.140 align:middle line:90%
+space in its own right.
+
+00:06:42.140 --> 00:06:46.820 align:middle line:90%
+
+
+00:06:46.820 --> 00:06:49.810 align:middle line:84%
+If v is related to
+v-prime, then this
+
+00:06:49.810 --> 00:06:54.640 align:middle line:84%
+implies v-prime is related to
+v, simply because we-- again,
+
+00:06:54.640 --> 00:06:58.120 align:middle line:84%
+if this is in W, then
+it's minus is also in W.
+
+00:06:58.120 --> 00:07:04.250 align:middle line:90%
+And so this is reflexivity.
+
+00:07:04.250 --> 00:07:07.670 align:middle line:84%
+And then we also
+have transitivity,
+
+00:07:07.670 --> 00:07:12.170 align:middle line:84%
+that if v is related to
+v-prime and v is related--
+
+00:07:12.170 --> 00:07:15.350 align:middle line:84%
+and v-prime is related
+to v-double prime,
+
+00:07:15.350 --> 00:07:19.340 align:middle line:84%
+then v is related
+to v-double prime.
+
+00:07:19.340 --> 00:07:22.110 align:middle line:90%
+
+
+00:07:22.110 --> 00:07:24.960 align:middle line:84%
+Just simply take v
+minus v-double prime
+
+00:07:24.960 --> 00:07:26.910 align:middle line:90%
+and add and subtract v-prime.
+
+00:07:26.910 --> 00:07:29.880 align:middle line:84%
+Then you obtain the sum
+of two elements in W
+
+00:07:29.880 --> 00:07:34.510 align:middle line:84%
+which must be in W. So this
+is an equivalence relation.
+
+00:07:34.510 --> 00:07:47.590 align:middle line:84%
+And so then we define
+the equivalence class
+
+00:07:47.590 --> 00:07:51.880 align:middle line:84%
+of v. This is the set
+of all v-prime in V
+
+00:07:51.880 --> 00:08:00.590 align:middle line:84%
+such that v-prime
+is related to v.
+
+00:08:00.590 --> 00:08:07.390 align:middle line:84%
+And then we define
+a new set, v-mod W,
+
+00:08:07.390 --> 00:08:09.565 align:middle line:84%
+to be the set of all
+equivalence classes.
+
+00:08:09.565 --> 00:08:20.280 align:middle line:90%
+
+
+00:08:20.280 --> 00:08:23.490 align:middle line:84%
+And instead of writing the
+equivalence class of v,
+
+00:08:23.490 --> 00:08:38.760 align:middle line:84%
+we typically write
+v plus W instead
+
+00:08:38.760 --> 00:08:42.330 align:middle line:84%
+of the equivalence
+class of v. So you
+
+00:08:42.330 --> 00:08:45.150 align:middle line:84%
+think of the
+equivalence class of v
+
+00:08:45.150 --> 00:08:50.460 align:middle line:84%
+as being v plus
+all elements of W.
+
+00:08:50.460 --> 00:08:59.670 align:middle line:84%
+Or two elements are the same if
+they differ by an element of W.
+
+00:08:59.670 --> 00:09:02.690 align:middle line:90%
+So this is a set.
+
+00:09:02.690 --> 00:09:19.170 align:middle line:84%
+But it becomes a vector
+space with the addition
+
+00:09:19.170 --> 00:09:21.300 align:middle line:84%
+and scalar multiplication
+operations defined
+
+00:09:21.300 --> 00:09:24.165 align:middle line:84%
+in a kind of
+natural way with v1.
+
+00:09:24.165 --> 00:09:35.840 align:middle line:90%
+
+
+00:09:35.840 --> 00:10:01.320 align:middle line:84%
+And scalar multiplication is
+just the equivalence class
+
+00:10:01.320 --> 00:10:07.780 align:middle line:84%
+given by lambda times v. Now,
+you have to take a second
+
+00:10:07.780 --> 00:10:10.220 align:middle line:84%
+and make sure that these
+operations are well-defined,
+
+00:10:10.220 --> 00:10:12.340 align:middle line:84%
+which I'm sure you
+did in linear algebra.
+
+00:10:12.340 --> 00:10:13.990 align:middle line:90%
+What do I mean by well-defined?
+
+00:10:13.990 --> 00:10:16.370 align:middle line:84%
+Well, these are two
+equivalent classes.
+
+00:10:16.370 --> 00:10:18.490 align:middle line:84%
+So if I take two other
+representatives--
+
+00:10:18.490 --> 00:10:20.770 align:middle line:90%
+say v1-prime and v2-prime--
+
+00:10:20.770 --> 00:10:24.790 align:middle line:84%
+do I get the same
+equivalence class
+
+00:10:24.790 --> 00:10:27.940 align:middle line:84%
+as I did with the unprime,
+meaning is v1-prime
+
+00:10:27.940 --> 00:10:32.470 align:middle line:84%
+plus v2-prime plus W the
+same equivalence class as v1
+
+00:10:32.470 --> 00:10:34.420 align:middle line:90%
+plus v2 plus W?
+
+00:10:34.420 --> 00:10:38.065 align:middle line:84%
+And this is not too
+hard to say-- or to see.
+
+00:10:38.065 --> 00:10:48.330 align:middle line:90%
+
+
+00:10:48.330 --> 00:10:52.245 align:middle line:84%
+So v-mod W, which is typically
+how you pronounce this v
+
+00:10:52.245 --> 00:10:55.120 align:middle line:84%
+slash W-- v-mod W
+is a vector space.
+
+00:10:55.120 --> 00:11:07.780 align:middle line:84%
+And so note, we can identify
+W, so just the set W,
+
+00:11:07.780 --> 00:11:11.690 align:middle line:84%
+with the equivalence
+class 0 plus W,
+
+00:11:11.690 --> 00:11:29.970 align:middle line:84%
+which is also equal to
+little w plus capital W.
+
+00:11:29.970 --> 00:11:39.415 align:middle line:84%
+OK, so when we first
+started talking about norms,
+
+00:11:39.415 --> 00:11:42.380 align:middle line:84%
+I also introduced what
+was called a seminorm.
+
+00:11:42.380 --> 00:11:46.970 align:middle line:84%
+Now, a seminorm,
+recall, satisfied not
+
+00:11:46.970 --> 00:11:48.830 align:middle line:84%
+all three properties
+a norm satisfied.
+
+00:11:48.830 --> 00:11:53.150 align:middle line:84%
+It satisfies homogeneity,
+meaning how scholars pull out,
+
+00:11:53.150 --> 00:11:56.020 align:middle line:84%
+and also the
+triangle inequality.
+
+00:11:56.020 --> 00:11:58.980 align:middle line:84%
+But it didn't satisfy
+positive definiteness,
+
+00:11:58.980 --> 00:12:05.906 align:middle line:84%
+meaning the seminorm could be
+0 for certain non-zero vectors,
+
+00:12:05.906 --> 00:12:06.406 align:middle line:90%
+OK?
+
+00:12:06.406 --> 00:12:11.800 align:middle line:90%
+
+
+00:12:11.800 --> 00:12:12.790 align:middle line:90%
+How could that arise?
+
+00:12:12.790 --> 00:12:14.080 align:middle line:90%
+How could a seminorm arise?
+
+00:12:14.080 --> 00:12:17.980 align:middle line:84%
+Well, think of
+taking the maximum
+
+00:12:17.980 --> 00:12:22.600 align:middle line:84%
+of the derivative of a
+function as being a norm
+
+00:12:22.600 --> 00:12:24.880 align:middle line:90%
+or as being a potential norm.
+
+00:12:24.880 --> 00:12:32.330 align:middle line:84%
+Then it satisfies homogeneity
+and the triangle inequality.
+
+00:12:32.330 --> 00:12:36.670 align:middle line:84%
+But it is not a norm
+because the derivative
+
+00:12:36.670 --> 00:12:40.810 align:middle line:90%
+of constant functions is 0.
+
+00:12:40.810 --> 00:12:43.540 align:middle line:84%
+But constant functions
+aren't identically 0,
+
+00:12:43.540 --> 00:12:46.210 align:middle line:84%
+if you think of them
+as elements of, say,
+
+00:12:46.210 --> 00:12:49.180 align:middle line:84%
+the space of continuously
+differentiable functions.
+
+00:12:49.180 --> 00:12:52.330 align:middle line:90%
+
+
+00:12:52.330 --> 00:12:55.180 align:middle line:84%
+But this next theorem
+says that if you mod out
+
+00:12:55.180 --> 00:13:00.850 align:middle line:84%
+by the elements in a vector
+space on which the seminorm is
+
+00:13:00.850 --> 00:13:06.100 align:middle line:84%
+0, then you get essentially a
+normed space where the norm is
+
+00:13:06.100 --> 00:13:07.850 align:middle line:90%
+given by the seminorm.
+
+00:13:07.850 --> 00:13:12.370 align:middle line:84%
+So if you mod out by the
+elements with 0 seminorm,
+
+00:13:12.370 --> 00:13:15.160 align:middle line:90%
+you get an actual norm space.
+
+00:13:15.160 --> 00:13:16.530 align:middle line:90%
+The statement is let--
+
+00:13:16.530 --> 00:13:21.702 align:middle line:90%
+
+
+00:13:21.702 --> 00:13:36.600 align:middle line:84%
+let's take a seminorm
+on vector space V.
+
+00:13:36.600 --> 00:13:44.580 align:middle line:84%
+Then we define E to be the
+set of all v in capital V such
+
+00:13:44.580 --> 00:13:52.565 align:middle line:84%
+that this seminorm of
+these vectors is 0.
+
+00:13:52.565 --> 00:13:57.840 align:middle line:90%
+
+
+00:13:57.840 --> 00:14:11.070 align:middle line:84%
+This is a subspace of V. And if
+I define the following function
+
+00:14:11.070 --> 00:14:15.170 align:middle line:90%
+on v-mod E--
+
+00:14:15.170 --> 00:14:18.130 align:middle line:90%
+
+
+00:14:18.130 --> 00:14:22.010 align:middle line:90%
+so what is it?
+
+00:14:22.010 --> 00:14:26.570 align:middle line:84%
+This is simply the norm
+of the representative v
+
+00:14:26.570 --> 00:14:29.750 align:middle line:90%
+of this equivalence class.
+
+00:14:29.750 --> 00:14:34.100 align:middle line:90%
+
+
+00:14:34.100 --> 00:14:36.920 align:middle line:84%
+So if I define a
+function like this,
+
+00:14:36.920 --> 00:14:55.060 align:middle line:84%
+so then this function
+defines a norm
+
+00:14:55.060 --> 00:15:00.930 align:middle line:84%
+on the space v-mod E. So in
+short, if I have a seminorm
+
+00:15:00.930 --> 00:15:05.820 align:middle line:84%
+and I mod out by all the
+elements with seminorm
+
+00:15:05.820 --> 00:15:10.410 align:middle line:84%
+equal to 0, then I get an actual
+normed space, where this norm
+
+00:15:10.410 --> 00:15:12.900 align:middle line:90%
+is essentially the seminorm.
+
+00:15:12.900 --> 00:15:23.070 align:middle line:90%
+
+
+00:15:23.070 --> 00:15:25.090 align:middle line:90%
+OK, so let's prove this.
+
+00:15:25.090 --> 00:15:28.060 align:middle line:90%
+
+
+00:15:28.060 --> 00:15:30.040 align:middle line:90%
+So why is this a subspace?
+
+00:15:30.040 --> 00:15:49.300 align:middle line:84%
+Well, if I take two elements
+in this space of elements that
+
+00:15:49.300 --> 00:16:03.720 align:middle line:84%
+have 0 seminorm and
+two scalars, and if I
+
+00:16:03.720 --> 00:16:12.600 align:middle line:84%
+take the seminorm of the
+linear combination form,
+
+00:16:12.600 --> 00:16:14.280 align:middle line:84%
+I want to show
+this is equal to 0.
+
+00:16:14.280 --> 00:16:17.670 align:middle line:84%
+And this follows essentially
+by homogeneity and the triangle
+
+00:16:17.670 --> 00:16:18.400 align:middle line:90%
+inequality.
+
+00:16:18.400 --> 00:16:21.630 align:middle line:90%
+This is less than or equal to--
+
+00:16:21.630 --> 00:16:23.142 align:middle line:84%
+if I apply the
+triangle inequality
+
+00:16:23.142 --> 00:16:24.600 align:middle line:84%
+and then pull the
+scalars out, this
+
+00:16:24.600 --> 00:16:26.775 align:middle line:90%
+is less than or equal to plus--
+
+00:16:26.775 --> 00:16:30.380 align:middle line:90%
+
+
+00:16:30.380 --> 00:16:34.820 align:middle line:84%
+and if these both have seminorm
+equal to 0, this is equal to 0.
+
+00:16:34.820 --> 00:16:38.160 align:middle line:84%
+And now, remember, a seminorm
+is always non-negative.
+
+00:16:38.160 --> 00:16:42.890 align:middle line:84%
+So if I show something is less
+than or equal to 0, it's also--
+
+00:16:42.890 --> 00:16:44.270 align:middle line:90%
+then it must be equal to 0.
+
+00:16:44.270 --> 00:16:58.240 align:middle line:90%
+
+
+00:16:58.240 --> 00:17:02.690 align:middle line:84%
+So first off, we
+define this function.
+
+00:17:02.690 --> 00:17:07.839 align:middle line:84%
+So now, let's show that this
+defines a norm on v-mod E.
+
+00:17:07.839 --> 00:17:10.720 align:middle line:84%
+We need to first show it's
+well-defined because I'm
+
+00:17:10.720 --> 00:17:15.490 align:middle line:84%
+defining it in terms
+of a representative
+
+00:17:15.490 --> 00:17:17.424 align:middle line:84%
+of this equivalence
+class, all right?
+
+00:17:17.424 --> 00:17:35.180 align:middle line:90%
+
+
+00:17:35.180 --> 00:17:37.070 align:middle line:90%
+And what does this mean? i.e.
+
+00:17:37.070 --> 00:17:43.550 align:middle line:84%
+If, v plus-- if I have two
+equivalence classes with--
+
+00:17:43.550 --> 00:17:46.280 align:middle line:84%
+or if I have the same
+equivalence class with two
+
+00:17:46.280 --> 00:17:50.210 align:middle line:84%
+different representatives,
+v and v-prime, then--
+
+00:17:50.210 --> 00:18:03.360 align:middle line:84%
+and I should write E,
+not W. Then the norm of v
+
+00:18:03.360 --> 00:18:07.830 align:middle line:90%
+equals the norm of v-prime.
+
+00:18:07.830 --> 00:18:10.100 align:middle line:84%
+And therefore, this
+function is well-defined.
+
+00:18:10.100 --> 00:18:14.110 align:middle line:90%
+Now, how do we do that?
+
+00:18:14.110 --> 00:18:16.110 align:middle line:84%
+Again, it's going to be
+essentially the triangle
+
+00:18:16.110 --> 00:18:16.920 align:middle line:90%
+inequality.
+
+00:18:16.920 --> 00:18:22.040 align:middle line:90%
+
+
+00:18:22.040 --> 00:18:31.440 align:middle line:84%
+So suppose v plus e
+equals v-prime plus em
+
+00:18:31.440 --> 00:18:33.510 align:middle line:84%
+meaning I have two
+representatives
+
+00:18:33.510 --> 00:18:34.950 align:middle line:90%
+for the same equivalence class.
+
+00:18:34.950 --> 00:18:38.090 align:middle line:90%
+
+
+00:18:38.090 --> 00:18:40.840 align:middle line:84%
+And that means there
+exists a little e capital
+
+00:18:40.840 --> 00:18:47.890 align:middle line:84%
+E such that v is equal
+to v-prime plus e.
+
+00:18:47.890 --> 00:18:52.360 align:middle line:84%
+Then if I take the
+norm of v, this
+
+00:18:52.360 --> 00:18:55.270 align:middle line:84%
+is equal to norm
+of v-prime plus e.
+
+00:18:55.270 --> 00:18:57.580 align:middle line:84%
+And by the triangle
+inequality, this
+
+00:18:57.580 --> 00:19:06.180 align:middle line:84%
+is less than or equal to norm
+of v-prime plus seminorm of E.
+
+00:19:06.180 --> 00:19:10.560 align:middle line:84%
+And now, since E is coming
+from this set of all vectors
+
+00:19:10.560 --> 00:19:14.430 align:middle line:84%
+with seminorm equal to
+0, this is equal to 0.
+
+00:19:14.430 --> 00:19:18.310 align:middle line:84%
+And therefore, I get
+the seminorm of v-prime.
+
+00:19:18.310 --> 00:19:22.350 align:middle line:84%
+So I've shown that the
+seminorm of v is less than
+
+00:19:22.350 --> 00:19:24.510 align:middle line:84%
+or equal to the
+seminorm of v-prime.
+
+00:19:24.510 --> 00:19:25.980 align:middle line:90%
+Now, there was nothing--
+
+00:19:25.980 --> 00:19:28.920 align:middle line:84%
+this argument is symmetric
+in v and v-prime, all right?
+
+00:19:28.920 --> 00:19:32.580 align:middle line:84%
+If v is equal to v-prime plus e
+for some element in capital E,
+
+00:19:32.580 --> 00:19:33.640 align:middle line:90%
+so is v-prime.
+
+00:19:33.640 --> 00:19:41.460 align:middle line:90%
+So I can also switch the--
+
+00:19:41.460 --> 00:19:43.740 align:middle line:84%
+I can also switch v
+and v-prime, meaning
+
+00:19:43.740 --> 00:19:48.870 align:middle line:84%
+I've shown that v is less
+than or equal to v-prime
+
+00:19:48.870 --> 00:19:53.490 align:middle line:84%
+and the norm of v-prime is
+less than or equal to v.
+
+00:19:53.490 --> 00:20:00.980 align:middle line:84%
+And therefore, their
+two norms agree.
+
+00:20:00.980 --> 00:20:09.190 align:middle line:84%
+So this function
+here is well-defined.
+
+00:20:09.190 --> 00:20:12.220 align:middle line:84%
+And so I'm going
+to leave it to you
+
+00:20:12.220 --> 00:20:18.250 align:middle line:84%
+now to check that this function
+now, which is well-defined
+
+00:20:18.250 --> 00:20:22.720 align:middle line:84%
+on v-mod E, is, in fact--
+does, in fact, satisfy all
+
+00:20:22.720 --> 00:20:25.000 align:middle line:90%
+the properties of a seminorm.
+
+00:20:25.000 --> 00:20:27.230 align:middle line:90%
+I mean, it's non-negative.
+
+00:20:27.230 --> 00:20:37.880 align:middle line:84%
+So from essentially the
+homogeneity and triangle
+
+00:20:37.880 --> 00:20:40.850 align:middle line:84%
+inequality property
+of the seminorm,
+
+00:20:40.850 --> 00:20:44.570 align:middle line:84%
+the triangle inequality
+and homogeneity of this
+
+00:20:44.570 --> 00:20:46.250 align:middle line:90%
+function then follow.
+
+00:20:46.250 --> 00:20:51.470 align:middle line:84%
+And we've essentially equated
+all elements with seminorm
+
+00:20:51.470 --> 00:20:53.040 align:middle line:90%
+equal to 0 to 0.
+
+00:20:53.040 --> 00:20:55.290 align:middle line:84%
+So this is why it's
+also positive definite.
+
+00:20:55.290 --> 00:20:57.472 align:middle line:84%
+So I'm going to leave
+that to you, OK?
+
+00:20:57.472 --> 00:21:07.110 align:middle line:90%
+
+
+00:21:07.110 --> 00:21:10.560 align:middle line:90%
+OK, now, there's one other way--
+
+00:21:10.560 --> 00:21:14.520 align:middle line:84%
+if we're given--
+so in this process,
+
+00:21:14.520 --> 00:21:17.910 align:middle line:84%
+we started with a seminorm
+on the space, identified
+
+00:21:17.910 --> 00:21:22.740 align:middle line:84%
+the subspace of all, if you
+like, zero norm elements,
+
+00:21:22.740 --> 00:21:28.440 align:middle line:90%
+and obtained a new normed space.
+
+00:21:28.440 --> 00:21:32.580 align:middle line:84%
+But you could start off with a
+normed space, a closed subspace
+
+00:21:32.580 --> 00:21:40.290 align:middle line:84%
+of that normed space, and obtain
+a new normed space on v-mod W,
+
+00:21:40.290 --> 00:21:48.300 align:middle line:84%
+if w is a closed space,
+in similar fashion, where
+
+00:21:48.300 --> 00:21:50.040 align:middle line:90%
+I define this norm this way.
+
+00:21:50.040 --> 00:21:56.850 align:middle line:84%
+And well, the norm on that space
+won't be the same as this one.
+
+00:21:56.850 --> 00:21:59.700 align:middle line:84%
+But that'll be in
+the exercises, OK?
+
+00:21:59.700 --> 00:22:02.560 align:middle line:90%
+
+
+00:22:02.560 --> 00:22:03.060 align:middle line:90%
+OK.
+
+00:22:03.060 --> 00:22:09.600 align:middle line:90%
+
+
+00:22:09.600 --> 00:22:19.650 align:middle line:84%
+So that's about-- this
+is kind of concluding
+
+00:22:19.650 --> 00:22:21.840 align:middle line:84%
+the elementary section
+of functional analysis,
+
+00:22:21.840 --> 00:22:27.060 align:middle line:84%
+meaning the bare bones of
+Banach spaces and normed spaces.
+
+00:22:27.060 --> 00:22:31.180 align:middle line:84%
+And now, with the rest of this
+lecture and then next lecture,
+
+00:22:31.180 --> 00:22:35.640 align:middle line:84%
+we're going to get into
+the fundamental results
+
+00:22:35.640 --> 00:22:41.140 align:middle line:84%
+of functional analysis
+related to Banach spaces.
+
+00:22:41.140 --> 00:22:44.750 align:middle line:84%
+So these theorems that I'll
+now be stating and proving
+
+00:22:44.750 --> 00:22:48.410 align:middle line:84%
+in the coming couple of lectures
+have names attached to them.
+
+00:22:48.410 --> 00:22:51.400 align:middle line:84%
+So you should definitely know
+what they are, what they state,
+
+00:22:51.400 --> 00:22:54.470 align:middle line:90%
+what they don't state.
+
+00:22:54.470 --> 00:22:57.050 align:middle line:84%
+But to prove them, I
+first need a result
+
+00:22:57.050 --> 00:23:04.005 align:middle line:84%
+from metric spaces, which
+I did teach last semester.
+
+00:23:04.005 --> 00:23:05.380 align:middle line:84%
+But we didn't
+cover this theorem.
+
+00:23:05.380 --> 00:23:09.340 align:middle line:84%
+I can't remember if I covered
+it when I taught 18.100B.
+
+00:23:09.340 --> 00:23:10.390 align:middle line:90%
+I don't think I did.
+
+00:23:10.390 --> 00:23:16.960 align:middle line:90%
+
+
+00:23:16.960 --> 00:23:23.500 align:middle line:84%
+So this is about
+when can you write--
+
+00:23:23.500 --> 00:23:27.290 align:middle line:90%
+
+
+00:23:27.290 --> 00:23:28.340 align:middle line:90%
+or in what way--
+
+00:23:28.340 --> 00:23:31.550 align:middle line:90%
+
+
+00:23:31.550 --> 00:23:35.680 align:middle line:84%
+OK, so let me just
+state that them.
+
+00:23:35.680 --> 00:23:37.700 align:middle line:84%
+And then I'll
+interpret it for you.
+
+00:23:37.700 --> 00:23:39.565 align:middle line:90%
+So this is Baire's theorem.
+
+00:23:39.565 --> 00:23:44.480 align:middle line:90%
+
+
+00:23:44.480 --> 00:23:48.200 align:middle line:84%
+It also goes by the name of
+the Baire category theorem,
+
+00:23:48.200 --> 00:23:51.560 align:middle line:84%
+although it has nothing
+to do with category theory
+
+00:23:51.560 --> 00:23:57.130 align:middle line:90%
+as is, I guess, used today.
+
+00:23:57.130 --> 00:23:59.860 align:middle line:84%
+I don't know if category
+theory gets used
+
+00:23:59.860 --> 00:24:02.170 align:middle line:84%
+or if it just is
+created for itself.
+
+00:24:02.170 --> 00:24:05.010 align:middle line:90%
+
+
+00:24:05.010 --> 00:24:13.920 align:middle line:84%
+But Baire's category theorem
+is the only category theorem
+
+00:24:13.920 --> 00:24:16.808 align:middle line:90%
+that I know.
+
+00:24:16.808 --> 00:24:17.725 align:middle line:90%
+So what does it state?
+
+00:24:17.725 --> 00:24:21.290 align:middle line:90%
+
+
+00:24:21.290 --> 00:24:26.900 align:middle line:84%
+If M-- so again, this is a
+theorem about metric spaces, so
+
+00:24:26.900 --> 00:24:29.450 align:middle line:90%
+not necessarily normed spaces.
+
+00:24:29.450 --> 00:24:45.410 align:middle line:84%
+So if M is a
+complete metric space
+
+00:24:45.410 --> 00:25:06.460 align:middle line:84%
+and Cn is a collection
+of closed subsets of M
+
+00:25:06.460 --> 00:25:08.950 align:middle line:90%
+such that M is their union--
+
+00:25:08.950 --> 00:25:12.770 align:middle line:90%
+
+
+00:25:12.770 --> 00:25:13.820 align:middle line:90%
+so this is a--
+
+00:25:13.820 --> 00:25:16.950 align:middle line:90%
+
+
+00:25:16.950 --> 00:25:17.940 align:middle line:90%
+so I have an N here.
+
+00:25:17.940 --> 00:25:24.290 align:middle line:84%
+So I should specify this
+is N as a natural number--
+
+00:25:24.290 --> 00:25:27.250 align:middle line:90%
+
+
+00:25:27.250 --> 00:25:51.280 align:middle line:84%
+then at least one Cn
+contains an open ball B x, r.
+
+00:25:51.280 --> 00:25:56.650 align:middle line:84%
+So recall this is a
+set of all y in M such
+
+00:25:56.650 --> 00:26:01.630 align:middle line:84%
+that the distance from
+x to y is less than r.
+
+00:26:01.630 --> 00:26:06.620 align:middle line:84%
+So at least one Cn
+contains an open ball
+
+00:26:06.620 --> 00:26:20.480 align:middle line:84%
+could be stated more succinctly
+as at least one Cn has
+
+00:26:20.480 --> 00:26:21.455 align:middle line:90%
+an interior point.
+
+00:26:21.455 --> 00:26:28.450 align:middle line:90%
+
+
+00:26:28.450 --> 00:26:30.970 align:middle line:84%
+So sometimes in applications,
+these Cn's are not
+
+00:26:30.970 --> 00:26:31.930 align:middle line:90%
+necessarily closed.
+
+00:26:31.930 --> 00:26:35.170 align:middle line:84%
+But if M is equal to
+the union of these sets,
+
+00:26:35.170 --> 00:26:38.320 align:middle line:84%
+then it's also equal to the
+union of their closures.
+
+00:26:38.320 --> 00:26:41.380 align:middle line:84%
+And so what this theorem
+says is that if you can write
+
+00:26:41.380 --> 00:26:44.470 align:middle line:84%
+a metric space as
+a union of sets,
+
+00:26:44.470 --> 00:26:47.770 align:middle line:84%
+then the closure of
+one of those sets
+
+00:26:47.770 --> 00:26:49.390 align:middle line:90%
+has to contain an open ball.
+
+00:26:49.390 --> 00:26:52.880 align:middle line:90%
+
+
+00:26:52.880 --> 00:26:58.100 align:middle line:84%
+Now, let's think a little
+bit of what it means for--
+
+00:26:58.100 --> 00:27:02.090 align:middle line:84%
+or there's a specific
+terminology for when a closed--
+
+00:27:02.090 --> 00:27:05.000 align:middle line:84%
+when the closure of a set
+does not contain an open ball,
+
+00:27:05.000 --> 00:27:07.760 align:middle line:90%
+that means it's nowhere dense.
+
+00:27:07.760 --> 00:27:10.400 align:middle line:84%
+Or that's the phrase we
+usually use for that,
+
+00:27:10.400 --> 00:27:12.590 align:middle line:90%
+is that it's nowhere dense.
+
+00:27:12.590 --> 00:27:15.290 align:middle line:84%
+So Baire's theorem
+says that if you
+
+00:27:15.290 --> 00:27:20.570 align:middle line:84%
+have M equal to the union
+of a collection of sets,
+
+00:27:20.570 --> 00:27:26.170 align:middle line:84%
+then the closure of one of those
+sets has to be dense somewhere.
+
+00:27:26.170 --> 00:27:29.380 align:middle line:84%
+Or you can't write M, a
+complete metric space,
+
+00:27:29.380 --> 00:27:32.815 align:middle line:84%
+as the union of
+nowhere dense subsets.
+
+00:27:32.815 --> 00:27:43.630 align:middle line:90%
+
+
+00:27:43.630 --> 00:27:46.750 align:middle line:84%
+And so this theorem is
+quite simple to state.
+
+00:27:46.750 --> 00:27:53.560 align:middle line:84%
+It's quite very
+useful and, I mean,
+
+00:27:53.560 --> 00:27:55.250 align:middle line:90%
+quite powerful in applications.
+
+00:27:55.250 --> 00:27:56.800 align:middle line:84%
+In fact, you can
+use this theorem
+
+00:27:56.800 --> 00:28:01.750 align:middle line:84%
+to give an alternative proof
+to something that hopefully you
+
+00:28:01.750 --> 00:28:03.250 align:middle line:84%
+saw in your analysis
+class, which
+
+00:28:03.250 --> 00:28:06.040 align:middle line:84%
+is that there exists a
+continuous function which
+
+00:28:06.040 --> 00:28:09.247 align:middle line:90%
+is nowhere differentiable.
+
+00:28:09.247 --> 00:28:12.110 align:middle line:90%
+
+
+00:28:12.110 --> 00:28:13.700 align:middle line:84%
+Maybe I'll put that
+in the exercises.
+
+00:28:13.700 --> 00:28:17.690 align:middle line:84%
+Maybe I'll just point
+you to it somewhere.
+
+00:28:17.690 --> 00:28:19.810 align:middle line:90%
+We'll see.
+
+00:28:19.810 --> 00:28:21.880 align:middle line:84%
+All right, so the proof
+is by contradiction.
+
+00:28:21.880 --> 00:28:28.802 align:middle line:90%
+
+
+00:28:28.802 --> 00:28:30.760 align:middle line:84%
+I believe this is the
+first contradiction proof
+
+00:28:30.760 --> 00:28:33.140 align:middle line:90%
+that we've done in the class.
+
+00:28:33.140 --> 00:28:36.820 align:middle line:84%
+So in 18.100A and B, I
+mean, you start off--
+
+00:28:36.820 --> 00:28:38.440 align:middle line:90%
+everything is by contradiction.
+
+00:28:38.440 --> 00:28:41.240 align:middle line:90%
+
+
+00:28:41.240 --> 00:28:46.570 align:middle line:90%
+So let's suppose not, i.e.
+
+00:28:46.570 --> 00:28:50.680 align:middle line:84%
+you can find there
+is a collection
+
+00:28:50.680 --> 00:28:55.732 align:middle line:84%
+of closed subsets of M such
+that M is equal to this union.
+
+00:28:55.732 --> 00:28:57.190 align:middle line:84%
+And what we're
+going to do is we're
+
+00:28:57.190 --> 00:28:59.830 align:middle line:84%
+going to find a point
+that's not in this union
+
+00:28:59.830 --> 00:29:03.130 align:middle line:84%
+and therefore not in M. And
+that will be our contradiction.
+
+00:29:03.130 --> 00:29:07.570 align:middle line:84%
+We'll use the completeness
+of M to obtain this point
+
+00:29:07.570 --> 00:29:10.030 align:middle line:84%
+because how we're going
+to obtain this point
+
+00:29:10.030 --> 00:29:13.090 align:middle line:84%
+is as a limit of a
+certain sequence.
+
+00:29:13.090 --> 00:29:16.690 align:middle line:84%
+And to be able to say
+that this limit exists,
+
+00:29:16.690 --> 00:29:20.620 align:middle line:84%
+we're going to show
+the sequence as Cauchy.
+
+00:29:20.620 --> 00:29:22.570 align:middle line:84%
+All right, so we're
+going to build up
+
+00:29:22.570 --> 00:29:25.920 align:middle line:90%
+this sequence inductively.
+
+00:29:25.920 --> 00:29:30.300 align:middle line:84%
+And I will write this
+inductive proof kind
+
+00:29:30.300 --> 00:29:31.920 align:middle line:90%
+of carefully this first time.
+
+00:29:31.920 --> 00:29:33.960 align:middle line:84%
+And then in the
+future, I'm just going
+
+00:29:33.960 --> 00:29:37.590 align:middle line:84%
+to say, OK, choose p1 this
+way, choose p2 this way.
+
+00:29:37.590 --> 00:29:40.920 align:middle line:84%
+Continuing in this manner, we
+obtain a sequence of points,
+
+00:29:40.920 --> 00:29:41.920 align:middle line:90%
+blah, blah, blah.
+
+00:29:41.920 --> 00:29:46.200 align:middle line:84%
+But at this stage, I'll
+write this inductive proof
+
+00:29:46.200 --> 00:29:47.530 align:middle line:90%
+kind of carefully.
+
+00:29:47.530 --> 00:29:49.560 align:middle line:90%
+OK, so suppose not.
+
+00:29:49.560 --> 00:29:55.430 align:middle line:90%
+
+
+00:29:55.430 --> 00:30:10.640 align:middle line:84%
+Since M certainly contains an
+open ball and C1 cannot contain
+
+00:30:10.640 --> 00:30:15.930 align:middle line:84%
+an open ball, this implies M
+does not equal to the first
+
+00:30:15.930 --> 00:30:16.500 align:middle line:90%
+closed set.
+
+00:30:16.500 --> 00:30:19.380 align:middle line:84%
+Otherwise, the first closed
+set would contain an open ball.
+
+00:30:19.380 --> 00:30:23.860 align:middle line:90%
+
+
+00:30:23.860 --> 00:30:29.660 align:middle line:84%
+Thus, there exists an
+element p1 in M take away C1.
+
+00:30:29.660 --> 00:30:31.340 align:middle line:90%
+Now, C1 is closed.
+
+00:30:31.340 --> 00:30:36.420 align:middle line:90%
+
+
+00:30:36.420 --> 00:30:38.670 align:middle line:84%
+This implies that its
+complement is open.
+
+00:30:38.670 --> 00:30:43.910 align:middle line:90%
+
+
+00:30:43.910 --> 00:30:51.940 align:middle line:84%
+And therefore, I can find
+a small epsilon 1 such
+
+00:30:51.940 --> 00:30:59.710 align:middle line:84%
+that the ball centered
+at p1 of radius epsilon
+
+00:30:59.710 --> 00:31:06.025 align:middle line:84%
+1 intersect C1
+equals the empty set.
+
+00:31:06.025 --> 00:31:14.910 align:middle line:90%
+
+
+00:31:14.910 --> 00:31:16.260 align:middle line:90%
+Now, I'm going to pick C2.
+
+00:31:16.260 --> 00:31:23.610 align:middle line:90%
+
+
+00:31:23.610 --> 00:31:33.420 align:middle line:84%
+Now the ball centered at p1
+of radius epsilon 1 over 3,
+
+00:31:33.420 --> 00:31:37.740 align:middle line:84%
+this is not contained in
+C2 because, again, this
+
+00:31:37.740 --> 00:31:38.800 align:middle line:90%
+is by contradiction.
+
+00:31:38.800 --> 00:31:40.320 align:middle line:84%
+So we're assuming
+that M is written
+
+00:31:40.320 --> 00:31:42.930 align:middle line:84%
+as a union of closed sets
+and none of these closed sets
+
+00:31:42.930 --> 00:31:44.130 align:middle line:90%
+contain an open ball.
+
+00:31:44.130 --> 00:31:46.440 align:middle line:84%
+So this open ball cannot
+be contained in C2.
+
+00:31:46.440 --> 00:31:51.640 align:middle line:90%
+
+
+00:31:51.640 --> 00:31:57.830 align:middle line:84%
+And therefore, there
+exists some point p2
+
+00:31:57.830 --> 00:32:05.150 align:middle line:84%
+in this open ball centered at
+p1 of radius epsilon 1 over 3
+
+00:32:05.150 --> 00:32:12.890 align:middle line:90%
+such that p2 is not in C2.
+
+00:32:12.890 --> 00:32:23.960 align:middle line:84%
+Now, again, C2-closed implies
+that there exists an epsilon 2
+
+00:32:23.960 --> 00:32:27.950 align:middle line:84%
+less than epsilon over 3-- so
+we can make it very small if we
+
+00:32:27.950 --> 00:32:29.720 align:middle line:90%
+wish--
+
+00:32:29.720 --> 00:32:37.800 align:middle line:84%
+such that the ball centered
+at p2 of radius epsilon 2
+
+00:32:37.800 --> 00:32:41.880 align:middle line:84%
+intersect C2 equals
+the empty set.
+
+00:32:41.880 --> 00:32:44.420 align:middle line:90%
+
+
+00:32:44.420 --> 00:32:47.680 align:middle line:90%
+So now, I've picked p2--
+
+00:32:47.680 --> 00:32:48.640 align:middle line:90%
+p1 and p2.
+
+00:32:48.640 --> 00:32:50.950 align:middle line:84%
+Now, at this point,
+I would usually
+
+00:32:50.950 --> 00:32:54.670 align:middle line:84%
+say, continuing in this manner,
+we obtain a sequence of points.
+
+00:32:54.670 --> 00:32:57.280 align:middle line:84%
+But let me write out
+the argument carefully.
+
+00:32:57.280 --> 00:33:02.820 align:middle line:90%
+
+
+00:33:02.820 --> 00:33:09.450 align:middle line:90%
+Suppose there exists k points--
+
+00:33:09.450 --> 00:33:31.210 align:middle line:84%
+p1, pk and positive epsilon 1,
+epsilon k such that two things
+
+00:33:31.210 --> 00:33:32.120 align:middle line:90%
+occur.
+
+00:33:32.120 --> 00:33:41.150 align:middle line:84%
+So epsilon k is less than
+epsilon k minus 1 over 3 and--
+
+00:33:41.150 --> 00:33:43.810 align:middle line:90%
+
+
+00:33:43.810 --> 00:33:48.610 align:middle line:84%
+which is less than epsilon
+k minus 2 over 3 and so
+
+00:33:48.610 --> 00:33:55.255 align:middle line:84%
+on all the way down to
+epsilon 1 over 3 k minus 1.
+
+00:33:55.255 --> 00:33:58.650 align:middle line:90%
+
+
+00:33:58.650 --> 00:34:01.800 align:middle line:84%
+So if you like, k here is
+bigger than or equal to 2.
+
+00:34:01.800 --> 00:34:05.860 align:middle line:90%
+
+
+00:34:05.860 --> 00:34:17.139 align:middle line:84%
+And pj satisfies-- pj is in
+the ball centered at pj minus 1
+
+00:34:17.139 --> 00:34:23.010 align:middle line:84%
+of radius epsilon
+j minus 1 over 3.
+
+00:34:23.010 --> 00:34:30.179 align:middle line:84%
+And the ball centered
+at pj epsilon j
+
+00:34:30.179 --> 00:34:34.350 align:middle line:84%
+intersects Cj equals
+the empty set.
+
+00:34:34.350 --> 00:34:37.389 align:middle line:90%
+
+
+00:34:37.389 --> 00:34:45.120 align:middle line:84%
+So let me star those two
+properties right there.
+
+00:34:45.120 --> 00:34:50.219 align:middle line:84%
+We're going to obtain another
+point satisfying those two
+
+00:34:50.219 --> 00:34:52.020 align:middle line:90%
+properties.
+
+00:34:52.020 --> 00:34:59.720 align:middle line:84%
+And I don't know why
+I'm being a stickler.
+
+00:34:59.720 --> 00:35:01.020 align:middle line:90%
+It doesn't really matter.
+
+00:35:01.020 --> 00:35:05.390 align:middle line:84%
+But let me put a 2
+because that's not
+
+00:35:05.390 --> 00:35:07.160 align:middle line:90%
+necessarily satisfied for p1.
+
+00:35:07.160 --> 00:35:11.880 align:middle line:84%
+But OK, now, I want
+to show there exists--
+
+00:35:11.880 --> 00:35:17.060 align:middle line:84%
+I can obtain a k plus first
+point satisfying those two
+
+00:35:17.060 --> 00:35:19.010 align:middle line:90%
+properties.
+
+00:35:19.010 --> 00:35:20.780 align:middle line:84%
+Again, this is just
+formally saying
+
+00:35:20.780 --> 00:35:24.320 align:middle line:84%
+that once I've chosen
+p2, then I can choose
+
+00:35:24.320 --> 00:35:31.480 align:middle line:90%
+a p3 doing this argument again.
+
+00:35:31.480 --> 00:35:35.680 align:middle line:84%
+And it'll satisfy everything
+p2 satisfied with epsilon 1,
+
+00:35:35.680 --> 00:35:37.750 align:middle line:90%
+except now with epsilon 2.
+
+00:35:37.750 --> 00:35:39.860 align:middle line:84%
+But now, I'm just
+making it more formal.
+
+00:35:39.860 --> 00:35:46.460 align:middle line:84%
+So now, again, M is the union
+of all these closed sets, none
+
+00:35:46.460 --> 00:35:49.960 align:middle line:90%
+of which contain an open ball.
+
+00:35:49.960 --> 00:35:59.830 align:middle line:84%
+So since the ball of
+radius pk epsilon k over 3
+
+00:35:59.830 --> 00:36:06.890 align:middle line:84%
+is not contained
+in Ck plus 1, there
+
+00:36:06.890 --> 00:36:15.900 align:middle line:84%
+exists an element pk
+plus 1 not in Ck plus 1.
+
+00:36:15.900 --> 00:36:16.800 align:middle line:90%
+Or I should say--
+
+00:36:16.800 --> 00:36:27.756 align:middle line:90%
+
+
+00:36:27.756 --> 00:36:42.280 align:middle line:84%
+over 3-- such that pk plus
+1 is not in Ck plus 1.
+
+00:36:42.280 --> 00:36:59.950 align:middle line:84%
+So let me-- there's pk
+epsilon k over 3, Ck plus 1.
+
+00:36:59.950 --> 00:37:01.955 align:middle line:90%
+So maybe they're not disjoint.
+
+00:37:01.955 --> 00:37:03.080 align:middle line:90%
+Maybe there's some overlap.
+
+00:37:03.080 --> 00:37:16.890 align:middle line:84%
+But then I can find
+a point pk plus 1
+
+00:37:16.890 --> 00:37:19.050 align:middle line:84%
+in there that's
+not in Ck plus 1.
+
+00:37:19.050 --> 00:37:24.780 align:middle line:90%
+
+
+00:37:24.780 --> 00:37:31.250 align:middle line:84%
+So then there exists
+an epsilon k plus 1,
+
+00:37:31.250 --> 00:37:33.410 align:middle line:84%
+which I can choose
+very small, say smaller
+
+00:37:33.410 --> 00:37:38.400 align:middle line:84%
+than epsilon k
+over 3, such that--
+
+00:37:38.400 --> 00:37:42.800 align:middle line:84%
+again, because Ck plus
+1 is closed, pk plus 1
+
+00:37:42.800 --> 00:37:44.810 align:middle line:90%
+is not in Ck plus 1.
+
+00:37:44.810 --> 00:37:47.900 align:middle line:84%
+So I can find a
+small ball around pk
+
+00:37:47.900 --> 00:37:52.028 align:middle line:90%
+plus 1 disjoint from Ck plus 1--
+
+00:37:52.028 --> 00:38:08.660 align:middle line:84%
+a ball-- we said Ck
+equals the empty set.
+
+00:38:08.660 --> 00:38:15.170 align:middle line:90%
+
+
+00:38:15.170 --> 00:38:18.740 align:middle line:84%
+So then given k
+points, I can then
+
+00:38:18.740 --> 00:38:23.600 align:middle line:84%
+choose a k plus first point
+satisfying these two bullet
+
+00:38:23.600 --> 00:38:25.610 align:middle line:90%
+points here, all right?
+
+00:38:25.610 --> 00:38:28.240 align:middle line:90%
+
+
+00:38:28.240 --> 00:38:54.860 align:middle line:84%
+So by induction, we have found
+a sequence of points, pk,
+
+00:38:54.860 --> 00:38:58.000 align:middle line:90%
+in M such that--
+
+00:38:58.000 --> 00:39:03.210 align:middle line:90%
+and epsilon k.
+
+00:39:03.210 --> 00:39:05.160 align:middle line:90%
+So if you like, k starts at 2.
+
+00:39:05.160 --> 00:39:08.060 align:middle line:90%
+
+
+00:39:08.060 --> 00:39:19.230 align:middle line:84%
+Epsilon k and 0 epsilon
+1 such that for all k,
+
+00:39:19.230 --> 00:39:21.780 align:middle line:84%
+those two bullet points
+hold, such that--
+
+00:39:21.780 --> 00:39:26.380 align:middle line:90%
+
+
+00:39:26.380 --> 00:39:28.470 align:middle line:84%
+which I denoted-- which
+I put a little star by,
+
+00:39:28.470 --> 00:39:30.762 align:middle line:84%
+star [? hold. ?] So I'm
+talking about these two points.
+
+00:39:30.762 --> 00:39:34.800 align:middle line:90%
+
+
+00:39:34.800 --> 00:39:40.615 align:middle line:84%
+So when I say star, I mean
+these two statements here, OK?
+
+00:39:40.615 --> 00:39:57.140 align:middle line:90%
+
+
+00:39:57.140 --> 00:40:04.700 align:middle line:84%
+OK, now, let's show that
+the sequence is Cauchy.
+
+00:40:04.700 --> 00:40:05.630 align:middle line:90%
+So now, I claim--
+
+00:40:05.630 --> 00:40:16.010 align:middle line:90%
+
+
+00:40:16.010 --> 00:40:16.765 align:middle line:90%
+how do we do that?
+
+00:40:16.765 --> 00:40:21.540 align:middle line:90%
+
+
+00:40:21.540 --> 00:40:24.500 align:middle line:90%
+This follows.
+
+00:40:24.500 --> 00:40:27.173 align:middle line:84%
+So I'm not going to write out
+the full epsilon M argument.
+
+00:40:27.173 --> 00:40:29.590 align:middle line:84%
+But I'm just going to write
+down the crucial estimate that
+
+00:40:29.590 --> 00:40:30.340 align:middle line:90%
+proves this.
+
+00:40:30.340 --> 00:40:40.380 align:middle line:84%
+This follows from the
+fact that for all k
+
+00:40:40.380 --> 00:40:47.470 align:middle line:84%
+for all l, If I look at the
+distance between pk and pk
+
+00:40:47.470 --> 00:40:50.290 align:middle line:84%
+plus l because in the
+end, when I look at--
+
+00:40:50.290 --> 00:40:52.060 align:middle line:84%
+if I want to show
+something's Cauchy,
+
+00:40:52.060 --> 00:40:53.950 align:middle line:84%
+I need to take the
+difference of two--
+
+00:40:53.950 --> 00:40:57.470 align:middle line:84%
+or the distance
+between two points.
+
+00:40:57.470 --> 00:41:00.530 align:middle line:84%
+One I can choose as
+the point occurring
+
+00:41:00.530 --> 00:41:03.680 align:middle line:84%
+earlier in the sequence, and
+then one occurring later.
+
+00:41:03.680 --> 00:41:07.700 align:middle line:84%
+Anyways, then by the
+triangle inequality repeated,
+
+00:41:07.700 --> 00:41:10.580 align:middle line:84%
+I can write that this is less
+than or equal to the distance
+
+00:41:10.580 --> 00:41:16.610 align:middle line:84%
+from pk pk plus 1 plus
+the distance from pk
+
+00:41:16.610 --> 00:41:19.100 align:middle line:90%
+plus 1 pk plus l.
+
+00:41:19.100 --> 00:41:22.010 align:middle line:84%
+And now, I could do the
+triangle inequality again.
+
+00:41:22.010 --> 00:41:27.710 align:middle line:84%
+And so I get that this is less
+than or equal to the distance
+
+00:41:27.710 --> 00:41:33.350 align:middle line:84%
+from pk to pk plus 1 plus
+the distance from pk plus 1
+
+00:41:33.350 --> 00:41:41.570 align:middle line:84%
+to pk plus 2 and so on until I
+get to the distance between pk
+
+00:41:41.570 --> 00:41:45.612 align:middle line:90%
+plus l minus 1 and pk plus l.
+
+00:41:45.612 --> 00:41:50.960 align:middle line:90%
+
+
+00:41:50.960 --> 00:41:56.930 align:middle line:84%
+Now, by star, what's
+in yellow, pk plus 1
+
+00:41:56.930 --> 00:42:01.670 align:middle line:84%
+is in the epsilon k over
+3 ball centered at pk.
+
+00:42:01.670 --> 00:42:06.410 align:middle line:84%
+So this is less than
+epsilon k over 3.
+
+00:42:06.410 --> 00:42:12.110 align:middle line:84%
+And the same thing here, less
+than epsilon k plus 1 over 3
+
+00:42:12.110 --> 00:42:20.350 align:middle line:84%
+plus epsilon k plus
+l minus 1 over 3.
+
+00:42:20.350 --> 00:42:24.730 align:middle line:84%
+And now, all of
+those are less than--
+
+00:42:24.730 --> 00:42:27.220 align:middle line:84%
+if you go to the first one,
+it's less than epsilon 1
+
+00:42:27.220 --> 00:42:30.520 align:middle line:90%
+over 3 k minus 1.
+
+00:42:30.520 --> 00:42:37.910 align:middle line:84%
+So then this is less
+than epsilon 1 over 3 k
+
+00:42:37.910 --> 00:42:46.790 align:middle line:84%
+plus epsilon 1 over
+3 k plus l, yeah.
+
+00:42:46.790 --> 00:42:52.190 align:middle line:90%
+
+
+00:42:52.190 --> 00:42:55.610 align:middle line:84%
+And now, I can
+actually sum this up.
+
+00:42:55.610 --> 00:42:59.990 align:middle line:84%
+This is strictly
+less than epsilon 1.
+
+00:42:59.990 --> 00:43:06.260 align:middle line:84%
+And if I sum now from l equals
+k to infinity of 1 over 3 k,
+
+00:43:06.260 --> 00:43:16.950 align:middle line:84%
+this is equal to 1 over epsilon
+1 3 k 1 over 1 minus 1/3,
+
+00:43:16.950 --> 00:43:27.680 align:middle line:84%
+which equals epsilon 1 over
+2 3 to the minus k plus 1.
+
+00:43:27.680 --> 00:43:31.850 align:middle line:84%
+So the distance between
+a point pk and pk plus l
+
+00:43:31.850 --> 00:43:38.210 align:middle line:84%
+is less than some constant
+times 3 to the minus k plus 1.
+
+00:43:38.210 --> 00:43:44.000 align:middle line:84%
+So if k is very large, this is
+very small independent of l.
+
+00:43:44.000 --> 00:43:45.870 align:middle line:90%
+So I shouldn't have used l here.
+
+00:43:45.870 --> 00:43:55.405 align:middle line:84%
+And that's M, M. So this shows
+that the sequence is Cauchy.
+
+00:43:55.405 --> 00:44:05.690 align:middle line:90%
+
+
+00:44:05.690 --> 00:44:14.430 align:middle line:84%
+So since M is complete,
+there exists a p in M such
+
+00:44:14.430 --> 00:44:20.100 align:middle line:84%
+that these elements
+pk converge to p.
+
+00:44:20.100 --> 00:44:24.120 align:middle line:84%
+And now, we're going to show
+this point p does not lie
+
+00:44:24.120 --> 00:44:26.195 align:middle line:90%
+in any of the CJ's.
+
+00:44:26.195 --> 00:44:29.810 align:middle line:90%
+
+
+00:44:29.810 --> 00:44:32.990 align:middle line:84%
+And we'll do it by showing
+it's essentially in all
+
+00:44:32.990 --> 00:44:37.510 align:middle line:90%
+of these balls, pj epsilon j.
+
+00:44:37.510 --> 00:44:42.030 align:middle line:90%
+
+
+00:44:42.030 --> 00:44:44.220 align:middle line:84%
+All right, and it's kind
+a similar computation
+
+00:44:44.220 --> 00:44:45.610 align:middle line:90%
+to what we just did.
+
+00:44:45.610 --> 00:45:02.170 align:middle line:84%
+So now, for all
+k natural number,
+
+00:45:02.170 --> 00:45:07.210 align:middle line:84%
+if you look at the
+distance between pk plus 1,
+
+00:45:07.210 --> 00:45:09.130 align:middle line:90%
+pk plus 1 plus l--
+
+00:45:09.130 --> 00:45:12.390 align:middle line:90%
+
+
+00:45:12.390 --> 00:45:20.210 align:middle line:84%
+again, so if I just go back to
+this computation right here,
+
+00:45:20.210 --> 00:45:26.000 align:middle line:84%
+this, we proved, was less
+than epsilon k plus 1 times 1
+
+00:45:26.000 --> 00:45:31.310 align:middle line:90%
+over 3 k plus 1 plus--
+
+00:45:31.310 --> 00:45:39.070 align:middle line:84%
+or actually, 1 over
+3 plus 1 over 3
+
+00:45:39.070 --> 00:45:45.250 align:middle line:90%
+squared plus 1 over 3 k plus 1--
+
+00:45:45.250 --> 00:45:48.660 align:middle line:90%
+
+
+00:45:48.660 --> 00:45:49.545 align:middle line:90%
+k plus l.
+
+00:45:49.545 --> 00:45:56.850 align:middle line:90%
+
+
+00:45:56.850 --> 00:45:58.755 align:middle line:84%
+Or I'm sorry, I
+think that's just l.
+
+00:45:58.755 --> 00:46:02.440 align:middle line:90%
+
+
+00:46:02.440 --> 00:46:06.710 align:middle line:84%
+And now, this thing is
+less than if I replace it
+
+00:46:06.710 --> 00:46:08.220 align:middle line:90%
+by the infinite sum.
+
+00:46:08.220 --> 00:46:13.970 align:middle line:84%
+So this is less than epsilon k
+plus 1 times the infinite sum
+
+00:46:13.970 --> 00:46:18.380 align:middle line:84%
+again, m equals 0 to
+infinity 3 to the minus
+
+00:46:18.380 --> 00:46:21.785 align:middle line:90%
+m, which equals what?
+
+00:46:21.785 --> 00:46:26.490 align:middle line:90%
+
+
+00:46:26.490 --> 00:46:32.310 align:middle line:84%
+So this is, again, equal to
+epsilon k plus 1 times 3/2.
+
+00:46:32.310 --> 00:46:57.220 align:middle line:90%
+
+
+00:46:57.220 --> 00:47:02.120 align:middle line:84%
+OK, so we've proven that the
+distance between pk plus 1
+
+00:47:02.120 --> 00:47:06.290 align:middle line:84%
+pk plus 1 plus l is
+less than epsilon
+
+00:47:06.290 --> 00:47:11.600 align:middle line:90%
+k plus 1 times 3 over 2.
+
+00:47:11.600 --> 00:47:15.120 align:middle line:90%
+
+
+00:47:15.120 --> 00:47:18.480 align:middle line:84%
+Let me take the limit
+as l goes to infinity.
+
+00:47:18.480 --> 00:47:23.720 align:middle line:90%
+
+
+00:47:23.720 --> 00:47:27.050 align:middle line:84%
+pk plus 1 plus l
+converges to the point p.
+
+00:47:27.050 --> 00:47:33.710 align:middle line:84%
+So I get that the distance
+between pk plus 1 and the point
+
+00:47:33.710 --> 00:47:42.540 align:middle line:84%
+p is less than or equal
+to 3/2 epsilon k plus 1.
+
+00:47:42.540 --> 00:47:49.330 align:middle line:84%
+And remember, epsilon k plus 1
+is less than a third epsilon k.
+
+00:47:49.330 --> 00:47:57.210 align:middle line:84%
+So this is less than 1/2
+epsilon k, all right?
+
+00:47:57.210 --> 00:47:59.460 align:middle line:84%
+And since pk plus
+1-- remember, this
+
+00:47:59.460 --> 00:48:04.800 align:middle line:84%
+is in the ball of
+radius 13 epsilon k.
+
+00:48:04.800 --> 00:48:10.630 align:middle line:84%
+So I get that the
+distance between pk and p
+
+00:48:10.630 --> 00:48:16.350 align:middle line:84%
+is less than or equal to
+the distance between pk
+
+00:48:16.350 --> 00:48:25.240 align:middle line:90%
+and pk plus 1 plus 1 and p.
+
+00:48:25.240 --> 00:48:28.510 align:middle line:84%
+We get this is less than
+or equal to 1/3 epsilon
+
+00:48:28.510 --> 00:48:31.120 align:middle line:90%
+k plus 1/2 epsilon k.
+
+00:48:31.120 --> 00:48:34.510 align:middle line:84%
+And this is less
+than epsilon k, which
+
+00:48:34.510 --> 00:48:46.070 align:middle line:84%
+means that p is in the ball of
+radius pk of radius epsilon k,
+
+00:48:46.070 --> 00:48:52.020 align:middle line:84%
+which by the second
+property up in star--
+
+00:48:52.020 --> 00:48:54.590 align:middle line:84%
+the fact that all these
+balls are disjoint from--
+
+00:48:54.590 --> 00:48:59.750 align:middle line:84%
+each of the balls is disjoint
+from Ck means p is not in Ck.
+
+00:48:59.750 --> 00:49:03.420 align:middle line:90%
+Now, k was arbitrary here.
+
+00:49:03.420 --> 00:49:12.320 align:middle line:84%
+So we conclude that p is
+not in this union, which
+
+00:49:12.320 --> 00:49:15.890 align:middle line:84%
+is equal to M. And
+that's a contradiction.
+
+00:49:15.890 --> 00:49:26.000 align:middle line:90%
+
+
+00:49:26.000 --> 00:49:30.620 align:middle line:84%
+So I mean, I said the
+strategy at the top
+
+00:49:30.620 --> 00:49:34.850 align:middle line:84%
+of the proof, the technical
+argument maybe muddled
+
+00:49:34.850 --> 00:49:35.760 align:middle line:90%
+what was going on.
+
+00:49:35.760 --> 00:49:42.540 align:middle line:84%
+But again, the point
+is you can build--
+
+00:49:42.540 --> 00:49:44.190 align:middle line:84%
+if this conclusion
+does not hold,
+
+00:49:44.190 --> 00:49:49.890 align:middle line:84%
+you can build a sequence which
+has this disjointness property
+
+00:49:49.890 --> 00:49:53.930 align:middle line:84%
+from this collection
+of open sets
+
+00:49:53.930 --> 00:49:56.150 align:middle line:84%
+such that the
+sequence is Cauchy.
+
+00:49:56.150 --> 00:49:58.520 align:middle line:84%
+And because M is a
+complete metric space,
+
+00:49:58.520 --> 00:50:00.530 align:middle line:90%
+you can then extract a limit p.
+
+00:50:00.530 --> 00:50:04.160 align:middle line:84%
+This limit p will have all the
+properties that these pk's had,
+
+00:50:04.160 --> 00:50:07.310 align:middle line:84%
+namely that they're
+not in any of the Ck's.
+
+00:50:07.310 --> 00:50:10.490 align:middle line:84%
+And therefore, this
+point p does not
+
+00:50:10.490 --> 00:50:13.670 align:middle line:84%
+lie in the metric space,
+which is nonsense.
+
+00:50:13.670 --> 00:50:15.260 align:middle line:84%
+So we arrived at
+our contradiction.
+
+00:50:15.260 --> 00:50:19.190 align:middle line:84%
+And therefore, Baire's
+category theorem is proven.
+
+00:50:19.190 --> 00:50:28.320 align:middle line:90%
+
+
+00:50:28.320 --> 00:50:35.300 align:middle line:84%
+OK, so that's Baire
+categories theorem.
+
+00:50:35.300 --> 00:50:38.840 align:middle line:90%
+
+
+00:50:38.840 --> 00:50:41.950 align:middle line:84%
+Let's now use this to prove
+some fundamental results
+
+00:50:41.950 --> 00:50:43.220 align:middle line:90%
+of functional analysis.
+
+00:50:43.220 --> 00:50:46.570 align:middle line:84%
+So the first result
+we'll prove is
+
+00:50:46.570 --> 00:50:56.430 align:middle line:84%
+what's called the
+uniform boundedness
+
+00:50:56.430 --> 00:51:03.220 align:middle line:84%
+theorem, which says that if
+you have a sequence of linear--
+
+00:51:03.220 --> 00:51:07.460 align:middle line:84%
+bounded linear operators
+on a Banach space,
+
+00:51:07.460 --> 00:51:09.560 align:middle line:84%
+then pointwise
+boundedness implies
+
+00:51:09.560 --> 00:51:15.910 align:middle line:84%
+uniform mindedness or
+uniform boundedness
+
+00:51:15.910 --> 00:51:17.350 align:middle line:90%
+in the operator norm.
+
+00:51:17.350 --> 00:51:23.750 align:middle line:90%
+So let B be a Banach space.
+
+00:51:23.750 --> 00:51:30.080 align:middle line:90%
+
+
+00:51:30.080 --> 00:51:40.500 align:middle line:84%
+And let Tn be a sequence of
+bounded linear operators, which
+
+00:51:40.500 --> 00:51:47.980 align:middle line:84%
+we denoted last time
+by this script B,
+
+00:51:47.980 --> 00:51:51.580 align:middle line:84%
+to some other normed space,
+V. So I didn't write that,
+
+00:51:51.580 --> 00:51:54.805 align:middle line:90%
+but V is a normed space.
+
+00:51:54.805 --> 00:51:58.030 align:middle line:90%
+
+
+00:51:58.030 --> 00:52:10.920 align:middle line:84%
+If for all b in capital B, sup
+n of Tn v-norm is less than
+
+00:52:10.920 --> 00:52:16.500 align:middle line:84%
+infinity-- so if I assume that
+this sequence is pointwise
+
+00:52:16.500 --> 00:52:18.350 align:middle line:90%
+bounded--
+
+00:52:18.350 --> 00:52:24.980 align:middle line:84%
+pointwise bounded,
+then I can conclude
+
+00:52:24.980 --> 00:52:27.170 align:middle line:84%
+that they're uniformly
+bounded, namely
+
+00:52:27.170 --> 00:52:33.675 align:middle line:84%
+the sup of the operator
+norms are bounded.
+
+00:52:33.675 --> 00:52:43.750 align:middle line:90%
+
+
+00:52:43.750 --> 00:52:45.800 align:middle line:84%
+So we're going to use the
+Baire category theorem.
+
+00:52:45.800 --> 00:52:49.330 align:middle line:84%
+So we're going to
+write the Banach space
+
+00:52:49.330 --> 00:52:52.690 align:middle line:90%
+B as a union of closed subsets.
+
+00:52:52.690 --> 00:52:54.700 align:middle line:84%
+What will be these
+closed subsets?
+
+00:52:54.700 --> 00:53:00.370 align:middle line:84%
+Remember, we're trying to find
+a uniform bound on the Tn.
+
+00:53:00.370 --> 00:53:09.460 align:middle line:84%
+So just playing around, so let's
+define the subset of B to Ck.
+
+00:53:09.460 --> 00:53:17.810 align:middle line:84%
+This is a set of all elements
+b in B such that the norm of B
+
+00:53:17.810 --> 00:53:27.320 align:middle line:84%
+is less than or equal
+to 1 and sup n Tn of B
+
+00:53:27.320 --> 00:53:28.595 align:middle line:90%
+is less than or equal to k.
+
+00:53:28.595 --> 00:53:37.830 align:middle line:90%
+
+
+00:53:37.830 --> 00:53:42.495 align:middle line:84%
+All right, so first
+off, these are closed.
+
+00:53:42.495 --> 00:53:47.790 align:middle line:90%
+
+
+00:53:47.790 --> 00:53:51.780 align:middle line:84%
+So I should say, what is k?
+k here is a natural number.
+
+00:53:51.780 --> 00:53:52.860 align:middle line:90%
+Ck is closed.
+
+00:53:52.860 --> 00:53:53.620 align:middle line:90%
+Why is this?
+
+00:53:53.620 --> 00:53:56.640 align:middle line:84%
+Well, we need to show that
+a sequence converging--
+
+00:53:56.640 --> 00:53:58.950 align:middle line:84%
+a sequence of elements
+from Ck that converges
+
+00:53:58.950 --> 00:54:00.990 align:middle line:90%
+converges to an element of Ck.
+
+00:54:00.990 --> 00:54:09.330 align:middle line:84%
+So if Bn-- this is a
+sequence of elements in Ck--
+
+00:54:09.330 --> 00:54:18.710 align:middle line:84%
+and Bn converges to B, then the
+norm of b is equal to the limit
+
+00:54:18.710 --> 00:54:23.840 align:middle line:84%
+as n goes to infinity
+of the norm of bn.
+
+00:54:23.840 --> 00:54:26.930 align:middle line:84%
+And each of these is
+less than or equal to 1.
+
+00:54:26.930 --> 00:54:29.900 align:middle line:84%
+So the limit has to be
+less than or equal to 1.
+
+00:54:29.900 --> 00:54:36.140 align:middle line:90%
+
+
+00:54:36.140 --> 00:54:41.380 align:middle line:90%
+And so I shouldn't--
+
+00:54:41.380 --> 00:54:43.810 align:middle line:90%
+maybe I'll use AI a--
+
+00:54:43.810 --> 00:54:45.000 align:middle line:90%
+I have the Tn's.
+
+00:54:45.000 --> 00:54:45.900 align:middle line:90%
+I have the Bn's.
+
+00:54:45.900 --> 00:54:52.980 align:middle line:84%
+So let me use M. And for
+all M in natural number,
+
+00:54:52.980 --> 00:54:58.890 align:middle line:84%
+Tm applied to be and normed,
+this is equal to the limit
+
+00:54:58.890 --> 00:55:05.310 align:middle line:84%
+as m goes to infinity
+of Tm Bn in norm
+
+00:55:05.310 --> 00:55:07.920 align:middle line:84%
+because these are
+bounded linear operators
+
+00:55:07.920 --> 00:55:10.910 align:middle line:90%
+and therefore continuous.
+
+00:55:10.910 --> 00:55:24.510 align:middle line:90%
+
+
+00:55:24.510 --> 00:55:29.770 align:middle line:84%
+OK, so Tm of B is
+equal to the limit
+
+00:55:29.770 --> 00:55:32.140 align:middle line:84%
+as n goes to
+infinity of Tm of Bn.
+
+00:55:32.140 --> 00:55:34.870 align:middle line:90%
+
+
+00:55:34.870 --> 00:55:41.130 align:middle line:84%
+And now, the norm of
+Tm of Bn is always--
+
+00:55:41.130 --> 00:55:43.950 align:middle line:84%
+well, this is always
+less than or equal to k
+
+00:55:43.950 --> 00:55:48.975 align:middle line:84%
+because the Bn's are in Ck
+and sup of all these guys
+
+00:55:48.975 --> 00:55:50.100 align:middle line:90%
+is less than or equal to k.
+
+00:55:50.100 --> 00:55:54.495 align:middle line:84%
+So that's also less
+than or equal to k.
+
+00:55:54.495 --> 00:55:59.290 align:middle line:90%
+
+
+00:55:59.290 --> 00:56:07.840 align:middle line:84%
+Thus, B is in Ck, which
+implies Ck is closed.
+
+00:56:07.840 --> 00:56:12.520 align:middle line:90%
+
+
+00:56:12.520 --> 00:56:15.550 align:middle line:90%
+Now, the closed ball--
+
+00:56:15.550 --> 00:56:18.340 align:middle line:84%
+or I shouldn't say-- it's not
+the closure of the open ball,
+
+00:56:18.340 --> 00:56:21.790 align:middle line:84%
+but the closed ball,
+b in capital B, such
+
+00:56:21.790 --> 00:56:25.420 align:middle line:84%
+that b is less
+than or equal to 1.
+
+00:56:25.420 --> 00:56:31.690 align:middle line:84%
+This is equal to the
+union over all k of Ck.
+
+00:56:31.690 --> 00:56:33.370 align:middle line:90%
+Why?
+
+00:56:33.370 --> 00:56:36.670 align:middle line:84%
+So first off, each of these is
+contained in this closed ball.
+
+00:56:36.670 --> 00:56:41.470 align:middle line:84%
+But I'm assuming by
+star that no matter what
+
+00:56:41.470 --> 00:56:46.090 align:middle line:84%
+b is in the Banach space,
+sup over n of these
+
+00:56:46.090 --> 00:56:47.450 align:middle line:90%
+is less than infinity.
+
+00:56:47.450 --> 00:56:51.760 align:middle line:84%
+So there's always some
+integer k given a b--
+
+00:56:51.760 --> 00:56:54.640 align:middle line:84%
+so given a certain
+b in this set,
+
+00:56:54.640 --> 00:56:58.780 align:middle line:84%
+I can always find a large
+enough integer such that this
+
+00:56:58.780 --> 00:57:01.820 align:middle line:90%
+is less than that integer.
+
+00:57:01.820 --> 00:57:03.490 align:middle line:90%
+So it has to--
+
+00:57:03.490 --> 00:57:06.760 align:middle line:84%
+every element in here has to
+lie in one of these sets C sub k
+
+00:57:06.760 --> 00:57:08.695 align:middle line:90%
+So this is equal to the union.
+
+00:57:08.695 --> 00:57:11.640 align:middle line:90%
+
+
+00:57:11.640 --> 00:57:17.390 align:middle line:84%
+So this is a
+complete metric space
+
+00:57:17.390 --> 00:57:20.090 align:middle line:84%
+because it's a
+closed subset of M.
+
+00:57:20.090 --> 00:57:31.360 align:middle line:84%
+So this is a complete
+metric space written
+
+00:57:31.360 --> 00:57:35.086 align:middle line:90%
+as the union of a--
+
+00:57:35.086 --> 00:57:37.150 align:middle line:90%
+a union of closed subsets.
+
+00:57:37.150 --> 00:57:50.780 align:middle line:84%
+So by Baire's
+theorem, there exists
+
+00:57:50.780 --> 00:58:10.500 align:middle line:84%
+one of these sets containing
+an open ball of the form B, B0,
+
+00:58:10.500 --> 00:58:11.190 align:middle line:90%
+delta 0.
+
+00:58:11.190 --> 00:58:14.870 align:middle line:90%
+
+
+00:58:14.870 --> 00:58:18.577 align:middle line:84%
+So one of these Ck's
+contains an open ball.
+
+00:58:18.577 --> 00:58:19.660 align:middle line:90%
+Now, we're going to show--
+
+00:58:19.660 --> 00:58:25.450 align:middle line:84%
+we're going to use this k
+to derive a uniform bound.
+
+00:58:25.450 --> 00:58:32.155 align:middle line:90%
+So if b is in B and--
+
+00:58:32.155 --> 00:58:32.655 align:middle line:90%
+let's see.
+
+00:58:32.655 --> 00:58:39.680 align:middle line:90%
+
+
+00:58:39.680 --> 00:58:41.060 align:middle line:90%
+So let's write it this way.
+
+00:58:41.060 --> 00:58:45.450 align:middle line:90%
+
+
+00:58:45.450 --> 00:58:53.720 align:middle line:84%
+If b is in the open ball of
+radius delta 0 centered at 0,
+
+00:58:53.720 --> 00:58:55.820 align:middle line:90%
+so this means i.e.
+
+00:58:55.820 --> 00:58:59.270 align:middle line:84%
+the norm of b is
+less than delta 0.
+
+00:58:59.270 --> 00:59:02.370 align:middle line:90%
+
+
+00:59:02.370 --> 00:59:11.870 align:middle line:84%
+Then b0 plus b is in this
+open ball centered at B0.
+
+00:59:11.870 --> 00:59:14.500 align:middle line:90%
+
+
+00:59:14.500 --> 00:59:29.650 align:middle line:84%
+And therefore, sup n of Tn of
+b0 plus b norm is less than
+
+00:59:29.650 --> 00:59:31.540 align:middle line:90%
+or equal to k.
+
+00:59:31.540 --> 00:59:34.660 align:middle line:90%
+So this ball is contained in Ck.
+
+00:59:34.660 --> 00:59:37.060 align:middle line:84%
+And therefore, if I
+take the sup over n
+
+00:59:37.060 --> 00:59:38.840 align:middle line:84%
+of T sub n applied
+to this thing,
+
+00:59:38.840 --> 00:59:40.300 align:middle line:90%
+this is less than or equal to k.
+
+00:59:40.300 --> 00:59:49.560 align:middle line:90%
+
+
+00:59:49.560 --> 00:59:54.720 align:middle line:84%
+But then I conclude
+that sup over n of Tn
+
+00:59:54.720 --> 00:59:59.890 align:middle line:84%
+applied to B, which is less
+than or equal to sup n--
+
+00:59:59.890 --> 01:00:02.200 align:middle line:84%
+so I'm going to add
+and subtract B0.
+
+01:00:02.200 --> 01:00:06.850 align:middle line:90%
+
+
+01:00:06.850 --> 01:00:19.040 align:middle line:84%
+So let me actually write this
+as sup of Tn B0 plus Tn B0
+
+01:00:19.040 --> 01:00:24.080 align:middle line:84%
+plus B. This is less
+than or equal to
+
+01:00:24.080 --> 01:00:26.420 align:middle line:90%
+by the triangle inequality.
+
+01:00:26.420 --> 01:00:28.310 align:middle line:84%
+And then carrying
+the sup through,
+
+01:00:28.310 --> 01:00:40.880 align:middle line:84%
+this is less than or equal to
+sup n Tn B0 plus sup n Tn B0
+
+01:00:40.880 --> 01:00:45.160 align:middle line:90%
+plus B.
+
+01:00:45.160 --> 01:00:51.610 align:middle line:84%
+And so B0 is certainly in this
+ball, which is contained in Ck.
+
+01:00:51.610 --> 01:00:59.210 align:middle line:84%
+So this is less
+than or equal to k.
+
+01:00:59.210 --> 01:01:04.070 align:middle line:84%
+And this is still in
+that ball of radius
+
+01:01:04.070 --> 01:01:05.990 align:middle line:90%
+delta 0 centered at B0.
+
+01:01:05.990 --> 01:01:08.180 align:middle line:90%
+So it lies in CK.
+
+01:01:08.180 --> 01:01:10.100 align:middle line:84%
+And therefore, this
+sup is also less than
+
+01:01:10.100 --> 01:01:11.960 align:middle line:90%
+or equal to k equals 2k.
+
+01:01:11.960 --> 01:01:17.450 align:middle line:84%
+So I've shown that if I take
+any element in the open ball
+
+01:01:17.450 --> 01:01:28.150 align:middle line:84%
+of radius delta 0, then the sup
+over n of Tn of B is less than
+
+01:01:28.150 --> 01:01:33.070 align:middle line:90%
+or equal to 2k, all right?
+
+01:01:33.070 --> 01:01:35.170 align:middle line:84%
+And now, it's just a
+simple rescaling argument
+
+01:01:35.170 --> 01:01:38.600 align:middle line:84%
+to show that the sup of
+the norms are now bounded.
+
+01:01:38.600 --> 01:01:45.970 align:middle line:90%
+So suppose norm of B equals 1.
+
+01:01:45.970 --> 01:01:59.350 align:middle line:84%
+Then the norm of Tn of
+delta 0 over 2 applied to B
+
+01:01:59.350 --> 01:02:02.610 align:middle line:90%
+is less than or equal to--
+
+01:02:02.610 --> 01:02:07.320 align:middle line:84%
+so for all n certainly less
+than or equal to the sup over n
+
+01:02:07.320 --> 01:02:10.110 align:middle line:84%
+of all of these, which is
+less than or equal to 2k
+
+01:02:10.110 --> 01:02:13.110 align:middle line:84%
+because this is an
+element with norm delta
+
+01:02:13.110 --> 01:02:15.270 align:middle line:84%
+0 over 2, which is
+less than delta 0.
+
+01:02:15.270 --> 01:02:19.440 align:middle line:84%
+So this is less than or
+equal to 2k, which implies--
+
+01:02:19.440 --> 01:02:21.120 align:middle line:90%
+so, again Tn is linear.
+
+01:02:21.120 --> 01:02:31.820 align:middle line:90%
+So I should have reversed this.
+
+01:02:31.820 --> 01:02:35.512 align:middle line:90%
+
+
+01:02:35.512 --> 01:02:37.130 align:middle line:90%
+Let M be a natural number.
+
+01:02:37.130 --> 01:02:40.480 align:middle line:90%
+
+
+01:02:40.480 --> 01:02:44.230 align:middle line:90%
+Let B equal to 1.
+
+01:02:44.230 --> 01:02:46.380 align:middle line:90%
+Yeah, OK.
+
+01:02:46.380 --> 01:02:48.810 align:middle line:84%
+So then Tn applied
+to B is less than
+
+01:02:48.810 --> 01:02:52.920 align:middle line:90%
+or equal to 4k over delta 0.
+
+01:02:52.920 --> 01:02:58.950 align:middle line:84%
+Now, this holds for all
+B with length equal to 1.
+
+01:02:58.950 --> 01:03:00.880 align:middle line:84%
+And therefore,
+the operator norm,
+
+01:03:00.880 --> 01:03:04.230 align:middle line:84%
+which is the sup over all B,
+would normally equal to 1,
+
+01:03:04.230 --> 01:03:08.430 align:middle line:84%
+is less than or equal
+to 4k over delta 0.
+
+01:03:08.430 --> 01:03:10.080 align:middle line:90%
+This holds for all n.
+
+01:03:10.080 --> 01:03:15.120 align:middle line:84%
+And therefore, the sup
+over n of the operator norm
+
+01:03:15.120 --> 01:03:19.740 align:middle line:84%
+is less than or equal
+to 4k over delta 0,
+
+01:03:19.740 --> 01:03:23.115 align:middle line:84%
+and therefore giving
+us the uniform bound.
+
+01:03:23.115 --> 01:03:37.360 align:middle line:90%
+
+
+01:03:37.360 --> 01:03:38.320 align:middle line:90%
+I have time for this?
+
+01:03:38.320 --> 01:03:46.030 align:middle line:90%
+
+
+01:03:46.030 --> 01:03:50.650 align:middle line:84%
+OK, I don't think I have time
+for the entire proof of what's
+
+01:03:50.650 --> 01:03:52.530 align:middle line:90%
+to come.
+
+01:03:52.530 --> 01:03:55.720 align:middle line:84%
+So I think we'll just
+stop there for now.
+
+01:03:55.720 --> 01:04:02.000 align:middle line:90%

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Functional Analysis &amp; Operator Theory &#8212; NghiaHoang</title>
+    <title>Functional Analysis &amp; Measure Theory &#8212; NghiaHoang</title>
   
   
   
@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/functional_analysis/intro';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Measure Theory &amp; Lebesgue Integration" href="../measure_theory/intro.html" />
+    <link rel="next" title="Basic Banach Space Theory" href="basic_banach_spaces.html" />
     <link rel="prev" title="Combinatorial Optimization &amp; Scheduling" href="../optimization/combinatorial.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -227,17 +227,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Analysis &amp; Measure Theory</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Functional Analysis &amp; Operator Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../measure_theory/intro.html">Measure Theory &amp; Lebesgue Integration</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Functional Analysis &amp; Measure Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_banach_spaces.html">Basic Banach Space Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bounded_linear_operators.html">Bounded Linear Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quotient_spaces_baire_category.html">Quotient Spaces &amp; Baire Category Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open_mapping_closed_graph.html">Open Mapping &amp; Closed Graph Theorems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zorns_lemma_hahn_banach.html">Zorn’s Lemma &amp; Hahn-Banach Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="double_dual_outer_measure.html">The Double Dual &amp; Outer Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/sigma_algebras.html">Sigma Algebras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_subsets_measure.html">Lebesgue Measurable Subsets and Measure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/lebesgue_measurable_functions.html">Lebesgue Measurable Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measure_theory/simple_functions.html">Simple Functions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topology</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/intro.html">Introduction to Topology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topology/spaces.html">Topological Spaces &amp; Metric Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topology/manifolds.html">Manifolds &amp; Dimensionality Reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topology/tda.html">Topological Data Analysis (TDA) &amp; Persistent Homology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topology/advanced_tda.html">Advanced Topological Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../topology/surfaces.html">Topological Surfaces &amp; Singularities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topology/applications.html">Interdisciplinary Applications of Topology</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Approximation Theory</span></p>
@@ -403,7 +412,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functional Analysis & Operator Theory</h1>
+    <h1>Functional Analysis & Measure Theory</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -413,35 +422,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-basic-banach-space-theory">Lecture 1: Basic Banach Space Theory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normed-vector-spaces">Normed Vector Spaces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#completeness-and-banach-spaces">Completeness and Banach Spaces</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-bounded-linear-operators">Lecture 2: Bounded Linear Operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundedness-and-continuity">Boundedness and Continuity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-operator-norm">The Operator Norm</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-quotient-spaces-the-baire-category-theorem">Lecture 3: Quotient Spaces &amp; The Baire Category Theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotient-spaces">Quotient Spaces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category-theorem">Baire Category Theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-boundedness-principle-banach-steinhaus-theorem">Uniform Boundedness Principle (Banach-Steinhaus Theorem)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-4-the-open-mapping-closed-graph-theorems">Lecture 4: The Open Mapping &amp; Closed Graph Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-open-mapping-theorem">The Open Mapping Theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-closed-graph-theorem">The Closed Graph Theorem</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-5-zorn-s-lemma-the-hahn-banach-theorem">Lecture 5: Zorn’s Lemma &amp; The Hahn-Banach Theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zorn-s-lemma">Zorn’s Lemma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hahn-banach-extension-theorem">The Hahn-Banach Extension Theorem</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-part-1-the-double-dual-reflexivity">Lecture 6 (Part 1): The Double Dual &amp; Reflexivity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dual-space-x">The Dual Space (<span class="math notranslate nohighlight">\(X^*\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-double-dual-x">The Double Dual (<span class="math notranslate nohighlight">\(X^{**}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curriculum">Module Curriculum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-machine-learning-deep-learning-ml-dl">Connection to Machine Learning &amp; Deep Learning (ML/DL)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-kernel-hilbert-spaces-rkhs-kernel-methods">1. Reproducing Kernel Hilbert Spaces (RKHS) &amp; Kernel Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-approximation-theorem-hahn-banach-application">2. Universal Approximation Theorem (Hahn-Banach Application)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-densities-radon-nikodym-expectation-lebesgue-integration">3. Probability Densities (Radon-Nikodym) &amp; Expectation (Lebesgue Integration)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-lebesgue-dominated-convergence-dct">4. Gradient Descent &amp; Lebesgue Dominated Convergence (DCT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#almost-everywhere-a-e-differentiability-of-relu">5. “Almost Everywhere” (a.e.) Differentiability of ReLU</a></li>
 </ul>
 </li>
 </ul>
@@ -455,166 +442,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functional-analysis-operator-theory">
-<h1>Functional Analysis &amp; Operator Theory<a class="headerlink" href="#functional-analysis-operator-theory" title="Permalink to this heading">#</a></h1>
-<p>Functional Analysis is the branch of mathematics that generalizes linear algebra from finite-dimensional vector spaces to infinite-dimensional spaces. It provides the rigorous mathematical framework for quantum mechanics, differential equations, and advanced machine learning models (such as kernel methods, Support Vector Machines, and Reproducing Kernel Hilbert Spaces).</p>
-<hr class="docutils" />
-<section id="lecture-1-basic-banach-space-theory">
-<h2>Lecture 1: Basic Banach Space Theory<a class="headerlink" href="#lecture-1-basic-banach-space-theory" title="Permalink to this heading">#</a></h2>
-<section id="normed-vector-spaces">
-<h3>Normed Vector Spaces<a class="headerlink" href="#normed-vector-spaces" title="Permalink to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(K\)</span> (where <span class="math notranslate nohighlight">\(K = \mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>). A <strong>norm</strong> on <span class="math notranslate nohighlight">\(X\)</span> is a function <span class="math notranslate nohighlight">\(\|\cdot\|: X \to \mathbb{R}\)</span> satisfying three axioms for all <span class="math notranslate nohighlight">\(x, y \in X\)</span> and <span class="math notranslate nohighlight">\(\alpha \in K\)</span>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="functional-analysis-measure-theory">
+<h1>Functional Analysis &amp; Measure Theory<a class="headerlink" href="#functional-analysis-measure-theory" title="Permalink to this heading">#</a></h1>
+<p>Functional Analysis generalizes linear algebra to infinite-dimensional spaces, while Measure Theory establishes a rigorous generalization of length, area, and volume. Together, they form the mathematical backbone of modern probability theory, kernel methods, optimization, and generative modeling in machine learning.</p>
+<p>This module is organized as a unified 10-lecture course:</p>
+<section id="module-curriculum">
+<h2>Module Curriculum<a class="headerlink" href="#module-curriculum" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><strong>Positive Definiteness</strong>: <span class="math notranslate nohighlight">\(\|x\| \ge 0\)</span>, and <span class="math notranslate nohighlight">\(\|x\| = 0\)</span> if and only if <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
-<li><p><strong>Absolute Homogeneity</strong>: <span class="math notranslate nohighlight">\(\|\alpha x\| = |\alpha| \|x\|\)</span>.</p></li>
-<li><p><strong>Triangle Inequality</strong>: <span class="math notranslate nohighlight">\(\|x + y\| \le \|x\| + \|y\|\)</span>.</p></li>
+<li><p><strong><a class="reference internal" href="basic_banach_spaces.html"><span class="doc">Basic Banach Space Theory</span></a></strong>
+Introduces normed spaces, convergence, Cauchy sequences, completeness, and Banach spaces.</p></li>
+<li><p><strong><a class="reference internal" href="bounded_linear_operators.html"><span class="doc">Bounded Linear Operators</span></a></strong>
+Discusses linear operators, boundedness, continuity, and the operator norm.</p></li>
+<li><p><strong><a class="reference internal" href="quotient_spaces_baire_category.html"><span class="doc">Quotient Spaces &amp; Baire Category Theorem</span></a></strong>
+Covers quotient normed spaces, topological completeness, and the Uniform Boundedness Principle.</p></li>
+<li><p><strong><a class="reference internal" href="open_mapping_closed_graph.html"><span class="doc">Open Mapping &amp; Closed Graph Theorems</span></a></strong>
+Details the open mapping theorem, bounded inverse theorem, and closed graph theorem.</p></li>
+<li><p><strong><a class="reference internal" href="zorns_lemma_hahn_banach.html"><span class="doc">Zorn’s Lemma &amp; Hahn-Banach Theorem</span></a></strong>
+Explores partial orders, Zorn’s Lemma, and the Hahn-Banach extension theorem.</p></li>
+<li><p><strong><a class="reference internal" href="double_dual_outer_measure.html"><span class="doc">The Double Dual &amp; Outer Measure</span></a></strong>
+Bridges functional dual spaces and the Lebesgue outer measure of real subsets.</p></li>
+<li><p><strong><a class="reference internal" href="../measure_theory/sigma_algebras.html"><span class="doc">Sigma Algebras</span></a></strong>
+Covers <span class="math notranslate nohighlight">\(\sigma\)</span>-algebras, Borel sets, and the prevention of measure paradoxes.</p></li>
+<li><p><strong><a class="reference internal" href="../measure_theory/lebesgue_measurable_subsets_measure.html"><span class="doc">Lebesgue Measurable Subsets and Measure</span></a></strong>
+Explores Carathéodory’s slicing condition, the Lebesgue measure, and complete null spaces.</p></li>
+<li><p><strong><a class="reference internal" href="../measure_theory/lebesgue_measurable_functions.html"><span class="doc">Lebesgue Measurable Functions</span></a></strong>
+Defines measurable functions, pointwise operations, and closure properties.</p></li>
+<li><p><strong><a class="reference internal" href="../measure_theory/simple_functions.html"><span class="doc">Simple Functions</span></a></strong>
+Covers step-like simple functions and constructs the Lebesgue integral.</p></li>
 </ol>
-<p>A vector space equipped with a norm is called a <strong>normed vector space</strong> <span class="math notranslate nohighlight">\((X, \|\cdot\|)\)</span>.</p>
 </section>
-<section id="completeness-and-banach-spaces">
-<h3>Completeness and Banach Spaces<a class="headerlink" href="#completeness-and-banach-spaces" title="Permalink to this heading">#</a></h3>
-<p>A sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> in a normed space <span class="math notranslate nohighlight">\(X\)</span> is a <strong>Cauchy sequence</strong> if for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists an integer <span class="math notranslate nohighlight">\(N\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\|x_n - x_m\| &lt; \epsilon \quad \text{for all } n, m \ge N\]</div>
-<p>A normed space <span class="math notranslate nohighlight">\(X\)</span> is <strong>complete</strong> if every Cauchy sequence in <span class="math notranslate nohighlight">\(X\)</span> converges to a limit that also lies within <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<hr class="docutils" />
+<section id="connection-to-machine-learning-deep-learning-ml-dl">
+<h2>Connection to Machine Learning &amp; Deep Learning (ML/DL)<a class="headerlink" href="#connection-to-machine-learning-deep-learning-ml-dl" title="Permalink to this heading">#</a></h2>
+<p>While you will rarely need to compute a Lebesgue integral or prove Banach space operators by hand in day-to-day ML engineering, <strong>almost all theoretical foundations of ML and DL are built upon this mathematics</strong>.</p>
+<section id="reproducing-kernel-hilbert-spaces-rkhs-kernel-methods">
+<h3>1. Reproducing Kernel Hilbert Spaces (RKHS) &amp; Kernel Methods<a class="headerlink" href="#reproducing-kernel-hilbert-spaces-rkhs-kernel-methods" title="Permalink to this heading">#</a></h3>
+<p>In models like Support Vector Machines (SVMs), Gaussian Processes (GPs), and Kernel PCA, we analyze functions as vectors in an infinite-dimensional feature space.</p>
 <ul class="simple">
-<li><p><strong>Banach Space</strong>: A complete normed vector space is called a <strong>Banach space</strong>.</p></li>
-<li><p><strong>Examples</strong>:</p>
+<li><p><strong>Hilbert Space (<span class="math notranslate nohighlight">\(H\)</span>):</strong> A complete vector space with an inner product.</p></li>
+<li><p><strong>Riesz Representation Theorem:</strong> For any bounded linear evaluation functional <span class="math notranslate nohighlight">\(L_x(f) = f(x)\)</span>, there exists a unique function <span class="math notranslate nohighlight">\(k_x \in H\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \langle f, k_x \rangle_H\)</span>. This underpins the <strong>Kernel Trick</strong>: <span class="math notranslate nohighlight">\(k(x, y) = \langle k_x, k_y \rangle_H\)</span>.</p></li>
+<li><p><strong>The Representer Theorem:</strong> Proves that the minimizer of any regularized empirical risk function over an infinite-dimensional RKHS lies in a finite-dimensional span of kernel evaluations: <span class="math notranslate nohighlight">\(f^*(x) = \sum_{i=1}^N \alpha_i k(x_i, x)\)</span>, making optimization computationally feasible.</p></li>
+</ul>
+</section>
+<section id="universal-approximation-theorem-hahn-banach-application">
+<h3>2. Universal Approximation Theorem (Hahn-Banach Application)<a class="headerlink" href="#universal-approximation-theorem-hahn-banach-application" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Cybenko’s Proof (1989):</strong> Proves that single-hidden-layer neural networks can approximate any continuous function on a compact subset of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p></li>
+<li><p>The proof uses the <strong>Hahn-Banach Extension Theorem</strong> to show that if the span of neural network functions were not dense in the Banach space of continuous functions <span class="math notranslate nohighlight">\(C(K)\)</span> (equipped with the supremum norm), a non-zero linear functional would vanish on all network outputs. Cybenko proved no such non-zero functional exists, concluding that the network functions are indeed dense in <span class="math notranslate nohighlight">\(C(K)\)</span>.</p></li>
+</ul>
+</section>
+<section id="probability-densities-radon-nikodym-expectation-lebesgue-integration">
+<h3>3. Probability Densities (Radon-Nikodym) &amp; Expectation (Lebesgue Integration)<a class="headerlink" href="#probability-densities-radon-nikodym-expectation-lebesgue-integration" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p><strong>Finite-Dimensional</strong>: <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathbb{C}^n\)</span> are complete under any norm.</p></li>
-<li><p><strong>Sequence Spaces</strong>: <span class="math notranslate nohighlight">\(l^p\)</span> spaces (the set of sequences whose <span class="math notranslate nohighlight">\(p\)</span>-th power sums are finite) are Banach spaces under the norm <span class="math notranslate nohighlight">\(\|x\|_p = (\sum |x_i|^p)^{1/p}\)</span>.</p></li>
-<li><p><strong>Continuous Functions</strong>: <span class="math notranslate nohighlight">\(C([a,b])\)</span>, the space of continuous functions on an interval, is a Banach space under the supremum norm <span class="math notranslate nohighlight">\(\|f\|_\infty = \sup_{t \in [a,b]} |f(t)|\)</span>.</p></li>
-</ul>
+<li><p><strong>Radon-Nikodym Theorem:</strong> A probability density function (PDF) <span class="math notranslate nohighlight">\(p(x)\)</span> is defined as the Radon-Nikodym derivative of a probability measure <span class="math notranslate nohighlight">\(P\)</span> with respect to the Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span>: <span class="math notranslate nohighlight">\(p = \frac{dP}{d\lambda}\)</span>. This is only possible because the probability measure is absolutely continuous with respect to the Lebesgue measure.</p></li>
+<li><p><strong>Lebesgue Integral:</strong> Expectation is defined via the Lebesgue integral:</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{E}[X] = \int_\Omega X \, dP\]</div>
+<p>This unifies discrete and continuous variables under a single, rigorous notation, guaranteeing expectation limits exist and behave predictably.</p>
 </li>
 </ul>
 </section>
-</section>
-<hr class="docutils" />
-<section id="lecture-2-bounded-linear-operators">
-<h2>Lecture 2: Bounded Linear Operators<a class="headerlink" href="#lecture-2-bounded-linear-operators" title="Permalink to this heading">#</a></h2>
-<p>A function <span class="math notranslate nohighlight">\(T: X \to Y\)</span> between two normed vector spaces is a <strong>linear operator</strong> if <span class="math notranslate nohighlight">\(T(\alpha x + \beta y) = \alpha Tx + \beta Ty\)</span> for all <span class="math notranslate nohighlight">\(x, y \in X\)</span> and scalars <span class="math notranslate nohighlight">\(\alpha, \beta\)</span>.</p>
-<section id="boundedness-and-continuity">
-<h3>Boundedness and Continuity<a class="headerlink" href="#boundedness-and-continuity" title="Permalink to this heading">#</a></h3>
-<p>A linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is <strong>bounded</strong> if there exists a constant <span class="math notranslate nohighlight">\(M \ge 0\)</span> such that:</p>
+<section id="gradient-descent-lebesgue-dominated-convergence-dct">
+<h3>4. Gradient Descent &amp; Lebesgue Dominated Convergence (DCT)<a class="headerlink" href="#gradient-descent-lebesgue-dominated-convergence-dct" title="Permalink to this heading">#</a></h3>
+<p>During neural network training, we swap the order of differentiation (gradient) and integration (expectation):</p>
 <div class="math notranslate nohighlight">
-\[\|Tx\|_Y \le M \|x\|_X \quad \text{for all } x \in X\]</div>
+\[\nabla_\theta \mathbb{E}[L(x, \theta)] = \nabla_\theta \int L(x, \theta) \, dp(x) = \int \nabla_\theta L(x, \theta) \, dp(x)\]</div>
+<p>The <strong>Lebesgue Dominated Convergence Theorem (DCT)</strong> provides the mathematical justification for this swap. It is the core assumption behind <strong>Backpropagation</strong>, the <strong>Reparameterization Trick</strong> in VAEs, and <strong>Policy Gradients</strong> in Reinforcement Learning.</p>
+</section>
+<section id="almost-everywhere-a-e-differentiability-of-relu">
+<h3>5. “Almost Everywhere” (a.e.) Differentiability of ReLU<a class="headerlink" href="#almost-everywhere-a-e-differentiability-of-relu" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Theorem</strong>: For a linear operator <span class="math notranslate nohighlight">\(T\)</span>, the following statements are equivalent:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is continuous at <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is continuous everywhere on <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T\)</span> is bounded.</p></li>
-</ol>
-</li>
-</ul>
-</section>
-<section id="the-operator-norm">
-<h3>The Operator Norm<a class="headerlink" href="#the-operator-norm" title="Permalink to this heading">#</a></h3>
-<p>For a bounded linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span>, the <strong>operator norm</strong> <span class="math notranslate nohighlight">\(\|T\|\)</span> is defined as the supremum of the ratio of the output norm to the input norm:</p>
-<div class="math notranslate nohighlight">
-\[\|T\| = \sup_{x \neq 0} \frac{\|Tx\|_Y}{\|x\|_X} = \sup_{\|x\|_X \le 1} \|Tx\|_Y\]</div>
-<p>The set of all bounded linear operators from <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(Y\)</span> is denoted as <span class="math notranslate nohighlight">\(B(X, Y)\)</span>. If <span class="math notranslate nohighlight">\(Y\)</span> is a Banach space, then <span class="math notranslate nohighlight">\(B(X, Y)\)</span> is also a Banach space under the operator norm.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-3-quotient-spaces-the-baire-category-theorem">
-<h2>Lecture 3: Quotient Spaces &amp; The Baire Category Theorem<a class="headerlink" href="#lecture-3-quotient-spaces-the-baire-category-theorem" title="Permalink to this heading">#</a></h2>
-<section id="quotient-spaces">
-<h3>Quotient Spaces<a class="headerlink" href="#quotient-spaces" title="Permalink to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a normed space and <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a closed subspace. The <strong>quotient space</strong> <span class="math notranslate nohighlight">\(X/M\)</span> is the set of equivalence classes (cosets) <span class="math notranslate nohighlight">\([x] = x + M\)</span> under the norm:</p>
-<div class="math notranslate nohighlight">
-\[\|[x]\| = \inf_{m \in M} \|x - m\|\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(X\)</span> is a Banach space, then the quotient space <span class="math notranslate nohighlight">\(X/M\)</span> is also a Banach space under this quotient norm.</p></li>
-</ul>
-</section>
-<section id="baire-category-theorem">
-<h3>Baire Category Theorem<a class="headerlink" href="#baire-category-theorem" title="Permalink to this heading">#</a></h3>
-<p>The Baire Category Theorem is a foundational topological property of complete metric spaces.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a complete metric space. If <span class="math notranslate nohighlight">\(X\)</span> is written as a countable union of closed subsets <span class="math notranslate nohighlight">\(X = \bigcup_{n=1}^\infty F_n\)</span>, then at least one of the subsets <span class="math notranslate nohighlight">\(F_n\)</span> must have a non-empty interior.</p></li>
-<li><p><strong>Intuition</strong>: A complete space cannot be constructed by gluing together a countable number of “thin” (nowhere dense) sets.</p></li>
-</ul>
-</section>
-<section id="uniform-boundedness-principle-banach-steinhaus-theorem">
-<h3>Uniform Boundedness Principle (Banach-Steinhaus Theorem)<a class="headerlink" href="#uniform-boundedness-principle-banach-steinhaus-theorem" title="Permalink to this heading">#</a></h3>
-<p>Using Baire’s theorem, we can prove that pointwise boundedness of a family of operators implies uniform boundedness.</p>
-<ul>
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> be a Banach space and <span class="math notranslate nohighlight">\(Y\)</span> be a normed space. Let <span class="math notranslate nohighlight">\(\mathcal{F} \subseteq B(X, Y)\)</span> be a family of bounded linear operators. If for each <span class="math notranslate nohighlight">\(x \in X\)</span>, there exists <span class="math notranslate nohighlight">\(C_x \ge 0\)</span> such that:
-$<span class="math notranslate nohighlight">\(\|Tx\|_Y \le C_x \quad \text{for all } T \in \mathcal{F}\)</span>$
-then the operators are uniformly bounded:</p>
-<div class="math notranslate nohighlight">
-\[\sup_{T \in \mathcal{F}} \|T\| &lt; \infty\]</div>
-</li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-4-the-open-mapping-closed-graph-theorems">
-<h2>Lecture 4: The Open Mapping &amp; Closed Graph Theorems<a class="headerlink" href="#lecture-4-the-open-mapping-closed-graph-theorems" title="Permalink to this heading">#</a></h2>
-<p>These theorems describe the properties of linear operators between Banach spaces.</p>
-<section id="the-open-mapping-theorem">
-<h3>The Open Mapping Theorem<a class="headerlink" href="#the-open-mapping-theorem" title="Permalink to this heading">#</a></h3>
-<p>A mapping <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is an <strong>open map</strong> if the image of every open set in <span class="math notranslate nohighlight">\(X\)</span> is an open set in <span class="math notranslate nohighlight">\(Y\)</span>.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be Banach spaces. If <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is a bounded linear operator that is surjective (onto), then <span class="math notranslate nohighlight">\(T\)</span> is an open mapping.</p></li>
-<li><p><strong>Bounded Inverse Theorem</strong>: If a bounded linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> between Banach spaces is bijective (one-to-one and onto), then its inverse <span class="math notranslate nohighlight">\(T^{-1}: Y \to X\)</span> is automatically bounded.</p></li>
-</ul>
-</section>
-<section id="the-closed-graph-theorem">
-<h3>The Closed Graph Theorem<a class="headerlink" href="#the-closed-graph-theorem" title="Permalink to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(T: X \to Y\)</span> be an operator. The <strong>graph</strong> of <span class="math notranslate nohighlight">\(T\)</span> is the set <span class="math notranslate nohighlight">\(\Gamma(T) = \{(x, Tx) \mid x \in X\} \subseteq X \times Y\)</span>. We say <span class="math notranslate nohighlight">\(T\)</span> has a <strong>closed graph</strong> if <span class="math notranslate nohighlight">\(\Gamma(T)\)</span> is a closed subspace of <span class="math notranslate nohighlight">\(X \times Y\)</span> under the product norm.</p>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be Banach spaces. A linear operator <span class="math notranslate nohighlight">\(T: X \to Y\)</span> is bounded if and only if its graph is closed.</p></li>
-<li><p><strong>Practical Use</strong>: To prove an operator is continuous, we only need to show that if <span class="math notranslate nohighlight">\(x_n \to 0\)</span> and <span class="math notranslate nohighlight">\(Tx_n \to y\)</span>, then <span class="math notranslate nohighlight">\(y = 0\)</span>.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-5-zorn-s-lemma-the-hahn-banach-theorem">
-<h2>Lecture 5: Zorn’s Lemma &amp; The Hahn-Banach Theorem<a class="headerlink" href="#lecture-5-zorn-s-lemma-the-hahn-banach-theorem" title="Permalink to this heading">#</a></h2>
-<p>The Hahn-Banach Theorem guarantees that there are “enough” continuous linear functionals on a normed space to separate points.</p>
-<section id="zorn-s-lemma">
-<h3>Zorn’s Lemma<a class="headerlink" href="#zorn-s-lemma" title="Permalink to this heading">#</a></h3>
-<p>Zorn’s Lemma is an axiom equivalent to the Axiom of Choice.</p>
-<ul class="simple">
-<li><p><strong>Poset</strong>: A set equipped with a partial order <span class="math notranslate nohighlight">\(\le\)</span>.</p></li>
-<li><p><strong>Chain</strong>: A subset of a poset where every pair of elements is comparable.</p></li>
-<li><p><strong>Theorem</strong>: If every chain in a poset <span class="math notranslate nohighlight">\(P\)</span> has an upper bound in <span class="math notranslate nohighlight">\(P\)</span>, then <span class="math notranslate nohighlight">\(P\)</span> contains at least one maximal element.</p></li>
-</ul>
-</section>
-<section id="the-hahn-banach-extension-theorem">
-<h3>The Hahn-Banach Extension Theorem<a class="headerlink" href="#the-hahn-banach-extension-theorem" title="Permalink to this heading">#</a></h3>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a vector space and <span class="math notranslate nohighlight">\(p: X \to \mathbb{R}\)</span> be a sublinear functional (satisfying <span class="math notranslate nohighlight">\(p(x+y) \le p(x) + p(y)\)</span> and <span class="math notranslate nohighlight">\(p(\alpha x) = \alpha p(x)\)</span> for <span class="math notranslate nohighlight">\(\alpha \ge 0\)</span>).</p>
-<ul>
-<li><p><strong>Theorem (Real Vector Spaces)</strong>: Let <span class="math notranslate nohighlight">\(M \subseteq X\)</span> be a subspace, and <span class="math notranslate nohighlight">\(f: M \to \mathbb{R}\)</span> be a linear functional bounded by <span class="math notranslate nohighlight">\(p\)</span>:
-$<span class="math notranslate nohighlight">\(f(x) \le p(x) \quad \text{for all } x \in M\)</span><span class="math notranslate nohighlight">\(
-Then there exists a linear functional \)</span>F: X \to \mathbb{R}<span class="math notranslate nohighlight">\( extending \)</span>f<span class="math notranslate nohighlight">\( (\)</span>F(x) = f(x)<span class="math notranslate nohighlight">\( for all \)</span>x \in M$) such that:</p>
-<div class="math notranslate nohighlight">
-\[F(x) \le p(x) \quad \text{for all } x \in X\]</div>
-</li>
-<li><p><strong>Normed Spaces Corollary</strong>: Let <span class="math notranslate nohighlight">\(M\)</span> be a subspace of a normed space <span class="math notranslate nohighlight">\(X\)</span>, and <span class="math notranslate nohighlight">\(f \in M^*\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can be extended to a functional <span class="math notranslate nohighlight">\(F \in X^*\)</span> such that the norms are preserved:
-$<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>$</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="lecture-6-part-1-the-double-dual-reflexivity">
-<h2>Lecture 6 (Part 1): The Double Dual &amp; Reflexivity<a class="headerlink" href="#lecture-6-part-1-the-double-dual-reflexivity" title="Permalink to this heading">#</a></h2>
-<section id="the-dual-space-x">
-<h3>The Dual Space (<span class="math notranslate nohighlight">\(X^*\)</span>)<a class="headerlink" href="#the-dual-space-x" title="Permalink to this heading">#</a></h3>
-<p>For a normed space <span class="math notranslate nohighlight">\(X\)</span>, the space of all bounded linear functionals <span class="math notranslate nohighlight">\(f: X \to K\)</span> is the <strong>dual space</strong> <span class="math notranslate nohighlight">\(X^* = B(X, K)\)</span>. Since the field <span class="math notranslate nohighlight">\(K\)</span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>) is complete, <span class="math notranslate nohighlight">\(X^*\)</span> is always a Banach space.</p>
-</section>
-<section id="the-double-dual-x">
-<h3>The Double Dual (<span class="math notranslate nohighlight">\(X^{**}\)</span>)<a class="headerlink" href="#the-double-dual-x" title="Permalink to this heading">#</a></h3>
-<p>The <strong>double dual</strong> (or bidual) <span class="math notranslate nohighlight">\(X^{**} = (X^*)^*\)</span> is the dual of <span class="math notranslate nohighlight">\(X^*\)</span>.</p>
-<p>There is a natural map called the <strong>canonical injection</strong> <span class="math notranslate nohighlight">\(J: X \to X^{**}\)</span> defined by evaluating a functional at a point <span class="math notranslate nohighlight">\(x\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[J(x)(f) = f(x) \quad \text{for all } f \in X^*\]</div>
-<ul class="simple">
-<li><p><strong>Theorem</strong>: The canonical injection <span class="math notranslate nohighlight">\(J\)</span> is an isometric isomorphism (it preserves norms: <span class="math notranslate nohighlight">\(\|J(x)\|_{X^{**}} = \|x\|_X\)</span>).</p></li>
-<li><p><strong>Reflexive Spaces</strong>: If <span class="math notranslate nohighlight">\(J\)</span> is surjective (meaning <span class="math notranslate nohighlight">\(J(X) = X^{**}\)</span>), the Banach space <span class="math notranslate nohighlight">\(X\)</span> is said to be <strong>reflexive</strong>.</p></li>
-<li><p><strong>Examples</strong>: All Hilbert spaces and <span class="math notranslate nohighlight">\(L^p\)</span> spaces for <span class="math notranslate nohighlight">\(1 &lt; p &lt; \infty\)</span> are reflexive. The spaces <span class="math notranslate nohighlight">\(L^1\)</span> and <span class="math notranslate nohighlight">\(C([a,b])\)</span> are not reflexive.</p></li>
+<li><p>Many activation functions like <strong>ReLU</strong> (<span class="math notranslate nohighlight">\(f(x) = \max(0, x)\)</span>) are not differentiable at <span class="math notranslate nohighlight">\(x = 0\)</span>.</p></li>
+<li><p>Because a single point has a Lebesgue measure of 0, ReLU is differentiable <em>almost everywhere</em> (a.e.). Measure theory guarantees that gradient descent will not be disrupted by these isolated non-differentiable points.</p></li>
 </ul>
 </section>
 </section>
@@ -660,11 +559,11 @@ $<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>
       </div>
     </a>
     <a class="right-next"
-       href="../measure_theory/intro.html"
+       href="basic_banach_spaces.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Measure Theory &amp; Lebesgue Integration</p>
+        <p class="prev-next-title">Basic Banach Space Theory</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -684,35 +583,13 @@ $<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-1-basic-banach-space-theory">Lecture 1: Basic Banach Space Theory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normed-vector-spaces">Normed Vector Spaces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#completeness-and-banach-spaces">Completeness and Banach Spaces</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-2-bounded-linear-operators">Lecture 2: Bounded Linear Operators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundedness-and-continuity">Boundedness and Continuity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-operator-norm">The Operator Norm</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-3-quotient-spaces-the-baire-category-theorem">Lecture 3: Quotient Spaces &amp; The Baire Category Theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotient-spaces">Quotient Spaces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baire-category-theorem">Baire Category Theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-boundedness-principle-banach-steinhaus-theorem">Uniform Boundedness Principle (Banach-Steinhaus Theorem)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-4-the-open-mapping-closed-graph-theorems">Lecture 4: The Open Mapping &amp; Closed Graph Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-open-mapping-theorem">The Open Mapping Theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-closed-graph-theorem">The Closed Graph Theorem</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-5-zorn-s-lemma-the-hahn-banach-theorem">Lecture 5: Zorn’s Lemma &amp; The Hahn-Banach Theorem</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zorn-s-lemma">Zorn’s Lemma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hahn-banach-extension-theorem">The Hahn-Banach Extension Theorem</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-6-part-1-the-double-dual-reflexivity">Lecture 6 (Part 1): The Double Dual &amp; Reflexivity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dual-space-x">The Dual Space (<span class="math notranslate nohighlight">\(X^*\)</span>)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-double-dual-x">The Double Dual (<span class="math notranslate nohighlight">\(X^{**}\)</span>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-curriculum">Module Curriculum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-machine-learning-deep-learning-ml-dl">Connection to Machine Learning &amp; Deep Learning (ML/DL)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-kernel-hilbert-spaces-rkhs-kernel-methods">1. Reproducing Kernel Hilbert Spaces (RKHS) &amp; Kernel Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-approximation-theorem-hahn-banach-application">2. Universal Approximation Theorem (Hahn-Banach Application)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-densities-radon-nikodym-expectation-lebesgue-integration">3. Probability Densities (Radon-Nikodym) &amp; Expectation (Lebesgue Integration)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-descent-lebesgue-dominated-convergence-dct">4. Gradient Descent &amp; Lebesgue Dominated Convergence (DCT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#almost-everywhere-a-e-differentiability-of-relu">5. “Almost Everywhere” (a.e.) Differentiability of ReLU</a></li>
 </ul>
 </li>
 </ul>

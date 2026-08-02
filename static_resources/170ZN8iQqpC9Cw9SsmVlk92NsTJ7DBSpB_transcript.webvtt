@@ -1,0 +1,3800 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:18.700 align:middle line:90%
+
+
+00:00:18.700 --> 00:00:32.490 align:middle line:84%
+PROFESSOR: So last time we
+introduced pre-Hilbert spaces
+
+00:00:32.490 --> 00:00:36.210 align:middle line:84%
+as vector spaces that come
+equipped with a Hermitian
+
+00:00:36.210 --> 00:00:37.380 align:middle line:90%
+inner product.
+
+00:00:37.380 --> 00:00:39.870 align:middle line:84%
+Our Hermitian inner
+product is linear.
+
+00:00:39.870 --> 00:00:42.330 align:middle line:84%
+So it's a pairing
+between two elements
+
+00:00:42.330 --> 00:00:44.340 align:middle line:84%
+that gives you a
+complex number that's
+
+00:00:44.340 --> 00:00:48.160 align:middle line:90%
+linear in the first entry.
+
+00:00:48.160 --> 00:00:50.310 align:middle line:84%
+And if you switch
+the entries, that's
+
+00:00:50.310 --> 00:00:54.630 align:middle line:84%
+equal to the pairing of
+the original two entries,
+
+00:00:54.630 --> 00:00:56.590 align:middle line:84%
+taking the complex
+conjugate of that.
+
+00:00:56.590 --> 00:00:59.640 align:middle line:84%
+And it's positive
+definite, meaning
+
+00:00:59.640 --> 00:01:03.840 align:middle line:84%
+if I take the inner product
+of a vector with itself,
+
+00:01:03.840 --> 00:01:10.580 align:middle line:84%
+it's non-negative and 0 if and
+only if the element is zero.
+
+00:01:10.580 --> 00:01:13.200 align:middle line:84%
+And we proved the
+Cauchy-Schwarz inequality.
+
+00:01:13.200 --> 00:01:20.100 align:middle line:84%
+So let me actually just recall
+that we defined for if h
+
+00:01:20.100 --> 00:01:28.190 align:middle line:90%
+is a pre-Hilbert space.
+
+00:01:28.190 --> 00:01:33.718 align:middle line:84%
+We defined what we called,
+or using this norm notation,
+
+00:01:33.718 --> 00:01:35.260 align:middle line:84%
+although I haven't
+proved it's a norm
+
+00:01:35.260 --> 00:01:44.520 align:middle line:84%
+yet to be the inner
+product of v with itself
+
+00:01:44.520 --> 00:01:46.560 align:middle line:90%
+raised to the 1/2 power.
+
+00:01:46.560 --> 00:01:48.810 align:middle line:84%
+And this is a
+non-negative real number.
+
+00:01:48.810 --> 00:01:51.570 align:middle line:90%
+
+
+00:01:51.570 --> 00:01:52.890 align:middle line:90%
+This is a non-negative number.
+
+00:01:52.890 --> 00:01:58.760 align:middle line:84%
+So taking the 1/2
+power is meaningful.
+
+00:01:58.760 --> 00:02:01.180 align:middle line:84%
+And we proved at
+the end of last time
+
+00:02:01.180 --> 00:02:13.630 align:middle line:84%
+the Cauchy-Schwarz inequality
+that for all u, v in H if I
+
+00:02:13.630 --> 00:02:17.180 align:middle line:84%
+take the inner product of u
+and v, take its absolute value,
+
+00:02:17.180 --> 00:02:24.120 align:middle line:84%
+this is less than or equal to
+norm of u times the norm of v.
+
+00:02:24.120 --> 00:02:29.130 align:middle line:84%
+OK, so now let's use this to
+actually prove or to prove
+
+00:02:29.130 --> 00:02:34.960 align:middle line:84%
+that this thing that I have
+been denoting with this norm
+
+00:02:34.960 --> 00:02:40.510 align:middle line:84%
+notation is, in fact, a
+norm on a pre-Hilbert space.
+
+00:02:40.510 --> 00:02:53.640 align:middle line:84%
+So theorem H is a
+pre-Hilbert space,
+
+00:02:53.640 --> 00:03:07.567 align:middle line:84%
+then this thing here defined
+in this way is norm on h, OK.
+
+00:03:07.567 --> 00:03:10.490 align:middle line:90%
+
+
+00:03:10.490 --> 00:03:12.650 align:middle line:84%
+So remember, we
+have to prove two--
+
+00:03:12.650 --> 00:03:15.290 align:middle line:84%
+or we have to prove three things
+for something to be a norm.
+
+00:03:15.290 --> 00:03:17.210 align:middle line:84%
+We have to prove it's
+positive definite.
+
+00:03:17.210 --> 00:03:20.720 align:middle line:84%
+And then we also have to prove
+homogeneity and the triangle
+
+00:03:20.720 --> 00:03:21.690 align:middle line:90%
+inequality.
+
+00:03:21.690 --> 00:03:34.700 align:middle line:84%
+So note that this
+quantity here equals 0 if
+
+00:03:34.700 --> 00:03:39.110 align:middle line:84%
+and only if the inner
+product of v with itself
+
+00:03:39.110 --> 00:03:45.050 align:middle line:84%
+is zero, which by the
+positive definite quantity
+
+00:03:45.050 --> 00:03:48.890 align:middle line:84%
+of a Hermitian inner product
+implies that v equals 0.
+
+00:03:48.890 --> 00:03:53.120 align:middle line:84%
+So that proves that
+this function here on h
+
+00:03:53.120 --> 00:03:57.410 align:middle line:90%
+is in fact positive definite.
+
+00:03:57.410 --> 00:04:00.300 align:middle line:84%
+Now if lambda is
+a complex number
+
+00:04:00.300 --> 00:04:02.780 align:middle line:90%
+and v is in H, if I take--
+
+00:04:02.780 --> 00:04:05.770 align:middle line:90%
+
+
+00:04:05.770 --> 00:04:09.880 align:middle line:84%
+so we kind of saw this at the
+proof of the Cauchy-Schwarz
+
+00:04:09.880 --> 00:04:10.520 align:middle line:90%
+inequality.
+
+00:04:10.520 --> 00:04:15.160 align:middle line:84%
+But if I take lambda times v and
+inner product lambda times v,
+
+00:04:15.160 --> 00:04:19.300 align:middle line:84%
+this is equal to lambda
+times lambda bar.
+
+00:04:19.300 --> 00:04:24.550 align:middle line:84%
+A scalar pulls out of
+the first entry unfazed.
+
+00:04:24.550 --> 00:04:26.140 align:middle line:84%
+If a scalar is in
+the second entry,
+
+00:04:26.140 --> 00:04:28.030 align:middle line:84%
+it comes out with a
+complex conjugate.
+
+00:04:28.030 --> 00:04:32.710 align:middle line:90%
+
+
+00:04:32.710 --> 00:04:34.760 align:middle line:84%
+And then of course
+for a complex number
+
+00:04:34.760 --> 00:04:37.780 align:middle line:84%
+of times this complex conjugate,
+I get the norm of that
+
+00:04:37.780 --> 00:04:40.310 align:middle line:90%
+or the length of that--
+
+00:04:40.310 --> 00:04:44.040 align:middle line:84%
+the absolute value of that
+complex number squared.
+
+00:04:44.040 --> 00:04:46.970 align:middle line:84%
+So taking the square
+root of both sides
+
+00:04:46.970 --> 00:04:50.300 align:middle line:84%
+of this, which is
+equal to this, I
+
+00:04:50.300 --> 00:05:03.350 align:middle line:84%
+get that this quantity here
+is equal to the absolute value
+
+00:05:03.350 --> 00:05:11.090 align:middle line:84%
+of lambda times this norm of
+v, which proves homogeneity
+
+00:05:11.090 --> 00:05:13.670 align:middle line:90%
+of this function on h.
+
+00:05:13.670 --> 00:05:17.210 align:middle line:84%
+OK, so all that remains to prove
+that this is an actual norm--
+
+00:05:17.210 --> 00:05:22.490 align:middle line:84%
+so I don't have to keep being
+or at least trying to be careful
+
+00:05:22.490 --> 00:05:24.035 align:middle line:90%
+with what words I'm using--
+
+00:05:24.035 --> 00:05:27.640 align:middle line:90%
+
+
+00:05:27.640 --> 00:05:29.050 align:middle line:90%
+will prove that this is a norm.
+
+00:05:29.050 --> 00:05:31.825 align:middle line:90%
+
+
+00:05:31.825 --> 00:05:36.300 align:middle line:84%
+OK, so now we need to prove
+the triangle inequality.
+
+00:05:36.300 --> 00:05:48.230 align:middle line:84%
+You let uv be in H, then I
+compute u plus v squared.
+
+00:05:48.230 --> 00:05:52.970 align:middle line:84%
+This is equal to u
+plus v plus v, which
+
+00:05:52.970 --> 00:05:57.220 align:middle line:84%
+is equal to just
+how we computed it
+
+00:05:57.220 --> 00:06:01.988 align:middle line:84%
+for when we had a t
+here and a t here,
+
+00:06:01.988 --> 00:06:04.280 align:middle line:84%
+when we did the proof of the
+Cauchy-Schwarz inequality.
+
+00:06:04.280 --> 00:06:07.210 align:middle line:84%
+And we'll use this
+identity quite often
+
+00:06:07.210 --> 00:06:10.240 align:middle line:84%
+that the norm of
+u plus v squared
+
+00:06:10.240 --> 00:06:14.410 align:middle line:84%
+is norm u squared
+plus norm b squared
+
+00:06:14.410 --> 00:06:20.440 align:middle line:84%
+plus 2 times the
+real part of u and v,
+
+00:06:20.440 --> 00:06:25.036 align:middle line:84%
+the real part of the
+inner product of u and v.
+
+00:06:25.036 --> 00:06:31.200 align:middle line:84%
+OK, now this is less than
+or equal to norm squared
+
+00:06:31.200 --> 00:06:35.550 align:middle line:84%
+plus v squared plus the
+absolute value of the real part.
+
+00:06:35.550 --> 00:06:40.730 align:middle line:90%
+
+
+00:06:40.730 --> 00:06:45.890 align:middle line:84%
+Now the absolute value of the
+real part of a complex number
+
+00:06:45.890 --> 00:06:47.750 align:middle line:84%
+is less than or equal
+to the absolute value
+
+00:06:47.750 --> 00:06:49.260 align:middle line:90%
+of that complex number.
+
+00:06:49.260 --> 00:06:52.010 align:middle line:84%
+So this is less than or
+equal to the absolute value
+
+00:06:52.010 --> 00:06:54.260 align:middle line:90%
+of the inner product of u and v.
+
+00:06:54.260 --> 00:07:03.840 align:middle line:84%
+And by Cauchy-Schwarz that is
+less than or equal to still
+
+00:07:03.840 --> 00:07:13.180 align:middle line:84%
+what I have before plus 2 times
+the inner product of u and v.
+
+00:07:13.180 --> 00:07:20.650 align:middle line:84%
+And I guess let me
+go to the next board.
+
+00:07:20.650 --> 00:07:22.075 align:middle line:84%
+All the proof is
+essentially done.
+
+00:07:22.075 --> 00:07:24.670 align:middle line:90%
+
+
+00:07:24.670 --> 00:07:30.280 align:middle line:84%
+What I had before is
+equal to norm of u
+
+00:07:30.280 --> 00:07:36.320 align:middle line:90%
+plus normal v squared, i.e.
+
+00:07:36.320 --> 00:07:42.660 align:middle line:84%
+So I had started off with
+the norm of u plus v squared,
+
+00:07:42.660 --> 00:07:45.150 align:middle line:84%
+and I had proved that's less
+than or equal to this thing
+
+00:07:45.150 --> 00:07:47.260 align:middle line:90%
+here squared.
+
+00:07:47.260 --> 00:07:49.900 align:middle line:84%
+So taking the square
+root of both sides,
+
+00:07:49.900 --> 00:07:56.370 align:middle line:84%
+I get the norm of u plus v is
+less than or equal to the norm
+
+00:07:56.370 --> 00:07:57.360 align:middle line:90%
+u plus the norm of v.
+
+00:07:57.360 --> 00:08:01.950 align:middle line:84%
+OK, so this thing that I defined
+before is, in fact, the norm.
+
+00:08:01.950 --> 00:08:11.795 align:middle line:84%
+I'm not just using that
+notation to denote an impostor.
+
+00:08:11.795 --> 00:08:20.292 align:middle line:90%
+
+
+00:08:20.292 --> 00:08:24.670 align:middle line:84%
+OK, now using the
+Cauchy-Schwarz inequality,
+
+00:08:24.670 --> 00:08:29.220 align:middle line:84%
+we can also prove that
+taking the inner product is--
+
+00:08:29.220 --> 00:08:32.830 align:middle line:90%
+
+
+00:08:32.830 --> 00:08:38.289 align:middle line:84%
+it's a function on h cross
+h that's continuous, OK.
+
+00:08:38.289 --> 00:08:45.380 align:middle line:84%
+So let me label
+this as continuity
+
+00:08:45.380 --> 00:08:49.230 align:middle line:90%
+of the inner product.
+
+00:08:49.230 --> 00:08:51.170 align:middle line:84%
+So let me state it
+as the following.
+
+00:08:51.170 --> 00:08:57.770 align:middle line:84%
+If we're in a Hilbert space
+and un converges to u and vm
+
+00:08:57.770 --> 00:09:22.560 align:middle line:84%
+converges to v in a pre-Hilbert
+space with norm as defined
+
+00:09:22.560 --> 00:09:24.840 align:middle line:90%
+as before--
+
+00:09:24.840 --> 00:09:27.350 align:middle line:84%
+so now we have a norm
+on a pre-Hilbert space,
+
+00:09:27.350 --> 00:09:30.825 align:middle line:84%
+so we can define convergence
+since it's a norm space.
+
+00:09:30.825 --> 00:09:36.020 align:middle line:90%
+
+
+00:09:36.020 --> 00:09:47.130 align:middle line:84%
+Pre-Hilbert space H with norm
+this, then un, inner product vn
+
+00:09:47.130 --> 00:09:52.635 align:middle line:90%
+converges to u inner product v.
+
+00:09:52.635 --> 00:09:53.135 align:middle line:90%
+OK.
+
+00:09:53.135 --> 00:09:56.530 align:middle line:90%
+
+
+00:09:56.530 --> 00:09:59.810 align:middle line:90%
+All right, so why is this?
+
+00:09:59.810 --> 00:10:02.470 align:middle line:90%
+
+
+00:10:02.470 --> 00:10:06.640 align:middle line:84%
+So last time in the
+previous proof, I mean,
+
+00:10:06.640 --> 00:10:09.520 align:middle line:84%
+we really didn't use the full
+strength of the Cauchy-Schwarz
+
+00:10:09.520 --> 00:10:10.390 align:middle line:90%
+inequality.
+
+00:10:10.390 --> 00:10:13.660 align:middle line:84%
+We could have just gotten
+by with the real part,
+
+00:10:13.660 --> 00:10:18.210 align:middle line:84%
+having just proven that the
+real part of the inner product
+
+00:10:18.210 --> 00:10:21.240 align:middle line:84%
+is an absolute value less than
+or equal to the inner product
+
+00:10:21.240 --> 00:10:25.560 align:middle line:84%
+of-- or the product of
+the norms of u and v. Here
+
+00:10:25.560 --> 00:10:28.690 align:middle line:84%
+we'll actually use the full
+Cauchy-Schwarz inequality.
+
+00:10:28.690 --> 00:10:31.170 align:middle line:90%
+So the proof is quite simple.
+
+00:10:31.170 --> 00:10:33.850 align:middle line:90%
+
+
+00:10:33.850 --> 00:10:37.935 align:middle line:84%
+If un converges to u
+and vn converges to v--
+
+00:10:37.935 --> 00:10:40.560 align:middle line:90%
+
+
+00:10:40.560 --> 00:10:45.480 align:middle line:84%
+i.e, let me just spell
+this out for you--
+
+00:10:45.480 --> 00:10:48.660 align:middle line:90%
+un minus u converges to 0.
+
+00:10:48.660 --> 00:10:54.060 align:middle line:84%
+And norm of vn minus
+v converges to 0.
+
+00:10:54.060 --> 00:10:57.330 align:middle line:84%
+As n converges to--
+as n goes to infinity,
+
+00:10:57.330 --> 00:11:08.840 align:middle line:84%
+then we'll use the
+squeeze theorem
+
+00:11:08.840 --> 00:11:11.360 align:middle line:84%
+to show that this
+quantity converges
+
+00:11:11.360 --> 00:11:13.850 align:middle line:90%
+to u in a product with uv.
+
+00:11:13.850 --> 00:11:17.997 align:middle line:84%
+So I have to show that this
+quantity here-- hold on.
+
+00:11:17.997 --> 00:11:18.830 align:middle line:90%
+Let me not put that.
+
+00:11:18.830 --> 00:11:22.130 align:middle line:90%
+We're not in 18100.
+
+00:11:22.130 --> 00:11:25.017 align:middle line:84%
+Typically in 18100
+when I first started
+
+00:11:25.017 --> 00:11:26.600 align:middle line:84%
+teaching the squeeze
+theorem, I always
+
+00:11:26.600 --> 00:11:28.260 align:middle line:90%
+included the lower bound.
+
+00:11:28.260 --> 00:11:31.340 align:middle line:84%
+But it should be clear
+that this is always
+
+00:11:31.340 --> 00:11:33.380 align:middle line:84%
+bigger than or equal
+to zero since it's
+
+00:11:33.380 --> 00:11:35.855 align:middle line:84%
+absolute value of
+a complex number.
+
+00:11:35.855 --> 00:11:38.730 align:middle line:90%
+
+
+00:11:38.730 --> 00:11:47.990 align:middle line:84%
+OK, so this is equal to
+un minus u, vn plus--
+
+00:11:47.990 --> 00:11:50.780 align:middle line:90%
+
+
+00:11:50.780 --> 00:11:51.440 align:middle line:90%
+let's see.
+
+00:11:51.440 --> 00:11:54.490 align:middle line:90%
+
+
+00:11:54.490 --> 00:12:04.290 align:middle line:84%
+U, inner product, vn minus v.
+By the triangle inequality now,
+
+00:12:04.290 --> 00:12:08.100 align:middle line:84%
+just for the modulus
+or absolute value
+
+00:12:08.100 --> 00:12:10.590 align:middle line:84%
+of complex numbers,
+that's less than
+
+00:12:10.590 --> 00:12:19.285 align:middle line:84%
+or equal to un
+minus u, vn, plus--
+
+00:12:19.285 --> 00:12:22.680 align:middle line:90%
+
+
+00:12:22.680 --> 00:12:32.640 align:middle line:84%
+that's the value
+of u, vn minus v.
+
+00:12:32.640 --> 00:12:34.050 align:middle line:84%
+And this is less
+than or equal to
+
+00:12:34.050 --> 00:12:41.180 align:middle line:84%
+by the Cauchy-Schwarz
+inequality norm of un minus
+
+00:12:41.180 --> 00:12:46.610 align:middle line:84%
+u times the norm of vn
+plus the norm of u times
+
+00:12:46.610 --> 00:12:55.510 align:middle line:84%
+the norm of vn minus
+v. And now the vns are.
+
+00:12:55.510 --> 00:12:59.170 align:middle line:84%
+So the vns are converging
+to v. And therefore,
+
+00:12:59.170 --> 00:13:02.410 align:middle line:84%
+the norms of the vns are
+converging to the norm of v.
+
+00:13:02.410 --> 00:13:13.270 align:middle line:84%
+So recall that if the simple
+fact that vn convergence to v,
+
+00:13:13.270 --> 00:13:20.270 align:middle line:84%
+then norm of vn converges
+to norm of v, OK.
+
+00:13:20.270 --> 00:13:23.770 align:middle line:90%
+
+
+00:13:23.770 --> 00:13:26.250 align:middle line:90%
+All right.
+
+00:13:26.250 --> 00:13:28.500 align:middle line:90%
+And, again, so let me add--
+
+00:13:28.500 --> 00:13:34.880 align:middle line:84%
+since one can prove as
+you do in real analysis
+
+00:13:34.880 --> 00:13:37.820 align:middle line:84%
+the following reverse
+triangle inequality since if I
+
+00:13:37.820 --> 00:13:43.520 align:middle line:90%
+have two vectors v and h.
+
+00:13:43.520 --> 00:13:45.980 align:middle line:84%
+So this just works in any
+Banach space, not necessarily
+
+00:13:45.980 --> 00:13:47.630 align:middle line:90%
+a pre-Hilbert space.
+
+00:13:47.630 --> 00:13:49.790 align:middle line:84%
+The absolute value of
+the difference in norms
+
+00:13:49.790 --> 00:13:55.650 align:middle line:84%
+is less than or equal to the
+norm of the difference, OK.
+
+00:13:55.650 --> 00:14:00.600 align:middle line:84%
+So this is a convergent
+sequence of real numbers.
+
+00:14:00.600 --> 00:14:01.650 align:middle line:90%
+So it must be bounded.
+
+00:14:01.650 --> 00:14:08.660 align:middle line:84%
+So I can say that's less than
+or equal to times sup of n.
+
+00:14:08.660 --> 00:14:18.980 align:middle line:84%
+Or let's use a different
+letter, k, times plus norm
+
+00:14:18.980 --> 00:14:23.030 align:middle line:90%
+of vn minus v times norm of u.
+
+00:14:23.030 --> 00:14:33.360 align:middle line:84%
+Now, this is something
+converging to 0 times
+
+00:14:33.360 --> 00:14:34.210 align:middle line:90%
+a fixed number.
+
+00:14:34.210 --> 00:14:37.560 align:middle line:84%
+This is something converging
+to 0 times a fixed number.
+
+00:14:37.560 --> 00:14:41.650 align:middle line:84%
+And therefore, this goes
+to 0 as n goes to infinity.
+
+00:14:41.650 --> 00:14:45.430 align:middle line:84%
+And therefore, the thing
+which we started with,
+
+00:14:45.430 --> 00:14:48.630 align:middle line:84%
+so this quantity here,
+an absolute value,
+
+00:14:48.630 --> 00:14:52.140 align:middle line:84%
+is less than or equal to
+something converging to zero.
+
+00:14:52.140 --> 00:14:54.390 align:middle line:90%
+And it's also non-negative.
+
+00:14:54.390 --> 00:14:59.860 align:middle line:90%
+So therefore I get that.
+
+00:14:59.860 --> 00:15:09.810 align:middle line:90%
+
+
+00:15:09.810 --> 00:15:13.700 align:middle line:84%
+So this is by the
+squeeze theorem, i.e.
+
+00:15:13.700 --> 00:15:27.340 align:middle line:90%
+
+
+00:15:27.340 --> 00:15:40.430 align:middle line:84%
+OK, so on pre-Hilbert
+space, we can define
+
+00:15:40.430 --> 00:15:44.600 align:middle line:90%
+a norm using the inner product.
+
+00:15:44.600 --> 00:15:47.750 align:middle line:84%
+And this inner product is
+continuous with respect
+
+00:15:47.750 --> 00:15:49.258 align:middle line:90%
+to this norm, OK.
+
+00:15:49.258 --> 00:15:51.300 align:middle line:84%
+Because once we have a
+norm, we have convergence.
+
+00:15:51.300 --> 00:15:53.447 align:middle line:90%
+So we can talk about--
+
+00:15:53.447 --> 00:15:55.530 align:middle line:84%
+once we have a norm, we
+have a notion of distance,
+
+00:15:55.530 --> 00:16:02.210 align:middle line:84%
+so we can talk about convergence
+of sequences and things
+
+00:16:02.210 --> 00:16:03.450 align:middle line:90%
+like that.
+
+00:16:03.450 --> 00:16:07.350 align:middle line:84%
+So now we have
+pre-Hilbert spaces.
+
+00:16:07.350 --> 00:16:15.770 align:middle line:90%
+What is a Hilbert space?
+
+00:16:15.770 --> 00:16:17.270 align:middle line:84%
+This is simply a
+pre-Hilbert space
+
+00:16:17.270 --> 00:16:20.210 align:middle line:84%
+which is complete with
+respect to this norm.
+
+00:16:20.210 --> 00:16:43.760 align:middle line:84%
+So a Hilbert space, H,
+is a pre-Hilbert space,
+
+00:16:43.760 --> 00:17:06.980 align:middle line:84%
+which is complete with
+respect to the norm,
+
+00:17:06.980 --> 00:17:11.670 align:middle line:84%
+with respect to this norm, which
+again remember was defined as--
+
+00:17:11.670 --> 00:17:13.748 align:middle line:90%
+I took a vector.
+
+00:17:13.748 --> 00:17:16.040 align:middle line:84%
+The norm of a vector here is
+equal to the inner product
+
+00:17:16.040 --> 00:17:19.810 align:middle line:84%
+of the vector with itself
+raised to the 1/2 power.
+
+00:17:19.810 --> 00:17:22.180 align:middle line:84%
+All right, so this is
+the new terminology.
+
+00:17:22.180 --> 00:17:28.980 align:middle line:84%
+And as we'll see, or at least
+we'll explicitly spell out
+
+00:17:28.980 --> 00:17:33.990 align:middle line:84%
+in the form of a theorem-- but
+we will see probably by the end
+
+00:17:33.990 --> 00:17:41.570 align:middle line:84%
+of this lecture that really
+there's-- for a reasonable
+
+00:17:41.570 --> 00:17:46.140 align:middle line:84%
+Hilbert space, you're
+either one of two things.
+
+00:17:46.140 --> 00:17:50.540 align:middle line:84%
+So let me first give the
+examples, basic examples
+
+00:17:50.540 --> 00:17:53.240 align:middle line:90%
+of Hilbert space.
+
+00:17:53.240 --> 00:18:00.560 align:middle line:84%
+So for example Cn which
+is a set of N-tuples.
+
+00:18:00.560 --> 00:18:01.700 align:middle line:90%
+How do I denote this?
+
+00:18:01.700 --> 00:18:07.090 align:middle line:90%
+
+
+00:18:07.090 --> 00:18:17.010 align:middle line:84%
+Complex numbers where the
+inner product of two vectors,
+
+00:18:17.010 --> 00:18:24.920 align:middle line:84%
+z and w, is equal to sum j
+equals 1 to the n, zj, wj.
+
+00:18:24.920 --> 00:18:27.740 align:middle line:90%
+
+
+00:18:27.740 --> 00:18:28.240 align:middle line:90%
+OK.
+
+00:18:28.240 --> 00:18:32.540 align:middle line:90%
+
+
+00:18:32.540 --> 00:18:35.270 align:middle line:84%
+So this is an
+example of a Hilbert
+
+00:18:35.270 --> 00:18:38.120 align:middle line:84%
+space, finite
+dimensional one, meaning
+
+00:18:38.120 --> 00:18:41.880 align:middle line:84%
+it's a vector space
+of finite dimension.
+
+00:18:41.880 --> 00:18:47.970 align:middle line:84%
+The other example we have
+is this space, little l,
+
+00:18:47.970 --> 00:19:02.200 align:middle line:84%
+to which this was the space
+of sequences such that each
+
+00:19:02.200 --> 00:19:04.240 align:middle line:90%
+of these is a complex number.
+
+00:19:04.240 --> 00:19:16.570 align:middle line:84%
+And this series is
+convergent, is finite.
+
+00:19:16.570 --> 00:19:19.570 align:middle line:84%
+Sum of the absolute value
+of the ak squares, this
+
+00:19:19.570 --> 00:19:23.920 align:middle line:84%
+is a Hilbert space
+as well with what's
+
+00:19:23.920 --> 00:19:30.670 align:middle line:84%
+the inner product of two
+elements of little l2.
+
+00:19:30.670 --> 00:19:43.090 align:middle line:84%
+This is the sum from a plus
+1 to infinity of ak, bk.
+
+00:19:43.090 --> 00:19:43.590 align:middle line:90%
+OK.
+
+00:19:43.590 --> 00:19:47.350 align:middle line:90%
+
+
+00:19:47.350 --> 00:19:48.280 align:middle line:90%
+All right.
+
+00:19:48.280 --> 00:19:52.870 align:middle line:90%
+
+
+00:19:52.870 --> 00:19:55.020 align:middle line:90%
+So this is pretty clear.
+
+00:19:55.020 --> 00:20:05.630 align:middle line:84%
+But note that the norm I
+get from this inner product,
+
+00:20:05.630 --> 00:20:10.060 align:middle line:90%
+this is simply--
+
+00:20:10.060 --> 00:20:13.200 align:middle line:90%
+
+
+00:20:13.200 --> 00:20:19.635 align:middle line:90%
+which was little l2 norm, right?
+
+00:20:19.635 --> 00:20:22.960 align:middle line:90%
+
+
+00:20:22.960 --> 00:20:23.950 align:middle line:90%
+OK.
+
+00:20:23.950 --> 00:20:36.870 align:middle line:84%
+So these are two basic
+examples of a Hilbert space.
+
+00:20:36.870 --> 00:20:43.560 align:middle line:84%
+We will in fact show that
+every separable Hilbert space
+
+00:20:43.560 --> 00:20:46.860 align:middle line:90%
+can be in a inner product.
+
+00:20:46.860 --> 00:20:49.560 align:middle line:84%
+And therefore length
+preserving way--
+
+00:20:49.560 --> 00:20:52.270 align:middle line:90%
+
+
+00:20:52.270 --> 00:20:57.120 align:middle line:84%
+so that's usually called
+an isomorphism form--
+
+00:20:57.120 --> 00:21:04.950 align:middle line:84%
+can be mapped isometrically
+to either Cn or little l2.
+
+00:21:04.950 --> 00:21:06.450 align:middle line:90%
+So these two kind kof--
+
+00:21:06.450 --> 00:21:12.820 align:middle line:84%
+if one wants to go
+about categorizing
+
+00:21:12.820 --> 00:21:15.070 align:middle line:84%
+all of the possible
+Hilbert spaces
+
+00:21:15.070 --> 00:21:17.680 align:middle line:84%
+as far as separable
+Hilbert spaces, which
+
+00:21:17.680 --> 00:21:25.670 align:middle line:84%
+are the only reasonable
+ones, of course,
+
+00:21:25.670 --> 00:21:28.870 align:middle line:84%
+one can come up with wild
+examples of Hilbert spaces
+
+00:21:28.870 --> 00:21:29.590 align:middle line:90%
+which are not.
+
+00:21:29.590 --> 00:21:31.660 align:middle line:90%
+Then these are the only two--
+
+00:21:31.660 --> 00:21:33.310 align:middle line:84%
+I shouldn't say two
+because this one
+
+00:21:33.310 --> 00:21:34.540 align:middle line:90%
+is indexed by its dimension.
+
+00:21:34.540 --> 00:21:36.970 align:middle line:84%
+But these are the only two
+types that you come up with,
+
+00:21:36.970 --> 00:21:42.512 align:middle line:84%
+either a finite dimensional Cn,
+or it's isometric to little l2,
+
+00:21:42.512 --> 00:21:43.012 align:middle line:90%
+OK.
+
+00:21:43.012 --> 00:21:48.250 align:middle line:90%
+
+
+00:21:48.250 --> 00:21:51.775 align:middle line:84%
+So but I will still write
+down another example for--
+
+00:21:51.775 --> 00:22:00.160 align:middle line:90%
+
+
+00:22:00.160 --> 00:22:02.920 align:middle line:84%
+since we went to
+all that work, if E
+
+00:22:02.920 --> 00:22:13.650 align:middle line:84%
+is a measurable subset of r
+and l2 of e, the big L2 of e,
+
+00:22:13.650 --> 00:22:19.925 align:middle line:84%
+which, remember, this was the
+space of measurable functions
+
+00:22:19.925 --> 00:22:25.755 align:middle line:84%
+f from e to c such that
+f squared e is finite.
+
+00:22:25.755 --> 00:22:36.720 align:middle line:90%
+
+
+00:22:36.720 --> 00:22:37.808 align:middle line:90%
+This is a Hilbert space.
+
+00:22:37.808 --> 00:22:38.850 align:middle line:90%
+What's the inner product?
+
+00:22:38.850 --> 00:22:45.270 align:middle line:90%
+
+
+00:22:45.270 --> 00:22:50.070 align:middle line:84%
+The inner product of
+two elements in L2
+
+00:22:50.070 --> 00:22:53.940 align:middle line:84%
+defines v, just the
+analog of little l2 where
+
+00:22:53.940 --> 00:22:58.610 align:middle line:84%
+we replace the sum with
+an integral, f times g,
+
+00:22:58.610 --> 00:23:03.660 align:middle line:84%
+OK, the Lesbesgue integral of
+f times the complex conjugate
+
+00:23:03.660 --> 00:23:04.180 align:middle line:90%
+of g.
+
+00:23:04.180 --> 00:23:29.890 align:middle line:90%
+
+
+00:23:29.890 --> 00:23:42.600 align:middle line:84%
+OK, now, I wrote down capital
+L2 I wrote down little l2.
+
+00:23:42.600 --> 00:23:45.960 align:middle line:84%
+But what about the other
+little lp and big LP spaces
+
+00:23:45.960 --> 00:23:49.050 align:middle line:90%
+or any of those Hilbert spaces?
+
+00:23:49.050 --> 00:23:56.470 align:middle line:84%
+So, of course, if I define
+the inner product in this way,
+
+00:23:56.470 --> 00:24:01.150 align:middle line:84%
+as I did before, then that
+only induces the little l2
+
+00:24:01.150 --> 00:24:03.970 align:middle line:90%
+and the big L2 norm.
+
+00:24:03.970 --> 00:24:09.280 align:middle line:84%
+But is there perhaps some other
+kind of magic inner product
+
+00:24:09.280 --> 00:24:14.440 align:middle line:84%
+out there that I can put
+on little lp or big LP
+
+00:24:14.440 --> 00:24:20.410 align:middle line:84%
+so that I would get out
+the little lp or big LP
+
+00:24:20.410 --> 00:24:22.420 align:middle line:84%
+norm, when I define
+the norm according
+
+00:24:22.420 --> 00:24:25.850 align:middle line:90%
+to how I've been doing it.
+
+00:24:25.850 --> 00:24:29.590 align:middle line:90%
+So the question on hand is--
+
+00:24:29.590 --> 00:24:39.340 align:middle line:90%
+
+
+00:24:39.340 --> 00:24:51.235 align:middle line:84%
+the other little lp or big LP
+spaces, also Hilbert spaces.
+
+00:24:51.235 --> 00:24:54.430 align:middle line:90%
+
+
+00:24:54.430 --> 00:24:56.930 align:middle line:84%
+All right, so again
+it's clear that if I
+
+00:24:56.930 --> 00:24:58.970 align:middle line:84%
+were to define the
+inner product in the way
+
+00:24:58.970 --> 00:25:01.220 align:middle line:84%
+I did in the two
+examples, then that only
+
+00:25:01.220 --> 00:25:03.860 align:middle line:90%
+is going to give the l2 norm.
+
+00:25:03.860 --> 00:25:06.830 align:middle line:84%
+I'm asking now is there
+some magical inner product
+
+00:25:06.830 --> 00:25:12.470 align:middle line:84%
+I can define on these spaces
+that spits out the little lp
+
+00:25:12.470 --> 00:25:13.880 align:middle line:90%
+or big LP norm?
+
+00:25:13.880 --> 00:25:16.490 align:middle line:90%
+
+
+00:25:16.490 --> 00:25:18.330 align:middle line:90%
+So the answer is no.
+
+00:25:18.330 --> 00:25:25.460 align:middle line:84%
+And there's in fact, a way
+to determine whether or not
+
+00:25:25.460 --> 00:25:28.400 align:middle line:84%
+a space is a Hilbert space
+because if you think about it,
+
+00:25:28.400 --> 00:25:34.600 align:middle line:84%
+the way we've come
+about introducing what
+
+00:25:34.600 --> 00:25:37.060 align:middle line:84%
+a pre-Hilbert space is
+and a Hilbert space is,
+
+00:25:37.060 --> 00:25:39.257 align:middle line:90%
+we first had a norm in our hand.
+
+00:25:39.257 --> 00:25:40.840 align:middle line:84%
+And then we'd define
+an inner product.
+
+00:25:40.840 --> 00:25:42.460 align:middle line:84%
+Well, if that's the way
+you're building your space,
+
+00:25:42.460 --> 00:25:45.010 align:middle line:84%
+then you know automatically
+that it's a Hilbert space
+
+00:25:45.010 --> 00:25:47.290 align:middle line:84%
+because you had an
+inner product first
+
+00:25:47.290 --> 00:25:49.330 align:middle line:84%
+and then you define
+the norm second.
+
+00:25:49.330 --> 00:25:54.760 align:middle line:84%
+Let's suppose the data you're
+given is some norm on a space.
+
+00:25:54.760 --> 00:25:58.570 align:middle line:84%
+When can you
+determine if that norm
+
+00:25:58.570 --> 00:26:01.390 align:middle line:90%
+comes from an inner product?
+
+00:26:01.390 --> 00:26:06.190 align:middle line:84%
+That's the question that is
+underlying this question I
+
+00:26:06.190 --> 00:26:07.090 align:middle line:90%
+wrote on the board.
+
+00:26:07.090 --> 00:26:10.700 align:middle line:90%
+If I have a norm space--
+
+00:26:10.700 --> 00:26:13.190 align:middle line:84%
+all right, so my initial
+data is the norm.
+
+00:26:13.190 --> 00:26:16.430 align:middle line:84%
+When can I tell that that norm
+comes from an inner product?
+
+00:26:16.430 --> 00:26:25.550 align:middle line:84%
+And so you'll prove
+this basically
+
+00:26:25.550 --> 00:26:27.170 align:middle line:90%
+by direct calculation.
+
+00:26:27.170 --> 00:26:30.300 align:middle line:90%
+
+
+00:26:30.300 --> 00:26:39.080 align:middle line:84%
+And this is the following
+parallelogram law,
+
+00:26:39.080 --> 00:26:40.940 align:middle line:90%
+which is the following.
+
+00:26:40.940 --> 00:26:59.350 align:middle line:84%
+If H is a pre-Hilbert
+space, then for all uv in H,
+
+00:26:59.350 --> 00:27:06.700 align:middle line:84%
+if I take the norm of
+u plus v squared, and I
+
+00:27:06.700 --> 00:27:10.660 align:middle line:84%
+add the norm of u
+minus v squared,
+
+00:27:10.660 --> 00:27:15.760 align:middle line:84%
+this is equal to twice
+the norm of u squared
+
+00:27:15.760 --> 00:27:18.880 align:middle line:90%
+plus the norm of v squared.
+
+00:27:18.880 --> 00:27:25.230 align:middle line:84%
+So this is a condition
+that is stated
+
+00:27:25.230 --> 00:27:26.895 align:middle line:90%
+purely in terms of the norm.
+
+00:27:26.895 --> 00:27:33.210 align:middle line:90%
+
+
+00:27:33.210 --> 00:27:56.680 align:middle line:84%
+Moreover, if h is a norm
+space satisfying star,
+
+00:27:56.680 --> 00:28:00.830 align:middle line:90%
+then h is a pre-Hilbert space.
+
+00:28:00.830 --> 00:28:04.359 align:middle line:90%
+
+
+00:28:04.359 --> 00:28:09.600 align:middle line:84%
+OK, in other words,
+although it seems
+
+00:28:09.600 --> 00:28:13.890 align:middle line:84%
+we defined Hilbert spaces
+or pre-Hilbert spaces
+
+00:28:13.890 --> 00:28:16.540 align:middle line:84%
+initially in terms of an
+inner product, in fact,
+
+00:28:16.540 --> 00:28:19.950 align:middle line:84%
+you can say a norm space
+is a pre-Hilbert space if
+
+00:28:19.950 --> 00:28:23.860 align:middle line:84%
+and only if it satisfies
+this parallelogram law.
+
+00:28:23.860 --> 00:28:27.420 align:middle line:84%
+So if you have on your
+hands, just the norm,
+
+00:28:27.420 --> 00:28:30.990 align:middle line:84%
+then as long as that norm
+satisfies this identity,
+
+00:28:30.990 --> 00:28:34.120 align:middle line:84%
+that norm can be derived
+from an inner product.
+
+00:28:34.120 --> 00:28:42.230 align:middle line:84%
+So using this theorem, you can
+check that the answer is only
+
+00:28:42.230 --> 00:28:47.210 align:middle line:90%
+for people to--
+
+00:28:47.210 --> 00:28:51.830 align:middle line:84%
+so in other words, if
+you can come with u and v
+
+00:28:51.830 --> 00:28:54.920 align:middle line:84%
+so that this inequality
+is not satisfied
+
+00:28:54.920 --> 00:28:56.980 align:middle line:90%
+when p is not equal to 2.
+
+00:28:56.980 --> 00:28:57.480 align:middle line:90%
+OK.
+
+00:28:57.480 --> 00:29:07.180 align:middle line:90%
+
+
+00:29:07.180 --> 00:29:14.350 align:middle line:84%
+OK, so now we have the
+notion of a Hilbert space
+
+00:29:14.350 --> 00:29:19.570 align:middle line:84%
+where this norm given in terms
+of an inner product, this space
+
+00:29:19.570 --> 00:29:21.860 align:middle line:90%
+is complete.
+
+00:29:21.860 --> 00:29:27.000 align:middle line:84%
+Now, we have an
+inner product, so we
+
+00:29:27.000 --> 00:29:35.310 align:middle line:84%
+can start talking
+about vectors being
+
+00:29:35.310 --> 00:29:45.030 align:middle line:84%
+orthogonal to other vectors
+or orthonormal sets, which
+
+00:29:45.030 --> 00:29:48.660 align:middle line:84%
+when I first started
+lecturing about this stuff,
+
+00:29:48.660 --> 00:29:52.350 align:middle line:84%
+I was already using the
+terminology, this thing being
+
+00:29:52.350 --> 00:29:54.600 align:middle line:84%
+orthogonal to this thing
+or something like that.
+
+00:29:54.600 --> 00:30:01.381 align:middle line:90%
+
+
+00:30:01.381 --> 00:30:03.370 align:middle line:84%
+But of course, if
+you don't remember
+
+00:30:03.370 --> 00:30:08.570 align:middle line:84%
+what those words mean
+from linear algebra,
+
+00:30:08.570 --> 00:30:10.630 align:middle line:90%
+I'll quickly remind you.
+
+00:30:10.630 --> 00:30:13.975 align:middle line:84%
+So suppose we're in
+a pre-Hilbert space.
+
+00:30:13.975 --> 00:30:26.760 align:middle line:90%
+
+
+00:30:26.760 --> 00:30:29.040 align:middle line:84%
+We say that two
+elements, u and v,
+
+00:30:29.040 --> 00:30:41.210 align:middle line:84%
+are orthogonal, if their
+inner product is zero.
+
+00:30:41.210 --> 00:30:43.940 align:middle line:90%
+
+
+00:30:43.940 --> 00:30:49.800 align:middle line:84%
+If instead of saying orthogonal
+I want to write this in words,
+
+00:30:49.800 --> 00:30:53.820 align:middle line:90%
+I'll write u per v, OK.
+
+00:30:53.820 --> 00:31:06.490 align:middle line:90%
+
+
+00:31:06.490 --> 00:31:09.610 align:middle line:90%
+So throughout H is going to be--
+
+00:31:09.610 --> 00:31:13.840 align:middle line:84%
+well, a pre-Hilbert space if
+I don't actually write it.
+
+00:31:13.840 --> 00:31:33.740 align:middle line:84%
+If h is a pre-Hilbert
+space, a subset,
+
+00:31:33.740 --> 00:31:38.430 align:middle line:84%
+which I'll denote by a lambda,
+lambda, and capital lambda,
+
+00:31:38.430 --> 00:31:43.260 align:middle line:84%
+so just some subset indexed
+by some indexing set capital
+
+00:31:43.260 --> 00:31:43.760 align:middle line:90%
+lambda.
+
+00:31:43.760 --> 00:31:46.430 align:middle line:90%
+
+
+00:31:46.430 --> 00:31:58.830 align:middle line:84%
+We say this set is
+orthonormal if for all lambda
+
+00:31:58.830 --> 00:32:01.740 align:middle line:84%
+each one of these vectors in
+the subset has unit length.
+
+00:32:01.740 --> 00:32:05.720 align:middle line:90%
+
+
+00:32:05.720 --> 00:32:17.240 align:middle line:84%
+And I need two different
+indexed elements,
+
+00:32:17.240 --> 00:32:24.650 align:middle line:84%
+implies that they
+are orthogonal.
+
+00:32:24.650 --> 00:32:25.150 align:middle line:90%
+OK.
+
+00:32:25.150 --> 00:32:28.950 align:middle line:90%
+
+
+00:32:28.950 --> 00:32:33.350 align:middle line:84%
+So maybe this
+notation scares you
+
+00:32:33.350 --> 00:32:35.420 align:middle line:84%
+because what's
+this indexing set?
+
+00:32:35.420 --> 00:32:37.290 align:middle line:84%
+Typically we just use
+the natural number.
+
+00:32:37.290 --> 00:32:40.220 align:middle line:84%
+So let me just make that
+remark although, I'll
+
+00:32:40.220 --> 00:32:43.820 align:middle line:84%
+make a few remarks in general
+about orthonormal sets that
+
+00:32:43.820 --> 00:32:47.000 align:middle line:84%
+are not necessarily indexed
+by the natural numbers
+
+00:32:47.000 --> 00:33:11.870 align:middle line:84%
+will mainly be interested in
+a finite set or a countably
+
+00:33:11.870 --> 00:33:12.560 align:middle line:90%
+infinite set.
+
+00:33:12.560 --> 00:33:16.652 align:middle line:90%
+
+
+00:33:16.652 --> 00:33:23.960 align:middle line:84%
+OK, so although an
+orthonormal subset of Hs
+
+00:33:23.960 --> 00:33:27.380 align:middle line:84%
+could be a very
+crazy type of subset,
+
+00:33:27.380 --> 00:33:29.120 align:middle line:84%
+mainly we're going
+to be interested only
+
+00:33:29.120 --> 00:33:34.730 align:middle line:84%
+in finite or countable,
+countably infinite
+
+00:33:34.730 --> 00:33:35.645 align:middle line:90%
+orthonormal sets.
+
+00:33:35.645 --> 00:33:43.530 align:middle line:90%
+
+
+00:33:43.530 --> 00:33:47.750 align:middle line:90%
+So what are some examples?
+
+00:33:47.750 --> 00:33:50.795 align:middle line:90%
+
+
+00:33:50.795 --> 00:34:00.170 align:middle line:90%
+OK, so simplest examples if--
+
+00:34:00.170 --> 00:34:15.250 align:middle line:84%
+so this is an example of
+a set of orthonormal--
+
+00:34:15.250 --> 00:34:17.860 align:middle line:90%
+or an orthonormal subset of c2.
+
+00:34:17.860 --> 00:34:23.464 align:middle line:90%
+Or this is a 1.
+
+00:34:23.464 --> 00:34:27.100 align:middle line:90%
+
+
+00:34:27.100 --> 00:34:32.790 align:middle line:84%
+This is also an example of
+an orthonormal subset of c3,
+
+00:34:32.790 --> 00:34:38.650 align:middle line:84%
+let's say, using
+notation from before.
+
+00:34:38.650 --> 00:34:44.830 align:middle line:84%
+If I denote by e sub n, this
+is the sequence consisting
+
+00:34:44.830 --> 00:34:48.250 align:middle line:84%
+of zeros up until I hit
+the end spot and then
+
+00:34:48.250 --> 00:34:59.300 align:middle line:84%
+0 afterwards and entry, which
+is an element of little l2,
+
+00:34:59.300 --> 00:35:12.640 align:middle line:84%
+then this is an orthonormal
+subset of l2, OK.
+
+00:35:12.640 --> 00:35:16.660 align:middle line:90%
+
+
+00:35:16.660 --> 00:35:23.450 align:middle line:90%
+One other example is--
+
+00:35:23.450 --> 00:35:28.130 align:middle line:84%
+Let's look at the functions 1
+over square root of 2pi times
+
+00:35:28.130 --> 00:35:32.100 align:middle line:90%
+e to the i and x.
+
+00:35:32.100 --> 00:35:37.605 align:middle line:84%
+And let's think of these as
+elements of l2 minus pi to pi.
+
+00:35:37.605 --> 00:35:42.450 align:middle line:90%
+
+
+00:35:42.450 --> 00:35:56.995 align:middle line:84%
+Then this is an
+orthonormal subset of--
+
+00:35:56.995 --> 00:36:01.000 align:middle line:90%
+
+
+00:36:01.000 --> 00:36:05.930 align:middle line:84%
+I might write O-N instead
+of writing out orthonormal,
+
+00:36:05.930 --> 00:36:10.640 align:middle line:84%
+but this is an
+orthonormal subset of L2.
+
+00:36:10.640 --> 00:36:17.940 align:middle line:84%
+If I take the inner product
+of two of these guys, I get--
+
+00:36:17.940 --> 00:36:21.960 align:middle line:90%
+
+
+00:36:21.960 --> 00:36:24.510 align:middle line:84%
+let's say I just look
+at two different ones.
+
+00:36:24.510 --> 00:36:28.140 align:middle line:90%
+
+
+00:36:28.140 --> 00:36:30.540 align:middle line:84%
+let's say m does not
+equal n, so then I
+
+00:36:30.540 --> 00:36:39.070 align:middle line:84%
+take the inner product of imx
+with inner product of inx,
+
+00:36:39.070 --> 00:36:41.360 align:middle line:90%
+complex conjugate.
+
+00:36:41.360 --> 00:36:44.920 align:middle line:84%
+So that's the inner
+product on big L2,
+
+00:36:44.920 --> 00:36:52.850 align:middle line:84%
+and this is equal to 1 over
+2 pi times minus pi to pi.
+
+00:36:52.850 --> 00:36:57.580 align:middle line:84%
+Now if m equals n, I just
+get the length of e to the i,
+
+00:36:57.580 --> 00:36:59.860 align:middle line:90%
+nmx squared.
+
+00:36:59.860 --> 00:37:02.380 align:middle line:84%
+The length of e
+to the i, mx is 1.
+
+00:37:02.380 --> 00:37:04.750 align:middle line:84%
+And therefore, I
+would just get 1 here,
+
+00:37:04.750 --> 00:37:08.230 align:middle line:90%
+dx over 2 pi, which gives me 1.
+
+00:37:08.230 --> 00:37:09.710 align:middle line:90%
+But now they're not equal.
+
+00:37:09.710 --> 00:37:17.630 align:middle line:84%
+So I get e to the
+i, m minus nx, dx.
+
+00:37:17.630 --> 00:37:28.190 align:middle line:84%
+And now the integral of this
+creature-- so here e to the i,
+
+00:37:28.190 --> 00:37:35.940 align:middle line:84%
+let's say I had to come
+up with some e to the i
+
+00:37:35.940 --> 00:37:40.620 align:middle line:84%
+y when y is a real number, this
+is by definition cosine of y
+
+00:37:40.620 --> 00:37:42.270 align:middle line:90%
+plus i sine y.
+
+00:37:42.270 --> 00:37:45.830 align:middle line:90%
+
+
+00:37:45.830 --> 00:37:49.400 align:middle line:84%
+Now you can check that
+fundamental theorem of calculus
+
+00:37:49.400 --> 00:37:54.590 align:middle line:84%
+still holds for e
+to the i, m minus n
+
+00:37:54.590 --> 00:38:01.790 align:middle line:84%
+over x And this equals e to
+the im minus nx over i times
+
+00:38:01.790 --> 00:38:03.650 align:middle line:90%
+m minus n.
+
+00:38:03.650 --> 00:38:09.720 align:middle line:84%
+And e to the i, m minus n
+times x is 2 pi periodic.
+
+00:38:09.720 --> 00:38:14.210 align:middle line:84%
+So when I evaluate
+it at minus pi,
+
+00:38:14.210 --> 00:38:16.860 align:middle line:84%
+I get the same value,
+if I evaluated at pi.
+
+00:38:16.860 --> 00:38:19.842 align:middle line:90%
+So this equals 0.
+
+00:38:19.842 --> 00:38:22.280 align:middle line:90%
+OK.
+
+00:38:22.280 --> 00:38:26.805 align:middle line:84%
+So that's an orthonormal
+subset of big L2.
+
+00:38:26.805 --> 00:38:36.900 align:middle line:90%
+
+
+00:38:36.900 --> 00:38:40.770 align:middle line:90%
+So this collection of vectors--
+
+00:38:40.770 --> 00:38:43.170 align:middle line:84%
+and I'm calling them
+vectors, but this collection
+
+00:38:43.170 --> 00:38:45.810 align:middle line:84%
+of elements in big L2
+is still countable,
+
+00:38:45.810 --> 00:38:48.638 align:middle line:84%
+even though I'm indexing
+it by the integers rather
+
+00:38:48.638 --> 00:38:49.680 align:middle line:90%
+than the natural numbers.
+
+00:38:49.680 --> 00:38:54.840 align:middle line:90%
+
+
+00:38:54.840 --> 00:38:56.460 align:middle line:90%
+OK, so we have the following.
+
+00:38:56.460 --> 00:39:02.360 align:middle line:90%
+
+
+00:39:02.360 --> 00:39:05.180 align:middle line:84%
+Now most of what I'm
+going to say with
+
+00:39:05.180 --> 00:39:09.215 align:middle line:84%
+regards to countable
+subsets of--
+
+00:39:09.215 --> 00:39:13.280 align:middle line:90%
+
+
+00:39:13.280 --> 00:39:17.990 align:middle line:84%
+so countable orthonormal
+sets still carries through
+
+00:39:17.990 --> 00:39:21.470 align:middle line:84%
+to possibly uncountable
+orthonormal sets
+
+00:39:21.470 --> 00:39:27.620 align:middle line:84%
+where now a infinite sum over an
+uncountable number of elements
+
+00:39:27.620 --> 00:39:29.780 align:middle line:84%
+has to be defined
+in a precise way.
+
+00:39:29.780 --> 00:39:34.310 align:middle line:84%
+But I will really just stick
+mostly to the countable case,
+
+00:39:34.310 --> 00:39:37.160 align:middle line:84%
+and if you're interested, you
+can always look that stuff up.
+
+00:39:37.160 --> 00:39:39.670 align:middle line:90%
+
+
+00:39:39.670 --> 00:39:40.665 align:middle line:90%
+So I should say--
+
+00:39:40.665 --> 00:39:44.430 align:middle line:90%
+
+
+00:39:44.430 --> 00:39:50.340 align:middle line:84%
+what I haven't said is that
+whether or not the lp spaces,
+
+00:39:50.340 --> 00:39:53.980 align:middle line:84%
+let's say over an
+interval ab or over r,
+
+00:39:53.980 --> 00:39:57.945 align:middle line:84%
+are separable or
+not or even over a--
+
+00:39:57.945 --> 00:40:09.850 align:middle line:90%
+
+
+00:40:09.850 --> 00:40:11.680 align:middle line:90%
+or even over a--
+
+00:40:11.680 --> 00:40:15.160 align:middle line:84%
+so let's stick to either a
+closed and bounded interval
+
+00:40:15.160 --> 00:40:18.120 align:middle line:90%
+or r.
+
+00:40:18.120 --> 00:40:23.010 align:middle line:84%
+Now, why are these
+spaces separable,
+
+00:40:23.010 --> 00:40:27.990 align:middle line:84%
+meaning they have a
+countably dense subset, so
+
+00:40:27.990 --> 00:40:29.460 align:middle line:90%
+including big L2?
+
+00:40:29.460 --> 00:40:32.880 align:middle line:90%
+
+
+00:40:32.880 --> 00:40:35.550 align:middle line:84%
+The reason is the
+following, so what
+
+00:40:35.550 --> 00:40:44.490 align:middle line:84%
+you proved in the assignment is
+that the continuous functions
+
+00:40:44.490 --> 00:40:48.780 align:middle line:84%
+are dense and little and
+big LP for p between p
+
+00:40:48.780 --> 00:40:53.010 align:middle line:84%
+equals 1 to infinity,
+strictly less than infinity.
+
+00:40:53.010 --> 00:40:55.600 align:middle line:84%
+OK, they're not
+dense in l infinity.
+
+00:40:55.600 --> 00:40:58.640 align:middle line:84%
+So as long as you stay away
+from that, they're dense, OK.
+
+00:40:58.640 --> 00:41:04.230 align:middle line:90%
+
+
+00:41:04.230 --> 00:41:06.870 align:middle line:84%
+So continuous functions
+are dense in lp.
+
+00:41:06.870 --> 00:41:09.330 align:middle line:84%
+Now, what's one
+way to approximate
+
+00:41:09.330 --> 00:41:11.910 align:middle line:90%
+a continuous function?
+
+00:41:11.910 --> 00:41:14.850 align:middle line:84%
+Going back to your
+introductory analysis class,
+
+00:41:14.850 --> 00:41:17.130 align:middle line:84%
+hopefully you covered what's
+called the Weierstrauss
+
+00:41:17.130 --> 00:41:18.930 align:middle line:84%
+approximation
+theorem, which says
+
+00:41:18.930 --> 00:41:21.100 align:middle line:84%
+that for every
+continuous function,
+
+00:41:21.100 --> 00:41:23.910 align:middle line:84%
+you can approximate it
+uniformly on the interval
+
+00:41:23.910 --> 00:41:29.660 align:middle line:90%
+by a polynomial, OK.
+
+00:41:29.660 --> 00:41:32.720 align:middle line:84%
+So that shows that
+polynomials are
+
+00:41:32.720 --> 00:41:39.410 align:middle line:84%
+dense and all the lp spaces,
+of course, not l infinity.
+
+00:41:39.410 --> 00:41:44.150 align:middle line:84%
+Now how do you go from
+the set of polynomials,
+
+00:41:44.150 --> 00:41:47.590 align:middle line:84%
+which is uncountable to a
+count, which is dense in LP,
+
+00:41:47.590 --> 00:41:51.340 align:middle line:84%
+but is uncountable to a
+countable dense subset, which
+
+00:41:51.340 --> 00:41:53.200 align:middle line:90%
+is dense in LP.
+
+00:41:53.200 --> 00:41:54.940 align:middle line:90%
+Make everything rational.
+
+00:41:54.940 --> 00:41:59.230 align:middle line:84%
+OK, the set of polynomials
+with rational coefficients
+
+00:41:59.230 --> 00:42:00.700 align:middle line:90%
+is, in fact, countable.
+
+00:42:00.700 --> 00:42:03.670 align:middle line:90%
+
+
+00:42:03.670 --> 00:42:06.460 align:middle line:84%
+And you can approximate
+every polynomial
+
+00:42:06.460 --> 00:42:11.470 align:middle line:84%
+with real coefficients on a
+closed and bounded interval
+
+00:42:11.470 --> 00:42:15.730 align:middle line:84%
+by a polynomial with
+rational coefficients.
+
+00:42:15.730 --> 00:42:18.840 align:middle line:84%
+It's not too
+difficult to believe.
+
+00:42:18.840 --> 00:42:23.550 align:middle line:84%
+And therefore, the polynomials
+with rational coefficients
+
+00:42:23.550 --> 00:42:29.770 align:middle line:84%
+are dense in the lp spaces as
+long as I'm not in l infinity.
+
+00:42:29.770 --> 00:42:33.460 align:middle line:84%
+And therefore all the
+lp spaces are separable.
+
+00:42:33.460 --> 00:42:40.550 align:middle line:84%
+All right, now the
+little lp spaces are also
+
+00:42:40.550 --> 00:42:45.230 align:middle line:84%
+separable because except
+for L infinity also,
+
+00:42:45.230 --> 00:42:48.760 align:middle line:90%
+which is not separable--
+
+00:42:48.760 --> 00:42:54.990 align:middle line:84%
+because, first off, a dense
+subset of the, let's say,
+
+00:42:54.990 --> 00:42:57.390 align:middle line:84%
+little l2-- let's
+make things definite--
+
+00:42:57.390 --> 00:43:00.660 align:middle line:84%
+is the subspace consisting
+of all sequences, which
+
+00:43:00.660 --> 00:43:03.850 align:middle line:90%
+terminate after some entry.
+
+00:43:03.850 --> 00:43:07.350 align:middle line:84%
+In other words, it's
+0 after that, OK.
+
+00:43:07.350 --> 00:43:09.000 align:middle line:84%
+Convince yourself
+that this subspace
+
+00:43:09.000 --> 00:43:11.380 align:middle line:84%
+of all finitely
+terminating sequences,
+
+00:43:11.380 --> 00:43:14.790 align:middle line:84%
+this is dense in
+little lp for every--
+
+00:43:14.790 --> 00:43:19.630 align:middle line:84%
+for p between one an infinity,
+not equal to infinity.
+
+00:43:19.630 --> 00:43:22.450 align:middle line:84%
+So finitely
+terminating sequences
+
+00:43:22.450 --> 00:43:25.870 align:middle line:90%
+are dense and little lp.
+
+00:43:25.870 --> 00:43:31.920 align:middle line:84%
+Unfortunately, that's,
+again, an uncountable--
+
+00:43:31.920 --> 00:43:33.580 align:middle line:90%
+I mean, it's a subspace.
+
+00:43:33.580 --> 00:43:34.980 align:middle line:90%
+So it's going to be uncountable.
+
+00:43:34.980 --> 00:43:37.530 align:middle line:84%
+So how do I get now a
+countable thing again?
+
+00:43:37.530 --> 00:43:39.310 align:middle line:84%
+I replace everything
+by rational numbers.
+
+00:43:39.310 --> 00:43:43.740 align:middle line:84%
+So if I can approximate
+every sequence which
+
+00:43:43.740 --> 00:43:48.390 align:middle line:84%
+terminates after a certain
+point consisting of real numbers
+
+00:43:48.390 --> 00:43:51.720 align:middle line:84%
+by a sequence full of
+just rationals terminating
+
+00:43:51.720 --> 00:43:55.320 align:middle line:84%
+after a certain point by just
+choosing the rationals very
+
+00:43:55.320 --> 00:43:57.480 align:middle line:90%
+close to those real numbers.
+
+00:43:57.480 --> 00:44:02.010 align:middle line:84%
+And I didn't say this explicitly
+a minute ago that we still
+
+00:44:02.010 --> 00:44:04.080 align:middle line:84%
+have the density of the
+rationals and the reals.
+
+00:44:04.080 --> 00:44:06.810 align:middle line:84%
+For every real, I can find
+a rational very close to it.
+
+00:44:06.810 --> 00:44:09.810 align:middle line:90%
+
+
+00:44:09.810 --> 00:44:13.530 align:middle line:84%
+So this is thinking
+that goes on.
+
+00:44:13.530 --> 00:44:17.190 align:middle line:84%
+But now the set of all
+finitely terminating
+
+00:44:17.190 --> 00:44:19.720 align:middle line:84%
+sequences with
+rational coefficients.
+
+00:44:19.720 --> 00:44:22.530 align:middle line:90%
+This is a countable set.
+
+00:44:22.530 --> 00:44:26.040 align:middle line:84%
+And that countable set
+is dense in little lp.
+
+00:44:26.040 --> 00:44:27.630 align:middle line:84%
+And therefore little
+lp is separable
+
+00:44:27.630 --> 00:44:32.550 align:middle line:84%
+as long as p is between 1 and
+infinity, excluding infinity.
+
+00:44:32.550 --> 00:44:36.940 align:middle line:84%
+OK, so I said at the
+beginning that we're
+
+00:44:36.940 --> 00:44:40.810 align:middle line:84%
+going to be mainly interested
+in separable spaces
+
+00:44:40.810 --> 00:44:43.690 align:middle line:84%
+without actually
+saying why little lp
+
+00:44:43.690 --> 00:44:46.540 align:middle line:84%
+or little l2 and big
+L2 are separable.
+
+00:44:46.540 --> 00:44:49.060 align:middle line:90%
+
+
+00:44:49.060 --> 00:44:53.200 align:middle line:84%
+But I just gave you the argument
+by word of mouth now instead
+
+00:44:53.200 --> 00:44:54.735 align:middle line:90%
+of actually writing it down.
+
+00:44:54.735 --> 00:45:03.000 align:middle line:84%
+OK, so we have the following
+Bessel's inequality equality
+
+00:45:03.000 --> 00:45:12.920 align:middle line:84%
+for countable
+orthonormal subsets.
+
+00:45:12.920 --> 00:45:20.170 align:middle line:90%
+So if the n is--
+
+00:45:20.170 --> 00:45:22.210 align:middle line:90%
+well, let me just put n here.
+
+00:45:22.210 --> 00:45:32.090 align:middle line:84%
+If this is a countable,
+meaning it's either finite
+
+00:45:32.090 --> 00:45:43.910 align:middle line:84%
+or it's countably
+infinite, when it's
+
+00:45:43.910 --> 00:46:11.650 align:middle line:84%
+a countable orthonormal subset
+of a pre-Hilbert space, h,
+
+00:46:11.650 --> 00:46:18.590 align:middle line:84%
+and for all u [? en ?] h, if
+I look at the sum of squares
+
+00:46:18.590 --> 00:46:22.720 align:middle line:84%
+u in a product e sub
+n, this is less than
+
+00:46:22.720 --> 00:46:29.700 align:middle line:84%
+or equal to the norm
+of u squared, OK.
+
+00:46:29.700 --> 00:46:33.280 align:middle line:90%
+
+
+00:46:33.280 --> 00:46:37.120 align:middle line:84%
+So our discussion here
+of orthonormal subsets
+
+00:46:37.120 --> 00:46:40.510 align:middle line:84%
+is taking place within
+a pre-Hilbert space.
+
+00:46:40.510 --> 00:46:43.565 align:middle line:84%
+We don't need Hilbert spaces
+to talk about these concepts.
+
+00:46:43.565 --> 00:46:45.190 align:middle line:84%
+Yeah, but when we're
+in a Hilbert space
+
+00:46:45.190 --> 00:46:47.710 align:middle line:84%
+and we have a certain
+or the normal subset,
+
+00:46:47.710 --> 00:46:52.726 align:middle line:84%
+that would be important that
+we're in a Hilbert space.
+
+00:46:52.726 --> 00:46:59.690 align:middle line:90%
+OK, so the proof is--
+
+00:46:59.690 --> 00:47:01.310 align:middle line:90%
+let's do the finite case first.
+
+00:47:01.310 --> 00:47:07.190 align:middle line:90%
+
+
+00:47:07.190 --> 00:47:15.370 align:middle line:84%
+So suppose I have a finite
+collection of orthonormal
+
+00:47:15.370 --> 00:47:18.370 align:middle line:84%
+or a finite orthonormal
+subset of h or a finite--
+
+00:47:18.370 --> 00:47:20.110 align:middle line:84%
+or I'll often say
+finite collection
+
+00:47:20.110 --> 00:47:21.685 align:middle line:90%
+of all normal vectors in h.
+
+00:47:21.685 --> 00:47:25.300 align:middle line:90%
+
+
+00:47:25.300 --> 00:47:32.148 align:middle line:84%
+And subset of h in on,
+standing in for orthonormal.
+
+00:47:32.148 --> 00:47:40.460 align:middle line:90%
+
+
+00:47:40.460 --> 00:47:42.920 align:middle line:84%
+Then let me just record
+a few identities, which
+
+00:47:42.920 --> 00:47:48.170 align:middle line:84%
+are pretty easy to verify
+sum from n equals 1 to n
+
+00:47:48.170 --> 00:47:51.290 align:middle line:90%
+of u inner product en, en.
+
+00:47:51.290 --> 00:47:53.990 align:middle line:90%
+
+
+00:47:53.990 --> 00:47:55.835 align:middle line:84%
+If I take the norm of
+this thing squared--
+
+00:47:55.835 --> 00:47:58.730 align:middle line:90%
+
+
+00:47:58.730 --> 00:47:59.880 align:middle line:90%
+let's compute this out.
+
+00:47:59.880 --> 00:48:04.230 align:middle line:84%
+This is the inner product
+of with the understanding
+
+00:48:04.230 --> 00:48:10.380 align:middle line:84%
+that n is going from
+1 to capital N. Let's
+
+00:48:10.380 --> 00:48:11.760 align:middle line:90%
+use a different index here.
+
+00:48:11.760 --> 00:48:17.180 align:middle line:90%
+
+
+00:48:17.180 --> 00:48:18.940 align:middle line:90%
+And this is equal to nmuen.
+
+00:48:18.940 --> 00:48:23.950 align:middle line:90%
+
+
+00:48:23.950 --> 00:48:28.060 align:middle line:90%
+Now I have this sum here of--
+
+00:48:28.060 --> 00:48:38.430 align:middle line:84%
+oh, I'm leaving out em of
+u, vm, the complex conjugate
+
+00:48:38.430 --> 00:48:41.707 align:middle line:84%
+times the inner
+product of en with em.
+
+00:48:41.707 --> 00:48:43.290 align:middle line:84%
+That's the two vectors
+that are taking
+
+00:48:43.290 --> 00:48:45.450 align:middle line:90%
+the complex conjugate of.
+
+00:48:45.450 --> 00:48:47.010 align:middle line:90%
+This is a number here.
+
+00:48:47.010 --> 00:48:47.760 align:middle line:90%
+It just comes out.
+
+00:48:47.760 --> 00:48:50.040 align:middle line:84%
+This number here gets hit
+with a complex conjugate
+
+00:48:50.040 --> 00:48:50.970 align:middle line:90%
+when it comes out.
+
+00:48:50.970 --> 00:48:54.750 align:middle line:84%
+Now the inner product
+of en with em is 0.
+
+00:48:54.750 --> 00:48:57.300 align:middle line:84%
+When n does not equal
+m, it is equal to 1
+
+00:48:57.300 --> 00:49:00.870 align:middle line:84%
+because it's equal to the norm
+of en squared when n equals m.
+
+00:49:00.870 --> 00:49:03.210 align:middle line:84%
+So all I pick up
+from this double sum,
+
+00:49:03.210 --> 00:49:05.250 align:middle line:84%
+which is just a
+finite double sum,
+
+00:49:05.250 --> 00:49:13.540 align:middle line:84%
+is when n equals m and
+n going from 1 to n.
+
+00:49:13.540 --> 00:49:18.850 align:middle line:90%
+
+
+00:49:18.850 --> 00:49:30.070 align:middle line:84%
+And therefore, this is
+equal to uen squared, OK.
+
+00:49:30.070 --> 00:49:37.070 align:middle line:90%
+
+
+00:49:37.070 --> 00:49:43.720 align:middle line:84%
+And that's one formula
+I want to have.
+
+00:49:43.720 --> 00:49:48.730 align:middle line:84%
+Another one is that if I take
+the inner product of u with m
+
+00:49:48.730 --> 00:49:55.260 align:middle line:90%
+equals 1 to the n of the sum.
+
+00:49:55.260 --> 00:50:00.870 align:middle line:84%
+And maybe you recognize what
+this sum here actually is.
+
+00:50:00.870 --> 00:50:02.140 align:middle line:90%
+I'll say so in a minute.
+
+00:50:02.140 --> 00:50:07.320 align:middle line:84%
+So this is equal to sum
+from n equals 1 to n of--
+
+00:50:07.320 --> 00:50:12.480 align:middle line:84%
+so u inner product e
+sub n times this number.
+
+00:50:12.480 --> 00:50:15.170 align:middle line:84%
+This number comes out and
+gives me a complex conjugate.
+
+00:50:15.170 --> 00:50:28.610 align:middle line:90%
+
+
+00:50:28.610 --> 00:50:29.110 align:middle line:90%
+OK.
+
+00:50:29.110 --> 00:50:41.210 align:middle line:90%
+
+
+00:50:41.210 --> 00:50:46.580 align:middle line:84%
+And therefore, zero,
+which is bigger than
+
+00:50:46.580 --> 00:50:57.750 align:middle line:84%
+or equal to the norm of u minus
+n, equals 1 to n of uen, en.
+
+00:50:57.750 --> 00:51:01.260 align:middle line:84%
+Now if you remember back from
+linear algebra or from calculus
+
+00:51:01.260 --> 00:51:07.690 align:middle line:84%
+that if I have orthonormal
+vectors, and I have a vector u,
+
+00:51:07.690 --> 00:51:10.510 align:middle line:84%
+this quantity is nothing
+but the projection of u
+
+00:51:10.510 --> 00:51:14.360 align:middle line:84%
+onto the span of those
+orthonormal vectors.
+
+00:51:14.360 --> 00:51:18.340 align:middle line:84%
+So what I'm looking
+at here is, if you
+
+00:51:18.340 --> 00:51:23.260 align:middle line:84%
+like, the norm part
+of u that's orthogonal
+
+00:51:23.260 --> 00:51:25.570 align:middle line:90%
+to these finitely many vectors.
+
+00:51:25.570 --> 00:51:31.529 align:middle line:90%
+
+
+00:51:31.529 --> 00:51:34.100 align:middle line:84%
+OK, so this thing is bigger
+than or equal to zero.
+
+00:51:34.100 --> 00:51:37.970 align:middle line:84%
+We use that formula of how to
+compute the norm of something
+
+00:51:37.970 --> 00:51:38.600 align:middle line:90%
+plus something.
+
+00:51:38.600 --> 00:51:43.190 align:middle line:84%
+And this is equal to norm
+of u squared plus norm n
+
+00:51:43.190 --> 00:51:50.540 align:middle line:84%
+equals 1 to nuen, en
+squared minus 2 times
+
+00:51:50.540 --> 00:51:56.660 align:middle line:84%
+the real part of u inner
+product sum from n equals 1 to n
+
+00:51:56.660 --> 00:51:59.870 align:middle line:90%
+of uen, en.
+
+00:51:59.870 --> 00:52:02.440 align:middle line:90%
+
+
+00:52:02.440 --> 00:52:05.510 align:middle line:84%
+OK, and now we know what
+all of these things are.
+
+00:52:05.510 --> 00:52:07.730 align:middle line:90%
+This is equal to--
+
+00:52:07.730 --> 00:52:10.940 align:middle line:84%
+I'm not even going to go over--
+this is equal to this quantity
+
+00:52:10.940 --> 00:52:13.580 align:middle line:90%
+here as is this inner product.
+
+00:52:13.580 --> 00:52:15.270 align:middle line:84%
+It's also equal to
+this thing here.
+
+00:52:15.270 --> 00:52:17.900 align:middle line:84%
+So the real part is
+equal to this thing
+
+00:52:17.900 --> 00:52:21.290 align:middle line:84%
+here because this
+is a real number.
+
+00:52:21.290 --> 00:52:24.480 align:middle line:84%
+Since this comes with a
+2, I cancel one of those.
+
+00:52:24.480 --> 00:52:30.740 align:middle line:84%
+So I get norm of u squared
+minus sum from n equals 1 to n
+
+00:52:30.740 --> 00:52:39.110 align:middle line:84%
+of u, en squared, which
+is exactly what I wanted
+
+00:52:39.110 --> 00:52:40.460 align:middle line:90%
+to prove for the finit case.
+
+00:52:40.460 --> 00:52:47.000 align:middle line:90%
+
+
+00:52:47.000 --> 00:52:50.105 align:middle line:84%
+But the infinite case then
+follows from the finite case.
+
+00:52:50.105 --> 00:53:00.050 align:middle line:90%
+
+
+00:53:00.050 --> 00:53:05.270 align:middle line:84%
+And by letting capital N go to
+infinity-- so infinite case,
+
+00:53:05.270 --> 00:53:16.310 align:middle line:84%
+suppose en equals 1 to infinity
+is an orthonormal normal subset
+
+00:53:16.310 --> 00:53:24.150 align:middle line:84%
+of H, then we know that
+for all N, capital N,
+
+00:53:24.150 --> 00:53:28.840 align:middle line:84%
+we have that sum over
+n equals 1 to n of uen.
+
+00:53:28.840 --> 00:53:32.470 align:middle line:90%
+
+
+00:53:32.470 --> 00:53:36.110 align:middle line:84%
+This is less than or equal
+to the norm of u squared.
+
+00:53:36.110 --> 00:53:40.240 align:middle line:84%
+So I can just send
+capital N to infinity
+
+00:53:40.240 --> 00:53:48.880 align:middle line:84%
+to get that the sum equals 1 to
+infinity of norm of un squared
+
+00:53:48.880 --> 00:53:52.435 align:middle line:84%
+is less than or equal to
+the norm of u squared.
+
+00:53:52.435 --> 00:53:55.110 align:middle line:90%
+
+
+00:53:55.110 --> 00:53:55.610 align:middle line:90%
+OK.
+
+00:53:55.610 --> 00:54:18.095 align:middle line:90%
+
+
+00:54:18.095 --> 00:54:18.595 align:middle line:90%
+OK.
+
+00:54:18.595 --> 00:54:21.130 align:middle line:90%
+
+
+00:54:21.130 --> 00:54:26.620 align:middle line:84%
+So orthonormal
+subsets we can define
+
+00:54:26.620 --> 00:54:30.340 align:middle line:84%
+as a collection of vectors
+that have unit length
+
+00:54:30.340 --> 00:54:34.945 align:middle line:84%
+and are mutually
+orthogonal to each other.
+
+00:54:34.945 --> 00:54:43.330 align:middle line:90%
+
+
+00:54:43.330 --> 00:54:46.600 align:middle line:90%
+Now just orthonormal subsets--
+
+00:54:46.600 --> 00:54:50.920 align:middle line:84%
+just any old orthonormal subset
+is not really the most useful
+
+00:54:50.920 --> 00:55:02.160 align:middle line:84%
+thing, if we're trying to
+study the entire Hilbert's,
+
+00:55:02.160 --> 00:55:08.720 align:middle line:84%
+or pre-Hilbert
+space h, because we
+
+00:55:08.720 --> 00:55:10.760 align:middle line:84%
+may miss something
+if we leave out
+
+00:55:10.760 --> 00:55:13.385 align:middle line:90%
+certain orthonromal vectors.
+
+00:55:13.385 --> 00:55:29.510 align:middle line:90%
+
+
+00:55:29.510 --> 00:55:36.790 align:middle line:84%
+But a more useful
+type orthonormal set
+
+00:55:36.790 --> 00:55:40.390 align:middle line:84%
+is a maximal
+orthonormal set, which
+
+00:55:40.390 --> 00:55:47.270 align:middle line:84%
+is defined as follows,
+an orthonormal subset
+
+00:55:47.270 --> 00:55:57.800 align:middle line:84%
+e lambda, lambda and capital
+lambda of a pre-Hilbert space
+
+00:55:57.800 --> 00:56:06.670 align:middle line:90%
+H is maximal.
+
+00:56:06.670 --> 00:56:11.310 align:middle line:84%
+So again, if having a possibly
+uncountable collection
+
+00:56:11.310 --> 00:56:16.070 align:middle line:84%
+of orthonormal subsets
+indexed by some indexing set
+
+00:56:16.070 --> 00:56:18.560 align:middle line:84%
+makes you uncomfortable,
+replace this
+
+00:56:18.560 --> 00:56:22.130 align:middle line:84%
+with n, where in is
+going from 1 to capital
+
+00:56:22.130 --> 00:56:25.080 align:middle line:84%
+N or n is going from
+1 to infinity, so
+
+00:56:25.080 --> 00:56:27.330 align:middle line:84%
+a countable collection,
+if you like.
+
+00:56:27.330 --> 00:56:33.320 align:middle line:84%
+But I'm stating this so
+that you know that something
+
+00:56:33.320 --> 00:56:34.680 align:middle line:90%
+more general is true.
+
+00:56:34.680 --> 00:56:39.910 align:middle line:90%
+So this is maximal if what?
+
+00:56:39.910 --> 00:56:44.030 align:middle line:90%
+The following holds.
+
+00:56:44.030 --> 00:56:51.590 align:middle line:84%
+If u is an h and u is
+orthogonal to everything
+
+00:56:51.590 --> 00:56:58.785 align:middle line:84%
+in this orthonormal subset,
+this implies that u is 0.
+
+00:56:58.785 --> 00:57:01.540 align:middle line:90%
+
+
+00:57:01.540 --> 00:57:04.010 align:middle line:90%
+OK.
+
+00:57:04.010 --> 00:57:15.270 align:middle line:84%
+So an example, of
+course, is you can
+
+00:57:15.270 --> 00:57:26.490 align:middle line:84%
+check that this collection here
+is maximal orthonormal subset
+
+00:57:26.490 --> 00:57:31.320 align:middle line:90%
+of c2, a non-example.
+
+00:57:31.320 --> 00:57:36.120 align:middle line:84%
+You can maybe see this coming,
+the one we had a minute ago.
+
+00:57:36.120 --> 00:57:40.440 align:middle line:90%
+
+
+00:57:40.440 --> 00:57:48.260 align:middle line:84%
+This is not maximal
+since there's
+
+00:57:48.260 --> 00:57:51.210 align:middle line:84%
+a vector that has inner
+product zero with both of these
+
+00:57:51.210 --> 00:57:56.990 align:middle line:84%
+but is not zero, since
+this should be c3.
+
+00:57:56.990 --> 00:58:08.830 align:middle line:90%
+
+
+00:58:08.830 --> 00:58:13.630 align:middle line:84%
+You just write it loosely this
+way since this vector 010 is
+
+00:58:13.630 --> 00:58:16.930 align:middle line:84%
+orthogonal to both of
+these, but it's not 0.
+
+00:58:16.930 --> 00:58:19.480 align:middle line:84%
+Maximal means if you're
+orthogonal to everything
+
+00:58:19.480 --> 00:58:22.300 align:middle line:84%
+in your collection,
+then it has to be zero.
+
+00:58:22.300 --> 00:58:29.700 align:middle line:84%
+But this is non-zero, and
+it's orthogonal to everything
+
+00:58:29.700 --> 00:58:33.030 align:middle line:90%
+to these two vectors there.
+
+00:58:33.030 --> 00:58:43.590 align:middle line:84%
+Another example is, again,
+with the notation from before.
+
+00:58:43.590 --> 00:58:48.210 align:middle line:84%
+This is where this
+is the sequence that
+
+00:58:48.210 --> 00:58:51.930 align:middle line:84%
+is 0, except for the
+end spot where it is 1.
+
+00:58:51.930 --> 00:59:03.110 align:middle line:84%
+This is maximal orthonormal
+subset of little l2.
+
+00:59:03.110 --> 00:59:03.610 align:middle line:90%
+OK.
+
+00:59:03.610 --> 00:59:09.700 align:middle line:90%
+
+
+00:59:09.700 --> 00:59:12.430 align:middle line:84%
+Now, what we're going
+to see very shortly
+
+00:59:12.430 --> 00:59:20.880 align:middle line:84%
+is that if we have a countably
+infinite maximal subset
+
+00:59:20.880 --> 00:59:23.670 align:middle line:84%
+of a Hilbert space,
+then that set
+
+00:59:23.670 --> 00:59:26.580 align:middle line:84%
+serves kind of the
+same purpose as a basis
+
+00:59:26.580 --> 00:59:31.110 align:middle line:84%
+as an orthonormal basis
+does in linear algebra.
+
+00:59:31.110 --> 00:59:36.090 align:middle line:84%
+I mean, if you look at here,
+already this orthonormal set
+
+00:59:36.090 --> 00:59:36.870 align:middle line:90%
+is maximal.
+
+00:59:36.870 --> 00:59:40.140 align:middle line:84%
+And it also forms
+the basis for c2.
+
+00:59:40.140 --> 00:59:41.790 align:middle line:90%
+This was not maximal.
+
+00:59:41.790 --> 00:59:45.900 align:middle line:84%
+And you see it doesn't
+form a basis for c3.
+
+00:59:45.900 --> 00:59:55.270 align:middle line:84%
+So maximal is going to give us
+a condition, which is equally
+
+00:59:55.270 --> 00:59:56.800 align:middle line:90%
+useful as being a basis.
+
+00:59:56.800 --> 00:59:59.140 align:middle line:90%
+But it won't be a Hamel base.
+
+00:59:59.140 --> 01:00:02.230 align:middle line:84%
+These subsets won't be a
+Hamel basis in the sense
+
+01:00:02.230 --> 01:00:05.560 align:middle line:84%
+that every vector can be written
+as a finite linear combination
+
+01:00:05.560 --> 01:00:09.970 align:middle line:84%
+of the elements of a
+maximal orthonormal subset.
+
+01:00:09.970 --> 01:00:12.430 align:middle line:84%
+But what is true is
+that we can write it
+
+01:00:12.430 --> 01:00:18.230 align:middle line:84%
+as possibly an
+infinite sum involving
+
+01:00:18.230 --> 01:00:20.450 align:middle line:84%
+the maximal orthonormal
+normal subset, which
+
+01:00:20.450 --> 01:00:24.960 align:middle line:84%
+is, in most cases, just as
+good if you want to use that,
+
+01:00:24.960 --> 01:00:25.460 align:middle line:90%
+all right.
+
+01:00:25.460 --> 01:00:28.540 align:middle line:90%
+
+
+01:00:28.540 --> 01:00:33.420 align:middle line:90%
+OK, so first off, when--
+
+01:00:33.420 --> 01:00:41.420 align:middle line:84%
+does every pre-Hilbert space
+have a maximal, a subset?
+
+01:00:41.420 --> 01:00:43.805 align:middle line:84%
+So let me state
+this as a theorem.
+
+01:00:43.805 --> 01:00:45.180 align:middle line:84%
+In fact, I'll
+state two theorems.
+
+01:00:45.180 --> 01:00:50.526 align:middle line:90%
+The first is every--
+
+01:00:50.526 --> 01:00:59.460 align:middle line:84%
+I should say non-trivial because
+we could have the Hilbert
+
+01:00:59.460 --> 01:01:01.320 align:middle line:90%
+space--
+
+01:01:01.320 --> 01:01:07.060 align:middle line:84%
+this be the 0 vector,
+pre-Hilbert space
+
+01:01:07.060 --> 01:01:17.960 align:middle line:90%
+as a maximal orthonormal subset.
+
+01:01:17.960 --> 01:01:20.720 align:middle line:84%
+Whether it's
+separable or not, it
+
+01:01:20.720 --> 01:01:22.500 align:middle line:84%
+has a maximal
+orthonormal subset.
+
+01:01:22.500 --> 01:01:24.500 align:middle line:84%
+And the way you prove
+this is using-- so I'm not
+
+01:01:24.500 --> 01:01:25.917 align:middle line:84%
+going to give a
+proof of this, I'm
+
+01:01:25.917 --> 01:01:28.310 align:middle line:84%
+going to give you a proof
+of something a little less
+
+01:01:28.310 --> 01:01:30.815 align:middle line:84%
+strong but about as
+useful as we'll need.
+
+01:01:30.815 --> 01:01:33.400 align:middle line:90%
+
+
+01:01:33.400 --> 01:01:39.670 align:middle line:84%
+One proves this by
+using Zorn's Lemma,
+
+01:01:39.670 --> 01:01:43.078 align:middle line:84%
+by taking a set,
+your set that you're
+
+01:01:43.078 --> 01:01:44.620 align:middle line:84%
+going to put a
+partial order on to be
+
+01:01:44.620 --> 01:01:48.070 align:middle line:84%
+the collections of
+orthonormal basis, or not
+
+01:01:48.070 --> 01:01:51.070 align:middle line:84%
+orthonormal basis, max
+of orthonormal subsets
+
+01:01:51.070 --> 01:01:53.350 align:middle line:90%
+and then ordered by inclusion.
+
+01:01:53.350 --> 01:01:57.280 align:middle line:84%
+And then one can do a
+Zorn's Lemma argument
+
+01:01:57.280 --> 01:02:03.490 align:middle line:84%
+and apply Zorn's Lemma to obtain
+a maximal orthonormal normal
+
+01:02:03.490 --> 01:02:04.840 align:middle line:90%
+subset.
+
+01:02:04.840 --> 01:02:06.130 align:middle line:90%
+But that's kind of hands off.
+
+01:02:06.130 --> 01:02:07.713 align:middle line:84%
+And maybe that scares
+you a little bit
+
+01:02:07.713 --> 01:02:12.040 align:middle line:84%
+because Zorn's Lemma is
+equivalent to the axiom
+
+01:02:12.040 --> 01:02:12.620 align:middle line:90%
+of choice.
+
+01:02:12.620 --> 01:02:18.420 align:middle line:84%
+So if you don't like
+using the axiom of choice,
+
+01:02:18.420 --> 01:02:20.010 align:middle line:84%
+maybe you have a
+problem with using
+
+01:02:20.010 --> 01:02:23.580 align:middle line:84%
+it to construct a maximal
+orthonormal subset
+
+01:02:23.580 --> 01:02:25.830 align:middle line:90%
+of a pre-Hilbert.
+
+01:02:25.830 --> 01:02:30.610 align:middle line:84%
+But we can actually
+do this by hand,
+
+01:02:30.610 --> 01:02:33.420 align:middle line:84%
+if the Hilbert
+space is separable.
+
+01:02:33.420 --> 01:02:35.760 align:middle line:84%
+So this is a theorem
+we'll actually
+
+01:02:35.760 --> 01:02:46.580 align:middle line:84%
+prove every
+non-trivial separable,
+
+01:02:46.580 --> 01:02:52.160 align:middle line:84%
+meaning the pre-Hilbert space
+has a countably dense subset.
+
+01:02:52.160 --> 01:03:03.470 align:middle line:84%
+Every non-trivial
+separable pre-Hilbert space
+
+01:03:03.470 --> 01:03:16.120 align:middle line:84%
+as a countable maximal
+orthonormal subset,
+
+01:03:16.120 --> 01:03:23.470 align:middle line:84%
+OK, which as I said,
+this is the main types
+
+01:03:23.470 --> 01:03:26.260 align:middle line:84%
+of orthonormal subsets
+we'll be interested in just
+
+01:03:26.260 --> 01:03:29.950 align:middle line:84%
+because defining
+infinite sums is easier
+
+01:03:29.950 --> 01:03:33.460 align:middle line:84%
+to do over a countable
+index than it
+
+01:03:33.460 --> 01:03:35.050 align:middle line:90%
+is an uncountable index.
+
+01:03:35.050 --> 01:03:39.400 align:middle line:84%
+But anyways, so we're
+going to prove and actually
+
+01:03:39.400 --> 01:03:47.200 align:middle line:84%
+construct this essentially by
+hand, using the process that's
+
+01:03:47.200 --> 01:03:49.750 align:middle line:84%
+the name of this little section,
+the Gram-Schmidt process.
+
+01:03:49.750 --> 01:03:52.520 align:middle line:90%
+
+
+01:03:52.520 --> 01:03:55.090 align:middle line:84%
+So if you remember
+from linear algebra,
+
+01:03:55.090 --> 01:03:58.600 align:middle line:84%
+if you have a
+collection of vectors,
+
+01:03:58.600 --> 01:04:01.900 align:middle line:84%
+you can always find an
+orthonormal collection
+
+01:04:01.900 --> 01:04:07.990 align:middle line:84%
+of vectors that span the
+vector space that is spanned
+
+01:04:07.990 --> 01:04:09.700 align:middle line:90%
+by the original set of vectors.
+
+01:04:09.700 --> 01:04:11.178 align:middle line:90%
+OK.
+
+01:04:11.178 --> 01:04:12.220 align:middle line:90%
+And that's what we'll do.
+
+01:04:12.220 --> 01:04:18.020 align:middle line:90%
+
+
+01:04:18.020 --> 01:04:44.920 align:middle line:84%
+So since H is separable, let be
+a countable dense subset of H.
+
+01:04:44.920 --> 01:04:48.610 align:middle line:84%
+And this is a non-trivial
+pre-Hilbert space.
+
+01:04:48.610 --> 01:04:54.170 align:middle line:84%
+So we can always make
+sure that the first one
+
+01:04:54.170 --> 01:04:55.640 align:middle line:90%
+is a non-zero vector.
+
+01:04:55.640 --> 01:04:56.270 align:middle line:90%
+OK.
+
+01:04:56.270 --> 01:04:59.780 align:middle line:84%
+So you know what
+countable means?
+
+01:04:59.780 --> 01:05:02.480 align:middle line:84%
+Dense, remember, means
+that for any element in h
+
+01:05:02.480 --> 01:05:06.950 align:middle line:84%
+there exists an element
+from this sequence,
+
+01:05:06.950 --> 01:05:09.380 align:middle line:84%
+or from this collection,
+that's within epsilon
+
+01:05:09.380 --> 01:05:22.410 align:middle line:90%
+of that vector from H.
+
+01:05:22.410 --> 01:05:24.570 align:middle line:84%
+So now I'm going to make
+the following claim.
+
+01:05:24.570 --> 01:05:38.560 align:middle line:84%
+This is essentially the
+Gram-Schmidt process,
+
+01:05:38.560 --> 01:05:42.010 align:middle line:90%
+which we'll prove by induction.
+
+01:05:42.010 --> 01:05:50.390 align:middle line:84%
+For all n, natural
+number, there exists
+
+01:05:50.390 --> 01:06:09.120 align:middle line:84%
+another integer natural number
+m of n and an orthonormal subset
+
+01:06:09.120 --> 01:06:17.610 align:middle line:84%
+e1 to em such that
+following is true.
+
+01:06:17.610 --> 01:06:20.670 align:middle line:90%
+
+
+01:06:20.670 --> 01:06:37.010 align:middle line:84%
+First is the span of e1 up to
+em of n equals the span of v1
+
+01:06:37.010 --> 01:06:37.580 align:middle line:90%
+up to vn.
+
+01:06:37.580 --> 01:06:43.350 align:middle line:90%
+
+
+01:06:43.350 --> 01:06:48.630 align:middle line:90%
+And so you see n is changing.
+
+01:06:48.630 --> 01:06:52.110 align:middle line:84%
+So maybe for each
+time I change n,
+
+01:06:52.110 --> 01:06:56.220 align:middle line:84%
+I get a different orthonormal
+subset or a wildly different
+
+01:06:56.220 --> 01:07:01.830 align:middle line:84%
+orthonormal subset from
+the integer before it.
+
+01:07:01.830 --> 01:07:04.350 align:middle line:84%
+So the property of these
+subsets are that I'm just
+
+01:07:04.350 --> 01:07:09.770 align:middle line:90%
+simply adding a vector or not.
+
+01:07:09.770 --> 01:07:16.150 align:middle line:84%
+And e1 up to em of
+n, so this collection
+
+01:07:16.150 --> 01:07:26.250 align:middle line:84%
+is equal to the previous
+collection, union
+
+01:07:26.250 --> 01:07:33.420 align:middle line:84%
+either the empty set
+if vn is in the span
+
+01:07:33.420 --> 01:07:43.350 align:middle line:84%
+of the 1 up to vn minus 1 and
+some new vector e of m sub n.
+
+01:07:43.350 --> 01:07:48.210 align:middle line:84%
+And I'll tell you what em
+of m sub n is otherwise.
+
+01:07:48.210 --> 01:07:52.154 align:middle line:90%
+
+
+01:07:52.154 --> 01:07:54.150 align:middle line:84%
+OK, so what I'm
+saying here is that I
+
+01:07:54.150 --> 01:07:59.040 align:middle line:84%
+have this countable infinite
+list of vs. And for each n,
+
+01:07:59.040 --> 01:08:04.740 align:middle line:84%
+I can come up with a finite
+orthonormal subset that spans
+
+01:08:04.740 --> 01:08:07.410 align:middle line:90%
+the same span as v1 up to vn.
+
+01:08:07.410 --> 01:08:10.080 align:middle line:84%
+And at each stage, all
+I do is add a vector
+
+01:08:10.080 --> 01:08:12.600 align:middle line:84%
+or not depending
+on if the next v is
+
+01:08:12.600 --> 01:08:14.980 align:middle line:84%
+in the span of the
+previous or not.
+
+01:08:14.980 --> 01:08:16.215 align:middle line:90%
+OK, I hope that's clear.
+
+01:08:16.215 --> 01:08:20.342 align:middle line:90%
+
+
+01:08:20.342 --> 01:08:24.979 align:middle line:84%
+OK, so I proved
+this by induction.
+
+01:08:24.979 --> 01:08:31.810 align:middle line:84%
+So proof of claim,
+this is by induction.
+
+01:08:31.810 --> 01:08:37.305 align:middle line:84%
+So let's do the base
+case n equals 1.
+
+01:08:37.305 --> 01:08:43.220 align:middle line:90%
+
+
+01:08:43.220 --> 01:08:52.020 align:middle line:84%
+We take e1 to be e1 over
+length of v. All right.
+
+01:08:52.020 --> 01:08:54.240 align:middle line:90%
+So now we're started.
+
+01:08:54.240 --> 01:08:58.080 align:middle line:84%
+Now we've got our first
+vector in this list
+
+01:08:58.080 --> 01:09:07.740 align:middle line:84%
+that we're building
+up, inductive step.
+
+01:09:07.740 --> 01:09:13.990 align:middle line:84%
+So let's call this, what
+I want to prove, star.
+
+01:09:13.990 --> 01:09:21.579 align:middle line:90%
+So suppose stars hold for a--
+
+01:09:21.579 --> 01:09:24.200 align:middle line:90%
+
+
+01:09:24.200 --> 01:09:26.930 align:middle line:84%
+so this whole claim here,
+I shouldn't say just a
+
+01:09:26.930 --> 01:09:31.880 align:middle line:84%
+and b, but the whole claim
+holds for n equals k.
+
+01:09:31.880 --> 01:09:35.359 align:middle line:84%
+And now I want to prove it
+holds for n equals k plus 1.
+
+01:09:35.359 --> 01:09:36.470 align:middle line:90%
+So I want to--
+
+01:09:36.470 --> 01:09:38.210 align:middle line:84%
+what kind of vector
+do I need to add
+
+01:09:38.210 --> 01:09:42.350 align:middle line:84%
+to the previous collection
+of vectors to now span v1
+
+01:09:42.350 --> 01:09:44.320 align:middle line:90%
+up to vk plus 1?
+
+01:09:44.320 --> 01:09:44.820 align:middle line:90%
+OK.
+
+01:09:44.820 --> 01:09:51.800 align:middle line:90%
+
+
+01:09:51.800 --> 01:10:04.340 align:middle line:84%
+So if vk plus 1 is in
+the span of v1 up to vk,
+
+01:10:04.340 --> 01:10:10.370 align:middle line:90%
+then e1 up to em of k--
+
+01:10:10.370 --> 01:10:12.230 align:middle line:84%
+I should say the span
+of these vectors--
+
+01:10:12.230 --> 01:10:16.840 align:middle line:90%
+
+
+01:10:16.840 --> 01:10:25.750 align:middle line:84%
+equals span of v1 up to vk
+equals because vk plus 1
+
+01:10:25.750 --> 01:10:26.950 align:middle line:90%
+is in this span.
+
+01:10:26.950 --> 01:10:33.760 align:middle line:84%
+This span is also
+equal to vk plus 1.
+
+01:10:33.760 --> 01:10:41.600 align:middle line:84%
+OK, and therefore,
+this case is handled.
+
+01:10:41.600 --> 01:10:45.110 align:middle line:84%
+And we're in this spot
+where we don't add anything
+
+01:10:45.110 --> 01:10:47.935 align:middle line:90%
+to the previous collection, OK.
+
+01:10:47.935 --> 01:11:01.040 align:middle line:90%
+
+
+01:11:01.040 --> 01:11:07.260 align:middle line:84%
+This proves what we wanted
+for n equals k plus 1
+
+01:11:07.260 --> 01:11:08.820 align:middle line:90%
+by not adding anything.
+
+01:11:08.820 --> 01:11:12.600 align:middle line:84%
+So this was in the case that
+vk plus 1 is in the span of v1
+
+01:11:12.600 --> 01:11:13.380 align:middle line:90%
+up to vk.
+
+01:11:13.380 --> 01:11:17.130 align:middle line:84%
+So now let's do the more
+interesting case of v1
+
+01:11:17.130 --> 01:11:21.390 align:middle line:84%
+not equal or not in the
+span of v1 up to vk.
+
+01:11:21.390 --> 01:11:31.975 align:middle line:84%
+So now suppose vk plus 1 is
+not in the span of v1 to vk.
+
+01:11:31.975 --> 01:11:35.520 align:middle line:90%
+
+
+01:11:35.520 --> 01:11:49.070 align:middle line:84%
+I define wk plus 1 to be vk
+plus 1 minus its projection
+
+01:11:49.070 --> 01:11:52.860 align:middle line:84%
+onto the previous list
+of orthonormal vectors.
+
+01:11:52.860 --> 01:12:04.420 align:middle line:84%
+So sum from j equals 1 m of
+k will be k plus 1 ej, ej.
+
+01:12:04.420 --> 01:12:11.360 align:middle line:90%
+
+
+01:12:11.360 --> 01:12:17.480 align:middle line:84%
+Then first note that
+this vector cannot be--
+
+01:12:17.480 --> 01:12:21.080 align:middle line:84%
+so wk plus 1 this
+vector cannot be zero.
+
+01:12:21.080 --> 01:12:23.240 align:middle line:84%
+Otherwise, this would
+imply that vk plus 1
+
+01:12:23.240 --> 01:12:25.400 align:middle line:90%
+is equal to this quantity here.
+
+01:12:25.400 --> 01:12:28.130 align:middle line:90%
+
+
+01:12:28.130 --> 01:12:30.590 align:middle line:84%
+And therefore, vk
+plus 1 is in the span
+
+01:12:30.590 --> 01:12:35.400 align:middle line:84%
+of the ejs for j between one
+of between 1 and imps of k,
+
+01:12:35.400 --> 01:12:40.460 align:middle line:84%
+which is equal to the span
+of the vjs for 1 up to k.
+
+01:12:40.460 --> 01:12:43.040 align:middle line:84%
+But we're assuming this
+is not in the span.
+
+01:12:43.040 --> 01:12:46.710 align:middle line:90%
+
+
+01:12:46.710 --> 01:12:53.115 align:middle line:84%
+I should say this is equal to
+the span of e1 up to em sub k.
+
+01:12:53.115 --> 01:12:54.240 align:middle line:90%
+That's what we're assuming.
+
+01:12:54.240 --> 01:12:57.940 align:middle line:84%
+That's the inductive
+hypothesis, right?
+
+01:12:57.940 --> 01:13:05.195 align:middle line:84%
+So then this vector
+does not equal 0.
+
+01:13:05.195 --> 01:13:07.810 align:middle line:90%
+
+
+01:13:07.810 --> 01:13:16.880 align:middle line:84%
+And define e n sub k plus
+1 or m to be the vector
+
+01:13:16.880 --> 01:13:22.015 align:middle line:90%
+wk over its length for plus 1.
+
+01:13:22.015 --> 01:13:23.595 align:middle line:90%
+Now, this is a unit vector.
+
+01:13:23.595 --> 01:13:36.472 align:middle line:90%
+
+
+01:13:36.472 --> 01:13:37.240 align:middle line:90%
+And what?
+
+01:13:37.240 --> 01:13:45.290 align:middle line:90%
+
+
+01:13:45.290 --> 01:13:46.790 align:middle line:90%
+And if I take--
+
+01:13:46.790 --> 01:13:50.720 align:middle line:84%
+so now I claim this
+is orthogonal to e1 up
+
+01:13:50.720 --> 01:13:52.670 align:middle line:90%
+to e of m sub k.
+
+01:13:52.670 --> 01:13:58.505 align:middle line:84%
+If I take emk plus 1 inner
+product e sub n sub j--
+
+01:13:58.505 --> 01:14:06.430 align:middle line:90%
+
+
+01:14:06.430 --> 01:14:12.220 align:middle line:84%
+this is equal to, simply by
+definition, 1 over length of mk
+
+01:14:12.220 --> 01:14:17.110 align:middle line:84%
+plus 1 times the inner
+product of vk plus 1,
+
+01:14:17.110 --> 01:14:21.340 align:middle line:84%
+minus the sum from j
+equals 1 to m sub k.
+
+01:14:21.340 --> 01:14:24.190 align:middle line:84%
+So remember, this is
+supposed to be the projection
+
+01:14:24.190 --> 01:14:26.770 align:middle line:90%
+onto the e1 up to em sub k.
+
+01:14:26.770 --> 01:14:30.100 align:middle line:84%
+And vk plus 1 minus
+that is supposed
+
+01:14:30.100 --> 01:14:31.540 align:middle line:90%
+to be orthogonal to those guys.
+
+01:14:31.540 --> 01:14:34.060 align:middle line:84%
+So we'll see that
+this ends up being 0.
+
+01:14:34.060 --> 01:14:37.110 align:middle line:90%
+
+
+01:14:37.110 --> 01:14:40.770 align:middle line:84%
+And let me change this
+j to an l since I'm--
+
+01:14:40.770 --> 01:14:46.130 align:middle line:90%
+
+
+01:14:46.130 --> 01:14:46.630 align:middle line:90%
+or no.
+
+01:14:46.630 --> 01:14:52.500 align:middle line:90%
+
+
+01:14:52.500 --> 01:15:06.920 align:middle line:84%
+And I get 1 over time the
+sum, times vk plus 1, e sub l,
+
+01:15:06.920 --> 01:15:14.800 align:middle line:84%
+minus now e sub l inner
+product with the sum.
+
+01:15:14.800 --> 01:15:17.800 align:middle line:84%
+Now this is the sum from
+j equals 1 to m sub k
+
+01:15:17.800 --> 01:15:21.220 align:middle line:84%
+of this number here times
+the inner product of e sub j
+
+01:15:21.220 --> 01:15:24.790 align:middle line:90%
+inner product e sub l.
+
+01:15:24.790 --> 01:15:27.460 align:middle line:84%
+Now, the inner product
+of e sub j and e sub l is
+
+01:15:27.460 --> 01:15:32.920 align:middle line:84%
+zero unless j equals
+and 1 if j equals l.
+
+01:15:32.920 --> 01:15:36.910 align:middle line:84%
+So I only pick up
+the j equals l part
+
+01:15:36.910 --> 01:15:40.105 align:middle line:84%
+of this sum when this
+inner product hits e sub l.
+
+01:15:40.105 --> 01:15:43.050 align:middle line:90%
+
+
+01:15:43.050 --> 01:15:45.000 align:middle line:84%
+In particular, I only
+pick up the coefficient
+
+01:15:45.000 --> 01:15:46.630 align:middle line:84%
+in front since these
+have unit length.
+
+01:15:46.630 --> 01:15:52.440 align:middle line:84%
+So I get v sub k plus
+1, v sub l equals 0.
+
+01:15:52.440 --> 01:15:59.050 align:middle line:90%
+
+
+01:15:59.050 --> 01:16:12.205 align:middle line:90%
+Then this guy now does.
+
+01:16:12.205 --> 01:16:15.060 align:middle line:90%
+
+
+01:16:15.060 --> 01:16:15.560 align:middle line:90%
+the job.
+
+01:16:15.560 --> 01:16:17.310 align:middle line:84%
+So I would write
+a little bit more,
+
+01:16:17.310 --> 01:16:18.560 align:middle line:90%
+but I'm running short on time.
+
+01:16:18.560 --> 01:16:28.140 align:middle line:90%
+
+
+01:16:28.140 --> 01:16:29.550 align:middle line:90%
+OK.
+
+01:16:29.550 --> 01:16:33.120 align:middle line:90%
+So we proved the claim.
+
+01:16:33.120 --> 01:16:41.530 align:middle line:84%
+And now let's use
+this to conclude
+
+01:16:41.530 --> 01:16:53.990 align:middle line:84%
+that this collection of all
+of these els are maximal.
+
+01:16:53.990 --> 01:17:05.250 align:middle line:90%
+
+
+01:17:05.250 --> 01:17:17.280 align:middle line:90%
+So we let s to be v sub n.
+
+01:17:17.280 --> 01:17:25.330 align:middle line:90%
+
+
+01:17:25.330 --> 01:17:40.560 align:middle line:84%
+And s is orthonormal
+subset of H.
+
+01:17:40.560 --> 01:17:45.930 align:middle line:84%
+So I may not be adding any more
+vectors after a certain point
+
+01:17:45.930 --> 01:17:48.000 align:middle line:84%
+and therefore just have
+a finite collection.
+
+01:17:48.000 --> 01:17:50.320 align:middle line:90%
+That's also possible.
+
+01:17:50.320 --> 01:17:53.700 align:middle line:84%
+But I may also have a
+countably infinite collection.
+
+01:17:53.700 --> 01:17:58.400 align:middle line:90%
+
+
+01:17:58.400 --> 01:18:02.980 align:middle line:84%
+So this is an
+orthonormal set by v.
+
+01:18:02.980 --> 01:18:16.870 align:middle line:84%
+And so we now show
+x is maximal, OK.
+
+01:18:16.870 --> 01:18:26.760 align:middle line:90%
+
+
+01:18:26.760 --> 01:18:29.070 align:middle line:90%
+All right.
+
+01:18:29.070 --> 01:18:31.500 align:middle line:84%
+So we haven't used
+anything about the nature
+
+01:18:31.500 --> 01:18:36.520 align:middle line:84%
+of this subset of H. All we
+view is that it's countable.
+
+01:18:36.520 --> 01:18:38.100 align:middle line:84%
+So we could do
+this step by step,
+
+01:18:38.100 --> 01:18:40.710 align:middle line:84%
+where we construct these
+orthonormal vectors that
+
+01:18:40.710 --> 01:18:43.830 align:middle line:90%
+span each finite--
+
+01:18:43.830 --> 01:18:46.920 align:middle line:84%
+equal the span of each
+finite collection of vectors.
+
+01:18:46.920 --> 01:18:48.960 align:middle line:84%
+Now, to show it's
+maximal, this is
+
+01:18:48.960 --> 01:18:51.885 align:middle line:84%
+where we use the fact that this
+collection of vs were dense
+
+01:18:51.885 --> 01:18:53.370 align:middle line:90%
+or are dense in h.
+
+01:18:53.370 --> 01:19:09.340 align:middle line:84%
+So suppose u is in H and for
+all l, u of e sub l equals 0.
+
+01:19:09.340 --> 01:19:10.790 align:middle line:90%
+So this is either a finite set.
+
+01:19:10.790 --> 01:19:12.280 align:middle line:90%
+So l is between 1 and n.
+
+01:19:12.280 --> 01:19:17.560 align:middle line:84%
+Or it's a countable set, and
+l is going from 1 to infinity.
+
+01:19:17.560 --> 01:19:25.820 align:middle line:84%
+Either this is equal to e1
+up to e m sub n for some n.
+
+01:19:25.820 --> 01:19:32.055 align:middle line:90%
+Or e1 is countably infinite?
+
+01:19:32.055 --> 01:19:32.555 align:middle line:90%
+OK.
+
+01:19:32.555 --> 01:19:38.550 align:middle line:90%
+
+
+01:19:38.550 --> 01:19:50.465 align:middle line:84%
+So since vj-- this is
+a dense subset of h--
+
+01:19:50.465 --> 01:19:53.030 align:middle line:90%
+
+
+01:19:53.030 --> 01:20:01.810 align:middle line:84%
+we can find a sequence of
+elements from this collection.
+
+01:20:01.810 --> 01:20:08.040 align:middle line:84%
+So v of j sub k, k
+equals 1 to infinity
+
+01:20:08.040 --> 01:20:16.000 align:middle line:84%
+such that vj of k converges
+to u as k goes to infinity.
+
+01:20:16.000 --> 01:20:18.900 align:middle line:90%
+
+
+01:20:18.900 --> 01:20:29.400 align:middle line:84%
+OK, now by property a,
+the fact that this span
+
+01:20:29.400 --> 01:20:39.360 align:middle line:84%
+is equal to that span, v of
+j sub k is in the span of e1
+
+01:20:39.360 --> 01:20:43.255 align:middle line:90%
+up to em of j sub k.
+
+01:20:43.255 --> 01:20:47.870 align:middle line:90%
+
+
+01:20:47.870 --> 01:20:52.430 align:middle line:84%
+And therefore, by
+Bessel's inequality,
+
+01:20:52.430 --> 01:20:55.460 align:middle line:84%
+and the fact that u
+is orthogonal to all
+
+01:20:55.460 --> 01:21:12.230 align:middle line:84%
+of these orthonormal vectors, I
+get that v of j sub k squared--
+
+01:21:12.230 --> 01:21:18.040 align:middle line:84%
+now v sub j of k,
+this is in this span.
+
+01:21:18.040 --> 01:21:26.730 align:middle line:84%
+So you can show that,
+in fact, this norm
+
+01:21:26.730 --> 01:21:33.030 align:middle line:84%
+is in fact equal to the
+sum of the coefficients
+
+01:21:33.030 --> 01:21:35.250 align:middle line:84%
+that I get from taking
+the inner product of--
+
+01:21:35.250 --> 01:21:42.420 align:middle line:90%
+
+
+01:21:42.420 --> 01:21:45.120 align:middle line:84%
+OK, if I have a
+vector in the span
+
+01:21:45.120 --> 01:21:47.760 align:middle line:84%
+of a collection of
+orthonormal vectors,
+
+01:21:47.760 --> 01:21:49.950 align:middle line:84%
+a finite collection of all
+the normal vectors, then
+
+01:21:49.950 --> 01:21:52.950 align:middle line:84%
+the norm squared is equal to
+the sum of the coefficients,
+
+01:21:52.950 --> 01:21:55.500 align:middle line:90%
+just like an rn.
+
+01:21:55.500 --> 01:22:01.524 align:middle line:84%
+And since u is orthogonal
+to each of these,
+
+01:22:01.524 --> 01:22:02.940 align:middle line:90%
+this I can write as--
+
+01:22:02.940 --> 01:22:07.460 align:middle line:90%
+
+
+01:22:07.460 --> 01:22:10.610 align:middle line:84%
+And by Bessel's inequality,
+this is less than or equal to--
+
+01:22:10.610 --> 01:22:15.460 align:middle line:90%
+
+
+01:22:15.460 --> 01:22:17.560 align:middle line:84%
+the sum of these
+things squared is
+
+01:22:17.560 --> 01:22:26.030 align:middle line:84%
+less than or equal to
+squared, and this goes to 0
+
+01:22:26.030 --> 01:22:31.250 align:middle line:84%
+as k goes to infinity since the
+v of j sub k is converted to u.
+
+01:22:31.250 --> 01:22:33.350 align:middle line:84%
+But we started off
+with the norm of e
+
+01:22:33.350 --> 01:22:40.920 align:middle line:90%
+of j sub k, which implies zero.
+
+01:22:40.920 --> 01:22:44.580 align:middle line:84%
+And therefore u, which
+is the limit of these,
+
+01:22:44.580 --> 01:22:50.196 align:middle line:84%
+must be zero, proving that
+this is a maximal subset.
+
+01:22:50.196 --> 01:22:50.696 align:middle line:90%
+OK.
+
+01:22:50.696 --> 01:22:53.940 align:middle line:90%
+
+
+01:22:53.940 --> 01:22:59.880 align:middle line:84%
+So next time we'll prove that
+these maximal orthonormal,
+
+01:22:59.880 --> 01:23:05.910 align:middle line:84%
+these maximal countable
+orthonormal subsets, in fact,
+
+01:23:05.910 --> 01:23:10.890 align:middle line:84%
+form a pretty good
+analog of basis
+
+01:23:10.890 --> 01:23:14.432 align:middle line:84%
+that you find in finite
+dimensional linear algebra.
+
+01:23:14.432 --> 01:23:16.750 align:middle line:90%
+And we'll stop there.
+
+01:23:16.750 --> 01:23:23.000 align:middle line:90%

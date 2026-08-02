@@ -59,16 +59,25 @@ parts:
   - caption: Functional Analysis & Measure Theory
     chapters:
       - file: book/functional_analysis/intro
-      - file: book/measure_theory/intro
+      - file: book/functional_analysis/basic_banach_spaces
+      - file: book/functional_analysis/bounded_linear_operators
+      - file: book/functional_analysis/quotient_spaces_baire_category
+      - file: book/functional_analysis/open_mapping_closed_graph
+      - file: book/functional_analysis/zorns_lemma_hahn_banach
+      - file: book/functional_analysis/double_dual_outer_measure
+      - file: book/measure_theory/sigma_algebras
+      - file: book/measure_theory/lebesgue_measurable_subsets_measure
+      - file: book/measure_theory/lebesgue_measurable_functions
+      - file: book/measure_theory/simple_functions
 
   - caption: Topology
     chapters:
       - file: book/topology/intro
       - file: book/topology/spaces
+      - file: book/topology/surfaces
       - file: book/topology/manifolds
       - file: book/topology/tda
       - file: book/topology/advanced_tda
-      - file: book/topology/surfaces
       - file: book/topology/applications
 
   - caption: Approximation Theory

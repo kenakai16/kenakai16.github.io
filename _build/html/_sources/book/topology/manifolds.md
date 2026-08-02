@@ -52,7 +52,7 @@ Mathematically, Euler angles attempt to map the 3D rotation group (a 3D manifold
 :align: center
 ```
 
-### The Solution: Quaternions
+### Quaternions
 To avoid this singularity, modern game engines (such as Unity, Unreal Engine, and Godot) represent rotations using **Quaternions** instead of Euler angles.
 
 A quaternion is a 4-dimensional hypercomplex number:

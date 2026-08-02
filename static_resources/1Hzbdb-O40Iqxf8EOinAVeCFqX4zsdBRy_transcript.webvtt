@@ -1,0 +1,4179 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:00.984 align:middle line:90%
+
+
+00:00:00.984 --> 00:00:01.968 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.968 --> 00:00:03.936 align:middle line:90%
+[RUSTLING]
+
+00:00:03.936 --> 00:00:07.380 align:middle line:90%
+[CLICKING]
+
+00:00:07.380 --> 00:00:18.730 align:middle line:90%
+
+
+00:00:18.730 --> 00:00:22.360 align:middle line:84%
+PROFESSOR: OK, so
+we're going to complete
+
+00:00:22.360 --> 00:00:26.230 align:middle line:84%
+our discussion of Lebesgue
+measure and integration
+
+00:00:26.230 --> 00:00:29.175 align:middle line:84%
+by discussing the
+big Lp spaces, which
+
+00:00:29.175 --> 00:00:31.300 align:middle line:84%
+was kind of the whole point
+of this endeavor, which
+
+00:00:31.300 --> 00:00:42.400 align:middle line:84%
+was to find, in some
+sense, the complete space
+
+00:00:42.400 --> 00:00:45.490 align:middle line:84%
+of integratable functions,
+whatever integratable means--
+
+00:00:45.490 --> 00:00:48.520 align:middle line:84%
+I mean, we had to
+define an integral--
+
+00:00:48.520 --> 00:00:53.290 align:middle line:84%
+containing the space
+of continuous functions
+
+00:00:53.290 --> 00:00:58.720 align:middle line:84%
+with norm given by, let's say,
+the integral of the p-th power
+
+00:00:58.720 --> 00:01:01.480 align:middle line:90%
+of the continuous function.
+
+00:01:01.480 --> 00:01:04.591 align:middle line:90%
+
+
+00:01:04.591 --> 00:01:08.300 align:middle line:84%
+OK, so at the end of--
+so at last lecture,
+
+00:01:08.300 --> 00:01:11.230 align:middle line:84%
+we introduced the general
+Lebesgue integratable--
+
+00:01:11.230 --> 00:01:14.320 align:middle line:84%
+I mean the class of
+Lebesgue-integratable functions
+
+00:01:14.320 --> 00:01:16.000 align:middle line:90%
+and the Lebesgue integral.
+
+00:01:16.000 --> 00:01:20.110 align:middle line:90%
+And we proved that--
+
+00:01:20.110 --> 00:01:22.210 align:middle line:84%
+we proved the dominated
+convergence theorem,
+
+00:01:22.210 --> 00:01:24.880 align:middle line:84%
+and one consequence
+of that was the fact
+
+00:01:24.880 --> 00:01:27.970 align:middle line:84%
+that if I have a
+continuous function
+
+00:01:27.970 --> 00:01:29.590 align:middle line:84%
+on a closed and
+bounded interval a,
+
+00:01:29.590 --> 00:01:33.160 align:middle line:84%
+b, then the Lebesgue integral
+of that continuous function
+
+00:01:33.160 --> 00:01:36.430 align:middle line:84%
+equals the Riemann integral
+of that continuous function.
+
+00:01:36.430 --> 00:01:39.940 align:middle line:84%
+So you know how to
+compute integrals--
+
+00:01:39.940 --> 00:01:43.090 align:middle line:84%
+or the Lebesgue integral
+for every function
+
+00:01:43.090 --> 00:01:47.080 align:middle line:84%
+that how to compute the
+Riemann integral for,
+
+00:01:47.080 --> 00:01:49.562 align:middle line:84%
+which are mostly
+continuous functions.
+
+00:01:49.562 --> 00:01:50.770 align:middle line:90%
+Now this can be strengthened.
+
+00:01:50.770 --> 00:01:52.570 align:middle line:90%
+One can show that, in fact--
+
+00:01:52.570 --> 00:01:54.890 align:middle line:84%
+so we're not going to
+cover it in this class.
+
+00:01:54.890 --> 00:01:59.740 align:middle line:84%
+You'll see it in another class
+that is devoted maybe just
+
+00:01:59.740 --> 00:02:02.260 align:middle line:84%
+solely to measure theory
+for a longer bit, of time
+
+00:02:02.260 --> 00:02:08.220 align:middle line:84%
+but one can show using the
+dominated convergence theorem
+
+00:02:08.220 --> 00:02:10.770 align:middle line:84%
+that, in fact, every
+Riemann-integratable function--
+
+00:02:10.770 --> 00:02:13.500 align:middle line:84%
+not just continuous, but every
+Riemann-integratable function
+
+00:02:13.500 --> 00:02:20.660 align:middle line:84%
+on a closed and bounded interval
+is Lebesgue-integratable,
+
+00:02:20.660 --> 00:02:23.690 align:middle line:84%
+and that the Riemann
+integral equals the Lebesgue
+
+00:02:23.690 --> 00:02:26.450 align:middle line:84%
+integral, even just
+for more general
+
+00:02:26.450 --> 00:02:30.170 align:middle line:90%
+Riemann-integratable functions.
+
+00:02:30.170 --> 00:02:35.605 align:middle line:84%
+And you can also, now using the
+machinery that we built up--
+
+00:02:35.605 --> 00:02:37.730 align:middle line:84%
+I don't know, maybe I'll
+put this in the assignment
+
+00:02:37.730 --> 00:02:39.860 align:middle line:90%
+maybe not.
+
+00:02:39.860 --> 00:02:45.080 align:middle line:84%
+That you can completely
+characterize those functions
+
+00:02:45.080 --> 00:02:46.850 align:middle line:90%
+which are Riemann-integratable.
+
+00:02:46.850 --> 00:02:49.820 align:middle line:84%
+And the statement is that
+a function-- a measurable
+
+00:02:49.820 --> 00:02:53.750 align:middle line:84%
+function, say, is
+Riemann-integratable if
+
+00:02:53.750 --> 00:02:57.728 align:middle line:84%
+and only if it is continuous
+almost everywhere.
+
+00:02:57.728 --> 00:03:00.020 align:middle line:84%
+I'm not saying that it's
+equal to a continuous function
+
+00:03:00.020 --> 00:03:01.010 align:middle line:90%
+almost everywhere.
+
+00:03:01.010 --> 00:03:02.993 align:middle line:84%
+I'm saying that it's
+continuous at almost
+
+00:03:02.993 --> 00:03:04.160 align:middle line:90%
+every point in the interval.
+
+00:03:04.160 --> 00:03:07.792 align:middle line:90%
+
+
+00:03:07.792 --> 00:03:08.750 align:middle line:90%
+OK.
+
+00:03:08.750 --> 00:03:13.040 align:middle line:84%
+Now let's move on to analogs
+of the little Lp spaces
+
+00:03:13.040 --> 00:03:16.040 align:middle line:84%
+that we saw earlier
+in the lectures
+
+00:03:16.040 --> 00:03:17.990 align:middle line:90%
+and on the assignments.
+
+00:03:17.990 --> 00:03:20.735 align:middle line:84%
+So these are usually referred
+to as the big Lp spaces.
+
+00:03:20.735 --> 00:03:28.970 align:middle line:90%
+
+
+00:03:28.970 --> 00:03:34.430 align:middle line:84%
+And so to define
+these, let me first
+
+00:03:34.430 --> 00:03:39.300 align:middle line:84%
+define what will be,
+in the end, a norm.
+
+00:03:39.300 --> 00:03:51.010 align:middle line:84%
+So if f from a measurable subset
+of R to the complex numbers
+
+00:03:51.010 --> 00:03:59.250 align:middle line:84%
+is measurable,
+and 1 is less than
+
+00:03:59.250 --> 00:04:02.200 align:middle line:84%
+or equal to p is
+less than infinity,
+
+00:04:02.200 --> 00:04:09.600 align:middle line:84%
+then we define the
+following possibly--
+
+00:04:09.600 --> 00:04:16.019 align:middle line:84%
+or the following extended
+non-negative real number,
+
+00:04:16.019 --> 00:04:23.910 align:middle line:84%
+norm Lp of E. This is defined
+to be the integral over E
+
+00:04:23.910 --> 00:04:29.220 align:middle line:84%
+of f raised to the absolute
+value raised to the p to the 1
+
+00:04:29.220 --> 00:04:29.880 align:middle line:90%
+over p.
+
+00:04:29.880 --> 00:04:32.390 align:middle line:90%
+
+
+00:04:32.390 --> 00:04:36.560 align:middle line:84%
+Now this is meaningful
+because no matter what f--
+
+00:04:36.560 --> 00:04:39.200 align:middle line:84%
+how f has behaved,
+because the absolute value
+
+00:04:39.200 --> 00:04:42.610 align:middle line:84%
+of f raised to the p, this
+is a non-negative measurable
+
+00:04:42.610 --> 00:04:43.110 align:middle line:90%
+function.
+
+00:04:43.110 --> 00:04:45.360 align:middle line:84%
+So we can always define what
+the Lebesgue integral is.
+
+00:04:45.360 --> 00:04:49.130 align:middle line:84%
+So this may be either
+infinite or finite,
+
+00:04:49.130 --> 00:04:56.040 align:middle line:84%
+but it's a non-negative
+number, extended real number.
+
+00:04:56.040 --> 00:04:58.730 align:middle line:84%
+And so maybe you
+ask, what's going on?
+
+00:04:58.730 --> 00:05:02.550 align:middle line:84%
+Why did I leave out
+p equals infinity?
+
+00:05:02.550 --> 00:05:06.020 align:middle line:84%
+We have a different definition
+for equals infinity,
+
+00:05:06.020 --> 00:05:07.730 align:middle line:84%
+just like we had a
+different definition
+
+00:05:07.730 --> 00:05:10.760 align:middle line:90%
+for the little l infinity.
+
+00:05:10.760 --> 00:05:14.630 align:middle line:84%
+We define this
+quantity here, which
+
+00:05:14.630 --> 00:05:17.600 align:middle line:84%
+I'm going to go ahead and start
+referring to as the Lp and L
+
+00:05:17.600 --> 00:05:20.180 align:middle line:84%
+infinity norms even though
+I haven't proved their--
+
+00:05:20.180 --> 00:05:25.910 align:middle line:90%
+a norm yet on what space either.
+
+00:05:25.910 --> 00:05:32.720 align:middle line:84%
+This is defined to be the
+infimum over M positive such
+
+00:05:32.720 --> 00:05:41.280 align:middle line:84%
+that the measure of the set
+x and E such that f of x
+
+00:05:41.280 --> 00:05:44.790 align:middle line:90%
+is bigger than m equals 0.
+
+00:05:44.790 --> 00:05:47.320 align:middle line:90%
+
+
+00:05:47.320 --> 00:05:49.700 align:middle line:84%
+So what does it mean
+for m to be in this set?
+
+00:05:49.700 --> 00:05:53.260 align:middle line:84%
+This means that f of x
+is less than or equal
+
+00:05:53.260 --> 00:05:54.610 align:middle line:90%
+to m almost everywhere.
+
+00:05:54.610 --> 00:05:57.580 align:middle line:84%
+And then I take the
+minimum of all such--
+
+00:05:57.580 --> 00:06:01.580 align:middle line:90%
+almost everywhere upper bounds.
+
+00:06:01.580 --> 00:06:05.460 align:middle line:84%
+And this is usually
+referred to as--
+
+00:06:05.460 --> 00:06:14.685 align:middle line:84%
+what is called the essential
+supremum of f of x.
+
+00:06:14.685 --> 00:06:26.050 align:middle line:90%
+
+
+00:06:26.050 --> 00:06:29.620 align:middle line:84%
+So just a little mini theorem
+about this L infinity norm
+
+00:06:29.620 --> 00:06:32.065 align:middle line:90%
+here, what you'll see--
+
+00:06:32.065 --> 00:06:33.940 align:middle line:84%
+well, I guess you'll be
+seeing these lectures
+
+00:06:33.940 --> 00:06:37.370 align:middle line:90%
+after the first exam.
+
+00:06:37.370 --> 00:06:40.443 align:middle line:84%
+So you saw this guy
+actually on the exam,
+
+00:06:40.443 --> 00:06:41.860 align:middle line:84%
+and you proved one
+of these facts.
+
+00:06:41.860 --> 00:06:44.950 align:middle line:84%
+The other I will put
+on a future assignment.
+
+00:06:44.950 --> 00:06:49.850 align:middle line:90%
+
+
+00:06:49.850 --> 00:07:04.130 align:middle line:84%
+If f from E to C is measurable,
+then the absolute value
+
+00:07:04.130 --> 00:07:12.340 align:middle line:84%
+of f of x is less than
+or equal to gL infinity
+
+00:07:12.340 --> 00:07:15.520 align:middle line:90%
+almost everywhere on E.
+
+00:07:15.520 --> 00:07:24.700 align:middle line:90%
+And another fact, if f--
+
+00:07:24.700 --> 00:07:27.580 align:middle line:90%
+
+
+00:07:27.580 --> 00:07:38.590 align:middle line:84%
+if E is equal to a, b and
+f it is continuous on a, b,
+
+00:07:38.590 --> 00:07:50.070 align:middle line:84%
+then this essential supremum
+is equal to, in fact,
+
+00:07:50.070 --> 00:07:55.580 align:middle line:84%
+just the usual what we call
+the L infinity norm which,
+
+00:07:55.580 --> 00:08:06.525 align:middle line:84%
+remember, was the sup over x and
+a, b absolute value of f of x.
+
+00:08:06.525 --> 00:08:08.420 align:middle line:90%
+So why do I state this?
+
+00:08:08.420 --> 00:08:15.650 align:middle line:84%
+Because the L infinity
+norm bounds f from above
+
+00:08:15.650 --> 00:08:17.270 align:middle line:84%
+for almost every
+x in the same way
+
+00:08:17.270 --> 00:08:20.600 align:middle line:84%
+that the little l infinity
+norm for sequences bounded,
+
+00:08:20.600 --> 00:08:25.490 align:middle line:84%
+the sequence-- every entry in
+the sequence-- for every entry
+
+00:08:25.490 --> 00:08:26.900 align:middle line:90%
+in the sequence.
+
+00:08:26.900 --> 00:08:29.000 align:middle line:84%
+But now for the
+essential supremum,
+
+00:08:29.000 --> 00:08:31.160 align:middle line:84%
+we have just an almost
+everywhere statement.
+
+00:08:31.160 --> 00:08:36.110 align:middle line:84%
+But this norm is the same
+as the L infinity norm
+
+00:08:36.110 --> 00:08:39.690 align:middle line:84%
+or the infinity norm for
+continuous functions.
+
+00:08:39.690 --> 00:08:43.055 align:middle line:84%
+So it shouldn't be
+something that's too crazy.
+
+00:08:43.055 --> 00:08:47.030 align:middle line:90%
+
+
+00:08:47.030 --> 00:08:47.530 align:middle line:90%
+OK.
+
+00:08:47.530 --> 00:08:53.590 align:middle line:84%
+So now I'm just going to
+state a couple of theorems
+
+00:08:53.590 --> 00:08:57.400 align:middle line:84%
+because you already
+gave the proof--
+
+00:08:57.400 --> 00:09:02.357 align:middle line:84%
+the proofs, I should
+say, when you did--
+
+00:09:02.357 --> 00:09:04.440 align:middle line:84%
+I think it was probably
+the first assignment, when
+
+00:09:04.440 --> 00:09:06.870 align:middle line:84%
+you did the corresponding
+statements for little lp
+
+00:09:06.870 --> 00:09:09.630 align:middle line:84%
+spaces, except now
+you replace the--
+
+00:09:09.630 --> 00:09:13.050 align:middle line:84%
+for those, you replace
+an integral with a sum.
+
+00:09:13.050 --> 00:09:17.140 align:middle line:84%
+I mean, you should always
+think of an integral as a sum.
+
+00:09:17.140 --> 00:09:23.970 align:middle line:84%
+So we have the following two
+theorems, two inequalities.
+
+00:09:23.970 --> 00:09:26.250 align:middle line:90%
+We have Holder's inequality.
+
+00:09:26.250 --> 00:09:29.160 align:middle line:90%
+If one is between p--
+
+00:09:29.160 --> 00:09:36.840 align:middle line:84%
+if p is between 1 and infinity
+and q is the dual exponent
+
+00:09:36.840 --> 00:09:47.420 align:middle line:84%
+to p, meaning 1 over p
+plus 1 over q equals 1,
+
+00:09:47.420 --> 00:09:57.140 align:middle line:84%
+and you have f as an Lp
+of E and g is an Lp of E,
+
+00:09:57.140 --> 00:10:05.080 align:middle line:84%
+then f times g
+integrated over E--
+
+00:10:05.080 --> 00:10:07.845 align:middle line:90%
+
+
+00:10:07.845 --> 00:10:10.273 align:middle line:84%
+well I haven't
+even said-- sorry.
+
+00:10:10.273 --> 00:10:11.440 align:middle line:90%
+Getting way ahead of myself.
+
+00:10:11.440 --> 00:10:14.010 align:middle line:90%
+
+
+00:10:14.010 --> 00:10:27.240 align:middle line:84%
+So-- and if f and g are two
+measurable functions, then
+
+00:10:27.240 --> 00:10:32.770 align:middle line:84%
+the integral over E of f
+times g absolute value,
+
+00:10:32.770 --> 00:10:39.750 align:middle line:84%
+this is less than or
+equal to the Lp norm of f
+
+00:10:39.750 --> 00:10:45.660 align:middle line:90%
+times the Lp norm of g.
+
+00:10:45.660 --> 00:10:47.940 align:middle line:84%
+Now of course, this
+inequality is only interesting
+
+00:10:47.940 --> 00:10:50.160 align:middle line:84%
+if the right
+hand-side is finite.
+
+00:10:50.160 --> 00:10:54.105 align:middle line:84%
+If this is infinite, then
+this is all vacuously true.
+
+00:10:54.105 --> 00:10:58.120 align:middle line:90%
+
+
+00:10:58.120 --> 00:11:00.810 align:middle line:84%
+So this is the analog of
+the Holder's inequality
+
+00:11:00.810 --> 00:11:05.255 align:middle line:84%
+which you proved for sequences
+where we had a sum here
+
+00:11:05.255 --> 00:11:07.380 align:middle line:84%
+instead of the integral
+and where we had a sum here
+
+00:11:07.380 --> 00:11:09.270 align:middle line:90%
+instead of the integral.
+
+00:11:09.270 --> 00:11:11.850 align:middle line:84%
+And it's proven
+essentially the same way.
+
+00:11:11.850 --> 00:11:16.749 align:middle line:84%
+You just replace a
+sigma with a little s.
+
+00:11:16.749 --> 00:11:20.421 align:middle line:90%
+
+
+00:11:20.421 --> 00:11:23.250 align:middle line:84%
+And so from Holder's
+inequality, you
+
+00:11:23.250 --> 00:11:25.080 align:middle line:90%
+obtained Minkowski's inequality.
+
+00:11:25.080 --> 00:11:35.240 align:middle line:90%
+
+
+00:11:35.240 --> 00:11:42.210 align:middle line:84%
+If p is between 1
+and infinity, and f,
+
+00:11:42.210 --> 00:11:53.375 align:middle line:84%
+g are two measurable
+functions, then by--
+
+00:11:53.375 --> 00:11:57.760 align:middle line:90%
+
+
+00:11:57.760 --> 00:12:00.040 align:middle line:84%
+take the Lp norm
+of f plus g, this
+
+00:12:00.040 --> 00:12:08.320 align:middle line:84%
+is less than or equal to
+the Lp norm of f plus the Lp
+
+00:12:08.320 --> 00:12:11.950 align:middle line:84%
+norm of E. And again,
+you proved this exactly
+
+00:12:11.950 --> 00:12:16.510 align:middle line:84%
+the same way as you did
+for the little Lp spaces
+
+00:12:16.510 --> 00:12:18.130 align:middle line:90%
+using Holder's inequality.
+
+00:12:18.130 --> 00:12:24.730 align:middle line:90%
+
+
+00:12:24.730 --> 00:12:27.370 align:middle line:84%
+Of course, that requires a
+slightly different argument
+
+00:12:27.370 --> 00:12:30.400 align:middle line:84%
+for p equals infinity you know
+for this essential supremum,
+
+00:12:30.400 --> 00:12:33.220 align:middle line:84%
+but in fact, that's
+what you did in the exam
+
+00:12:33.220 --> 00:12:35.890 align:middle line:90%
+you took a few days ago.
+
+00:12:35.890 --> 00:12:40.270 align:middle line:90%
+
+
+00:12:40.270 --> 00:12:41.890 align:middle line:84%
+So I've been
+calling these things
+
+00:12:41.890 --> 00:12:48.230 align:middle line:84%
+a norm even though I haven't
+proved their norm yet
+
+00:12:48.230 --> 00:12:50.188 align:middle line:84%
+and on what space
+are they a norm,
+
+00:12:50.188 --> 00:12:51.355 align:middle line:90%
+so now I'm going to do that.
+
+00:12:51.355 --> 00:12:53.910 align:middle line:90%
+
+
+00:12:53.910 --> 00:12:57.620 align:middle line:84%
+So when it's clear-- also
+let me make a small remark.
+
+00:12:57.620 --> 00:13:10.740 align:middle line:90%
+
+
+00:13:10.740 --> 00:13:20.160 align:middle line:84%
+I'll denote this thing just
+by shorthand with just a p.
+
+00:13:20.160 --> 00:13:23.610 align:middle line:84%
+And it should be clear
+from the context what
+
+00:13:23.610 --> 00:13:27.810 align:middle line:90%
+set I'm taking this norm over.
+
+00:13:27.810 --> 00:13:30.240 align:middle line:84%
+Or what set am I
+taking this integral
+
+00:13:30.240 --> 00:13:33.720 align:middle line:90%
+that defines this norm over.
+
+00:13:33.720 --> 00:13:35.670 align:middle line:84%
+OK, so now let me
+define the actual space
+
+00:13:35.670 --> 00:13:40.430 align:middle line:90%
+that this will be a norm on.
+
+00:13:40.430 --> 00:13:44.840 align:middle line:84%
+And it involves a slight abuse
+of terminology and notation
+
+00:13:44.840 --> 00:13:48.890 align:middle line:84%
+in the end, which
+is just tradition,
+
+00:13:48.890 --> 00:13:50.720 align:middle line:90%
+not just in this subject, but--
+
+00:13:50.720 --> 00:13:57.720 align:middle line:84%
+I mean, abuse of notation
+is tradition in all of math.
+
+00:13:57.720 --> 00:14:07.520 align:middle line:84%
+So for 1-- for p
+between 1 and infinity,
+
+00:14:07.520 --> 00:14:16.310 align:middle line:84%
+we define the space Lp of
+E-- so E here is know--
+
+00:14:16.310 --> 00:14:18.560 align:middle line:84%
+if I don't say it, it's
+always a measurable subset
+
+00:14:18.560 --> 00:14:24.490 align:middle line:84%
+of R. This is the set of
+all functions from E to C,
+
+00:14:24.490 --> 00:14:34.400 align:middle line:84%
+which are measurable,
+that have finite Lp norm.
+
+00:14:34.400 --> 00:14:40.430 align:middle line:90%
+
+
+00:14:40.430 --> 00:14:51.270 align:middle line:84%
+Now let me make a second
+caveat to this space.
+
+00:14:51.270 --> 00:14:55.767 align:middle line:84%
+So as I've written it down
+now, it's a space of functions.
+
+00:14:55.767 --> 00:14:58.350 align:middle line:84%
+And I'm going to keep referring
+to it as a space of functions.
+
+00:14:58.350 --> 00:15:02.500 align:middle line:84%
+I'm going to keep referring to
+elements of it as functions.
+
+00:15:02.500 --> 00:15:07.010 align:middle line:84%
+But the actual space itself
+is not a space of functions,
+
+00:15:07.010 --> 00:15:08.920 align:middle line:84%
+it's a space of
+equivalence classes
+
+00:15:08.920 --> 00:15:12.610 align:middle line:84%
+in order for this quantity,
+which I keep calling a norm,
+
+00:15:12.610 --> 00:15:15.260 align:middle line:84%
+to actually be a
+norm on this space.
+
+00:15:15.260 --> 00:15:16.330 align:middle line:90%
+So let me add here--
+
+00:15:16.330 --> 00:15:27.076 align:middle line:90%
+
+
+00:15:27.076 --> 00:15:32.695 align:middle line:84%
+if we consider two
+elements of this set, the--
+
+00:15:32.695 --> 00:15:37.940 align:middle line:90%
+
+
+00:15:37.940 --> 00:15:43.045 align:middle line:84%
+I shouldn't say equal, but
+to be the same element--
+
+00:15:43.045 --> 00:15:47.270 align:middle line:90%
+
+
+00:15:47.270 --> 00:15:54.360 align:middle line:84%
+and let me give
+two elements, say f
+
+00:15:54.360 --> 00:16:05.160 align:middle line:84%
+and g in Lp, to be the
+same element if f equals g
+
+00:16:05.160 --> 00:16:07.480 align:middle line:90%
+almost everywhere.
+
+00:16:07.480 --> 00:16:10.920 align:middle line:84%
+So as I've written
+it down, Lp of E
+
+00:16:10.920 --> 00:16:15.360 align:middle line:84%
+consists of all measurable
+functions with finite Lp norm,
+
+00:16:15.360 --> 00:16:22.250 align:middle line:84%
+and now I'm saying that I
+will consider two elements
+
+00:16:22.250 --> 00:16:23.840 align:middle line:90%
+in this space to be the same--
+
+00:16:23.840 --> 00:16:27.410 align:middle line:84%
+to be the same element if
+they equal each other almost
+
+00:16:27.410 --> 00:16:28.460 align:middle line:90%
+everywhere.
+
+00:16:28.460 --> 00:16:34.572 align:middle line:90%
+
+
+00:16:34.572 --> 00:16:36.905 align:middle line:84%
+So strictly speaking, let me
+just make this as a remark.
+
+00:16:36.905 --> 00:16:47.070 align:middle line:90%
+
+
+00:16:47.070 --> 00:17:12.819 align:middle line:84%
+This means an element of Lp
+of E is an equivalence class
+
+00:17:12.819 --> 00:17:15.160 align:middle line:90%
+of the form--
+
+00:17:15.160 --> 00:17:18.190 align:middle line:84%
+so little brackets f to
+indicate the equivalence class.
+
+00:17:18.190 --> 00:17:20.800 align:middle line:84%
+I haven't told you what the
+equivalence relation is,
+
+00:17:20.800 --> 00:17:24.440 align:middle line:84%
+so I'll explain that as I
+describe the equivalence class.
+
+00:17:24.440 --> 00:17:27.220 align:middle line:84%
+So the equivalence class
+of f is equal to the set
+
+00:17:27.220 --> 00:17:31.540 align:middle line:84%
+of all function g,
+which are measurable.
+
+00:17:31.540 --> 00:17:43.860 align:middle line:90%
+
+
+00:17:43.860 --> 00:17:48.990 align:middle line:84%
+So Lp of E is really a
+set of all equivalents--
+
+00:17:48.990 --> 00:17:52.620 align:middle line:84%
+is a set of equivalence
+classes of measurable functions
+
+00:17:52.620 --> 00:17:57.600 align:middle line:84%
+with finite Lp norm where
+two equivalence classes are
+
+00:17:57.600 --> 00:18:03.300 align:middle line:84%
+equal if and only if
+the representative
+
+00:18:03.300 --> 00:18:05.040 align:middle line:84%
+from the first
+equivalent class equals
+
+00:18:05.040 --> 00:18:07.500 align:middle line:84%
+the representative of the
+second equivalent class
+
+00:18:07.500 --> 00:18:09.310 align:middle line:90%
+almost everywhere.
+
+00:18:09.310 --> 00:18:15.800 align:middle line:90%
+So this is what Lp of E is.
+
+00:18:15.800 --> 00:18:19.400 align:middle line:90%
+Now why am I making this--
+
+00:18:19.400 --> 00:18:22.910 align:middle line:84%
+why am I adding
+this caveat that you
+
+00:18:22.910 --> 00:18:27.800 align:middle line:84%
+have to consider two elements
+to be equal almost everywhere?
+
+00:18:27.800 --> 00:18:32.570 align:middle line:84%
+Because this is what
+allows me to put--
+
+00:18:32.570 --> 00:18:35.540 align:middle line:84%
+or say this Lp norm
+is an actual norm.
+
+00:18:35.540 --> 00:18:39.770 align:middle line:84%
+Otherwise it is just a semi-norm
+if I really consider Lp of E
+
+00:18:39.770 --> 00:18:42.990 align:middle line:84%
+to be this space of
+actual functions.
+
+00:18:42.990 --> 00:18:49.760 align:middle line:84%
+So again, this is a
+small point, that Lp of E
+
+00:18:49.760 --> 00:18:54.200 align:middle line:84%
+is, in fact, a set of
+equivalence classes
+
+00:18:54.200 --> 00:18:58.190 align:middle line:84%
+where two functions are two
+equivalence classes or equal if
+
+00:18:58.190 --> 00:19:00.890 align:middle line:84%
+and only if the representative
+functions equal--
+
+00:19:00.890 --> 00:19:04.970 align:middle line:90%
+are equal almost everywhere.
+
+00:19:04.970 --> 00:19:07.700 align:middle line:84%
+But now that I've
+explained all of that
+
+00:19:07.700 --> 00:19:10.610 align:middle line:84%
+and carefully told
+you what Lp of E is,
+
+00:19:10.610 --> 00:19:14.420 align:middle line:84%
+it is customary to never refer
+to them as equivalence classes
+
+00:19:14.420 --> 00:19:17.540 align:middle line:84%
+or elements of Lp of E
+as an equivalence class.
+
+00:19:17.540 --> 00:19:20.570 align:middle line:84%
+We usually still just
+refer to them as functions.
+
+00:19:20.570 --> 00:19:22.085 align:middle line:90%
+Let me make that point clear.
+
+00:19:22.085 --> 00:19:48.840 align:middle line:90%
+
+
+00:19:48.840 --> 00:19:52.470 align:middle line:84%
+So rather than speaking of an
+equivalence class or elements
+
+00:19:52.470 --> 00:19:54.450 align:middle line:84%
+of Lp of E as an
+equivalence class,
+
+00:19:54.450 --> 00:19:56.430 align:middle line:84%
+I will just refer
+to them as functions
+
+00:19:56.430 --> 00:20:03.660 align:middle line:84%
+with the understanding that
+two functions in Lp of E
+
+00:20:03.660 --> 00:20:07.320 align:middle line:84%
+are considered to be the same
+function, the same element
+
+00:20:07.320 --> 00:20:11.310 align:middle line:84%
+if they equal each
+other almost everywhere.
+
+00:20:11.310 --> 00:20:18.450 align:middle line:84%
+Now maybe you think
+this is a little weird,
+
+00:20:18.450 --> 00:20:20.200 align:middle line:84%
+but you've been doing
+this your whole life
+
+00:20:20.200 --> 00:20:25.780 align:middle line:84%
+already, because the rational
+numbers themselves are defined,
+
+00:20:25.780 --> 00:20:29.587 align:middle line:84%
+if you look back into algebra
+or if you're taking algebra now,
+
+00:20:29.587 --> 00:20:32.170 align:middle line:84%
+when you actually sit down and
+construct the rational numbers,
+
+00:20:32.170 --> 00:20:35.170 align:middle line:84%
+they're constructed
+as equivalence classes
+
+00:20:35.170 --> 00:20:37.450 align:middle line:90%
+of pairs of integers.
+
+00:20:37.450 --> 00:20:40.270 align:middle line:84%
+But you don't think
+of them as that,
+
+00:20:40.270 --> 00:20:44.260 align:middle line:90%
+you think of them as 3 over 2.
+
+00:20:44.260 --> 00:20:48.520 align:middle line:84%
+Not the equivalence
+class of 3, 2.
+
+00:20:48.520 --> 00:20:53.600 align:middle line:84%
+So again, two elements
+in Lp of E. I mean,
+
+00:20:53.600 --> 00:20:58.820 align:middle line:84%
+we think of Lp of E as a set of
+functions with finite Lp norm,
+
+00:20:58.820 --> 00:21:01.370 align:middle line:84%
+and with the caveat
+that two functions--
+
+00:21:01.370 --> 00:21:04.610 align:middle line:90%
+or two elements of Lp and E--
+
+00:21:04.610 --> 00:21:06.800 align:middle line:90%
+Lp of E are equal--
+
+00:21:06.800 --> 00:21:09.650 align:middle line:84%
+are the same element
+if the two functions
+
+00:21:09.650 --> 00:21:13.350 align:middle line:90%
+agree almost everywhere.
+
+00:21:13.350 --> 00:21:18.640 align:middle line:84%
+OK, now with that minor
+detail out of the way,
+
+00:21:18.640 --> 00:21:19.950 align:middle line:90%
+let's move on to--
+
+00:21:19.950 --> 00:21:24.710 align:middle line:90%
+let me state the theorem that--
+
+00:21:24.710 --> 00:21:33.480 align:middle line:90%
+
+
+00:21:33.480 --> 00:21:41.120 align:middle line:84%
+so Lp with the natural
+scalar multiplication
+
+00:21:41.120 --> 00:21:44.870 align:middle line:84%
+where you just multiply-- the
+scalar multiple of an element
+
+00:21:44.870 --> 00:21:48.520 align:middle line:84%
+as just multiplying the
+function by a scalar.
+
+00:21:48.520 --> 00:21:50.800 align:middle line:84%
+And the sum of two elements
+is just the pointwise
+
+00:21:50.800 --> 00:21:54.800 align:middle line:90%
+why some of the two functions.
+
+00:21:54.800 --> 00:21:59.080 align:middle line:84%
+So with the obvious definitions
+of scalar multiplication
+
+00:21:59.080 --> 00:21:59.815 align:middle line:90%
+and addition.
+
+00:21:59.815 --> 00:22:03.810 align:middle line:90%
+
+
+00:22:03.810 --> 00:22:08.955 align:middle line:90%
+Operations is a vector space.
+
+00:22:08.955 --> 00:22:14.380 align:middle line:90%
+
+
+00:22:14.380 --> 00:22:17.830 align:middle line:84%
+Moreover, this
+function which I've
+
+00:22:17.830 --> 00:22:27.350 align:middle line:84%
+been referring to as a norm
+is actually a norm on Lp.
+
+00:22:27.350 --> 00:22:30.950 align:middle line:90%
+
+
+00:22:30.950 --> 00:22:32.210 align:middle line:90%
+Now I'm not going to--
+
+00:22:32.210 --> 00:22:38.640 align:middle line:84%
+I'm only going to
+prove part of this
+
+00:22:38.640 --> 00:22:41.850 align:middle line:84%
+because to verify something
+as a vector space,
+
+00:22:41.850 --> 00:22:44.460 align:middle line:84%
+you have to verify
+the operations are--
+
+00:22:44.460 --> 00:22:49.800 align:middle line:90%
+satisfy certain properties.
+
+00:22:49.800 --> 00:22:53.070 align:middle line:84%
+And when I state the--
+or give the proof of what
+
+00:22:53.070 --> 00:22:55.290 align:middle line:84%
+I'm going to prove
+out of this theorem,
+
+00:22:55.290 --> 00:22:56.880 align:middle line:84%
+this will be the
+last time I actually
+
+00:22:56.880 --> 00:23:00.030 align:middle line:84%
+refer to the fact that these
+are equivalence glasses and not
+
+00:23:00.030 --> 00:23:04.200 align:middle line:84%
+functions, but just
+to make a point.
+
+00:23:04.200 --> 00:23:10.390 align:middle line:90%
+
+
+00:23:10.390 --> 00:23:12.630 align:middle line:84%
+Again, this space,
+strictly speaking,
+
+00:23:12.630 --> 00:23:15.310 align:middle line:90%
+is a set of equivalence classes.
+
+00:23:15.310 --> 00:23:18.450 align:middle line:84%
+So one would have to check
+that addition and scalar
+
+00:23:18.450 --> 00:23:21.960 align:middle line:84%
+multiplication are
+well-defined on this set,
+
+00:23:21.960 --> 00:23:25.320 align:middle line:84%
+meaning if I have
+two representatives
+
+00:23:25.320 --> 00:23:28.020 align:middle line:84%
+of the same equivalence
+class and I multiply one
+
+00:23:28.020 --> 00:23:31.020 align:middle line:84%
+by a scalar and the
+other by a scalar,
+
+00:23:31.020 --> 00:23:35.527 align:middle line:84%
+then I get the same equivalence
+class in the end, which
+
+00:23:35.527 --> 00:23:37.360 align:middle line:84%
+is easy to check, and
+the same for addition.
+
+00:23:37.360 --> 00:23:50.530 align:middle line:84%
+So again, in a strictly
+speaking sense,
+
+00:23:50.530 --> 00:23:53.440 align:middle line:84%
+that Lp is a set of
+equivalence classes,
+
+00:23:53.440 --> 00:23:57.070 align:middle line:84%
+these things are well-defined,
+scalar multiplication
+
+00:23:57.070 --> 00:23:59.800 align:middle line:90%
+and addition.
+
+00:23:59.800 --> 00:24:05.350 align:middle line:90%
+So let's check that Lp--
+
+00:24:05.350 --> 00:24:07.750 align:middle line:84%
+or that this quantity
+here is a norm.
+
+00:24:07.750 --> 00:24:11.080 align:middle line:90%
+And I'm just going to--
+
+00:24:11.080 --> 00:24:16.540 align:middle line:84%
+So first off, note that taking
+the Lp norm of an element of Lp
+
+00:24:16.540 --> 00:24:17.890 align:middle line:90%
+is actually well-defined.
+
+00:24:17.890 --> 00:24:21.400 align:middle line:84%
+Remember, so this is going
+to be the only theorem
+
+00:24:21.400 --> 00:24:24.160 align:middle line:84%
+and proof where I
+actually refer to the fact
+
+00:24:24.160 --> 00:24:27.430 align:middle line:84%
+that Lp is actually a set
+of equivalence classes,
+
+00:24:27.430 --> 00:24:30.760 align:middle line:84%
+and then after that we
+just won't do that anymore
+
+00:24:30.760 --> 00:24:33.190 align:middle line:84%
+and we'll just think of
+Lp as a set of functions
+
+00:24:33.190 --> 00:24:35.770 align:middle line:84%
+where two functions are the
+same element if they equal
+
+00:24:35.770 --> 00:24:37.060 align:middle line:90%
+each other almost everywhere.
+
+00:24:37.060 --> 00:24:41.890 align:middle line:84%
+But first thing to note
+is that this is actually
+
+00:24:41.890 --> 00:24:46.670 align:middle line:84%
+well-defined on this set
+of equivalence classes.
+
+00:24:46.670 --> 00:24:55.780 align:middle line:84%
+So note, if I have
+two representatives
+
+00:24:55.780 --> 00:25:06.310 align:middle line:84%
+of an equivalence class,
+then by what we developed
+
+00:25:06.310 --> 00:25:08.240 align:middle line:90%
+for the Lebesgue integral--
+
+00:25:08.240 --> 00:25:10.900 align:middle line:84%
+So f, take the absolute
+value raised to the p
+
+00:25:10.900 --> 00:25:13.743 align:middle line:84%
+is also going to be equal to g
+absolute value rates of the p
+
+00:25:13.743 --> 00:25:15.910 align:middle line:84%
+almost everywhere, and
+therefore these two integrals
+
+00:25:15.910 --> 00:25:18.550 align:middle line:90%
+are going to equal each other.
+
+00:25:18.550 --> 00:25:20.120 align:middle line:84%
+These integrals
+are real numbers.
+
+00:25:20.120 --> 00:25:22.120 align:middle line:84%
+They're not equivalence
+classes of real numbers,
+
+00:25:22.120 --> 00:25:26.230 align:middle line:84%
+this is a real number, a
+non-negative real number.
+
+00:25:26.230 --> 00:25:38.220 align:middle line:84%
+And therefore, if in the
+notation I had before,
+
+00:25:38.220 --> 00:25:41.370 align:middle line:84%
+if I have an
+equivalence class and I
+
+00:25:41.370 --> 00:25:43.140 align:middle line:84%
+have two different
+representatives of this
+
+00:25:43.140 --> 00:25:48.840 align:middle line:84%
+and I define the Lp norm
+of this equivalence class
+
+00:25:48.840 --> 00:25:51.390 align:middle line:84%
+to be the integral of
+the representative,
+
+00:25:51.390 --> 00:25:55.590 align:middle line:84%
+I get the same number
+regardless of the representative
+
+00:25:55.590 --> 00:25:56.715 align:middle line:90%
+for that equivalence class.
+
+00:25:56.715 --> 00:26:25.420 align:middle line:90%
+
+
+00:26:25.420 --> 00:26:35.785 align:middle line:90%
+I.e.-- OK?
+
+00:26:35.785 --> 00:26:40.450 align:middle line:90%
+So this function is defined by--
+
+00:26:40.450 --> 00:26:43.030 align:middle line:84%
+if I take that Lp norm
+of an equivalence class
+
+00:26:43.030 --> 00:26:45.370 align:middle line:84%
+given by just the integral
+of the representative,
+
+00:26:45.370 --> 00:26:46.643 align:middle line:90%
+this is well-defined.
+
+00:26:46.643 --> 00:26:48.310 align:middle line:84%
+If I take two different
+representatives,
+
+00:26:48.310 --> 00:26:49.570 align:middle line:90%
+I get the same number out.
+
+00:26:49.570 --> 00:26:54.620 align:middle line:90%
+
+
+00:26:54.620 --> 00:27:05.240 align:middle line:84%
+Now this quantity here
+equals 0 if and only if--
+
+00:27:05.240 --> 00:27:09.320 align:middle line:84%
+by what we've developed in
+our theory of integration,
+
+00:27:09.320 --> 00:27:13.610 align:middle line:90%
+f equals 0 almost everywhere.
+
+00:27:13.610 --> 00:27:16.820 align:middle line:90%
+So the Lp norm or the--
+
+00:27:16.820 --> 00:27:22.730 align:middle line:84%
+so I should say this equals
+0 almost everywhere-- i.e.,
+
+00:27:22.730 --> 00:27:24.620 align:middle line:90%
+f equals 0 almost everywhere.
+
+00:27:24.620 --> 00:27:27.130 align:middle line:90%
+
+
+00:27:27.130 --> 00:27:28.990 align:middle line:90%
+But possibly not everywhere.
+
+00:27:28.990 --> 00:27:33.990 align:middle line:90%
+
+
+00:27:33.990 --> 00:27:35.610 align:middle line:84%
+The equivalence class
+of this function
+
+00:27:35.610 --> 00:27:38.350 align:middle line:90%
+is equal to the 0 element.
+
+00:27:38.350 --> 00:27:41.190 align:middle line:84%
+So this was the
+whole reason why I
+
+00:27:41.190 --> 00:27:46.315 align:middle line:84%
+went through this trouble of
+actually explaining to you why,
+
+00:27:46.315 --> 00:27:50.850 align:middle line:84%
+strictly speaking, the most
+rigorous way of defining Lp
+
+00:27:50.850 --> 00:27:52.680 align:middle line:84%
+is as a space of
+equivalence classes,
+
+00:27:52.680 --> 00:27:55.140 align:middle line:84%
+even though we won't
+think about them that way
+
+00:27:55.140 --> 00:27:57.690 align:middle line:84%
+or talk about them that
+way in the future, that's,
+
+00:27:57.690 --> 00:27:59.700 align:middle line:90%
+in fact, what they are.
+
+00:27:59.700 --> 00:28:03.510 align:middle line:84%
+Because then, this
+quantity here, this Lp norm
+
+00:28:03.510 --> 00:28:04.740 align:middle line:90%
+is, in fact, a norm.
+
+00:28:04.740 --> 00:28:11.775 align:middle line:84%
+If the Lp norm is 0, then
+that element is the 0 element.
+
+00:28:11.775 --> 00:28:18.550 align:middle line:90%
+
+
+00:28:18.550 --> 00:28:19.090 align:middle line:90%
+OK.
+
+00:28:19.090 --> 00:28:23.380 align:middle line:84%
+So that's about the
+last time I'm ever
+
+00:28:23.380 --> 00:28:28.480 align:middle line:84%
+going to refer to the elements
+of Lp as equivalence classes.
+
+00:28:28.480 --> 00:28:32.470 align:middle line:84%
+I will now be referring
+to them as functions.
+
+00:28:32.470 --> 00:28:44.990 align:middle line:84%
+But homogeneity and the triangle
+inequality for the Lp norm,
+
+00:28:44.990 --> 00:28:51.480 align:middle line:84%
+then follow, simply
+from the definition,
+
+00:28:51.480 --> 00:28:55.560 align:middle line:84%
+for homogeneity, the
+fact that a scalar--
+
+00:28:55.560 --> 00:28:57.720 align:middle line:84%
+that the Lp norm of a
+scalar multiple of f
+
+00:28:57.720 --> 00:29:01.770 align:middle line:84%
+is equal to the absolute
+value of the scalar times
+
+00:29:01.770 --> 00:29:03.990 align:middle line:84%
+the Lp norm of f, and
+the triangle inequality
+
+00:29:03.990 --> 00:29:15.830 align:middle line:84%
+follow from the definition
+and Minkowski's inequality.
+
+00:29:15.830 --> 00:29:26.460 align:middle line:90%
+
+
+00:29:26.460 --> 00:29:27.270 align:middle line:90%
+OK.
+
+00:29:27.270 --> 00:29:35.020 align:middle line:84%
+So Lp is the space of measurable
+functions with finite Lp norms.
+
+00:29:35.020 --> 00:29:35.520 align:middle line:90%
+See?
+
+00:29:35.520 --> 00:29:38.020 align:middle line:84%
+I'm Already not going to refer
+to it ever again as the space
+
+00:29:38.020 --> 00:29:39.210 align:middle line:90%
+of equivalence classes.
+
+00:29:39.210 --> 00:29:41.460 align:middle line:84%
+You should think of
+them as space functions,
+
+00:29:41.460 --> 00:29:45.600 align:middle line:84%
+just with two elements equal
+if these functions equal
+
+00:29:45.600 --> 00:29:50.010 align:middle line:84%
+each other almost
+everywhere pointwise on E.
+
+00:29:50.010 --> 00:29:54.140 align:middle line:90%
+Now we come to the big question.
+
+00:29:54.140 --> 00:29:58.640 align:middle line:84%
+We now have this norm
+space Lp of E corresponding
+
+00:29:58.640 --> 00:30:03.095 align:middle line:84%
+to all these functions
+that have finite Lp norm.
+
+00:30:03.095 --> 00:30:06.080 align:middle line:90%
+
+
+00:30:06.080 --> 00:30:09.260 align:middle line:90%
+First off, is this non-empty?
+
+00:30:09.260 --> 00:30:14.470 align:middle line:84%
+Let's maybe give you
+the simplest example.
+
+00:30:14.470 --> 00:30:17.730 align:middle line:84%
+In fact, let me prove the
+following simple theorem.
+
+00:30:17.730 --> 00:30:21.830 align:middle line:90%
+
+
+00:30:21.830 --> 00:30:24.290 align:middle line:90%
+So-- which is the following.
+
+00:30:24.290 --> 00:30:27.530 align:middle line:90%
+
+
+00:30:27.530 --> 00:30:39.220 align:middle line:84%
+Let E be measurable,
+then f is an Lp of E
+
+00:30:39.220 --> 00:30:50.760 align:middle line:84%
+if and only if the limit as
+R goes to infinity over--
+
+00:30:50.760 --> 00:30:54.990 align:middle line:84%
+of the integral of
+minus R to R intersect E
+
+00:30:54.990 --> 00:31:00.080 align:middle line:90%
+of f raised to the p is finite.
+
+00:31:00.080 --> 00:31:02.960 align:middle line:84%
+Notice, as R going
+to plus infinity--
+
+00:31:02.960 --> 00:31:05.580 align:middle line:90%
+
+
+00:31:05.580 --> 00:31:09.140 align:middle line:84%
+so maybe let's not
+make it R. We can
+
+00:31:09.140 --> 00:31:10.895 align:middle line:84%
+make it n we're in
+as a natural number.
+
+00:31:10.895 --> 00:31:17.720 align:middle line:90%
+
+
+00:31:17.720 --> 00:31:20.550 align:middle line:84%
+Then this is an increasing
+sequence of numbers.
+
+00:31:20.550 --> 00:31:25.190 align:middle line:84%
+So let's give the
+proof real quick.
+
+00:31:25.190 --> 00:31:40.580 align:middle line:84%
+Let's assume f is in Lp
+implies that this quantity here
+
+00:31:40.580 --> 00:31:41.090 align:middle line:90%
+is finite.
+
+00:31:41.090 --> 00:31:44.130 align:middle line:90%
+
+
+00:31:44.130 --> 00:31:53.208 align:middle line:84%
+Since the sequence of integrals
+over minus n to n intersect E
+
+00:31:53.208 --> 00:31:59.370 align:middle line:84%
+f raised to the p, this
+is an increasing sequence.
+
+00:31:59.370 --> 00:32:03.030 align:middle line:84%
+Because at each
+step, at each entry,
+
+00:32:03.030 --> 00:32:05.310 align:middle line:84%
+I'm taking the integral of
+this non-negative quantity
+
+00:32:05.310 --> 00:32:09.030 align:middle line:90%
+over a bigger set.
+
+00:32:09.030 --> 00:32:10.770 align:middle line:84%
+So this is an
+increasing sequence.
+
+00:32:10.770 --> 00:32:23.560 align:middle line:90%
+
+
+00:32:23.560 --> 00:32:26.710 align:middle line:84%
+So, in fact, this
+limit always exists,
+
+00:32:26.710 --> 00:32:29.070 align:middle line:84%
+so it was meaningful to
+actually refer to this limit.
+
+00:32:29.070 --> 00:32:36.180 align:middle line:90%
+
+
+00:32:36.180 --> 00:32:43.020 align:middle line:84%
+Since this is an increasing
+sequence, limit as n
+
+00:32:43.020 --> 00:32:52.330 align:middle line:84%
+goes to infinity minus n
+intersect E actually exists
+
+00:32:52.330 --> 00:32:56.515 align:middle line:84%
+as a possibly
+extended real number.
+
+00:32:56.515 --> 00:33:03.270 align:middle line:90%
+
+
+00:33:03.270 --> 00:33:06.500 align:middle line:84%
+Now since for all n, we
+have that the integral
+
+00:33:06.500 --> 00:33:13.850 align:middle line:84%
+of minus n to n intersect
+E raised to the p
+
+00:33:13.850 --> 00:33:15.770 align:middle line:90%
+is less than or equal to--
+
+00:33:15.770 --> 00:33:24.680 align:middle line:84%
+well, in fact, I'm being
+a little inefficient here.
+
+00:33:24.680 --> 00:33:30.755 align:middle line:90%
+Let's just erase one bit here.
+
+00:33:30.755 --> 00:33:40.650 align:middle line:90%
+
+
+00:33:40.650 --> 00:33:41.670 align:middle line:90%
+OK.
+
+00:33:41.670 --> 00:33:43.700 align:middle line:90%
+Yeah, let's do it this way.
+
+00:33:43.700 --> 00:33:44.700 align:middle line:90%
+We'll do it much faster.
+
+00:33:44.700 --> 00:33:48.600 align:middle line:90%
+
+
+00:33:48.600 --> 00:34:00.910 align:middle line:84%
+Now note that intersect
+E f raised to the p,
+
+00:34:00.910 --> 00:34:05.460 align:middle line:84%
+this is equal to integral
+over E chi minus n
+
+00:34:05.460 --> 00:34:08.290 align:middle line:90%
+to n f raised to the p.
+
+00:34:08.290 --> 00:34:11.889 align:middle line:90%
+So I can think of this as--
+
+00:34:11.889 --> 00:34:14.380 align:middle line:84%
+I can think of what's
+here in the integrand
+
+00:34:14.380 --> 00:34:16.480 align:middle line:90%
+as a function for each n.
+
+00:34:16.480 --> 00:34:41.060 align:middle line:84%
+So since this is a sequence
+that is pointwise increasing,
+
+00:34:41.060 --> 00:34:47.449 align:middle line:84%
+and for all x in
+E, we have limit
+
+00:34:47.449 --> 00:34:55.196 align:middle line:84%
+as n goes to infinity
+of chi minus n to n,
+
+00:34:55.196 --> 00:35:03.810 align:middle line:84%
+f of x raised to the p equals
+f of x raised of the p.
+
+00:35:03.810 --> 00:35:12.630 align:middle line:84%
+This-- by the monotone
+convergence theorem,
+
+00:35:12.630 --> 00:35:15.280 align:middle line:84%
+the integral of the limit
+as n goes to infinity,
+
+00:35:15.280 --> 00:35:22.050 align:middle line:84%
+which is just f raised to
+the p, is equal to the limit
+
+00:35:22.050 --> 00:35:30.030 align:middle line:84%
+as n goes to infinity of the
+integral of this quantity
+
+00:35:30.030 --> 00:35:32.910 align:middle line:84%
+here over E, which is, again,
+the interval over minus n
+
+00:35:32.910 --> 00:35:36.890 align:middle line:84%
+to n intersect E
+raised to the p.
+
+00:35:36.890 --> 00:35:39.230 align:middle line:84%
+And therefore,
+this quantity here
+
+00:35:39.230 --> 00:35:43.790 align:middle line:84%
+is finite if and only if
+this quantity here is finite.
+
+00:35:43.790 --> 00:35:46.310 align:middle line:84%
+And therefore, f is
+an Lp if and only
+
+00:35:46.310 --> 00:35:51.100 align:middle line:84%
+if this quantity here
+is finite, and in fact,
+
+00:35:51.100 --> 00:35:52.150 align:middle line:90%
+they equal each other.
+
+00:35:52.150 --> 00:36:01.180 align:middle line:90%
+
+
+00:36:01.180 --> 00:36:10.230 align:middle line:84%
+So using that theorem, if
+you like, you can prove--
+
+00:36:10.230 --> 00:36:20.310 align:middle line:84%
+and I'll leave it to you-- that
+if f from, let's say, R to C
+
+00:36:20.310 --> 00:36:35.000 align:middle line:84%
+is measurable and there exists
+a constant non negative and q
+
+00:36:35.000 --> 00:36:45.700 align:middle line:84%
+bigger than 1 such that
+for almost every x in R,
+
+00:36:45.700 --> 00:36:49.610 align:middle line:84%
+f of x is less than or
+equal to a constant times 1
+
+00:36:49.610 --> 00:37:07.490 align:middle line:84%
+plus x raised to the minus
+q, then f is an Lp of R
+
+00:37:07.490 --> 00:37:09.350 align:middle line:84%
+for all p bigger
+than or equal to 1.
+
+00:37:09.350 --> 00:37:13.610 align:middle line:90%
+
+
+00:37:13.610 --> 00:37:16.530 align:middle line:90%
+So how do you do that?
+
+00:37:16.530 --> 00:37:23.840 align:middle line:84%
+So OK, maybe I'll just indicate
+why we use the previous theorem
+
+00:37:23.840 --> 00:37:26.980 align:middle line:84%
+and look at the
+integral from minus n
+
+00:37:26.980 --> 00:37:35.520 align:middle line:84%
+to n intersect R. So this
+here, by this estimate,
+
+00:37:35.520 --> 00:37:37.410 align:middle line:84%
+is less than or
+equal to the integral
+
+00:37:37.410 --> 00:37:49.325 align:middle line:84%
+from minus n to n times constant
+1 plus x to the minus q.
+
+00:37:49.325 --> 00:37:53.020 align:middle line:84%
+Now this is a continuous
+function over a compact--
+
+00:37:53.020 --> 00:37:56.380 align:middle line:84%
+or closed and bounded
+interval, so this is
+
+00:37:56.380 --> 00:37:57.655 align:middle line:90%
+equal to its Riemann integral.
+
+00:37:57.655 --> 00:38:05.490 align:middle line:90%
+
+
+00:38:05.490 --> 00:38:10.350 align:middle line:84%
+I will often, on exams and
+so on, right the Lebesgue
+
+00:38:10.350 --> 00:38:12.540 align:middle line:84%
+integral also in
+this form, though.
+
+00:38:12.540 --> 00:38:15.362 align:middle line:84%
+So I don't want to
+say that I'm just--
+
+00:38:15.362 --> 00:38:17.070 align:middle line:84%
+you're going to use
+this kind of notation
+
+00:38:17.070 --> 00:38:20.270 align:middle line:90%
+for the Riemann integral.
+
+00:38:20.270 --> 00:38:22.580 align:middle line:90%
+But anyways.
+
+00:38:22.580 --> 00:38:25.760 align:middle line:84%
+And I leave it to you
+to show that as long
+
+00:38:25.760 --> 00:38:30.470 align:middle line:84%
+as q is bigger than 1, this is
+less than or equal to-- so I
+
+00:38:30.470 --> 00:38:34.020 align:middle line:90%
+should put p times q.
+
+00:38:34.020 --> 00:38:35.640 align:middle line:90%
+p times q.
+
+00:38:35.640 --> 00:38:46.900 align:middle line:84%
+That as long as q
+is bigger than 1,
+
+00:38:46.900 --> 00:38:53.620 align:middle line:84%
+this integral here is less
+than or equal to some constant
+
+00:38:53.620 --> 00:38:54.640 align:middle line:90%
+depending on p.
+
+00:38:54.640 --> 00:39:06.990 align:middle line:90%
+
+
+00:39:06.990 --> 00:39:08.700 align:middle line:90%
+OK.
+
+00:39:08.700 --> 00:39:18.420 align:middle line:84%
+So there's many functions that
+are in Lp, so it's not exactly
+
+00:39:18.420 --> 00:39:19.680 align:middle line:90%
+a trivial space.
+
+00:39:19.680 --> 00:39:22.770 align:middle line:90%
+
+
+00:39:22.770 --> 00:39:24.690 align:middle line:90%
+But what kind of space is it?
+
+00:39:24.690 --> 00:39:28.730 align:middle line:90%
+Now let me state the following.
+
+00:39:28.730 --> 00:39:34.370 align:middle line:84%
+That, in fact, this is what you
+proved in the assignment right
+
+00:39:34.370 --> 00:39:38.970 align:middle line:84%
+before -- or the assignment I at
+least assigned before the exam,
+
+00:39:38.970 --> 00:39:40.410 align:middle line:90%
+which was following.
+
+00:39:40.410 --> 00:39:44.645 align:middle line:90%
+Let a less than b-- less than b.
+
+00:39:44.645 --> 00:39:48.420 align:middle line:90%
+
+
+00:39:48.420 --> 00:39:51.610 align:middle line:90%
+And p between 1 and infinity.
+
+00:39:51.610 --> 00:39:55.170 align:middle line:84%
+So in fact, you did it
+for L1, but the same proof
+
+00:39:55.170 --> 00:39:56.220 align:middle line:90%
+carries over for Lp.
+
+00:39:56.220 --> 00:39:59.040 align:middle line:90%
+
+
+00:39:59.040 --> 00:40:02.775 align:middle line:90%
+fE in Lp of a, b.
+
+00:40:02.775 --> 00:40:07.310 align:middle line:90%
+
+
+00:40:07.310 --> 00:40:11.600 align:middle line:84%
+So I keep adding stuff and
+epsilon would be positive.
+
+00:40:11.600 --> 00:40:15.610 align:middle line:90%
+
+
+00:40:15.610 --> 00:40:20.670 align:middle line:84%
+Then there exists a
+continuous function
+
+00:40:20.670 --> 00:40:31.410 align:middle line:84%
+in a, b, which I can also impose
+vanishes at the end points
+
+00:40:31.410 --> 00:40:36.300 align:middle line:90%
+and is close to f and Lp norm.
+
+00:40:36.300 --> 00:40:42.310 align:middle line:90%
+
+
+00:40:42.310 --> 00:40:50.710 align:middle line:84%
+So what this states is that the
+space of continuous functions
+
+00:40:50.710 --> 00:40:59.065 align:middle line:90%
+is dense an Lp of a, b.
+
+00:40:59.065 --> 00:41:02.460 align:middle line:90%
+
+
+00:41:02.460 --> 00:41:06.870 align:middle line:84%
+And it's a proper
+subset of Lp of a, b.
+
+00:41:06.870 --> 00:41:14.560 align:middle line:84%
+I can find elements in Lp that
+are not continuous or even not
+
+00:41:14.560 --> 00:41:17.480 align:middle line:84%
+equal to a continuous
+function almost everywhere.
+
+00:41:17.480 --> 00:41:20.845 align:middle line:90%
+So it is dense and also proper.
+
+00:41:20.845 --> 00:41:25.010 align:middle line:90%
+
+
+00:41:25.010 --> 00:41:29.030 align:middle line:84%
+And now the final theorem
+will prove about integration
+
+00:41:29.030 --> 00:41:33.540 align:middle line:84%
+in Lp spaces is
+that Lp is complete.
+
+00:41:33.540 --> 00:41:38.920 align:middle line:90%
+So this is due to Reece and--
+
+00:41:38.920 --> 00:41:39.420 align:middle line:90%
+let's see.
+
+00:41:39.420 --> 00:41:42.000 align:middle line:84%
+Does this have a
+C or is it just--
+
+00:41:42.000 --> 00:41:48.550 align:middle line:84%
+yeah, it does have a C.
+This is a Banach space.
+
+00:41:48.550 --> 00:41:52.130 align:middle line:90%
+
+
+00:41:52.130 --> 00:41:54.422 align:middle line:90%
+For p between 1 and infinity.
+
+00:41:54.422 --> 00:41:57.380 align:middle line:90%
+
+
+00:41:57.380 --> 00:41:58.970 align:middle line:90%
+Including 1 and infinity.
+
+00:41:58.970 --> 00:42:05.050 align:middle line:84%
+Now I'll give the proof
+for p between strictly
+
+00:42:05.050 --> 00:42:06.020 align:middle line:90%
+less than infinity.
+
+00:42:06.020 --> 00:42:10.990 align:middle line:90%
+So p equals infinity.
+
+00:42:10.990 --> 00:42:19.030 align:middle line:84%
+This will appear
+in an assignment.
+
+00:42:19.030 --> 00:42:26.280 align:middle line:84%
+So we'll do the case of
+p between 1 and infinity.
+
+00:42:26.280 --> 00:42:32.920 align:middle line:90%
+
+
+00:42:32.920 --> 00:42:34.520 align:middle line:90%
+So how are we going to do this?
+
+00:42:34.520 --> 00:42:38.470 align:middle line:84%
+We are going to, in
+fact, use that criterion
+
+00:42:38.470 --> 00:42:43.390 align:middle line:84%
+from several weeks ago
+about when is a norm space
+
+00:42:43.390 --> 00:42:44.350 align:middle line:90%
+a Banach space?
+
+00:42:44.350 --> 00:42:47.440 align:middle line:84%
+So we proved this equivalent
+criterion-- so remember,
+
+00:42:47.440 --> 00:42:50.390 align:middle line:84%
+a Banach space is a norm space
+that's complete with respect
+
+00:42:50.390 --> 00:42:50.890 align:middle line:90%
+to the norm.
+
+00:42:50.890 --> 00:42:53.410 align:middle line:84%
+So you would have to check
+that all Cauchy sequences
+
+00:42:53.410 --> 00:42:56.410 align:middle line:84%
+in the space converge to
+something in the space.
+
+00:42:56.410 --> 00:43:01.450 align:middle line:90%
+
+
+00:43:01.450 --> 00:43:08.990 align:middle line:84%
+But now we came up with
+this other criterion--
+
+00:43:08.990 --> 00:43:10.040 align:middle line:90%
+I shouldn't say we did.
+
+00:43:10.040 --> 00:43:12.200 align:middle line:84%
+Somebody did, and then
+I showed it to you,
+
+00:43:12.200 --> 00:43:15.620 align:middle line:84%
+that an equivalent
+way to prove that is
+
+00:43:15.620 --> 00:43:20.150 align:middle line:84%
+to prove that all absolutely
+summable series in the norm
+
+00:43:20.150 --> 00:43:23.180 align:middle line:90%
+space are summable.
+
+00:43:23.180 --> 00:43:25.850 align:middle line:84%
+Remember, absolutely summable
+means that some of the norms
+
+00:43:25.850 --> 00:43:26.660 align:middle line:90%
+is finite.
+
+00:43:26.660 --> 00:43:28.340 align:middle line:84%
+So that's what
+we're going to use--
+
+00:43:28.340 --> 00:43:29.715 align:middle line:84%
+or that's what
+we're going to do.
+
+00:43:29.715 --> 00:43:34.480 align:middle line:90%
+
+
+00:43:34.480 --> 00:43:54.750 align:middle line:84%
+We will show that every
+absolutely summable series
+
+00:43:54.750 --> 00:43:55.250 align:middle line:90%
+is summable.
+
+00:43:55.250 --> 00:43:59.120 align:middle line:90%
+
+
+00:43:59.120 --> 00:44:11.910 align:middle line:84%
+So, suppose I have a sequence
+in Lk, it's a sequence in--
+
+00:44:11.910 --> 00:44:14.550 align:middle line:90%
+f is an Lp, not Lk.
+
+00:44:14.550 --> 00:44:19.700 align:middle line:90%
+
+
+00:44:19.700 --> 00:44:23.310 align:middle line:84%
+That form an absolutely
+seminal series.
+
+00:44:23.310 --> 00:44:29.360 align:middle line:84%
+So such that sum over k of--
+if I take the LP norm of fk.
+
+00:44:29.360 --> 00:44:33.500 align:middle line:84%
+So this is now a series
+of non-negative numbers,
+
+00:44:33.500 --> 00:44:35.420 align:middle line:84%
+let's assume this
+converges, meaning
+
+00:44:35.420 --> 00:44:41.425 align:middle line:84%
+this I'm writing it
+as this is finite.
+
+00:44:41.425 --> 00:44:45.740 align:middle line:90%
+
+
+00:44:45.740 --> 00:44:48.230 align:middle line:90%
+So, in fact, this equals a--
+
+00:44:48.230 --> 00:44:52.070 align:middle line:84%
+let me call this a
+convergence series something.
+
+00:44:52.070 --> 00:44:54.005 align:middle line:84%
+Call it m, which
+is a finite number.
+
+00:44:54.005 --> 00:44:59.056 align:middle line:90%
+
+
+00:44:59.056 --> 00:45:06.580 align:middle line:84%
+All right, so we have this
+absolutely summable series,
+
+00:45:06.580 --> 00:45:15.850 align:middle line:84%
+and we want to prove that
+now the series, sum of fk's,
+
+00:45:15.850 --> 00:45:20.350 align:middle line:90%
+converge to something in Lp.
+
+00:45:20.350 --> 00:45:30.640 align:middle line:90%
+
+
+00:45:30.640 --> 00:45:32.260 align:middle line:90%
+And what do we want to show now?
+
+00:45:32.260 --> 00:45:35.440 align:middle line:84%
+So let me just-- so that
+that's clear ahead of time,
+
+00:45:35.440 --> 00:45:43.910 align:middle line:84%
+we want to show there
+exists a function in Lp
+
+00:45:43.910 --> 00:45:53.320 align:middle line:90%
+such that k equals 1 to n.
+
+00:45:53.320 --> 00:45:56.380 align:middle line:84%
+The partial sums
+converts to f as n
+
+00:45:56.380 --> 00:46:03.168 align:middle line:90%
+goes to infinity and Lp of eie.
+
+00:46:03.168 --> 00:46:07.980 align:middle line:84%
+Equivalent way of writing
+that is that the limit as n
+
+00:46:07.980 --> 00:46:12.730 align:middle line:84%
+goes to infinity of the
+norm, some k equals 1 to n
+
+00:46:12.730 --> 00:46:17.670 align:middle line:90%
+of fk minus fp equals 0.
+
+00:46:17.670 --> 00:46:21.290 align:middle line:90%
+
+
+00:46:21.290 --> 00:46:24.680 align:middle line:84%
+That will show that every
+summable series is--
+
+00:46:24.680 --> 00:46:26.720 align:middle line:84%
+absolutely summable
+series is summable.
+
+00:46:26.720 --> 00:46:29.820 align:middle line:90%
+
+
+00:46:29.820 --> 00:46:33.960 align:middle line:84%
+So we have to identify
+a candidate f and then
+
+00:46:33.960 --> 00:46:37.530 align:middle line:90%
+show that the norm of--
+
+00:46:37.530 --> 00:46:43.901 align:middle line:84%
+that this norm here goes
+to 0 as n goes to infinity.
+
+00:46:43.901 --> 00:46:52.030 align:middle line:90%
+OK, so define gn from E to--
+
+00:46:52.030 --> 00:46:55.960 align:middle line:90%
+
+
+00:46:55.960 --> 00:46:58.240 align:middle line:84%
+so it's a non-negative
+number-- or it's a non-negative
+
+00:46:58.240 --> 00:47:00.770 align:middle line:90%
+function--
+
+00:47:00.770 --> 00:47:09.320 align:middle line:84%
+by gn of x equals sum
+from k equals 1 to n
+
+00:47:09.320 --> 00:47:11.540 align:middle line:84%
+of the absolute
+value of fk of x.
+
+00:47:11.540 --> 00:47:16.140 align:middle line:90%
+
+
+00:47:16.140 --> 00:47:17.990 align:middle line:84%
+This is, again, a
+measurable function
+
+00:47:17.990 --> 00:47:20.390 align:middle line:84%
+because it's the sum of
+measurable functions.
+
+00:47:20.390 --> 00:47:22.873 align:middle line:90%
+
+
+00:47:22.873 --> 00:47:23.665 align:middle line:90%
+So what do we know?
+
+00:47:23.665 --> 00:47:27.170 align:middle line:90%
+
+
+00:47:27.170 --> 00:47:29.210 align:middle line:84%
+By the triangle
+inequality, we know
+
+00:47:29.210 --> 00:47:40.340 align:middle line:84%
+that if I take the Lp norm of
+gn, which is this finite sum--
+
+00:47:40.340 --> 00:47:48.030 align:middle line:90%
+
+
+00:47:48.030 --> 00:47:50.360 align:middle line:84%
+so by the triangle
+inequality for the Lp norm,
+
+00:47:50.360 --> 00:47:54.800 align:middle line:84%
+this is less than or equal
+to sum from k equals 1 to n
+
+00:47:54.800 --> 00:47:58.700 align:middle line:90%
+of the Lp norms of the fk's.
+
+00:47:58.700 --> 00:48:02.450 align:middle line:84%
+And this is a partial
+sum corresponding
+
+00:48:02.450 --> 00:48:07.160 align:middle line:84%
+to the series of the norms
+of fk's which sum to M.
+
+00:48:07.160 --> 00:48:12.340 align:middle line:84%
+So this is always less
+than or equal to M,
+
+00:48:12.340 --> 00:48:14.635 align:middle line:84%
+which we're assuming,
+again, is a finite number.
+
+00:48:14.635 --> 00:48:17.810 align:middle line:90%
+
+
+00:48:17.810 --> 00:48:34.400 align:middle line:84%
+And therefore, which
+implies by Fatou's lemma
+
+00:48:34.400 --> 00:48:41.360 align:middle line:84%
+that the liminf as n
+goes to infinity of g sub
+
+00:48:41.360 --> 00:48:52.170 align:middle line:90%
+n over E, which is equal to--
+
+00:48:52.170 --> 00:48:56.596 align:middle line:90%
+Now for each x, this--
+
+00:48:56.596 --> 00:48:59.140 align:middle line:90%
+
+
+00:48:59.140 --> 00:49:03.110 align:middle line:84%
+so as n goes to infinity-- for
+each x as n goes to infinity,
+
+00:49:03.110 --> 00:49:04.570 align:middle line:90%
+this converges to something.
+
+00:49:04.570 --> 00:49:07.490 align:middle line:84%
+It's either finite
+or equal to infinity,
+
+00:49:07.490 --> 00:49:08.480 align:middle line:90%
+so it always converges.
+
+00:49:08.480 --> 00:49:15.000 align:middle line:84%
+So this is equal to
+the infinite sum.
+
+00:49:15.000 --> 00:49:18.440 align:middle line:84%
+I should say, let's
+raise this to the p.
+
+00:49:18.440 --> 00:49:21.860 align:middle line:90%
+
+
+00:49:21.860 --> 00:49:22.865 align:middle line:90%
+Which is equal to--
+
+00:49:22.865 --> 00:49:38.470 align:middle line:90%
+
+
+00:49:38.470 --> 00:49:42.640 align:middle line:84%
+so-- OK, I kind of
+got this backwards.
+
+00:49:42.640 --> 00:49:44.750 align:middle line:84%
+I should have said
+this is equal to this.
+
+00:49:44.750 --> 00:49:47.950 align:middle line:90%
+But anyways, by Fatou's lemma--
+
+00:49:47.950 --> 00:49:50.650 align:middle line:90%
+so let me reverse these things.
+
+00:49:50.650 --> 00:50:02.590 align:middle line:90%
+
+
+00:50:02.590 --> 00:50:06.000 align:middle line:84%
+So by Fatou's lemma, so
+I have this is equal to--
+
+00:50:06.000 --> 00:50:08.700 align:middle line:90%
+so this does not used Fatou.
+
+00:50:08.700 --> 00:50:12.515 align:middle line:84%
+It just uses the
+definition of gn.
+
+00:50:12.515 --> 00:50:15.950 align:middle line:90%
+
+
+00:50:15.950 --> 00:50:19.260 align:middle line:90%
+This is less than or equal to--
+
+00:50:19.260 --> 00:50:22.550 align:middle line:90%
+now I'm using Fatou's lemma.
+
+00:50:22.550 --> 00:50:27.920 align:middle line:84%
+Integral over E gn
+raised to the p.
+
+00:50:27.920 --> 00:50:32.420 align:middle line:84%
+And now I use that bound
+which I have right here--
+
+00:50:32.420 --> 00:50:35.480 align:middle line:84%
+this is always less
+than or equal to--
+
+00:50:35.480 --> 00:50:38.390 align:middle line:84%
+remember, the Lp
+norm of g sub n was
+
+00:50:38.390 --> 00:50:41.840 align:middle line:84%
+less than or equal to M. So
+raising that to the p power,
+
+00:50:41.840 --> 00:50:44.210 align:middle line:84%
+I have this is less than
+or equal to M to the p.
+
+00:50:44.210 --> 00:50:50.780 align:middle line:84%
+So I started off
+with the integral
+
+00:50:50.780 --> 00:50:53.270 align:middle line:84%
+of this non-negative
+measurable function, which
+
+00:50:53.270 --> 00:50:57.410 align:middle line:84%
+is the series of f
+sub k raised to the p,
+
+00:50:57.410 --> 00:51:00.005 align:middle line:84%
+and showed that that
+integral is finite.
+
+00:51:00.005 --> 00:51:02.560 align:middle line:90%
+
+
+00:51:02.560 --> 00:51:06.530 align:middle line:84%
+Thus-- so by another
+theorem that we
+
+00:51:06.530 --> 00:51:09.110 align:middle line:84%
+proved from integration, if I
+have a non-negative measurable
+
+00:51:09.110 --> 00:51:11.360 align:middle line:84%
+function that has
+finite integral,
+
+00:51:11.360 --> 00:51:13.760 align:middle line:84%
+then that measurable
+function has
+
+00:51:13.760 --> 00:51:17.900 align:middle line:90%
+to be finite almost everywhere.
+
+00:51:17.900 --> 00:51:25.190 align:middle line:84%
+So thus, this quantity
+has to converge
+
+00:51:25.190 --> 00:51:38.280 align:middle line:84%
+or is finite for
+almost every x in E.
+
+00:51:38.280 --> 00:51:42.195 align:middle line:84%
+So, what I get is
+that for almost--
+
+00:51:42.195 --> 00:51:44.220 align:middle line:90%
+let me include an x in here.
+
+00:51:44.220 --> 00:51:53.190 align:middle line:90%
+
+
+00:51:53.190 --> 00:51:58.818 align:middle line:84%
+So I've proven for
+almost every x in E,
+
+00:51:58.818 --> 00:52:02.920 align:middle line:84%
+fk of x is absolutely
+convergent.
+
+00:52:02.920 --> 00:52:04.860 align:middle line:84%
+So this series is
+absolutely convergent.
+
+00:52:04.860 --> 00:52:07.740 align:middle line:84%
+And therefore, it converges
+for almost every x in E.
+
+00:52:07.740 --> 00:52:10.500 align:middle line:84%
+And I'll define my
+function away, right?
+
+00:52:10.500 --> 00:52:12.150 align:middle line:84%
+Because in the end,
+remember, we're
+
+00:52:12.150 --> 00:52:16.020 align:middle line:84%
+trying to find a function f
+so that These partial sums
+
+00:52:16.020 --> 00:52:17.640 align:middle line:90%
+converge to f and Lp.
+
+00:52:17.640 --> 00:52:22.560 align:middle line:84%
+So if we can define f at
+somehow as the almost everywhere
+
+00:52:22.560 --> 00:52:24.600 align:middle line:84%
+pointwise limit of
+s sub k, maybe we
+
+00:52:24.600 --> 00:52:26.340 align:middle line:84%
+can use the dominated
+convergence theorem
+
+00:52:26.340 --> 00:52:30.860 align:middle line:84%
+in some way, and
+that'll be what we do.
+
+00:52:30.860 --> 00:52:45.000 align:middle line:84%
+So define f of x to
+be exactly what I
+
+00:52:45.000 --> 00:52:49.390 align:middle line:84%
+get from this convergent series
+when it converges, absolutely.
+
+00:52:49.390 --> 00:52:57.820 align:middle line:90%
+So if-- 0 or otherwise.
+
+00:52:57.820 --> 00:53:02.780 align:middle line:90%
+
+
+00:53:02.780 --> 00:53:10.030 align:middle line:84%
+And I'm going to define g of
+x to be, again, if you like,
+
+00:53:10.030 --> 00:53:13.460 align:middle line:84%
+it's when the g
+sub n's converge.
+
+00:53:13.460 --> 00:53:23.240 align:middle line:84%
+So if this is finite,
+and 0 otherwise.
+
+00:53:23.240 --> 00:53:27.520 align:middle line:90%
+
+
+00:53:27.520 --> 00:53:31.350 align:middle line:84%
+So now I have these two
+measurable real value
+
+00:53:31.350 --> 00:53:33.920 align:middle line:90%
+functions.
+
+00:53:33.920 --> 00:53:38.930 align:middle line:84%
+And this guy will end up being
+what the fk's converged to.
+
+00:53:38.930 --> 00:53:44.130 align:middle line:90%
+
+
+00:53:44.130 --> 00:53:47.070 align:middle line:84%
+So then we have a
+couple of things.
+
+00:53:47.070 --> 00:53:54.350 align:middle line:84%
+Then limit as n goes to infinity
+of sum from k equals 1 to n,
+
+00:53:54.350 --> 00:53:55.800 align:middle line:90%
+fk of x--
+
+00:53:55.800 --> 00:53:58.550 align:middle line:90%
+
+
+00:53:58.550 --> 00:54:02.920 align:middle line:90%
+you can put a minus f of x--
+
+00:54:02.920 --> 00:54:07.450 align:middle line:84%
+equals 0 almost everywhere
+on E. Why is that?
+
+00:54:07.450 --> 00:54:10.060 align:middle line:84%
+This is just because
+f of x is simply
+
+00:54:10.060 --> 00:54:13.750 align:middle line:84%
+defined to be the infinite
+sum when the sum is absolutely
+
+00:54:13.750 --> 00:54:16.540 align:middle line:84%
+convergent, which is almost
+everywhere by what we've done.
+
+00:54:16.540 --> 00:54:20.710 align:middle line:90%
+
+
+00:54:20.710 --> 00:54:21.535 align:middle line:90%
+What else?
+
+00:54:21.535 --> 00:54:26.520 align:middle line:90%
+
+
+00:54:26.520 --> 00:54:31.020 align:middle line:84%
+If I-- so this is
+one crucial thing.
+
+00:54:31.020 --> 00:54:36.250 align:middle line:90%
+
+
+00:54:36.250 --> 00:54:51.570 align:middle line:84%
+And minus f of x, this is
+less than or equal to g of x--
+
+00:54:51.570 --> 00:55:00.430 align:middle line:84%
+so it's the p raised the p
+almost everywhere on E. OK,
+
+00:55:00.430 --> 00:55:02.800 align:middle line:90%
+why is this?
+
+00:55:02.800 --> 00:55:05.380 align:middle line:84%
+Holds, for example,
+when the series
+
+00:55:05.380 --> 00:55:07.270 align:middle line:90%
+is absolutely convergent.
+
+00:55:07.270 --> 00:55:11.435 align:middle line:84%
+Because then f of x is equal
+to the infinite sum of the fk's
+
+00:55:11.435 --> 00:55:11.935 align:middle line:90%
+of x.
+
+00:55:11.935 --> 00:55:14.605 align:middle line:90%
+
+
+00:55:14.605 --> 00:55:16.448 align:middle line:84%
+And so by the
+triangle inequality,
+
+00:55:16.448 --> 00:55:17.990 align:middle line:84%
+the absolute value
+of that difference
+
+00:55:17.990 --> 00:55:20.480 align:middle line:84%
+is going to be less
+than or equal to the sum
+
+00:55:20.480 --> 00:55:22.250 align:middle line:90%
+of the absolute values.
+
+00:55:22.250 --> 00:55:27.590 align:middle line:84%
+That's by definition equal
+to g sub n or g sub n plus 1.
+
+00:55:27.590 --> 00:55:31.460 align:middle line:84%
+g is the limit of the g
+sub n, so the g sub n's
+
+00:55:31.460 --> 00:55:32.390 align:middle line:90%
+are increasing.
+
+00:55:32.390 --> 00:55:34.685 align:middle line:84%
+So that always
+sits below g of x.
+
+00:55:34.685 --> 00:55:49.930 align:middle line:90%
+
+
+00:55:49.930 --> 00:55:59.500 align:middle line:84%
+Now, by-- I should say, by this,
+I don't want to pull it up.
+
+00:55:59.500 --> 00:56:17.620 align:middle line:84%
+So let's just say, since we
+proved that the Lp norm of this
+
+00:56:17.620 --> 00:56:23.280 align:middle line:84%
+is less than or equal
+to M, which this here
+
+00:56:23.280 --> 00:56:27.870 align:middle line:84%
+is equal to g almost
+everywhere, this
+
+00:56:27.870 --> 00:56:36.940 align:middle line:84%
+implies that the LP norm of
+g is equal to this Lp norm,
+
+00:56:36.940 --> 00:56:38.800 align:middle line:84%
+and therefore is less
+than or equal to M
+
+00:56:38.800 --> 00:56:49.985 align:middle line:84%
+And therefore, that means the
+Lp norm raised the PE is finite.
+
+00:56:49.985 --> 00:56:57.600 align:middle line:90%
+
+
+00:56:57.600 --> 00:57:00.465 align:middle line:84%
+Moreover, what
+else do we deduce?
+
+00:57:00.465 --> 00:57:02.970 align:middle line:90%
+
+
+00:57:02.970 --> 00:57:09.180 align:middle line:84%
+We also deduce from
+this that f, which
+
+00:57:09.180 --> 00:57:13.560 align:middle line:84%
+is bounded above by almost
+everywhere by this quantity,
+
+00:57:13.560 --> 00:57:17.140 align:middle line:90%
+this is less than or equal to--
+
+00:57:17.140 --> 00:57:19.330 align:middle line:84%
+which is equal to g
+almost everywhere,
+
+00:57:19.330 --> 00:57:21.900 align:middle line:84%
+the Lp form of f is less
+than or equal to the Lp
+
+00:57:21.900 --> 00:57:25.710 align:middle line:84%
+norm of g, which, as we said,
+is less than or equal to M--
+
+00:57:25.710 --> 00:57:31.770 align:middle line:90%
+i.e., f is an Lp of E.
+
+00:57:31.770 --> 00:57:33.840 align:middle line:84%
+So again, almost
+everywhere we have
+
+00:57:33.840 --> 00:57:37.680 align:middle line:84%
+that f which is equal to the
+sum without the absolute values.
+
+00:57:37.680 --> 00:57:40.980 align:middle line:84%
+That's always less than or
+equal to an absolute value.
+
+00:57:40.980 --> 00:57:42.780 align:middle line:90%
+The sum from k equals--
+
+00:57:42.780 --> 00:57:45.742 align:middle line:84%
+the sum over k with
+absolute values inside.
+
+00:57:45.742 --> 00:57:47.700 align:middle line:84%
+And we know that the Lp
+form of this is finite,
+
+00:57:47.700 --> 00:57:50.850 align:middle line:84%
+we proved that earlier, which
+tells me that the Lp norm of g
+
+00:57:50.850 --> 00:57:53.700 align:middle line:84%
+is finite, because g is
+equal to this quantity
+
+00:57:53.700 --> 00:57:54.450 align:middle line:90%
+almost everywhere.
+
+00:57:54.450 --> 00:57:57.630 align:middle line:84%
+It's 0 on a set of measure
+0, which we just threw
+
+00:57:57.630 --> 00:58:00.610 align:middle line:90%
+in there to make it finite.
+
+00:58:00.610 --> 00:58:08.700 align:middle line:84%
+So we have f is an Lp,
+we have g is an Lp.
+
+00:58:08.700 --> 00:58:11.950 align:middle line:84%
+So at least this can be
+a possible candidate.
+
+00:58:11.950 --> 00:58:15.330 align:middle line:84%
+And we have these
+two facts here.
+
+00:58:15.330 --> 00:58:22.670 align:middle line:84%
+Now we apply the dominated
+convergence theorem
+
+00:58:22.670 --> 00:58:24.680 align:middle line:90%
+using this fact, this--
+
+00:58:24.680 --> 00:58:29.240 align:middle line:84%
+we have converging to 0
+almost everywhere on E.
+
+00:58:29.240 --> 00:58:32.750 align:middle line:84%
+And since that's true,
+I can put, if you like,
+
+00:58:32.750 --> 00:58:34.700 align:middle line:90%
+raised to the p.
+
+00:58:34.700 --> 00:58:36.680 align:middle line:84%
+So this quantity here
+is converging to 0
+
+00:58:36.680 --> 00:58:38.060 align:middle line:90%
+almost everywhere.
+
+00:58:38.060 --> 00:58:42.950 align:middle line:84%
+This quantity is also bounded
+above by this quantity here
+
+00:58:42.950 --> 00:58:44.810 align:middle line:84%
+on the right, which
+is integrable.
+
+00:58:44.810 --> 00:58:47.780 align:middle line:84%
+It has the integral of
+g to the p is finite.
+
+00:58:47.780 --> 00:58:50.900 align:middle line:84%
+So by the dominated
+convergence theorem,
+
+00:58:50.900 --> 00:58:55.220 align:middle line:84%
+I can conclude
+that the limit as n
+
+00:58:55.220 --> 00:59:02.930 align:middle line:84%
+goes to infinity of sum from k
+equals 1 to n of the fk's minus
+
+00:59:02.930 --> 00:59:08.750 align:middle line:84%
+f raised to the p over E,
+this equals the integral
+
+00:59:08.750 --> 00:59:10.790 align:middle line:84%
+of the limit, which,
+remember, is 0.
+
+00:59:10.790 --> 00:59:15.350 align:middle line:90%
+
+
+00:59:15.350 --> 00:59:16.805 align:middle line:90%
+I.e., we've shown that.
+
+00:59:16.805 --> 00:59:32.275 align:middle line:90%
+
+
+00:59:32.275 --> 00:59:33.650 align:middle line:84%
+Which is what we
+wanted to prove.
+
+00:59:33.650 --> 00:59:37.807 align:middle line:90%
+
+
+00:59:37.807 --> 00:59:39.890 align:middle line:84%
+Now of course, you need a
+different argument for p
+
+00:59:39.890 --> 00:59:42.905 align:middle line:84%
+equals infinity, and it's
+a little bit simpler.
+
+00:59:42.905 --> 00:59:47.310 align:middle line:90%
+
+
+00:59:47.310 --> 00:59:52.420 align:middle line:84%
+So we've proved that
+Lp is a Banach space.
+
+00:59:52.420 --> 00:59:57.300 align:middle line:84%
+And notice, we used a lot of
+different tools and things
+
+00:59:57.300 --> 01:00:02.670 align:middle line:84%
+that we had developed
+over the course of this--
+
+01:00:02.670 --> 01:00:05.475 align:middle line:84%
+over the course of
+this course so far.
+
+01:00:05.475 --> 01:00:10.330 align:middle line:90%
+
+
+01:00:10.330 --> 01:00:12.370 align:middle line:84%
+I keep using this word
+completion even though we
+
+01:00:12.370 --> 01:00:13.900 align:middle line:90%
+haven't really talked about it.
+
+01:00:13.900 --> 01:00:15.940 align:middle line:84%
+I kind of left it out
+of the first chapter
+
+01:00:15.940 --> 01:00:18.340 align:middle line:84%
+because I wasn't going
+to use the second chapter
+
+01:00:18.340 --> 01:00:24.980 align:middle line:84%
+from the lecture notes that are
+usually used for this course.
+
+01:00:24.980 --> 01:00:29.268 align:middle line:90%
+But from this fact--
+
+01:00:29.268 --> 01:00:30.810 align:middle line:84%
+so you should think
+of the completion
+
+01:00:30.810 --> 01:00:36.470 align:middle line:84%
+as the smallest Banach space
+containing a certain norm
+
+01:00:36.470 --> 01:00:36.970 align:middle line:90%
+space.
+
+01:00:36.970 --> 01:00:40.900 align:middle line:84%
+But what this statement
+here along with the theorem
+
+01:00:40.900 --> 01:00:43.960 align:middle line:84%
+due to Riesz and Fischer
+is that the completion
+
+01:00:43.960 --> 01:00:46.930 align:middle line:84%
+of continuous functions
+over a, b with norm
+
+01:00:46.930 --> 01:00:49.640 align:middle line:84%
+given by the Lp norm,
+which is, in fact,
+
+01:00:49.640 --> 01:00:51.550 align:middle line:84%
+a norm on continuous
+functions because if
+
+01:00:51.550 --> 01:00:54.040 align:middle line:84%
+a continuous function is
+equal to 0 almost everywhere,
+
+01:00:54.040 --> 01:00:56.380 align:middle line:90%
+it has to be 0.
+
+01:00:56.380 --> 01:00:58.750 align:middle line:84%
+So what this proves
+is that the completion
+
+01:00:58.750 --> 01:01:01.900 align:middle line:84%
+of the continuous
+functions with this norm
+
+01:01:01.900 --> 01:01:03.810 align:middle line:90%
+is equal to the space Lp.
+
+01:01:03.810 --> 01:01:14.970 align:middle line:90%
+
+
+01:01:14.970 --> 01:01:20.230 align:middle line:84%
+So now we're going
+to move on back
+
+01:01:20.230 --> 01:01:23.650 align:middle line:84%
+to some more general theory
+of functional analysis.
+
+01:01:23.650 --> 01:01:29.727 align:middle line:84%
+This was specific to
+measure and integration
+
+01:01:29.727 --> 01:01:30.560 align:middle line:90%
+on the real numbers.
+
+01:01:30.560 --> 01:01:41.500 align:middle line:84%
+Now we're going to go to more
+general topics and probably
+
+01:01:41.500 --> 01:01:54.350 align:middle line:84%
+more intuitive topics because
+a lot of it has analogs.
+
+01:01:54.350 --> 01:01:58.130 align:middle line:84%
+I mean, a lot of
+functional analysis has--
+
+01:01:58.130 --> 01:02:01.820 align:middle line:84%
+it's supposed to be in
+some way analogous to stuff
+
+01:02:01.820 --> 01:02:05.270 align:middle line:90%
+you've seen in linear algebra.
+
+01:02:05.270 --> 01:02:06.635 align:middle line:90%
+Some of it definitely is not.
+
+01:02:06.635 --> 01:02:12.490 align:middle line:90%
+
+
+01:02:12.490 --> 01:02:14.640 align:middle line:84%
+For example, in one
+of the assignments,
+
+01:02:14.640 --> 01:02:19.770 align:middle line:84%
+you proved that the
+unit ball and little Lp
+
+01:02:19.770 --> 01:02:21.030 align:middle line:90%
+is not compact for--
+
+01:02:21.030 --> 01:02:23.640 align:middle line:90%
+
+
+01:02:23.640 --> 01:02:25.980 align:middle line:84%
+over the natural
+numbers, the set
+
+01:02:25.980 --> 01:02:29.160 align:middle line:84%
+of sequences that have
+little-- finite little Lp norm.
+
+01:02:29.160 --> 01:02:30.390 align:middle line:90%
+That that's not compact.
+
+01:02:30.390 --> 01:02:41.660 align:middle line:84%
+While from calculus, that in
+Rn, the unit ball is compact.
+
+01:02:41.660 --> 01:02:46.040 align:middle line:84%
+That's the Burrill theorem or
+Bolzano-Weierstrass depending
+
+01:02:46.040 --> 01:02:52.730 align:middle line:84%
+on if you take as your starting
+definition of compactness
+
+01:02:52.730 --> 01:02:55.400 align:middle line:84%
+in terms of open sets or in
+terms of sequences having
+
+01:02:55.400 --> 01:03:00.620 align:middle line:84%
+a convergent subsequence, which
+are equivalent for metric--
+
+01:03:00.620 --> 01:03:01.790 align:middle line:90%
+at least in a metric space.
+
+01:03:01.790 --> 01:03:05.190 align:middle line:90%
+
+
+01:03:05.190 --> 01:03:05.760 align:middle line:90%
+OK.
+
+01:03:05.760 --> 01:03:11.750 align:middle line:84%
+Now here we're going to move on
+to the topic of Hilbert spaces.
+
+01:03:11.750 --> 01:03:25.450 align:middle line:84%
+So these are
+special in the sense
+
+01:03:25.450 --> 01:03:28.653 align:middle line:84%
+that the norm comes from
+an inner product-- maybe
+
+01:03:28.653 --> 01:03:30.445 align:middle line:84%
+you saw an inner product
+in linear algebra.
+
+01:03:30.445 --> 01:03:33.460 align:middle line:90%
+
+
+01:03:33.460 --> 01:03:35.830 align:middle line:90%
+Or you should have at least.
+
+01:03:35.830 --> 01:03:38.050 align:middle line:84%
+And therefore, you have
+notions of being orthogonal,
+
+01:03:38.050 --> 01:03:40.210 align:middle line:84%
+you have notions of
+projections, and these--
+
+01:03:40.210 --> 01:03:45.727 align:middle line:84%
+we saw things that
+have that flavor when
+
+01:03:45.727 --> 01:03:47.560 align:middle line:84%
+we're talking about
+Banach spaces in general
+
+01:03:47.560 --> 01:03:52.940 align:middle line:84%
+and we were talking about
+modding out by a subspace,
+
+01:03:52.940 --> 01:03:55.960 align:middle line:84%
+and you can think of the
+equivalence class corresponding
+
+01:03:55.960 --> 01:04:00.640 align:middle line:84%
+to an element as the
+projection onto the complement
+
+01:04:00.640 --> 01:04:07.100 align:middle line:84%
+of that subspace, but it
+wasn't an exact analogy.
+
+01:04:07.100 --> 01:04:09.020 align:middle line:84%
+But a lot of exact
+analogies will now
+
+01:04:09.020 --> 01:04:10.550 align:middle line:84%
+occur for Hilbert
+spaces, and then
+
+01:04:10.550 --> 01:04:13.430 align:middle line:84%
+certain operators
+on Hilbert spaces
+
+01:04:13.430 --> 01:04:22.460 align:middle line:84%
+will be very analogous
+to self-adjoint matrices
+
+01:04:22.460 --> 01:04:28.490 align:middle line:84%
+or symmetric matrices which
+you saw in linear algebra.
+
+01:04:28.490 --> 01:04:31.520 align:middle line:84%
+And of course, from a
+applied standpoint--
+
+01:04:31.520 --> 01:04:33.410 align:middle line:90%
+I should say applied--
+
+01:04:33.410 --> 01:04:36.980 align:middle line:84%
+Hilbert spaces, this
+is where the action--
+
+01:04:36.980 --> 01:04:39.978 align:middle line:90%
+
+
+01:04:39.978 --> 01:04:42.020 align:middle line:84%
+this is where-- the setting
+of quantum mechanics.
+
+01:04:42.020 --> 01:04:47.470 align:middle line:84%
+Quantum mechanics takes
+place in a Hilbert space.
+
+01:04:47.470 --> 01:04:50.570 align:middle line:84%
+The elements are
+square integrable,
+
+01:04:50.570 --> 01:04:54.633 align:middle line:84%
+now that we've dealt with
+that, functions over R3,
+
+01:04:54.633 --> 01:04:56.300 align:middle line:84%
+if we're in three
+dimensions or if we're
+
+01:04:56.300 --> 01:05:03.230 align:middle line:84%
+on the line R, that
+have L2 norm equal to 1,
+
+01:05:03.230 --> 01:05:05.150 align:middle line:84%
+along with the
+Schrodinger equation.
+
+01:05:05.150 --> 01:05:08.592 align:middle line:84%
+So Hilbert spaces
+are very important.
+
+01:05:08.592 --> 01:05:10.175 align:middle line:84%
+They arise naturally
+in many problems.
+
+01:05:10.175 --> 01:05:12.770 align:middle line:90%
+
+
+01:05:12.770 --> 01:05:16.640 align:middle line:84%
+And because of this
+additional structure of them--
+
+01:05:16.640 --> 01:05:20.550 align:middle line:84%
+of the norm coming
+from an inner product,
+
+01:05:20.550 --> 01:05:25.260 align:middle line:84%
+you can say a lot more
+things about them.
+
+01:05:25.260 --> 01:05:29.000 align:middle line:90%
+
+
+01:05:29.000 --> 01:05:34.060 align:middle line:84%
+So before we get
+to Hilbert spaces,
+
+01:05:34.060 --> 01:05:39.620 align:middle line:90%
+let me add a "pre" before that.
+
+01:05:39.620 --> 01:05:41.400 align:middle line:90%
+So pre-Hilbert spaces.
+
+01:05:41.400 --> 01:05:43.220 align:middle line:84%
+So I said that
+Hilbert spaces are
+
+01:05:43.220 --> 01:05:46.310 align:middle line:84%
+going to be Banach spaces
+that come from a norm.
+
+01:05:46.310 --> 01:05:47.750 align:middle line:84%
+Pre-Hilbert spaces,
+these are just
+
+01:05:47.750 --> 01:05:50.400 align:middle line:84%
+norm spaces that come
+from an inner product.
+
+01:05:50.400 --> 01:05:53.180 align:middle line:84%
+So make the
+following definition.
+
+01:05:53.180 --> 01:05:58.860 align:middle line:90%
+
+
+01:05:58.860 --> 01:06:07.850 align:middle line:84%
+A pre-Hilbert space H,
+this is a vector space.
+
+01:06:07.850 --> 01:06:11.010 align:middle line:90%
+
+
+01:06:11.010 --> 01:06:13.920 align:middle line:84%
+Typically over C, but
+you can also just take it
+
+01:06:13.920 --> 01:06:17.290 align:middle line:90%
+over R, that's fine as well.
+
+01:06:17.290 --> 01:06:19.357 align:middle line:84%
+But I'll just for
+definiteness say over
+
+01:06:19.357 --> 01:06:32.765 align:middle line:84%
+C. With a Hermitian
+inner product.
+
+01:06:32.765 --> 01:06:35.730 align:middle line:90%
+
+
+01:06:35.730 --> 01:06:38.250 align:middle line:84%
+So this is new
+terminology, maybe this
+
+01:06:38.250 --> 01:06:44.460 align:middle line:84%
+is new terminology, too, so let
+me write out what it means--
+
+01:06:44.460 --> 01:06:46.330 align:middle line:84%
+what is a Hermitian
+inner product.
+
+01:06:46.330 --> 01:06:55.310 align:middle line:84%
+So this is, i.e., a
+map, usually denoted
+
+01:06:55.310 --> 01:07:01.010 align:middle line:84%
+using brackets from H-cross-H
+into the complex numbers.
+
+01:07:01.010 --> 01:07:06.120 align:middle line:84%
+Satisfying certain
+properties-- so such that--
+
+01:07:06.120 --> 01:07:25.700 align:middle line:84%
+so one, it is linear
+and the first variable--
+
+01:07:25.700 --> 01:07:29.940 align:middle line:84%
+so for all lambda
+1, lambda 2, v1, v2,
+
+01:07:29.940 --> 01:07:35.370 align:middle line:84%
+if I look at the inner product
+of v1, lambda 1 times v1
+
+01:07:35.370 --> 01:07:41.040 align:middle line:84%
+plus lambda 2 times v2 with w,
+this is equal to lambda 1 times
+
+01:07:41.040 --> 01:07:47.230 align:middle line:84%
+v1 times the inner product
+with w plus lambda 2 v2
+
+01:07:47.230 --> 01:07:48.190 align:middle line:90%
+inner product with w.
+
+01:07:48.190 --> 01:07:56.580 align:middle line:90%
+
+
+01:07:56.580 --> 01:07:59.340 align:middle line:90%
+For all V, w, and--
+
+01:07:59.340 --> 01:08:01.290 align:middle line:84%
+I wrote capital
+V, I should have--
+
+01:08:01.290 --> 01:08:02.790 align:middle line:90%
+written H a minute ago.
+
+01:08:02.790 --> 01:08:07.020 align:middle line:90%
+
+
+01:08:07.020 --> 01:08:09.690 align:middle line:84%
+Now we're in Hilbert
+spaces, pre-Hilbert spaces.
+
+01:08:09.690 --> 01:08:13.200 align:middle line:84%
+For all v and w, the
+inner product of v and w
+
+01:08:13.200 --> 01:08:18.750 align:middle line:84%
+is equal to the complex
+conjugate of the inner product
+
+01:08:18.750 --> 01:08:28.200 align:middle line:90%
+of w with v.
+
+01:08:28.200 --> 01:08:31.830 align:middle line:84%
+And the following, which
+is positive definiteness
+
+01:08:31.830 --> 01:08:37.335 align:middle line:84%
+of the inner product, if to
+call it that, for all v and H,
+
+01:08:37.335 --> 01:08:42.640 align:middle line:84%
+m the inner product
+would be with itself,
+
+01:08:42.640 --> 01:08:45.670 align:middle line:84%
+this is bigger than or equal
+to 0, so it's a real number
+
+01:08:45.670 --> 01:08:48.250 align:middle line:90%
+and it's non-negative.
+
+01:08:48.250 --> 01:08:56.050 align:middle line:84%
+And this one, it equals 0 if
+and only if v is a zero element.
+
+01:08:56.050 --> 01:09:06.229 align:middle line:90%
+
+
+01:09:06.229 --> 01:09:07.970 align:middle line:90%
+OK.
+
+01:09:07.970 --> 01:09:14.729 align:middle line:84%
+So let me make a
+couple of remarks.
+
+01:09:14.729 --> 01:09:19.474 align:middle line:84%
+First off, let's say
+this is remark 1.
+
+01:09:19.474 --> 01:09:23.180 align:middle line:90%
+
+
+01:09:23.180 --> 01:09:25.390 align:middle line:84%
+The third quantity does
+imply that the only thing
+
+01:09:25.390 --> 01:09:28.040 align:middle line:84%
+orthogonal to everything in
+the space is a zero element.
+
+01:09:28.040 --> 01:09:35.609 align:middle line:84%
+So v is in H and v is
+orthogonal to everything--
+
+01:09:35.609 --> 01:09:37.800 align:middle line:84%
+I keep using the
+word orthogonal.
+
+01:09:37.800 --> 01:09:40.500 align:middle line:84%
+I should just the inner
+product with zero.
+
+01:09:40.500 --> 01:09:53.069 align:middle line:84%
+It gives me 0 for every element,
+this implies that v equals 0,
+
+01:09:53.069 --> 01:09:54.990 align:middle line:84%
+and of course, the
+converse applies, too,
+
+01:09:54.990 --> 01:09:58.500 align:middle line:84%
+that v is equal to 0, then
+the inner product with 0
+
+01:09:58.500 --> 01:10:02.430 align:middle line:84%
+and every element is
+0 just by linearity.
+
+01:10:02.430 --> 01:10:09.930 align:middle line:84%
+Two is that if I have two
+elements v and w and a scalar
+
+01:10:09.930 --> 01:10:16.890 align:middle line:84%
+lambda, then this is equal to
+the complex conjugate of lambda
+
+01:10:16.890 --> 01:10:27.080 align:middle line:84%
+times w with v, and by the first
+property, the lambda pops out,
+
+01:10:27.080 --> 01:10:29.930 align:middle line:90%
+and therefore, if I--
+
+01:10:29.930 --> 01:10:31.910 align:middle line:84%
+complex conjugate of
+a product is a product
+
+01:10:31.910 --> 01:10:33.260 align:middle line:90%
+of the complex conjugates.
+
+01:10:33.260 --> 01:10:38.000 align:middle line:84%
+And then if I undo
+this, I can get this.
+
+01:10:38.000 --> 01:10:42.650 align:middle line:84%
+So it's linear in
+the first entry,
+
+01:10:42.650 --> 01:10:44.570 align:middle line:84%
+meaning the constants
+just come out.
+
+01:10:44.570 --> 01:10:46.610 align:middle line:84%
+But if I have a
+constant in the second--
+
+01:10:46.610 --> 01:10:50.600 align:middle line:84%
+or a scalar multiple
+in the second entry,
+
+01:10:50.600 --> 01:10:53.840 align:middle line:84%
+then that comes out as well,
+but with a complex conjugate
+
+01:10:53.840 --> 01:10:54.930 align:middle line:90%
+over it.
+
+01:10:54.930 --> 01:10:56.270 align:middle line:90%
+That's all I wanted to say.
+
+01:10:56.270 --> 01:11:00.150 align:middle line:90%
+
+
+01:11:00.150 --> 01:11:04.830 align:middle line:84%
+So I said that pre
+Hilbert spaces are--
+
+01:11:04.830 --> 01:11:08.540 align:middle line:84%
+you naturally think of them
+as norm spaces where the norm
+
+01:11:08.540 --> 01:11:10.400 align:middle line:90%
+comes from the inner product.
+
+01:11:10.400 --> 01:11:12.170 align:middle line:90%
+Here, we have in a product.
+
+01:11:12.170 --> 01:11:13.010 align:middle line:90%
+Where's the norm?
+
+01:11:13.010 --> 01:11:16.910 align:middle line:90%
+
+
+01:11:16.910 --> 01:11:18.200 align:middle line:90%
+So definition.
+
+01:11:18.200 --> 01:11:29.420 align:middle line:84%
+If H is a pre-Hilbert space
+with inner product denoted
+
+01:11:29.420 --> 01:11:42.810 align:middle line:84%
+as before, we
+define using this--
+
+01:11:42.810 --> 01:11:44.350 align:middle line:84%
+So I'm not calling
+it a norm yet.
+
+01:11:44.350 --> 01:11:48.510 align:middle line:84%
+I'm just saying we
+define this function on H
+
+01:11:48.510 --> 01:11:54.990 align:middle line:84%
+to be in a product v with
+itself raised to the 1/2 power.
+
+01:11:54.990 --> 01:11:56.670 align:middle line:84%
+In the end or in a
+minute we'll show
+
+01:11:56.670 --> 01:11:58.140 align:middle line:90%
+that this is, in fact, a norm.
+
+01:11:58.140 --> 01:12:02.900 align:middle line:90%
+
+
+01:12:02.900 --> 01:12:09.020 align:middle line:84%
+But for now I'm just going
+to call it this function on H
+
+01:12:09.020 --> 01:12:18.650 align:middle line:84%
+or possible norm on
+H. All right, so we
+
+01:12:18.650 --> 01:12:21.140 align:middle line:90%
+have the following theorem.
+
+01:12:21.140 --> 01:12:23.450 align:middle line:84%
+So this is valid in
+any pre-Hilbert space.
+
+01:12:23.450 --> 01:12:27.230 align:middle line:90%
+
+
+01:12:27.230 --> 01:12:30.590 align:middle line:84%
+For all u, v, and H
+of pre-Hilbert space,
+
+01:12:30.590 --> 01:12:36.770 align:middle line:84%
+if I take the absolute value of
+the inner product of u and v,
+
+01:12:36.770 --> 01:12:46.070 align:middle line:84%
+this is less than or equal
+to this norm-looking thing
+
+01:12:46.070 --> 01:12:51.850 align:middle line:84%
+of u times the
+norm-looking thing of v.
+
+01:12:51.850 --> 01:13:01.230 align:middle line:84%
+So this shouldn't come
+as a complete surprise.
+
+01:13:01.230 --> 01:13:05.350 align:middle line:84%
+Right down-- if we
+took H to be Rn,
+
+01:13:05.350 --> 01:13:10.860 align:middle line:84%
+and so then now this is
+a vector space over R,
+
+01:13:10.860 --> 01:13:13.980 align:middle line:84%
+then and the inner product
+would just be the dot product.
+
+01:13:13.980 --> 01:13:17.610 align:middle line:84%
+This is stating the
+Cauchy-Schwarz inequality
+
+01:13:17.610 --> 01:13:20.080 align:middle line:84%
+that you know and
+love from before.
+
+01:13:20.080 --> 01:13:23.760 align:middle line:90%
+So what's the proof?
+
+01:13:23.760 --> 01:13:37.800 align:middle line:84%
+Let's let f of t be the
+norm of u plus t times v.
+
+01:13:37.800 --> 01:13:40.510 align:middle line:84%
+So I said norm, but I haven't
+proved it's a norm yet,
+
+01:13:40.510 --> 01:13:42.802 align:middle line:84%
+so you're going to have to
+forgive if I keep calling it
+
+01:13:42.802 --> 01:13:45.570 align:middle line:90%
+a norm, but in the end it is.
+
+01:13:45.570 --> 01:13:50.700 align:middle line:84%
+Let f of t be this thing
+squared, which, we note,
+
+01:13:50.700 --> 01:13:52.380 align:middle line:90%
+it's a non-negative number.
+
+01:13:52.380 --> 01:13:56.040 align:middle line:84%
+Because the product of v with v
+is a non-negative number taking
+
+01:13:56.040 --> 01:14:04.310 align:middle line:84%
+that to the 1/2 power, so this
+is u plus tv inner product u
+
+01:14:04.310 --> 01:14:10.570 align:middle line:90%
+plus tv which is non-negative.
+
+01:14:10.570 --> 01:14:20.910 align:middle line:84%
+Now if we compute all this out
+using how the linearity works
+
+01:14:20.910 --> 01:14:25.090 align:middle line:90%
+for inner products, this--
+
+01:14:25.090 --> 01:14:30.060 align:middle line:84%
+I get u inner product
+u plus t squared
+
+01:14:30.060 --> 01:14:35.100 align:middle line:84%
+v inner product v plus
+t times u inner product
+
+01:14:35.100 --> 01:14:40.820 align:middle line:84%
+v plus t times inner
+product of v with u.
+
+01:14:40.820 --> 01:14:43.690 align:middle line:90%
+
+
+01:14:43.690 --> 01:14:46.120 align:middle line:84%
+And this is the
+complex conjugate
+
+01:14:46.120 --> 01:14:48.410 align:middle line:90%
+of this complex number.
+
+01:14:48.410 --> 01:14:54.250 align:middle line:84%
+So let me just rewrite this--
+u squared plus t squared or v
+
+01:14:54.250 --> 01:14:56.530 align:middle line:90%
+squared plus--
+
+01:14:56.530 --> 01:14:59.530 align:middle line:84%
+so again, this number
+is the complex conjugate
+
+01:14:59.530 --> 01:15:00.430 align:middle line:90%
+of this number.
+
+01:15:00.430 --> 01:15:03.910 align:middle line:84%
+And when I add a complex number
+to its complex conjugate,
+
+01:15:03.910 --> 01:15:06.920 align:middle line:90%
+I get twice times the real part.
+
+01:15:06.920 --> 01:15:20.390 align:middle line:90%
+2t real part of u and v.
+
+01:15:20.390 --> 01:15:25.670 align:middle line:84%
+Now, this is just a polynomial
+with a non-negative thing
+
+01:15:25.670 --> 01:15:26.940 align:middle line:90%
+out in front of t squared.
+
+01:15:26.940 --> 01:15:28.340 align:middle line:90%
+So it has a minimum somewhere.
+
+01:15:28.340 --> 01:15:30.470 align:middle line:84%
+And this minimum has
+to be non-negative
+
+01:15:30.470 --> 01:15:32.765 align:middle line:84%
+since this function is
+greater than or equal to 0.
+
+01:15:32.765 --> 01:15:42.390 align:middle line:90%
+
+
+01:15:42.390 --> 01:15:47.890 align:middle line:84%
+Is greater than or equal to 0, I
+should say, just as a sentence.
+
+01:15:47.890 --> 01:15:59.980 align:middle line:90%
+
+
+01:15:59.980 --> 01:16:01.810 align:middle line:84%
+Now, where does
+this minimum occur?
+
+01:16:01.810 --> 01:16:05.380 align:middle line:84%
+It occurs where the
+derivative is equal to 0.
+
+01:16:05.380 --> 01:16:11.920 align:middle line:84%
+Now f prime of t then
+equals 0 implies--
+
+01:16:11.920 --> 01:16:18.040 align:middle line:84%
+or if and only if t min is
+equal to minus the real part.
+
+01:16:18.040 --> 01:16:21.310 align:middle line:84%
+So I will leave this
+calculus to you.
+
+01:16:21.310 --> 01:16:26.420 align:middle line:90%
+
+
+01:16:26.420 --> 01:16:27.860 align:middle line:84%
+I mean, this is
+just a polynomial.
+
+01:16:27.860 --> 01:16:29.402 align:middle line:84%
+Take the derivative
+with respect to t
+
+01:16:29.402 --> 01:16:32.150 align:middle line:84%
+and solve for when
+that's equal to 0.
+
+01:16:32.150 --> 01:16:36.590 align:middle line:84%
+And therefore, I get
+that this minimum--
+
+01:16:36.590 --> 01:16:39.420 align:middle line:84%
+so f evaluated at this
+point is non-negative,
+
+01:16:39.420 --> 01:16:45.530 align:middle line:84%
+so 0 is less than or equal
+to f of t min, which,
+
+01:16:45.530 --> 01:16:48.950 align:middle line:84%
+when you stick that
+into this here,
+
+01:16:48.950 --> 01:16:58.580 align:middle line:84%
+you get norm of u squared
+minus real part of u v squared
+
+01:16:58.580 --> 01:17:03.540 align:middle line:90%
+over norm of v squared.
+
+01:17:03.540 --> 01:17:12.310 align:middle line:84%
+And therefore, the real part
+of u, v absolute value--
+
+01:17:12.310 --> 01:17:15.750 align:middle line:84%
+so this-- all of this is
+bigger than or equal to 0.
+
+01:17:15.750 --> 01:17:17.685 align:middle line:84%
+So if I move this
+over to that side
+
+01:17:17.685 --> 01:17:20.790 align:middle line:84%
+and multiplied by norm
+squared, take the square root,
+
+01:17:20.790 --> 01:17:24.780 align:middle line:84%
+I get that this is
+less than or equal to--
+
+01:17:24.780 --> 01:17:25.410 align:middle line:90%
+le me put a--
+
+01:17:25.410 --> 01:17:29.290 align:middle line:90%
+
+
+01:17:29.290 --> 01:17:31.690 align:middle line:90%
+u times norm v.
+
+01:17:31.690 --> 01:17:34.490 align:middle line:90%
+So this is almost what I want.
+
+01:17:34.490 --> 01:17:40.570 align:middle line:84%
+I want the absolute value of the
+inner product with u and v. But
+
+01:17:40.570 --> 01:17:47.030 align:middle line:84%
+all I have is the real part
+of inner product with u and v.
+
+01:17:47.030 --> 01:17:49.970 align:middle line:84%
+So of course, if the inner
+product of u and v is 0,
+
+01:17:49.970 --> 01:17:54.380 align:middle line:84%
+this inequality I want
+to prove is automatic.
+
+01:17:54.380 --> 01:17:59.420 align:middle line:84%
+Also, if u or v is 0, then this
+inequality I wanted to prove
+
+01:17:59.420 --> 01:18:00.180 align:middle line:90%
+is automatic.
+
+01:18:00.180 --> 01:18:02.180 align:middle line:84%
+So that's why I'm
+actually just dealing
+
+01:18:02.180 --> 01:18:03.780 align:middle line:90%
+with the non-trivial case.
+
+01:18:03.780 --> 01:18:11.450 align:middle line:84%
+So if this inner
+product is 0, then we're
+
+01:18:11.450 --> 01:18:13.250 align:middle line:84%
+already done because
+the right-hand side
+
+01:18:13.250 --> 01:18:14.210 align:middle line:90%
+is non-negative.
+
+01:18:14.210 --> 01:18:25.250 align:middle line:84%
+So suppose this is non-zero, but
+lambda be this complex number
+
+01:18:25.250 --> 01:18:29.210 align:middle line:84%
+u, v inner product
+complex conjugate
+
+01:18:29.210 --> 01:18:39.480 align:middle line:84%
+over the absolute value,
+then the absolute value
+
+01:18:39.480 --> 01:18:41.880 align:middle line:84%
+of this complex
+number is equal to 1
+
+01:18:41.880 --> 01:18:44.820 align:middle line:84%
+because the absolute
+value of the conjugate
+
+01:18:44.820 --> 01:18:48.045 align:middle line:84%
+is equal to the absolute value
+of the original complex number.
+
+01:18:48.045 --> 01:18:51.590 align:middle line:90%
+
+
+01:18:51.590 --> 01:19:03.560 align:middle line:84%
+And lambda times u, v,
+which is equal to lambda.
+
+01:19:03.560 --> 01:19:18.000 align:middle line:84%
+So I should say u, v, this is
+equal to lambda times u, v,
+
+01:19:18.000 --> 01:19:23.010 align:middle line:84%
+which is equal to
+lambda u times v.
+
+01:19:23.010 --> 01:19:26.910 align:middle line:84%
+Now this is equal to
+this, and therefore, it's
+
+01:19:26.910 --> 01:19:29.010 align:middle line:90%
+equal to the real part of it.
+
+01:19:29.010 --> 01:19:32.490 align:middle line:84%
+So this is equal
+to a real number,
+
+01:19:32.490 --> 01:19:36.055 align:middle line:84%
+and therefore it's
+equal to its real part.
+
+01:19:36.055 --> 01:19:37.430 align:middle line:84%
+We pulled a similar
+trick when we
+
+01:19:37.430 --> 01:19:39.180 align:middle line:84%
+were talking about the
+triangle inequality
+
+01:19:39.180 --> 01:19:43.520 align:middle line:84%
+for integral functions
+that now take
+
+01:19:43.520 --> 01:19:45.050 align:middle line:90%
+values and the complex number--
+
+01:19:45.050 --> 01:19:46.020 align:middle line:90%
+complex numbers.
+
+01:19:46.020 --> 01:19:48.320 align:middle line:84%
+So this is equal to the
+real part of this, which
+
+01:19:48.320 --> 01:19:49.460 align:middle line:90%
+is less than or equal to--
+
+01:19:49.460 --> 01:19:52.960 align:middle line:90%
+
+
+01:19:52.960 --> 01:19:55.120 align:middle line:84%
+by what we've done
+here, we've already
+
+01:19:55.120 --> 01:19:57.940 align:middle line:84%
+proven this inequality
+holds for every u and v,
+
+01:19:57.940 --> 01:20:06.350 align:middle line:84%
+so it also holds for lambda
+times u times v. And now--
+
+01:20:06.350 --> 01:20:11.780 align:middle line:84%
+so simple off to the side,
+that if I take lambda u,
+
+01:20:11.780 --> 01:20:13.460 align:middle line:84%
+an inner product
+with lambda u, if I
+
+01:20:13.460 --> 01:20:16.010 align:middle line:84%
+take the 1/2 power of that,
+that gives me this quantity.
+
+01:20:16.010 --> 01:20:17.420 align:middle line:90%
+But let me just compute this.
+
+01:20:17.420 --> 01:20:18.710 align:middle line:90%
+This is equal to--
+
+01:20:18.710 --> 01:20:20.780 align:middle line:90%
+lambda comes out from here.
+
+01:20:20.780 --> 01:20:26.040 align:middle line:84%
+And then complex conjugate of
+lambda comes out from there,
+
+01:20:26.040 --> 01:20:27.320 align:middle line:90%
+and this is equal to--
+
+01:20:27.320 --> 01:20:32.410 align:middle line:90%
+
+
+01:20:32.410 --> 01:20:35.550 align:middle line:90%
+but this is equal to 1.
+
+01:20:35.550 --> 01:20:43.670 align:middle line:84%
+So we see that this is equal
+to this, and therefore,
+
+01:20:43.670 --> 01:20:47.030 align:middle line:84%
+raising it to the 1/2
+power is equal to--
+
+01:20:47.030 --> 01:20:49.910 align:middle line:90%
+
+
+01:20:49.910 --> 01:20:52.220 align:middle line:84%
+this quantity here is
+equal to this quantity.
+
+01:20:52.220 --> 01:20:53.990 align:middle line:84%
+And we proven what
+we wanted to do.
+
+01:20:53.990 --> 01:20:57.490 align:middle line:90%
+
+
+01:20:57.490 --> 01:20:59.440 align:middle line:90%
+OK.
+
+01:20:59.440 --> 01:21:04.220 align:middle line:84%
+And so this was a
+Cauchy-Schwarz inequality
+
+01:21:04.220 --> 01:21:07.450 align:middle line:84%
+and a general pre-Hilbert
+space with this quantity
+
+01:21:07.450 --> 01:21:09.340 align:middle line:84%
+that I referred
+to as a norm but I
+
+01:21:09.340 --> 01:21:11.200 align:middle line:90%
+haven't proved it's a norm yet.
+
+01:21:11.200 --> 01:21:14.680 align:middle line:84%
+Next time we will use the
+Cauchy-Schwarz inequality
+
+01:21:14.680 --> 01:21:19.300 align:middle line:84%
+to prove that, in fact, this
+thing that I'm masquerading
+
+01:21:19.300 --> 01:21:22.070 align:middle line:84%
+around in a norm
+notation is, in fact,
+
+01:21:22.070 --> 01:21:25.210 align:middle line:90%
+a norm on a pre-Hilbert space.
+
+01:21:25.210 --> 01:21:28.450 align:middle line:90%
+
+
+01:21:28.450 --> 01:21:34.140 align:middle line:84%
+And from there, we'll
+introduce Hilbert spaces
+
+01:21:34.140 --> 01:21:39.090 align:middle line:84%
+which are those pre-Hilbert
+spaces with this norm that
+
+01:21:39.090 --> 01:21:42.400 align:middle line:90%
+are actually complete.
+
+01:21:42.400 --> 01:21:46.170 align:middle line:90%
+And really, for any kind of--
+
+01:21:46.170 --> 01:21:53.730 align:middle line:84%
+so for-- and we'll prove
+this at some point,
+
+01:21:53.730 --> 01:21:58.890 align:middle line:84%
+there's really only two types
+of reasonable Hilbert spaces.
+
+01:21:58.890 --> 01:22:01.630 align:middle line:90%
+
+
+01:22:01.630 --> 01:22:04.220 align:middle line:84%
+And I mean this in
+a very strong sense,
+
+01:22:04.220 --> 01:22:10.180 align:middle line:84%
+not in a loose sense,
+that the first type is
+
+01:22:10.180 --> 01:22:13.150 align:middle line:84%
+just finite-dimensional-- so
+think of C raised to the n.
+
+01:22:13.150 --> 01:22:17.350 align:middle line:84%
+So n tuples of complex numbers
+where the inner product
+
+01:22:17.350 --> 01:22:21.650 align:middle line:90%
+is definable in a natural way.
+
+01:22:21.650 --> 01:22:28.970 align:middle line:90%
+Or a little L2 which is these--
+
+01:22:28.970 --> 01:22:36.400 align:middle line:84%
+this set of sequences that
+have finite little L2 norm.
+
+01:22:36.400 --> 01:22:39.520 align:middle line:84%
+This is basically the only
+other type of Hilbert space
+
+01:22:39.520 --> 01:22:43.780 align:middle line:84%
+that there is, and I'll
+say what I mean by that.
+
+01:22:43.780 --> 01:22:46.590 align:middle line:84%
+How it'll work is
+we'll basically
+
+01:22:46.590 --> 01:22:50.910 align:middle line:84%
+show that every separable
+Hilbert space, which
+
+01:22:50.910 --> 01:22:57.330 align:middle line:84%
+is what I mean by
+reasonable, that it's
+
+01:22:57.330 --> 01:23:02.370 align:middle line:84%
+the most reasonable spaces
+we work with are separable,
+
+01:23:02.370 --> 01:23:04.770 align:middle line:84%
+meaning they have
+countable dense subset,
+
+01:23:04.770 --> 01:23:09.420 align:middle line:84%
+has a countable orthogonal
+basis, which is what--
+
+01:23:09.420 --> 01:23:11.730 align:middle line:84%
+Orthonormal basis
+I haven't defined.
+
+01:23:11.730 --> 01:23:17.250 align:middle line:84%
+It's not a Hamel basis, but
+it serves the same purpose,
+
+01:23:17.250 --> 01:23:19.590 align:middle line:84%
+meaning you can't
+write every element
+
+01:23:19.590 --> 01:23:22.470 align:middle line:84%
+as a finite linear combination
+of orthonormal basis,
+
+01:23:22.470 --> 01:23:25.230 align:middle line:84%
+but you can write it as
+an infinite expansion
+
+01:23:25.230 --> 01:23:26.620 align:middle line:90%
+in orthonormal basis.
+
+01:23:26.620 --> 01:23:31.600 align:middle line:90%
+Think Fourier series.
+
+01:23:31.600 --> 01:23:34.230 align:middle line:84%
+And this is what provides
+this identification
+
+01:23:34.230 --> 01:23:41.100 align:middle line:84%
+of a separable Hilbert space
+with either a C to the n
+
+01:23:41.100 --> 01:23:44.670 align:middle line:84%
+if this or orthonormal basis
+is finite, or little L2
+
+01:23:44.670 --> 01:23:48.120 align:middle line:84%
+if this or orthonormal
+basis is countably infinite.
+
+01:23:48.120 --> 01:23:52.850 align:middle line:84%
+And we'll get to that possibly
+by the end of next lecture.
+
+01:23:52.850 --> 01:23:58.000 align:middle line:90%

@@ -1,0 +1,3828 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:18.780 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:18.780 --> 00:00:21.390 align:middle line:84%
+PROFESSOR: All right, so
+let's continue our discussion
+
+00:00:21.390 --> 00:00:22.905 align:middle line:90%
+of Banach spaces.
+
+00:00:22.905 --> 00:00:25.500 align:middle line:90%
+
+
+00:00:25.500 --> 00:00:39.870 align:middle line:84%
+So let V be a norm space,
+meaning a vector space
+
+00:00:39.870 --> 00:00:41.520 align:middle line:90%
+with a norm on it.
+
+00:00:41.520 --> 00:00:43.440 align:middle line:84%
+And last time, a
+Banach space was
+
+00:00:43.440 --> 00:00:49.150 align:middle line:84%
+defined to be a norm space
+such that the metric induced
+
+00:00:49.150 --> 00:00:51.580 align:middle line:90%
+by this norm is complete--
+
+00:00:51.580 --> 00:00:55.040 align:middle line:90%
+all Cauchy sequences converge.
+
+00:00:55.040 --> 00:00:58.510 align:middle line:84%
+So if you want to check that a
+norm space is a Banach space,
+
+00:00:58.510 --> 00:01:01.060 align:middle line:84%
+you have to take
+a Cauchy sequence
+
+00:01:01.060 --> 00:01:04.330 align:middle line:84%
+and show that it converges
+in the space, which
+
+00:01:04.330 --> 00:01:08.540 align:middle line:84%
+we did last time for the space
+of bounded continuous functions
+
+00:01:08.540 --> 00:01:10.970 align:middle line:90%
+on a metric space.
+
+00:01:10.970 --> 00:01:15.920 align:middle line:84%
+Now, there's an
+alternative, useful way
+
+00:01:15.920 --> 00:01:18.770 align:middle line:84%
+of checking to see if a space
+is a Banach space, which
+
+00:01:18.770 --> 00:01:21.480 align:middle line:90%
+we'll use in a minute.
+
+00:01:21.480 --> 00:01:28.595 align:middle line:84%
+But to state it, I
+need to introduce
+
+00:01:28.595 --> 00:01:30.440 align:middle line:90%
+a definition real quick.
+
+00:01:30.440 --> 00:01:41.480 align:middle line:84%
+So let vn be a sequence in V.
+And I'm going to abuse notation
+
+00:01:41.480 --> 00:01:46.460 align:middle line:84%
+and write subset of V, even
+though that's a sequence.
+
+00:01:46.460 --> 00:01:48.260 align:middle line:90%
+I'm using this notation, though.
+
+00:01:48.260 --> 00:01:56.690 align:middle line:84%
+So this means let vn
+an a sequence in V.
+
+00:01:56.690 --> 00:02:02.480 align:middle line:84%
+The series, which is just
+right now an expression,
+
+00:02:02.480 --> 00:02:08.530 align:middle line:84%
+just chalk on a board right
+now, it's just a symbol--
+
+00:02:08.530 --> 00:02:19.500 align:middle line:84%
+we say this series is
+summable if the sequence
+
+00:02:19.500 --> 00:02:29.630 align:middle line:84%
+of partial sums, which are now
+elements in the norm space--
+
+00:02:29.630 --> 00:02:32.900 align:middle line:84%
+so if this sequence of
+partial sums converges.
+
+00:02:32.900 --> 00:02:39.140 align:middle line:90%
+
+
+00:02:39.140 --> 00:02:53.780 align:middle line:84%
+We say that the series
+vn is absolutely summable
+
+00:02:53.780 --> 00:03:05.320 align:middle line:84%
+if the series of involving
+now these non-negative numbers
+
+00:03:05.320 --> 00:03:06.250 align:middle line:90%
+converges.
+
+00:03:06.250 --> 00:03:11.585 align:middle line:90%
+
+
+00:03:11.585 --> 00:03:15.480 align:middle line:84%
+OK, so this is just like the
+definition of the convergence
+
+00:03:15.480 --> 00:03:18.780 align:middle line:84%
+of a series of
+real numbers, which
+
+00:03:18.780 --> 00:03:21.450 align:middle line:84%
+you dealt with in
+earlier analysis
+
+00:03:21.450 --> 00:03:23.550 align:middle line:84%
+and absolute convergence,
+only here I'm
+
+00:03:23.550 --> 00:03:25.920 align:middle line:84%
+using the terminology
+absolutely summable
+
+00:03:25.920 --> 00:03:28.990 align:middle line:84%
+because this is the terminology
+Richard Melrose used,
+
+00:03:28.990 --> 00:03:34.020 align:middle line:84%
+so I want to stick
+to what he's using.
+
+00:03:34.020 --> 00:03:35.430 align:middle line:84%
+He's Australian,
+so I think maybe
+
+00:03:35.430 --> 00:03:36.805 align:middle line:84%
+that has something
+to do with it.
+
+00:03:36.805 --> 00:03:41.295 align:middle line:90%
+
+
+00:03:41.295 --> 00:03:43.420 align:middle line:84%
+So that's one of the
+unfortunate things about this,
+
+00:03:43.420 --> 00:03:44.680 align:middle line:84%
+is I can't tell if
+you're laughing,
+
+00:03:44.680 --> 00:03:46.347 align:middle line:84%
+but I'm going to
+assume you're laughing.
+
+00:03:46.347 --> 00:03:49.202 align:middle line:90%
+
+
+00:03:49.202 --> 00:03:51.440 align:middle line:84%
+OK, so absolutely
+sum of all means
+
+00:03:51.440 --> 00:03:57.800 align:middle line:84%
+the sum of the absolute--
+of the norms converges.
+
+00:03:57.800 --> 00:04:05.010 align:middle line:84%
+And you have this theorem,
+just like from real analysis,
+
+00:04:05.010 --> 00:04:12.680 align:middle line:84%
+which you saw at one
+point, that if vn--
+
+00:04:12.680 --> 00:04:20.440 align:middle line:90%
+so if this series is summable--
+
+00:04:20.440 --> 00:04:26.875 align:middle line:84%
+is-- I'm missing
+an adjective there.
+
+00:04:26.875 --> 00:04:30.500 align:middle line:90%
+
+
+00:04:30.500 --> 00:04:40.550 align:middle line:84%
+If I have an absolutely
+summable series, then
+
+00:04:40.550 --> 00:04:43.805 align:middle line:90%
+the sequence of partial sums--
+
+00:04:43.805 --> 00:04:48.880 align:middle line:90%
+
+
+00:04:48.880 --> 00:05:00.700 align:middle line:84%
+this is a Cauchy sequence in
+the space V. So again, we're
+
+00:05:00.700 --> 00:05:04.580 align:middle line:84%
+working through in
+a normal space V.
+
+00:05:04.580 --> 00:05:09.070 align:middle line:84%
+All right, and the proof is
+the same as in the real numbers
+
+00:05:09.070 --> 00:05:09.570 align:middle line:90%
+case.
+
+00:05:09.570 --> 00:05:10.820 align:middle line:90%
+So proof I'll leave to you.
+
+00:05:10.820 --> 00:05:14.800 align:middle line:90%
+
+
+00:05:14.800 --> 00:05:17.360 align:middle line:90%
+This is just a simple exercise.
+
+00:05:17.360 --> 00:05:27.956 align:middle line:84%
+And it's the same
+as for V equals R.
+
+00:05:27.956 --> 00:05:36.180 align:middle line:84%
+Now, notice I said
+something which is strictly
+
+00:05:36.180 --> 00:05:39.570 align:middle line:84%
+weaker than what you encounter
+in either case V equals R.
+
+00:05:39.570 --> 00:05:43.450 align:middle line:84%
+In the case V equals
+R, you have the theorem
+
+00:05:43.450 --> 00:05:47.110 align:middle line:84%
+that if I have an
+absolutely summable series,
+
+00:05:47.110 --> 00:05:48.910 align:middle line:90%
+then it's summable.
+
+00:05:48.910 --> 00:05:52.810 align:middle line:84%
+Every absolutely convergent
+series is convergent.
+
+00:05:52.810 --> 00:05:55.360 align:middle line:90%
+
+
+00:05:55.360 --> 00:05:56.800 align:middle line:90%
+But I didn't say that here.
+
+00:05:56.800 --> 00:06:01.240 align:middle line:84%
+I just said that the
+sequence of partial sums
+
+00:06:01.240 --> 00:06:03.950 align:middle line:84%
+is Cauchy, not
+necessarily convergent.
+
+00:06:03.950 --> 00:06:07.750 align:middle line:84%
+So when is the sequence of
+partial series convergent?
+
+00:06:07.750 --> 00:06:11.530 align:middle line:84%
+When can I say that an
+absolutely summable series
+
+00:06:11.530 --> 00:06:15.700 align:middle line:90%
+in this norm space is summable?
+
+00:06:15.700 --> 00:06:19.660 align:middle line:84%
+And I can say that precisely
+when it's a Banach space.
+
+00:06:19.660 --> 00:06:21.700 align:middle line:84%
+So the theorem that
+we're going to prove
+
+00:06:21.700 --> 00:06:40.540 align:middle line:84%
+is that V is a Banach space if
+and only if every absolutely
+
+00:06:40.540 --> 00:06:46.365 align:middle line:90%
+summable series is summable.
+
+00:06:46.365 --> 00:06:55.886 align:middle line:90%
+
+
+00:06:55.886 --> 00:06:59.280 align:middle line:84%
+OK, so this characterizes
+Banach spaces
+
+00:06:59.280 --> 00:07:02.670 align:middle line:84%
+as those spaces for
+which this theorem
+
+00:07:02.670 --> 00:07:05.370 align:middle line:84%
+you have from real analysis,
+that every absolutely
+
+00:07:05.370 --> 00:07:08.460 align:middle line:84%
+convergent series converges,
+is precisely that.
+
+00:07:08.460 --> 00:07:11.130 align:middle line:84%
+Every absolutely summable
+series is summable.
+
+00:07:11.130 --> 00:07:16.380 align:middle line:84%
+And sometimes, that
+is an easier property
+
+00:07:16.380 --> 00:07:21.210 align:middle line:84%
+to verify than going through
+the whole Cauchy business.
+
+00:07:21.210 --> 00:07:26.780 align:middle line:84%
+And sometimes, it's exactly
+the same amount of work.
+
+00:07:26.780 --> 00:07:29.600 align:middle line:84%
+We'll use this later when
+we deal with integration
+
+00:07:29.600 --> 00:07:32.240 align:middle line:84%
+and measure theory to
+prove that the big Lp
+
+00:07:32.240 --> 00:07:34.295 align:middle line:90%
+spaces are Banach spaces.
+
+00:07:34.295 --> 00:07:37.040 align:middle line:90%
+
+
+00:07:37.040 --> 00:07:40.520 align:middle line:84%
+All right, so we have
+two directions to prove--
+
+00:07:40.520 --> 00:07:43.370 align:middle line:84%
+that if V is a
+Banach space, then
+
+00:07:43.370 --> 00:07:46.430 align:middle line:84%
+we get every absolutely
+summable series is summable.
+
+00:07:46.430 --> 00:07:48.510 align:middle line:84%
+And this is pretty
+straightforward.
+
+00:07:48.510 --> 00:07:53.800 align:middle line:90%
+So one direction-- if V--
+
+00:07:53.800 --> 00:08:00.600 align:middle line:90%
+suppose V is a Banach space.
+
+00:08:00.600 --> 00:08:03.670 align:middle line:90%
+
+
+00:08:03.670 --> 00:08:14.390 align:middle line:84%
+Then if vn, if this
+series, is absolutely
+
+00:08:14.390 --> 00:08:16.880 align:middle line:84%
+summable by the
+previous theorem, which
+
+00:08:16.880 --> 00:08:20.210 align:middle line:84%
+I didn't prove, but
+is very easy to prove,
+
+00:08:20.210 --> 00:08:22.865 align:middle line:84%
+I get that the sequence
+of partial sums--
+
+00:08:22.865 --> 00:08:29.460 align:middle line:90%
+
+
+00:08:29.460 --> 00:08:37.700 align:middle line:84%
+this is a Cauchy sequence
+in V. And because V
+
+00:08:37.700 --> 00:08:41.210 align:middle line:84%
+is a Banach space, every
+Cauchy sequence converges.
+
+00:08:41.210 --> 00:08:52.600 align:middle line:84%
+And therefore, it
+converges in V.
+
+00:08:52.600 --> 00:08:55.840 align:middle line:84%
+And therefore, the
+series is summable.
+
+00:08:55.840 --> 00:08:58.510 align:middle line:90%
+So that direction simple enough.
+
+00:08:58.510 --> 00:09:01.170 align:middle line:90%
+
+
+00:09:01.170 --> 00:09:05.300 align:middle line:84%
+Let's go the opposite
+direction and show that every--
+
+00:09:05.300 --> 00:09:08.660 align:middle line:84%
+that the condition that every
+absolutely summable series is
+
+00:09:08.660 --> 00:09:10.965 align:middle line:84%
+summable implies that
+V is a Banach space.
+
+00:09:10.965 --> 00:09:13.820 align:middle line:90%
+
+
+00:09:13.820 --> 00:09:28.605 align:middle line:84%
+So every absolutely
+summable series is summable.
+
+00:09:28.605 --> 00:09:32.760 align:middle line:90%
+
+
+00:09:32.760 --> 00:09:36.570 align:middle line:84%
+Now, we want to show that every
+Cauchy sequence converges in V.
+
+00:09:36.570 --> 00:09:53.080 align:middle line:84%
+So let vn be a Cauchy in V.
+So what we're going to do
+
+00:09:53.080 --> 00:09:56.110 align:middle line:84%
+is we're, in fact, going
+to show that there's
+
+00:09:56.110 --> 00:09:59.660 align:middle line:84%
+a subsequence of the
+sequence that converges.
+
+00:09:59.660 --> 00:10:03.040 align:middle line:90%
+So what we're going to show--
+
+00:10:03.040 --> 00:10:16.030 align:middle line:90%
+
+
+00:10:16.030 --> 00:10:21.120 align:middle line:84%
+so that this sequence has
+a convergent subsequence.
+
+00:10:21.120 --> 00:10:30.720 align:middle line:90%
+
+
+00:10:30.720 --> 00:10:33.450 align:middle line:84%
+And once we've done that, we're
+done because remember back
+
+00:10:33.450 --> 00:10:36.780 align:middle line:90%
+to your real analysis days.
+
+00:10:36.780 --> 00:10:39.450 align:middle line:84%
+If a Cauchy sequence has
+a convergent subsequence,
+
+00:10:39.450 --> 00:10:41.280 align:middle line:84%
+then the entire
+sequence converges.
+
+00:10:41.280 --> 00:10:49.474 align:middle line:90%
+
+
+00:10:49.474 --> 00:11:08.130 align:middle line:84%
+And vn converges by metric
+space theory, all right?
+
+00:11:08.130 --> 00:11:11.400 align:middle line:90%
+So real analysis stuff.
+
+00:11:11.400 --> 00:11:15.720 align:middle line:84%
+OK, so let's find
+this subsequence.
+
+00:11:15.720 --> 00:11:20.790 align:middle line:84%
+And basically, we're going
+to build this subsequence up
+
+00:11:20.790 --> 00:11:24.420 align:middle line:84%
+by speeding up the convergence
+of vn or, if you like,
+
+00:11:24.420 --> 00:11:27.830 align:middle line:84%
+speeding up the
+Cauchiness of vn.
+
+00:11:27.830 --> 00:11:36.780 align:middle line:84%
+So the fact that the
+sequence is Cauchy
+
+00:11:36.780 --> 00:11:43.290 align:middle line:84%
+implies that for
+all natural numbers,
+
+00:11:43.290 --> 00:11:50.260 align:middle line:84%
+there exists a natural number
+k, also a natural number,
+
+00:11:50.260 --> 00:11:57.930 align:middle line:84%
+such that for all nm bigger than
+or equal to N sub k, we have
+
+00:11:57.930 --> 00:12:02.760 align:middle line:84%
+that the norm of v sub n
+minus the norm of v sub m
+
+00:12:02.760 --> 00:12:06.120 align:middle line:90%
+is less than 2 to the minus k.
+
+00:12:06.120 --> 00:12:08.040 align:middle line:84%
+All right, why did I
+choose to the minus k?
+
+00:12:08.040 --> 00:12:09.630 align:middle line:84%
+Because that's
+summable, all right?
+
+00:12:09.630 --> 00:12:10.630 align:middle line:90%
+And you'll see.
+
+00:12:10.630 --> 00:12:16.840 align:middle line:84%
+And so what we're going to
+do is build up essentially
+
+00:12:16.840 --> 00:12:22.436 align:middle line:90%
+a telescoping sum from these--
+
+00:12:22.436 --> 00:12:23.780 align:middle line:90%
+from Well-chosen guys.
+
+00:12:23.780 --> 00:12:31.940 align:middle line:90%
+So define n sub k.
+
+00:12:31.940 --> 00:12:32.990 align:middle line:90%
+What is this going to be?
+
+00:12:32.990 --> 00:12:39.185 align:middle line:84%
+This is going to be equal to
+N sub 1 plus plus N sub k.
+
+00:12:39.185 --> 00:12:46.520 align:middle line:90%
+
+
+00:12:46.520 --> 00:12:52.280 align:middle line:84%
+So n sub 1 is less than n
+sub 2 is less than n sub 3
+
+00:12:52.280 --> 00:12:54.660 align:middle line:84%
+because at each stage, I'm
+adding a natural number.
+
+00:12:54.660 --> 00:12:57.470 align:middle line:84%
+So n sub 1 is equal
+to capital N sub
+
+00:12:57.470 --> 00:13:00.927 align:middle line:84%
+1. n sub 2 is equal to a
+capital N sub 1 plus n sub 2.
+
+00:13:00.927 --> 00:13:02.010 align:middle line:90%
+These are natural numbers.
+
+00:13:02.010 --> 00:13:05.330 align:middle line:84%
+So I'm always getting
+bigger at each stage.
+
+00:13:05.330 --> 00:13:10.860 align:middle line:84%
+So this is an increasing
+sequence of integers.
+
+00:13:10.860 --> 00:13:17.370 align:middle line:84%
+And for all k, n
+sub k is less than
+
+00:13:17.370 --> 00:13:31.626 align:middle line:84%
+or equal to N sub
+k, capital N sub k
+
+00:13:31.626 --> 00:13:33.770 align:middle line:84%
+because little n sub
+k is equal to sum
+
+00:13:33.770 --> 00:13:35.900 align:middle line:90%
+integers plus capital N sub k.
+
+00:13:35.900 --> 00:13:40.640 align:middle line:90%
+
+
+00:13:40.640 --> 00:13:42.800 align:middle line:84%
+And so the v sub n
+sub k's are going
+
+00:13:42.800 --> 00:13:47.225 align:middle line:84%
+to be essentially the
+guys which converge.
+
+00:13:47.225 --> 00:13:51.580 align:middle line:90%
+
+
+00:13:51.580 --> 00:13:56.200 align:middle line:84%
+Thus, for all k
+natural numbers, I
+
+00:13:56.200 --> 00:14:01.720 align:middle line:84%
+get that v sub n sub k plus
+1 minus v sub n sub k--
+
+00:14:01.720 --> 00:14:04.600 align:middle line:84%
+if I take the norm of that,
+so n sub k is bigger than
+
+00:14:04.600 --> 00:14:06.280 align:middle line:90%
+or equal to capital N sub k.
+
+00:14:06.280 --> 00:14:08.860 align:middle line:84%
+n sub k plus 1 is bigger
+than or equal to n sub
+
+00:14:08.860 --> 00:14:11.320 align:middle line:84%
+k, which is bigger than or
+equal to capital N sub k.
+
+00:14:11.320 --> 00:14:13.780 align:middle line:84%
+And therefore, by
+this condition--
+
+00:14:13.780 --> 00:14:17.431 align:middle line:90%
+how n sub k's are chosen--
+
+00:14:17.431 --> 00:14:20.380 align:middle line:90%
+
+
+00:14:20.380 --> 00:14:24.800 align:middle line:84%
+so this, this, this, and
+what's in blue tells me
+
+00:14:24.800 --> 00:14:27.890 align:middle line:84%
+that this is going to be
+less than 2 to the minus k.
+
+00:14:27.890 --> 00:14:36.000 align:middle line:90%
+
+
+00:14:36.000 --> 00:14:43.520 align:middle line:84%
+And therefore,
+thus, the sum v sub
+
+00:14:43.520 --> 00:14:48.230 align:middle line:84%
+n sub k plus 1 minus
+v sub n sub k--
+
+00:14:48.230 --> 00:14:50.540 align:middle line:84%
+this is absolutely
+summable, right?
+
+00:14:50.540 --> 00:14:52.850 align:middle line:84%
+Because the norm of this
+is less than 2 to the minus
+
+00:14:52.850 --> 00:14:55.265 align:middle line:90%
+k, which you can sum.
+
+00:14:55.265 --> 00:14:59.620 align:middle line:90%
+
+
+00:14:59.620 --> 00:15:02.890 align:middle line:84%
+And by our assumption, that
+every absolutely summable
+
+00:15:02.890 --> 00:15:05.890 align:middle line:84%
+series is summable,
+this implies that--
+
+00:15:05.890 --> 00:15:09.580 align:middle line:90%
+
+
+00:15:09.580 --> 00:15:11.530 align:middle line:84%
+I didn't even say
+anything after that--
+
+00:15:11.530 --> 00:15:15.870 align:middle line:90%
+
+
+00:15:15.870 --> 00:15:33.600 align:middle line:84%
+is absolutely summable, which
+implies that this is summable,
+
+00:15:33.600 --> 00:15:39.290 align:middle line:90%
+which implies the limit as m--
+
+00:15:39.290 --> 00:15:43.105 align:middle line:84%
+or let me instead just
+finish with that--
+
+00:15:43.105 --> 00:15:49.980 align:middle line:90%
+
+
+00:15:49.980 --> 00:15:51.900 align:middle line:90%
+i.e.
+
+00:15:51.900 --> 00:15:57.120 align:middle line:84%
+the sequence of partial sums
+k equals 1 to m v sub n sub k
+
+00:15:57.120 --> 00:15:59.760 align:middle line:90%
+plus 1 minus v sub n sub k--
+
+00:15:59.760 --> 00:16:04.740 align:middle line:90%
+
+
+00:16:04.740 --> 00:16:13.898 align:middle line:84%
+this sequence of partial
+sums converges in V.
+
+00:16:13.898 --> 00:16:17.650 align:middle line:84%
+OK, so to recap
+again, we started off
+
+00:16:17.650 --> 00:16:19.240 align:middle line:90%
+with a Cauchy sequence.
+
+00:16:19.240 --> 00:16:23.620 align:middle line:84%
+We go out in the Cauchy
+sequence far enough
+
+00:16:23.620 --> 00:16:25.720 align:middle line:84%
+and pick certain
+guys so that they're
+
+00:16:25.720 --> 00:16:26.920 align:middle line:90%
+pretty close to each other.
+
+00:16:26.920 --> 00:16:27.970 align:middle line:90%
+And how close?
+
+00:16:27.970 --> 00:16:33.670 align:middle line:84%
+So close that the sum of
+their norms is finite,
+
+00:16:33.670 --> 00:16:35.230 align:middle line:84%
+so that it's
+absolutely summable.
+
+00:16:35.230 --> 00:16:42.030 align:middle line:84%
+And therefore, the series is
+summable by our assumption.
+
+00:16:42.030 --> 00:16:45.930 align:middle line:84%
+But this is essentially
+a telescoping sum.
+
+00:16:45.930 --> 00:16:51.400 align:middle line:90%
+
+
+00:16:51.400 --> 00:16:59.610 align:middle line:84%
+Thus, the series v sub
+n sub m, which equals--
+
+00:16:59.610 --> 00:17:04.619 align:middle line:84%
+so the sequence v sub n sub
+m, which is the sum from n
+
+00:17:04.619 --> 00:17:11.130 align:middle line:84%
+equals 1 to m of v
+sub n sub k plus 1--
+
+00:17:11.130 --> 00:17:13.660 align:middle line:84%
+let's see, let me
+put a minus 1 here,
+
+00:17:13.660 --> 00:17:21.930 align:middle line:84%
+minus v sub n sub k
+plus v sub n sub, m
+
+00:17:21.930 --> 00:17:33.840 align:middle line:84%
+equals 1 to infinity
+converges in V. And I'm done.
+
+00:17:33.840 --> 00:17:41.220 align:middle line:84%
+So v sub n sub m is equal to
+this telescoping sum plus--
+
+00:17:41.220 --> 00:17:44.310 align:middle line:84%
+so when I add this
+up, terms cancel.
+
+00:17:44.310 --> 00:17:46.230 align:middle line:84%
+And I just pick up
+the last one, which
+
+00:17:46.230 --> 00:17:51.630 align:middle line:84%
+is when I pick up m sub 1 here
+minus the first one, which
+
+00:17:51.630 --> 00:17:53.110 align:middle line:90%
+is v sub n sub 1 here.
+
+00:17:53.110 --> 00:17:57.345 align:middle line:84%
+So if I add on v sub n sub 1,
+I just pick up v sub n sub m.
+
+00:17:57.345 --> 00:18:02.100 align:middle line:84%
+Now, as m goes to infinity,
+this converges to something
+
+00:18:02.100 --> 00:18:04.560 align:middle line:90%
+because this sequence converges.
+
+00:18:04.560 --> 00:18:08.340 align:middle line:90%
+And this is just fixed in m.
+
+00:18:08.340 --> 00:18:10.230 align:middle line:90%
+So this sum converges.
+
+00:18:10.230 --> 00:18:13.350 align:middle line:84%
+And therefore, v sub
+n sub m converges.
+
+00:18:13.350 --> 00:18:16.230 align:middle line:84%
+And thus, this subsequence of
+our original Cauchy sequence
+
+00:18:16.230 --> 00:18:19.560 align:middle line:84%
+converges, proving that the
+Cauchy sequence converges in V.
+
+00:18:19.560 --> 00:18:20.280 align:middle line:90%
+And we're done.
+
+00:18:20.280 --> 00:18:27.340 align:middle line:90%
+
+
+00:18:27.340 --> 00:18:38.120 align:middle line:84%
+OK, so Banach spaces, these
+are a nice generalization
+
+00:18:38.120 --> 00:18:41.720 align:middle line:84%
+of the spaces that you
+worked with in real analysis
+
+00:18:41.720 --> 00:18:42.950 align:middle line:90%
+and linear algebra--
+
+00:18:42.950 --> 00:18:45.440 align:middle line:90%
+Rn, Cn, and so on.
+
+00:18:45.440 --> 00:18:48.020 align:middle line:90%
+
+
+00:18:48.020 --> 00:18:53.540 align:middle line:84%
+So what are the
+analogs of matrices,
+
+00:18:53.540 --> 00:18:56.750 align:middle line:84%
+which you had to use in
+calculus and linear algebra?
+
+00:18:56.750 --> 00:19:04.660 align:middle line:84%
+This is going to lead
+to our next topic, which
+
+00:19:04.660 --> 00:19:07.630 align:middle line:90%
+is operators and functionals--
+
+00:19:07.630 --> 00:19:19.990 align:middle line:90%
+
+
+00:19:19.990 --> 00:19:22.680 align:middle line:84%
+so operators being
+the analog of matrices
+
+00:19:22.680 --> 00:19:27.090 align:middle line:84%
+that take one vector
+into another vector,
+
+00:19:27.090 --> 00:19:33.900 align:middle line:84%
+functionals are the
+analog of taking a vector
+
+00:19:33.900 --> 00:19:37.080 align:middle line:84%
+and taking its dot product
+with a fixed vector,
+
+00:19:37.080 --> 00:19:39.370 align:middle line:90%
+spitting out a real number.
+
+00:19:39.370 --> 00:19:43.740 align:middle line:84%
+So functionals will eat
+vectors and spit out
+
+00:19:43.740 --> 00:19:47.580 align:middle line:84%
+real or complex numbers,
+depending on the field
+
+00:19:47.580 --> 00:19:50.410 align:middle line:90%
+that you're working in.
+
+00:19:50.410 --> 00:19:56.070 align:middle line:84%
+So let me write
+down just an example
+
+00:19:56.070 --> 00:20:03.960 align:middle line:84%
+to keep in mind, as
+far as operators go.
+
+00:20:03.960 --> 00:20:14.100 align:middle line:84%
+So I want you to
+keep this example
+
+00:20:14.100 --> 00:20:19.220 align:middle line:84%
+in mind, which was the whole
+reason for really a lot
+
+00:20:19.220 --> 00:20:21.050 align:middle line:90%
+of building all this machinery.
+
+00:20:21.050 --> 00:20:26.110 align:middle line:84%
+I mean, this example came first,
+and then the machinery came--
+
+00:20:26.110 --> 00:20:29.210 align:middle line:84%
+was built later to
+be able to say all
+
+00:20:29.210 --> 00:20:32.330 align:middle line:84%
+we can about these
+kind of operators--
+
+00:20:32.330 --> 00:20:34.250 align:middle line:84%
+or these kind of
+transformations.
+
+00:20:34.250 --> 00:20:36.890 align:middle line:90%
+
+
+00:20:36.890 --> 00:20:41.800 align:middle line:84%
+And depending on if
+you're in my class or not,
+
+00:20:41.800 --> 00:20:47.880 align:middle line:84%
+maybe you saw a question
+about such a creature
+
+00:20:47.880 --> 00:20:50.770 align:middle line:84%
+on an assignment or
+maybe on an exam.
+
+00:20:50.770 --> 00:20:59.230 align:middle line:84%
+So let K be a function
+on 0, 1 cross 0, 1,
+
+00:20:59.230 --> 00:21:01.450 align:middle line:84%
+let's say, into the
+complex numbers.
+
+00:21:01.450 --> 00:21:05.690 align:middle line:90%
+
+
+00:21:05.690 --> 00:21:16.320 align:middle line:84%
+And let's assume it's
+continuous for f,
+
+00:21:16.320 --> 00:21:18.270 align:middle line:90%
+a continuous function on 0, 1.
+
+00:21:18.270 --> 00:21:21.780 align:middle line:84%
+We can define a new
+function from f,
+
+00:21:21.780 --> 00:21:28.740 align:middle line:84%
+Tf of x, to be the integral
+from 0 to 1 of K of xy times
+
+00:21:28.740 --> 00:21:31.230 align:middle line:90%
+f of y dy.
+
+00:21:31.230 --> 00:21:36.350 align:middle line:90%
+
+
+00:21:36.350 --> 00:21:37.760 align:middle line:90%
+Now, these are things that--
+
+00:21:37.760 --> 00:21:39.802 align:middle line:84%
+I'm about to write a few
+things that you can just
+
+00:21:39.802 --> 00:21:40.610 align:middle line:90%
+check by hand.
+
+00:21:40.610 --> 00:21:50.435 align:middle line:84%
+But you can then check then Tf
+is also a continuous function.
+
+00:21:50.435 --> 00:21:56.060 align:middle line:90%
+
+
+00:21:56.060 --> 00:22:00.290 align:middle line:84%
+And it's linear
+in the argument f.
+
+00:22:00.290 --> 00:22:08.390 align:middle line:84%
+And for all lambda 1,
+lambda 2 in C, f1, f2
+
+00:22:08.390 --> 00:22:19.380 align:middle line:84%
+in 0, 1, T lambda 1,
+f1 plus lambda 2 f2
+
+00:22:19.380 --> 00:22:25.216 align:middle line:84%
+equals lambda 1 Tf1
+plus lambda 2 Tf2.
+
+00:22:25.216 --> 00:22:29.373 align:middle line:90%
+
+
+00:22:29.373 --> 00:22:30.790 align:middle line:84%
+And it has another
+property, which
+
+00:22:30.790 --> 00:22:32.560 align:middle line:84%
+I'm going to say
+in a minute, namely
+
+00:22:32.560 --> 00:22:36.410 align:middle line:84%
+that it's continuous on the
+space of continuous functions.
+
+00:22:36.410 --> 00:22:38.980 align:middle line:84%
+So we've already
+proven that this space
+
+00:22:38.980 --> 00:22:43.300 align:middle line:84%
+of continuous functions on 0, 1,
+this is a Banach space, right?
+
+00:22:43.300 --> 00:22:46.660 align:middle line:84%
+This was a special
+example of the space
+
+00:22:46.660 --> 00:22:48.980 align:middle line:84%
+of bounded continuous
+functions on a metric space
+
+00:22:48.980 --> 00:22:54.700 align:middle line:84%
+we considered before because on
+the closed and bounded interval
+
+00:22:54.700 --> 00:22:56.960 align:middle line:84%
+0, 1, every continuous
+function is bounded.
+
+00:22:56.960 --> 00:23:04.180 align:middle line:84%
+So this is just equal to C
+subscript infinity of 0, 1.
+
+00:23:04.180 --> 00:23:08.760 align:middle line:84%
+So we know this
+is a Banach space.
+
+00:23:08.760 --> 00:23:13.920 align:middle line:84%
+And so this is an
+example of what's
+
+00:23:13.920 --> 00:23:16.930 align:middle line:90%
+called a linear operator.
+
+00:23:16.930 --> 00:23:30.690 align:middle line:84%
+So definition-- let V
+and W be vector spaces.
+
+00:23:30.690 --> 00:23:32.690 align:middle line:84%
+So you should have seen
+a linear transformation.
+
+00:23:32.690 --> 00:23:34.315 align:middle line:84%
+I'm going to call it
+a linear operator.
+
+00:23:34.315 --> 00:23:37.190 align:middle line:84%
+I'm just recalling what
+it means to be linear.
+
+00:23:37.190 --> 00:23:39.410 align:middle line:90%
+Let V and W be vector spaces.
+
+00:23:39.410 --> 00:23:43.240 align:middle line:90%
+
+
+00:23:43.240 --> 00:23:49.755 align:middle line:84%
+You say a map T from
+V to W is linear--
+
+00:23:49.755 --> 00:23:54.390 align:middle line:90%
+
+
+00:23:54.390 --> 00:24:02.020 align:middle line:84%
+so linear, if for all
+lambda 1, lambda 2
+
+00:24:02.020 --> 00:24:04.720 align:middle line:90%
+in your field of scalars--
+
+00:24:04.720 --> 00:24:05.950 align:middle line:90%
+if they're either R or C--
+
+00:24:05.950 --> 00:24:08.800 align:middle line:90%
+
+
+00:24:08.800 --> 00:24:19.150 align:middle line:84%
+and for all v1, v2 in V, T of
+lambda 1 v1 plus lambda 2 v2
+
+00:24:19.150 --> 00:24:24.204 align:middle line:84%
+equals lambda 1 T v1
+plus lambda 2 T v2.
+
+00:24:24.204 --> 00:24:32.270 align:middle line:90%
+
+
+00:24:32.270 --> 00:24:39.770 align:middle line:84%
+So in a map from
+one norm space--
+
+00:24:39.770 --> 00:24:45.740 align:middle line:90%
+
+
+00:24:45.740 --> 00:24:47.752 align:middle line:84%
+so this is just a
+note off to the side.
+
+00:24:47.752 --> 00:24:49.460 align:middle line:84%
+This is how I'm going
+to be using-- well,
+
+00:24:49.460 --> 00:24:50.960 align:middle line:84%
+I'm not even going
+to write it down.
+
+00:24:50.960 --> 00:24:53.380 align:middle line:90%
+
+
+00:24:53.380 --> 00:24:57.480 align:middle line:84%
+So given two norm spaces,
+a linear map between them
+
+00:24:57.480 --> 00:25:02.010 align:middle line:84%
+I will most often refer
+to as a linear operator.
+
+00:25:02.010 --> 00:25:04.955 align:middle line:84%
+Rather than linear
+transformation,
+
+00:25:04.955 --> 00:25:07.080 align:middle line:84%
+which is what you probably
+heard in linear algebra,
+
+00:25:07.080 --> 00:25:10.410 align:middle line:84%
+I'll refer to
+these as operators.
+
+00:25:10.410 --> 00:25:12.660 align:middle line:84%
+Something I meant
+to say as well was
+
+00:25:12.660 --> 00:25:15.720 align:middle line:84%
+why do we care about such
+a guy like this other
+
+00:25:15.720 --> 00:25:17.850 align:middle line:90%
+than it looks nice?
+
+00:25:17.850 --> 00:25:27.730 align:middle line:84%
+You care about guys like these
+because operators of this form
+
+00:25:27.730 --> 00:25:34.250 align:middle line:84%
+are essentially the inverse
+operators of differential
+
+00:25:34.250 --> 00:25:35.750 align:middle line:90%
+operators.
+
+00:25:35.750 --> 00:25:38.270 align:middle line:84%
+I mean, you know that from
+the fundamental theorem
+
+00:25:38.270 --> 00:25:39.500 align:middle line:90%
+of calculus.
+
+00:25:39.500 --> 00:25:44.450 align:middle line:84%
+The inverse operation of
+taking a derivative is taking
+
+00:25:44.450 --> 00:25:46.910 align:middle line:90%
+is integrating.
+
+00:25:46.910 --> 00:25:54.110 align:middle line:84%
+So it shouldn't be a surprise
+that the inverse operator,
+
+00:25:54.110 --> 00:25:58.160 align:middle line:84%
+meaning if I take f as
+my data to some ODE,
+
+00:25:58.160 --> 00:26:04.040 align:middle line:84%
+can be written as this, as
+this kind of linear operator.
+
+00:26:04.040 --> 00:26:06.270 align:middle line:84%
+That shouldn't come as
+too much of a surprise.
+
+00:26:06.270 --> 00:26:08.180 align:middle line:84%
+So that's why we
+care about them,
+
+00:26:08.180 --> 00:26:13.520 align:middle line:84%
+is that operators
+of this form arise
+
+00:26:13.520 --> 00:26:17.300 align:middle line:84%
+as the inverses of taking
+differentiable operators.
+
+00:26:17.300 --> 00:26:22.670 align:middle line:90%
+
+
+00:26:22.670 --> 00:26:30.660 align:middle line:84%
+OK, so now, in this
+class at least,
+
+00:26:30.660 --> 00:26:35.390 align:middle line:84%
+we're not just interested
+in any old linear operator.
+
+00:26:35.390 --> 00:26:38.450 align:middle line:84%
+We're going to be interested
+in a certain class
+
+00:26:38.450 --> 00:26:40.220 align:middle line:90%
+of linear operators, those--
+
+00:26:40.220 --> 00:26:43.710 align:middle line:90%
+so those which are continuous.
+
+00:26:43.710 --> 00:26:57.480 align:middle line:84%
+So let me recall for you
+an equivalent way of saying
+
+00:26:57.480 --> 00:27:00.430 align:middle line:90%
+that a map is continuous.
+
+00:27:00.430 --> 00:27:03.910 align:middle line:90%
+
+
+00:27:03.910 --> 00:27:05.990 align:middle line:84%
+So this is just any
+map, any function,
+
+00:27:05.990 --> 00:27:15.800 align:middle line:84%
+not necessarily a linear
+operator is continuous on V
+
+00:27:15.800 --> 00:27:20.300 align:middle line:84%
+if-- and there's two
+ways to say this--
+
+00:27:20.300 --> 00:27:30.530 align:middle line:84%
+for every sequence
+vn converging to V--
+
+00:27:30.530 --> 00:27:31.940 align:middle line:90%
+so let me write it this way.
+
+00:27:31.940 --> 00:27:37.540 align:middle line:90%
+
+
+00:27:37.540 --> 00:27:49.290 align:middle line:84%
+For all v in E for all
+sequences converging to V,
+
+00:27:49.290 --> 00:27:55.740 align:middle line:84%
+we obtain that T of v sub
+n convergence to T of v.
+
+00:27:55.740 --> 00:28:05.360 align:middle line:84%
+And an equivalent
+way of stating this
+
+00:28:05.360 --> 00:28:13.210 align:middle line:84%
+in terms of what one would
+call a topological notions
+
+00:28:13.210 --> 00:28:17.240 align:middle line:84%
+is that the inverse image
+of open sets are open.
+
+00:28:17.240 --> 00:28:26.570 align:middle line:84%
+So for all open u in
+W, the inverse image
+
+00:28:26.570 --> 00:28:30.920 align:middle line:84%
+of u, which I will recall for
+you is the set of v in capital
+
+00:28:30.920 --> 00:28:36.450 align:middle line:90%
+V such that T v is in u--
+
+00:28:36.450 --> 00:28:38.083 align:middle line:84%
+I'm not saying that
+T is invertible.
+
+00:28:38.083 --> 00:28:39.125 align:middle line:90%
+That's the inverse image.
+
+00:28:39.125 --> 00:28:43.130 align:middle line:90%
+
+
+00:28:43.130 --> 00:28:52.060 align:middle line:84%
+The set is open in V. Remember,
+the notion of an open set
+
+00:28:52.060 --> 00:28:55.360 align:middle line:84%
+is that for every
+point in that set,
+
+00:28:55.360 --> 00:28:58.180 align:middle line:84%
+there's a small ball
+that's contained entirely
+
+00:28:58.180 --> 00:29:00.400 align:middle line:84%
+in the set centered
+at that point.
+
+00:29:00.400 --> 00:29:11.510 align:middle line:90%
+
+
+00:29:11.510 --> 00:29:16.500 align:middle line:84%
+OK, now, for linear
+maps, there's
+
+00:29:16.500 --> 00:29:18.930 align:middle line:84%
+a very simple way
+or equivalent way
+
+00:29:18.930 --> 00:29:25.500 align:middle line:84%
+of finding when it's
+continuous on a norm space.
+
+00:29:25.500 --> 00:29:27.510 align:middle line:84%
+Now, on finite
+dimensional spaces,
+
+00:29:27.510 --> 00:29:30.840 align:middle line:84%
+any linear transformation--
+every linear transformation
+
+00:29:30.840 --> 00:29:31.680 align:middle line:90%
+is continuous.
+
+00:29:31.680 --> 00:29:34.000 align:middle line:90%
+I should say that.
+
+00:29:34.000 --> 00:29:37.830 align:middle line:84%
+So if you take any
+linear operator from Rn
+
+00:29:37.830 --> 00:29:43.380 align:middle line:84%
+to Rm Cn to Cm or Rn to
+Cm, anything between two
+
+00:29:43.380 --> 00:29:47.130 align:middle line:84%
+finite dimensional
+spaces, it will always
+
+00:29:47.130 --> 00:29:49.590 align:middle line:90%
+be continuous if it's linear.
+
+00:29:49.590 --> 00:29:53.610 align:middle line:84%
+That is not always the case
+between two Banach spaces.
+
+00:29:53.610 --> 00:29:56.950 align:middle line:90%
+
+
+00:29:56.950 --> 00:30:00.430 align:middle line:84%
+Now, again, is there
+a more efficient way
+
+00:30:00.430 --> 00:30:02.500 align:middle line:84%
+of checking when
+something is continuous?
+
+00:30:02.500 --> 00:30:06.340 align:middle line:84%
+Or what's an equivalent
+way of saying that?
+
+00:30:06.340 --> 00:30:10.120 align:middle line:84%
+Or a more useful way is the
+following characterization
+
+00:30:10.120 --> 00:30:11.110 align:middle line:90%
+that we have.
+
+00:30:11.110 --> 00:30:24.250 align:middle line:84%
+So a linear operator T
+between two norm spaces now--
+
+00:30:24.250 --> 00:30:27.140 align:middle line:90%
+
+
+00:30:27.140 --> 00:30:38.890 align:middle line:84%
+so between two norm spaces
+is continuous if there
+
+00:30:38.890 --> 00:30:46.210 align:middle line:84%
+exists a C positive such that
+for all v in capital V, if I
+
+00:30:46.210 --> 00:30:51.880 align:middle line:84%
+take T of v and take it's
+norm in W, this is less than
+
+00:30:51.880 --> 00:31:19.000 align:middle line:84%
+or equal to a constant times
+the norm of v in capital V.
+
+00:31:19.000 --> 00:31:25.730 align:middle line:90%
+OK, now, in this case, we say--
+
+00:31:25.730 --> 00:31:29.550 align:middle line:90%
+
+
+00:31:29.550 --> 00:31:34.080 align:middle line:84%
+instead of saying that T is
+a continuous linear operator,
+
+00:31:34.080 --> 00:31:46.350 align:middle line:84%
+we say T is a bounded
+linear operator.
+
+00:31:46.350 --> 00:31:48.970 align:middle line:90%
+
+
+00:31:48.970 --> 00:31:51.900 align:middle line:84%
+So we don't really say
+continuous linear operator.
+
+00:31:51.900 --> 00:31:53.800 align:middle line:90%
+We say bounded linear operator.
+
+00:31:53.800 --> 00:31:56.910 align:middle line:84%
+Now, this doesn't
+mean the image of V
+
+00:31:56.910 --> 00:32:00.120 align:middle line:84%
+is a bounded set in W.
+That's not what this means.
+
+00:32:00.120 --> 00:32:03.180 align:middle line:84%
+The only linear operator that
+takes the bounded set-- that
+
+00:32:03.180 --> 00:32:08.130 align:middle line:84%
+takes a vector space
+into a bounded set
+
+00:32:08.130 --> 00:32:09.730 align:middle line:90%
+is the zero operator.
+
+00:32:09.730 --> 00:32:12.405 align:middle line:84%
+So we're not saying that
+it's taking all of V
+
+00:32:12.405 --> 00:32:13.530 align:middle line:90%
+to a bounded set.
+
+00:32:13.530 --> 00:32:16.080 align:middle line:84%
+But what this
+inequality does say
+
+00:32:16.080 --> 00:32:35.220 align:middle line:84%
+is that it takes bounded subsets
+of V to bounded subsets of W.
+
+00:32:35.220 --> 00:32:39.130 align:middle line:84%
+So let's prove-- let me put
+a star by this condition,
+
+00:32:39.130 --> 00:32:41.460 align:middle line:84%
+so I don't have to
+write it out so much.
+
+00:32:41.460 --> 00:32:59.142 align:middle line:90%
+
+
+00:32:59.142 --> 00:33:04.240 align:middle line:84%
+OK, so let's go
+in this direction.
+
+00:33:04.240 --> 00:33:14.720 align:middle line:84%
+So let's assume star and prove
+that this linear operator
+
+00:33:14.720 --> 00:33:16.670 align:middle line:90%
+T is continuous.
+
+00:33:16.670 --> 00:33:18.230 align:middle line:84%
+And this is not too
+difficult to do.
+
+00:33:18.230 --> 00:33:20.645 align:middle line:90%
+We'll use this first--
+
+00:33:20.645 --> 00:33:25.660 align:middle line:90%
+
+
+00:33:25.660 --> 00:33:29.080 align:middle line:84%
+we'll use this first
+characterization of continuity.
+
+00:33:29.080 --> 00:33:34.184 align:middle line:90%
+
+
+00:33:34.184 --> 00:33:43.160 align:middle line:84%
+Let v be in V. And suppose v sub
+n is a sequence in V converging
+
+00:33:43.160 --> 00:33:55.380 align:middle line:84%
+to v. Then by star, if I look
+at T sub v sub n minus T sub v
+
+00:33:55.380 --> 00:34:00.870 align:middle line:84%
+norm in W, this is less than
+or equal to a constant times
+
+00:34:00.870 --> 00:34:02.730 align:middle line:90%
+the norm of v sub n minus--
+
+00:34:02.730 --> 00:34:04.290 align:middle line:84%
+well, first off,
+I'm kind of using--
+
+00:34:04.290 --> 00:34:07.710 align:middle line:90%
+
+
+00:34:07.710 --> 00:34:08.850 align:middle line:90%
+let me add one little step.
+
+00:34:08.850 --> 00:34:10.433 align:middle line:84%
+I'm using that it's
+a linear operator,
+
+00:34:10.433 --> 00:34:14.100 align:middle line:84%
+meaning I can write this
+as T of v minus v sub n.
+
+00:34:14.100 --> 00:34:18.670 align:middle line:90%
+
+
+00:34:18.670 --> 00:34:22.550 align:middle line:84%
+And therefore, this is less than
+or equal to a constant times v
+
+00:34:22.550 --> 00:34:28.250 align:middle line:84%
+sub n minus v in
+capital V. And so
+
+00:34:28.250 --> 00:34:33.199 align:middle line:84%
+the norm of T of v
+sub n minus T of v
+
+00:34:33.199 --> 00:34:36.800 align:middle line:84%
+is less than or equal to some
+fixed constant depending only
+
+00:34:36.800 --> 00:34:39.469 align:middle line:84%
+on T times v sub n
+minus v. This goes
+
+00:34:39.469 --> 00:34:41.420 align:middle line:90%
+to 0 as n goes to infinity.
+
+00:34:41.420 --> 00:34:45.040 align:middle line:90%
+
+
+00:34:45.040 --> 00:34:48.360 align:middle line:84%
+And therefore, by the squeeze
+theorem, this thing on the left
+
+00:34:48.360 --> 00:34:49.290 align:middle line:90%
+must go to 0.
+
+00:34:49.290 --> 00:34:51.810 align:middle line:84%
+It's always
+trivially bigger than
+
+00:34:51.810 --> 00:35:04.060 align:middle line:84%
+or equal to 0, by
+the squeeze theorem.
+
+00:35:04.060 --> 00:35:08.290 align:middle line:84%
+And therefore, T of v sub
+n converges to T of v.
+
+00:35:08.290 --> 00:35:10.870 align:middle line:84%
+So that takes care
+of one direction.
+
+00:35:10.870 --> 00:35:24.600 align:middle line:90%
+
+
+00:35:24.600 --> 00:35:29.450 align:middle line:84%
+OK, so we've shown that this
+boundedness property of T
+
+00:35:29.450 --> 00:35:33.470 align:middle line:84%
+implies that T is continuous,
+that the linear operator
+
+00:35:33.470 --> 00:35:35.900 align:middle line:90%
+T is continuous.
+
+00:35:35.900 --> 00:35:38.450 align:middle line:84%
+Now, let's show that
+continuity implies
+
+00:35:38.450 --> 00:35:39.575 align:middle line:90%
+this boundedness property.
+
+00:35:39.575 --> 00:35:50.670 align:middle line:90%
+
+
+00:35:50.670 --> 00:35:53.470 align:middle line:90%
+And so for the continuity guy--
+
+00:35:53.470 --> 00:35:54.960 align:middle line:84%
+so I'm assuming
+T is continuous--
+
+00:35:54.960 --> 00:35:58.345 align:middle line:84%
+I'm going to use the second
+characterization of continuity
+
+00:35:58.345 --> 00:35:58.845 align:middle line:90%
+here.
+
+00:35:58.845 --> 00:36:05.730 align:middle line:90%
+
+
+00:36:05.730 --> 00:36:15.440 align:middle line:84%
+So then the inverse image
+of every open set in W
+
+00:36:15.440 --> 00:36:20.430 align:middle line:84%
+is an open set in V.
+So the inverse image
+
+00:36:20.430 --> 00:36:31.040 align:middle line:84%
+of the ball centered at the
+zero vector in W of radius 1--
+
+00:36:31.040 --> 00:36:39.360 align:middle line:84%
+so let me just recall this
+is a set of v in V such
+
+00:36:39.360 --> 00:36:42.045 align:middle line:90%
+that T v is in the ball.
+
+00:36:42.045 --> 00:36:45.080 align:middle line:90%
+
+
+00:36:45.080 --> 00:36:57.940 align:middle line:84%
+This is an open set in V
+because the ball of radius 1--
+
+00:36:57.940 --> 00:37:04.210 align:middle line:84%
+so this is the ball
+of elements in W such
+
+00:37:04.210 --> 00:37:06.430 align:middle line:84%
+that their distance
+to 0 is less than 1.
+
+00:37:06.430 --> 00:37:09.160 align:middle line:84%
+This must this is
+an open set in W.
+
+00:37:09.160 --> 00:37:13.270 align:middle line:84%
+And therefore, its inverse
+image must be an open set and V.
+
+00:37:13.270 --> 00:37:23.860 align:middle line:84%
+So we have here 0,
+1, everything inside.
+
+00:37:23.860 --> 00:37:27.240 align:middle line:90%
+Don't include the boundary.
+
+00:37:27.240 --> 00:37:42.510 align:middle line:84%
+This must be an open set in V.
+And T takes one to the other.
+
+00:37:42.510 --> 00:37:48.392 align:middle line:90%
+Now, what do I know?
+
+00:37:48.392 --> 00:37:49.840 align:middle line:90%
+0 is in here.
+
+00:37:49.840 --> 00:37:54.530 align:middle line:84%
+And every linear
+transformation takes 0 to 0.
+
+00:37:54.530 --> 00:37:59.500 align:middle line:84%
+So 0 has to be in
+the inverse image
+
+00:37:59.500 --> 00:38:04.790 align:middle line:84%
+because any linear
+map takes 0 to 0.
+
+00:38:04.790 --> 00:38:12.310 align:middle line:84%
+So 0 has to be in
+the inverse image.
+
+00:38:12.310 --> 00:38:17.185 align:middle line:84%
+And therefore, since
+this set is open--
+
+00:38:17.185 --> 00:38:19.750 align:middle line:90%
+
+
+00:38:19.750 --> 00:38:21.460 align:middle line:90%
+so this is 0.
+
+00:38:21.460 --> 00:38:26.410 align:middle line:84%
+Since the set is open,
+I can find a small ball
+
+00:38:26.410 --> 00:38:33.040 align:middle line:84%
+of radius r centered at 0,
+which remains inside the set V.
+
+00:38:33.040 --> 00:38:40.740 align:middle line:84%
+And therefore, it gets sent
+to some other set, which
+
+00:38:40.740 --> 00:38:44.850 align:middle line:84%
+is a subset of W. So
+this is the picture.
+
+00:38:44.850 --> 00:38:47.250 align:middle line:84%
+Let me write down the
+math that goes with it.
+
+00:38:47.250 --> 00:38:50.350 align:middle line:90%
+
+
+00:38:50.350 --> 00:38:55.555 align:middle line:84%
+Since T of 0 equals 0, that
+implies 0 is in T inverse of--
+
+00:38:55.555 --> 00:38:58.380 align:middle line:90%
+
+
+00:38:58.380 --> 00:39:04.040 align:middle line:84%
+which implies
+since this is open,
+
+00:39:04.040 --> 00:39:08.240 align:middle line:84%
+there exists an r positive
+such that the ball
+
+00:39:08.240 --> 00:39:19.550 align:middle line:84%
+in V centered at 0 of radius r
+is contained in T inverse of--
+
+00:39:19.550 --> 00:39:26.960 align:middle line:84%
+the inverse image of the ball
+of radius 1 centered at 0 in W.
+
+00:39:26.960 --> 00:39:28.910 align:middle line:90%
+Just look at the picture here.
+
+00:39:28.910 --> 00:39:38.635 align:middle line:90%
+
+
+00:39:38.635 --> 00:39:44.770 align:middle line:84%
+Let v be in V. And
+let's not look at 0
+
+00:39:44.770 --> 00:39:49.270 align:middle line:84%
+because v equals 0 will satisfy
+this inequality no matter
+
+00:39:49.270 --> 00:39:50.020 align:middle line:90%
+what C you have.
+
+00:39:50.020 --> 00:39:53.620 align:middle line:84%
+So we just need to look
+at v not equal to 0.
+
+00:39:53.620 --> 00:39:58.690 align:middle line:84%
+I claim that I can take the
+constant to be 2 over R,
+
+00:39:58.690 --> 00:39:59.290 align:middle line:90%
+all right?
+
+00:39:59.290 --> 00:40:06.490 align:middle line:90%
+
+
+00:40:06.490 --> 00:40:13.530 align:middle line:84%
+OK, then if I take
+v and I rescale it--
+
+00:40:13.530 --> 00:40:19.820 align:middle line:90%
+
+
+00:40:19.820 --> 00:40:21.770 align:middle line:84%
+well, let me not
+write it as dividing
+
+00:40:21.770 --> 00:40:28.250 align:middle line:84%
+v. Let me write it this way, r
+over 2 length v v v times v. So
+
+00:40:28.250 --> 00:40:32.510 align:middle line:84%
+this is a vector in capital
+V. What is its length?
+
+00:40:32.510 --> 00:40:33.650 align:middle line:90%
+Its length is r/2.
+
+00:40:33.650 --> 00:40:37.200 align:middle line:90%
+
+
+00:40:37.200 --> 00:40:39.420 align:middle line:84%
+So if I take it's
+length in v, this
+
+00:40:39.420 --> 00:40:43.680 align:middle line:84%
+is equal to r/2 is
+less than r, which
+
+00:40:43.680 --> 00:40:52.650 align:middle line:84%
+implies that r over 2 over v
+v is in the ball of radius r
+
+00:40:52.650 --> 00:40:55.130 align:middle line:90%
+in V centered at 0.
+
+00:40:55.130 --> 00:41:00.980 align:middle line:84%
+And therefore, so it has
+to be in this blue disk.
+
+00:41:00.980 --> 00:41:04.220 align:middle line:84%
+And therefore, it gets mapped
+to something in this blue guy
+
+00:41:04.220 --> 00:41:14.160 align:middle line:84%
+here, which is contained
+inside-- remember,
+
+00:41:14.160 --> 00:41:18.720 align:middle line:84%
+this big yellow thing was
+the ball of radius 1 centered
+
+00:41:18.720 --> 00:41:19.260 align:middle line:90%
+at 0--
+
+00:41:19.260 --> 00:41:25.280 align:middle line:90%
+
+
+00:41:25.280 --> 00:41:29.240 align:middle line:90%
+of radius 1 in W.
+
+00:41:29.240 --> 00:41:38.790 align:middle line:84%
+And therefore, the length
+of T r over 2 v v v W
+
+00:41:38.790 --> 00:41:41.950 align:middle line:90%
+must be less than 1.
+
+00:41:41.950 --> 00:41:48.900 align:middle line:84%
+And now, scalars pull out
+of linear transformation.
+
+00:41:48.900 --> 00:41:50.030 align:middle line:90%
+So this comes out.
+
+00:41:50.030 --> 00:41:52.130 align:middle line:84%
+And then it comes
+out of the norm
+
+00:41:52.130 --> 00:41:54.690 align:middle line:90%
+by the homogeneity of the norm.
+
+00:41:54.690 --> 00:41:57.410 align:middle line:90%
+And so I can divide through by--
+
+00:41:57.410 --> 00:42:01.310 align:middle line:84%
+multiply through
+by 2 norm v over r.
+
+00:42:01.310 --> 00:42:18.190 align:middle line:84%
+And I get that T of v norm W
+is less than 2 over r norm V.
+
+00:42:18.190 --> 00:42:26.300 align:middle line:84%
+And therefore, star holds
+with C given by 2 over r.
+
+00:42:26.300 --> 00:42:31.290 align:middle line:90%
+
+
+00:42:31.290 --> 00:42:39.610 align:middle line:84%
+OK, so continuous linear
+operators between norm spaces,
+
+00:42:39.610 --> 00:42:41.380 align:middle line:84%
+we call them bounded
+linear operators
+
+00:42:41.380 --> 00:42:44.350 align:middle line:84%
+because they satisfy this
+boundedness property,
+
+00:42:44.350 --> 00:42:47.725 align:middle line:84%
+namely that they take
+bounded sets to bounded sets.
+
+00:42:47.725 --> 00:42:50.760 align:middle line:90%
+
+
+00:42:50.760 --> 00:42:55.740 align:middle line:84%
+Now, it's going to become
+quite tedious for me
+
+00:42:55.740 --> 00:43:00.730 align:middle line:84%
+to keep writing norm sub
+W, norm sub V, and so on.
+
+00:43:00.730 --> 00:43:04.050 align:middle line:84%
+So I'm going to stop
+using the subscripts.
+
+00:43:04.050 --> 00:43:10.610 align:middle line:84%
+But it should be pretty
+clear from the context
+
+00:43:10.610 --> 00:43:11.450 align:middle line:90%
+where the norm is.
+
+00:43:11.450 --> 00:43:15.860 align:middle line:84%
+If I have a linear operator
+T from V to W, T of V--
+
+00:43:15.860 --> 00:43:33.420 align:middle line:90%
+
+
+00:43:33.420 --> 00:43:38.070 align:middle line:84%
+so if I have a bounded linear
+operator or linear operator
+
+00:43:38.070 --> 00:43:43.020 align:middle line:84%
+from V to W and you see
+me write norm of T v,
+
+00:43:43.020 --> 00:43:49.170 align:middle line:84%
+you should equate this
+to the norm of T v in W.
+
+00:43:49.170 --> 00:43:53.130 align:middle line:84%
+Or if you see v, you
+should equate this-- and v
+
+00:43:53.130 --> 00:43:57.210 align:middle line:84%
+as an element of capital V,
+then you should interpret
+
+00:43:57.210 --> 00:44:01.310 align:middle line:84%
+this as the norm
+of v in capital V.
+
+00:44:01.310 --> 00:44:03.890 align:middle line:84%
+So I'm dropping
+subscripts just to save
+
+00:44:03.890 --> 00:44:06.780 align:middle line:90%
+having to write too much.
+
+00:44:06.780 --> 00:44:09.750 align:middle line:90%
+And then it'll soon get tedious.
+
+00:44:09.750 --> 00:44:14.760 align:middle line:90%
+OK, so the definition--
+
+00:44:14.760 --> 00:44:19.170 align:middle line:90%
+
+
+00:44:19.170 --> 00:44:23.220 align:middle line:84%
+in fact, before I
+do that, let's take
+
+00:44:23.220 --> 00:44:29.800 align:middle line:84%
+a look at this linear operator
+I wrote up there a minute ago.
+
+00:44:29.800 --> 00:44:35.810 align:middle line:84%
+Can we see that that's a bounded
+linear operator on the space
+
+00:44:35.810 --> 00:44:37.800 align:middle line:90%
+of continuous functions?
+
+00:44:37.800 --> 00:45:05.040 align:middle line:84%
+So given by-- where k is
+a continuous function--
+
+00:45:05.040 --> 00:45:13.040 align:middle line:90%
+
+
+00:45:13.040 --> 00:45:20.400 align:middle line:84%
+this is a bounded
+linear operator.
+
+00:45:20.400 --> 00:45:24.120 align:middle line:84%
+So it's clear--
+pretty clear to see
+
+00:45:24.120 --> 00:45:29.160 align:middle line:90%
+that it's linear in f, right?
+
+00:45:29.160 --> 00:45:32.260 align:middle line:90%
+Scalars pull out and so on.
+
+00:45:32.260 --> 00:45:33.700 align:middle line:90%
+Let's check that it's bounded.
+
+00:45:33.700 --> 00:45:40.995 align:middle line:84%
+So recall that the norm on
+C 0, 1 is the infinity norm.
+
+00:45:40.995 --> 00:45:45.882 align:middle line:90%
+
+
+00:45:45.882 --> 00:45:48.485 align:middle line:84%
+So let f be a
+continuous function.
+
+00:45:48.485 --> 00:45:54.540 align:middle line:90%
+
+
+00:45:54.540 --> 00:45:57.350 align:middle line:84%
+Recall the norm on this
+space is the infinity norm
+
+00:45:57.350 --> 00:46:07.480 align:middle line:84%
+given by sup of x
+in 0, 1, f of x,
+
+00:46:07.480 --> 00:46:08.910 align:middle line:90%
+which is, in fact, a maximum.
+
+00:46:08.910 --> 00:46:10.487 align:middle line:84%
+It's attained at
+a certain value.
+
+00:46:10.487 --> 00:46:11.820 align:middle line:90%
+But I'll just write sup anyways.
+
+00:46:11.820 --> 00:46:14.380 align:middle line:90%
+
+
+00:46:14.380 --> 00:46:18.270 align:middle line:84%
+And so now, we want to
+estimate the norm of T of f
+
+00:46:18.270 --> 00:46:21.465 align:middle line:90%
+of x in terms of the norm of f.
+
+00:46:21.465 --> 00:46:23.460 align:middle line:84%
+That's what this
+boundedness property is.
+
+00:46:23.460 --> 00:46:28.280 align:middle line:90%
+
+
+00:46:28.280 --> 00:46:42.590 align:middle line:84%
+Then for all x in 0, 1, this is
+equal to the integral of k xy
+
+00:46:42.590 --> 00:46:46.600 align:middle line:90%
+f of y dy.
+
+00:46:46.600 --> 00:46:50.140 align:middle line:84%
+Now, the absolute
+value of the integral
+
+00:46:50.140 --> 00:46:53.630 align:middle line:84%
+is less than or equal to the
+integral of the absolute value.
+
+00:46:53.630 --> 00:47:03.990 align:middle line:84%
+So this is times the absolute
+value of k xy times f of y dy.
+
+00:47:03.990 --> 00:47:07.890 align:middle line:84%
+Now, f of y for all y
+in 0, 1 is less than
+
+00:47:07.890 --> 00:47:12.270 align:middle line:84%
+or equal to the
+infinity norm of f.
+
+00:47:12.270 --> 00:47:15.225 align:middle line:84%
+So that only makes
+the integral bigger.
+
+00:47:15.225 --> 00:47:24.670 align:middle line:90%
+
+
+00:47:24.670 --> 00:47:29.600 align:middle line:90%
+And the same thing for k, right?
+
+00:47:29.600 --> 00:47:32.420 align:middle line:84%
+k is a continuous function
+on 0, 1 cross 0, 1.
+
+00:47:32.420 --> 00:47:36.131 align:middle line:84%
+And therefore, it's
+bounded by its--
+
+00:47:36.131 --> 00:47:43.690 align:middle line:84%
+it attains a max on this set,
+being a continuous function.
+
+00:47:43.690 --> 00:47:48.600 align:middle line:84%
+So I can also replace
+it by its infinity norm.
+
+00:47:48.600 --> 00:47:50.880 align:middle line:84%
+And here, you should
+interpret this
+
+00:47:50.880 --> 00:47:56.330 align:middle line:84%
+as being the infinity norm
+on continuous functions
+
+00:47:56.330 --> 00:47:57.990 align:middle line:90%
+on this set.
+
+00:47:57.990 --> 00:48:03.650 align:middle line:84%
+So this infinity norm is the sup
+of k of xy for x and y in 0, 1
+
+00:48:03.650 --> 00:48:04.505 align:middle line:90%
+cross 0, 1.
+
+00:48:04.505 --> 00:48:22.500 align:middle line:90%
+
+
+00:48:22.500 --> 00:48:25.170 align:middle line:90%
+And therefore, this equals--
+
+00:48:25.170 --> 00:48:26.340 align:middle line:90%
+these are just two numbers.
+
+00:48:26.340 --> 00:48:31.180 align:middle line:90%
+
+
+00:48:31.180 --> 00:48:36.600 align:middle line:90%
+And this held-- holds for all x.
+
+00:48:36.600 --> 00:48:39.870 align:middle line:84%
+And therefore, its supremum
+is bounded by this number
+
+00:48:39.870 --> 00:48:41.490 align:middle line:90%
+as well, so Tf--
+
+00:48:41.490 --> 00:48:49.400 align:middle line:90%
+
+
+00:48:49.400 --> 00:48:55.040 align:middle line:84%
+so this is a bounded linear
+operator with constant given
+
+00:48:55.040 --> 00:48:57.530 align:middle line:90%
+by the infinity norm of k.
+
+00:48:57.530 --> 00:48:59.850 align:middle line:84%
+This k is usually
+referred to as a kernel.
+
+00:48:59.850 --> 00:49:01.970 align:middle line:84%
+So if I've said that before
+and haven't explained
+
+00:49:01.970 --> 00:49:05.180 align:middle line:84%
+where that comes from
+or why I use that word,
+
+00:49:05.180 --> 00:49:07.220 align:middle line:84%
+this is usually referred
+to as the kernel
+
+00:49:07.220 --> 00:49:11.390 align:middle line:90%
+of this linear operator.
+
+00:49:11.390 --> 00:49:14.890 align:middle line:90%
+
+
+00:49:14.890 --> 00:49:19.010 align:middle line:90%
+So there's an example for you.
+
+00:49:19.010 --> 00:49:20.480 align:middle line:84%
+I've already used
+up both boards?
+
+00:49:20.480 --> 00:49:24.500 align:middle line:84%
+Yeah, I missed the big room
+that had three of these.
+
+00:49:24.500 --> 00:49:30.190 align:middle line:90%
+
+
+00:49:30.190 --> 00:49:38.760 align:middle line:84%
+Now, given two norm
+spaces, V and W,
+
+00:49:38.760 --> 00:49:44.460 align:middle line:84%
+we can consider the set of
+all bounded linear operators
+
+00:49:44.460 --> 00:49:49.740 align:middle line:84%
+from V to W, which
+we denote by B V, W--
+
+00:49:49.740 --> 00:50:01.290 align:middle line:84%
+scripty looking B-- set of T.
+T is a bounded linear operator.
+
+00:50:01.290 --> 00:50:05.490 align:middle line:90%
+
+
+00:50:05.490 --> 00:50:10.190 align:middle line:84%
+So it's not difficult
+to see, again, that--
+
+00:50:10.190 --> 00:50:13.385 align:middle line:84%
+or to see that this
+is a vector space.
+
+00:50:13.385 --> 00:50:22.920 align:middle line:90%
+
+
+00:50:22.920 --> 00:50:26.370 align:middle line:84%
+So let me put this in a
+remark, that it's clear
+
+00:50:26.370 --> 00:50:28.530 align:middle line:90%
+that this is a vector space.
+
+00:50:28.530 --> 00:50:30.630 align:middle line:84%
+The sum of two linear
+transformations
+
+00:50:30.630 --> 00:50:33.735 align:middle line:84%
+is a linear transformation--
+or linear operator.
+
+00:50:33.735 --> 00:50:37.050 align:middle line:84%
+The scalar multiple of a linear
+operator is a linear operator.
+
+00:50:37.050 --> 00:50:42.580 align:middle line:84%
+And then those two operations
+preserve continuity.
+
+00:50:42.580 --> 00:50:44.655 align:middle line:84%
+So this is clearly
+a vector space.
+
+00:50:44.655 --> 00:50:49.040 align:middle line:90%
+
+
+00:50:49.040 --> 00:50:52.915 align:middle line:84%
+Now, we can put a
+norm on this space.
+
+00:50:52.915 --> 00:50:59.190 align:middle line:90%
+
+
+00:50:59.190 --> 00:51:14.050 align:middle line:84%
+We define the operator
+norm of an element in here.
+
+00:51:14.050 --> 00:51:19.550 align:middle line:90%
+
+
+00:51:19.550 --> 00:51:26.210 align:middle line:84%
+This is defined to be the
+supremum over all unit length
+
+00:51:26.210 --> 00:51:32.600 align:middle line:84%
+vectors v of T of v. So I want
+to recall that this norm is
+
+00:51:32.600 --> 00:51:34.820 align:middle line:84%
+being taken in W
+because T of v is
+
+00:51:34.820 --> 00:51:38.060 align:middle line:84%
+an element in W.
+This norm here is
+
+00:51:38.060 --> 00:51:50.710 align:middle line:84%
+being taken in V because
+little v is an element in V.
+
+00:51:50.710 --> 00:51:57.530 align:middle line:84%
+So maybe it's not
+clear at first.
+
+00:51:57.530 --> 00:52:07.400 align:middle line:84%
+But let's go ahead and prove
+it that, in fact, the operator
+
+00:52:07.400 --> 00:52:20.940 align:middle line:84%
+norm is, in fact,
+an actual norm so
+
+00:52:20.940 --> 00:52:23.145 align:middle line:90%
+that this becomes a norm space.
+
+00:52:23.145 --> 00:52:25.680 align:middle line:90%
+
+
+00:52:25.680 --> 00:52:27.970 align:middle line:84%
+So the operator norm
+is an actual norm.
+
+00:52:27.970 --> 00:52:32.820 align:middle line:84%
+It's not just a norm
+because I said it is.
+
+00:52:32.820 --> 00:52:34.350 align:middle line:90%
+So let's prove this.
+
+00:52:34.350 --> 00:52:43.720 align:middle line:90%
+
+
+00:52:43.720 --> 00:52:51.390 align:middle line:84%
+It's not-- again, so it's
+not too difficult to see.
+
+00:52:51.390 --> 00:52:55.190 align:middle line:84%
+So let's prove definiteness,
+namely the norm of T
+
+00:52:55.190 --> 00:52:58.430 align:middle line:90%
+is 0 if and only if T is 0.
+
+00:52:58.430 --> 00:53:04.350 align:middle line:84%
+So if T is a zero operator,
+then clearly its norm is 0.
+
+00:53:04.350 --> 00:53:08.280 align:middle line:90%
+Suppose T of v equals 0.
+
+00:53:08.280 --> 00:53:12.720 align:middle line:84%
+So this sup is 0 if and only if
+T of v is 0 for all unit length
+
+00:53:12.720 --> 00:53:15.190 align:middle line:90%
+v. So suppose T is an operator.
+
+00:53:15.190 --> 00:53:20.310 align:middle line:84%
+So that T of v equals 0 for
+all unit length v. Then that
+
+00:53:20.310 --> 00:53:23.670 align:middle line:90%
+implies that T of--
+
+00:53:23.670 --> 00:53:29.250 align:middle line:90%
+
+
+00:53:29.250 --> 00:53:40.720 align:middle line:90%
+that 0 equals T of v equals T.
+
+00:53:40.720 --> 00:53:43.445 align:middle line:84%
+All I'm saying is
+you rescale now, OK?
+
+00:53:43.445 --> 00:53:43.945 align:middle line:90%
+0.
+
+00:53:43.945 --> 00:53:47.650 align:middle line:90%
+
+
+00:53:47.650 --> 00:54:03.530 align:middle line:84%
+So it implies for all v in V
+take away 0 that 0 equals T.
+
+00:54:03.530 --> 00:54:10.940 align:middle line:84%
+So t is the zero operator
+if its norm is 0.
+
+00:54:10.940 --> 00:54:11.480 align:middle line:90%
+2.
+
+00:54:11.480 --> 00:54:18.180 align:middle line:84%
+Homogeneity follows from
+the homogeneity of the norm
+
+00:54:18.180 --> 00:54:26.420 align:middle line:84%
+on W. So lambda T,
+this is equal to--
+
+00:54:26.420 --> 00:54:32.930 align:middle line:84%
+so the norm of lambda times T,
+this is equal to the sup of v
+
+00:54:32.930 --> 00:54:41.430 align:middle line:84%
+equals 1 of lambda T v.
+And this is equal to sup
+
+00:54:41.430 --> 00:54:45.240 align:middle line:90%
+equals 1 times lambda times Tv.
+
+00:54:45.240 --> 00:54:49.030 align:middle line:84%
+And if I take a set and multiply
+it by a non-negative number,
+
+00:54:49.030 --> 00:54:51.510 align:middle line:84%
+then that non-negative
+number comes out of the sup.
+
+00:54:51.510 --> 00:54:57.370 align:middle line:90%
+
+
+00:54:57.370 --> 00:54:59.800 align:middle line:84%
+Hopefully, it was one
+of the first exercises
+
+00:54:59.800 --> 00:55:02.113 align:middle line:90%
+you were ever given on supes.
+
+00:55:02.113 --> 00:55:03.280 align:middle line:90%
+And therefore, this equals--
+
+00:55:03.280 --> 00:55:06.610 align:middle line:90%
+
+
+00:55:06.610 --> 00:55:12.020 align:middle line:84%
+and now, so that proves
+homogeneity of the norm.
+
+00:55:12.020 --> 00:55:14.780 align:middle line:84%
+And now, the triangle
+inequality follows
+
+00:55:14.780 --> 00:55:19.760 align:middle line:84%
+from the triangle inequality
+for the norm on W again.
+
+00:55:19.760 --> 00:55:32.300 align:middle line:84%
+So I take two operators and
+two bounded linear operators.
+
+00:55:32.300 --> 00:55:43.920 align:middle line:84%
+And I take an element of
+V with norm equal to 1.
+
+00:55:43.920 --> 00:55:54.210 align:middle line:84%
+Then S plus T applied to v norm,
+this is equal to Sv plus Tv.
+
+00:55:54.210 --> 00:55:57.060 align:middle line:84%
+And by the triangle
+inequality for the norm on W,
+
+00:55:57.060 --> 00:56:03.270 align:middle line:84%
+this is less than or equal
+to S times v plus T times v.
+
+00:56:03.270 --> 00:56:09.470 align:middle line:84%
+And now, S times v-- so again,
+v's a unit length vector--
+
+00:56:09.470 --> 00:56:12.680 align:middle line:84%
+is less than or equal to the
+sup over all those norms, which
+
+00:56:12.680 --> 00:56:15.500 align:middle line:84%
+is, again, just the
+operator norm of S
+
+00:56:15.500 --> 00:56:19.820 align:middle line:84%
+and then the operator
+norm of T. So I've
+
+00:56:19.820 --> 00:56:24.380 align:middle line:84%
+proven that for all unit
+length v, S plus T applied
+
+00:56:24.380 --> 00:56:28.910 align:middle line:84%
+to v in norm is less than or
+equal to this number here.
+
+00:56:28.910 --> 00:56:32.930 align:middle line:84%
+And therefore, the supremum
+over all such numbers
+
+00:56:32.930 --> 00:56:36.050 align:middle line:84%
+as v ranges overall unit
+length vectors, which
+
+00:56:36.050 --> 00:56:39.680 align:middle line:84%
+is the least upper bound
+of that set, must be--
+
+00:56:39.680 --> 00:56:45.375 align:middle line:84%
+sit below this number
+here, which implies that--
+
+00:56:45.375 --> 00:56:54.640 align:middle line:90%
+
+
+00:56:54.640 --> 00:56:55.140 align:middle line:90%
+OK?
+
+00:56:55.140 --> 00:56:58.020 align:middle line:90%
+
+
+00:56:58.020 --> 00:57:03.170 align:middle line:84%
+And therefore, the
+operator norm is a norm
+
+00:57:03.170 --> 00:57:11.220 align:middle line:90%
+both in name and in actuality.
+
+00:57:11.220 --> 00:57:21.640 align:middle line:90%
+
+
+00:57:21.640 --> 00:57:24.910 align:middle line:84%
+So if you like, what we
+did a minute ago here
+
+00:57:24.910 --> 00:57:28.180 align:middle line:90%
+is we showed that--
+
+00:57:28.180 --> 00:57:32.620 align:middle line:84%
+so coming back to over here for
+this bounded linear operator
+
+00:57:32.620 --> 00:57:34.870 align:middle line:84%
+from continuous functions
+to continuous functions,
+
+00:57:34.870 --> 00:57:40.210 align:middle line:90%
+what this tells you--
+
+00:57:40.210 --> 00:57:45.570 align:middle line:84%
+so first off, if
+f has unit length,
+
+00:57:45.570 --> 00:57:48.480 align:middle line:84%
+then I've shown that Tf in
+L infinity form is less than
+
+00:57:48.480 --> 00:57:51.030 align:middle line:84%
+or equal to the L
+infinity norm of K.
+
+00:57:51.030 --> 00:57:56.580 align:middle line:84%
+And therefore, I've shown that
+the operator norm of T, where
+
+00:57:56.580 --> 00:58:04.120 align:middle line:84%
+T is defined over there, is less
+than or equal to the operator
+
+00:58:04.120 --> 00:58:08.860 align:middle line:84%
+norm for K. We're actually
+a little wasteful there.
+
+00:58:08.860 --> 00:58:13.170 align:middle line:90%
+This is not equality, actually.
+
+00:58:13.170 --> 00:58:15.630 align:middle line:84%
+But I'll let you think about
+that when you have free time.
+
+00:58:15.630 --> 00:58:19.150 align:middle line:90%
+
+
+00:58:19.150 --> 00:58:24.910 align:middle line:84%
+OK, so we've talked about
+bounded linear operators
+
+00:58:24.910 --> 00:58:28.300 align:middle line:90%
+from one norm space to another.
+
+00:58:28.300 --> 00:58:32.290 align:middle line:84%
+What more can we say
+about this new space
+
+00:58:32.290 --> 00:58:38.560 align:middle line:90%
+we formed from two norm spaces?
+
+00:58:38.560 --> 00:58:41.330 align:middle line:84%
+When is this space
+complete, for example?
+
+00:58:41.330 --> 00:58:42.980 align:middle line:90%
+What are sufficient conditions?
+
+00:58:42.980 --> 00:58:56.150 align:middle line:84%
+And so theorem-- if
+W is a Banach space--
+
+00:58:56.150 --> 00:58:59.550 align:middle line:90%
+
+
+00:58:59.550 --> 00:59:02.640 align:middle line:90%
+again, V and W are norm spaces.
+
+00:59:02.640 --> 00:59:08.220 align:middle line:84%
+If I assume W is a Banach
+space, then the space
+
+00:59:08.220 --> 00:59:10.800 align:middle line:84%
+of bounded linear
+operators from V to W
+
+00:59:10.800 --> 00:59:19.380 align:middle line:84%
+is a Banach space no matter
+if v is a Banach space or not.
+
+00:59:19.380 --> 00:59:26.410 align:middle line:90%
+
+
+00:59:26.410 --> 00:59:31.620 align:middle line:84%
+OK, so what we're
+going to do is we're
+
+00:59:31.620 --> 00:59:37.050 align:middle line:84%
+going to use that
+characterization we had earlier
+
+00:59:37.050 --> 00:59:42.090 align:middle line:84%
+of when a norm space is
+a Banach space in terms
+
+00:59:42.090 --> 00:59:45.630 align:middle line:84%
+of summability
+absolute summability.
+
+00:59:45.630 --> 00:59:57.690 align:middle line:84%
+So suppose Tn is a
+sequence of elements
+
+00:59:57.690 --> 01:00:08.400 align:middle line:84%
+of bounded linear operators
+such that this constant C,
+
+01:00:08.400 --> 01:00:14.550 align:middle line:84%
+which is the sum of these
+norms, exists as a real number.
+
+01:00:14.550 --> 01:00:19.440 align:middle line:84%
+So let's suppose that we have
+an absolutely summable series
+
+01:00:19.440 --> 01:00:21.240 align:middle line:90%
+of linear operators.
+
+01:00:21.240 --> 01:00:24.255 align:middle line:84%
+And to show that this is a
+Banach space, we want to show--
+
+01:00:24.255 --> 01:00:38.180 align:middle line:90%
+
+
+01:00:38.180 --> 01:00:42.570 align:middle line:84%
+we want to show that
+this series is summable.
+
+01:00:42.570 --> 01:00:45.510 align:middle line:84%
+Then by that theorem
+we have earlier,
+
+01:00:45.510 --> 01:00:48.690 align:middle line:84%
+that if you have a norm space
+such that every absolutely
+
+01:00:48.690 --> 01:00:51.750 align:middle line:84%
+summable series is summable,
+then it's a Banach space.
+
+01:00:51.750 --> 01:00:55.560 align:middle line:84%
+We conclude the
+proof of the theorem.
+
+01:00:55.560 --> 01:00:58.870 align:middle line:84%
+And how we're going to show
+this is summable is, again,
+
+01:00:58.870 --> 01:01:01.050 align:middle line:84%
+kind of the same
+strategy we used
+
+01:01:01.050 --> 01:01:04.890 align:middle line:84%
+to prove that the space of
+bounded continuous functions
+
+01:01:04.890 --> 01:01:08.430 align:middle line:84%
+on a metric space
+is a Banach space.
+
+01:01:08.430 --> 01:01:11.520 align:middle line:84%
+We're going to come up with
+a candidate for this, show
+
+01:01:11.520 --> 01:01:13.610 align:middle line:84%
+that it's actually a
+bounded linear operator,
+
+01:01:13.610 --> 01:01:15.360 align:middle line:84%
+and then that the
+convergence is uniform--
+
+01:01:15.360 --> 01:01:19.150 align:middle line:90%
+
+
+01:01:19.150 --> 01:01:21.460 align:middle line:84%
+or not uniform,
+but the convergence
+
+01:01:21.460 --> 01:01:24.520 align:middle line:84%
+is in the space in
+the operator norm.
+
+01:01:24.520 --> 01:01:34.390 align:middle line:90%
+
+
+01:01:34.390 --> 01:01:40.270 align:middle line:90%
+OK, so let me just make a--
+
+01:01:40.270 --> 01:01:47.850 align:middle line:90%
+
+
+01:01:47.850 --> 01:01:50.820 align:middle line:84%
+let me just make a note of
+something real quick, which
+
+01:01:50.820 --> 01:01:51.690 align:middle line:90%
+I meant to write.
+
+01:01:51.690 --> 01:01:53.360 align:middle line:90%
+You know what?
+
+01:01:53.360 --> 01:01:58.460 align:middle line:84%
+Let's write it up there because
+that's where it belongs.
+
+01:01:58.460 --> 01:02:00.260 align:middle line:90%
+But I didn't write it down.
+
+01:02:00.260 --> 01:02:02.780 align:middle line:84%
+So let me just
+make a remark here.
+
+01:02:02.780 --> 01:02:05.900 align:middle line:90%
+
+
+01:02:05.900 --> 01:02:09.590 align:middle line:84%
+The operator norm is defined
+for all unit length v.
+
+01:02:09.590 --> 01:02:11.300 align:middle line:84%
+But it automatically
+gives us a bound.
+
+01:02:11.300 --> 01:02:18.250 align:middle line:90%
+
+
+01:02:18.250 --> 01:02:23.130 align:middle line:84%
+And I'm moving a little
+quickly because--
+
+01:02:23.130 --> 01:02:29.710 align:middle line:90%
+
+
+01:02:29.710 --> 01:02:31.405 align:middle line:84%
+maybe quicker than
+I should have, but--
+
+01:02:31.405 --> 01:02:37.070 align:middle line:90%
+
+
+01:02:37.070 --> 01:02:43.140 align:middle line:90%
+OK, what was I going to say?
+
+01:02:43.140 --> 01:02:46.320 align:middle line:84%
+First off, one thing
+I should have said
+
+01:02:46.320 --> 01:02:49.260 align:middle line:84%
+is that this is an
+actual finite number
+
+01:02:49.260 --> 01:02:55.370 align:middle line:84%
+if I have a bounded linear
+operator because, remember,
+
+01:02:55.370 --> 01:03:00.020 align:middle line:84%
+T, a bounded linear
+operator, implies
+
+01:03:00.020 --> 01:03:07.780 align:middle line:84%
+there exists a constant
+such that for all v in V,
+
+01:03:07.780 --> 01:03:11.890 align:middle line:84%
+the norm of Tv is less than
+or equal to a constant times
+
+01:03:11.890 --> 01:03:15.910 align:middle line:84%
+the norm of V. So when
+v has unit length,
+
+01:03:15.910 --> 01:03:18.070 align:middle line:90%
+this constant bounds--
+
+01:03:18.070 --> 01:03:22.810 align:middle line:84%
+that satisfies this inequality
+bounds these numbers
+
+01:03:22.810 --> 01:03:24.250 align:middle line:90%
+for all v with unit length.
+
+01:03:24.250 --> 01:03:27.700 align:middle line:84%
+And in fact, this supremum
+is the smallest such C
+
+01:03:27.700 --> 01:03:29.940 align:middle line:90%
+that I can put here.
+
+01:03:29.940 --> 01:03:31.690 align:middle line:84%
+So that's the one
+comment I wanted to say,
+
+01:03:31.690 --> 01:03:35.030 align:middle line:84%
+that this is an actual,
+well-defined thing.
+
+01:03:35.030 --> 01:03:38.620 align:middle line:90%
+OK, so I wanted to say that.
+
+01:03:38.620 --> 01:03:42.660 align:middle line:84%
+And then also, now
+from rescaling,
+
+01:03:42.660 --> 01:03:47.460 align:middle line:84%
+we get a bound for all v in
+terms of the operator norm.
+
+01:03:47.460 --> 01:03:54.560 align:middle line:90%
+
+
+01:03:54.560 --> 01:04:02.480 align:middle line:84%
+Then if I take v over its
+length and take its operator--
+
+01:04:02.480 --> 01:04:04.410 align:middle line:90%
+or I take its norm--
+
+01:04:04.410 --> 01:04:09.420 align:middle line:84%
+so this is a unit length
+vector in V. I applied T to it.
+
+01:04:09.420 --> 01:04:11.540 align:middle line:84%
+So that's always less
+than or equal to the sup
+
+01:04:11.540 --> 01:04:16.610 align:middle line:84%
+over all norm of
+T times something,
+
+01:04:16.610 --> 01:04:18.720 align:middle line:84%
+where that something
+has unit length.
+
+01:04:18.720 --> 01:04:22.140 align:middle line:84%
+But this is a linear
+operator so that this scalar
+
+01:04:22.140 --> 01:04:24.750 align:middle line:84%
+comes out here, and then
+comes out of the norm
+
+01:04:24.750 --> 01:04:28.010 align:middle line:90%
+again by homogeneity.
+
+01:04:28.010 --> 01:04:36.330 align:middle line:84%
+And therefore, I
+get that Tv is that.
+
+01:04:36.330 --> 01:04:41.120 align:middle line:84%
+So in short, the point of
+this remark was to say that--
+
+01:04:41.120 --> 01:04:43.700 align:middle line:90%
+
+
+01:04:43.700 --> 01:04:46.040 align:middle line:84%
+this is not really maybe
+the best way to say it.
+
+01:04:46.040 --> 01:04:49.820 align:middle line:84%
+But if I think of T acting on
+v as the product of T and v,
+
+01:04:49.820 --> 01:04:53.060 align:middle line:84%
+then this says the norm
+of the product of T and v
+
+01:04:53.060 --> 01:04:56.990 align:middle line:84%
+is less than or equal to the
+product of the norms of T
+
+01:04:56.990 --> 01:05:11.148 align:middle line:90%
+and v.
+
+01:05:11.148 --> 01:05:12.690 align:middle line:84%
+Sorry if I went a
+little quick there.
+
+01:05:12.690 --> 01:05:14.232 align:middle line:84%
+Maybe you stopped
+and were wondering,
+
+01:05:14.232 --> 01:05:15.840 align:middle line:90%
+why is that even a real--
+
+01:05:15.840 --> 01:05:17.160 align:middle line:90%
+why is that even a real thing?
+
+01:05:17.160 --> 01:05:19.860 align:middle line:90%
+Why is that an actual number?
+
+01:05:19.860 --> 01:05:21.390 align:middle line:90%
+What am I going on about?
+
+01:05:21.390 --> 01:05:22.920 align:middle line:84%
+Maybe I'm just a
+little overexcited
+
+01:05:22.920 --> 01:05:25.500 align:middle line:84%
+about teaching functional
+analysis because this
+
+01:05:25.500 --> 01:05:40.060 align:middle line:84%
+is kind of your first adult
+analysis class, I will say.
+
+01:05:40.060 --> 01:05:43.110 align:middle line:84%
+OK, so back to
+the proof at hand,
+
+01:05:43.110 --> 01:05:46.820 align:middle line:84%
+we have this series
+of absolutely summable
+
+01:05:46.820 --> 01:05:48.920 align:middle line:90%
+bounded linear operators.
+
+01:05:48.920 --> 01:05:52.550 align:middle line:84%
+So the sum of the
+norms is convergent,
+
+01:05:52.550 --> 01:05:56.240 align:middle line:84%
+meaning this series
+sum is finite.
+
+01:05:56.240 --> 01:05:59.660 align:middle line:84%
+And we want to show that
+this series of the T
+
+01:05:59.660 --> 01:06:02.720 align:middle line:84%
+sub n's is summable
+so that this has
+
+01:06:02.720 --> 01:06:06.050 align:middle line:84%
+a limit in the space of
+bounded linear operators.
+
+01:06:06.050 --> 01:06:09.840 align:middle line:90%
+
+
+01:06:09.840 --> 01:06:14.488 align:middle line:84%
+So we're going to come
+up with a candidate.
+
+01:06:14.488 --> 01:06:26.090 align:middle line:84%
+Let v be in V. If
+I look at the sum
+
+01:06:26.090 --> 01:06:29.405 align:middle line:90%
+of the norms of T sub n of v--
+
+01:06:29.405 --> 01:06:36.475 align:middle line:84%
+so T sub n applied to
+v, this is bounded by--
+
+01:06:36.475 --> 01:06:37.850 align:middle line:84%
+I mean, I'm writing
+it like this.
+
+01:06:37.850 --> 01:06:41.410 align:middle line:84%
+But let me be a
+little more careful.
+
+01:06:41.410 --> 01:06:47.020 align:middle line:90%
+
+
+01:06:47.020 --> 01:06:49.960 align:middle line:90%
+Let m be a natural number.
+
+01:06:49.960 --> 01:06:59.340 align:middle line:84%
+Then sum from n equals 1
+to m of T sub n of v norm,
+
+01:06:59.340 --> 01:07:04.950 align:middle line:84%
+this is less than or equal to
+the sum from n equals 1 to m
+
+01:07:04.950 --> 01:07:13.400 align:middle line:84%
+of T sub n times the norm of v.
+And so v, that's just a number.
+
+01:07:13.400 --> 01:07:14.800 align:middle line:90%
+It comes outside the sum.
+
+01:07:14.800 --> 01:07:19.180 align:middle line:84%
+And the sum from n equals 1 to
+m is bounded by the sum from n
+
+01:07:19.180 --> 01:07:22.130 align:middle line:84%
+equals 1 to infinity of
+these non-negative numbers.
+
+01:07:22.130 --> 01:07:29.860 align:middle line:84%
+So this is less than or equal
+to the norm of v times T sub n
+
+01:07:29.860 --> 01:07:30.595 align:middle line:90%
+equals Cv.
+
+01:07:30.595 --> 01:07:33.290 align:middle line:90%
+
+
+01:07:33.290 --> 01:07:38.570 align:middle line:84%
+So for all m, I've shown
+that this thing is bounded
+
+01:07:38.570 --> 01:07:47.300 align:middle line:84%
+by C times the norm of v. And
+therefore, the partial sums
+
+01:07:47.300 --> 01:07:50.870 align:middle line:84%
+corresponding to this series
+of non-negative real numbers
+
+01:07:50.870 --> 01:07:51.740 align:middle line:90%
+are bounded.
+
+01:07:51.740 --> 01:07:54.040 align:middle line:84%
+And therefore, that
+series converges.
+
+01:07:54.040 --> 01:07:58.640 align:middle line:90%
+
+
+01:07:58.640 --> 01:08:06.660 align:middle line:84%
+So this sequence of partial sums
+of non-negative real numbers
+
+01:08:06.660 --> 01:08:19.730 align:middle line:84%
+is bounded, which implies
+that it converges,
+
+01:08:19.730 --> 01:08:30.979 align:middle line:90%
+which I'll write Tn v converges.
+
+01:08:30.979 --> 01:08:34.370 align:middle line:90%
+Now, think of T sub n of v as--
+
+01:08:34.370 --> 01:08:38.810 align:middle line:84%
+so T sub n of v, this is
+an element in W for each n.
+
+01:08:38.810 --> 01:08:51.660 align:middle line:84%
+So I've shown that the
+series T sub n of v,
+
+01:08:51.660 --> 01:09:01.460 align:middle line:84%
+this is absolutely summable
+in W. These are elements of W.
+
+01:09:01.460 --> 01:09:05.382 align:middle line:84%
+And their norms is an
+absolutely convergent series
+
+01:09:05.382 --> 01:09:06.049 align:middle line:90%
+of real numbers.
+
+01:09:06.049 --> 01:09:08.859 align:middle line:90%
+
+
+01:09:08.859 --> 01:09:13.910 align:middle line:84%
+Now, since W is a Banach space,
+every absolutely summable
+
+01:09:13.910 --> 01:09:24.739 align:middle line:84%
+series is summable,
+therefore summable.
+
+01:09:24.739 --> 01:09:27.260 align:middle line:90%
+
+
+01:09:27.260 --> 01:09:41.050 align:middle line:84%
+We therefore define a map
+from V to W via T sub v--
+
+01:09:41.050 --> 01:09:44.750 align:middle line:84%
+or T of v is defined
+to be the limit
+
+01:09:44.750 --> 01:09:49.340 align:middle line:84%
+as m goes to infinity
+sum from n equals 1 to m
+
+01:09:49.340 --> 01:09:53.760 align:middle line:84%
+of T sub n applied
+to V, which we've
+
+01:09:53.760 --> 01:10:00.640 align:middle line:84%
+shown for every v is a
+convergent series in W. That
+
+01:10:00.640 --> 01:10:02.560 align:middle line:84%
+was the point of everything
+that came before.
+
+01:10:02.560 --> 01:10:08.910 align:middle line:84%
+For each v, this is
+a summable series.
+
+01:10:08.910 --> 01:10:11.190 align:middle line:84%
+And we define its
+limit, which depends
+
+01:10:11.190 --> 01:10:21.760 align:middle line:84%
+on v, as this map T
+going from V to W.
+
+01:10:21.760 --> 01:10:23.510 align:middle line:84%
+So this is our candidate,
+which we'll show
+
+01:10:23.510 --> 01:10:25.520 align:middle line:90%
+is a bounded linear operator.
+
+01:10:25.520 --> 01:10:33.100 align:middle line:90%
+
+
+01:10:33.100 --> 01:10:34.330 align:middle line:90%
+So let's show it's linear.
+
+01:10:34.330 --> 01:10:40.130 align:middle line:90%
+
+
+01:10:40.130 --> 01:10:41.480 align:middle line:90%
+So T is linear.
+
+01:10:41.480 --> 01:10:42.710 align:middle line:90%
+Why?
+
+01:10:42.710 --> 01:10:50.690 align:middle line:84%
+For all lambda 1, lambda 2 in
+the space of scalars, RC, v1,
+
+01:10:50.690 --> 01:10:59.550 align:middle line:84%
+v2, in V, we have that T of
+lambda 1 v1 plus lambda 2 v2--
+
+01:10:59.550 --> 01:11:03.450 align:middle line:84%
+this is, by definition,
+equal to limit as m
+
+01:11:03.450 --> 01:11:10.100 align:middle line:84%
+goes to infinity of
+the sum T sub n lambda
+
+01:11:10.100 --> 01:11:13.760 align:middle line:90%
+1 v1 plus lambda 2 v2.
+
+01:11:13.760 --> 01:11:17.070 align:middle line:84%
+And now, each T sub n
+is a linear operator.
+
+01:11:17.070 --> 01:11:21.900 align:middle line:84%
+So I can write
+this as limit as m
+
+01:11:21.900 --> 01:11:38.585 align:middle line:84%
+goes to infinity of lambda 1 Tv
+sub 1 plus lambda 2 Tv sub 2.
+
+01:11:38.585 --> 01:11:44.170 align:middle line:90%
+
+
+01:11:44.170 --> 01:11:49.330 align:middle line:84%
+And now, this thing
+here converges to T of v
+
+01:11:49.330 --> 01:11:50.930 align:middle line:90%
+as m goes to infinity.
+
+01:11:50.930 --> 01:11:55.850 align:middle line:84%
+This thing here converges to
+T of v2 as m goes to infinity.
+
+01:11:55.850 --> 01:12:00.625 align:middle line:84%
+And therefore, the limit of the
+sum is the sum of the limits.
+
+01:12:00.625 --> 01:12:17.010 align:middle line:90%
+
+
+01:12:17.010 --> 01:12:21.090 align:middle line:84%
+So technically, I did not
+prove that in a norm space
+
+01:12:21.090 --> 01:12:24.930 align:middle line:84%
+if I have two sequences
+converging to v1 and v2,
+
+01:12:24.930 --> 01:12:30.420 align:middle line:84%
+then the sum of that sequence
+converges to v1 plus v2.
+
+01:12:30.420 --> 01:12:33.240 align:middle line:84%
+But it's the exact same
+proof as in R, all right?
+
+01:12:33.240 --> 01:12:36.045 align:middle line:84%
+Just replace the absolute
+values with norms.
+
+01:12:36.045 --> 01:12:39.190 align:middle line:90%
+
+
+01:12:39.190 --> 01:12:42.240 align:middle line:90%
+So this should be believable.
+
+01:12:42.240 --> 01:12:49.730 align:middle line:84%
+And therefore, T is
+a linear operator.
+
+01:12:49.730 --> 01:12:52.270 align:middle line:90%
+
+
+01:12:52.270 --> 01:12:58.105 align:middle line:84%
+Now, let's prove that it's
+a bounded linear operator.
+
+01:12:58.105 --> 01:13:02.350 align:middle line:84%
+OK, so now, we'll show that T
+is a bounded linear operator.
+
+01:13:02.350 --> 01:13:11.530 align:middle line:90%
+
+
+01:13:11.530 --> 01:13:17.520 align:middle line:90%
+Let v be in V norm equal to 1.
+
+01:13:17.520 --> 01:13:24.760 align:middle line:84%
+Then Tv, This is equal
+to the norm of the limit
+
+01:13:24.760 --> 01:13:37.380 align:middle line:84%
+as m goes to infinity
+of n equals 1 to m T
+
+01:13:37.380 --> 01:13:39.810 align:middle line:90%
+sub n of v norm.
+
+01:13:39.810 --> 01:13:45.460 align:middle line:84%
+And norms of limits
+equal to limit of norms,
+
+01:13:45.460 --> 01:13:52.210 align:middle line:84%
+just like in the case of R,
+so this is equal to limit as m
+
+01:13:52.210 --> 01:13:53.485 align:middle line:90%
+goes to infinity of--
+
+01:13:53.485 --> 01:13:59.970 align:middle line:90%
+
+
+01:13:59.970 --> 01:14:00.810 align:middle line:90%
+OK?
+
+01:14:00.810 --> 01:14:02.640 align:middle line:84%
+Now, this is less
+than or equal to--
+
+01:14:02.640 --> 01:14:10.450 align:middle line:90%
+
+
+01:14:10.450 --> 01:14:13.570 align:middle line:84%
+by the triangle inequality--
+the triangle inequality for two
+
+01:14:13.570 --> 01:14:17.980 align:middle line:84%
+things, this implies a triangle
+inequality for m things
+
+01:14:17.980 --> 01:14:37.270 align:middle line:84%
+by induction, which is less than
+or equal to the norm of T sub n
+
+01:14:37.270 --> 01:14:38.080 align:middle line:90%
+times--
+
+01:14:38.080 --> 01:14:39.910 align:middle line:84%
+I shouldn't even say
+v. It's just less
+
+01:14:39.910 --> 01:14:43.890 align:middle line:84%
+than or equal to
+the norm of T sub n.
+
+01:14:43.890 --> 01:14:50.100 align:middle line:84%
+And this is precisely
+equal to the sum
+
+01:14:50.100 --> 01:14:55.310 align:middle line:84%
+of the norms, which I called
+C, this constant C, which
+
+01:14:55.310 --> 01:14:56.600 align:middle line:90%
+we know is finite--
+
+01:14:56.600 --> 01:14:58.880 align:middle line:84%
+which we assumed
+is finite, right?
+
+01:14:58.880 --> 01:15:01.940 align:middle line:84%
+So we assumed it was an
+absolutely summable series
+
+01:15:01.940 --> 01:15:05.240 align:middle line:90%
+of bounded linear operators.
+
+01:15:05.240 --> 01:15:10.250 align:middle line:84%
+So therefore, I've
+got that Tv is
+
+01:15:10.250 --> 01:15:14.930 align:middle line:84%
+less than or equal to C for all
+unit length v. And therefore--
+
+01:15:14.930 --> 01:15:21.300 align:middle line:90%
+
+
+01:15:21.300 --> 01:15:27.130 align:middle line:84%
+which again, by
+scaling arguments,
+
+01:15:27.130 --> 01:15:32.420 align:middle line:84%
+this was for all v equals
+1, which implies by scaling
+
+01:15:32.420 --> 01:15:44.300 align:middle line:90%
+arguments T for all v.
+
+01:15:44.300 --> 01:15:46.910 align:middle line:84%
+I guess I didn't have
+to start with norm of v
+
+01:15:46.910 --> 01:15:50.570 align:middle line:84%
+equals 1 if that would have
+brought a norm of v here.
+
+01:15:50.570 --> 01:15:53.150 align:middle line:84%
+And then that would just be
+C times the norm of v instead
+
+01:15:53.150 --> 01:15:56.030 align:middle line:90%
+of doing this separate part.
+
+01:15:56.030 --> 01:15:57.920 align:middle line:90%
+So change that in your notes.
+
+01:15:57.920 --> 01:16:00.573 align:middle line:90%
+
+
+01:16:00.573 --> 01:16:01.990 align:middle line:84%
+But I'm up against
+the clock here,
+
+01:16:01.990 --> 01:16:04.750 align:middle line:84%
+so I'm not going to
+do this on the board.
+
+01:16:04.750 --> 01:16:07.870 align:middle line:84%
+OK, so T is an actual
+bounded linear operator.
+
+01:16:07.870 --> 01:16:14.760 align:middle line:90%
+
+
+01:16:14.760 --> 01:16:20.060 align:middle line:84%
+Now, let's show that the
+sum of these operators
+
+01:16:20.060 --> 01:16:24.530 align:middle line:84%
+converges to T in
+the operator norm.
+
+01:16:24.530 --> 01:16:29.885 align:middle line:90%
+So now, we claim that T equals--
+
+01:16:29.885 --> 01:16:39.630 align:middle line:90%
+
+
+01:16:39.630 --> 01:16:41.105 align:middle line:90%
+oh, that's awful.
+
+01:16:41.105 --> 01:16:48.920 align:middle line:90%
+
+
+01:16:48.920 --> 01:16:55.400 align:middle line:84%
+Tn converges to T as
+m goes to infinity
+
+01:16:55.400 --> 01:17:00.470 align:middle line:84%
+in the space of bounded
+linear operators,
+
+01:17:00.470 --> 01:17:06.830 align:middle line:84%
+meaning in the operator norm
+So I think, for this, this
+
+01:17:06.830 --> 01:17:09.390 align:middle line:84%
+is the reason why I
+maybe accidentally wrote
+
+01:17:09.390 --> 01:17:10.740 align:middle line:90%
+the norm of v equals 1 there.
+
+01:17:10.740 --> 01:17:18.100 align:middle line:84%
+So let v be in V with
+norm of v equals 1.
+
+01:17:18.100 --> 01:17:36.300 align:middle line:84%
+Then T of v minus T sum
+from n equals 1 to m
+
+01:17:36.300 --> 01:17:39.900 align:middle line:90%
+of T sub n of v in norm.
+
+01:17:39.900 --> 01:17:50.790 align:middle line:84%
+Now, T is equal to the whole
+sum n equals 1 to infinity.
+
+01:17:50.790 --> 01:17:56.630 align:middle line:84%
+So I'll write this as
+maybe limit m-prime
+
+01:17:56.630 --> 01:18:01.100 align:middle line:84%
+goes to infinity of
+sum from n equals 1
+
+01:18:01.100 --> 01:18:07.970 align:middle line:84%
+to m-prime Tn V minus
+sum from n equals
+
+01:18:07.970 --> 01:18:18.000 align:middle line:84%
+1 to m Tn v. And this equals
+the limit m-prime goes
+
+01:18:18.000 --> 01:18:27.190 align:middle line:84%
+to infinity of sum from n equals
+m plus 1 m-prime T sub n v
+
+01:18:27.190 --> 01:18:27.690 align:middle line:90%
+norm.
+
+01:18:27.690 --> 01:18:31.010 align:middle line:90%
+
+
+01:18:31.010 --> 01:18:35.480 align:middle line:84%
+And now, this is less than or
+equal to the limit as m-prime
+
+01:18:35.480 --> 01:18:37.160 align:middle line:90%
+goes to infinity of--
+
+01:18:37.160 --> 01:18:42.480 align:middle line:84%
+so the norm-- so this
+is, in fact, equal
+
+01:18:42.480 --> 01:18:44.250 align:middle line:90%
+to the limit of the norm.
+
+01:18:44.250 --> 01:18:45.840 align:middle line:84%
+And then I use the
+triangle inequality
+
+01:18:45.840 --> 01:18:47.730 align:middle line:90%
+to bring the norm inside.
+
+01:18:47.730 --> 01:18:53.040 align:middle line:84%
+This is less than or equal to
+sum equals m plus 1 m-prime T
+
+01:18:53.040 --> 01:18:59.980 align:middle line:84%
+sub n of v. And now, this is
+less than or equal to limit
+
+01:18:59.980 --> 01:19:05.660 align:middle line:84%
+m-prime goes to infinity
+of n equals m plus 1
+
+01:19:05.660 --> 01:19:10.670 align:middle line:84%
+to m-prime T sub n norm
+because v has unit length.
+
+01:19:10.670 --> 01:19:16.700 align:middle line:84%
+So T sub n applied to v in
+norm is bounded by the operator
+
+01:19:16.700 --> 01:19:17.900 align:middle line:90%
+norm of T sub n.
+
+01:19:17.900 --> 01:19:20.690 align:middle line:90%
+
+
+01:19:20.690 --> 01:19:26.240 align:middle line:84%
+And this equals the sum
+from n equals m plus 1
+
+01:19:26.240 --> 01:19:29.420 align:middle line:90%
+to infinity of T sub n.
+
+01:19:29.420 --> 01:19:33.890 align:middle line:84%
+Now, what we know-- so
+this is just a series
+
+01:19:33.890 --> 01:19:35.760 align:middle line:90%
+involving real numbers.
+
+01:19:35.760 --> 01:19:37.920 align:middle line:84%
+And we know if the
+series converges,
+
+01:19:37.920 --> 01:19:39.590 align:middle line:90%
+then the tails have to go to 0.
+
+01:19:39.590 --> 01:19:45.100 align:middle line:84%
+So this goes to 0 as m
+goes to infinity, right?
+
+01:19:45.100 --> 01:19:49.100 align:middle line:84%
+Or I shouldn't do
+that step just yet.
+
+01:19:49.100 --> 01:19:50.290 align:middle line:90%
+Sorry, I'm making mistakes.
+
+01:19:50.290 --> 01:19:52.290 align:middle line:84%
+I'm up against the clock
+that I see in the back.
+
+01:19:52.290 --> 01:19:54.770 align:middle line:84%
+So I started off
+with this quantity
+
+01:19:54.770 --> 01:19:59.510 align:middle line:84%
+here and ended up bounding it
+by this thing uniformly in V. So
+
+01:19:59.510 --> 01:20:04.880 align:middle line:84%
+that implies that the operator
+norm of T minus sum from n
+
+01:20:04.880 --> 01:20:07.970 align:middle line:84%
+equals 1 to m of T
+sub n is less than
+
+01:20:07.970 --> 01:20:13.360 align:middle line:84%
+or equal to the
+sum from n equals
+
+01:20:13.360 --> 01:20:17.470 align:middle line:84%
+m plus 1 operator
+norm of T sub n.
+
+01:20:17.470 --> 01:20:21.730 align:middle line:84%
+And this last thing
+goes to 0 as m
+
+01:20:21.730 --> 01:20:27.340 align:middle line:84%
+goes to infinity because it's
+the tail of a convergent series
+
+01:20:27.340 --> 01:20:29.560 align:middle line:90%
+of non-negative terms.
+
+01:20:29.560 --> 01:20:35.590 align:middle line:84%
+And therefore, the operator
+norm of T minus this partial sum
+
+01:20:35.590 --> 01:20:50.310 align:middle line:84%
+goes to 0 as m goes to infinity,
+and therefore converges to T.
+
+01:20:50.310 --> 01:20:53.280 align:middle line:84%
+So you see, I mean, it
+had the same basic format
+
+01:20:53.280 --> 01:20:55.155 align:middle line:90%
+that the last argument did.
+
+01:20:55.155 --> 01:21:00.635 align:middle line:90%
+
+
+01:21:00.635 --> 01:21:02.510 align:middle line:90%
+You found a candidate.
+
+01:21:02.510 --> 01:21:04.250 align:middle line:90%
+You showed it's in the space.
+
+01:21:04.250 --> 01:21:08.160 align:middle line:84%
+And then you showed
+convergence of the space.
+
+01:21:08.160 --> 01:21:10.190 align:middle line:84%
+So let me finish
+with a definition.
+
+01:21:10.190 --> 01:21:13.690 align:middle line:90%
+
+
+01:21:13.690 --> 01:21:21.480 align:middle line:84%
+If V is a norm
+space, then we denote
+
+01:21:21.480 --> 01:21:27.420 align:middle line:84%
+v-prime as the space of
+bounded linear operators from V
+
+01:21:27.420 --> 01:21:30.910 align:middle line:90%
+to the space of scalars.
+
+01:21:30.910 --> 01:21:41.440 align:middle line:84%
+This is referred to as
+the dual space of V.
+
+01:21:41.440 --> 01:21:45.460 align:middle line:84%
+And since the space of scholars
+is always R or C, both of which
+
+01:21:45.460 --> 01:21:46.592 align:middle line:90%
+are complete--
+
+01:21:46.592 --> 01:21:48.925 align:middle line:84%
+I mean, they're the simplest
+examples of Banach spaces--
+
+01:21:48.925 --> 01:21:56.300 align:middle line:90%
+
+
+01:21:56.300 --> 01:21:59.840 align:middle line:84%
+by the theorem we just proved,
+since the field of scalars
+
+01:21:59.840 --> 01:22:07.020 align:middle line:84%
+is always complete, the dual
+space is always a Banach space.
+
+01:22:07.020 --> 01:22:10.760 align:middle line:90%
+
+
+01:22:10.760 --> 01:22:12.720 align:middle line:84%
+And let me just write
+here a simple example,
+
+01:22:12.720 --> 01:22:18.360 align:middle line:84%
+which will be in the
+exercises, that, in a sense,
+
+01:22:18.360 --> 01:22:24.590 align:middle line:84%
+for all p between 1 and
+strictly less than infinity,
+
+01:22:24.590 --> 01:22:31.630 align:middle line:84%
+I can identify the dual space
+of little lp as little lp-prime,
+
+01:22:31.630 --> 01:22:32.830 align:middle line:90%
+where p-prime--
+
+01:22:32.830 --> 01:22:39.910 align:middle line:84%
+this is now just a
+number bigger than 1,
+
+01:22:39.910 --> 01:22:47.300 align:middle line:84%
+where p-prime and p
+satisfy this relation.
+
+01:22:47.300 --> 01:22:57.310 align:middle line:84%
+So in particular, the
+dual of l1 is l infinity.
+
+01:22:57.310 --> 01:23:00.790 align:middle line:90%
+The dual of l2 is l2.
+
+01:23:00.790 --> 01:23:02.080 align:middle line:90%
+This is very special about l2.
+
+01:23:02.080 --> 01:23:05.270 align:middle line:90%
+
+
+01:23:05.270 --> 01:23:11.710 align:middle line:84%
+But if I take the dual of l
+infinity, p equals infinity.
+
+01:23:11.710 --> 01:23:13.390 align:middle line:90%
+I would get p-prime equals 1.
+
+01:23:13.390 --> 01:23:15.910 align:middle line:84%
+This, in fact, does
+not equal little l1.
+
+01:23:15.910 --> 01:23:19.780 align:middle line:84%
+This is something of a
+headache that manifests itself
+
+01:23:19.780 --> 01:23:23.620 align:middle line:90%
+for the big Lp spaces as well.
+
+01:23:23.620 --> 01:23:27.850 align:middle line:84%
+And life would be a
+lot easier if this
+
+01:23:27.850 --> 01:23:33.880 align:middle line:84%
+were the case, that the
+dual of l infinity was l1.
+
+01:23:33.880 --> 01:23:35.380 align:middle line:90%
+But unfortunately, it's not.
+
+01:23:35.380 --> 01:23:38.700 align:middle line:90%
+And that causes a headache.
+
+01:23:38.700 --> 01:23:41.900 align:middle line:84%
+And l2, little l2,
+this is the only lp
+
+01:23:41.900 --> 01:23:48.520 align:middle line:84%
+that has this property, that
+its dual is given by little l2.
+
+01:23:48.520 --> 01:23:51.730 align:middle line:84%
+All right, and in
+the exercises, I'll
+
+01:23:51.730 --> 01:23:54.400 align:middle line:84%
+discuss precisely
+in what way you
+
+01:23:54.400 --> 01:24:01.030 align:middle line:84%
+can identify the duel with this
+little lp-prime in this way.
+
+01:24:01.030 --> 01:24:03.330 align:middle line:90%
+All right, we'll stop there.
+
+01:24:03.330 --> 01:24:11.000 align:middle line:90%
