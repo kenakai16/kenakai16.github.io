@@ -426,7 +426,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-lp">Linear Programming (LP)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrative-examples">Illustrative Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-convex-optimization-least-squares-linear-regression">Example 1: Convex Optimization — Least Squares (Linear Regression)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-non-convex-optimization-deep-neural-network-training">Example 2: Non-Convex Optimization — Deep Neural Network Training</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -502,6 +509,27 @@ document.write(`
 </tbody>
 </table>
 </div>
+<section id="illustrative-examples">
+<h3>Illustrative Examples<a class="headerlink" href="#illustrative-examples" title="Permalink to this heading">#</a></h3>
+<section id="example-1-convex-optimization-least-squares-linear-regression">
+<h4>Example 1: Convex Optimization — Least Squares (Linear Regression)<a class="headerlink" href="#example-1-convex-optimization-least-squares-linear-regression" title="Permalink to this heading">#</a></h4>
+<p>In linear regression, we seek a weight vector <span class="math notranslate nohighlight">\(w\)</span> that minimizes the sum of squared differences between predictions and target labels:</p>
+<div class="math notranslate nohighlight">
+\[ \text{minimize} \quad f(w) = \|Xw - y\|_2^2 \]</div>
+<ul class="simple">
+<li><p><strong>Analysis</strong>: The Hessian matrix <span class="math notranslate nohighlight">\(\nabla^2 f(w) = 2X^T X\)</span> is positive semi-definite, which mathematically guarantees that <span class="math notranslate nohighlight">\(f(w)\)</span> is a convex function. Geometrically, the loss surface is a single bowl-shaped valley. Any local minimum found by gradient descent is guaranteed to be the unique global minimum, making this problem highly stable and solvable in polynomial time.</p></li>
+</ul>
+</section>
+<section id="example-2-non-convex-optimization-deep-neural-network-training">
+<h4>Example 2: Non-Convex Optimization — Deep Neural Network Training<a class="headerlink" href="#example-2-non-convex-optimization-deep-neural-network-training" title="Permalink to this heading">#</a></h4>
+<p>When training a neural network, the objective is to optimize the weights <span class="math notranslate nohighlight">\(\theta\)</span> of a multi-layer network:</p>
+<div class="math notranslate nohighlight">
+\[ \text{minimize} \quad \mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^N \text{Loss}(f(x_i; \theta), y_i) \]</div>
+<ul class="simple">
+<li><p><strong>Analysis</strong>: Because the network function <span class="math notranslate nohighlight">\(f(x_i; \theta)\)</span> consists of nested non-linear activation functions (like ReLU or Sigmoid) multiplied by weight matrices, the resulting loss surface <span class="math notranslate nohighlight">\(\mathcal{L}(\theta)\)</span> is highly non-convex. It features a landscape filled with countless local minima, saddle points, and plateaus. Algorithms like Stochastic Gradient Descent (SGD) can easily get trapped in sub-optimal local basins or spend long periods escaping saddle points, meaning there is no guarantee of finding the global minimum.</p></li>
+</ul>
+</section>
+</section>
 </section>
 <hr class="docutils" />
 <section id="exercises">
@@ -592,7 +620,14 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-programming-lp">Linear Programming (LP)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-vs-non-linear-optimization">2. Convex vs. Non-linear Optimization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustrative-examples">Illustrative Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-convex-optimization-least-squares-linear-regression">Example 1: Convex Optimization — Least Squares (Linear Regression)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-non-convex-optimization-deep-neural-network-training">Example 2: Non-Convex Optimization — Deep Neural Network Training</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>

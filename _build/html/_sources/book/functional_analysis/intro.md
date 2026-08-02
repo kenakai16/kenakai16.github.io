@@ -4,7 +4,7 @@ Functional Analysis generalizes linear algebra to infinite-dimensional spaces, w
 
 This module is organized as a unified 10-lecture course:
 
-### Module Curriculum
+## Module Curriculum
 
 1. **{doc}`Basic Banach Space Theory <basic_banach_spaces>`**
    Introduces normed spaces, convergence, Cauchy sequences, completeness, and Banach spaces.

@@ -1,10 +1,8 @@
 # Geometric and Statistical Optimization
 
-This page covers applications of convex optimization in geometric problems and statistical estimation based on Chapters 7 and 8 of Stephen Boyd's *Convex Optimization*.
-
 ---
 
-## 1. Statistical Estimation (Chapter 7)
+## 1. Statistical Estimation
 
 Many foundational statistical estimation problems can be formulated directly as convex optimization problems, allowing them to be solved efficiently and with guaranteed global optimality.
 
@@ -27,7 +25,7 @@ This is a classic Least-Squares optimization problem, which is a convex QP and c
 
 ---
 
-## 2. Geometrical Problems (Chapter 8)
+## 2. Geometrical Problems
 
 Convex optimization provides elegant tools to solve geometric problems involving distances, projections, and bounding volumes.
 

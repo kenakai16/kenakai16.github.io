@@ -47,6 +47,22 @@ The boundary in optimization is not between linearity and non-linearity, but bet
 | **Minima** | Any local minimum is a **global minimum**. | Many local minima and saddle points exist. |
 | **Solvability** | Can be solved efficiently, reliably, and globally. | Hard to solve; algorithms often get stuck in local minima. |
 
+### Illustrative Examples
+
+#### Example 1: Convex Optimization — Least Squares (Linear Regression)
+In linear regression, we seek a weight vector $w$ that minimizes the sum of squared differences between predictions and target labels:
+
+$$ \text{minimize} \quad f(w) = \|Xw - y\|_2^2 $$
+
+*   **Analysis**: The Hessian matrix $\nabla^2 f(w) = 2X^T X$ is positive semi-definite, which mathematically guarantees that $f(w)$ is a convex function. Geometrically, the loss surface is a single bowl-shaped valley. Any local minimum found by gradient descent is guaranteed to be the unique global minimum, making this problem highly stable and solvable in polynomial time.
+
+#### Example 2: Non-Convex Optimization — Deep Neural Network Training
+When training a neural network, the objective is to optimize the weights $\theta$ of a multi-layer network:
+
+$$ \text{minimize} \quad \mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^N \text{Loss}(f(x_i; \theta), y_i) $$
+
+*   **Analysis**: Because the network function $f(x_i; \theta)$ consists of nested non-linear activation functions (like ReLU or Sigmoid) multiplied by weight matrices, the resulting loss surface $\mathcal{L}(\theta)$ is highly non-convex. It features a landscape filled with countless local minima, saddle points, and plateaus. Algorithms like Stochastic Gradient Descent (SGD) can easily get trapped in sub-optimal local basins or spend long periods escaping saddle points, meaning there is no guarantee of finding the global minimum.
+
 ---
 
 ## Exercises

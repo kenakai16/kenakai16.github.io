@@ -1,10 +1,8 @@
 # Convex Optimization Problems
 
-This page covers the mathematical formulation and classification of optimization problems based on Chapter 4 of Stephen Boyd's *Convex Optimization*.
-
 ---
 
-## 1. General Optimization Problems (4.1)
+## 1. General Optimization Problems
 
 A general mathematical optimization problem has the form:
 
@@ -26,7 +24,7 @@ $$p^* = \inf \{ f_0(x) \mid f_i(x) \leq 0, \, i=1,\dots,m, \, h_i(x)=0, \, i=1,\
 
 ---
 
-## 2. Convex Optimization Problems (4.2)
+## 2. Convex Optimization Problems
 
 A **convex optimization problem** is one of the form:
 
@@ -46,7 +44,7 @@ For a convex optimization problem, any local optimal point is also globally opti
 
 ---
 
-## 3. Linear Optimization Problems - LP (4.3)
+## 3. Linear Optimization Problems (LP)
 
 When both the objective and constraint functions are affine, the problem is called a **Linear Program (LP)**:
 
@@ -60,7 +58,7 @@ LPs are widely used in operations research, logistics, and resource allocation.
 
 ---
 
-## 4. Quadratic Optimization Problems - QP & QCQP (4.4)
+## 4. Quadratic Optimization Problems (QP & QCQP)
 
 A **Quadratic Program (QP)** has a convex quadratic objective and affine constraints:
 
@@ -127,7 +125,7 @@ SDPs generalize LPs and SOCPs. They are foundational in control theory (Lyapunov
 
 ---
 
-## 7. Geometric Programming - GP (4.5)
+## 7. Geometric Programming (GP)
 
 A **Geometric Program (GP)** is an optimization problem involving objective and constraint functions that are posynomials.
 
@@ -165,7 +163,7 @@ Since $\tilde{f}_i$ are log-sum-exp functions (which are convex), the transforme
 
 ---
 
-## 8. Vector Optimization (4.7)
+## 8. Vector Optimization
 
 In many practical situations, we want to optimize multiple objectives simultaneously (multicriterion optimization):
 

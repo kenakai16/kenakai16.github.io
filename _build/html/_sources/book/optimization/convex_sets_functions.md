@@ -1,10 +1,8 @@
 # Convex Sets & Functions
 
-This page covers the mathematical definition and geometric properties of convex sets and convex functions, based on Chapters 2 and 3 of Stephen Boyd's *Convex Optimization*.
-
 ---
 
-## Part I: Convex Sets
+## Convex Sets
 
 A set $C \subseteq \mathbb{R}^n$ is **convex** if the line segment between any two points in $C$ lies entirely in $C$. That is, for any $x_1, x_2 \in C$ and $0 \leq \theta \leq 1$:
 
@@ -12,13 +10,13 @@ $$\theta x_1 + (1-\theta)x_2 \in C$$
 
 ---
 
-## Part II: Convex Functions (Chapter 3)
+## Convex Functions
 
 A function $f: \mathbb{R}^n \to \mathbb{R}$ is **convex** if its domain $\text{dom } f$ is a convex set and for all $x, y \in \text{dom } f$, $0 \leq \theta \leq 1$:
 
 $$f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y)$$
 
-### 1. Basic Properties and Examples (3.1)
+### 1. Basic Properties and Examples
 
 #### First-order Condition for Convexity
 A differentiable function $f$ is convex if and only if $\text{dom } f$ is convex and:
@@ -40,7 +38,7 @@ $$\nabla^2 f(x) \succeq 0 \quad \text{for all } x \in \text{dom } f$$
 
 ---
 
-### 2. Operations that Preserve Convexity (3.2)
+### 2. Operations that Preserve Convexity
 
 - **Nonnegative weighted sum**: $f = w_1 f_1 + w_2 f_2$ is convex if $f_1, f_2$ are convex and $w_1, w_2 \geq 0$.
 - **Composition with affine mapping**: $g(x) = f(Ax + b)$ is convex if $f$ is convex.
@@ -49,7 +47,7 @@ $$\nabla^2 f(x) \succeq 0 \quad \text{for all } x \in \text{dom } f$$
 
 ---
 
-### 3. The Conjugate Function (3.3)
+### 3. The Conjugate Function
 
 Let $f: \mathbb{R}^n \to \mathbb{R}$. The **conjugate function** $f^*: \mathbb{R}^n \to \mathbb{R}$ (also known as the Fenchel conjugate) is defined as:
 
@@ -64,7 +62,7 @@ $$f^*(y) = \frac{1}{2} y^T Q^{-1} y$$
 
 ---
 
-### 4. Quasiconvex Functions (3.4)
+### 4. Quasiconvex Functions
 
 A function $f: \mathbb{R}^n \to \mathbb{R}$ is **quasiconvex** (or unimodal) if its domain and all its **sublevel sets** are convex:
 
@@ -95,7 +93,7 @@ is not (it is not unimodal and has multiple local extrema on $\mathbb{R}$).
 
 ---
 
-### 5. Log-Concave and Log-Convex Functions (3.5)
+### 5. Log-Concave and Log-Convex Functions
 
 A function $f: \mathbb{R}^n \to \mathbb{R}$ is **log-concave** if $f(x) > 0$ for all $x \in \text{dom } f$ and the logarithm $\ln f(x)$ is a concave function:
 
@@ -141,7 +139,7 @@ $$f(x) \nabla^2 f(x) \preceq \nabla f(x) \nabla f(x)^T \quad \text{for all } x \
 
 ---
 
-### 6. Convexity with Respect to Generalized Inequalities (3.6)
+### 6. Convexity with Respect to Generalized Inequalities
 
 Let $K \subseteq \mathbb{R}^m$ be a proper cone.
 - A function $f: \mathbb{R}^n \to \mathbb{R}^m$ is **$K$-convex** if for all $x, y \in \text{dom } f$ and $0 \leq \theta \leq 1$:

@@ -4648,6 +4648,27 @@ Start at <span class="math notranslate nohighlight">\(X_0 = 0\)</span>. At each 
 </tbody>
 </table>
 </div>
+<section id="illustrative-examples">
+<h4>Illustrative Examples<a class="headerlink" href="#illustrative-examples" title="Permalink to this heading">#</a></h4>
+<section id="example-1-convex-optimization-least-squares-linear-regression">
+<h5>Example 1: Convex Optimization — Least Squares (Linear Regression)<a class="headerlink" href="#example-1-convex-optimization-least-squares-linear-regression" title="Permalink to this heading">#</a></h5>
+<p>In linear regression, we seek a weight vector <span class="math notranslate nohighlight">\(w\)</span> that minimizes the sum of squared differences between predictions and target labels:</p>
+<div class="math notranslate nohighlight">
+\[ \text{minimize} \quad f(w) = \|Xw - y\|_2^2 \]</div>
+<ul class="simple">
+<li><p><strong>Analysis</strong>: The Hessian matrix <span class="math notranslate nohighlight">\(\nabla^2 f(w) = 2X^T X\)</span> is positive semi-definite, which mathematically guarantees that <span class="math notranslate nohighlight">\(f(w)\)</span> is a convex function. Geometrically, the loss surface is a single bowl-shaped valley. Any local minimum found by gradient descent is guaranteed to be the unique global minimum, making this problem highly stable and solvable in polynomial time.</p></li>
+</ul>
+</section>
+<section id="example-2-non-convex-optimization-deep-neural-network-training">
+<h5>Example 2: Non-Convex Optimization — Deep Neural Network Training<a class="headerlink" href="#example-2-non-convex-optimization-deep-neural-network-training" title="Permalink to this heading">#</a></h5>
+<p>When training a neural network, the objective is to optimize the weights <span class="math notranslate nohighlight">\(\theta\)</span> of a multi-layer network:</p>
+<div class="math notranslate nohighlight">
+\[ \text{minimize} \quad \mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^N \text{Loss}(f(x_i; \theta), y_i) \]</div>
+<ul class="simple">
+<li><p><strong>Analysis</strong>: Because the network function <span class="math notranslate nohighlight">\(f(x_i; \theta)\)</span> consists of nested non-linear activation functions (like ReLU or Sigmoid) multiplied by weight matrices, the resulting loss surface <span class="math notranslate nohighlight">\(\mathcal{L}(\theta)\)</span> is highly non-convex. It features a landscape filled with countless local minima, saddle points, and plateaus. Algorithms like Stochastic Gradient Descent (SGD) can easily get trapped in sub-optimal local basins or spend long periods escaping saddle points, meaning there is no guarantee of finding the global minimum.</p></li>
+</ul>
+</section>
+</section>
 </section>
 <hr class="docutils" />
 <section id="exercises">
@@ -4670,22 +4691,21 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </section>
 <span id="document-book/optimization/convex_sets_functions"></span><section class="tex2jax_ignore mathjax_ignore" id="convex-sets-functions">
 <h2>Convex Sets &amp; Functions<a class="headerlink" href="#convex-sets-functions" title="Permalink to this heading">#</a></h2>
-<p>This page covers the mathematical definition and geometric properties of convex sets and convex functions, based on Chapters 2 and 3 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="part-i-convex-sets">
-<h3>Part I: Convex Sets<a class="headerlink" href="#part-i-convex-sets" title="Permalink to this heading">#</a></h3>
+<section id="convex-sets">
+<h3>Convex Sets<a class="headerlink" href="#convex-sets" title="Permalink to this heading">#</a></h3>
 <p>A set <span class="math notranslate nohighlight">\(C \subseteq \mathbb{R}^n\)</span> is <strong>convex</strong> if the line segment between any two points in <span class="math notranslate nohighlight">\(C\)</span> lies entirely in <span class="math notranslate nohighlight">\(C\)</span>. That is, for any <span class="math notranslate nohighlight">\(x_1, x_2 \in C\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\theta x_1 + (1-\theta)x_2 \in C\]</div>
 </section>
 <hr class="docutils" />
-<section id="part-ii-convex-functions-chapter-3">
-<h3>Part II: Convex Functions (Chapter 3)<a class="headerlink" href="#part-ii-convex-functions-chapter-3" title="Permalink to this heading">#</a></h3>
+<section id="convex-functions">
+<h3>Convex Functions<a class="headerlink" href="#convex-functions" title="Permalink to this heading">#</a></h3>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>convex</strong> if its domain <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is a convex set and for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span>, <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y)\]</div>
-<section id="basic-properties-and-examples-3-1">
-<h4>1. Basic Properties and Examples (3.1)<a class="headerlink" href="#basic-properties-and-examples-3-1" title="Permalink to this heading">#</a></h4>
+<section id="basic-properties-and-examples">
+<h4>1. Basic Properties and Examples<a class="headerlink" href="#basic-properties-and-examples" title="Permalink to this heading">#</a></h4>
 <section id="first-order-condition-for-convexity">
 <h5>First-order Condition for Convexity<a class="headerlink" href="#first-order-condition-for-convexity" title="Permalink to this heading">#</a></h5>
 <p>A differentiable function <span class="math notranslate nohighlight">\(f\)</span> is convex if and only if <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is convex and:</p>
@@ -4710,8 +4730,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="operations-that-preserve-convexity-3-2">
-<h4>2. Operations that Preserve Convexity (3.2)<a class="headerlink" href="#operations-that-preserve-convexity-3-2" title="Permalink to this heading">#</a></h4>
+<section id="operations-that-preserve-convexity">
+<h4>2. Operations that Preserve Convexity<a class="headerlink" href="#operations-that-preserve-convexity" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Nonnegative weighted sum</strong>: <span class="math notranslate nohighlight">\(f = w_1 f_1 + w_2 f_2\)</span> is convex if <span class="math notranslate nohighlight">\(f_1, f_2\)</span> are convex and <span class="math notranslate nohighlight">\(w_1, w_2 \geq 0\)</span>.</p></li>
 <li><p><strong>Composition with affine mapping</strong>: <span class="math notranslate nohighlight">\(g(x) = f(Ax + b)\)</span> is convex if <span class="math notranslate nohighlight">\(f\)</span> is convex.</p></li>
@@ -4720,8 +4740,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="the-conjugate-function-3-3">
-<h4>3. The Conjugate Function (3.3)<a class="headerlink" href="#the-conjugate-function-3-3" title="Permalink to this heading">#</a></h4>
+<section id="the-conjugate-function">
+<h4>3. The Conjugate Function<a class="headerlink" href="#the-conjugate-function" title="Permalink to this heading">#</a></h4>
 <p>Let <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span>. The <strong>conjugate function</strong> <span class="math notranslate nohighlight">\(f^*: \mathbb{R}^n \to \mathbb{R}\)</span> (also known as the Fenchel conjugate) is defined as:</p>
 <div class="math notranslate nohighlight">
 \[f^*(y) = \sup_{x \in \text{dom } f} (y^T x - f(x))\]</div>
@@ -4734,8 +4754,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="quasiconvex-functions-3-4">
-<h4>4. Quasiconvex Functions (3.4)<a class="headerlink" href="#quasiconvex-functions-3-4" title="Permalink to this heading">#</a></h4>
+<section id="quasiconvex-functions">
+<h4>4. Quasiconvex Functions<a class="headerlink" href="#quasiconvex-functions" title="Permalink to this heading">#</a></h4>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>quasiconvex</strong> (or unimodal) if its domain and all its <strong>sublevel sets</strong> are convex:</p>
 <div class="math notranslate nohighlight">
 \[S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}\]</div>
@@ -4764,8 +4784,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="log-concave-and-log-convex-functions-3-5">
-<h4>5. Log-Concave and Log-Convex Functions (3.5)<a class="headerlink" href="#log-concave-and-log-convex-functions-3-5" title="Permalink to this heading">#</a></h4>
+<section id="log-concave-and-log-convex-functions">
+<h4>5. Log-Concave and Log-Convex Functions<a class="headerlink" href="#log-concave-and-log-convex-functions" title="Permalink to this heading">#</a></h4>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and the logarithm <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function:</p>
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \geq f(x)^\theta f(y)^{1-\theta} \quad \text{for } 0 \leq \theta \leq 1\]</div>
@@ -4822,8 +4842,8 @@ Therefore, this is a <strong>Least-Squares</strong> problem.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="convexity-with-respect-to-generalized-inequalities-3-6">
-<h4>6. Convexity with Respect to Generalized Inequalities (3.6)<a class="headerlink" href="#convexity-with-respect-to-generalized-inequalities-3-6" title="Permalink to this heading">#</a></h4>
+<section id="convexity-with-respect-to-generalized-inequalities">
+<h4>6. Convexity with Respect to Generalized Inequalities<a class="headerlink" href="#convexity-with-respect-to-generalized-inequalities" title="Permalink to this heading">#</a></h4>
 <p>Let <span class="math notranslate nohighlight">\(K \subseteq \mathbb{R}^m\)</span> be a proper cone.</p>
 <ul class="simple">
 <li><p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}^m\)</span> is <strong><span class="math notranslate nohighlight">\(K\)</span>-convex</strong> if for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p></li>
@@ -4872,10 +4892,9 @@ To find the supremum, take the derivative with respect to <span class="math notr
 </section>
 <span id="document-book/optimization/convex_problems"></span><section class="tex2jax_ignore mathjax_ignore" id="convex-optimization-problems">
 <h2>Convex Optimization Problems<a class="headerlink" href="#convex-optimization-problems" title="Permalink to this heading">#</a></h2>
-<p>This page covers the mathematical formulation and classification of optimization problems based on Chapter 4 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="general-optimization-problems-4-1">
-<h3>1. General Optimization Problems (4.1)<a class="headerlink" href="#general-optimization-problems-4-1" title="Permalink to this heading">#</a></h3>
+<section id="general-optimization-problems">
+<h3>1. General Optimization Problems<a class="headerlink" href="#general-optimization-problems" title="Permalink to this heading">#</a></h3>
 <p>A general mathematical optimization problem has the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -4895,8 +4914,8 @@ To find the supremum, take the derivative with respect to <span class="math notr
 \[p^* = \inf \{ f_0(x) \mid f_i(x) \leq 0, \, i=1,\dots,m, \, h_i(x)=0, \, i=1,\dots,p \}\]</div>
 </section>
 <hr class="docutils" />
-<section id="convex-optimization-problems-4-2">
-<h3>2. Convex Optimization Problems (4.2)<a class="headerlink" href="#convex-optimization-problems-4-2" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>2. Convex Optimization Problems<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>A <strong>convex optimization problem</strong> is one of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -4916,8 +4935,8 @@ To find the supremum, take the derivative with respect to <span class="math notr
 </section>
 </section>
 <hr class="docutils" />
-<section id="linear-optimization-problems-lp-4-3">
-<h3>3. Linear Optimization Problems - LP (4.3)<a class="headerlink" href="#linear-optimization-problems-lp-4-3" title="Permalink to this heading">#</a></h3>
+<section id="linear-optimization-problems-lp">
+<h3>3. Linear Optimization Problems (LP)<a class="headerlink" href="#linear-optimization-problems-lp" title="Permalink to this heading">#</a></h3>
 <p>When both the objective and constraint functions are affine, the problem is called a <strong>Linear Program (LP)</strong>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -4928,8 +4947,8 @@ To find the supremum, take the derivative with respect to <span class="math notr
 <p>LPs are widely used in operations research, logistics, and resource allocation.</p>
 </section>
 <hr class="docutils" />
-<section id="quadratic-optimization-problems-qp-qcqp-4-4">
-<h3>4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp-4-4" title="Permalink to this heading">#</a></h3>
+<section id="quadratic-optimization-problems-qp-qcqp">
+<h3>4. Quadratic Optimization Problems (QP &amp; QCQP)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp" title="Permalink to this heading">#</a></h3>
 <p>A <strong>Quadratic Program (QP)</strong> has a convex quadratic objective and affine constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -4989,8 +5008,8 @@ To find the supremum, take the derivative with respect to <span class="math notr
 </section>
 </section>
 <hr class="docutils" />
-<section id="geometric-programming-gp-4-5">
-<h3>7. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h3>
+<section id="geometric-programming-gp">
+<h3>7. Geometric Programming (GP)<a class="headerlink" href="#geometric-programming-gp" title="Permalink to this heading">#</a></h3>
 <p>A <strong>Geometric Program (GP)</strong> is an optimization problem involving objective and constraint functions that are posynomials.</p>
 <section id="monomials-and-posynomials">
 <h4>Monomials and Posynomials<a class="headerlink" href="#monomials-and-posynomials" title="Permalink to this heading">#</a></h4>
@@ -5030,8 +5049,8 @@ To find the supremum, take the derivative with respect to <span class="math notr
 </section>
 </section>
 <hr class="docutils" />
-<section id="vector-optimization-4-7">
-<h3>8. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h3>
+<section id="vector-optimization">
+<h3>8. Vector Optimization<a class="headerlink" href="#vector-optimization" title="Permalink to this heading">#</a></h3>
 <p>In many practical situations, we want to optimize multiple objectives simultaneously (multicriterion optimization):</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize (with respect to proper cone } K) \quad f_0(x) = (f_1(x), \dots, f_q(x))\]</div>
@@ -5446,10 +5465,9 @@ The problem is successfully formulated as a standard convex Quadratic Program (Q
 </section>
 <span id="document-book/optimization/interior_point"></span><section class="tex2jax_ignore mathjax_ignore" id="numerical-algorithms-interior-point-methods">
 <h2>Numerical Algorithms &amp; Interior-Point Methods<a class="headerlink" href="#numerical-algorithms-interior-point-methods" title="Permalink to this heading">#</a></h2>
-<p>This page covers numerical algorithms for solving constrained optimization problems based on Chapters 9, 10, and 11 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="newton-s-method-with-equality-constraints-chapter-10">
-<h3>1. Newton’s Method with Equality Constraints (Chapter 10)<a class="headerlink" href="#newton-s-method-with-equality-constraints-chapter-10" title="Permalink to this heading">#</a></h3>
+<section id="newton-s-method-with-equality-constraints">
+<h3>1. Newton’s Method with Equality Constraints<a class="headerlink" href="#newton-s-method-with-equality-constraints" title="Permalink to this heading">#</a></h3>
 <p>For unconstrained optimization, Newton’s method uses the second-order Taylor expansion to find the search direction. For problems with equality constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -5472,8 +5490,8 @@ The problem is successfully formulated as a standard convex Quadratic Program (Q
 </section>
 </section>
 <hr class="docutils" />
-<section id="the-barrier-method-chapter-11">
-<h3>2. The Barrier Method (Chapter 11)<a class="headerlink" href="#the-barrier-method-chapter-11" title="Permalink to this heading">#</a></h3>
+<section id="the-barrier-method">
+<h3>2. The Barrier Method<a class="headerlink" href="#the-barrier-method" title="Permalink to this heading">#</a></h3>
 <p>The <strong>Barrier Method</strong> (or path-following method) is an interior-point method used to solve convex optimization problems with inequality constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -5597,10 +5615,9 @@ Ax - b &amp;= 0
 </section>
 <span id="document-book/optimization/geometric_statistical"></span><section class="tex2jax_ignore mathjax_ignore" id="geometric-and-statistical-optimization">
 <h2>Geometric and Statistical Optimization<a class="headerlink" href="#geometric-and-statistical-optimization" title="Permalink to this heading">#</a></h2>
-<p>This page covers applications of convex optimization in geometric problems and statistical estimation based on Chapters 7 and 8 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="statistical-estimation-chapter-7">
-<h3>1. Statistical Estimation (Chapter 7)<a class="headerlink" href="#statistical-estimation-chapter-7" title="Permalink to this heading">#</a></h3>
+<section id="statistical-estimation">
+<h3>1. Statistical Estimation<a class="headerlink" href="#statistical-estimation" title="Permalink to this heading">#</a></h3>
 <p>Many foundational statistical estimation problems can be formulated directly as convex optimization problems, allowing them to be solved efficiently and with guaranteed global optimality.</p>
 <section id="maximum-likelihood-estimation-mle">
 <h4>Maximum Likelihood Estimation (MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h4>
@@ -5621,8 +5638,8 @@ Ax - b &amp;= 0
 </section>
 </section>
 <hr class="docutils" />
-<section id="geometrical-problems-chapter-8">
-<h3>2. Geometrical Problems (Chapter 8)<a class="headerlink" href="#geometrical-problems-chapter-8" title="Permalink to this heading">#</a></h3>
+<section id="geometrical-problems">
+<h3>2. Geometrical Problems<a class="headerlink" href="#geometrical-problems" title="Permalink to this heading">#</a></h3>
 <p>Convex optimization provides elegant tools to solve geometric problems involving distances, projections, and bounding volumes.</p>
 <section id="projection-on-a-convex-set">
 <h4>2.1 Projection on a Convex Set<a class="headerlink" href="#projection-on-a-convex-set" title="Permalink to this heading">#</a></h4>

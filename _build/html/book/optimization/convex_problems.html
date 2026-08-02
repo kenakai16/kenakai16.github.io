@@ -421,13 +421,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-optimization-problems-4-1">1. General Optimization Problems (4.1)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-optimization-problems-4-2">2. Convex Optimization Problems (4.2)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-optimization-problems">1. General Optimization Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Convex Optimization Problems</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-local-minima-are-global">Key Property: Local Minima are Global</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp-4-3">3. Linear Optimization Problems - LP (4.3)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp-4-4">4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp">3. Linear Optimization Problems (LP)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp">4. Quadratic Optimization Problems (QP &amp; QCQP)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratically-constrained-quadratic-program-qcqp">Quadratically Constrained Quadratic Program (QCQP)</a></li>
 </ul>
 </li>
@@ -439,13 +439,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-inequality-lmi">Linear Matrix Inequality (LMI)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">7. Geometric Programming - GP (4.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp">7. Geometric Programming (GP)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomials-and-posynomials">Monomials and Posynomials</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-geometric-program">Standard Geometric Program</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-transformation">Convex Transformation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">8. Vector Optimization (4.7)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization">8. Vector Optimization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
@@ -460,10 +460,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="convex-optimization-problems">
 <h1>Convex Optimization Problems<a class="headerlink" href="#convex-optimization-problems" title="Permalink to this heading">#</a></h1>
-<p>This page covers the mathematical formulation and classification of optimization problems based on Chapter 4 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="general-optimization-problems-4-1">
-<h2>1. General Optimization Problems (4.1)<a class="headerlink" href="#general-optimization-problems-4-1" title="Permalink to this heading">#</a></h2>
+<section id="general-optimization-problems">
+<h2>1. General Optimization Problems<a class="headerlink" href="#general-optimization-problems" title="Permalink to this heading">#</a></h2>
 <p>A general mathematical optimization problem has the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -483,8 +482,8 @@ document.write(`
 \[p^* = \inf \{ f_0(x) \mid f_i(x) \leq 0, \, i=1,\dots,m, \, h_i(x)=0, \, i=1,\dots,p \}\]</div>
 </section>
 <hr class="docutils" />
-<section id="convex-optimization-problems-4-2">
-<h2>2. Convex Optimization Problems (4.2)<a class="headerlink" href="#convex-optimization-problems-4-2" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h2>2. Convex Optimization Problems<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>A <strong>convex optimization problem</strong> is one of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -504,8 +503,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="linear-optimization-problems-lp-4-3">
-<h2>3. Linear Optimization Problems - LP (4.3)<a class="headerlink" href="#linear-optimization-problems-lp-4-3" title="Permalink to this heading">#</a></h2>
+<section id="linear-optimization-problems-lp">
+<h2>3. Linear Optimization Problems (LP)<a class="headerlink" href="#linear-optimization-problems-lp" title="Permalink to this heading">#</a></h2>
 <p>When both the objective and constraint functions are affine, the problem is called a <strong>Linear Program (LP)</strong>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -516,8 +515,8 @@ document.write(`
 <p>LPs are widely used in operations research, logistics, and resource allocation.</p>
 </section>
 <hr class="docutils" />
-<section id="quadratic-optimization-problems-qp-qcqp-4-4">
-<h2>4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp-4-4" title="Permalink to this heading">#</a></h2>
+<section id="quadratic-optimization-problems-qp-qcqp">
+<h2>4. Quadratic Optimization Problems (QP &amp; QCQP)<a class="headerlink" href="#quadratic-optimization-problems-qp-qcqp" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Quadratic Program (QP)</strong> has a convex quadratic objective and affine constraints:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -577,8 +576,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="geometric-programming-gp-4-5">
-<h2>7. Geometric Programming - GP (4.5)<a class="headerlink" href="#geometric-programming-gp-4-5" title="Permalink to this heading">#</a></h2>
+<section id="geometric-programming-gp">
+<h2>7. Geometric Programming (GP)<a class="headerlink" href="#geometric-programming-gp" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Geometric Program (GP)</strong> is an optimization problem involving objective and constraint functions that are posynomials.</p>
 <section id="monomials-and-posynomials">
 <h3>Monomials and Posynomials<a class="headerlink" href="#monomials-and-posynomials" title="Permalink to this heading">#</a></h3>
@@ -618,8 +617,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="vector-optimization-4-7">
-<h2>8. Vector Optimization (4.7)<a class="headerlink" href="#vector-optimization-4-7" title="Permalink to this heading">#</a></h2>
+<section id="vector-optimization">
+<h2>8. Vector Optimization<a class="headerlink" href="#vector-optimization" title="Permalink to this heading">#</a></h2>
 <p>In many practical situations, we want to optimize multiple objectives simultaneously (multicriterion optimization):</p>
 <div class="math notranslate nohighlight">
 \[\text{minimize (with respect to proper cone } K) \quad f_0(x) = (f_1(x), \dots, f_q(x))\]</div>
@@ -753,13 +752,13 @@ The problem is successfully formulated as a standard convex Quadratic Program (Q
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-optimization-problems-4-1">1. General Optimization Problems (4.1)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-optimization-problems-4-2">2. Convex Optimization Problems (4.2)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-optimization-problems">1. General Optimization Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Convex Optimization Problems</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-local-minima-are-global">Key Property: Local Minima are Global</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp-4-3">3. Linear Optimization Problems - LP (4.3)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp-4-4">4. Quadratic Optimization Problems - QP &amp; QCQP (4.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-optimization-problems-lp">3. Linear Optimization Problems (LP)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-optimization-problems-qp-qcqp">4. Quadratic Optimization Problems (QP &amp; QCQP)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratically-constrained-quadratic-program-qcqp">Quadratically Constrained Quadratic Program (QCQP)</a></li>
 </ul>
 </li>
@@ -771,13 +770,13 @@ The problem is successfully formulated as a standard convex Quadratic Program (Q
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-inequality-lmi">Linear Matrix Inequality (LMI)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp-4-5">7. Geometric Programming - GP (4.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-programming-gp">7. Geometric Programming (GP)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomials-and-posynomials">Monomials and Posynomials</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-geometric-program">Standard Geometric Program</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-transformation">Convex Transformation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization-4-7">8. Vector Optimization (4.7)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-optimization">8. Vector Optimization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>

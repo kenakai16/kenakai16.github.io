@@ -421,32 +421,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-convex-sets">Part I: Convex Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-convex-functions-chapter-3">Part II: Convex Functions (Chapter 3)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples-3-1">1. Basic Properties and Examples (3.1)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-sets">Convex Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-functions">Convex Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples">1. Basic Properties and Examples</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-convexity">First-order Condition for Convexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-convexity">Second-order Condition for Convexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important-examples">Important Examples:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity-3-2">2. Operations that Preserve Convexity (3.2)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function-3-3">3. The Conjugate Function (3.3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity">2. Operations that Preserve Convexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function">3. The Conjugate Function</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions">4. Quasiconvex Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-jensen-s-inequality">Modified Jensen’s Inequality</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-quasiconvexity">First-order Condition for Quasiconvexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-sums">Key Property: Sums</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions">5. Log-Concave and Log-Convex Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-log-concavity">Second-order Condition for Log-Concavity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Examples</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-integration">Properties and Integration</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities">6. Convexity with Respect to Generalized Inequalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-matrix-square">Example: Matrix Square</a></li>
 </ul>
 </li>
@@ -466,22 +466,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="convex-sets-functions">
 <h1>Convex Sets &amp; Functions<a class="headerlink" href="#convex-sets-functions" title="Permalink to this heading">#</a></h1>
-<p>This page covers the mathematical definition and geometric properties of convex sets and convex functions, based on Chapters 2 and 3 of Stephen Boyd’s <em>Convex Optimization</em>.</p>
 <hr class="docutils" />
-<section id="part-i-convex-sets">
-<h2>Part I: Convex Sets<a class="headerlink" href="#part-i-convex-sets" title="Permalink to this heading">#</a></h2>
+<section id="convex-sets">
+<h2>Convex Sets<a class="headerlink" href="#convex-sets" title="Permalink to this heading">#</a></h2>
 <p>A set <span class="math notranslate nohighlight">\(C \subseteq \mathbb{R}^n\)</span> is <strong>convex</strong> if the line segment between any two points in <span class="math notranslate nohighlight">\(C\)</span> lies entirely in <span class="math notranslate nohighlight">\(C\)</span>. That is, for any <span class="math notranslate nohighlight">\(x_1, x_2 \in C\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\theta x_1 + (1-\theta)x_2 \in C\]</div>
 </section>
 <hr class="docutils" />
-<section id="part-ii-convex-functions-chapter-3">
-<h2>Part II: Convex Functions (Chapter 3)<a class="headerlink" href="#part-ii-convex-functions-chapter-3" title="Permalink to this heading">#</a></h2>
+<section id="convex-functions">
+<h2>Convex Functions<a class="headerlink" href="#convex-functions" title="Permalink to this heading">#</a></h2>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>convex</strong> if its domain <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is a convex set and for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span>, <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \leq \theta f(x) + (1-\theta)f(y)\]</div>
-<section id="basic-properties-and-examples-3-1">
-<h3>1. Basic Properties and Examples (3.1)<a class="headerlink" href="#basic-properties-and-examples-3-1" title="Permalink to this heading">#</a></h3>
+<section id="basic-properties-and-examples">
+<h3>1. Basic Properties and Examples<a class="headerlink" href="#basic-properties-and-examples" title="Permalink to this heading">#</a></h3>
 <section id="first-order-condition-for-convexity">
 <h4>First-order Condition for Convexity<a class="headerlink" href="#first-order-condition-for-convexity" title="Permalink to this heading">#</a></h4>
 <p>A differentiable function <span class="math notranslate nohighlight">\(f\)</span> is convex if and only if <span class="math notranslate nohighlight">\(\text{dom } f\)</span> is convex and:</p>
@@ -506,8 +505,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="operations-that-preserve-convexity-3-2">
-<h3>2. Operations that Preserve Convexity (3.2)<a class="headerlink" href="#operations-that-preserve-convexity-3-2" title="Permalink to this heading">#</a></h3>
+<section id="operations-that-preserve-convexity">
+<h3>2. Operations that Preserve Convexity<a class="headerlink" href="#operations-that-preserve-convexity" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Nonnegative weighted sum</strong>: <span class="math notranslate nohighlight">\(f = w_1 f_1 + w_2 f_2\)</span> is convex if <span class="math notranslate nohighlight">\(f_1, f_2\)</span> are convex and <span class="math notranslate nohighlight">\(w_1, w_2 \geq 0\)</span>.</p></li>
 <li><p><strong>Composition with affine mapping</strong>: <span class="math notranslate nohighlight">\(g(x) = f(Ax + b)\)</span> is convex if <span class="math notranslate nohighlight">\(f\)</span> is convex.</p></li>
@@ -516,8 +515,8 @@ document.write(`
 </ul>
 </section>
 <hr class="docutils" />
-<section id="the-conjugate-function-3-3">
-<h3>3. The Conjugate Function (3.3)<a class="headerlink" href="#the-conjugate-function-3-3" title="Permalink to this heading">#</a></h3>
+<section id="the-conjugate-function">
+<h3>3. The Conjugate Function<a class="headerlink" href="#the-conjugate-function" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span>. The <strong>conjugate function</strong> <span class="math notranslate nohighlight">\(f^*: \mathbb{R}^n \to \mathbb{R}\)</span> (also known as the Fenchel conjugate) is defined as:</p>
 <div class="math notranslate nohighlight">
 \[f^*(y) = \sup_{x \in \text{dom } f} (y^T x - f(x))\]</div>
@@ -530,8 +529,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="quasiconvex-functions-3-4">
-<h3>4. Quasiconvex Functions (3.4)<a class="headerlink" href="#quasiconvex-functions-3-4" title="Permalink to this heading">#</a></h3>
+<section id="quasiconvex-functions">
+<h3>4. Quasiconvex Functions<a class="headerlink" href="#quasiconvex-functions" title="Permalink to this heading">#</a></h3>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>quasiconvex</strong> (or unimodal) if its domain and all its <strong>sublevel sets</strong> are convex:</p>
 <div class="math notranslate nohighlight">
 \[S_\alpha = \{x \in \text{dom } f \mid f(x) \leq \alpha\}\]</div>
@@ -560,8 +559,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="log-concave-and-log-convex-functions-3-5">
-<h3>5. Log-Concave and Log-Convex Functions (3.5)<a class="headerlink" href="#log-concave-and-log-convex-functions-3-5" title="Permalink to this heading">#</a></h3>
+<section id="log-concave-and-log-convex-functions">
+<h3>5. Log-Concave and Log-Convex Functions<a class="headerlink" href="#log-concave-and-log-convex-functions" title="Permalink to this heading">#</a></h3>
 <p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> is <strong>log-concave</strong> if <span class="math notranslate nohighlight">\(f(x) &gt; 0\)</span> for all <span class="math notranslate nohighlight">\(x \in \text{dom } f\)</span> and the logarithm <span class="math notranslate nohighlight">\(\ln f(x)\)</span> is a concave function:</p>
 <div class="math notranslate nohighlight">
 \[f(\theta x + (1-\theta)y) \geq f(x)^\theta f(y)^{1-\theta} \quad \text{for } 0 \leq \theta \leq 1\]</div>
@@ -618,8 +617,8 @@ document.write(`
 </section>
 </section>
 <hr class="docutils" />
-<section id="convexity-with-respect-to-generalized-inequalities-3-6">
-<h3>6. Convexity with Respect to Generalized Inequalities (3.6)<a class="headerlink" href="#convexity-with-respect-to-generalized-inequalities-3-6" title="Permalink to this heading">#</a></h3>
+<section id="convexity-with-respect-to-generalized-inequalities">
+<h3>6. Convexity with Respect to Generalized Inequalities<a class="headerlink" href="#convexity-with-respect-to-generalized-inequalities" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(K \subseteq \mathbb{R}^m\)</span> be a proper cone.</p>
 <ul class="simple">
 <li><p>A function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}^m\)</span> is <strong><span class="math notranslate nohighlight">\(K\)</span>-convex</strong> if for all <span class="math notranslate nohighlight">\(x, y \in \text{dom } f\)</span> and <span class="math notranslate nohighlight">\(0 \leq \theta \leq 1\)</span>:</p></li>
@@ -731,32 +730,32 @@ To find the supremum, take the derivative with respect to <span class="math notr
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-convex-sets">Part I: Convex Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-convex-functions-chapter-3">Part II: Convex Functions (Chapter 3)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples-3-1">1. Basic Properties and Examples (3.1)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-sets">Convex Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convex-functions">Convex Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-properties-and-examples">1. Basic Properties and Examples</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-convexity">First-order Condition for Convexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-convexity">Second-order Condition for Convexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#important-examples">Important Examples:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity-3-2">2. Operations that Preserve Convexity (3.2)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function-3-3">3. The Conjugate Function (3.3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-that-preserve-convexity">2. Operations that Preserve Convexity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-conjugate-function">3. The Conjugate Function</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions-3-4">4. Quasiconvex Functions (3.4)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quasiconvex-functions">4. Quasiconvex Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-jensen-s-inequality">Modified Jensen’s Inequality</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-condition-for-quasiconvexity">First-order Condition for Quasiconvexity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-property-sums">Key Property: Sums</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions-3-5">5. Log-Concave and Log-Convex Functions (3.5)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-concave-and-log-convex-functions">5. Log-Concave and Log-Convex Functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-condition-for-log-concavity">Second-order Condition for Log-Concavity</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Examples</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-integration">Properties and Integration</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities-3-6">6. Convexity with Respect to Generalized Inequalities (3.6)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convexity-with-respect-to-generalized-inequalities">6. Convexity with Respect to Generalized Inequalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-matrix-square">Example: Matrix Square</a></li>
 </ul>
 </li>

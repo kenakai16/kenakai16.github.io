@@ -1,10 +1,8 @@
 # Numerical Algorithms & Interior-Point Methods
 
-This page covers numerical algorithms for solving constrained optimization problems based on Chapters 9, 10, and 11 of Stephen Boyd's *Convex Optimization*.
-
 ---
 
-## 1. Newton's Method with Equality Constraints (Chapter 10)
+## 1. Newton's Method with Equality Constraints
 
 For unconstrained optimization, Newton's method uses the second-order Taylor expansion to find the search direction. For problems with equality constraints:
 
@@ -29,7 +27,7 @@ This KKT matrix is invertible if $\nabla^2 f(x)$ is positive definite on the nul
 
 ---
 
-## 2. The Barrier Method (Chapter 11)
+## 2. The Barrier Method
 
 The **Barrier Method** (or path-following method) is an interior-point method used to solve convex optimization problems with inequality constraints:
 
