@@ -6208,10 +6208,100 @@ $<span class="math notranslate nohighlight">\(\|F\|_{X^*} = \|f\|_{M^*}\)</span>
 <p>The <strong>Lebesgue integral</strong> of a non-negative simple function <span class="math notranslate nohighlight">\(\phi\)</span> over a measurable set <span class="math notranslate nohighlight">\(E\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[\int_{E} \phi \, d\mu = \sum_{i=1}^n c_i \mu(E_i \cap E)\]</div>
-<ul class="simple">
-<li><p><strong>Constructing the General Lebesgue Integral</strong>: For any non-negative measurable function <span class="math notranslate nohighlight">\(f\)</span>, its Lebesgue integral is defined as the supremum of the integrals of all simple functions bounded by <span class="math notranslate nohighlight">\(f\)</span>:
-$<span class="math notranslate nohighlight">\(\int_{E} f \, d\mu = \sup \left\{ \int_{E} \phi \, d\mu \mid 0 \le \phi \le f, \, \phi \text{ is simple} \right\}\)</span>$</p></li>
+<ul>
+<li><p><strong>Constructing the General Lebesgue Integral</strong>: For any non-negative measurable function <span class="math notranslate nohighlight">\(f\)</span>, its Lebesgue integral is defined as the supremum of the integrals of all simple functions bounded by <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\int_{E} f \, d\mu = \sup \left\{ \int_{E} \phi \, d\mu \mid 0 \le \phi \le f, \, \phi \text{ is simple} \right\}\]</div>
+</li>
 </ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="connection-to-machine-learning-deep-learning-ml-dl">
+<h3>Connection to Machine Learning &amp; Deep Learning (ML/DL)<a class="headerlink" href="#connection-to-machine-learning-deep-learning-ml-dl" title="Permalink to this heading">#</a></h3>
+<p>While you will rarely need to compute a Lebesgue integral by hand in practical Machine Learning or Deep Learning pipelines, the <strong>entire mathematical framework of ML/DL relies on this foundation</strong> to remain theoretically rigorous.</p>
+<p>Here is how Lebesgue Measure &amp; Integration underpins modern ML/DL:</p>
+<section id="probability-theory-probability-density-functions-pdfs">
+<h4>1. Probability Theory &amp; Probability Density Functions (PDFs)<a class="headerlink" href="#probability-theory-probability-density-functions-pdfs" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Probability as a Lebesgue Measure:</strong> A probability space <span class="math notranslate nohighlight">\((\Omega, \mathcal{F}, P)\)</span> is formally a measure space with <span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span>. The Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span> provides the rigorous foundation for defining “volume” or “area” in <span class="math notranslate nohighlight">\(d\)</span>-dimensional space <span class="math notranslate nohighlight">\(\mathbb{R}^d\)</span>.</p></li>
+<li><p><strong>Radon-Nikodym Theorem:</strong> When we state that <span class="math notranslate nohighlight">\(p(x)\)</span> is the probability density function (PDF) of a continuous random variable <span class="math notranslate nohighlight">\(X\)</span>, it formally means that the probability measure <span class="math notranslate nohighlight">\(P\)</span> is absolutely continuous with respect to the Lebesgue measure <span class="math notranslate nohighlight">\(\lambda\)</span>. The density <span class="math notranslate nohighlight">\(p = \frac{dP}{d\lambda}\)</span> is the <strong>Radon-Nikodym derivative</strong>.</p></li>
+<li><p><strong>Probability at a Single Point is Zero:</strong> Lebesgue theory explains why <span class="math notranslate nohighlight">\(P(X = x) = 0\)</span> for a continuous random variable (since a single point has a Lebesgue measure of 0), yet the union of these points can still accumulate to a total probability of 1.</p></li>
+</ul>
+</section>
+<section id="expectation-and-loss-functions">
+<h4>2. Expectation and Loss Functions<a class="headerlink" href="#expectation-and-loss-functions" title="Permalink to this heading">#</a></h4>
+<p>Every loss function in ML/DL (e.g., MSE, Cross-Entropy, or KL-Divergence) is an expectation:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}(\theta) = \mathbb{E}_{(x,y) \sim p_{data}} [\ell(f_\theta(x), y)] = \int_{\Omega} \ell(f_\theta(x), y) \, dP(x)\]</div>
+<p>This integral is formally a <strong>Lebesgue integral</strong>. Utilizing the Lebesgue integral allows us to:</p>
+<ul class="simple">
+<li><p>Unify the mathematical treatment of <strong>discrete</strong>, <strong>continuous</strong>, or <strong>mixed</strong> random variables under a single integral notation (which standard Riemann integration cannot do).</p></li>
+<li><p>Guarantee the existence and completeness of expectations in generalized representation spaces.</p></li>
+</ul>
+</section>
+<section id="interchanging-integrals-and-derivatives-lebesgue-dominated-convergence-theorem">
+<h4>3. Interchanging Integrals and Derivatives (Lebesgue Dominated Convergence Theorem)<a class="headerlink" href="#interchanging-integrals-and-derivatives-lebesgue-dominated-convergence-theorem" title="Permalink to this heading">#</a></h4>
+<p>When training neural networks using Gradient Descent, we compute the gradient of the loss function with respect to the network parameters <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla_\theta \mathbb{E}[L(x, \theta)] = \nabla_\theta \int L(x, \theta) \, dp(x) \stackrel{?}{=} \int \nabla_\theta L(x, \theta) \, dp(x)\]</div>
+<p>Pushing the gradient operator <span class="math notranslate nohighlight">\(\nabla_\theta\)</span> <strong>inside</strong> the integral <span class="math notranslate nohighlight">\(\int\)</span> is not always mathematically valid. The <strong>Lebesgue Dominated Convergence Theorem (DCT)</strong> provides the sufficient conditions to perform this interchange. This theorem serves as the theoretical backbone for:</p>
+<ul class="simple">
+<li><p>Backpropagation through expectation-based layers.</p></li>
+<li><p>The <strong>Reparameterization Trick</strong> in Variational Autoencoders (VAEs).</p></li>
+<li><p>Policy Gradient methods in Reinforcement Learning (such as the REINFORCE algorithm).</p></li>
+</ul>
+</section>
+<section id="l-p-function-spaces-and-regularization">
+<h4>4. <span class="math notranslate nohighlight">\(L^p\)</span> Function Spaces and Regularization<a class="headerlink" href="#l-p-function-spaces-and-regularization" title="Permalink to this heading">#</a></h4>
+<p>In ML, the function space <span class="math notranslate nohighlight">\(L^p(\Omega, \mu)\)</span>—defined via the Lebesgue integral—plays a central role:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(L^2\)</span> Space (Hilbert Space):</strong> Serves as the foundation for <strong>Kernel Methods</strong> (Support Vector Machines, Gaussian Processes) and <strong>Reproducing Kernel Hilbert Spaces (RKHS)</strong>.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(L^1\)</span> and <span class="math notranslate nohighlight">\(L^2\)</span> Regularization (Lasso &amp; Ridge):</strong> The size of a function <span class="math notranslate nohighlight">\(f\)</span> or parameter vector <span class="math notranslate nohighlight">\(w\)</span> is measured using <span class="math notranslate nohighlight">\(L^p\)</span> norms:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\Vert f \Vert_{L^p} = \left( \int |f(x)|^p \, d\mu(x) \right)^{1/p}\]</div>
+<ul class="simple">
+<li><p><strong>“Almost Everywhere” (a.e.) Differentiability:</strong> In Deep Learning, activation functions like <strong>ReLU</strong> (<span class="math notranslate nohighlight">\(f(x) = \max(0, x)\)</span>) are not differentiable at <span class="math notranslate nohighlight">\(x = 0\)</span>. However, since the point <span class="math notranslate nohighlight">\(x=0\)</span> has a Lebesgue measure of 0, ReLU is differentiable <em>almost everywhere</em> (a.e.). This explains why Stochastic Gradient Descent (SGD) works perfectly despite the lack of differentiability at isolated points.</p></li>
+</ul>
+</section>
+<section id="advanced-generative-models-gans-diffusion-optimal-transport">
+<h4>5. Advanced Generative Models (GANs, Diffusion, Optimal Transport)<a class="headerlink" href="#advanced-generative-models-gans-diffusion-optimal-transport" title="Permalink to this heading">#</a></h4>
+<p>Modern generative modeling heavily leverages Lebesgue measure theory:</p>
+<ul class="simple">
+<li><p><strong>Wasserstein GAN (WGAN):</strong> Uses the Earth Mover’s Distance (Wasserstein Distance) to measure the distance between two probability distributions. This distance is defined using Lebesgue integration and the theory of <strong>Optimal Transport</strong>.</p></li>
+<li><p><strong>Continuous-time Diffusion Models &amp; SDEs:</strong> Modern score-based diffusion models simulate data generation using Stochastic Differential Equations (SDEs), where stochastic integration (Itô/Stratonovich calculus) is built directly on Lebesgue-Stieltjes integration.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="summary-lebesgue-in-ml-dl">
+<h4>Summary: Lebesgue in ML/DL<a class="headerlink" href="#summary-lebesgue-in-ml-dl" title="Permalink to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Lebesgue Concept</p></th>
+<th class="head text-left"><p>Application in ML/DL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Lebesgue Measure / Integration</strong></p></td>
+<td class="text-left"><p>Defines PDFs and computes expectations <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Dominated Convergence Theorem (DCT)</strong></p></td>
+<td class="text-left"><p>Justifies interchanging <span class="math notranslate nohighlight">\(\nabla\)</span> and <span class="math notranslate nohighlight">\(\int\)</span> in Gradient Descent, VAEs, and RL</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Measure 0 / Almost Everywhere (a.e.)</strong></p></td>
+<td class="text-left"><p>Justifies differentiability of ReLU, Leaky ReLU, etc.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong><span class="math notranslate nohighlight">\(L^p\)</span> Spaces / RKHS</strong></p></td>
+<td class="text-left"><p>Kernel Methods, Loss functions, and Regularization (<span class="math notranslate nohighlight">\(L^1, L^2\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Radon-Nikodym Derivative</strong></p></td>
+<td class="text-left"><p>Calculates KL-Divergence, Likelihood Ratios, and Loss in GANs/Diffusion</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In short, <strong>while Riemann integration is the tool of choice for classical calculations, Lebesgue integration is the mathematical language of machine learning theory, optimization, and probability.</strong></p>
 </section>
 </section>
 </section>
