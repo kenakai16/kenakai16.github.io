@@ -433,6 +433,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-t-test-for-a-b-testing">Python Example (T-test for A/B Testing)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-analyzing-vietnam-s-2024-high-school-graduation-exam-scores">4. Case Study: Analyzing Vietnam’s 2024 High School Graduation Exam Scores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bimodal-score-distribution">Bimodal Score Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-1-classification-by-region-urban-vs-rural">Hypothesis 1: Classification by Region (Urban vs. Rural)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-2-impact-of-wealth-provincial-grdp">Hypothesis 2: Impact of Wealth (Provincial GRDP)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -454,25 +460,29 @@ document.write(`
 <section id="maximum-likelihood-estimation-mle">
 <h3>Maximum Likelihood Estimation (MLE)<a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this heading">#</a></h3>
 <p>MLE is the most common method in Machine Learning. The core idea: <strong>“Choose the parameter <span class="math notranslate nohighlight">\(\theta\)</span> such that the probability of observing the current dataset is maximized.”</strong></p>
-<p>The Likelihood function <span class="math notranslate nohighlight">\(L(\theta)\)</span> is the probability of the data <span class="math notranslate nohighlight">\(X\)</span> given the parameter <span class="math notranslate nohighlight">\(\theta\)</span>. If the data points <span class="math notranslate nohighlight">\(x_i\)</span> are independent and identically distributed (i.i.d):
-$<span class="math notranslate nohighlight">\( L(\theta) = P(X|\theta) = \prod_{i=1}^{n} P(x_i | \theta) \)</span>$</p>
-<p>For ease of computation (to avoid underflow and turn products into sums), we typically use <strong>Log-Likelihood</strong>:
-$<span class="math notranslate nohighlight">\( \log L(\theta) = \sum_{i=1}^{n} \log P(x_i | \theta) \)</span>$</p>
+<p>The Likelihood function <span class="math notranslate nohighlight">\(L(\theta)\)</span> is the probability of the data <span class="math notranslate nohighlight">\(X\)</span> given the parameter <span class="math notranslate nohighlight">\(\theta\)</span>. If the data points <span class="math notranslate nohighlight">\(x_i\)</span> are independent and identically distributed (i.i.d):</p>
+<div class="math notranslate nohighlight">
+\[ L(\theta) = P(X|\theta) = \prod_{i=1}^{n} P(x_i | \theta) \]</div>
+<p>For ease of computation (to avoid underflow and turn products into sums), we typically use <strong>Log-Likelihood</strong>:</p>
+<div class="math notranslate nohighlight">
+\[ \log L(\theta) = \sum_{i=1}^{n} \log P(x_i | \theta) \]</div>
 <p>The goal of MLE is to find <span class="math notranslate nohighlight">\(\theta\)</span> to maximize this Log-Likelihood function. <em>(Note: In Deep Learning, minimizing the Cross-Entropy Loss is exactly performing MLE!).</em></p>
 </section>
 <section id="maximum-a-posteriori-map">
 <h3>Maximum A Posteriori (MAP)<a class="headerlink" href="#maximum-a-posteriori-map" title="Permalink to this heading">#</a></h3>
-<p>MAP is an extension of MLE based on Bayes’ theorem, allowing us to incorporate our <strong>initial belief (Prior - <span class="math notranslate nohighlight">\(P(\theta)\)</span>)</strong> into the estimation process.
-$<span class="math notranslate nohighlight">\( \hat{\theta}_{MAP} = \arg\max_{\theta} P(X|\theta) P(\theta) \)</span>$
-<em>(Note: Adding Regularization (L1/L2) in Machine Learning is exactly performing MAP estimation where the Prior is a Laplace/Gaussian distribution, respectively).</em></p>
+<p>MAP is an extension of MLE based on Bayes’ theorem, allowing us to incorporate our <strong>initial belief (Prior - <span class="math notranslate nohighlight">\(P(\theta)\)</span>)</strong> into the estimation process.</p>
+<div class="math notranslate nohighlight">
+\[ \hat{\theta}_{MAP} = \arg\max_{\theta} P(X|\theta) P(\theta) \]</div>
+<p><em>(Note: Adding Regularization (L1/L2) in Machine Learning is exactly performing MAP estimation where the Prior is a Laplace/Gaussian distribution, respectively).</em></p>
 </section>
 </section>
 <section id="confidence-intervals-ci">
 <h2>2. Confidence Intervals (CI)<a class="headerlink" href="#confidence-intervals-ci" title="Permalink to this heading">#</a></h2>
 <p>A point estimate (like MLE) only gives us a single number, but it doesn’t tell us the certainty of that number. A <strong>Confidence Interval</strong> provides a range of values within which we believe the true parameter <span class="math notranslate nohighlight">\(\theta\)</span> lies with a certain level of confidence (e.g., 95%).</p>
-<p>Suppose we calculate the sample mean <span class="math notranslate nohighlight">\(\bar{X}\)</span> and the sample standard deviation <span class="math notranslate nohighlight">\(S\)</span>. Based on the Central Limit Theorem (CLT), the 95% confidence interval for the population mean <span class="math notranslate nohighlight">\(\mu\)</span> is:
-$<span class="math notranslate nohighlight">\( CI = \bar{X} \pm 1.96 \frac{S}{\sqrt{n}} \)</span>$
-(The number 1.96 is the z-score corresponding to 95% of the area under the Normal distribution curve).</p>
+<p>Suppose we calculate the sample mean <span class="math notranslate nohighlight">\(\bar{X}\)</span> and the sample standard deviation <span class="math notranslate nohighlight">\(S\)</span>. Based on the Central Limit Theorem (CLT), the 95% confidence interval for the population mean <span class="math notranslate nohighlight">\(\mu\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[ CI = \bar{X} \pm 1.96 \frac{S}{\sqrt{n}} \]</div>
+<p>(The number 1.96 is the z-score corresponding to 95% of the area under the Normal distribution curve).</p>
 </section>
 <section id="hypothesis-testing-and-p-value">
 <h2>3. Hypothesis Testing and p-value<a class="headerlink" href="#hypothesis-testing-and-p-value" title="Permalink to this heading">#</a></h2>
@@ -524,6 +534,55 @@ $<span class="math notranslate nohighlight">\( CI = \bar{X} \pm 1.96 \frac{S}{\s
 <span class="c1"># Reject H0: Interface B genuinely retains users longer than interface A (Statistically significant).</span>
 </pre></div>
 </div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="case-study-analyzing-vietnam-s-2024-high-school-graduation-exam-scores">
+<h2>4. Case Study: Analyzing Vietnam’s 2024 High School Graduation Exam Scores<a class="headerlink" href="#case-study-analyzing-vietnam-s-2024-high-school-graduation-exam-scores" title="Permalink to this heading">#</a></h2>
+<p>Let’s look at a practical application of distribution analysis and hypothesis testing using the foreign language (English) scores from Vietnam’s 2024 High School Graduation (THPT) Exam.</p>
+<section id="bimodal-score-distribution">
+<h3>Bimodal Score Distribution<a class="headerlink" href="#bimodal-score-distribution" title="Permalink to this heading">#</a></h3>
+<p>Looking at the overall distribution of English exam scores, we observe a distinct bimodal (two-peak) distribution. This is a common pattern in heterogeneous datasets where two different populations are mixed together.</p>
+<figure class="align-center" id="bimodal-distribution">
+<a class="reference internal image-reference" href="../../_images/thpt_2024_bimodal_distribution.png"><img alt="../../_images/thpt_2024_bimodal_distribution.png" src="../../_images/thpt_2024_bimodal_distribution.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Bimodal distribution of the 2024 THPT English exam scores.</span><a class="headerlink" href="#bimodal-distribution" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A common hypothesis is that these two peaks represent two distinct student demographics: rural and urban areas. Let’s test this hypothesis.</p>
+</section>
+<section id="hypothesis-1-classification-by-region-urban-vs-rural">
+<h3>Hypothesis 1: Classification by Region (Urban vs. Rural)<a class="headerlink" href="#hypothesis-1-classification-by-region-urban-vs-rural" title="Permalink to this heading">#</a></h3>
+<p>To test this, we divide the data into two groups: major metropolitan cities (urban centers) and the remaining provinces (primarily rural regions).</p>
+<figure class="align-center" id="regional-comparison">
+<a class="reference internal image-reference" href="../../_images/thpt_2024_regional_comparison.png"><img alt="../../_images/thpt_2024_regional_comparison.png" src="../../_images/thpt_2024_regional_comparison.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Comparison of score distributions: Major Cities vs. Other Provinces.</span><a class="headerlink" href="#regional-comparison" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Comparing the histograms and Kernel Density Estimation (KDE) curves reveals that scores in major cities are significantly shifted to the right compared to other provinces.</p>
+<p>To verify if this difference is statistically significant, we perform an independent two-sample t-test:</p>
+<ul class="simple">
+<li><p><strong>T-statistic</strong>: <span class="math notranslate nohighlight">\(122.39\)</span></p></li>
+<li><p><strong>P-value</strong>: <span class="math notranslate nohighlight">\(0.0\)</span></p></li>
+</ul>
+<p>Since the p-value is effectively <span class="math notranslate nohighlight">\(0.0\)</span> (far below the significance threshold <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>), we reject the null hypothesis <span class="math notranslate nohighlight">\(H_0\)</span> (which assumes no difference in mean scores). This confirms that geographical region has a highly significant effect on foreign language exam scores.</p>
+</section>
+<section id="hypothesis-2-impact-of-wealth-provincial-grdp">
+<h3>Hypothesis 2: Impact of Wealth (Provincial GRDP)<a class="headerlink" href="#hypothesis-2-impact-of-wealth-provincial-grdp" title="Permalink to this heading">#</a></h3>
+<p>We also analyze whether provincial wealth, measured by Gross Regional Domestic Product (GRDP), influences exam scores. We split the provinces into two groups: high GRDP and low GRDP.</p>
+<figure class="align-center" id="grdp-comparison">
+<a class="reference internal image-reference" href="../../_images/thpt_2024_grdp_comparison.png"><img alt="../../_images/thpt_2024_grdp_comparison.png" src="../../_images/thpt_2024_grdp_comparison.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Comparison of score distributions: High GRDP vs. Low GRDP Provinces.</span><a class="headerlink" href="#grdp-comparison" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The KDE curves show a clear distinction between the two groups. To test the significance, we perform another independent t-test:</p>
+<ul class="simple">
+<li><p><strong>T-statistic</strong>: <span class="math notranslate nohighlight">\(128.67\)</span></p></li>
+<li><p><strong>P-value</strong>: <span class="math notranslate nohighlight">\(0.0\)</span></p></li>
+</ul>
+<p>The t-statistic of <span class="math notranslate nohighlight">\(128.67\)</span> and a p-value of <span class="math notranslate nohighlight">\(0.0\)</span> lead us to reject <span class="math notranslate nohighlight">\(H_0\)</span>. This demonstrates that economic development and provincial wealth (GRDP) are strongly associated with higher student performance on the foreign language exam.</p>
 </section>
 </section>
 </section>
@@ -601,6 +660,12 @@ $<span class="math notranslate nohighlight">\( CI = \bar{X} \pm 1.96 \frac{S}{\s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing-and-p-value">3. Hypothesis Testing and p-value</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-types-of-tests">Common types of tests:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-example-t-test-for-a-b-testing">Python Example (T-test for A/B Testing)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-analyzing-vietnam-s-2024-high-school-graduation-exam-scores">4. Case Study: Analyzing Vietnam’s 2024 High School Graduation Exam Scores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bimodal-score-distribution">Bimodal Score Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-1-classification-by-region-urban-vs-rural">Hypothesis 1: Classification by Region (Urban vs. Rural)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-2-impact-of-wealth-provincial-grdp">Hypothesis 2: Impact of Wealth (Provincial GRDP)</a></li>
 </ul>
 </li>
 </ul>

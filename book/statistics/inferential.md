@@ -12,16 +12,22 @@ The goal of point estimation is to find a single value (called $\hat{\theta}$) t
 MLE is the most common method in Machine Learning. The core idea: **"Choose the parameter $\theta$ such that the probability of observing the current dataset is maximized."**
 
 The Likelihood function $L(\theta)$ is the probability of the data $X$ given the parameter $\theta$. If the data points $x_i$ are independent and identically distributed (i.i.d):
+
 $$ L(\theta) = P(X|\theta) = \prod_{i=1}^{n} P(x_i | \theta) $$
 
+
 For ease of computation (to avoid underflow and turn products into sums), we typically use **Log-Likelihood**:
+
 $$ \log L(\theta) = \sum_{i=1}^{n} \log P(x_i | \theta) $$
+
 
 The goal of MLE is to find $\theta$ to maximize this Log-Likelihood function. *(Note: In Deep Learning, minimizing the Cross-Entropy Loss is exactly performing MLE!).*
 
 ### Maximum A Posteriori (MAP)
 MAP is an extension of MLE based on Bayes' theorem, allowing us to incorporate our **initial belief (Prior - $P(\theta)$)** into the estimation process.
+
 $$ \hat{\theta}_{MAP} = \arg\max_{\theta} P(X|\theta) P(\theta) $$
+
 *(Note: Adding Regularization (L1/L2) in Machine Learning is exactly performing MAP estimation where the Prior is a Laplace/Gaussian distribution, respectively).*
 
 ## 2. Confidence Intervals (CI)
@@ -29,7 +35,9 @@ $$ \hat{\theta}_{MAP} = \arg\max_{\theta} P(X|\theta) P(\theta) $$
 A point estimate (like MLE) only gives us a single number, but it doesn't tell us the certainty of that number. A **Confidence Interval** provides a range of values within which we believe the true parameter $\theta$ lies with a certain level of confidence (e.g., 95%).
 
 Suppose we calculate the sample mean $\bar{X}$ and the sample standard deviation $S$. Based on the Central Limit Theorem (CLT), the 95% confidence interval for the population mean $\mu$ is:
+
 $$ CI = \bar{X} \pm 1.96 \frac{S}{\sqrt{n}} $$
+
 (The number 1.96 is the z-score corresponding to 95% of the area under the Normal distribution curve).
 
 ## 3. Hypothesis Testing and p-value
@@ -80,3 +88,62 @@ else:
 # P-value: 0.0137
 # Reject H0: Interface B genuinely retains users longer than interface A (Statistically significant).
 ```
+
+---
+
+## 4. Case Study: Analyzing Vietnam's 2024 High School Graduation Exam Scores
+
+Let's look at a practical application of distribution analysis and hypothesis testing using the foreign language (English) scores from Vietnam's 2024 High School Graduation (THPT) Exam.
+
+### Bimodal Score Distribution
+Looking at the overall distribution of English exam scores, we observe a distinct bimodal (two-peak) distribution. This is a common pattern in heterogeneous datasets where two different populations are mixed together.
+
+```{figure} ../../images/thpt_2024_bimodal_distribution.png
+---
+name: bimodal-distribution
+width: 70%
+align: center
+---
+Bimodal distribution of the 2024 THPT English exam scores.
+```
+
+A common hypothesis is that these two peaks represent two distinct student demographics: rural and urban areas. Let's test this hypothesis.
+
+### Hypothesis 1: Classification by Region (Urban vs. Rural)
+To test this, we divide the data into two groups: major metropolitan cities (urban centers) and the remaining provinces (primarily rural regions). 
+
+```{figure} ../../images/thpt_2024_regional_comparison.png
+---
+name: regional-comparison
+width: 70%
+align: center
+---
+Comparison of score distributions: Major Cities vs. Other Provinces.
+```
+
+Comparing the histograms and Kernel Density Estimation (KDE) curves reveals that scores in major cities are significantly shifted to the right compared to other provinces.
+
+To verify if this difference is statistically significant, we perform an independent two-sample t-test:
+*   **T-statistic**: $122.39$
+*   **P-value**: $0.0$
+
+Since the p-value is effectively $0.0$ (far below the significance threshold $\alpha = 0.05$), we reject the null hypothesis $H_0$ (which assumes no difference in mean scores). This confirms that geographical region has a highly significant effect on foreign language exam scores.
+
+### Hypothesis 2: Impact of Wealth (Provincial GRDP)
+We also analyze whether provincial wealth, measured by Gross Regional Domestic Product (GRDP), influences exam scores. We split the provinces into two groups: high GRDP and low GRDP.
+
+```{figure} ../../images/thpt_2024_grdp_comparison.png
+---
+name: grdp-comparison
+width: 70%
+align: center
+---
+Comparison of score distributions: High GRDP vs. Low GRDP Provinces.
+```
+
+The KDE curves show a clear distinction between the two groups. To test the significance, we perform another independent t-test:
+*   **T-statistic**: $128.67$
+*   **P-value**: $0.0$
+
+The t-statistic of $128.67$ and a p-value of $0.0$ lead us to reject $H_0$. This demonstrates that economic development and provincial wealth (GRDP) are strongly associated with higher student performance on the foreign language exam.
+
